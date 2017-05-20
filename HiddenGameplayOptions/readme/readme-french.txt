@@ -1,0 +1,206 @@
+Faire apparaître les Options de jeu cachées
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Version        : 0.4-beta
+Auteur         : Argent77
+
+Téléchargement : https://
+Discussion     : https://forums.beamdog.com/discussion/64524/mod-reveal-hidden-gameplay-options-for-all-ee-games-patched-to-v2-0-or-higher
+
+
+Généralités
+~~~~~~~~~~~
+
+Les versions améliorées (Enhanced Editions) disposent de nombreuses options de jeu que l'on ne  
+peut pas sélectionner dans le menu des options, mais qui doivent être activées ou désactivées 
+manuellement dans le fichier de configuration du jeu ; ce qui peut décourager les joueurs moins 
+experts en informatique de les utiliser.
+
+Ce mod ajoute directement dans le jeu de nombreuses options très utiles, dont le "célèbre" panneau 
+de débogage, plusieurs paramétrages graphiques et de feedback, et d'autres encore.
+
+
+Installation
+~~~~~~~~~~~~
+
+Il s'agit d'un mod WeiDU, donc très facile à installer. Il suffit de décompresser l'archive 
+téléchargée dans votre répertoire de jeu et de lancer "setup-HiddenGameplayOptions.exe".
+
+
+Compatibilité
+~~~~~~~~~~~~~
+
+Ce mod s'installe sur tous les jeux Enhanced Edition dotés du patch v2.0 ou supérieur. Il est 
+aussi compatible avec Pecca's "Dragonspear UI++" et Lefreut's Enhanced UI (LeUI). Certaines 
+options pourront être déplacées dans d'autres sections si ces mods sont détectés.
+
+Modifier les fichiers de paramétrage de l'interface utilisateur (UI) peut s'avérer risqué. 
+C'est pourquoi, pour éviter de corrompre le jeu, une tentative problématique de modification sera 
+automatiquement interdite et le mod restaurera les fichiers à modifier dans leur version d'origine.
+
+
+Composants
+~~~~~~~~~~
+
+1. Installer les Options de jeu cachées (composant principal)
+
+Ce composant vous permet de choisir d'installer toutes les options simultanément ou bien de les 
+sélectionner une par une.
+Des informations détaillées sur chaque option sont disponibles plus bas.
+
+
+Les composants suivants sont disponibles si vous décidez de sélectionner les options une par une :
+
+2 Ajouter l'option de jeu "Activer le Mode de débogage"
+
+Ce composant vous permet d'activer les raccourcis de triche et d'afficher le panneau de débogage.
+
+Cette option se trouve dans la section Jeu.
+
+
+3 Ajouter l'option de jeu "Activer le mode de modification de l'interface utilisateur (UI)"
+
+Activer cette option permet d'utiliser les fonctions de modifications de l'UI dans le jeu.
+
+Elle se trouve dans la section Jeu.
+
+
+4 Ajouter l'option de jeu "Afficher les numéros de référence des textes"
+
+Activer cette option indique devant chaque texte affiché dans le jeu son numéro de référence.
+
+Elle se trouve dans la section Jeu.
+
+
+5. Ajouter l'option de jeu "Afficher les raccourcis des objets rapides"
+
+Activer cette option affiche les touches de raccourci des capacités des objets rapides 
+lorsqu'ils sont disponibles.
+
+Elle se trouve dans la section Jeu.
+
+
+6. Ajouter l'option de jeu "Afficher les icônes des régions avec la Tabulation"
+
+Activer cette option affiche des informations supplémentaires sur les régions interactives 
+de la carte en appuyant sur la touche TAB.
+
+Elle se trouve dans la section Jeu.
+
+
+7. Ajouter l'option de jeu "Utiliser la barre d'espace dans les dialogues" (disponible uniquement dans PST:EE)
+
+Activer cette option vous permet de continuer les conversations dans la fenêtre de 
+dialogue en utilisant la touche ESPACE.
+
+Elle se trouve dans la section Jeu.
+
+
+8. Ajouter l'option de jeu "Limiter les sorts de druide pour les Clercs/Rôdeurs" (pas disponible dans PST:EE)
+
+L'activer limite au niveau 3 les sorts de druide utilisables par les Clercs/Rôdeurs 
+(comme dans les règles papier).
+
+Elle se trouve dans la section Jeu.
+
+
+9. Ajouter l'option de jeu "Attaque sournoise 3e Édition"
+
+Cette option permet d'activer/désactiver l'Attaque sournoise (Attaque insidieuse) et 
+l'Attaque handicapante (capacités similaires à celles de la troisième Édition de Donjons 
+et Dragons® de Wizards of the Coast).
+
+Elle se trouve dans la section Jeu.
+
+
+10. Ajouter l'option de jeu "Secouer l'écran en cas de Coup critique"
+
+Si cette option est activée, l'écran est secoué chaque fois qu'un membre du groupe effectue 
+un coup critique.
+
+Elle se trouve dans la section Jeu > Feedback > Feedback visuel (ou dans la section Jeu dans PST:EE).
+
+
+11. Ajouter l'option de jeu "Afficher les Informations de combat supplémentaires"
+
+Activer cette option affiche dans la fenêtre de dialogue tous les facteurs déterminant 
+les résultats des jets d'attaque.
+
+Elle se trouve dans la section Jeu > Feedback > Messages de Feedback.
+
+
+12. Ajouter l'option de jeu "Afficher la date et l'heure du jeu pendant les pauses"
+
+Activer cette option affiche la date et l'heure du jeu lorsque la pause est activée.
+
+Elle se trouve dans la section Jeu > Feedback > Messages de Feedback.
+
+
+13. Ajouter l'option de jeu "Désactiver le Zoom dans la carte de la zone" (disponible uniquement dans PST:EE)
+
+Cette option désactive le zoom avant et arrière lorsqu'on ouvre ou ferme l'écran de la carte 
+de la zone.
+
+Elle se trouve dans la section Graphismes > Options d'affichage.
+
+
+14. Ajouter l'option de jeu "Inverser le Zoom de la molette de la souris"
+
+Cette option inverse le sens du zoom déclenché par la molette de la souris.
+
+Elle se trouve dans la section Graphismes > Options d'affichage.
+
+
+15. Ajouter l'option de jeu "Mettre le jeu en pause dans l'écran de la carte de la zone"
+
+Cette option met le jeu en pause chaque fois que l'on ouvre l'écran de la carte de la zone.
+
+Elle se trouve dans la section Graphismes > Options d'affichage.
+
+
+16. Ajouter l'option de jeu "Activer le Brouillard" (pas disponible dans PST:EE)
+
+Cette option active les effets de brouillard dans les cartes
+
+Elle se trouve dans la section Graphismes > Options d'affichage.
+
+
+17. Ajouter l'option de jeu "Désactiver les films"
+
+Cette option permet de désactiver le visionnage des films.
+
+Elle se trouve dans la section Graphismes > Options d'affichage.
+
+
+Credits
+~~~~~~~
+
+Coding and testing: Argent77
+
+Additional coding help: AncientCowboy
+
+French translation: Gwendolyne
+
+
+Copyright Notice
+~~~~~~~~~~~~~~~~
+
+The mod "Reveal Hidden Gameplay Options" is licensed under the "Creative Commons Attribution-
+ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa/4.0/).
+
+
+History
+~~~~~~~
+
+0.4-beta
+- Added French translation (thanks Gwendolyne)
+
+0.3-beta
+- Added workaround to make all options fully working (thanks AncientCowboy)
+- Added German translation
+- Relocated "Hotkeys On Tooltips" to Gameplay section
+- Improved handling of option "3E Sneak Attack"
+- Updated several descriptions
+
+0.2-beta
+- Initial release

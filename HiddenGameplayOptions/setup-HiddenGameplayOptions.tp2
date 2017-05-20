@@ -1,6 +1,6 @@
 BACKUP ~HiddenGameplayOptions/backup~
 AUTHOR ~Argent77 at Beamdog Forums~
-VERSION ~0.3-beta~
+VERSION ~0.4-beta~
 
 ASK_EVERY_COMPONENT
 
@@ -15,6 +15,10 @@ LANGUAGE  ~English~
           ~english~
           ~%MOD_FOLDER%/languages/english/setup.tra~
           ~%MOD_FOLDER%/languages/english/mod.tra~
+LANGUAGE  ~Francais (traduction: Gwendolyne)~
+          ~french~
+          ~%MOD_FOLDER%/languages/french/setup.tra~
+          ~%MOD_FOLDER%/languages/french/mod.tra~
 LANGUAGE  ~Deutsch~
           ~german~
           ~%MOD_FOLDER%/languages/german/setup.tra~

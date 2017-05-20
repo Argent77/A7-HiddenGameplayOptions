@@ -1,0 +1,124 @@
+// -*- coding: us-ascii -*- 
+
+@1 = ~Installer les options de jeu cachees~
+@2 = ~Toutes les options disponibles~
+@3 = ~Les options selectionnees~
+
+@10 = ~Ajouter l'option de jeu "Activer le Mode de debogage"~
+@11 = ~Ajouter l'option de jeu "Activer le mode de modification de l'interface utilisateur"~
+@12 = ~Ajouter l'option de jeu "Afficher les numeros de reference des textes"~
+@13 = ~Ajouter l'option de jeu "Afficher les raccourcis des objets rapides"~
+@14 = ~Ajouter l'option de jeu "Afficher les icones des regions avec la Tabulation"~
+@15 = ~Ajouter l'option de jeu "Utiliser la barre d'espace dans les dialogues"~
+@16 = ~Ajouter l'option de jeu "Limiter les sorts de druide pour les Clercs/Rodeurs"~
+@17 = ~Ajouter l'option de jeu "Attaque sournoise 3e Edition"~
+@18 = ~Ajouter l'option de jeu "Secouer l'ecran en cas de Coup critique"~
+@19 = ~Ajouter l'option de jeu "Afficher les Informations de combat supplementaires"~
+@20 = ~Ajouter l'option de jeu "Afficher la date et l'heure du jeu lorsqu'il est en pause"~
+@21 = ~Ajouter l'option de jeu "Desactiver le Zoom dans la carte de la zone"~
+@22 = ~Ajouter l'option de jeu "Inverser le Zoom de la molette de la souris"~
+@23 = ~Ajouter l'option de jeu "Mettre le jeu en pause dans l'ecran de la carte de la zone"~
+@24 = ~Ajouter l'option de jeu "Activer le Brouillard"~
+@25 = ~Ajouter l'option de jeu "Desactiver les films"~
+
+@100 = ~Ce mod requiert un jeu beneficiant du patch v2.0 ou ulterieur.~
+@101 = ~Ne peut pas modifier le fichier LUA~
+@102 = ~Ne peut pas modifier le fichier UI.MENU~
+@103 = ~Necessite l'installation du composant "Les options selectionnees".~
+@104 = ~Cette option n'est pas disponible pour ce jeu.~
+@105 = ~Cette option est deja presente dans ce jeu.~
+
+
+// WeiDU prompts
+@-1000= "Le mod %TP2_FILE_NAME% contient"
+@-1001= "composants optionnels distincts.
+Pour gagner du temps, vous pouvez choisir ce que vous souhaitez faire d'eux
+au niveau general plutot que de repondre aux questions pour chacun.
+"
+@-1002= "Que faut-il faire de tous les composants qui NE sont PAS ENCORE installes ?
+Les [I]nstaller, les [S]auter, dem[A]nder pour chacun ? "
+@-1003= "Que faut-il faire de tous les composants qui sont DEJA installes ?
+Les [R]einstaller, les s[U]pprimer, les [S]auter, dem[A]nder pour chacun ? "
+
+@-1004= "S'IL VOUS PLAIT, envoyez par e-mail le fichier"
+@-1005= "a"
+
+@-1006= "Installer le composant ["
+@-1007= "] ?
+[R]einstaller, co[N]server, s[U]pprimer ou [Q]uitter ? "
+@-1008= "] ?
+[I]nstaller, [N]e pas installer ou [Q]uitter ? "
+
+@-1009= "Entrez une partie du nom du module : "
+
+@-1010= "Reinstallation du composant ["
+@-1011= "] "
+@-1012= "Reinstallation dans la langue"
+
+@-1013= "Suppression de l'ancienne installation de ["
+@-1014= "] au prealable..."
+@-1015= "SUPPRESSION REUSSIE DE L'ANCIEN"
+
+@-1016= "Installation en cours"
+@-1017= "ERREUR pendant l'installation de ["
+@-1018= "], retour a l'etat anterieur"
+@-1019= "INSTALLATION REUSSIE"
+@-1020= "Saute"
+@-1021= "Suppression de ["
+@-1022= "] (composant #"
+@-1023= ")"
+@-1024= "SUPPRESSION REUSSIE DE ["
+
+@-1025= "] ?
+[R]einstaller, co[N]server, s[U]pprimer, [Q]uitter ou choisir un parmi :"
+@-1026= "] ?
+[N]e pas installer, [Q]uitter ou choisir un parmi :"
+@-1027= " (installe actuellement)"
+
+@-1028= "Souhaitez-vous afficher les composants de ["
+@-1029= "] ?
+[Y]Oui, [N]on ? "
+
+@-1030= "] ?
+choisir un parmi :"
+@-1031= "] ?
+[R]einstaller, co[N]server, [Q]uitter ou choisir un parmi :"
+@-1032= "INSTALLATION ECHOUEE A CAUSE D'ERREURS"
+@-1033= "INSTALLATION AVEC DES ALERTES"
+@-1034= "Souhaitez-vous afficher les instructions (ReadMe) ? [Y]Oui [N]on"
+@-1035= "Dans la langue"
+
+@-1036= "Saute le GROUPE ["
+@-1037= "] pour cause d'absence des pre-requis."
+
+@-1038= "dem[A]nder pour chaque composant, tout [S]auter, ou choisir une selection pre-definie :"
+@-1039= "dem[A]nder pour chaque composant, [R]einstaller la configuration courante, tout s[U]pprimer, tout [S]auter, ou choisir une selection pre-definie :"
+
+@-1040= "
+Veuillez choisir la langue dans laquelle vous souhaitez jouer au jeu.
+Si par la suite vous desirez jouer au jeu dans une langue differente, il vous
+faudra editer le fichier weidu.conf et reinstaller vos mods.
+"
+@-1041= "Tcheque"
+@-1042= "Allemand"
+@-1043= "Anglais"
+@-1044= "Espagnol"
+@-1045= "Francais"
+@-1046= "Italien"
+@-1047= "Polonais"
+@-1048= "Portugais"
+@-1049= "Turc"
+@-1050= "Japonais"
+@-1051= "Coreen"
+@-1052= "Chinois simplifie"
+@-1053= "Russe"
+@-1054= "Ukrainien"
+
+@-1060= "
+Ce jeu est disponible en plusieurs langues mais WeiDU ne sait pas laquelle a ete choisie quand ce mod a ete installe.
+
+Veuillez indiquer quelle langue du jeu a ete utilisee quand vous avez installe ce mod. Votre choix servira jusqu'a ce que WeiDU s'arrete mais ne sera pas memorise.
+"
+@-1061= "
+Utilisation de"
+@-1062= " et "

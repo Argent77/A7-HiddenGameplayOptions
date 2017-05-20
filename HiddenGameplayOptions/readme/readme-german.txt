@@ -1,7 +1,7 @@
 Versteckte Spieloptionen anzeigen
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Version:    0.3-beta
+Version:    0.4-beta
 Author:     Argent77
 
 Download:   https://
@@ -183,6 +183,8 @@ Coding and testing: Argent77
 
 Additional coding help: AncientCowboy
 
+French translation: Gwendolyne
+
 
 Copyright Notice
 ~~~~~~~~~~~~~~~~
@@ -193,6 +195,9 @@ ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa
 
 History
 ~~~~~~~
+
+0.4-beta
+- Added French translation (thanks Gwendolyne)
 
 0.3-beta
 - Added workaround to make all options fully working (thanks AncientCowboy)
