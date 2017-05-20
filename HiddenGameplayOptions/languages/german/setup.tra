@@ -1,0 +1,29 @@
+// -*- coding: us-ascii -*- 
+
+@1 = ~Versteckte Spieloptionen installieren~
+@2 = ~Alle verfuegbaren Optionen~
+@3 = ~Nur ausgewaehlte Optionen~
+
+@10 = ~Spieloption "Debugmodus" hinzufuegen~
+@11 = ~Spieloption "UI Bearbeitungsmodus" hinzufuegen~
+@12 = ~Spieloption "Strrefs anzeigen" hinzufuegen~
+@13 = ~Spieloption "Tastenkuerzel in Kurzinfos" hinzufuegen~
+@14 = ~Spieloption "Bereichssymbole mit TAB anzeigen" hinzufuegen~
+@15 = ~Spieloption "Leertaste in Dialogen nutzen" hinzufuegen~
+@16 = ~Spieloption "Druidenzauber fuer Kleriker/Waldlaeufer einschraenken" hinzufuegen~
+@17 = ~Spieloption "3E Heimlicher Angriff" hinzufuegen~
+@18 = ~Spieloption "Bildschirmwackeln bei kritischen Treffern" hinzufuegen~
+@19 = ~Spieloption "Zusaetzliche Kampfinformationen anzeigen" hinzufuegen~
+@20 = ~Spieloption "Spielzeit und -datum im Pausenmodus anzeigen" hinzufuegen~
+@21 = ~Spieloption "Ein- und Ausblendanimationen der Gebietskarte abschalten" hinzufuegen~
+@22 = ~Spieloption "Zoomrichtung des Mausrads umkehren" hinzufuegen~
+@23 = ~Spieloption "Spiel pausieren wenn Gebietskarte aktiv ist" hinzufuegen~
+@24 = ~Spieloption "Nebel aktivieren" hinzufuegen~
+@25 = ~Spieloption "Videosequenzen deaktivieren" hinzufuegen~
+
+@100 = ~Enhanced Edition muss v2.0 oder hoeher sein.~
+@101 = ~LUA-Datei kann nicht bearbeitet werden~
+@102 = ~UI.MENU kann nicht bearbeitet werden~
+@103 = ~Komponente "Nur ausgewaehlte Optionen" wurde nicht installiert.~
+@104 = ~Die Option ist fuer dieses Spiel nicht verfuegbar.~
+@105 = ~Diese Option ist bereits im Spiel verfuegbar.~

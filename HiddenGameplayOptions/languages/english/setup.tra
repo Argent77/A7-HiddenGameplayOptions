@@ -4,15 +4,15 @@
 @2 = ~All available options~
 @3 = ~Selected options~
 
-@10 = ~Add in-game option "Enable Debug Console"~
+@10 = ~Add in-game option "Enable Debug Mode"~
 @11 = ~Add in-game option "Enable UI Edit Mode"~
 @12 = ~Add in-game option "Show Strrefs"~
-@13 = ~Add in-game option "Show trigger icons on tab"~
-@14 = ~Add in-game option "Allow Spacebar in Dialogs"~
-@15 = ~Add in-game option "Limit druidic spells for Cleric/Ranger"~
-@16 = ~Add in-game option "3E Sneak Attack"~
-@17 = ~Add in-game option "Critical Hit Screen Shake"~
-@18 = ~Add in-game option "Hotkeys On Tooltips"~
+@13 = ~Add in-game option "Hotkeys On Tooltips"~
+@14 = ~Add in-game option "Show trigger icons on tab"~
+@15 = ~Add in-game option "Allow Spacebar in Dialogs"~
+@16 = ~Add in-game option "Limit druidic spells for Cleric/Ranger"~
+@17 = ~Add in-game option "3E Sneak Attack"~
+@18 = ~Add in-game option "Critical Hit Screen Shake"~
 @19 = ~Add in-game option "Show extra combat info"~
 @20 = ~Add in-game option "Show Game Date and Time on Pause"~
 @21 = ~Add in-game option "Disable Area Map Zoom"~

@@ -76,8 +76,9 @@ BEGIN
   END
 END
 
-/** Add in-game option "Show trigger icons on tab" */
-DEFINE_ACTION_FUNCTION OPTION_TRIGGER_ICONS
+// TODO: ignored
+/** Add in-game option "Hotkeys On Tooltips" */
+DEFINE_ACTION_FUNCTION OPTION_TOOLTIP_HOTKEYS
 BEGIN
   OUTER_TEXT_SPRINT arrayName "toggleTitles"
 
@@ -86,6 +87,28 @@ BEGIN
     optLabelTra   = 1300
     optDescTra    = 1301
     controlID     = "-170"
+    autoFail      = 1
+  STR_VAR
+    arrayName     = EVAL "%arrayName%"
+    optLabelName  = "A7_TOOLTIP_HOTKEYS_LABEL"
+    optDescName   = "A7_TOOLTIP_HOTKEYS_DESCRIPTION"
+    iniSection    = "Game Options"
+    iniName       = "Hotkeys On Tooltips"
+  RET
+    success
+  END
+END
+
+/** Add in-game option "Show trigger icons on tab" */
+DEFINE_ACTION_FUNCTION OPTION_TRIGGER_ICONS
+BEGIN
+  OUTER_TEXT_SPRINT arrayName "toggleTitles"
+
+  LAF INSTALL_CHECK_OPTION
+  INT_VAR
+    optLabelTra   = 1400
+    optDescTra    = 1401
+    controlID     = "-171"
     autoFail      = 1
   STR_VAR
     arrayName     = EVAL "%arrayName%"
@@ -105,9 +128,9 @@ BEGIN
 
   LAF INSTALL_CHECK_OPTION
   INT_VAR
-    optLabelTra   = 1400
-    optDescTra    = 1401
-    controlID     = "-171"
+    optLabelTra   = 1500
+    optDescTra    = 1501
+    controlID     = "-172"
     autoFail      = 1
   STR_VAR
     arrayName     = EVAL "%arrayName%"
@@ -120,6 +143,7 @@ BEGIN
   END
 END
 
+// TODO: ignored
 /** Add in-game option "Limit druidic spells for Cleric/Ranger" */
 DEFINE_ACTION_FUNCTION OPTION_CLERIC_RANGER_SPELLS
 BEGIN
@@ -127,9 +151,9 @@ BEGIN
 
   LAF INSTALL_CHECK_OPTION
   INT_VAR
-    optLabelTra   = 1500
-    optDescTra    = 1501
-    controlID     = "-172"
+    optLabelTra   = 1600
+    optDescTra    = 1601
+    controlID     = "-173"
     autoFail      = 1
   STR_VAR
     arrayName     = EVAL "%arrayName%"
@@ -142,20 +166,27 @@ BEGIN
   END
 END
 
+// TODO: ignored
 /** Add in-game option "3E Sneak Attack" */
 DEFINE_ACTION_FUNCTION OPTION_SNEAK_ATTACK
 BEGIN
   OUTER_TEXT_SPRINT arrayName "toggleTitles"
 
-  ACTION_IF (GAME_IS ~pstee~ AND NOT FILE_EXISTS_IN_GAME ~sneakatt.2da~) BEGIN
+  ACTION_IF (NOT FILE_EXISTS_IN_GAME ~sneakatt.2da~) BEGIN
     COPY ~%MOD_FOLDER%/tables/sneakatt.2da~ ~override~
+  END
+  ACTION_IF (NOT FILE_EXISTS_IN_GAME ~crippstr.2da~) BEGIN
+    COPY ~%MOD_FOLDER%/tables/crippstr.2da~ ~override~
+  END
+  ACTION_IF (NOT FILE_EXISTS_IN_GAME ~backstab.spl~) BEGIN
+    COPY ~%MOD_FOLDER%/spells/backstab.spl~ ~override~
   END
 
   LAF INSTALL_CHECK_OPTION
   INT_VAR
-    optLabelTra   = 1600
-    optDescTra    = 1601
-    controlID     = "-173"
+    optLabelTra   = 1700
+    optDescTra    = 1701
+    controlID     = "-174"
     autoFail      = 1
   STR_VAR
     arrayName     = EVAL "%arrayName%"
@@ -168,35 +199,9 @@ BEGIN
   END
 END
 
+// TODO: ignored
 /** Add in-game option "Critical Hit Screen Shake" */
 DEFINE_ACTION_FUNCTION OPTION_CRITICAL_HIT_SCREEN_SHAKE
-BEGIN
-  ACTION_IF (GAME_IS ~pstee~ OR
-             MOD_IS_INSTALLED ~leui.tp2~ 0) BEGIN
-    OUTER_TEXT_SPRINT arrayName "toggleTitles"
-  END ELSE BEGIN
-    OUTER_TEXT_SPRINT arrayName "feedbackToggles"
-  END
-
-  LAF INSTALL_CHECK_OPTION
-  INT_VAR
-    optLabelTra   = 1700
-    optDescTra    = 1701
-    controlID     = "-174"
-    autoFail      = 1
-  STR_VAR
-    arrayName     = EVAL "%arrayName%"
-    optLabelName  = "A7_CRITICAL_HIT_SCREEN_SHAKE_LABEL"
-    optDescName   = "A7_CRITICAL_HIT_SCREEN_SHAKE_DESCRIPTION"
-    iniSection    = "Game Options"
-    iniName       = "Critical Hit Screen Shake"
-  RET
-    success
-  END
-END
-
-/** Add in-game option "Hotkeys On Tooltips" */
-DEFINE_ACTION_FUNCTION OPTION_TOOLTIP_HOTKEYS
 BEGIN
   ACTION_IF (GAME_IS ~pstee~ OR
              MOD_IS_INSTALLED ~leui.tp2~ 0) BEGIN
@@ -213,10 +218,10 @@ BEGIN
     autoFail      = 1
   STR_VAR
     arrayName     = EVAL "%arrayName%"
-    optLabelName  = "A7_TOOLTIP_HOTKEYS_LABEL"
-    optDescName   = "A7_TOOLTIP_HOTKEYS_DESCRIPTION"
+    optLabelName  = "A7_CRITICAL_HIT_SCREEN_SHAKE_LABEL"
+    optDescName   = "A7_CRITICAL_HIT_SCREEN_SHAKE_DESCRIPTION"
     iniSection    = "Game Options"
-    iniName       = "Hotkeys On Tooltips"
+    iniName       = "Critical Hit Screen Shake"
   RET
     success
   END
@@ -318,6 +323,7 @@ BEGIN
   END
 END
 
+// TODO: ignored
 /** Add in-game option "Pause Game on Map Screen" */
 DEFINE_ACTION_FUNCTION OPTION_PAUSING_MAP
 BEGIN

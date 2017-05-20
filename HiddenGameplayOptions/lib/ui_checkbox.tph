@@ -133,15 +133,18 @@ BEGIN
             NOT ~%optDesc%~ STR_EQ ~~ AND
             NOT ~%iniSection%~ STR_EQ ~~ AND
             NOT ~%iniName%~ STR_EQ ~~) BEGIN
-    LPF __A7_ADD_OPTION
-    INT_VAR controlID = controlID
-    STR_VAR
-      arrayName   = EVAL "%arrayName%"
-      optLabel    = EVAL ~%optLabel%~
-      optDesc     = EVAL ~%optDesc%~
-      iniSection  = EVAL ~%iniSection%~
-      iniName     = EVAL ~%iniName%~
-    RET success
+    LPF __A7_INIT_CODE RET success END
+    PATCH_IF (success) BEGIN
+      LPF __A7_ADD_OPTION
+      INT_VAR controlID = controlID
+      STR_VAR
+        arrayName   = EVAL "%arrayName%"
+        optLabel    = EVAL ~%optLabel%~
+        optDesc     = EVAL ~%optDesc%~
+        iniSection  = EVAL ~%iniSection%~
+        iniName     = EVAL ~%iniName%~
+      RET success
+      END
     END
   END
 END
@@ -352,7 +355,7 @@ BEGIN
       PATCH_IF (mode = 1) BEGIN
       TEXT_SPRINT code ~%code%%indent%~
       END
-      TEXT_SPRINT code ~%code%if (var[3] == %controlID%) then%WNL%%indent%%TAB%var[5] = Infinity_GetINIValue('%iniSection%', '%iniName%')%WNL%%indent%else~
+      TEXT_SPRINT code ~%code%if (var[3] == %controlID%) then%WNL%%indent%%TAB%var[5] = getDeferredOption('%iniSection%', '%iniName%')%WNL%%indent%else~
       PATCH_IF (mode = 1) BEGIN
         TEXT_SPRINT code ~%code%%WNL%%TAB%~
       END
@@ -425,7 +428,7 @@ BEGIN
       PATCH_IF (mode = 1) BEGIN
       TEXT_SPRINT code ~%code%%indent%~
       END
-      TEXT_SPRINT code ~%code%if (var[3] == %controlID%) then%WNL%%indent%%TAB%Infinity_SetINIValue('%iniSection%', '%iniName%', var[5])%WNL%%indent%else~
+      TEXT_SPRINT code ~%code%if (var[3] == %controlID%) then%WNL%%indent%%TAB%setDeferredOption('%iniSection%', '%iniName%', var[5])%WNL%%indent%else~
       PATCH_IF (mode = 1) BEGIN
         TEXT_SPRINT code ~%code%%WNL%%TAB%~
       END
@@ -445,6 +448,147 @@ BEGIN
 
       SET endOfs = ofs
       SET success = 1
+    END
+  END
+END
+
+
+// Used internally: implements a workaround to prevent options from being reset
+DEFINE_PATCH_FUNCTION __A7_INIT_CODE
+RET success
+BEGIN
+  SET success = 1
+
+  PATCH_IF (INDEX_BUFFER(~function[ %TAB%]+getDeferredOption~) < 0) BEGIN
+    // global function definitions
+    TEXT_SPRINT code ~`
+deferredOptions = {}
+
+function getDeferredOption(section, option)
+	if (not deferredOptions[tostring(section)]) then
+		deferredOptions[tostring(section)] = {}
+	end
+	if (not deferredOptions[section][tostring(option)]) then
+		deferredOptions[section][tostring(option)] =  tonumber(Infinity_GetINIValue(section,option)) or 0
+	end
+	return deferredOptions[section][option]
+end
+
+function setDeferredOption(section, option, value)
+	if (not deferredOptions[tostring(section)]) then
+		deferredOptions[tostring(section)] = {}
+	end
+	deferredOptions[section][tostring(option)] = tonumber(value) or 0
+end
+
+function flushDeferredOptions()
+	for s,t in pairs(deferredOptions) do
+		for o,v in pairs(t) do
+			Infinity_SetINIValue(s,o,v)
+		end
+	end
+end
+`
+~
+    SET codeLen = STRING_LENGTH ~%code%~
+    INSERT_BYTES 0 codeLen
+    WRITE_ASCIIE 0 ~%code%~
+
+    // add calls to flushDeferredOptions()
+    // 1. start menu
+    SET ofs = INDEX_BUFFER(~menu[ %TAB%%WNL%]*{[ %TAB%%WNL%]*name[ %TAB%]+['"]START['"]~)
+    PATCH_IF (ofs >= 0) BEGIN
+      SET ofs = INDEX_BUFFER(~onOpen[ %TAB%%WNL%]+"~ ofs)
+      PATCH_IF (ofs >= 0) BEGIN
+        SET ofs = INDEX_BUFFER(~"~ ofs) + 1
+        TEXT_SPRINT code ~%WNL%%TAB%%TAB%flushDeferredOptions()~
+        SET codeLen = STRING_LENGTH ~%code%~
+        INSERT_BYTES ofs codeLen
+        WRITE_ASCIIE ofs ~%code%~
+      END ELSE BEGIN
+        SET success = 0
+      END
+    END ELSE BEGIN
+      SET success = 0
+    END
+
+    // 2. quit menu
+    PATCH_IF (success) BEGIN
+      SET ofs = INDEX_BUFFER(~menu[ %TAB%%WNL%]*{[ %TAB%%WNL%]*name[ %TAB%]+['"]QuitMenu['"]~)
+      PATCH_IF (ofs >= 0) BEGIN
+        PATCH_IF (GAME_IS ~pstee~) BEGIN
+          TEXT_SPRINT name ~YES_BUTTON~
+        END ELSE BEGIN
+          TEXT_SPRINT name ~QUIT_GAME_BUTTON~
+        END
+        SET ofs = INDEX_BUFFER(~['"]%name%['"]~ ofs)
+        PATCH_IF (ofs >= 0) BEGIN
+          SET ofs = INDEX_BUFFER(~action[ %TAB%%WNL%]*"~ ofs)
+          PATCH_IF (ofs >= 0) BEGIN
+            SET ofs = INDEX_BUFFER(~"~ ofs) + 1
+            TEXT_SPRINT code ~%WNL%%TAB%%TAB%%TAB%flushDeferredOptions()~
+            SET codeLen = STRING_LENGTH ~%code%~
+            INSERT_BYTES ofs codeLen
+            WRITE_ASCIIE ofs ~%code%~
+          END ELSE BEGIN
+            SET success = 0
+          END
+        END ELSE BEGIN
+          SET success = 0
+        END
+      END ELSE BEGIN
+        SET success = 0
+      END
+    END
+
+    // 3. esc menu / start main
+    PATCH_IF (success && NOT GAME_IS ~pstee~) BEGIN
+      PATCH_IF (MOD_IS_INSTALLED ~LeUI.tp2~ 0) BEGIN
+        SET lefreut = 1
+        TEXT_SPRINT name ~START_MAIN~
+      END ELSE BEGIN
+        SET lefreut = 0
+        TEXT_SPRINT name ~ESC_MENU~
+      END
+      SET ofs = INDEX_BUFFER(~menu[ %TAB%%WNL%]*{[ %TAB%%WNL%]*name[ %TAB%]+['"]%name%['"]~)
+      PATCH_IF (ofs >= 0) BEGIN
+        SET ofs = INDEX_BUFFER(~['"]QUIT_GAME_BUTTON['"]~ ofs)
+        PATCH_IF (ofs >= 0) BEGIN
+          PATCH_IF (lefreut) BEGIN
+            // special handling: lefreut's UI
+            SET ofs = INDEX_BUFFER(~action[ %TAB%%WNL%]*"~ ofs)
+            PATCH_IF (ofs >= 0) BEGIN
+              SET ofs = INDEX_BUFFER(~"~ ofs) + 1
+              TEXT_SPRINT code ~%WNL%%TAB%%TAB%%TAB%flushDeferredOptions()~
+              SET codeLen = STRING_LENGTH ~%code%~
+              INSERT_BYTES ofs codeLen
+              WRITE_ASCIIE ofs ~%code%~
+            END ELSE BEGIN
+              SET success = 0
+            END
+          END ELSE BEGIN
+            // remaining games
+            SET ofs = INDEX_BUFFER(~['"]QUIT_BUTTON['"],[ %TAB%]*function()[ %TAB%]+Infinity_ShutdownGame()[ %TAB%]+end,~ ofs)
+            PATCH_IF (ofs >= 0) BEGIN
+              SET ofs = INDEX_BUFFER(~Infinity_ShutdownGame()~ ofs)
+              PATCH_IF (ofs > 0) BEGIN
+                TEXT_SPRINT code ~flushDeferredOptions() ~
+                SET codeLen = STRING_LENGTH ~%code%~
+                INSERT_BYTES ofs codeLen
+                WRITE_ASCIIE ofs ~%code%~
+              END ELSE BEGIN
+                SET success = 0
+              END
+            END ELSE BEGIN
+              SET success = 0
+            END
+          END
+        END ELSE BEGIN
+          SET success = 0
+        END
+      END ELSE BEGIN
+        SET success = 0
+      END
     END
   END
 END

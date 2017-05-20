@@ -1,7 +1,7 @@
 Reveal Hidden Gameplay Options
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Version:    0.2-beta
+Version:    0.3-beta
 Author:     Argent77
 
 Download:   https://
@@ -50,7 +50,7 @@ See more detailed information about individual options below.
 
 The following components are available when you chose to select options individually:
 
-2. Add in-game option "Enable Debug Console"
+2. Add in-game option "Enable Debug Mode"
 
 Allows you to enable cheat keys and the debug console in the game.
 
@@ -71,28 +71,35 @@ Setting this option places string reference numbers in front of game strings.
 Option can be found in Gameplay section.
 
 
-5. Add in-game option "Show trigger icons on tab"
+5. Add in-game option "Hotkeys On Tooltips"
+
+When this option is enabled tooltips will display hotkeys when available.
+
+Option can be found in Gameplay section.
+
+
+6. Add in-game option "Show trigger icons on tab"
 
 Setting this option reveals more information about interactive regions when pressing the TAB key.
 
 Option can be found in Gameplay section.
 
 
-6. Add in-game option "Allow Spacebar in Dialogs" (only available in PST:EE)
+7. Add in-game option "Allow Spacebar in Dialogs" (only available in PST:EE)
 
 Setting this option allows you to use the spacebar to continue in dialogs.
 
 Option can be found in Gameplay section.
 
 
-7. Add in-game option "Limits druidic spells for Cleric/Ranger" (not available in PST:EE)
+8. Add in-game option "Limits druidic spells for Cleric/Ranger" (not available in PST:EE)
 
 Setting this option limits druidic spell levels to level 3 for Cleric/Rangers (as per D&D rules).
 
 Option can be found in Gameplay section.
 
 
-8. Add in-game option "3E Sneak Attack"
+9. Add in-game option "3E Sneak Attack"
 
 Setting this option activates Sneak Attack and Crippling Strike, which are special abilities 
 similar to those from 3rd Edition Dungeons & Dragons rules.
@@ -100,16 +107,9 @@ similar to those from 3rd Edition Dungeons & Dragons rules.
 Option can be found in Gameplay section.
 
 
-9. Add in-game option "Critical Hit Screen Shake"
+10. Add in-game option "Critical Hit Screen Shake"
 
 Setting this option triggers a screen shake whenever a party member rolls a critical hit in combat.
-
-Option can be found in Gameplay > Feedback > Visual Feedback (or Gameplay section in PST:EE).
-
-
-10. Add in-game option "Hotkeys On Tooltips"
-
-When this option is enabled tooltips will display hotkeys when available.
 
 Option can be found in Gameplay > Feedback > Visual Feedback (or Gameplay section in PST:EE).
 
@@ -168,14 +168,25 @@ Credits
 
 Coding and testing: Argent77
 
+Additional coding help: AncientCowboy
+
 
 Copyright Notice
 ~~~~~~~~~~~~~~~~
 
-The mod "Reveal Hidden Gameplay Options" is licensed under the "Creative Commons 
-Attribution-ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa/4.0/).
+The mod "Reveal Hidden Gameplay Options" is licensed under the "Creative Commons Attribution-
+ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa/4.0/).
 
 
 History
 ~~~~~~~
 
+0.3-beta
+- Added workaround to make all options fully working (thanks AncientCowboy)
+- Added German translation
+- Relocated "Hotkeys On Tooltips" to Gameplay section
+- Improved handling of option "3E Sneak Attack"
+- Updated several descriptions
+
+0.2-beta
+- Initial release

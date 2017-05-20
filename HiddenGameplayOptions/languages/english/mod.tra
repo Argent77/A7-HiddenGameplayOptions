@@ -1,13 +1,11 @@
 // -*- coding: utf-8 -*- 
 
-@1000 = ~Enable Debug Console~
+@1000 = ~Enable Debug Mode~
 @1001 = ~Enabling this setting allows you to activate cheat keys and the debug console.
 
-Use keyboard shortcut CTRL+SPACE to activate the console in the game.
+Use keyboard shortcut CTRL+SPACE to activate the console. Console commands include ^PC:AddGold(number)^-, ^PC:CreateItem("name")^-, ^PC:SetCurrentXP(number)^-, and many more.
 
 Cheat keys include CTRL+Y to insta-kill creatures under the mouse cursor, CTRL+R to heal and dispel effects from characters under the mouse cursor, CTRL+J to teleport selected party members to the current cursor location, CTRL+T to advance game time by one hour, CTRL+4 to toggle visibility of interactive regions, and many more.
-
-Console commands include ^PC:AddGold(number)^-, ^PC:CreateItem("name")^-, ^PC:SetCurrentXP(number)^-, and many more.
 
 ^NNote: You must restart the game for changes to take effect.^-~
 
@@ -23,35 +21,35 @@ Press F11 to activate or deactivate UI edit mode. While this mode is active it i
 
 ^NNote: You must restart the game for changes to take effect.^-~
 
-@1300 = ~Show Trigger Icons on Tab~
-@1301 = ~Enable this setting to reveal additional information about interactive regions when pressing the TAB key.
+@1300 = ~Hotkeys On Tooltips~
+@1301 = ~When this setting is enabled tooltips will display hotkeys when available.
 
 ^NNote: You must restart the game for changes to take effect.^-~
 
-@1400 = ~Allow Spacebar in Dialogs~
-@1401 = ~Enabling this setting allows you to continue conversations by using the spacebar.
+@1400 = ~Show Trigger Icons on Tab~
+@1401 = ~Enabling this setting reveals additional information about interactive regions when pressing the TAB key.
 
 ^NNote: You must restart the game for changes to take effect.^-~
 
-@1500 = ~Limit druidic spells for Cleric/Ranger~
-@1501 = ~This setting controls the availability of druidic spells for multi- or dualclassed Cleric/Rangers.
+@1500 = ~Allow Spacebar in Dialogs~
+@1501 = ~Enabling this setting allows you to continue conversations by using the spacebar.
+
+^NNote: You must restart the game for changes to take effect.^-~
+
+@1600 = ~Limit druidic spells for Cleric/Ranger~
+@1601 = ~This setting controls the availability of druidic spells for multi- or dualclassed Cleric/Rangers.
 
 Enable this option to limit druidic spells to level 3 - the maximum allowed spell level available to rangers. Cleric spells are not affected by this option.
 
 ^NNote: You must restart the game for changes to take effect.^-~
 
-@1600 = ~3E Sneak Attack~
-@1601 = ~Enabling this setting activates Sneak Attack and Crippling Strike, which are special abilities similar to those from Wizards of the Coast's 3rd Edition Dungeons & Dragons® rules.
+@1700 = ~3E Sneak Attack~
+@1701 = ~Enabling this setting activates Sneak Attack and Crippling Strike, which are special abilities similar to those from Wizards of the Coast's 3rd Edition Dungeons & Dragons® rules.
 
 ^NNote: You must restart the game for changes to take effect.^-~
 
-@1700 = ~Screen Shake on Critical Hit~
-@1701 = ~Enabling this setting triggers a screen shake whenever a party member rolls a critical hit in combat.
-
-^NNote: You must restart the game for changes to take effect.^-~
-
-@1800 = ~Hotkeys On Tooltips~
-@1801 = ~When this setting is enabled tooltips will display hotkeys when available.
+@1800 = ~Screen Shake on Critical Hit~
+@1801 = ~Enabling this setting triggers a screen shake whenever a party member rolls a critical hit in combat.
 
 ^NNote: You must restart the game for changes to take effect.^-~
 

@@ -1,0 +1,90 @@
+// -*- coding: utf-8 -*- 
+
+@1000 = ~Debugmodus~
+@1001 = ~Aktiviert diese Option, um Cheat-Tastenkürzel und die Debugkonsole zu nutzen.
+
+Mit dem Tastenkürzel Strg+Leertaste wird die Konsole aktiviert. Folgende Konsolenbefehle sind verfügbar: ^PC:AddGold(zahl)^-, ^PC:CreateItem("name")^-, ^PC:SetCurrentXP(zahl)^-, und viele mehr.
+
+Folgende Cheat-Tastenkürzel sind verfügbar: Strg+Y zum Töten der Kreatur unter dem Mauszeiger, Strg+R zum Heilen und Entfernen von Effekten vom Charakter unter dem Mauszeiger, Strg+J zum Teleportieren der ausgewählten Gruppenmitglieder zur Mauszeigerposition, Strg+T zum Überspringen von einer Stunde Spielzeit, Strg+4 zum Sichtbar machen von interaktiven Bereichen, und viele mehr.
+
+^NHinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.^-~
+
+@1100 = ~UI Bearbeitungsmodus~
+@1101 = ~Aktiviert diese Option, um die Bearbeitungsfunktionen der Benutzeroberfläche im Spiel nutzen zu können.
+
+F11 aktiviert den UI Bearbeitungsmodus. Während der Modus aktiv ist, könnt ihr Benutzerelemente umherschieben. F5 kann zur Vorschau der UI-Veränderungen genutzt werden, ohne dass das Spiel neu gestartet werden muss. Die TAB-Taste kann genutzt werden, um die Zeilennummer in der UI.MENU des Benutzerelements unter dem Mauszeiger anzuzeigen.
+
+^NHinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.^-~
+
+@1200 = ~Strrefs anzeigen~
+@1201 = ~Aktiviert diese Option, um die Stringreferenz-Nummern vor den Texten im Spiel anzuzeigen.
+
+^NHinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.^-~
+
+@1300 = ~Tastenkürzel in Kurzinfos~
+@1301 = ~Aktiviert diese Option, um verfügbare Tastenkürzel in Kurzinfos anzuzeigen.
+
+^NHinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.^-~
+
+@1400 = ~Bereichssymbole mit TAB anzeigen~
+@1401 = ~Aktiviert diese Option, um bei gedrückter TAB-Taste zusätzlich Symbole für interaktive Regionen zu sehen.
+
+^NHinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.^-~
+
+@1500 = ~Leertaste in Dialogen nutzen~
+@1501 = ~Aktiviert diese Option, um Gespräche mit der Leertaste fortsetzen zu können.
+
+^NHinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.^-~
+
+@1600 = ~Druidenzauber für Kleriker/Waldläufer einschränken~
+@1601 = ~Aktiviert diese Option, um die Verfügbarkeit von Druidenzaubern für mehrklassige Kleriker/Waldläufer zu kontrollieren.
+
+Bei aktivierter Option sind Druidenzauber nur bis Stufe 3 verfügbar - die höchste Stufe für Waldläufer. Priesterzauber sind davon nicht betroffen.
+
+^NHinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.^-~
+
+@1700 = ~3E Heimlicher Angriff~
+@1701 = ~Aktiviert diese Option, um die Fähigkeiten Heimlicher Angriff und Verkrüppelnder Schlag ein- bzw. auszuschalten. Die Regeln für diese Fähigkeiten sind den Dungeons & Dragons®-Regeln 3 von Wizards of the Coast ähnlich.
+
+^NHinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.^-~
+
+@1800 = ~Bildschirmwackeln bei kritischen Treffern~
+@1801 = ~Wenn diese Option aktiviert ist, wackelt der Bildschirm bei einem kritischen Treffer.
+
+^NHinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.^-~
+
+@1900 = ~Zusätzliche Kampfinformationen anzeigen~
+@1901 = ~Aktiviert diese Option, um alle Faktoren zu sehen, die einen Trefferwurf beeinflussen.
+
+^NHinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.^-~
+
+@2000 = ~Spielzeit und -datum im Pausenmodus anzeigen~
+@2001 = ~Aktiviert diese Option, um Spielzeit und -datum anzuzeigen, wenn der Pausenmodus aktiviert wird.
+
+^NHinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.^-~
+
+@2100 = ~Ein- und Ausblendanimationen der Übersichtskarte abschalten~
+@2101 = ~Aktiviert diese Option, um die Ein- und Ausblendanimationen abzuschalten, die beim Aufrufen und Beenden der Übersichtskarte des Gebiets ausgeführt werden.
+
+^NHinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.^-~
+
+@2200 = ~Zoomrichtung des Mausrads umkehren~
+@2201 = ~Aktiviert diese Option, um die Richtung des Mausrads beim hinein- oder hinauszoomen umzukehren.
+
+^NHinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.^-~
+
+@2300 = ~Spiel pausieren wenn Gebietskarte aktiv ist~
+@2301 = ~Wenn diese Option aktiviert ist, wird das Spiel automatisch pausiert, wenn die Übersichtskarte des Gebiets aufgerufen wird.
+
+^NHinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.^-~
+
+@2400 = ~Nebel aktivieren~
+@2401 = ~Aktiviert diese Option, um Nebeleffekte in den Gebieten anzuzeigen.
+
+^NHinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.^-~
+
+@2500 = ~Videosequenzen deaktivieren~
+@2501 = ~Aktiviert diese Option, um Videosequenzen komplett zu deaktivieren.
+
+^NHinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.^-~
+

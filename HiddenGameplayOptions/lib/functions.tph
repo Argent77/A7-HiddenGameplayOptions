@@ -1,12 +1,42 @@
 // *** Generic UI-related functions ***
 
 /**
- * Adds a new string variable definition into available L_xx_YY.LUA resources.
+ * Adds a new string variable definition into all available L_xx_YY.LUA resources.
  * INT_VAR traRef   TRA reference number of the string to add.
  * STR_VAR varName  Name of the variable to add.
  * RET success      Returns 1 if definition has been added successfully to all available LUA files, 0 otherwise.
  */
 DEFINE_ACTION_FUNCTION ADD_LUA_DEFINITION
+INT_VAR
+  traRef  = "-1"
+STR_VAR
+  varName = ~~
+RET
+  success
+BEGIN
+  COPY_EXISTING_REGEXP ~L_[a-zA-Z][a-zA-Z]_[a-zA-Z][a-zA-Z]\.LUA~ ~override~
+    LPF ADD_LUA_VARIABLE INT_VAR traRef = traRef STR_VAR varName = EVAL ~%varName%~ RET success END
+  BUT_ONLY IF_EXISTS
+
+  ACTION_IF (success) BEGIN
+    // scan additional override folder for LUA files
+    ACTION_FOR_EACH path IN ~lang/%EE_LANGUAGE%/override~ ~%USER_DIRECTORY%/override~ BEGIN
+      ACTION_IF (DIRECTORY_EXISTS ~%path%~) BEGIN
+        ACTION_BASH_FOR ~%path%~ ~L_[a-zA-Z][a-zA-Z]_[a-zA-Z][a-zA-Z]\.LUA~ BEGIN
+          COPY ~%BASH_FOR_FILESPEC%~ ~%BASH_FOR_FILESPEC%~
+            LPF ADD_LUA_VARIABLE INT_VAR traRef = traRef STR_VAR varName = EVAL ~%varName%~ RET success END
+          BUT_ONLY IF_EXISTS
+        END
+      END
+    END
+  END
+END
+
+
+/**
+ * Adds a string variable definition into the current LUA file.
+ */
+DEFINE_PATCH_FUNCTION ADD_LUA_VARIABLE
 INT_VAR
   traRef = "-1"
 STR_VAR
@@ -14,51 +44,50 @@ STR_VAR
 RET
   success
 BEGIN
-  OUTER_SET success = 0
+  SET success = 0
 
-  ACTION_IF (traRef >= 0 AND NOT ~%varName%~ STR_EQ ~~) BEGIN
-    COPY_EXISTING_REGEXP ~L_[a-zA-Z][a-zA-Z]_[a-zA-Z][a-zA-Z]\.LUA~ ~override~
-      SET startOfs = INDEX_BUFFER(~uiStrings[ %TAB%%WNL%]*=[ %TAB%%WNL%]*{~)
-      SET ofs1 = INDEX_BUFFER(~[ %TAB%]*[a-zA-Z_][a-zA-Z0-9_]*[ %TAB%]*=.+,~ startOfs)
-      SET failed = 0
-      PATCH_IF (ofs1 < 0) BEGIN
+  PATCH_IF (traRef >= 0 AND NOT ~%varName%~ STR_EQ ~~) BEGIN
+    SET startOfs = INDEX_BUFFER(~uiStrings[ %TAB%%WNL%]*=[ %TAB%%WNL%]*{~)
+    SET ofs1 = INDEX_BUFFER(~[ %TAB%]*[a-zA-Z_][a-zA-Z0-9_]*[ %TAB%]*=.+,~ startOfs)
+    SET failed = 0
+    PATCH_IF (ofs1 < 0) BEGIN
+      SET failed = 1
+    END
+    PATCH_IF (NOT failed) BEGIN
+      SET ofs2 = INDEX_BUFFER(~[%WNL%]~ ofs1)
+      PATCH_IF (ofs2 < ofs1) BEGIN
         SET failed = 1
       END
-      PATCH_IF (NOT failed) BEGIN
-        SET ofs2 = INDEX_BUFFER(~[%WNL%]~ ofs1)
-        PATCH_IF (ofs2 < ofs1) BEGIN
-          SET failed = 1
-        END
+    END
+
+    PATCH_IF (NOT failed) BEGIN
+      // determining variable definition type
+      READ_ASCII ofs1 curLine (ofs2 - ofs1)
+      INNER_PATCH ~%curLine%~ BEGIN
+        SET v = INDEX_BUFFER(~[ %TAB%]*=[ %TAB%]*"[^"]+"~)
+        SET isStrref = (v < 0) ? 1 : 0
       END
 
-      PATCH_IF (NOT failed) BEGIN
-        // determining variable definition type
-        READ_ASCII ofs1 curLine (ofs2 - ofs1)
-        INNER_PATCH ~%curLine%~ BEGIN
-          SET v = INDEX_BUFFER(~[ %TAB%]*=[ %TAB%]*"[^"]+"~)
-          SET isStrref = (v < 0) ? 1 : 0
+      PATCH_IF (isStrref) BEGIN
+        SET number = RESOLVE_STR_REF((AT traRef))
+        TEXT_SPRINT line ~%TAB%%varName% = %number%,%LNL%~
+      END ELSE BEGIN
+        SPRINT text (AT traRef)
+        INNER_PATCH_SAVE text ~%text%~ BEGIN
+          REPLACE_TEXTUALLY ~%MNL%?%LNL%~ ~\n~    // line break -> symbolic line break
+          REPLACE_TEXTUALLY ~\([^\\]\)"~ ~\1\"~   // double-quotes must be escaped
+          REPLACE_TEXTUALLY ~\^[0-9A-Z$]\([^^]+\)\^-~ ~\1~   // just a precaution: older games don't appear to support colored text in options menu yet
         END
-
-        PATCH_IF (isStrref) BEGIN
-          SET number = RESOLVE_STR_REF((AT traRef))
-          TEXT_SPRINT line ~%TAB%%varName% = %number%,%LNL%~
-        END ELSE BEGIN
-          SPRINT text (AT traRef)
-          INNER_PATCH_SAVE text ~%text%~ BEGIN
-            REPLACE_TEXTUALLY ~%MNL%?%LNL%~ ~\n~    // line break -> symbolic line break
-            REPLACE_TEXTUALLY ~\([^\\]\)"~ ~\1\"~   // double-quotes must be escaped
-            REPLACE_TEXTUALLY ~\^[0-9A-Z$]\([^^]+\)\^-~ ~\1~   // just a precaution: older games don't appear to support colored text in options menu yet
-          END
-          TEXT_SPRINT line ~%TAB%%varName% = "%text%",%LNL%~
-        END
-
-        // inserting text definition
-        SET strlen = STRING_LENGTH ~%line%~
-        INSERT_BYTES ofs1 strlen
-        WRITE_ASCIIE ofs1 ~%line%~
-
-        SET success = 1
+        TEXT_SPRINT line ~%TAB%%varName% = "%text%",%LNL%~
       END
+
+      // inserting text definition
+      SET strlen = STRING_LENGTH ~%line%~
+      INSERT_BYTES ofs1 strlen
+      WRITE_ASCIIE ofs1 ~%line%~
+
+      SET success = 1
+    END
   END
 END
 
