@@ -1,0 +1,37 @@
+// -*- coding: utf-8 -*- 
+
+@1000 = ~Enable Debug Console~
+@1001 = ~Enabling this setting allows you to activate cheat keys and the debug console.
+
+Use keyboard shortcut CTRL-SPACE to activate the console in the game.
+
+Cheat keys include CTRL-Y to insta-kill creatures, CTRL-R to heal and dispel effects from characters, CTRL-J to teleport selected party members across the map, CTRL-T to advance game time by one hour, or CTRL-4 to toggle visibility of interactive regions.
+
+^NNote: You must restart the game for changes to take effect.^-~
+
+@1100 = ~Show trigger icons on tab~
+@1101 = ~Enable this setting to reveal additional information about interactive regions when pressing the TAB key.
+
+^NNote: You must restart the game for changes to take effect.^-~
+
+@1200 = ~Show extra combat info~
+@1201 = ~Enabling this setting allows you to see all factors that influence an attack roll.
+
+^NNote: You must restart the game for changes to take effect.^-~
+
+@1300 = ~Show Game Date and Time on Pause~
+@1301 = ~Show game date and time when activating pause.
+
+^NNote: You must restart the game for changes to take effect.^-~
+
+@1400 = ~Disable Fog~
+@1401 = ~Disables fog effects on maps.
+
+^NNote: You must restart the game for changes to take effect.^-~
+
+@1500 = ~Limits druidic spells for Cleric/Ranger~
+@1501 = ~This setting controls the availability of druidic spells for multi- or dualclassed Cleric/Rangers.
+
+Enable this option to limit druidic spells to level 3 - the maximum allowed spell level available to rangers. Cleric spells are not affected by this option.
+
+^NNote: You must restart the game for changes to take effect.^-~

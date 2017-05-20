@@ -1,0 +1,17 @@
+// -*- coding: us-ascii -*- 
+
+@1 = ~Install more Gameplay options~
+@2 = ~All available options~
+@3 = ~Selected options~
+
+@10 = ~Add in-game option "Enable Debug Console"~
+@11 = ~Add in-game option "Show trigger icons on tab"~
+@12 = ~Add in-game option "Show extra combat info"~
+@13 = ~Add in-game option "Show Game Date and Time on Pause"~
+@14 = ~Add in-game option "Disable Fog"~
+@15 = ~Add in-game option "Limits druidic spells for Cleric/Ranger"~
+
+@100 = ~Enhanced Edition game patched to v2.0 or higher required.~
+@101 = ~Cannot patch LUA file~
+@102 = ~Cannot patch UI.MENU~
+@103 = ~Component "Selected options" not selected.~

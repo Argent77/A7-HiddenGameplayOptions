@@ -1,0 +1,316 @@
+/**
+ * Installs a new 'Gameplay' option to the game.
+ * INT_VAR optLabelTra    The TRA reference number of the option label string.
+ * INT_VAR optDescTra     The TRA reference number of the option description text.
+ * INT_VAR controlID      A unique number that identifies this option.
+ *                        Recommended: Use negative number to minimize interference with existing IDs.
+ * INT_VAR autoFail       Set to nonzero to force termination of component installation on error.
+ * STR_VAR optLabelName   Name of the option label variable.
+ * STR_VAR optDescName    Name of the option description variable.
+ * STR_VAR iniSection     Section name of the option that will be added to baldur.lua (e.g. "Program Options").
+ * STR_VAR iniName        Option name that will be added to baldur.lua (e.g. "Debug Mode").
+ * RET success            Returns 1 on success, 0 otherwise.
+ */
+DEFINE_ACTION_FUNCTION INSTALL_GAMEPLAY_OPTION
+INT_VAR
+  optLabelTra   = "-1"
+  optDescTra    = "-1"
+  controlID     = 0
+  autoFail      = 1
+STR_VAR
+  optLabelName  = ""
+  optDescName   = ""
+  iniSection    = ""
+  iniName       = ""
+RET
+  success
+BEGIN
+  OUTER_SET success = 0
+
+  ACTION_IF (optLabelTra >= 0 AND
+             optDescTra >= 0 AND
+             controlID != 0 AND
+             NOT ~%optLabelName%~ STR_EQ ~~ AND
+             NOT ~%optDescName%~ STR_EQ ~~ AND
+             NOT ~%iniSection%~ STR_EQ ~~ AND
+             NOT ~%iniName%~ STR_EQ ~~) BEGIN
+    OUTER_SET failed = 0
+
+    LAF ADD_LUA_DEFINITION
+    INT_VAR traRef = optDescTra
+    STR_VAR varName = EVAL ~%optDescName%~
+    RET success
+    END
+    ACTION_IF (NOT success) BEGIN
+      ACTION_IF (autoFail) BEGIN
+        FAIL @101 // Cannot patch LUA file
+      END ELSE BEGIN
+        OUTER_SET failed = 1
+      END
+    END
+
+    ACTION_IF (NOT failed) BEGIN
+      LAF ADD_LUA_DEFINITION
+      INT_VAR traRef = optLabelTra
+      STR_VAR varName = EVAL ~%optLabelName%~
+      RET success
+      END
+      ACTION_IF (NOT success) BEGIN
+        ACTION_IF (autoFail) BEGIN
+          FAIL @101 // Cannot patch LUA file
+        END ELSE BEGIN
+          OUTER_SET failed = 1
+        END
+      END
+    END
+
+    ACTION_IF (NOT failed) BEGIN
+      COPY_EXISTING ~ui.menu~ ~override~
+        LPF ADD_GAMEPLAY_OPTION
+        INT_VAR
+          controlID   = controlID
+        STR_VAR
+          optLabel    = EVAL ~%optLabelName%~
+          optDesc     = EVAL ~%optDescName%~
+          iniSection  = EVAL ~%iniSection%~
+          iniName     = EVAL ~%iniName%~
+        RET
+          success
+        END
+        PATCH_IF (NOT success) BEGIN
+          PATCH_IF (autoFail) BEGIN
+            PATCH_FAIL @102 // Cannot patch UI.MENU
+          END ELSE BEGIN
+            SET failed = 1
+          END
+        END
+    END
+
+    ACTION_IF (NOT failed) BEGIN
+      OUTER_SET success = 1
+    END
+  END
+END
+
+
+/**
+ * Adds a new string variable definition into available L_xx_YY.LUA resources.
+ * INT_VAR traRef   TRA reference number of the string to add.
+ * STR_VAR varName  Name of the variable to add.
+ * RET success      Returns 1 if definition has been added successfully to all available LUA files, 0 otherwise.
+ */
+DEFINE_ACTION_FUNCTION ADD_LUA_DEFINITION
+INT_VAR
+  traRef = "-1"
+STR_VAR
+  varName = ~~
+RET
+  success
+BEGIN
+  OUTER_SET success = 0
+
+  ACTION_IF (traRef >= 0 AND NOT ~%varName%~ STR_EQ ~~) BEGIN
+    COPY_EXISTING_REGEXP ~L_[a-zA-Z][a-zA-Z]_[a-zA-Z][a-zA-Z]\.LUA~ ~override~
+      SET ofs1 = INDEX_BUFFER(~[ %TAB%]*[a-zA-Z_][a-zA-Z0-9_]*[ %TAB%]*=.+,~)
+      SET failed = 0
+      PATCH_IF (ofs1 < 0) BEGIN
+        SET failed = 1
+      END
+      PATCH_IF (NOT failed) BEGIN
+        SET ofs2 = INDEX_BUFFER(~[%WNL%]~ ofs1)
+        PATCH_IF (ofs2 < ofs1) BEGIN
+          SET failed = 1
+        END
+      END
+
+      PATCH_IF (NOT failed) BEGIN
+        // determining variable definition type
+        READ_ASCII ofs1 curLine (ofs2 - ofs1)
+        INNER_PATCH ~%curLine%~ BEGIN
+          SET v = INDEX_BUFFER(~[ %TAB%]*=[ %TAB%]*"[^"]+"~)
+          SET isStrref = (v < 0) ? 1 : 0
+        END
+
+        PATCH_IF (isStrref) BEGIN
+          SET number = RESOLVE_STR_REF((AT traRef))
+          TEXT_SPRINT line ~%TAB%%varName% = %number%,%LNL%~
+        END ELSE BEGIN
+          SPRINT text (AT traRef)
+          INNER_PATCH_SAVE text ~%text%~ BEGIN
+            REPLACE_TEXTUALLY ~%MNL%?%LNL%~ ~\n~
+            REPLACE_TEXTUALLY ~\^N\(.+\)\^-~ ~\1~   // just a precaution: older games don't appear to support colored text in options menu yet
+          END
+          TEXT_SPRINT line ~%TAB%%varName% = "%text%",%LNL%~
+        END
+
+        // inserting text definition
+        SET strlen = STRING_LENGTH ~%line%~
+        INSERT_BYTES ofs1 strlen
+        WRITE_ASCIIE ofs1 ~%line%~
+
+        SET success = 1
+      END ELSE BEGIN
+        SET success = 0
+      END
+  END
+END
+
+
+/**
+ * Adds a new option to the 'Gameplay' section of the Options menu.
+ * INT_VAR controlID  A unique number that identifies the option.
+ *                    Recommended: Use negative number to minimize interference with existing IDs.
+ * STR_VAR optLabel   Variable name referring to option label text (e.g. "SHOW_DEBUG_CONSOLE_LABEL").
+ * STR_VAR optDesc    Variable name referring to option description text (e.g. "SHOW_DEBUG_CONSOLE_DESC").
+ * STR_VAR iniSection Section name of option that will be added to baldur.lua (e.g. "Program Options").
+ * STR_VAR iniName    Option name that will be added to baldur.lua (e.g. "Debug Mode").
+ * RET success        Returns 1 if changes have been applied successfully, 0 otherwise.
+ */
+DEFINE_PATCH_FUNCTION ADD_GAMEPLAY_OPTION
+INT_VAR
+  controlID = 0
+STR_VAR
+  optLabel    = ""
+  optDesc     = ""
+  iniSection  = ""
+  iniName     = ""
+RET
+  success
+BEGIN
+  SET success = 0
+  PATCH_IF (controlID != 0 AND
+            NOT ~%optLabel%~ STR_EQ ~~ AND
+            NOT ~%optDesc%~ STR_EQ ~~ AND
+            NOT ~%iniSection%~ STR_EQ ~~ AND
+            NOT ~%iniName%~ STR_EQ ~~) BEGIN
+    LPF __A7_ADD_OPTION
+    INT_VAR controlID = controlID
+    STR_VAR
+      optLabel    = EVAL ~%optLabel%~
+      optDesc     = EVAL ~%optDesc%~
+      iniSection  = EVAL ~%iniSection%~
+      iniName     = EVAL ~%iniName%~
+    RET success
+    END
+  END
+END
+
+
+// Used internally: implement new entry in UI.MENU
+DEFINE_PATCH_FUNCTION __A7_ADD_OPTION
+INT_VAR
+  controlID = 0
+STR_VAR
+  optLabel    = ""
+  optDesc     = ""
+  iniSection  = ""
+  iniName     = ""
+RET
+  success
+BEGIN
+  SET success = 0
+  SET matches = 0   // keeps track of modifications
+
+  // 1. adding entry to options array
+  SET ofs = INDEX_BUFFER(~toggleTitles[ %TAB%]*=[ %TAB%]*{~)
+  PATCH_IF (ofs >= 0) BEGIN
+    SET ofs = INDEX_BUFFER(~[%WNL%]~ ofs)
+    SET ofs = INDEX_BUFFER(~[ %TAB%]*}[ %TAB%%WNL%]~ ofs)
+    PATCH_IF (ofs > 0) BEGIN
+      TEXT_SPRINT entry ~{"%optLabel%",			"%optDesc%", 	%controlID%, 0, 0},%WNL%~
+      SET entryLen = STRING_LENGTH ~%entry%~
+      INSERT_BYTES ofs entryLen
+      WRITE_ASCIIE ofs ~%entry%~
+      PATCH_LOG ~DEBUG: added entry to options array~
+      SET matches += 1
+
+      // 2. adding code for reading initial state of option
+      SET ofs = INDEX_BUFFER(~for index, var in pairs(toggleTitles) do~ ofs)
+      PATCH_IF (ofs > 0) BEGIN
+        SET ofs1 = INDEX_BUFFER(~[ %TAB%]if[ %TAB%]+(var\[3\][ %TAB%]*==[ %TAB%]*-?[0-9]+)[ %TAB%]+then~ ofs)
+        SET ofs2 = INDEX_BUFFER(~.*Infinity_GetOption~ ofs)
+        PATCH_IF (ofs1 > 0 && ofs1 < ofs2) BEGIN
+          // custom option already exists
+          SET ofs1 += 1 // skip to start of "if" statement
+          TEXT_SPRINT code ~if (var[3] == %controlID%) then
+				var[5] = Infinity_GetINIValue('%iniSection%', '%iniName%')
+			else~
+          SET codeLen = STRING_LENGTH ~%code%~
+          INSERT_BYTES ofs1 codeLen
+          WRITE_ASCIIE ofs1 ~%code%~
+          SET ofs1 += codeLen
+
+          PATCH_LOG ~DEBUG: added read option code (custom)~
+          SET matches += 1
+          SET ofs = ofs1
+        END ELSE PATCH_IF (ofs2 > 0) BEGIN
+          // first custom option to add
+          TEXT_SPRINT code ~			if (var[3] == %controlID%) then
+				var[5] = Infinity_GetINIValue('%iniSection%', '%iniName%')
+			else
+	~
+          SET codeLen = STRING_LENGTH ~%code%~
+          INSERT_BYTES ofs2 codeLen
+          WRITE_ASCIIE ofs2 ~%code%~
+          SET ofs2 += codeLen
+
+          SET ofs2 = INDEX_BUFFER(~[%WNL%]~ ofs2)
+          TEXT_SPRINT code ~%WNL%			end~
+          SET codeLen = STRING_LENGTH ~%code%~
+          INSERT_BYTES ofs2 codeLen
+          WRITE_ASCIIE ofs2 ~%code%~
+          SET ofs2 += codeLen
+
+          PATCH_LOG ~DEBUG: added read option code (new)~
+          SET matches += 1
+          SET ofs = ofs2
+        END
+
+        PATCH_IF (matches = 2) BEGIN
+          // 3. adding code for writing current state of option
+          SET ofs = INDEX_BUFFER(~for index, var in pairs(toggleTitles) do~ ofs)
+          PATCH_IF (ofs > 0) BEGIN
+            SET ofs1 = INDEX_BUFFER(~[ %TAB%]if[ %TAB%]+(var\[3\][ %TAB%]*==[ %TAB%]*-?[0-9]+)[ %TAB%]+then~ ofs)
+            SET ofs2 = INDEX_BUFFER(~.*Infinity_ChangeOption~ ofs)
+            PATCH_IF (ofs1 > 0 && ofs1 < ofs2) BEGIN
+              // custom option already exists
+              SET ofs1 += 1 // skip to start of "if" statement
+              TEXT_SPRINT code ~if (var[3] == %controlID%) then
+					Infinity_SetINIValue('%iniSection%', '%iniName%', var[5])
+				else~
+              SET codeLen = STRING_LENGTH ~%code%~
+              INSERT_BYTES ofs1 codeLen
+              WRITE_ASCIIE ofs1 ~%code%~
+
+              PATCH_LOG ~DEBUG: added write option code (custom)~
+              SET matches += 1
+            END ELSE PATCH_IF (ofs2 > 0) BEGIN
+              // first custom option to add
+          TEXT_SPRINT code ~				if (var[3] == %controlID%) then
+					Infinity_SetINIValue('%iniSection%', '%iniName%', var[5])
+				else
+	~
+              SET codeLen = STRING_LENGTH ~%code%~
+              INSERT_BYTES ofs2 codeLen
+              WRITE_ASCIIE ofs2 ~%code%~
+              SET ofs2 += codeLen
+
+              SET ofs2 = INDEX_BUFFER(~[%WNL%]~ ofs2)
+              TEXT_SPRINT code ~%WNL%				end~
+              SET codeLen = STRING_LENGTH ~%code%~
+              INSERT_BYTES ofs2 codeLen
+              WRITE_ASCIIE ofs2 ~%code%~
+
+              PATCH_LOG ~DEBUG: added write option code (new)~
+              SET matches += 1
+            END
+          END
+        END
+      END
+    END
+  END
+
+  PATCH_IF (matches = 3) BEGIN
+    SET success = 1
+  END
+END
