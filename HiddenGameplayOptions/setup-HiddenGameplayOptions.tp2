@@ -1,0 +1,177 @@
+BACKUP ~HiddenGameplayOptions/backup~
+AUTHOR ~Argent77 at Beamdog Forums~
+VERSION ~0.2-beta~
+
+ASK_EVERY_COMPONENT
+
+ALWAYS
+  INCLUDE ~%MOD_FOLDER%/lib/presets.tph~
+END
+
+README ~%MOD_FOLDER%/readme/readme-%LANGUAGE%.txt~
+       ~%MOD_FOLDER%/readme/readme.txt~
+
+LANGUAGE  ~English~
+          ~english~
+          ~%MOD_FOLDER%/languages/english/setup.tra~
+          ~%MOD_FOLDER%/languages/english/mod.tra~
+
+BEGIN @2  // All available options
+  REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @100  // Enhanced Edition game patched to v2.0 or higher required.
+  SUBCOMPONENT @1 // Install more Gameplay options
+  DESIGNATED 0
+
+  LAF OPTION_DEBUG_CONSOLE END
+
+  LAF OPTION_UI_EDIT_MODE END
+
+  LAF OPTION_SHOW_STRREFS END
+
+  LAF OPTION_TRIGGER_ICONS END
+
+  ACTION_IF (GAME_IS ~pstee~) BEGIN LAF OPTION_ALLOW_SPACE_IN_DIALOG END END
+
+  ACTION_IF (NOT GAME_IS ~pstee~) BEGIN LAF OPTION_CLERIC_RANGER_SPELLS END END
+
+  LAF OPTION_SNEAK_ATTACK END
+
+  LAF OPTION_CRITICAL_HIT_SCREEN_SHAKE END
+
+  LAF OPTION_TOOLTIP_HOTKEYS END
+
+  LAF OPTION_EXTRA_COMBAT_INFO END
+
+  LAF OPTION_DATE_ON_PAUSE END
+
+  ACTION_IF (GAME_IS ~pstee~) BEGIN LAF OPTION_DISABLE_MAP_ZOOM END END
+
+  LAF OPTION_REVERSE_WHEEL_ZOOM END
+
+  LAF OPTION_PAUSING_MAP END
+
+  ACTION_IF (NOT GAME_IS ~pstee~) BEGIN LAF OPTION_ENABLE_FOG END END
+
+  LAF OPTION_DISABLE_MOVIES END
+
+
+BEGIN @3  // Selected options
+  REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @100  // Enhanced Edition game patched to v2.0 or higher required.
+  SUBCOMPONENT @1 // Install more Gameplay options
+  DESIGNATED 1
+
+
+BEGIN @10 // Add in-game option "Enable Debug Console"
+  REQUIRE_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 1 @103 // Component "Selected options" not selected.
+  DESIGNATED 10
+
+  LAF OPTION_DEBUG_CONSOLE END
+
+
+BEGIN @11 // Add in-game option "Enable UI Edit Mode"
+  REQUIRE_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 1 @103 // Component "Selected options" not selected.
+  DESIGNATED 11
+
+  LAF OPTION_UI_EDIT_MODE END
+
+
+BEGIN @12 // Add in-game option "Show Strrefs"
+  REQUIRE_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 1 @103 // Component "Selected options" not selected.
+  DESIGNATED 12
+
+  LAF OPTION_SHOW_STRREFS END
+
+
+BEGIN @13 // Add in-game option "Show trigger icons on tab"
+  REQUIRE_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 1 @103 // Component "Selected options" not selected.
+  DESIGNATED 13
+
+  LAF OPTION_TRIGGER_ICONS END
+
+
+BEGIN @14 // Add in-game option "Allow Spacebar in Dialogs"
+  REQUIRE_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 1 @103 // Component "Selected options" not selected.
+  REQUIRE_PREDICATE (GAME_IS ~pstee~) @104 // Option not available for this game.
+  DESIGNATED 14
+
+  LAF OPTION_ALLOW_SPACE_IN_DIALOG END
+
+
+BEGIN @15 // Add in-game option "Limit druidic spells for Cleric/Ranger"
+  REQUIRE_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 1 @103 // Component "Selected options" not selected.
+  REQUIRE_PREDICATE (NOT GAME_IS ~pstee~) @104 // Option not available for this game.
+  DESIGNATED 15
+
+  LAF OPTION_CLERIC_RANGER_SPELLS END
+
+
+BEGIN @16 // Add in-game option "3E Sneak Attack"
+  REQUIRE_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 1 @103 // Component "Selected options" not selected.
+  REQUIRE_PREDICATE (NOT GAME_IS ~iwdee~) @105 // Option already present in this game.
+  DESIGNATED 16
+
+  LAF OPTION_SNEAK_ATTACK END
+
+
+BEGIN @17 // Add in-game option "Critical Hit Screen Shake"
+  REQUIRE_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 1 @103 // Component "Selected options" not selected.
+  DESIGNATED 17
+
+  LAF OPTION_CRITICAL_HIT_SCREEN_SHAKE END
+
+
+BEGIN @18 // Add in-game option "Hotkeys On Tooltips"
+  REQUIRE_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 1 @103 // Component "Selected options" not selected.
+  DESIGNATED 18
+
+  LAF OPTION_TOOLTIP_HOTKEYS END
+
+
+BEGIN @19 // Add in-game option "Show extra combat info"
+  REQUIRE_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 1 @103 // Component "Selected options" not selected.
+  DESIGNATED 19
+
+  LAF OPTION_EXTRA_COMBAT_INFO END
+
+
+BEGIN @20 // Add in-game option "Show Game Date and Time on Pause"
+  REQUIRE_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 1 @103 // Component "Selected options" not selected.
+  DESIGNATED 20
+
+  LAF OPTION_DATE_ON_PAUSE END
+
+
+BEGIN @21 // Add in-game option "Disable Area Map Zoom"
+  REQUIRE_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 1 @103 // Component "Selected options" not selected.
+  REQUIRE_PREDICATE (GAME_IS ~pstee~) @104 // Option not available for this game.
+  DESIGNATED 21
+
+  LAF OPTION_DISABLE_MAP_ZOOM END
+
+
+BEGIN @22 // Add in-game option "Reverse Mouse Wheel Zoom"
+  REQUIRE_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 1 @103 // Component "Selected options" not selected.
+  DESIGNATED 22
+
+  LAF OPTION_REVERSE_WHEEL_ZOOM END
+
+
+BEGIN @23 // Add in-game option "Pause Game on Map Screen"
+  REQUIRE_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 1 @103 // Component "Selected options" not selected.
+  DESIGNATED 23
+
+  LAF OPTION_PAUSING_MAP END
+
+
+BEGIN @24 // Add in-game option "Enable Fog"
+  REQUIRE_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 1 @103 // Component "Selected options" not selected.
+  REQUIRE_PREDICATE (NOT GAME_IS ~pstee~) @104 // Option not available for this game.
+  DESIGNATED 24
+
+  LAF OPTION_ENABLE_FOG END
+
+
+BEGIN @25 // Add in-game option "Disable Movies"
+  REQUIRE_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 1 @103 // Component "Selected options" not selected.
+  DESIGNATED 25
+
+  LAF OPTION_DISABLE_MOVIES END

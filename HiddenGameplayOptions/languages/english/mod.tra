@@ -1,0 +1,92 @@
+// -*- coding: utf-8 -*- 
+
+@1000 = ~Enable Debug Console~
+@1001 = ~Enabling this setting allows you to activate cheat keys and the debug console.
+
+Use keyboard shortcut CTRL+SPACE to activate the console in the game.
+
+Cheat keys include CTRL+Y to insta-kill creatures under the mouse cursor, CTRL+R to heal and dispel effects from characters under the mouse cursor, CTRL+J to teleport selected party members to the current cursor location, CTRL+T to advance game time by one hour, CTRL+4 to toggle visibility of interactive regions, and many more.
+
+Console commands include ^PC:AddGold(number)^-, ^PC:CreateItem("name")^-, ^PC:SetCurrentXP(number)^-, and many more.
+
+^NNote: You must restart the game for changes to take effect.^-~
+
+@1100 = ~Enable UI Edit Mode~
+@1101 = ~Enabling this setting allows you to use UI edit functionality in the game.
+
+Press F11 to activate or deactivate UI edit mode. While this mode is active it is possible to drag UI elements around the screen. Press F5 to preview UI changes without restarting the game. Press TAB while hovering over an UI element shows which line number in UI.MENU defines that element.
+
+^NNote: You must restart the game for changes to take effect.^-~
+
+@1200 = ~Show Strrefs~
+@1201 = ~Enabling this setting places string reference numbers in front of game strings.
+
+^NNote: You must restart the game for changes to take effect.^-~
+
+@1300 = ~Show Trigger Icons on Tab~
+@1301 = ~Enable this setting to reveal additional information about interactive regions when pressing the TAB key.
+
+^NNote: You must restart the game for changes to take effect.^-~
+
+@1400 = ~Allow Spacebar in Dialogs~
+@1401 = ~Enabling this setting allows you to continue conversations by using the spacebar.
+
+^NNote: You must restart the game for changes to take effect.^-~
+
+@1500 = ~Limit druidic spells for Cleric/Ranger~
+@1501 = ~This setting controls the availability of druidic spells for multi- or dualclassed Cleric/Rangers.
+
+Enable this option to limit druidic spells to level 3 - the maximum allowed spell level available to rangers. Cleric spells are not affected by this option.
+
+^NNote: You must restart the game for changes to take effect.^-~
+
+@1600 = ~3E Sneak Attack~
+@1601 = ~Enabling this setting activates Sneak Attack and Crippling Strike, which are special abilities similar to those from Wizards of the Coast's 3rd Edition Dungeons & Dragons® rules.
+
+^NNote: You must restart the game for changes to take effect.^-~
+
+@1700 = ~Screen Shake on Critical Hit~
+@1701 = ~Enabling this setting triggers a screen shake whenever a party member rolls a critical hit in combat.
+
+^NNote: You must restart the game for changes to take effect.^-~
+
+@1800 = ~Hotkeys On Tooltips~
+@1801 = ~When this setting is enabled tooltips will display hotkeys when available.
+
+^NNote: You must restart the game for changes to take effect.^-~
+
+@1900 = ~Show Extra Combat Info~
+@1901 = ~Enabling this setting allows you to see all factors that influence an attack roll.
+
+^NNote: You must restart the game for changes to take effect.^-~
+
+@2000 = ~Show Game Date and Time on Pause~
+@2001 = ~Shows game date and time when activating pause.
+
+^NNote: You must restart the game for changes to take effect.^-~
+
+@2100 = ~Disable Area Map Zoom~
+@2101 = ~Disables the zoom in/zoom out effect when opening or closing the area map screen.
+
+^NNote: You must restart the game for changes to take effect.^-~
+
+@2200 = ~Reverse Mouse Wheel Zoom~
+@2201 = ~Reverses the zoom direction when using the mouse wheel.
+
+^NNote: You must restart the game for changes to take effect.^-~
+
+@2300 = ~Pause Game on Map Screen~
+@2301 = ~Automatically pauses the game while looking at the map screen.
+
+^NNote: You must restart the game for changes to take effect.^-~
+
+@2400 = ~Enable Fog~
+@2401 = ~Enables fog effects on maps.
+
+^NNote: You must restart the game for changes to take effect.^-~
+
+@2500 = ~Disable Movies~
+@2501 = ~Enabling this setting disables movie playback.
+
+^NNote: You must restart the game for changes to take effect.^-~
+

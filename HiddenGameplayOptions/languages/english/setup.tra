@@ -1,0 +1,29 @@
+// -*- coding: us-ascii -*- 
+
+@1 = ~Install Hidden Gameplay Options~
+@2 = ~All available options~
+@3 = ~Selected options~
+
+@10 = ~Add in-game option "Enable Debug Console"~
+@11 = ~Add in-game option "Enable UI Edit Mode"~
+@12 = ~Add in-game option "Show Strrefs"~
+@13 = ~Add in-game option "Show trigger icons on tab"~
+@14 = ~Add in-game option "Allow Spacebar in Dialogs"~
+@15 = ~Add in-game option "Limit druidic spells for Cleric/Ranger"~
+@16 = ~Add in-game option "3E Sneak Attack"~
+@17 = ~Add in-game option "Critical Hit Screen Shake"~
+@18 = ~Add in-game option "Hotkeys On Tooltips"~
+@19 = ~Add in-game option "Show extra combat info"~
+@20 = ~Add in-game option "Show Game Date and Time on Pause"~
+@21 = ~Add in-game option "Disable Area Map Zoom"~
+@22 = ~Add in-game option "Reverse Mouse Wheel Zoom"~
+@23 = ~Add in-game option "Pause Game on Map Screen"~
+@24 = ~Add in-game option "Enable Fog"~
+@25 = ~Add in-game option "Disable Movies"~
+
+@100 = ~Enhanced Edition game patched to v2.0 or higher required.~
+@101 = ~Cannot patch LUA file~
+@102 = ~Cannot patch UI.MENU~
+@103 = ~Component "Selected options" not selected.~
+@104 = ~Option not available for this game.~
+@105 = ~Option already present in this game.~

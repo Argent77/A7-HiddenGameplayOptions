@@ -1,0 +1,386 @@
+// *** Predefined functions for adding specific options to the game ***
+
+INCLUDE ~%MOD_FOLDER%/lib/ui_checkbox.tph~
+
+/**
+ * Available options sections (defined by "arrayName" parameter):
+ * toggleTitles:     Gameplay options
+ * feedbackToggles:  Gameplay > Feedback > Visual Feedback
+ * messagesToggles:  Gameplay > Feedback > Feedback Messages
+ * graphicsToggles:  Graphics > Display Options
+ */
+
+/** Add in-game option "Enable Debug Console" */
+DEFINE_ACTION_FUNCTION OPTION_DEBUG_CONSOLE
+BEGIN
+  OUTER_TEXT_SPRINT arrayName "toggleTitles"
+
+  LAF INSTALL_CHECK_OPTION
+  INT_VAR
+    optLabelTra   = 1000
+    optDescTra    = 1001
+    controlID     = "-167"
+    autoFail      = 1
+  STR_VAR
+    arrayName     = EVAL "%arrayName%"
+    optLabelName  = "A7_SHOW_DEBUG_CONSOLE_LABEL"
+    optDescName   = "A7_SHOW_DEBUG_CONSOLE_DESCRIPTION"
+    iniSection    = "Program Options"
+    iniName       = "Debug Mode"
+  RET
+    success
+  END
+END
+
+/** Add in-game option "Enable UI Edit Mode" */
+DEFINE_ACTION_FUNCTION OPTION_UI_EDIT_MODE
+BEGIN
+  OUTER_TEXT_SPRINT arrayName "toggleTitles"
+
+  LAF INSTALL_CHECK_OPTION
+  INT_VAR
+    optLabelTra   = 1100
+    optDescTra    = 1101
+    controlID     = "-168"
+    autoFail      = 1
+  STR_VAR
+    arrayName     = EVAL "%arrayName%"
+    optLabelName  = "A7_UI_EDIT_MODE_LABEL"
+    optDescName   = "A7_UI_EDIT_MODE_DESCRIPTION"
+    iniSection    = "Program Options"
+    iniName       = "UI Edit Mode"
+  RET
+    success
+  END
+END
+
+/** Add in-game option "Show Strrefs" */
+DEFINE_ACTION_FUNCTION OPTION_SHOW_STRREFS
+BEGIN
+  OUTER_TEXT_SPRINT arrayName "toggleTitles"
+
+  LAF INSTALL_CHECK_OPTION
+  INT_VAR
+    optLabelTra   = 1200
+    optDescTra    = 1201
+    controlID     = "-169"
+    autoFail      = 1
+  STR_VAR
+    arrayName     = EVAL "%arrayName%"
+    optLabelName  = "A7_SHOW_STRREFS_LABEL"
+    optDescName   = "A7_SHOW_STRREFS_DESCRIPTION"
+    iniSection    = "Program Options"
+    iniName       = "Strref On"
+  RET
+    success
+  END
+END
+
+/** Add in-game option "Show trigger icons on tab" */
+DEFINE_ACTION_FUNCTION OPTION_TRIGGER_ICONS
+BEGIN
+  OUTER_TEXT_SPRINT arrayName "toggleTitles"
+
+  LAF INSTALL_CHECK_OPTION
+  INT_VAR
+    optLabelTra   = 1300
+    optDescTra    = 1301
+    controlID     = "-170"
+    autoFail      = 1
+  STR_VAR
+    arrayName     = EVAL "%arrayName%"
+    optLabelName  = "A7_SHOW_TRIGGER_ICONS_LABEL"
+    optDescName   = "A7_SHOW_TRIGGER_ICONS_DESCRIPTION"
+    iniSection    = "Game Options"
+    iniName       = "Show Triggers On Tab"
+  RET
+    success
+  END
+END
+
+/** Add in-game option "Allow Spacebar in Dialogs" */
+DEFINE_ACTION_FUNCTION OPTION_ALLOW_SPACE_IN_DIALOG
+BEGIN
+  OUTER_TEXT_SPRINT arrayName "toggleTitles"
+
+  LAF INSTALL_CHECK_OPTION
+  INT_VAR
+    optLabelTra   = 1400
+    optDescTra    = 1401
+    controlID     = "-171"
+    autoFail      = 1
+  STR_VAR
+    arrayName     = EVAL "%arrayName%"
+    optLabelName  = "A7_ALLOW_SPACE_IN_DIALOG_LABEL"
+    optDescName   = "A7_ALLOW_SPACE_IN_DIALOG_DESCRIPTION"
+    iniSection    = "Game Options"
+    iniName       = "Allow Spacebar In Dialog"
+  RET
+    success
+  END
+END
+
+/** Add in-game option "Limit druidic spells for Cleric/Ranger" */
+DEFINE_ACTION_FUNCTION OPTION_CLERIC_RANGER_SPELLS
+BEGIN
+  OUTER_TEXT_SPRINT arrayName "toggleTitles"
+
+  LAF INSTALL_CHECK_OPTION
+  INT_VAR
+    optLabelTra   = 1500
+    optDescTra    = 1501
+    controlID     = "-172"
+    autoFail      = 1
+  STR_VAR
+    arrayName     = EVAL "%arrayName%"
+    optLabelName  = "A7_SHOW_CLERIC_RANGER_SPELLS_LABEL"
+    optDescName   = "A7_SHOW_CLERIC_RANGER_SPELLS_DESCRIPTION"
+    iniSection    = "Game Options"
+    iniName       = "Cleric Ranger Spells"
+  RET
+    success
+  END
+END
+
+/** Add in-game option "3E Sneak Attack" */
+DEFINE_ACTION_FUNCTION OPTION_SNEAK_ATTACK
+BEGIN
+  OUTER_TEXT_SPRINT arrayName "toggleTitles"
+
+  ACTION_IF (GAME_IS ~pstee~ AND NOT FILE_EXISTS_IN_GAME ~sneakatt.2da~) BEGIN
+    COPY ~%MOD_FOLDER%/tables/sneakatt.2da~ ~override~
+  END
+
+  LAF INSTALL_CHECK_OPTION
+  INT_VAR
+    optLabelTra   = 1600
+    optDescTra    = 1601
+    controlID     = "-173"
+    autoFail      = 1
+  STR_VAR
+    arrayName     = EVAL "%arrayName%"
+    optLabelName  = "A7_SNEAK_ATTACK_LABEL"
+    optDescName   = "A7_SNEAK_ATTACK_DESCRIPTION"
+    iniSection    = "Game Options"
+    iniName       = "3E Thief Sneak Attack"
+  RET
+    success
+  END
+END
+
+/** Add in-game option "Critical Hit Screen Shake" */
+DEFINE_ACTION_FUNCTION OPTION_CRITICAL_HIT_SCREEN_SHAKE
+BEGIN
+  ACTION_IF (GAME_IS ~pstee~ OR
+             MOD_IS_INSTALLED ~leui.tp2~ 0) BEGIN
+    OUTER_TEXT_SPRINT arrayName "toggleTitles"
+  END ELSE BEGIN
+    OUTER_TEXT_SPRINT arrayName "feedbackToggles"
+  END
+
+  LAF INSTALL_CHECK_OPTION
+  INT_VAR
+    optLabelTra   = 1700
+    optDescTra    = 1701
+    controlID     = "-174"
+    autoFail      = 1
+  STR_VAR
+    arrayName     = EVAL "%arrayName%"
+    optLabelName  = "A7_CRITICAL_HIT_SCREEN_SHAKE_LABEL"
+    optDescName   = "A7_CRITICAL_HIT_SCREEN_SHAKE_DESCRIPTION"
+    iniSection    = "Game Options"
+    iniName       = "Critical Hit Screen Shake"
+  RET
+    success
+  END
+END
+
+/** Add in-game option "Hotkeys On Tooltips" */
+DEFINE_ACTION_FUNCTION OPTION_TOOLTIP_HOTKEYS
+BEGIN
+  ACTION_IF (GAME_IS ~pstee~ OR
+             MOD_IS_INSTALLED ~leui.tp2~ 0) BEGIN
+    OUTER_TEXT_SPRINT arrayName "toggleTitles"
+  END ELSE BEGIN
+    OUTER_TEXT_SPRINT arrayName "feedbackToggles"
+  END
+
+  LAF INSTALL_CHECK_OPTION
+  INT_VAR
+    optLabelTra   = 1800
+    optDescTra    = 1801
+    controlID     = "-175"
+    autoFail      = 1
+  STR_VAR
+    arrayName     = EVAL "%arrayName%"
+    optLabelName  = "A7_TOOLTIP_HOTKEYS_LABEL"
+    optDescName   = "A7_TOOLTIP_HOTKEYS_DESCRIPTION"
+    iniSection    = "Game Options"
+    iniName       = "Hotkeys On Tooltips"
+  RET
+    success
+  END
+END
+
+/** Add in-game option "Show extra combat info" */
+DEFINE_ACTION_FUNCTION OPTION_EXTRA_COMBAT_INFO
+BEGIN
+  ACTION_IF (MOD_IS_INSTALLED ~leui.tp2~ 0) BEGIN
+    OUTER_TEXT_SPRINT arrayName "toggleTitles"
+  END ELSE BEGIN
+    OUTER_TEXT_SPRINT arrayName "messagesToggles"
+  END
+
+  LAF INSTALL_CHECK_OPTION
+  INT_VAR
+    optLabelTra   = 1900
+    optDescTra    = 1901
+    controlID     = "-176"
+    autoFail      = 1
+  STR_VAR
+    arrayName     = EVAL "%arrayName%"
+    optLabelName  = "A7_SHOW_EXTRA_COMBAT_INFO_LABEL"
+    optDescName   = "A7_SHOW_EXTRA_COMBAT_INFO_DESCRIPTION"
+    iniSection    = "Game Options"
+    iniName       = "Extra Combat Info"
+  RET
+    success
+  END
+END
+
+/** Add in-game option "Show Game Date and Time on Pause" */
+DEFINE_ACTION_FUNCTION OPTION_DATE_ON_PAUSE
+BEGIN
+  ACTION_IF (MOD_IS_INSTALLED ~leui.tp2~ 0) BEGIN
+    OUTER_TEXT_SPRINT arrayName "toggleTitles"
+  END ELSE BEGIN
+    OUTER_TEXT_SPRINT arrayName "messagesToggles"
+  END
+
+  LAF INSTALL_CHECK_OPTION
+  INT_VAR
+    optLabelTra   = 2000
+    optDescTra    = 2001
+    controlID     = "-177"
+    autoFail      = 1
+  STR_VAR
+    arrayName     = EVAL "%arrayName%"
+    optLabelName  = "A7_SHOW_DATE_ON_PAUSE_LABEL"
+    optDescName   = "A7_SHOW_DATE_ON_PAUSE_DESCRIPTION"
+    iniSection    = "Game Options"
+    iniName       = "Show Date On Pause"
+  RET
+    success
+  END
+END
+
+/** Add in-game option "Disable Area Map Zoom" */
+DEFINE_ACTION_FUNCTION OPTION_DISABLE_MAP_ZOOM
+BEGIN
+  OUTER_TEXT_SPRINT arrayName "graphicsToggles"
+
+  LAF INSTALL_CHECK_OPTION
+  INT_VAR
+    optLabelTra   = 2100
+    optDescTra    = 2101
+    controlID     = "-178"
+    autoFail      = 1
+  STR_VAR
+    arrayName     = EVAL "%arrayName%"
+    optLabelName  = "A7_DISABLE_MAP_ZOOM_LABEL"
+    optDescName   = "A7_DISABLE_MAP_ZOOM_DESCRIPTION"
+    iniSection    = "Graphics"
+    iniName       = "Disable Area Map Zoom"
+  RET
+    success
+  END
+END
+
+/** Add in-game option "Reverse Mouse Wheel Zoom" */
+DEFINE_ACTION_FUNCTION OPTION_REVERSE_WHEEL_ZOOM
+BEGIN
+  OUTER_TEXT_SPRINT arrayName "graphicsToggles"
+
+  LAF INSTALL_CHECK_OPTION
+  INT_VAR
+    optLabelTra   = 2200
+    optDescTra    = 2201
+    controlID     = "-179"
+    autoFail      = 1
+  STR_VAR
+    arrayName     = EVAL "%arrayName%"
+    optLabelName  = "A7_REVERSE_WHEEL_ZOOM_LABEL"
+    optDescName   = "A7_REVERSE_WHEEL_ZOOM_DESCRIPTION"
+    iniSection    = "Game Options"
+    iniName       = "Reverse Mouse Wheel Zoom"
+  RET
+    success
+  END
+END
+
+/** Add in-game option "Pause Game on Map Screen" */
+DEFINE_ACTION_FUNCTION OPTION_PAUSING_MAP
+BEGIN
+  OUTER_TEXT_SPRINT arrayName "toggleTitles"
+
+  LAF INSTALL_CHECK_OPTION
+  INT_VAR
+    optLabelTra   = 2300
+    optDescTra    = 2301
+    controlID     = "-180"
+    autoFail      = 1
+  STR_VAR
+    arrayName     = EVAL "%arrayName%"
+    optLabelName  = "A7_PAUSING_MAP_LABEL"
+    optDescName   = "A7_PAUSING_MAP_DESCRIPTION"
+    iniSection    = "Game Options"
+    iniName       = "Pausing Map"
+  RET
+    success
+  END
+END
+
+/** Add in-game option "Enable Fog" */
+DEFINE_ACTION_FUNCTION OPTION_ENABLE_FOG
+BEGIN
+  OUTER_TEXT_SPRINT arrayName "graphicsToggles"
+
+  LAF INSTALL_CHECK_OPTION
+  INT_VAR
+    optLabelTra   = 2400
+    optDescTra    = 2401
+    controlID     = "-181"
+    autoFail      = 1
+  STR_VAR
+    arrayName     = EVAL "%arrayName%"
+    optLabelName  = "A7_SHOW_ENABLE_FOG_LABEL"
+    optDescName   = "A7_SHOW_ENABLE_FOG_DESCRIPTION"
+    iniSection    = "Game Options"
+    iniName       = "Enable Fog"
+  RET
+    success
+  END
+END
+
+/** Add in-game option "Disable Movies" */
+DEFINE_ACTION_FUNCTION OPTION_DISABLE_MOVIES
+BEGIN
+  OUTER_TEXT_SPRINT arrayName "graphicsToggles"
+
+  LAF INSTALL_CHECK_OPTION
+  INT_VAR
+    optLabelTra   = 2500
+    optDescTra    = 2501
+    controlID     = "-182"
+    autoFail      = 1
+  STR_VAR
+    arrayName     = EVAL "%arrayName%"
+    optLabelName  = "A7_DISABLE_MOVIES_LABEL"
+    optDescName   = "A7_DISABLE_MOVIES_DESCRIPTION"
+    iniSection    = "Program Options"
+    iniName       = "Disable Movies"
+  RET
+    success
+  END
+END
+
