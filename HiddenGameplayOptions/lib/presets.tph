@@ -76,7 +76,6 @@ BEGIN
   END
 END
 
-// TODO: ignored
 /** Add in-game option "Hotkeys On Tooltips" */
 DEFINE_ACTION_FUNCTION OPTION_TOOLTIP_HOTKEYS
 BEGIN
@@ -143,7 +142,6 @@ BEGIN
   END
 END
 
-// TODO: ignored
 /** Add in-game option "Limit druidic spells for Cleric/Ranger" */
 DEFINE_ACTION_FUNCTION OPTION_CLERIC_RANGER_SPELLS
 BEGIN
@@ -166,7 +164,6 @@ BEGIN
   END
 END
 
-// TODO: ignored
 /** Add in-game option "3E Sneak Attack" */
 DEFINE_ACTION_FUNCTION OPTION_SNEAK_ATTACK
 BEGIN
@@ -180,6 +177,32 @@ BEGIN
   END
   ACTION_IF (NOT FILE_EXISTS_IN_GAME ~backstab.spl~) BEGIN
     COPY ~%MOD_FOLDER%/spells/backstab.spl~ ~override~
+  END
+
+  ACTION_IF (FILE_EXISTS_IN_GAME ~enginest.2da~) BEGIN
+    COPY_EXISTING ~enginest.2da~ ~override~
+      COUNT_2DA_COLS numCols
+      READ_2DA_ENTRIES_NOW "a7_read_enginest" numCols
+      FOR (row = 0; row < a7_read_enginest; row += 1) BEGIN
+        READ_2DA_ENTRY_FORMER "a7_read_enginest" row 0 curName
+        PATCH_MATCH ~%curName%~ WITH
+          ~STRREF_FEEDBACK_SNEAK_ATTACK~ BEGIN
+            SET_2DA_ENTRY_LATER "a7_set_enginest" row 1 RESOLVE_STR_REF(@10000)  // Sneak Attack
+          END
+          ~STRREF_FEEDBACK_SNEAK_AVOIDED~ BEGIN
+            SET_2DA_ENTRY_LATER "a7_set_enginest" row 1 RESOLVE_STR_REF(@10001)  // Sneak Attack ineffective
+          END
+          ~STRREF_FEEDBACK_CRIPPLING_STRIKE~ BEGIN
+            SET_2DA_ENTRY_LATER "a7_set_enginest" row 1 RESOLVE_STR_REF(@10002)  // Crippling Strike
+          END
+          ~STRREF_FEEDBACK_SNEAK_UNUSABLE_WEAPON~ BEGIN
+            SET_2DA_ENTRY_LATER "a7_set_enginest" row 1 RESOLVE_STR_REF(@10003)  // Weapon is unsuitable for sneak attack
+          END
+          DEFAULT
+        END
+      END
+      SET_2DA_ENTRIES_NOW "a7_set_enginest" numCols
+    BUT_ONLY
   END
 
   LAF INSTALL_CHECK_OPTION
@@ -199,7 +222,6 @@ BEGIN
   END
 END
 
-// TODO: ignored
 /** Add in-game option "Critical Hit Screen Shake" */
 DEFINE_ACTION_FUNCTION OPTION_CRITICAL_HIT_SCREEN_SHAKE
 BEGIN
@@ -323,7 +345,6 @@ BEGIN
   END
 END
 
-// TODO: ignored
 /** Add in-game option "Pause Game on Map Screen" */
 DEFINE_ACTION_FUNCTION OPTION_PAUSING_MAP
 BEGIN

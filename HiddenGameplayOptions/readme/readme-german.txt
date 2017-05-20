@@ -1,7 +1,7 @@
 Versteckte Spieloptionen anzeigen
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Version:    0.4-beta
+Version:    0.5-beta
 Author:     Argent77
 
 Download:   https://
@@ -195,6 +195,10 @@ ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa
 
 History
 ~~~~~~~
+
+0.5-beta
+- Added valid strings for option "3E Sneak Attack"
+- Updated French translation
 
 0.4-beta
 - Added French translation (thanks Gwendolyne)

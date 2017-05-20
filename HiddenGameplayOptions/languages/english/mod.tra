@@ -1,5 +1,7 @@
 // -*- coding: utf-8 -*- 
 
+// *** Game options ***
+
 @1000 = ~Enable Debug Mode~
 @1001 = ~Enabling this setting allows you to activate cheat keys and the debug console.
 
@@ -88,3 +90,10 @@ Enable this option to limit druidic spells to level 3 - the maximum allowed spel
 
 ^NNote: You must restart the game for changes to take effect.^-~
 
+
+// *** Misc. strings ***
+
+@10000 = ~Sneak Attack~
+@10001 = ~Sneak Attack ineffective~
+@10002 = ~Crippling Strike~
+@10003 = ~Weapon is unsuitable for sneak attack~

@@ -2,29 +2,29 @@
 
 @1 = ~Installer les options de jeu cachees~
 @2 = ~Toutes les options disponibles~
-@3 = ~Les options selectionnees~
+@3 = ~Une selection d'options~
 
 @10 = ~Ajouter l'option de jeu "Activer le Mode de debogage"~
 @11 = ~Ajouter l'option de jeu "Activer le mode de modification de l'interface utilisateur"~
-@12 = ~Ajouter l'option de jeu "Afficher les numeros de reference des textes"~
-@13 = ~Ajouter l'option de jeu "Afficher les raccourcis des objets rapides"~
-@14 = ~Ajouter l'option de jeu "Afficher les icones des regions avec la Tabulation"~
+@12 = ~Ajouter l'option de jeu "Afficher les numeros des textes"~
+@13 = ~Ajouter l'option de jeu "Afficher les raccourcis clavier dans les bulles d'aide"~
+@14 = ~Ajouter l'option de jeu "Afficher les icones de zone sensible avec la Tabulation"~
 @15 = ~Ajouter l'option de jeu "Utiliser la barre d'espace dans les dialogues"~
 @16 = ~Ajouter l'option de jeu "Limiter les sorts de druide pour les Clercs/Rodeurs"~
 @17 = ~Ajouter l'option de jeu "Attaque sournoise 3e Edition"~
-@18 = ~Ajouter l'option de jeu "Secouer l'ecran en cas de Coup critique"~
-@19 = ~Ajouter l'option de jeu "Afficher les Informations de combat supplementaires"~
+@18 = ~Ajouter l'option de jeu "Secouer l'ecran en cas de coup critique"~
+@19 = ~Ajouter l'option de jeu "Afficher les informations de combat supplementaires"~
 @20 = ~Ajouter l'option de jeu "Afficher la date et l'heure du jeu lorsqu'il est en pause"~
-@21 = ~Ajouter l'option de jeu "Desactiver le Zoom dans la carte de la zone"~
-@22 = ~Ajouter l'option de jeu "Inverser le Zoom de la molette de la souris"~
+@21 = ~Ajouter l'option de jeu "Desactiver le zoom dans la vue de la carte"~
+@22 = ~Ajouter l'option de jeu "Inverser le zoom de la molette de la souris"~
 @23 = ~Ajouter l'option de jeu "Mettre le jeu en pause dans l'ecran de la carte de la zone"~
-@24 = ~Ajouter l'option de jeu "Activer le Brouillard"~
+@24 = ~Ajouter l'option de jeu "Activer le brouillard"~
 @25 = ~Ajouter l'option de jeu "Desactiver les films"~
 
 @100 = ~Ce mod requiert un jeu beneficiant du patch v2.0 ou ulterieur.~
-@101 = ~Ne peut pas modifier le fichier LUA~
-@102 = ~Ne peut pas modifier le fichier UI.MENU~
-@103 = ~Necessite l'installation du composant "Les options selectionnees".~
+@101 = ~Echec de modification du fichier LUA.~
+@102 = ~Echec de modification du fichier UI.MENU.~
+@103 = ~Necessite l'installation du composant "Une selection d'options".~
 @104 = ~Cette option n'est pas disponible pour ce jeu.~
 @105 = ~Cette option est deja presente dans ce jeu.~
 

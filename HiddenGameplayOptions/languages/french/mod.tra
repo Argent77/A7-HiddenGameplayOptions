@@ -1,33 +1,36 @@
 // -*- coding: utf-8 -*- 
+
+// *** Game options ***
+
 //Sinon on retrouve quelques options et leur description dans l'utilitaire de config d'Icewind Dale (console, sneak attack et shake screen on critical hit).
 @1000 = ~Activer le Mode débogage~
-@1001 = ~Permet d'activer/désactiver les raccourcis de codes de triche et le panneau de débogage.
+@1001 = ~Permet d'activer/désactiver les raccourcis clavier de triche et le panneau de débogage.
 
-Utilisez le raccourci clavier CTRL+SPACE pour faire apparaître le panneau. Quelques commandes utiles : ^PC:AddGold(number)^-, ^PC:CreateItem("name")^-, ^PC:SetCurrentXP(number)^-, parmi d'autres.
+Utilisez le raccourci clavier CTRL+Espace pour faire apparaître le panneau. Quelques commandes utiles : ^PC:AddGold(nombre)^-, ^PC:CreateItem("nom")^-, ^PC:SetCurrentXP(nombre)^-, parmi d'autres.
 
-Les codes de triche comprennent CTRL+Y pour tuer instantanément une créature pointée par le curseur de la souris, CTRL+R pour guérir et supprimer tous les effets affectant la créature pointée par le curseur de la souris, CTRL+J pour téléporter les membres du groupe sélectionnés à l'emplacement de la carte désigné par le curseur, CTRL+T pour faire avancer le temps de jeu d'une heure, CTRL+4 pour visualiser les régions interactives (sorties de zone, messages d'informations, conteneurs...), et bien d'autres fonctions.
+Les raccourcis de triche comprennent CTRL+Y pour tuer instantanément une créature pointée par le curseur de la souris, CTRL+R pour guérir et supprimer tous les effets affectant la créature pointée par le curseur de la souris, CTRL+J pour téléporter les membres du groupe sélectionnés à l'emplacement de la carte désigné par le curseur, CTRL+T pour faire avancer le temps de jeu d'une heure, CTRL+4 pour visualiser les régions interactives (sorties de zone, messages d'informations, conteneurs...), et bien d'autres fonctions.
 
 ^NNote : Vous devez redémarrer le jeu pour que les modifications prennent effet.^-~
 
 @1100 = ~Activer le Mode de modification de l'interface utilisateur (UI)~
 @1101 = ~Permet d'utiliser les fonctions de modifications de l'UI dans le jeu.
 
-Appuyez sur la touche F11 pour activer ou désactiver le mode de modification de l'UI. Quand il est actif, vous pouvez faire glisser et positionner les éléments de l'interface où vous voulez dans l'écran. Appuyez sur F5 pour pré-visualiser les changements sans redémarrer le jeu. Appuyer sur TAB en pointant un élément de l'UI affiche le numéro de ligne du fichier UI.MENU contenant ses paramètres.
+Appuyez sur la touche F11 pour activer ou désactiver le mode de modification de l'UI. Quand il est actif, vous pouvez faire glisser et positionner les éléments de l'interface où vous voulez sur l'écran. Appuyez sur F5 pour pré-visualiser les changements sans redémarrer le jeu. Appuyer sur TAB en pointant un élément de l'UI affiche le numéro de ligne du fichier UI.MENU contenant ses paramètres.
 
 ^NNote : Vous devez redémarrer le jeu pour que les modifications prennent effet.^-~
 
-@1200 = ~Afficher les numéros de référence des textes~
+@1200 = ~Afficher les numéros des textes~
 @1201 = ~Activer cette option indique devant chaque texte affiché dans le jeu son numéro de référence.
 
 ^NNote : Vous devez redémarrer le jeu pour que les modifications prennent effet.^-~
 
-@1300 = ~Afficher les raccourcis des objets rapides~
-@1301 = ~Activer cette option affiche les touches de raccourci des capacités des objets rapides lorsqu'ils sont disponibles.
+@1300 = ~Afficher les raccourcis clavier dans les bulles d'aide~
+@1301 = ~Activer cette option affiche les touches de raccourci dans les bulles d'aide des boutons de l'interface (capacités des sorts et des objets rapides lorsqu'ils sont disponibles, boutons de la barre verticale de gauche...). Attention : les boutons de la barre verticale de droite n'en bénéficient pas.
 
 ^NNote : Vous devez redémarrer le jeu pour que les modifications prennent effet.^-~
 
-@1400 = ~Afficher les icônes des régions avec la Tabulation~
-@1401 = ~Affiche des informations supplémentaires sur les régions interactives de la carte en appuyant sur la touche TAB.
+@1400 = ~Afficher les icônes de zone sensible avec la tabulation~
+@1401 = ~Affiche des informations supplémentaires sur les régions interactives de la zone en appuyant sur la touche TAB.
 
 ^NNote : Vous devez redémarrer le jeu pour que les modifications prennent effet.^-~
 
@@ -37,9 +40,9 @@ Appuyez sur la touche F11 pour activer ou désactiver le mode de modification de
 ^NNote : Vous devez redémarrer le jeu pour que les modifications prennent effet.^-~
 
 @1600 = ~Limiter les sorts de druide pour les Clercs/Rôdeurs~
-@1601 = ~Cette option contrôle le choix des sorts de druide disponibles pour les personnages multi-classés ou jumelés Clerc/Rôdeurs.
+@1601 = ~Cette option contrôle le choix des sorts de druide disponibles pour les personnages multi-classés ou jumelés Clercs/Rôdeurs.
 
-L'activer limite au niveau 3 les sorts de druide utilisables par les rôdeurs. Les sorts divins de prêtre ne sont pas affectés.
+L'activer limite au niveau 3 les sorts de druide utilisables par les rôdeurs. Les sorts de prêtre ne sont pas affectés.
 
 ^NNote : Vous devez redémarrer le jeu pour que les modifications prennent effet.^-~
 
@@ -48,13 +51,13 @@ L'activer limite au niveau 3 les sorts de druide utilisables par les rôdeurs. L
 
 ^NNote : Vous devez redémarrer le jeu pour que les modifications prennent effet.^-~
 
-@1800 = ~Secouer l'écran en cas de Coup critique~
+@1800 = ~Secouer l'écran en cas de coup critique~
 @1801 = ~Si cette option est activée, l'écran est secoué chaque fois qu'un membre du groupe effectue un coup critique.
 
 ^NNote : Vous devez redémarrer le jeu pour que les modifications prennent effet.^-~
 
-@1900 = ~Afficher les Informations de combat supplémentaires~
-@1901 = ~Affiche dans la fenêtre de dialogue tous les facteurs déterminant les résultats des jets d'attaque.
+@1900 = ~Informations de combat supplémentaires~
+@1901 = ~Active/désactive l'affichage dans la fenêtre de dialogue de tous les facteurs déterminant les résultats des jets d'attaque.
 
 ^NNote : Vous devez redémarrer le jeu pour que les modifications prennent effet.^-~
 
@@ -63,23 +66,23 @@ L'activer limite au niveau 3 les sorts de druide utilisables par les rôdeurs. L
 
 ^NNote : Vous devez redémarrer le jeu pour que les modifications prennent effet.^-~
 
-@2100 = ~Désactiver le Zoom dans la carte de la zone~
+@2100 = ~Désactiver le zoom dans la vue de la carte~
 @2101 = ~Désactive le zoom avant et arrière lorsqu'on ouvre ou ferme l'écran de la carte de la zone.
 
 ^NNote : Vous devez redémarrer le jeu pour que les modifications prennent effet.^-~
 
-@2200 = ~Inverser le Zoom de la molette de la souris~
+@2200 = ~Inverser le zoom de la molette de la souris~
 @2201 = ~Inverse le sens du zoom déclenché par la molette de la souris.
 
 ^NNote : Vous devez redémarrer le jeu pour que les modifications prennent effet.^-~
 
-@2300 = ~Mettre le jeu en pause dans l'écran de la carte de la zone~
+@2300 = ~Mettre le jeu ben pause dans l'écran de la carte de la zone~
 @2301 = ~Met automatiquement le jeu en pause chaque fois que l'on ouvre l'écran de la carte de la zone.
 
 ^NNote : Vous devez redémarrer le jeu pour que les modifications prennent effet.^-~
 
-@2400 = ~Activer le Brouillard~
-@2401 = ~Active les effets de brouillard dans les cartes.
+@2400 = ~Activer le brouillard~
+@2401 = ~Active les effets de brouillard dans les zones.
 
 ^NNote : Vous devez redémarrer le jeu pour que les modifications prennent effet.^-~
 
@@ -87,3 +90,11 @@ L'activer limite au niveau 3 les sorts de druide utilisables par les rôdeurs. L
 @2501 = ~Permet de désactiver le visionnage des films.
 
 ^NNote : Vous devez redémarrer le jeu pour que les modifications prennent effet.^-~
+
+
+// *** Misc. strings ***
+
+@10000 = ~Attaque insidieuse~
+@10001 = ~Attaque insidieuse inefficace~
+@10002 = ~Attaque handicapante~
+@10003 = ~Cette arme ne peut être utilisée pour une attaque insidieuse.~

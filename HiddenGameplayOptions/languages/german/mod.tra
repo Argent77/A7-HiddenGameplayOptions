@@ -1,5 +1,7 @@
 // -*- coding: utf-8 -*- 
 
+// *** Game options ***
+
 @1000 = ~Debugmodus~
 @1001 = ~Aktiviert diese Option, um Cheat-Tastenkürzel und die Debugkonsole zu nutzen.
 
@@ -88,3 +90,10 @@ Bei aktivierter Option sind Druidenzauber nur bis Stufe 3 verfügbar - die höch
 
 ^NHinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.^-~
 
+
+// *** Misc. strings ***
+
+@10000 = ~Heimlicher Angriff~
+@10001 = ~Hinterhältiger Angriff gescheitert~
+@10002 = ~Verkrüppelnder Schlag~
+@10003 = ~Waffe ist untauglich für hinterhältigen Angriff~

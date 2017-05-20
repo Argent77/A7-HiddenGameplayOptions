@@ -1,7 +1,7 @@
 Faire apparaître les Options de jeu cachées
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Version        : 0.4-beta
+Version        : 0.5-beta
 Auteur         : Argent77
 
 Téléchargement : https://
@@ -53,7 +53,7 @@ Les composants suivants sont disponibles si vous décidez de sélectionner les opt
 
 2 Ajouter l'option de jeu "Activer le Mode de débogage"
 
-Ce composant vous permet d'activer les raccourcis de triche et d'afficher le panneau de débogage.
+Ce composant vous permet d'activer les raccourcis clavier de triche et d'afficher le panneau de débogage.
 
 Cette option se trouve dans la section Jeu.
 
@@ -65,22 +65,24 @@ Activer cette option permet d'utiliser les fonctions de modifications de l'UI da
 Elle se trouve dans la section Jeu.
 
 
-4 Ajouter l'option de jeu "Afficher les numéros de référence des textes"
+4 Ajouter l'option de jeu "Afficher les numéros des textes"
 
 Activer cette option indique devant chaque texte affiché dans le jeu son numéro de référence.
 
 Elle se trouve dans la section Jeu.
 
 
-5. Ajouter l'option de jeu "Afficher les raccourcis des objets rapides"
+5. Ajouter l'option de jeu "Afficher les raccourcis clavier dans les bulles d'aide"
 
-Activer cette option affiche les touches de raccourci des capacités des objets rapides 
-lorsqu'ils sont disponibles.
+Activer cette option affiche les touches de raccourci dans les bulles d'aide des boutons 
+de l'interface (capacités des sorts et des objets rapides lorsqu'ils sont disponibles, 
+boutons de la barre verticale de gauche...).
+Attention : les boutons de la barre verticale de droite n'en bénéficient pas.
 
 Elle se trouve dans la section Jeu.
 
 
-6. Ajouter l'option de jeu "Afficher les icônes des régions avec la Tabulation"
+6. Ajouter l'option de jeu "Afficher les icônes de zone sensible avec la tabulation"
 
 Activer cette option affiche des informations supplémentaires sur les régions interactives 
 de la carte en appuyant sur la touche TAB.
@@ -113,7 +115,7 @@ et Dragons® de Wizards of the Coast).
 Elle se trouve dans la section Jeu.
 
 
-10. Ajouter l'option de jeu "Secouer l'écran en cas de Coup critique"
+10. Ajouter l'option de jeu "Secouer l'écran en cas de coup critique"
 
 Si cette option est activée, l'écran est secoué chaque fois qu'un membre du groupe effectue 
 un coup critique.
@@ -121,7 +123,7 @@ un coup critique.
 Elle se trouve dans la section Jeu > Feedback > Feedback visuel (ou dans la section Jeu dans PST:EE).
 
 
-11. Ajouter l'option de jeu "Afficher les Informations de combat supplémentaires"
+11. Ajouter l'option de jeu Informations de combat supplémentaires"
 
 Activer cette option affiche dans la fenêtre de dialogue tous les facteurs déterminant 
 les résultats des jets d'attaque.
@@ -136,7 +138,7 @@ Activer cette option affiche la date et l'heure du jeu lorsque la pause est acti
 Elle se trouve dans la section Jeu > Feedback > Messages de Feedback.
 
 
-13. Ajouter l'option de jeu "Désactiver le Zoom dans la carte de la zone" (disponible uniquement dans PST:EE)
+13. Ajouter l'option de jeu "Désactiver le zoom dans la vue de la carte" (disponible uniquement dans PST:EE)
 
 Cette option désactive le zoom avant et arrière lorsqu'on ouvre ou ferme l'écran de la carte 
 de la zone.
@@ -144,7 +146,7 @@ de la zone.
 Elle se trouve dans la section Graphismes > Options d'affichage.
 
 
-14. Ajouter l'option de jeu "Inverser le Zoom de la molette de la souris"
+14. Ajouter l'option de jeu "Inverser le zoom de la molette de la souris"
 
 Cette option inverse le sens du zoom déclenché par la molette de la souris.
 
@@ -158,7 +160,7 @@ Cette option met le jeu en pause chaque fois que l'on ouvre l'écran de la carte 
 Elle se trouve dans la section Graphismes > Options d'affichage.
 
 
-16. Ajouter l'option de jeu "Activer le Brouillard" (pas disponible dans PST:EE)
+16. Ajouter l'option de jeu "Activer le brouillard" (pas disponible dans PST:EE)
 
 Cette option active les effets de brouillard dans les cartes
 
@@ -191,6 +193,10 @@ ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa
 
 History
 ~~~~~~~
+
+0.5-beta
+- Added valid strings for option "3E Sneak Attack"
+- Updated French translation
 
 0.4-beta
 - Added French translation (thanks Gwendolyne)
