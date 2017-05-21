@@ -1,59 +1,59 @@
-Faire apparaître les Options de jeu cachées
+Faire apparaÃ®tre les Options de jeu cachÃ©es
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Version        : 0.5-beta
 Auteur         : Argent77
 
-Téléchargement : https://
+TÃ©lÃ©chargement : https://
 Discussion     : https://forums.beamdog.com/discussion/64524/mod-reveal-hidden-gameplay-options-for-all-ee-games-patched-to-v2-0-or-higher
 
 
-Généralités
+GÃ©nÃ©ralitÃ©s
 ~~~~~~~~~~~
 
-Les versions améliorées (Enhanced Editions) disposent de nombreuses options de jeu que l'on ne  
-peut pas sélectionner dans le menu des options, mais qui doivent être activées ou désactivées 
-manuellement dans le fichier de configuration du jeu ; ce qui peut décourager les joueurs moins 
+Les versions amÃ©liorÃ©es (Enhanced Editions) disposent de nombreuses options de jeu que l'on ne  
+peut pas sÃ©lectionner dans le menu des options, mais qui doivent Ãªtre activÃ©es ou dÃ©sactivÃ©es 
+manuellement dans le fichier de configuration du jeu ; ce qui peut dÃ©courager les joueurs moins 
 experts en informatique de les utiliser.
 
-Ce mod ajoute directement dans le jeu de nombreuses options très utiles, dont le "célèbre" panneau 
-de débogage, plusieurs paramétrages graphiques et de feedback, et d'autres encore.
+Ce mod ajoute directement dans le jeu de nombreuses options trÃ¨s utiles, dont le "cÃ©lÃ¨bre" panneau 
+de dÃ©bogage, plusieurs paramÃ©trages graphiques et de feedback, et d'autres encore.
 
 
 Installation
 ~~~~~~~~~~~~
 
-Il s'agit d'un mod WeiDU, donc très facile à installer. Il suffit de décompresser l'archive 
-téléchargée dans votre répertoire de jeu et de lancer "setup-HiddenGameplayOptions.exe".
+Il s'agit d'un mod WeiDU, donc trÃ¨s facile Ã  installer. Il suffit de dÃ©compresser l'archive 
+tÃ©lÃ©chargÃ©e dans votre rÃ©pertoire de jeu et de lancer "setup-HiddenGameplayOptions.exe".
 
 
-Compatibilité
+CompatibilitÃ©
 ~~~~~~~~~~~~~
 
-Ce mod s'installe sur tous les jeux Enhanced Edition dotés du patch v2.0 ou supérieur. Il est 
+Ce mod s'installe sur tous les jeux Enhanced Edition dotÃ©s du patch v2.0 ou supÃ©rieur. Il est 
 aussi compatible avec Pecca's "Dragonspear UI++" et Lefreut's Enhanced UI (LeUI). Certaines 
-options pourront être déplacées dans d'autres sections si ces mods sont détectés.
+options pourront Ãªtre dÃ©placÃ©es dans d'autres sections si ces mods sont dÃ©tectÃ©s.
 
-Modifier les fichiers de paramétrage de l'interface utilisateur (UI) peut s'avérer risqué. 
-C'est pourquoi, pour éviter de corrompre le jeu, une tentative problématique de modification sera 
-automatiquement interdite et le mod restaurera les fichiers à modifier dans leur version d'origine.
+Modifier les fichiers de paramÃ©trage de l'interface utilisateur (UI) peut s'avÃ©rer risquÃ©. 
+C'est pourquoi, pour Ã©viter de corrompre le jeu, une tentative problÃ©matique de modification sera 
+automatiquement interdite et le mod restaurera les fichiers Ã  modifier dans leur version d'origine.
 
 
 Composants
 ~~~~~~~~~~
 
-1. Installer les Options de jeu cachées (composant principal)
+1. Installer les Options de jeu cachÃ©es (composant principal)
 
-Ce composant vous permet de choisir d'installer toutes les options simultanément ou bien de les 
-sélectionner une par une.
-Des informations détaillées sur chaque option sont disponibles plus bas.
+Ce composant vous permet de choisir d'installer toutes les options simultanÃ©ment ou bien de les 
+sÃ©lectionner une par une.
+Des informations dÃ©taillÃ©es sur chaque option sont disponibles plus bas.
 
 
-Les composants suivants sont disponibles si vous décidez de sélectionner les options une par une :
+Les composants suivants sont disponibles si vous dÃ©cidez de sÃ©lectionner les options une par une :
 
-2 Ajouter l'option de jeu "Activer le Mode de débogage"
+2 Ajouter l'option de jeu "Activer le Mode de dÃ©bogage"
 
-Ce composant vous permet d'activer les raccourcis clavier de triche et d'afficher le panneau de débogage.
+Ce composant vous permet d'activer les raccourcis clavier de triche et d'afficher le panneau de dÃ©bogage.
 
 Cette option se trouve dans la section Jeu.
 
@@ -65,9 +65,9 @@ Activer cette option permet d'utiliser les fonctions de modifications de l'UI da
 Elle se trouve dans la section Jeu.
 
 
-4 Ajouter l'option de jeu "Afficher les numéros des textes"
+4 Ajouter l'option de jeu "Afficher les numÃ©ros des textes"
 
-Activer cette option indique devant chaque texte affiché dans le jeu son numéro de référence.
+Activer cette option indique devant chaque texte affichÃ© dans le jeu son numÃ©ro de rÃ©fÃ©rence.
 
 Elle se trouve dans la section Jeu.
 
@@ -75,16 +75,16 @@ Elle se trouve dans la section Jeu.
 5. Ajouter l'option de jeu "Afficher les raccourcis clavier dans les bulles d'aide"
 
 Activer cette option affiche les touches de raccourci dans les bulles d'aide des boutons 
-de l'interface (capacités des sorts et des objets rapides lorsqu'ils sont disponibles, 
+de l'interface (capacitÃ©s des sorts et des objets rapides lorsqu'ils sont disponibles, 
 boutons de la barre verticale de gauche...).
-Attention : les boutons de la barre verticale de droite n'en bénéficient pas.
+Attention : les boutons de la barre verticale de droite n'en bÃ©nÃ©ficient pas.
 
 Elle se trouve dans la section Jeu.
 
 
-6. Ajouter l'option de jeu "Afficher les icônes de zone sensible avec la tabulation"
+6. Ajouter l'option de jeu "Afficher les icÃ´nes de zone sensible avec la tabulation"
 
-Activer cette option affiche des informations supplémentaires sur les régions interactives 
+Activer cette option affiche des informations supplÃ©mentaires sur les rÃ©gions interactives 
 de la carte en appuyant sur la touche TAB.
 
 Elle se trouve dans la section Jeu.
@@ -92,55 +92,55 @@ Elle se trouve dans la section Jeu.
 
 7. Ajouter l'option de jeu "Utiliser la barre d'espace dans les dialogues" (disponible uniquement dans PST:EE)
 
-Activer cette option vous permet de continuer les conversations dans la fenêtre de 
+Activer cette option vous permet de continuer les conversations dans la fenÃªtre de 
 dialogue en utilisant la touche ESPACE.
 
 Elle se trouve dans la section Jeu.
 
 
-8. Ajouter l'option de jeu "Limiter les sorts de druide pour les Clercs/Rôdeurs" (pas disponible dans PST:EE)
+8. Ajouter l'option de jeu "Limiter les sorts de druide pour les Clercs/RÃ´deurs" (pas disponible dans PST:EE)
 
-L'activer limite au niveau 3 les sorts de druide utilisables par les Clercs/Rôdeurs 
-(comme dans les règles papier).
-
-Elle se trouve dans la section Jeu.
-
-
-9. Ajouter l'option de jeu "Attaque sournoise 3e Édition"
-
-Cette option permet d'activer/désactiver l'Attaque sournoise (Attaque insidieuse) et 
-l'Attaque handicapante (capacités similaires à celles de la troisième Édition de Donjons 
-et Dragons® de Wizards of the Coast).
+L'activer limite au niveau 3 les sorts de druide utilisables par les Clercs/RÃ´deurs 
+(comme dans les rÃ¨gles papier).
 
 Elle se trouve dans la section Jeu.
 
 
-10. Ajouter l'option de jeu "Secouer l'écran en cas de coup critique"
+9. Ajouter l'option de jeu "Attaque sournoise 3e Ã‰dition"
 
-Si cette option est activée, l'écran est secoué chaque fois qu'un membre du groupe effectue 
+Cette option permet d'activer/dÃ©sactiver l'Attaque sournoise (Attaque insidieuse) et 
+l'Attaque handicapante (capacitÃ©s similaires Ã  celles de la troisiÃ¨me Ã‰dition de Donjons 
+et DragonsÂ® de Wizards of the Coast).
+
+Elle se trouve dans la section Jeu.
+
+
+10. Ajouter l'option de jeu "Secouer l'Ã©cran en cas de coup critique"
+
+Si cette option est activÃ©e, l'Ã©cran est secouÃ© chaque fois qu'un membre du groupe effectue 
 un coup critique.
 
 Elle se trouve dans la section Jeu > Feedback > Feedback visuel (ou dans la section Jeu dans PST:EE).
 
 
-11. Ajouter l'option de jeu Informations de combat supplémentaires"
+11. Ajouter l'option de jeu Informations de combat supplÃ©mentaires"
 
-Activer cette option affiche dans la fenêtre de dialogue tous les facteurs déterminant 
-les résultats des jets d'attaque.
+Activer cette option affiche dans la fenÃªtre de dialogue tous les facteurs dÃ©terminant 
+les rÃ©sultats des jets d'attaque.
 
 Elle se trouve dans la section Jeu > Feedback > Messages de Feedback.
 
 
 12. Ajouter l'option de jeu "Afficher la date et l'heure du jeu pendant les pauses"
 
-Activer cette option affiche la date et l'heure du jeu lorsque la pause est activée.
+Activer cette option affiche la date et l'heure du jeu lorsque la pause est activÃ©e.
 
 Elle se trouve dans la section Jeu > Feedback > Messages de Feedback.
 
 
-13. Ajouter l'option de jeu "Désactiver le zoom dans la vue de la carte" (disponible uniquement dans PST:EE)
+13. Ajouter l'option de jeu "DÃ©sactiver le zoom dans la vue de la carte" (disponible uniquement dans PST:EE)
 
-Cette option désactive le zoom avant et arrière lorsqu'on ouvre ou ferme l'écran de la carte 
+Cette option dÃ©sactive le zoom avant et arriÃ¨re lorsqu'on ouvre ou ferme l'Ã©cran de la carte 
 de la zone.
 
 Elle se trouve dans la section Graphismes > Options d'affichage.
@@ -148,14 +148,14 @@ Elle se trouve dans la section Graphismes > Options d'affichage.
 
 14. Ajouter l'option de jeu "Inverser le zoom de la molette de la souris"
 
-Cette option inverse le sens du zoom déclenché par la molette de la souris.
+Cette option inverse le sens du zoom dÃ©clenchÃ© par la molette de la souris.
 
 Elle se trouve dans la section Graphismes > Options d'affichage.
 
 
-15. Ajouter l'option de jeu "Mettre le jeu en pause dans l'écran de la carte de la zone"
+15. Ajouter l'option de jeu "Mettre le jeu en pause dans l'Ã©cran de la carte de la zone"
 
-Cette option met le jeu en pause chaque fois que l'on ouvre l'écran de la carte de la zone.
+Cette option met le jeu en pause chaque fois que l'on ouvre l'Ã©cran de la carte de la zone.
 
 Elle se trouve dans la section Graphismes > Options d'affichage.
 
@@ -167,9 +167,9 @@ Cette option active les effets de brouillard dans les cartes
 Elle se trouve dans la section Graphismes > Options d'affichage.
 
 
-17. Ajouter l'option de jeu "Désactiver les films"
+17. Ajouter l'option de jeu "DÃ©sactiver les films"
 
-Cette option permet de désactiver le visionnage des films.
+Cette option permet de dÃ©sactiver le visionnage des films.
 
 Elle se trouve dans la section Graphismes > Options d'affichage.
 
