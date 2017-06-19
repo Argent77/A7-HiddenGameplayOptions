@@ -1,10 +1,10 @@
 Reveal Hidden Gameplay Options
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Version:    0.5-beta
+Version:    1.0
 Author:     Argent77
 
-Download:   https://
+Download:   https://github.com/Argent77/A7-HiddenGameplayOptions/releases/latest
 Discussion: https://forums.beamdog.com/discussion/64524/mod-reveal-hidden-gameplay-options-for-all-ee-games-patched-to-v2-0-or-higher
 
 
@@ -182,6 +182,11 @@ ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa
 
 History
 ~~~~~~~
+
+1.0
+- Updated WeiDU setup executable to v241 (stable)
+- Converted French readme to UTF-8
+- Fixed spelling in French translation
 
 0.5-beta
 - Added valid strings for option "3E Sneak Attack"
