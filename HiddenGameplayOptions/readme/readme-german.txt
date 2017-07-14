@@ -185,6 +185,8 @@ Additional coding help: AncientCowboy
 
 French translation: Gwendolyne
 
+Portuguese translation: Nasher
+
 
 Copyright Notice
 ~~~~~~~~~~~~~~~~
@@ -195,6 +197,10 @@ ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa
 
 History
 ~~~~~~~
+
+1.1
+- Added Portuguese translation (thanks Nasher)
+- Updated WeiDU setup executable to v242
 
 1.0
 - Updated WeiDU setup executable to v241 (stable)
