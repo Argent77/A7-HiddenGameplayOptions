@@ -1,0 +1,99 @@
+// -*- coding: utf-8 -*-
+
+// *** Game options ***
+
+@1000 = ~Habilitar Modo Depurador~
+@1001 = ~Habilitar esta opção lhe permite ativar teclas de trapaça e o depurador.
+
+Use o atalho CTRL+SPACE para ativar o depurador. Comandos incluem ^PC:AddGold(número)^-, ^PC:CreateItem("nome")^-, ^PC:SetCurrentXP(número)^-, e muitos outros.
+
+Teclas de trapaça incluem CTRL+Y para matar instantaneamente criaturas sob o ponteiro do mouse, CTRL+R para curar e dissipar feitiços dos personagens sob o ponteiro do mouse, CTRL+J para teleportar membros da equipe selecionados para o local atual do ponteiro do mouse, CTRL+T para avançar o tempo de jogo em uma hora, CTRL+4 para ligar a visibilidade de regiões interagíveis, e muitas outras.
+
+^NObservação: Você deve reiniciar o jogo para que as mudanças tenham efeito.^-~
+
+@1100 = ~Habilitar Modo de Edição de UI~
+@1101 = ~Habilitar esta opção lhe permite usar a funcionalidade de edição de UI do jogo.
+
+Pressione F11 para ativar ou desativar o modo de edição de UI. Enquanto este modo está ativado é possível arrastar elementos da UI pela tela. Pressione F5 para pré-visualizar as mudanças de UI sem reiniciar o jogo. Apertar TAB enquanto você move o mouse sobre um elemento de UI mostrará qual número de linha no UI.MENU define aquele elemento.
+
+^NObservação: Você deve reiniciar o jogo para que as mudanças tenham efeito.^-~
+
+@1200 = ~Mostrar Strrefs~
+@1201 = ~Habilitar esta opção coloca os números de referência de linha de texto do jogo.
+
+^NObservação: Você deve reiniciar o jogo para que as mudanças tenham efeito.^-~
+
+@1300 = ~Atalhos em Dicas~
+@1301 = ~Quando esta opção é habilitada, dicas exibirão atalhos quando disponíveis.
+
+^NObservação: Você deve reiniciar o jogo para que as mudanças tenham efeito.^-~
+
+@1400 = ~Mostrar ícones de Gatilho ao Pressionar TAB~
+@1401 = ~Habilitar esta opção revela informação adicional sobre regiões interagíveis ao pressionar a Tecla TAB.
+
+^NObservação: Você deve reiniciar o jogo para que as mudanças tenham efeito.^-~
+
+@1500 = ~Permitir Barra de Espaço em Diálogos~
+@1501 = ~Habilitar esta opção lhe permite continuar diálogos usando a barra de espaço.
+
+^NObservação: Você deve reiniciar o jogo para que as mudanças tenham efeito.^-~
+
+@1600 = ~Limitar Feitiços de Druida para Clérigo/Mateiro~
+@1601 = ~Esta opção controla a disponibilidade de feitiços de druida para Clérigos/Mateiros multiclasse ou classe dupla.
+
+Habilite esta opção para limitar os feitiços de druida até o nível 3 – o círculo máximo de feitiços disponível para mateiros. Feitiços de clérigo não são afetados por esta opção.
+
+^NObservação: Você deve reiniciar o jogo para que as mudanças tenham efeito.^-~
+
+@1700 = ~Ataque Furtivo da 3E~
+@1701 = ~Habilitar esta opção ativa ataques furtivos e ataques incapacitantes, que são habilidades especiais similares àquelas das regras do Dungeons & Dragons® 3ª Edição da Wizards of the Coast.
+
+^NObservação: Você deve reiniciar o jogo para que as mudanças tenham efeito.^-~
+
+@1800 = ~Balanço da Tela em Acerto Crítico~
+@1801 = ~Habilitar esta opção dispara uma trepidação da tela sempre que um membro da equipe causa um acerto crítico em combate.
+
+^NObservação: Você deve reiniciar o jogo para que as mudanças tenham efeito.^-~
+
+@1900 = ~Mostrar Informações de Combate Adicionais~
+@1901 = ~Habilitar esta opção lhe permite ver todos os fatores que influenciam uma jogada de ataque.
+
+^NObservação: Você deve reiniciar o jogo para que as mudanças tenham efeito.^-~
+
+@2000 = ~Mostrar Dia e Hora do Jogo ao Pausar~
+@2001 = ~Mostra o dia e hora quando você pausa o jogo.
+
+^NObservação: Você deve reiniciar o jogo para que as mudanças tenham efeito.^-~
+
+@2100 = ~Desabilitar Ampliação do Mapa da Área~
+@2101 = ~Desabilita o efeito de ampliação da câmera ao abrir ou fechar a tela do mapa da área.
+
+^NObservação: Você deve reiniciar o jogo para que as mudanças tenham efeito.^-~
+
+@2200 = ~Ampliação pelo Mouse Reversa~
+@2201 = ~Reverte a direção da ampliação ao usar o botão do meio do mouse.
+
+^NObservação: Você deve reiniciar o jogo para que as mudanças tenham efeito.^-~
+
+@2300 = ~Pausar Jogo na Tela do Mapa~
+@2301 = ~Pausa automaticamente o jogo enquanto se olha o mapa.
+
+^NObservação: Você deve reiniciar o jogo para que as mudanças tenham efeito.^-~
+
+@2400 = ~Habilitar Neblina~
+@2401 = ~Habilita efeitos de neblina em mapas.
+
+^NObservação: Você deve reiniciar o jogo para que as mudanças tenham efeito.^-~
+
+@2500 = ~Desabilitar Filmes~
+@2501 = ~Habilitar esta opção desabilita a reprodução de filmes.
+
+^NObservação: Você deve reiniciar o jogo para que as mudanças tenham efeito.^-~
+
+
+// *** Misc. strings ***
+
+@10000 = ~Ataque Furtivo~
+@10001 = ~Ataque Furtivo ineficaz~
+@10002 = ~Ataque Incapacitante~
+@10003 = ~A arma não é adequada para ataque furtivo~

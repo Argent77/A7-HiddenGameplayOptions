@@ -1,0 +1,29 @@
+// -*- coding: us-ascii -*-
+
+@1 = ~Instalar Opcoes de Jogabilidade Secretas~
+@2 = ~Todas as opcoes disponiveis~
+@3 = ~Opcoes Escolhidas~
+
+@10 = ~Adicionar opcao "Habilitar Modo Depurador"~
+@11 = ~Adicionar opcao "Habilitar Modo de Edicao de UI"~
+@12 = ~Adicionar opcao "Mostrar Strrefs"~
+@13 = ~Adicionar opcao "Atalhos em Dicas"~
+@14 = ~Adicionar opcao "Mostrar icones de Gatilho ao Pressionar TAB"~
+@15 = ~Adicionar opcao "Permitir Barra de Espaco em Dialogos"~
+@16 = ~Adicionar opcao "Limitar Feiticos de Druida para Clerigo/Mateiro"~
+@17 = ~Adicionar opcao "Ataque Furtivo da 3E"~
+@18 = ~Adicionar opcao "Balanco da Tela em Acerto Critico"~
+@19 = ~Adicionar opcao "Mostrar Informacoes de Combate Adicionais"~
+@20 = ~Adicionar opcao "Mostrar Dia e Hora do Jogo ao Pausar"~
+@21 = ~Adicionar opcao "Desabilitar Ampliacao do Mapa da Area"~
+@22 = ~Adicionar opcao "Ampliacao pelo Mouse Reversa"~
+@23 = ~Adicionar opcao "Pausar Jogo na Tela do Mapa"~
+@24 = ~Adicionar opcao "Habilitar Neblina"~
+@25 = ~Adicionar opcao Adicionar opcao "Desabilitar Filmes"~
+
+@100 = ~E necessario que o jogo tenha o patch da v2.0 ou maior.~
+@101 = ~Nao e possivel corrigir arquivo LUA~
+@102 = ~Nao e possivel corrigir UI.MENU~
+@103 = ~Componente "Opcoes Escolhidas" nao selecionado.~
+@104 = ~Opcao nao disponivel para este jogo.~
+@105 = ~Opcao ja presente neste jogo.~
