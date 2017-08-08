@@ -27,6 +27,7 @@
 @103 = ~Necessite l'installation du composant "Une selection d'options".~
 @104 = ~Cette option n'est pas disponible pour ce jeu.~
 @105 = ~Cette option est deja presente dans ce jeu.~
+@106 = ~Ce mod n'est pas compatible avec le composant "Options cachees du jeu" de EEUITweaks.~
 
 
 // WeiDU prompts

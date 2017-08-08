@@ -36,6 +36,9 @@ Esta modificação suporta todos os jogos das Edições Melhoradas com o patch v
 também é compatível com "Dragonspear UI++" de Pecca e “Enhanced UI (LeUI)” de Lefreut. Algumas 
 opções podem ser movidas para outras seções quando essas modificações tiverem sido detectadas.
 
+The mod can not be installed together with EEUITweaks component "Hidden Game Options". You can 
+install either one, but not both at the same time.
+
 Para garantir que a instalação falha de um patch não corrompa o jogo, ela falhará com um erro que 
 interromperá o processo e restaurará o estado original dos arquivos atualizados.
 
@@ -189,6 +192,9 @@ ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa
 
 History
 ~~~~~~~
+
+1.2
+- Marked mod incompatible with EEUITweaks component "Hidden Game Options"
 
 1.1
 - Added Portuguese translation (thanks Nasher)

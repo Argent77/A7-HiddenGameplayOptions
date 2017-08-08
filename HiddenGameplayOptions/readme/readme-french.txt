@@ -34,6 +34,9 @@ Ce mod s'installe sur tous les jeux Enhanced Edition dotés du patch v2.0 ou sup
 aussi compatible avec Pecca's "Dragonspear UI++" et Lefreut's Enhanced UI (LeUI). Certaines 
 options pourront être déplacées dans d'autres sections si ces mods sont détectés.
 
+On ne peut pas installer ce mod avec le composant "Options cachées du jeu" de EEUITweaks. Vous 
+devrez choisir d'en installer un seul, mais pas les deux en même temps.
+
 Modifier les fichiers de paramétrage de l'interface utilisateur (UI) peut s'avérer risqué. 
 C'est pourquoi, pour éviter de corrompre le jeu, une tentative problématique de modification sera 
 automatiquement interdite et le mod restaurera les fichiers à modifier dans leur version d'origine.
@@ -195,6 +198,9 @@ ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa
 
 History
 ~~~~~~~
+
+1.2
+- Marked mod incompatible with EEUITweaks component "Hidden Game Options"
 
 1.1
 - Added Portuguese translation (thanks Nasher)

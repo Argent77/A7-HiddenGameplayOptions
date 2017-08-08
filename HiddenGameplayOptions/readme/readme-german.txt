@@ -36,9 +36,13 @@ Die Mod unterstützt alle Enhanced Editions ab Spielversion 2.0. Sie ist außerd
 "Dragonspear UI++" and Lefreuts Enhanced UI (LeUI) kompatibel. Einige Optionen werden ggf. in 
 andere Bereiche verschoben, wenn diese Mods erkannt wurden.
 
+Die Mod kann nicht zusammen mit der EEUITweaks-Komponente "Hidden Game Options" installiert werden.
+
 Das Verändern von UI-Definitionen ist eine komplizierte Angelegenheit. Um sicherzustellen, dass 
 ein misslungener Schreibversuch keine Schäden anrichtet, erzwingt die Mod einen kritischen Fehler 
 und stellt in dem Fall den Urzustand der Spieldateien wieder her.
+
+Diese Mod ist gegenwärtig nicht mit der EEUITweaks-Komponente "Hidden Game Options" kompatibel.
 
 
 Komponenten
@@ -197,6 +201,9 @@ ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa
 
 History
 ~~~~~~~
+
+1.2
+- Marked mod incompatible with EEUITweaks component "Hidden Game Options"
 
 1.1
 - Added Portuguese translation (thanks Nasher)

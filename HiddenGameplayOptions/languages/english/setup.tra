@@ -27,3 +27,4 @@
 @103 = ~Component "Selected options" not selected.~
 @104 = ~Option not available for this game.~
 @105 = ~Option already present in this game.~
+@106 = ~This mod is not compatible with EEUITweaks component "Hidden Game Options".~

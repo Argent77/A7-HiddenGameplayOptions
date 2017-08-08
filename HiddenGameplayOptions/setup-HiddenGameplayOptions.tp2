@@ -30,6 +30,7 @@ LANGUAGE  ~Portugues (traducao: Nasher)~
 
 BEGIN @2  // All available options
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @100  // Enhanced Edition game patched to v2.0 or higher required.
+  REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @106  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
   SUBCOMPONENT @1 // Install more Gameplay options
   DESIGNATED 0
 
@@ -68,6 +69,7 @@ BEGIN @2  // All available options
 
 BEGIN @3  // Selected options
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @100  // Enhanced Edition game patched to v2.0 or higher required.
+  REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @106  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
   SUBCOMPONENT @1 // Install more Gameplay options
   DESIGNATED 1
 

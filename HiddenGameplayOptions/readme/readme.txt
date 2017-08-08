@@ -35,6 +35,9 @@ The mod supports all Enhanced Edition games patched to v2.0 or higher. It is als
 Pecca's "Dragonspear UI++" and Lefreut's Enhanced UI (LeUI). Some options may be moved into other 
 sections when these mods have been detected.
 
+The mod can not be installed together with EEUITweaks component "Hidden Game Options". You can 
+install either one, but not both at the same time.
+
 Patching UI definition files can be tricky. To ensure that a failed patch attempt does not corrupt 
 the game it will fail with a forced error and restore the original state of the patched files.
 
@@ -184,6 +187,9 @@ ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa
 
 History
 ~~~~~~~
+
+1.2
+- Marked mod incompatible with EEUITweaks component "Hidden Game Options"
 
 1.1
 - Added Portuguese translation (thanks Nasher)
