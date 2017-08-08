@@ -1,7 +1,7 @@
 Reveal Hidden Gameplay Options
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Versão:     1.1
+Versão:     1.2
 Author:     Argent77
 
 Download:   https://github.com/Argent77/A7-HiddenGameplayOptions/releases/latest
