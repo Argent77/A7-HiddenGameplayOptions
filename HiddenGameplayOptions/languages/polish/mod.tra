@@ -1,0 +1,99 @@
+// -*- coding: utf-8 -*- 
+
+// *** Game options ***
+
+@1000 = ~Włącz tryb debugowania~
+@1001 = ~Włączenie tej opcji pozwala na aktywowanie konsoli debugowania oraz klawiszy ułatwiających grę.
+
+W celu aktywowania konsoli należy użyć kombinacji klawiszy CTRL+SPACE. Do poleceń dostępnych z poziomu konsoli można zaliczyć: ^PC:AddGold(number)^-, ^PC:CreateItem("name")^-, ^PC:SetCurrentXP(number)^- i wiele innych.
+
+Do kombinacji klawiszy ułatwiających grę zaliczyć można: CTRL+Y, służące do zabijania istot wskazanych kursorem myszy, CTRL+R, służące do leczenie postaci oraz rozpraszania działających na nie aktualnie efektów, CTRL+J, służące do teleportowania wybranych członków drużyny w miejsce wskazane kursorem myszy, CTRL+T, służące do przewijania czasu gry o jedną godzinę, CTRL+4, służące do włączenia widoczności interaktywnych regionów oraz wiele więcej.
+
+^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+
+@1100 = ~Włączanie trybu edycji Interfejsu Użytkownika~
+@1101 = ~Włączenie tej opcji pozwala na edycję Interfejsu Użytkownika w trakcie gry.
+
+W celu aktywowania lub dezaktywowania trybu edycji UI należy wcisnąć przycisk F11. Gdy tryb ten jest aktywny istnieje możliwość przeciągania po ekranie elementów UI. Wciśnięcie klawisza F5 spowoduje podgląd zmian dokonanych w wyglądzie UI bez konieczności ponownego uruchamiania gry. Wciśnięcie klawisza TAB w chwili, gdy kursor znajduje się na elemencie UI spowoduje pokazanie się numera linii w pliku UI.MENU definiującego ten element.
+
+^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+
+@1200 = ~Pokazywanie strrefów~
+@1201 = ~Włączenie tej opcji pozwala na pokazywanie numerów linii dialogowych przed wyświetlanym tekstem.
+
+^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+
+@1300 = ~Klawisze skrótu przy podpowiedziach~
+@1301 = ~Włączenie tej opcji powoduje wyświetlanie informacji o klawiszu skrótu w okienku podpowiedzi.
+
+^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+
+@1400 = ~Dodatkowe informacje po wciśnięciu klawisza TAB~
+@1401 = ~Włączenie tej opcji powoduje otrzymywanie dodatkowych informacji o interaktywnych regionach po wciśnięciu klawisza TAB.
+
+^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+
+@1500 = ~Możliwość używania klawisza Spacji podczas dialogów~
+@1501 = ~Włączenie tej opcji umożliwia kontynuowanie rozmowy przy użyciu klawisza Spacji.
+
+^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+
+@1600 = ~Ograniczenie czarów druidycznych dla kapłanów/łowców~
+@1601 = ~Opcja ta kontroluje dostępność czarów druidycznych dla wieloklasowych i dwuklasowych kapłanów/łowców.
+
+Włączenie tej opcji spowoduje ograniczenie dostępu czarów druidycznych do 3. poziomu, co jest maksymalnym poziomem dostępnym dla łowców. Opcja ta nie ma wpływu na czary kapłańskie.
+
+^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+
+@1700 = ~Atak z zaskoczenia 3E~
+@1701 = ~Opcja ta włącza lub wyłącza Atak z zaskoczenia oraz Druzgoczące uderzenie, będące specjalnymi zdolności złodzieja, podobnymi do tych, które występują w zasadach 3. edycji Dungeons & Dragons(R), firmy Wizards of the Coast.
+
+^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+
+@1800 = ~Drżenie ekranu po trafieniu krytycznym~
+@1801 = ~Włączenie tej opcji powoduje efekt drżenia ekranu za każdym razem, gdy członek drużyny uzyska trafienie krytyczne.
+
+^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+
+@1900 = ~Pokazywanie dodatkowych informacji o walce~
+@1901 = ~Włączenie tej opcji sprawia, że na ekranie wyświetlane będą wszystkie wartości mające wpływ na wynik testu ataku.
+
+^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+
+@2000 = ~Wyświetlanie czasu i daty po zatrzymaniu gry~
+@2001 = ~Włączenie tej opcji spowoduje wyświetlenie aktualnej daty i czasu w grze po aktywowaniu pauzy.
+
+^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+
+@2100 = ~Wyłączenie przybliżania obszaru mapy~
+@2101 = ~Opcja ta powoduje wyłączenie efektu przybliżania i oddalania widoku mapy podczas otwierania lub zamykania ekranu mapy.
+
+^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+
+@2200 = ~Odwrócenie kierunku przybliżania ekranu za pomocą myszy~
+@2201 = ~Opcja ta powoduje odwrócenie kierunku przybliżania i oddalania ekranu za pomocą kółka myszy.
+
+^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+
+@2300 = ~Zatrzymywanie gry na ekranie mapy~
+@2301 = ~Włączenie tej opcji powoduje automatyczne zatrzymanie gry po wejściu na ekran mapy.
+
+^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+
+@2400 = ~Włączenie mgły~
+@2401 = ~Włączenie tej opcji powoduje pojawienie się na ekranie mapy efektów związanych z mgłą.
+
+^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+
+@2500 = ~Wyłączenie filmów~
+@2501 = ~Włączenie tej opcji powoduje zablokowanie odtwarzania filmów.
+
+^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+
+
+// *** Misc. strings ***
+
+@10000 = ~Atak z zaskoczenia~
+@10001 = ~Atak z zaskoczenia nieskuteczny~
+@10002 = ~Druzgoczące uderzenie~
+@10003 = ~Broń nie nadaje się do przeprowadzenia ataku z zaskoczenia~

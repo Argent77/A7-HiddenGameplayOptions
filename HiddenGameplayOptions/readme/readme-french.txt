@@ -186,6 +186,8 @@ Additional coding help: AncientCowboy
 
 French translation: Gwendolyne
 
+Polish translation: Cahir
+
 Portuguese translation: Nasher
 
 
@@ -198,6 +200,9 @@ ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa
 
 History
 ~~~~~~~
+
+1.3
+- Added Polish translation (thanks Cahir)
 
 1.2
 - Marked mod incompatible with EEUITweaks component "Hidden Game Options"

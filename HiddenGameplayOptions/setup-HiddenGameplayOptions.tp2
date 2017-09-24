@@ -23,6 +23,10 @@ LANGUAGE  ~Deutsch~
           ~german~
           ~%MOD_FOLDER%/languages/german/setup.tra~
           ~%MOD_FOLDER%/languages/german/mod.tra~
+LANGUAGE  ~Polski (tlumaczenie: Cahir)~
+          ~polish~
+          ~%MOD_FOLDER%/languages/polish/setup.tra~
+          ~%MOD_FOLDER%/languages/polish/mod.tra~
 LANGUAGE  ~Portugues (traducao: Nasher)~
           ~portuguese~
           ~%MOD_FOLDER%/languages/portuguese/setup.tra~
