@@ -1,7 +1,7 @@
 Faire apparaître les Options de jeu cachées
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Version        : 1.2
+Version        : 1.3
 Auteur         : Argent77
 
 Téléchargement : https://github.com/Argent77/A7-HiddenGameplayOptions/releases/latest
