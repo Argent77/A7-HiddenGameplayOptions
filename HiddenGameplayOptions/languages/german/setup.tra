@@ -20,6 +20,7 @@
 @23 = ~Spieloption "Spiel pausieren wenn Gebietskarte aktiv ist" hinzufuegen~
 @24 = ~Spieloption "Nebel aktivieren" hinzufuegen~
 @25 = ~Spieloption "Videosequenzen deaktivieren" hinzufuegen~
+@26 = ~Spieloption "Keine kosmetischen Angriffe" hinzufuegen~
 
 @100 = ~Enhanced Edition muss v2.0 oder hoeher sein.~
 @101 = ~LUA-Datei kann nicht bearbeitet werden~

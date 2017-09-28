@@ -177,6 +177,15 @@ Cette option permet de désactiver le visionnage des films.
 Elle se trouve dans la section Graphismes > Options d'affichage.
 
 
+18. Ajouter l'option de jeu "Aucune attaque cosmétique" (disponible uniquement dans PST:EE)
+
+Activer cette option permet de ne faire apparaître les animations des attaques que lorsque les 
+personnages attaquent réellement (aucune animation n'apparaît pendant les feintes et les esquives). 
+Elle est déjà disponible dans les jeux BG:EE et BG2:EE originaux.
+
+Elle se trouve dans la section Jeu.
+
+
 Credits
 ~~~~~~~
 
@@ -200,6 +209,9 @@ ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa
 
 History
 ~~~~~~~
+
+1.4
+- Added option "No Cosmetic Attacks" to PSTEE
 
 1.3
 - Added Polish translation (thanks Cahir)

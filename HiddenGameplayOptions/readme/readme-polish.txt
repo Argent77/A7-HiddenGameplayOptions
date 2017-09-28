@@ -158,6 +158,14 @@ Włączenie tej opcji powoduje zablokowanie odtwarzania filmów.
 Opcja ta znajduje się w sekcji Grafika > Opcje wyświetlania.
 
 
+18. Dodaj w grze opcję „Wyłączenie dodatkowych animacji ataków” (dostępne tylko w PST:EE)
+
+Włączenie tej opcji powoduje wyświetlanie dodatkowych animacji ataku, tylko jeśli postać faktycznie 
+wykonuje atak. Opcja ta jest już dostępna w niezmodyfikowanych wersjach BGEE i BG2EE.
+
+Opcja ta znajduje się w sekcji Opcje gry.
+
+
 Credits
 ~~~~~~~
 
@@ -181,6 +189,9 @@ ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa
 
 History
 ~~~~~~~
+
+1.4
+- Added option "No Cosmetic Attacks" to PSTEE
 
 1.3
 - Added Polish translation (thanks Cahir)

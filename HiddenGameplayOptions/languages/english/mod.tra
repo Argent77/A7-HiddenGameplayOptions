@@ -90,6 +90,9 @@ Enable this option to limit druidic spells to level 3 - the maximum allowed spel
 
 ^NNote: You must restart the game for changes to take effect.^-~
 
+@2600 = ~No Cosmetic Attacks~
+@2601 = ~Show attack animations only when characters are making real attacks. Otherwise, characters go through attack animations throughout a round to simulate feinting and dodging.~
+
 
 // *** Misc. strings ***
 

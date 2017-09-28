@@ -10,7 +10,7 @@
 @13 = ~Dodaj w grze opcje "Klawisze skrotu przy podpowiedziach"~
 @14 = ~Dodaj w grze opcje "Dodatkowe informacje po wcisnieciu klawisza TAB"~
 @15 = ~Dodaj w grze opcje "Mozliwosc uzywania klawisza Spacji podczas dialogow"~
-@16 = ~Dodaj w grze opcje "Ograniczenie czarow druidycznych dla kap³anow/lowcow"~
+@16 = ~Dodaj w grze opcje "Ograniczenie czarow druidycznych dla kaplanow/lowcow"~
 @17 = ~Dodaj w grze opcje "Atak z zaskoczenia 3E"~
 @18 = ~Dodaj w grze opcje "Drzenie ekranu po trafieniu krytycznym"~
 @19 = ~Dodaj w grze opcje "Pokazywanie dodatkowych informacji o walce"~
@@ -20,6 +20,7 @@
 @23 = ~Dodaj w grze opcje "Zatrzymywanie gry na ekranie mapy"~
 @24 = ~Dodaj w grze opcje "Wlaczenie mgly"~
 @25 = ~Dodaj w grze opcje "Wylaczenie filmow"~
+@26 = ~Dodaj w grze opcje "Wylaczenie dodatkowych animacji atakow"~
 
 @100 = ~Wymagane posiadanie wersji Enhanced Edition w wersji 2.0 lub wyzszej.~
 @101 = ~Nie mozna zaktualizowac pliku LUA~

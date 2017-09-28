@@ -90,6 +90,9 @@ Bei aktivierter Option sind Druidenzauber nur bis Stufe 3 verfügbar - die höch
 
 ^NHinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.^-~
 
+@2600 = ~Keine kosmetischen Angriffe~
+@2601 = ~Aktiviert diese Option, um Angriffsanimationen nur dann zu zeigen, wenn Charaktere tatsächlich Angriffe ausführen. Ansonsten werden während einer Kampfrunde zusätzliche Angriffsanimationen gezeigt, um Finten und Ausweichmanöver zu simulieren.~
+
 
 // *** Misc. strings ***
 

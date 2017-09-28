@@ -90,6 +90,9 @@ Włączenie tej opcji spowoduje ograniczenie dostępu czarów druidycznych do 3.
 
 ^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
 
+@2600 = ~Wyłączenie dodatkowych animacji ataków~
+@2601 = ~Domyślnie postacie wykonują animacje ataku w czasie całej rundy, co symuluje markowanie i unikanie ciosów. Włączenie tej opcji sprawia, że pokazywane będą jedynie animacje samych ataków.~
+
 
 // *** Misc. strings ***
 

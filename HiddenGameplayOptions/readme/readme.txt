@@ -166,6 +166,14 @@ Enabling this option disables movie playback.
 Option can be found in Graphics > Display Options.
 
 
+18. Add in-game option "No Cosmetic Attacks" (only available in PST:EE)
+
+Enabling this option shows attack animations only when characters are making real attacks. 
+This option is already available in unmodded BG:EE and BG2:EE.
+
+Option can be found in Gameplay section.
+
+
 Credits
 ~~~~~~~
 
@@ -189,6 +197,9 @@ ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa
 
 History
 ~~~~~~~
+
+1.4
+- Added option "No Cosmetic Attacks" to PSTEE
 
 1.3
 - Added Polish translation (thanks Cahir)

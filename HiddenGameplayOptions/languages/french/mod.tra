@@ -91,6 +91,9 @@ L'activer limite au niveau 3 les sorts de druide utilisables par les rôdeurs. L
 
 ^NNote : Vous devez redémarrer le jeu pour que les modifications prennent effet.^-~
 
+@2600 = ~Aucune attaque cosmétique~
+@2601 = ~Les animations des attaques n'apparaissent que quand les personnages attaquent réellement. Aucune animation d'attaque n'apparaît pendant les feintes et les esquives.~
+
 
 // *** Misc. strings ***
 

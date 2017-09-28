@@ -70,6 +70,8 @@ BEGIN @2  // All available options
 
   LAF OPTION_DISABLE_MOVIES END
 
+  ACTION_IF (GAME_IS ~pstee~) BEGIN LAF OPTION_NO_COSMETIC_ATTACKS END END
+
 
 BEGIN @3  // Selected options
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @100  // Enhanced Edition game patched to v2.0 or higher required.
@@ -193,3 +195,11 @@ BEGIN @25 // Add in-game option "Disable Movies"
   DESIGNATED 25
 
   LAF OPTION_DISABLE_MOVIES END
+
+
+BEGIN @26 // Add in-game option "No Cosmetic Attacks"
+  REQUIRE_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 1 @103 // Component "Selected options" not selected.
+  REQUIRE_PREDICATE (GAME_IS ~pstee~) @104 // Option not available for this game.
+  DESIGNATED 26
+
+  LAF OPTION_NO_COSMETIC_ATTACKS END

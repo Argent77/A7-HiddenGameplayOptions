@@ -180,6 +180,15 @@ Diese Option kann genutzt werden, um Videosequenzen komplett zu deaktivieren.
 Die Option kann in Grafik > Darstellungsoptionen gefunden werden.
 
 
+18. Spieloption "Keine kosmetischen Angriffe" hinzufügen (nur in PST:EE verfügbar)
+
+Diese Option kann genutzt werden, um Angriffsanimationen nur dann zu zeigen, wenn Charaktere 
+tatsächlich Angriffe ausführen.
+In BG:EE und BG2:EE ist sie bereits im unmodifizierten Spiel enthalten.
+
+Die Option kann in den Spieleinstellungen gefunden werden.
+
+
 Credits
 ~~~~~~~
 
@@ -203,6 +212,9 @@ ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa
 
 History
 ~~~~~~~
+
+1.4
+- Added option "No Cosmetic Attacks" to PSTEE
 
 1.3
 - Added Polish translation (thanks Cahir)

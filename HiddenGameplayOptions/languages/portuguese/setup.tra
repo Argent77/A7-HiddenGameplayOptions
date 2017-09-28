@@ -19,7 +19,8 @@
 @22 = ~Adicionar opcao "Ampliacao pelo Mouse Reversa"~
 @23 = ~Adicionar opcao "Pausar Jogo na Tela do Mapa"~
 @24 = ~Adicionar opcao "Habilitar Neblina"~
-@25 = ~Adicionar opcao Adicionar opcao "Desabilitar Filmes"~
+@25 = ~Adicionar opcao "Desabilitar Filmes"~
+@26 = ~Adicionar opcao "Desabilitar Ataques Cosmeticos"~
 
 @100 = ~E necessario que o jogo tenha o patch da v2.0 ou maior.~
 @101 = ~Nao e possivel corrigir arquivo LUA~

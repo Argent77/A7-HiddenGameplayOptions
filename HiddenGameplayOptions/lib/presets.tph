@@ -411,3 +411,24 @@ BEGIN
   END
 END
 
+/** Add in-game option "No Cosmetic Attacks" */
+DEFINE_ACTION_FUNCTION OPTION_NO_COSMETIC_ATTACKS
+BEGIN
+  OUTER_TEXT_SPRINT arrayName "toggleTitles"
+
+  LAF INSTALL_CHECK_OPTION
+  INT_VAR
+    optLabelTra   = 2600
+    optDescTra    = 2601
+    controlID     = 43
+    autoFail      = 1
+  STR_VAR
+    arrayName     = EVAL "%arrayName%"
+    optLabelName  = "A7_DISABLE_COSMETIC_ATTACKS_LABEL"
+    optDescName   = "A7_DISABLE_COSMETIC_ATTACKS_DESCRIPTION"
+    iniSection    = "Program Options"
+    iniName       = "Disable Cosmetic Attacks"
+  RET
+    success
+  END
+END
