@@ -112,6 +112,18 @@ Enabling this option disables movie playback.
 
 *Option can be found in Graphics > Display Options.*
 
+#### 18. Add in-game option "No Cosmetic Attacks"
+
+Enabling this option shows attack animations only when characters are making real attacks. This option is already available in unmodded BG:EE and BG2:EE.
+
+*Option can be found in Gameplay section.*
+
+#### 19. Add in-game option "XP Bonus in Nightmare Mode"
+
+Enabling this option allows your characters to get bonus XP in Legacy of Bhaal Mode (BGEE/BG2EE) or Heart of Fury Mode (IWDEE). This setting will not affect the extra XP granted by the regular difficulty modes.
+
+*Option can be found in Gameplay section.*
+
 ## Copyright Notice
 
 The mod "Reveal Hidden Gameplay Options" is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).

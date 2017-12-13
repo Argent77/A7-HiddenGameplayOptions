@@ -186,6 +186,15 @@ Elle est déjà disponible dans les jeux BG:EE et BG2:EE originaux.
 Elle se trouve dans la section Jeu.
 
 
+19. Add in-game option "XP Bonus in Nightmare Mode" (not available in PST:EE)
+
+Enabling this option allows your characters to get bonus XP in Legacy of Bhaal Mode (BGEE/BG2EE) 
+or Heart of Fury Mode (IWDEE). This setting will not affect the extra XP granted by the regular 
+difficulty modes.
+
+Option can be found in Gameplay section.
+
+
 Credits
 ~~~~~~~
 

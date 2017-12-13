@@ -189,6 +189,15 @@ In BG:EE und BG2:EE ist sie bereits im unmodifizierten Spiel enthalten.
 Die Option kann in den Spieleinstellungen gefunden werden.
 
 
+19. Spieloption "EP-Bonus im Albtraum-Modus" hinzufügen (nicht in PST:EE verfügbar)
+
+Wird diese Option aktiviert, so erhalten Eure Charaktere einen EP-Bonus im Vermächtnis des Bhaal 
+Modus (BGEE/BG2EE) oder Herz des Zorns Modus (IWDEE). Diese Einstellung beeinflusst jedoch nicht 
+die zusätzlichen EP, die in den normalen Schwierigkeitsgraden gewährt werden.
+
+Die Option kann in den Spieleinstellungen gefunden werden.
+
+
 Credits
 ~~~~~~~
 

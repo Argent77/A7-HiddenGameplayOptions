@@ -21,6 +21,7 @@
 @24 = ~Adicionar opcao "Habilitar Neblina"~
 @25 = ~Adicionar opcao "Desabilitar Filmes"~
 @26 = ~Adicionar opcao "Desabilitar Ataques Cosmeticos"~
+@27 = ~Add in-game option "XP Bonus in Nightmare Mode"~
 
 @100 = ~E necessario que o jogo tenha o patch da v2.0 ou maior.~
 @101 = ~Nao e possivel corrigir arquivo LUA~

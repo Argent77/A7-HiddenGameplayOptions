@@ -93,6 +93,16 @@ Bei aktivierter Option sind Druidenzauber nur bis Stufe 3 verfügbar - die höch
 @2600 = ~Keine kosmetischen Angriffe~
 @2601 = ~Aktiviert diese Option, um Angriffsanimationen nur dann zu zeigen, wenn Charaktere tatsächlich Angriffe ausführen. Ansonsten werden während einer Kampfrunde zusätzliche Angriffsanimationen gezeigt, um Finten und Ausweichmanöver zu simulieren.~
 
+@2700 = ~EP-Bonus im Vermächtnis des Bhaal Modus~
+@2701 = ~Wird diese Option aktiviert, so erhalten Eure Charaktere einen EP-Bonus im Vermächtnis des Bhaal Modus. Diese Einstellung beeinflusst jedoch nicht die zusätzlichen EP, die in den normalen Schwierigkeitsgraden gewährt werden.
+
+^NHinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.^-~
+
+@2710 = ~EP-Bonus im Herz des Zorns Modus~
+@2711 = ~Wird diese Option aktiviert, so erhalten Eure Charaktere einen EP-Bonus im Herz des Zorns Modus. Diese Einstellung beeinflusst jedoch nicht die zusätzlichen EP, die in den normalen Schwierigkeitsgraden gewährt werden.
+
+^NHinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.^-~
+
 
 // *** Misc. strings ***
 

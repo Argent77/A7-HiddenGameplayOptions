@@ -94,6 +94,16 @@ L'activer limite au niveau 3 les sorts de druide utilisables par les rôdeurs. L
 @2600 = ~Aucune attaque cosmétique~
 @2601 = ~Les animations des attaques n'apparaissent que quand les personnages attaquent réellement. Aucune animation d'attaque n'apparaît pendant les feintes et les esquives.~
 
+@2700 = ~XP Bonus in Legacy of Bhaal Mode~
+@2701 = ~Enabling this option allows your characters to get bonus XP in Legacy of Bhaal Mode. This setting will not affect the extra XP granted by the regular difficulty modes.
+
+^NNote: You must restart the game for changes to take effect.^-~
+
+@2710 = ~XP Bonus in Heart of Fury Mode~
+@2711 = ~Enabling this option allows your characters to get bonus XP in Heart of Fury Mode. This setting will not affect the extra XP granted by the regular difficulty modes.
+
+^NNote: You must restart the game for changes to take effect.^-~
+
 
 // *** Misc. strings ***
 

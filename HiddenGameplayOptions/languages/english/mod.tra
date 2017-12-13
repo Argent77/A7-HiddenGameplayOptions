@@ -93,6 +93,16 @@ Enable this option to limit druidic spells to level 3 - the maximum allowed spel
 @2600 = ~No Cosmetic Attacks~
 @2601 = ~Show attack animations only when characters are making real attacks. Otherwise, characters go through attack animations throughout a round to simulate feinting and dodging.~
 
+@2700 = ~XP Bonus in Legacy of Bhaal Mode~
+@2701 = ~Enabling this option allows your characters to get bonus XP in Legacy of Bhaal Mode. This setting will not affect the extra XP granted by the regular difficulty modes.
+
+^NNote: You must restart the game for changes to take effect.^-~
+
+@2710 = ~XP Bonus in Heart of Fury Mode~
+@2711 = ~Enabling this option allows your characters to get bonus XP in Heart of Fury Mode. This setting will not affect the extra XP granted by the regular difficulty modes.
+
+^NNote: You must restart the game for changes to take effect.^-~
+
 
 // *** Misc. strings ***
 

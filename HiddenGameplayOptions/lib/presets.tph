@@ -432,3 +432,27 @@ BEGIN
     success
   END
 END
+
+/** Add in-game option "XP Bonus in Nightmare Mode" */
+DEFINE_ACTION_FUNCTION OPTION_NIGHTMARE_XP_BONUS
+BEGIN
+  OUTER_TEXT_SPRINT arrayName "toggleTitles"
+  OUTER_SET optLabelTra = (GAME_IS ~iwdee~) ? 2710 : 2700
+  OUTER_SET optDescTra = (GAME_IS ~iwdee~) ? 2711 : 2701
+
+  LAF INSTALL_CHECK_OPTION
+  INT_VAR
+    optLabelTra
+    optDescTra
+    controlID     = "-183"
+    autoFail      = 1
+  STR_VAR
+    arrayName     = EVAL "%arrayName%"
+    optLabelName  = "A7_NIGHTMARE_XP_BONUS_LABEL"
+    optDescName   = "A7_NIGHTMARE_XP_BONUS_DESCRIPTION"
+    iniSection    = "Game Options"
+    iniName       = "Nightmare Bonus XP"
+  RET
+    success
+  END
+END

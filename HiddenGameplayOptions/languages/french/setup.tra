@@ -21,6 +21,7 @@
 @24 = ~Ajouter l'option de jeu "Activer le brouillard"~
 @25 = ~Ajouter l'option de jeu "Desactiver les films"~
 @26 = ~Ajouter l'option de jeu "Aucune attaque cosmetique"~
+@27 = ~Add in-game option "XP Bonus in Nightmare Mode"~
 
 @100 = ~Ce mod requiert un jeu beneficiant du patch v2.0 ou ulterieur.~
 @101 = ~Echec de modification du fichier LUA.~

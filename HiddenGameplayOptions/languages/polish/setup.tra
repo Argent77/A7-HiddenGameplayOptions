@@ -21,6 +21,7 @@
 @24 = ~Dodaj w grze opcje "Wlaczenie mgly"~
 @25 = ~Dodaj w grze opcje "Wylaczenie filmow"~
 @26 = ~Dodaj w grze opcje "Wylaczenie dodatkowych animacji atakow"~
+@27 = ~Add in-game option "XP Bonus in Nightmare Mode"~
 
 @100 = ~Wymagane posiadanie wersji Enhanced Edition w wersji 2.0 lub wyzszej.~
 @101 = ~Nie mozna zaktualizowac pliku LUA~
