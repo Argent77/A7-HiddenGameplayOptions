@@ -112,13 +112,13 @@ Enabling this option disables movie playback.
 
 *Option can be found in Graphics > Display Options.*
 
-#### 18. Add in-game option "No Cosmetic Attacks"
+#### 18. Add in-game option "No Cosmetic Attacks" *(only available in PST:EE)*
 
-Enabling this option shows attack animations only when characters are making real attacks. This option is already available in unmodded BG:EE and BG2:EE.
+Enabling this option shows attack animations only when characters are making real attacks. This option is already available in unmodded BG:EE, BG2:EE and IWD:EE.
 
 *Option can be found in Gameplay section.*
 
-#### 19. Add in-game option "XP Bonus in Nightmare Mode"
+#### 19. Add in-game option "XP Bonus in Nightmare Mode" *(not available in PST:EE)*
 
 Enabling this option allows your characters to get bonus XP in Legacy of Bhaal Mode (BGEE/BG2EE) or Heart of Fury Mode (IWDEE). This setting will not affect the extra XP granted by the regular difficulty modes.
 

@@ -183,8 +183,8 @@ Die Option kann in Grafik > Darstellungsoptionen gefunden werden.
 18. Spieloption "Keine kosmetischen Angriffe" hinzufügen (nur in PST:EE verfügbar)
 
 Diese Option kann genutzt werden, um Angriffsanimationen nur dann zu zeigen, wenn Charaktere 
-tatsächlich Angriffe ausführen.
-In BG:EE und BG2:EE ist sie bereits im unmodifizierten Spiel enthalten.
+tatsächlich Angriffe ausführen. In BG:EE, BG2:EE und IWD:EE ist sie bereits im unmodifizierten 
+Spiel enthalten.
 
 Die Option kann in den Spieleinstellungen gefunden werden.
 

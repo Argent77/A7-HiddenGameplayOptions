@@ -161,7 +161,7 @@ Opcja ta znajduje się w sekcji Grafika > Opcje wyświetlania.
 18. Dodaj w grze opcję „Wyłączenie dodatkowych animacji ataków” (dostępne tylko w PST:EE)
 
 Włączenie tej opcji powoduje wyświetlanie dodatkowych animacji ataku, tylko jeśli postać faktycznie 
-wykonuje atak. Opcja ta jest już dostępna w niezmodyfikowanych wersjach BGEE i BG2EE.
+wykonuje atak. Opcja ta jest już dostępna w niezmodyfikowanych wersjach BGEE, BG2EE i IWDEE.
 
 Opcja ta znajduje się w sekcji Opcje gry.
 

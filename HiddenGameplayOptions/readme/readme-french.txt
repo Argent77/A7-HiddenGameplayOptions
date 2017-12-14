@@ -181,7 +181,7 @@ Elle se trouve dans la section Graphismes > Options d'affichage.
 
 Activer cette option permet de ne faire apparaître les animations des attaques que lorsque les 
 personnages attaquent réellement (aucune animation n'apparaît pendant les feintes et les esquives). 
-Elle est déjà disponible dans les jeux BG:EE et BG2:EE originaux.
+Elle est déjà disponible dans les jeux BG:EE, BG2:EE et IWD:EE originaux.
 
 Elle se trouve dans la section Jeu.
 

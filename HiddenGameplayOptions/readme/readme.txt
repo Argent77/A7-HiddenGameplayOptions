@@ -169,7 +169,7 @@ Option can be found in Graphics > Display Options.
 18. Add in-game option "No Cosmetic Attacks" (only available in PST:EE)
 
 Enabling this option shows attack animations only when characters are making real attacks. 
-This option is already available in unmodded BG:EE and BG2:EE.
+This option is already available in unmodded BG:EE, BG2:EE and IWD:EE.
 
 Option can be found in Gameplay section.
 

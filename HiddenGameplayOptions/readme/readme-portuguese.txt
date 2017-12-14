@@ -174,7 +174,7 @@ A opção pode ser encontrada em Gráficos > Opções de Exibição.
 18. Adicionar opção "Desabilitar Ataques Cosméticos" (disponível apenas em PST:EE)
 
 Habilitar esta opção mostra animações de ataque apenas apenas quando os personagens realmente 
-estiverem atacando. Esta opção já está disponível na versão base do BG:EE e do BG2:EE.
+estiverem atacando. Esta opção já está disponível na versão base do BG:EE, BG2:EE e do IWD:EE.
 
 A opção pode ser encontrada na seção Jogabilidade.
 
