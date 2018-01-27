@@ -206,11 +206,9 @@ Diese Komponente installiert einen Schieberegler, mit dem man die Bildrate, mit 
 ausgeführt wird, erhöhen oder vermindern kann. Man kann zwischen 30 bis 50 Bildern pro Sekunde 
 wählen. Die Voreinstellung des Spiels ist 30 Bilder pro Sekunde.
 
-Diese Komponente wird als "experimentell" gekennzeichnet, da vorgenommene Einstellungen in 
-bestimmten Situationen vom Spiel ignoriert werden:
-1. Wenn Optionen > Spieleinstellungen > Rückmeldungen > "Zusätzliche Bestätigungsfenster" aktiv ist.
-2. Wenn die Bildrate während eines laufenden Spiels gesetzt wird, und dann das Spiel direkt 
-   verlassen wird, ohne vorher in das Hauptmenü zu springen.
+Diese Komponente wird als "experimentell" gekennzeichnet, da vorgenommene Einstellungen vom Spiel 
+ignoriert werden, wenn man sie im laufenden Spiel setzt und danach das Spiel direkt verlässt, ohne 
+vorher in das Hauptmenü zu springen.
 
 Die Option kann in den Spieleinstellungen gefunden werden.
 
