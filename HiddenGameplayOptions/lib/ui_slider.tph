@@ -1,0 +1,727 @@
+// *** UI functions for adding slider controls to option screens ***
+
+INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
+
+/**
+ * This code snippet adds a new frame rate slider control.
+ * The following variables are required to be set beforehand:
+ * INT_VAR Label text position: ctl_label_x, ctl_label_y, ctl_label_w, ctl_label_h
+ * INT_VAR Slider position: ctl_slider_x, ctl_slider_y, ctl_slider_w, ctl_slider_h
+ * INT_VAR Slider info position: ctl_info_x, ctl_info_y, ctl_info_w, ctl_info_h
+ * INT_VAR Slider padding: ctl_pad_x, ctl_pad_y, ctl_pad_w, ctl_pad_h
+ * INT_VAR Control ID: ctl_id
+ * INT_VAR Number of slider items: ctl_num_settings
+ * STR_VAR Condition for showing the control: ctl_condition
+ * STR_VAR LUA label text variable: ctl_label
+ * STR_VAR LUA description variable: ctl_description
+ */
+OUTER_TEXT_SPRINT codeFrameRateSlider ~%TAB%text
+%TAB%{
+%TAB%%TAB%area  %ctl_label_x% %ctl_label_y% %ctl_label_w% %ctl_label_h%
+%TAB%%TAB%text  "%ctl_label%"
+%TAB%%TAB%text style "label"
+%TAB%%TAB%text align right center
+%TAB%%TAB%text upper
+%TAB%%TAB%text highlight lua "getSelected(selectedSL, %ctl_id%)"
+%TAB%%TAB%enabled "%ctl_condition%"
+%TAB%%TAB%action 
+%TAB%%TAB%"
+%TAB%%TAB%%TAB%helpString = '%ctl_description%' 
+%TAB%%TAB%%TAB%selectedOpt = 0
+%TAB%%TAB%%TAB%selectedSL = %ctl_id%
+%TAB%%TAB%" 
+%TAB%}
+%TAB%slider
+%TAB%{
+%TAB%%TAB%area  %ctl_slider_x% %ctl_slider_y% %ctl_slider_w% %ctl_slider_h%
+%TAB%%TAB%position "framerateSLDR"
+%TAB%%TAB%bam 'SLDRSTAR'
+%TAB%%TAB%mosaic GUISLDR
+%TAB%%TAB%sequence 0
+%TAB%%TAB%frame 1
+%TAB%%TAB%settings %ctl_num_settings%
+%TAB%%TAB%pad %ctl_pad_x% %ctl_pad_y% %ctl_pad_w% %ctl_pad_h%
+%TAB%%TAB%enabled "%ctl_condition%"
+%TAB%%TAB%action 
+%TAB%%TAB%"
+%TAB%%TAB%%TAB%helpString = '%ctl_description%' 
+%TAB%%TAB%%TAB%selectedOpt = 0
+%TAB%%TAB%%TAB%selectedSL = %ctl_id%
+%TAB%%TAB%" 
+%TAB%}
+%TAB%label
+%TAB%{
+%TAB%%TAB%area  %ctl_info_x% %ctl_info_y% %ctl_info_w% %ctl_info_h%
+%TAB%%TAB%text lua "getFrameRate(framerateSLDR)"
+%TAB%%TAB%text style "label"
+%TAB%%TAB%text align center center
+%TAB%%TAB%enabled "%ctl_condition%"
+%TAB%}
+%TAB%
+~
+
+/**
+ * Adds a frame rate slider to the Gameplay section of the game.
+ * INT_VAR optLabelTra    The TRA reference number of the option label string.
+ * INT_VAR optDescTra     The TRA reference number of the option description text.
+ * INT_VAR optInfo_0, ... Zero, one or more additional TRA reference numbers for lua text entries.
+ * INT_VAR controlID      A unique number that identifies this option.
+ *                        Recommended: Use negative number to minimize interference with existing IDs.
+ * INT_VAR numSettings    Number of available slider settings.
+ * INT_VAR minSetting     Value representing slider position 0.
+ * INT_VAR stepSize       Valud differences between slider positions.
+ * INT_VAR autoFail       Set to nonzero to force termination of component installation on error.
+ * STR_VAR arrayName      Name of the LUA array containing option definitions.
+ *                          toggleTitles:     used by Gameplay options
+ *                          feedbackToggles:  used by Gameplay > Feedback > Visual Feedback
+ *                          messagesToggles:  used by Gameplay > Feedback > Feedback Messages
+ *                          graphicsToggles:  used by Graphics > Display Options
+ * STR_VAR optLabelName   Name of the option label variable.
+ * STR_VAR optDescName    Name of the option description variable.
+ * STR_VAR optInfoName_0  Zero, one or more additional strings used by the control. Number of entries 
+ *                        must match the number of optInfo parameters.
+ * STR_VAR condition      The condition when the slider control should be visible.
+ * STR_VAR iniSection     Section name of the option that will be added to baldur.lua (e.g. "Program Options").
+ * STR_VAR iniName        Option name that will be added to baldur.lua (e.g. "Debug Mode").
+ * RET success            Returns 1 on success, 0 otherwise.
+ */
+DEFINE_ACTION_FUNCTION INSTALL_SLIDER_FRAME_RATE
+INT_VAR
+  optLabelTra   = "-1"
+  optDescTra    = "-1"
+  // optInfo_0     = "-1"
+  controlID     = 0
+  numSettings   = 3
+  minSetting    = 30
+  stepSize      = 10
+  autoFail      = 1
+STR_VAR
+  optLabelName  = ""
+  optDescName   = ""
+  // optInfoName_0 = ""
+  condition     = "true"
+  iniSection    = ""
+  iniName       = ""
+RET
+  success
+BEGIN
+  OUTER_SET success = 0
+
+  ACTION_IF (optLabelTra >= 0 AND
+             optDescTra >= 0 AND
+             controlID != 0 AND
+             numSettings > 0 AND
+             minSetting >= 0 AND
+             stepSize > 0 AND
+             NOT ~%optLabelName%~ STR_EQ ~~ AND
+             NOT ~%optDescName%~ STR_EQ ~~ AND
+             NOT ~%iniSection%~ STR_EQ ~~ AND
+             NOT ~%iniName%~ STR_EQ ~~) BEGIN
+    OUTER_SET failed = 0
+
+    LAF ADD_LUA_DEFINITION
+    INT_VAR traRef = optDescTra
+    STR_VAR varName = EVAL ~%optDescName%~
+    RET success
+    END
+    ACTION_IF (NOT success) BEGIN
+      ACTION_IF (autoFail) BEGIN
+        FAIL @101 // Cannot patch LUA file
+      END ELSE BEGIN
+        OUTER_SET failed = 1
+      END
+    END
+
+    ACTION_IF (NOT failed) BEGIN
+      LAF ADD_LUA_DEFINITION
+      INT_VAR traRef = optLabelTra
+      STR_VAR varName = EVAL ~%optLabelName%~
+      RET success
+      END
+      ACTION_IF (NOT success) BEGIN
+        ACTION_IF (autoFail) BEGIN
+          FAIL @101 // Cannot patch LUA file
+        END ELSE BEGIN
+          OUTER_SET failed = 1
+        END
+      END
+    END
+
+    ACTION_IF (NOT failed) BEGIN
+      OUTER_SET num = 0
+      OUTER_WHILE (num != "-1") BEGIN
+        ACTION_IF (VARIABLE_IS_SET EVAL ~optInfo_%num%~ AND VARIABLE_IS_SET EVAL ~optInfoName_%num%~) BEGIN
+          OUTER_SET traRef = EVAL ~optInfo_%num%~
+          OUTER_TEXT_SPRINT varName EVAL ~%optInfoName_%num%%~
+          ACTION_IF (traRef >= 0 AND NOT ~%varName%~ STR_EQ ~~) BEGIN
+            LAF ADD_LUA_DEFINITION
+            INT_VAR traRef
+            STR_VAR varName
+            RET success
+            END
+            ACTION_IF (NOT success) BEGIN
+              ACTION_IF (autoFail) BEGIN
+                FAIL @101 // Cannot patch LUA file
+              END ELSE BEGIN
+                OUTER_SET failed = 1
+              END
+            END
+          END
+          OUTER_SET num += 1
+        END ELSE BEGIN
+          OUTER_SET num = "-1"
+        END
+      END
+    END
+
+    ACTION_IF (NOT failed) BEGIN
+      COPY_EXISTING ~ui.menu~ ~override~
+        LPF ADD_SLIDER_FRAME_RATE
+        INT_VAR
+          controlID
+          numSettings
+          minSetting
+          stepSize
+        STR_VAR
+          optLabel    = EVAL ~%optLabelName%~
+          optDesc     = EVAL ~%optDescName%~
+          condition
+          iniSection  = EVAL ~%iniSection%~
+          iniName     = EVAL ~%iniName%~
+        RET
+          success
+        END
+        PATCH_IF (NOT success) BEGIN
+          PATCH_IF (autoFail) BEGIN
+            PATCH_FAIL @102 // Cannot patch UI.MENU
+          END ELSE BEGIN
+            SET failed = 1
+          END
+        END
+    END
+
+    ACTION_IF (NOT failed AND GAME_IS ~bgee~ AND NOT GAME_INCLUDES ~sod~) BEGIN
+      // Installing updated MOS background
+      COPY ~%MOD_FOLDER%/mos/GUICHISD.MOS~ ~override~
+        LPF UPDATE_PVRZ_INDICES RET original_base_index new_base_index END
+
+      ACTION_IF (original_base_index >= 0 AND new_base_index >= 0) BEGIN
+        LAF INSTALL_PVRZ
+        INT_VAR
+          original_base_index
+          new_base_index
+        STR_VAR
+          source_file = EVAL ~%MOD_FOLDER%/mos/MOS1000.PVRZ~
+        END
+      END
+    END
+
+    OUTER_SET success = failed ? 0 : 1
+  END
+END
+
+
+/**
+ * Adds a frame rate slider to the 'Gameplay' section of the Options menu.
+ * INT_VAR controlID          A unique number that identifies the slider control.
+ * INT_VAR numSettings        Number of available slider settings.
+ * INT_VAR minSetting         Value representing slider position 0.
+ * INT_VAR stepSize           Valud differences between slider positions.
+ * STR_VAR optLabel           Variable name referring to option label text.
+ * STR_VAR optDesc            Variable name referring to option description text.
+ * STR_VAR optInfoName_0, ... Zero, one or more variable names referring to descriptive strings used for individual slider positions.
+ * STR_VAR condition          The condition when the slider control should be visible.
+ * STR_VAR iniSection         Section name of option that will be added to baldur.lua (e.g. "Program Options").
+ * STR_VAR iniName            Option name that will be added to baldur.lua (e.g. "Maximum Frame Rate").
+ * RET success                Returns 1 if changes have been applied successfully, 0 otherwise.
+ */
+DEFINE_PATCH_FUNCTION ADD_SLIDER_FRAME_RATE
+INT_VAR
+  controlID   = controlID
+  numSettings = 3
+  minSetting  = 30
+  stepSize    = 10
+STR_VAR
+  optLabel    = ""
+  optDesc     = ""
+  condition   = "true"
+  iniSection  = ""
+  iniName     = ""
+RET
+  success
+BEGIN
+  SET success = 0
+  PATCH_IF (controlID != 0 AND
+            numSettings > 0 AND
+            minSetting >= 0 AND
+            stepSize > 0 AND
+            NOT ~%optLabel%~ STR_EQ ~~ AND
+            NOT ~%optDesc%~ STR_EQ ~~ AND
+            NOT ~%condition%~ STR_EQ ~~ AND
+            NOT ~%iniSection%~ STR_EQ ~~ AND
+            NOT ~%iniName%~ STR_EQ ~~) BEGIN
+    LPF __A7_INIT_CODE RET success END
+    PATCH_IF (success) BEGIN
+      LPF __A7_INIT_SLIDER_FRAME_RATE
+      INT_VAR
+        numSettings
+        minSetting
+        stepSize
+      STR_VAR
+        iniSection
+        iniName
+      RET
+        success
+      END
+      PATCH_IF (success) BEGIN
+        // TODO: consider (or exclude) UI mods
+        PATCH_IF (GAME_IS ~bgee~) BEGIN
+          PATCH_IF (GAME_INCLUDES ~sod~) BEGIN
+            // BGEE+SoD
+            LPF __A7_ADD_SLIDER_FRAME_RATE_BGSOD RET success END
+          END ELSE BEGIN
+            // Pure BG1EE
+            LPF __A7_ADD_SLIDER_FRAME_RATE_BGEE RET success END
+          END
+        END ELSE PATCH_IF (GAME_IS ~iwdee~) BEGIN
+          // IWDEE
+          LPF __A7_ADD_SLIDER_FRAME_RATE_IWDEE RET success END
+        END ELSE PATCH_IF (GAME_IS ~eet~ && MOD_IS_INSTALLED ~EET_gui.tp2~ 0) BEGIN
+          // EET with SoD GUI
+          LPF __A7_ADD_SLIDER_FRAME_RATE_BGSOD RET success END
+        END ELSE BEGIN
+          // BG2EE or EET
+          LPF __A7_ADD_SLIDER_FRAME_RATE_BG2EE RET success END
+        END
+      END
+    END
+  END
+END
+
+
+DEFINE_PATCH_FUNCTION __A7_INIT_SLIDER_FRAME_RATE
+INT_VAR
+  numSettings = 3
+  minSetting  = 30
+  stepSize    = 10
+STR_VAR
+  iniSection  = ""
+  iniName     = ""
+RET
+  success
+BEGIN
+  SET success = 0
+
+  // implements common functionality
+  // framerateSLDR = 0
+  SET ofs = INDEX_BUFFER(~difficultySLDR[ %TAB%]*=[ %TAB%]*0~)
+  PATCH_IF (ofs > 0) BEGIN
+    SET ofs = INDEX_BUFFER(~[%WNL%]~ ofs)
+    PATCH_IF (ofs > 0) BEGIN
+      TEXT_SPRINT line ~%WNL%framerateSLDR = 0~
+      SET strlen = STRING_LENGTH ~%line%~
+      INSERT_BYTES ofs strlen
+      WRITE_ASCIIE ofs ~%line%~ (strlen)
+    END
+  END
+
+  // function getFrameRate(f) ...
+  PATCH_IF (ofs > 0) BEGIN
+    TEXT_SPRINT code ~function getFrameRate(f)%WNL%  local text = ""%WNL%~
+    SET num = 0
+    WHILE (num != "-1") BEGIN
+      PATCH_IF (VARIABLE_IS_SET EVAL ~optInfoName_%num%~) BEGIN
+        PATCH_IF (num = 0) BEGIN TEXT_SPRINT if ~if~ END ELSE BEGIN TEXT_SPRINT if ~elseif~ END
+        TEXT_SPRINT label EVAL ~%optInfoName_%num%%~
+        TEXT_SPRINT code ~%code%  %if% (f == %num%) then%WNL%    text = string.upper(t("%label%"))%WNL%~
+        SET num += 1
+      END ELSE BEGIN
+        PATCH_IF (num > 0) BEGIN
+          TEXT_SPRINT code ~%code%  end%WNL%~
+        END
+        SET num = "-1"
+      END
+    END
+    TEXT_SPRINT code ~%code%  return text%WNL%end%WNL%~
+    SET ofs = INDEX_BUFFER(~^[ %TAB%]*`~ ofs)
+    PATCH_IF (ofs > 0) BEGIN
+      SET strlen = STRING_LENGTH ~%code%~
+      INSERT_BYTES ofs strlen
+      WRITE_ASCIIE ofs ~%code%~ (strlen)
+    END
+  END
+
+  // framerateSLDR = (math.min(math.max(getDeferredOption('Program Options', 'Maximum Frame Rate'), min), max) - min) / step
+  PATCH_IF (ofs > 0) BEGIN
+    SET ofs = INDEX_BUFFER(~difficultySLDR[ %TAB%]*=[ %TAB%]*Infinity_GetOption~)
+    PATCH_IF (ofs > 0) BEGIN
+      SET ofs = INDEX_BUFFER(~[%WNL%]~ ofs)
+      PATCH_IF (ofs > 0) BEGIN
+        SET max = minSetting + (numSettings - 1) * stepSize
+        TEXT_SPRINT line ~%WNL%%TAB%%TAB%framerateSLDR = (math.min(math.max(getDeferredOption('%iniSection%', '%iniName%'), %minSetting%), %max%) - %minSetting%) / %stepSize%~
+        SET strlen = STRING_LENGTH ~%line%~
+        INSERT_BYTES ofs strlen
+        WRITE_ASCIIE ofs ~%line%~ (strlen)
+      END
+    END
+  END
+
+  // setDeferredOption('Program Options', 'Maximum Frame Rate', (framerateSLDR * step) + min)
+  PATCH_IF (ofs > 0) BEGIN
+    SET ofs = INDEX_BUFFER(~Infinity_ChangeOption([ %TAB%]*12,[ %TAB%]*difficultySLDR.+)~)
+    PATCH_IF (ofs > 0) BEGIN
+      SET ofs = INDEX_BUFFER(~[%WNL%]~ ofs)
+      PATCH_IF (ofs > 0) BEGIN
+        TEXT_SPRINT line ~%WNL%%TAB%%TAB%%TAB%setDeferredOption('%iniSection%', '%iniName%', (framerateSLDR * %stepSize%) + %minSetting%)~
+        SET strlen = STRING_LENGTH ~%line%~
+        INSERT_BYTES ofs strlen
+        WRITE_ASCIIE ofs ~%line%~ (strlen)
+      END
+    END
+  END
+
+  SET success = (ofs > 0) ? 1 : 0
+END
+
+
+DEFINE_PATCH_FUNCTION __A7_ADD_SLIDER_FRAME_RATE_BGEE
+RET
+  success
+BEGIN
+  SET success = 1
+
+  SET ofsStart = INDEX_BUFFER(~name[ %TAB%]+['"]OPTIONS_GAMEPLAY['"]~)
+  PATCH_IF (ofsStart > 0) BEGIN
+    SET ofsEnd = INDEX_BUFFER(~^[ %TAB%]*menu[ %TAB%%WNL%]*{~ ofsStart)
+    PATCH_IF (ofsEnd > ofsStart) BEGIN
+      // adjusting info box dimension
+      SET ofs1 = INDEX_BUFFER(~^[ %TAB%]*area[ %TAB%]+446[ %TAB%]+422[ %TAB%]+372[ %TAB%]+184~ ofsStart)
+      PATCH_IF (ofs1 > ofsStart && ofs1 < ofsEnd) BEGIN
+        SET ofs2 = INDEX_BUFFER(~[%WNL%]~ ofs1)
+        PATCH_IF (ofs2 > ofs1) BEGIN
+          READ_ASCII ofs1 line (ofs2 - ofs1)
+          INNER_PATCH_SAVE line ~%line%~ BEGIN
+            REPLACE_TEXTUALLY ~422~ ~490~
+            REPLACE_TEXTUALLY ~184~ ~116~
+          END
+          WRITE_ASCIIE ofs1 ~%line%~ (ofs2 - ofs1)
+        END
+      END ELSE BEGIN
+        SET success = 0
+      END
+
+      // adding frame rate slider code
+      PATCH_IF (success) BEGIN
+        SET ofs1 = INDEX_BUFFER(~^[ %TAB%]*slider[ %TAB%%WNL%]*{~ ofsStart)
+        PATCH_IF (ofs1 > ofsStart) BEGIN
+          SET ofs1 = INDEX_BUFFER(~^[ %TAB%]*button[ %TAB%%WNL%]*{~ ofs1)
+        END
+        PATCH_IF (ofs1 > ofsStart && ofs1 < ofsEnd) BEGIN
+          SET ctl_label_x  = 440  SET ctl_label_y  = 390  SET ctl_label_w  = 182  SET ctl_label_h  = 40
+          SET ctl_slider_x = 626  SET ctl_slider_y = 390  SET ctl_slider_w = 200  SET ctl_slider_h = 39
+          SET ctl_info_x   = 626  SET ctl_info_y   = 429  SET ctl_info_w   = 200  SET ctl_info_h   = 35
+          SET ctl_pad_x    = 8    SET ctl_pad_y    = 0    SET ctl_pad_w    = 10   SET ctl_pad_h    = 0
+          SET ctl_id = controlID
+          SET ctl_num_settings = numSettings
+          TEXT_SPRINT ctl_condition ~%condition%~
+          TEXT_SPRINT ctl_label ~%optLabelName%~
+          TEXT_SPRINT ctl_description ~%optDescName%~
+
+          TEXT_SPRINT code EVAL ~%codeFrameRateSlider%~
+          SET strlen = STRING_LENGTH ~%code%~
+          INSERT_BYTES ofs1 strlen
+          WRITE_ASCIIE ofs1 ~%code%~ (strlen)
+        END ELSE BEGIN
+          SET success = 0
+        END
+      END
+    END ELSE BEGIN
+      SET success = 0
+    END
+  END ELSE BEGIN
+    SET success = 0
+  END
+END
+
+
+DEFINE_PATCH_FUNCTION __A7_ADD_SLIDER_FRAME_RATE_BGSOD
+RET
+  success
+BEGIN
+  SET success = 1
+
+  SET ofsStart = INDEX_BUFFER(~name[ %TAB%]+['"]OPTIONS_GAMEPLAY['"]~)
+  PATCH_IF (ofsStart > 0) BEGIN
+    SET ofsEnd = INDEX_BUFFER(~^[ %TAB%]*menu[ %TAB%%WNL%]*{~ ofsStart)
+    PATCH_IF (ofsEnd > ofsStart) BEGIN
+      // adjusting vertical position of existing sliders
+      LPF __A7_UPDATE_SLIDER_POSITIONS
+      INT_VAR
+        ofsStart
+        gap       = 50
+      STR_VAR
+        keyword_0 = ~TOOLTIP_DELAY_LABEL~
+        keyword_1 = ~KEYBOARD_SCRLSPEED_LABEL~
+        keyword_2 = ~MOUSE_SCRLSPEED_LABEL~
+        keyword_3 = ~DIFFICULTY_LABEL~
+        keyword_4 = ~ASSIGN_KEYS_BUTTON~
+      RET
+        success
+      END
+
+      // adding frame rate slider code
+      PATCH_IF (success) BEGIN
+        SET ofs1 = INDEX_BUFFER(~^[ %TAB%]*slider[ %TAB%%WNL%]*{~ ofsStart)
+        PATCH_IF (ofs1 > ofsStart) BEGIN
+          SET ofs1 = INDEX_BUFFER(~^[ %TAB%]*button[ %TAB%%WNL%]*{~ ofs1)
+        END
+        PATCH_IF (ofs1 > ofsStart && ofs1 < ofsEnd) BEGIN
+          PATCH_IF (MOD_IS_INSTALLED ~dragonspear_ui++.tp2~ 1) BEGIN
+            SET ctl_label_x  = 600  SET ctl_label_y  = 370  SET ctl_label_w  = 200  SET ctl_label_h  = 34
+            SET ctl_slider_x = 806  SET ctl_slider_y = 370  SET ctl_slider_w = 200  SET ctl_slider_h = 39
+            SET ctl_info_x   = 806  SET ctl_info_y   = 409  SET ctl_info_w   = 200  SET ctl_info_h   = 34
+            SET ctl_pad_x    = 8    SET ctl_pad_y    = 0    SET ctl_pad_w    = 10   SET ctl_pad_h    = 0
+          END ELSE BEGIN
+            SET ctl_label_x  = 112  SET ctl_label_y  = 380  SET ctl_label_w  = 188  SET ctl_label_h  = 35
+            SET ctl_slider_x = 304  SET ctl_slider_y = 380  SET ctl_slider_w = 200  SET ctl_slider_h = 40
+            SET ctl_info_x   = 304  SET ctl_info_y   = 419  SET ctl_info_w   = 200  SET ctl_info_h   = 35
+            SET ctl_pad_x    = 8    SET ctl_pad_y    = 0    SET ctl_pad_w    = 10   SET ctl_pad_h    = 0
+          END
+          SET ctl_id = controlID
+          SET ctl_num_settings = numSettings
+          TEXT_SPRINT ctl_condition ~%condition%~
+          TEXT_SPRINT ctl_label ~%optLabelName%~
+          TEXT_SPRINT ctl_description ~%optDescName%~
+
+          TEXT_SPRINT code EVAL ~%codeFrameRateSlider%~
+          SET strlen = STRING_LENGTH ~%code%~
+          INSERT_BYTES ofs1 strlen
+          WRITE_ASCIIE ofs1 ~%code%~ (strlen)
+        END ELSE BEGIN
+          SET success = 0
+        END
+      END
+    END ELSE BEGIN
+      SET success = 0
+    END
+  END ELSE BEGIN
+    SET success = 0
+  END
+END
+
+
+DEFINE_PATCH_FUNCTION __A7_ADD_SLIDER_FRAME_RATE_BG2EE
+RET
+  success
+BEGIN
+  SET success = 1
+
+  SET ofsStart = INDEX_BUFFER(~name[ %TAB%]+['"]OPTIONS_GAMEPLAY['"]~)
+  PATCH_IF (ofsStart > 0) BEGIN
+    SET ofsEnd = INDEX_BUFFER(~^[ %TAB%]*menu[ %TAB%%WNL%]*{~ ofsStart)
+    PATCH_IF (ofsEnd > ofsStart) BEGIN
+      // adjusting vertical position of existing sliders
+      LPF __A7_UPDATE_SLIDER_POSITIONS
+      INT_VAR
+        ofsStart
+        gap       = 50
+      STR_VAR
+        keyword_0 = ~TOOLTIP_DELAY_LABEL~
+        keyword_1 = ~KEYBOARD_SCRLSPEED_LABEL~
+        keyword_2 = ~MOUSE_SCRLSPEED_LABEL~
+        keyword_3 = ~DIFFICULTY_LABEL~
+        keyword_4 = ~ASSIGN_KEYS_BUTTON~
+      RET
+        success
+      END
+
+      // adding frame rate slider code
+      PATCH_IF (success) BEGIN
+        SET ofs1 = INDEX_BUFFER(~^[ %TAB%]*slider[ %TAB%%WNL%]*{~ ofsStart)
+        PATCH_IF (ofs1 > ofsStart) BEGIN
+          SET ofs1 = INDEX_BUFFER(~^[ %TAB%]*button[ %TAB%%WNL%]*{~ ofs1)
+        END
+        PATCH_IF (ofs1 > ofsStart && ofs1 < ofsEnd) BEGIN
+          SET ctl_label_x  = 108  SET ctl_label_y  = 380  SET ctl_label_w  = 192  SET ctl_label_h  = 39
+          SET ctl_slider_x = 304  SET ctl_slider_y = 380  SET ctl_slider_w = 200  SET ctl_slider_h = 40
+          SET ctl_info_x   = 304  SET ctl_info_y   = 419  SET ctl_info_w   = 200  SET ctl_info_h   = 35
+          SET ctl_pad_x    = 8    SET ctl_pad_y    = 0    SET ctl_pad_w    = 10   SET ctl_pad_h    = 0
+          SET ctl_id = controlID
+          SET ctl_num_settings = numSettings
+          TEXT_SPRINT ctl_condition ~%condition%~
+          TEXT_SPRINT ctl_label ~%optLabelName%~
+          TEXT_SPRINT ctl_description ~%optDescName%~
+
+          TEXT_SPRINT code EVAL ~%codeFrameRateSlider%~
+          SET strlen = STRING_LENGTH ~%code%~
+          INSERT_BYTES ofs1 strlen
+          WRITE_ASCIIE ofs1 ~%code%~ (strlen)
+        END ELSE BEGIN
+          SET success = 0
+        END
+      END
+    END ELSE BEGIN
+      SET success = 0
+    END
+  END ELSE BEGIN
+    SET success = 0
+  END
+END
+
+
+DEFINE_PATCH_FUNCTION __A7_ADD_SLIDER_FRAME_RATE_IWDEE
+RET
+  success
+BEGIN
+  SET success = 1
+
+  SET ofsStart = INDEX_BUFFER(~name[ %TAB%]+['"]OPTIONS_GAMEPLAY['"]~)
+  PATCH_IF (ofsStart > 0) BEGIN
+    SET ofsEnd = INDEX_BUFFER(~^[ %TAB%]*menu[ %TAB%%WNL%]*{~ ofsStart)
+    PATCH_IF (ofsEnd > ofsStart) BEGIN
+      // adjusting vertical position of existing sliders
+      LPF __A7_UPDATE_SLIDER_POSITIONS
+      INT_VAR
+        ofsStart
+        gap       = 50
+      STR_VAR
+        keyword_0 = ~TOOLTIP_DELAY_LABEL~
+        keyword_1 = ~KEYBOARD_SCRLSPEED_LABEL~
+        keyword_2 = ~MOUSE_SCRLSPEED_LABEL~
+        keyword_3 = ~DIFFICULTY_LABEL~
+        keyword_4 = ~ASSIGN_KEYS_BUTTON~
+      RET
+        success
+      END
+
+      // adding frame rate slider code
+      PATCH_IF (success) BEGIN
+        SET ofs1 = INDEX_BUFFER(~^[ %TAB%]*slider[ %TAB%%WNL%]*{~ ofsStart)
+        PATCH_IF (ofs1 > ofsStart) BEGIN
+          SET ofs1 = INDEX_BUFFER(~^[ %TAB%]*button[ %TAB%%WNL%]*{~ ofs1)
+        END
+        PATCH_IF (ofs1 > ofsStart && ofs1 < ofsEnd) BEGIN
+          SET ctl_label_x  = 108  SET ctl_label_y  = 380  SET ctl_label_w  = 144  SET ctl_label_h  = 39
+          SET ctl_slider_x = 252  SET ctl_slider_y = 380  SET ctl_slider_w = 260  SET ctl_slider_h = 40
+          SET ctl_info_x   = 252  SET ctl_info_y   = 419  SET ctl_info_w   = 200  SET ctl_info_h   = 35
+          SET ctl_pad_x    = 8    SET ctl_pad_y    = 0    SET ctl_pad_w    = 15   SET ctl_pad_h    = 0
+          SET ctl_id = controlID
+          SET ctl_num_settings = numSettings
+          TEXT_SPRINT ctl_condition ~%condition%~
+          TEXT_SPRINT ctl_label ~%optLabelName%~
+          TEXT_SPRINT ctl_description ~%optDescName%~
+
+          TEXT_SPRINT code EVAL ~%codeFrameRateSlider%~
+          SET strlen = STRING_LENGTH ~%code%~
+          INSERT_BYTES ofs1 strlen
+          WRITE_ASCIIE ofs1 ~%code%~ (strlen)
+        END ELSE BEGIN
+          SET success = 0
+        END
+      END
+    END ELSE BEGIN
+      SET success = 0
+    END
+  END ELSE BEGIN
+    SET success = 0
+  END
+END
+
+
+// Internal function: Adjust vertical position of specific controls
+DEFINE_PATCH_FUNCTION __A7_UPDATE_SLIDER_POSITIONS
+INT_VAR
+  ofsStart  = 0   // start offset of gameplay menu structure
+  gap       = 50  // default gap between slider controls
+STR_VAR
+  // keyword_0 = ~~
+  // keyword_1 = ~~
+  // ...
+RET
+  success
+BEGIN
+  SET success = 1
+
+  // 1. initializing array of offsets
+  SET offsets = 0
+  SET idx = 0
+  WHILE (success && idx != "-1") BEGIN
+    PATCH_IF (VARIABLE_IS_SET EVAL ~keyword_%idx%~) BEGIN
+      TEXT_SPRINT keyword EVAL ~%keyword_%idx%%~
+      SET ofs1 = INDEX_BUFFER(~%keyword%~ ofsStart)
+      PATCH_IF (ofs1 > ofsStart) BEGIN
+        SET ofs1 = RINDEX_BUFFER(~^[ %TAB%]*area[ %TAB%]+[0-9]+[ %TAB%]+[0-9]+[ %TAB%]+[0-9]+[ %TAB%]+[0-9]+~ ofs1)
+        PATCH_IF (ofs1 > 0) BEGIN
+          SET EVAL ~offsets_%offsets%~ = ofs1
+          SET offsets += 1
+        END ELSE BEGIN
+          SET success = 0
+        END
+      END ELSE BEGIN
+        SET success = 0
+      END
+      SET idx += 1
+    END ELSE BEGIN
+      SET idx = "-1"
+    END
+  END
+
+  // 2. Update vertical positions
+  PATCH_IF (success) BEGIN
+    // making sure offsets are in correct order
+    SET sort_size = offsets
+    TEXT_SPRINT sort_array_name ~offsets~
+    LPM SORT_NUMERIC_ARRAY
+
+    SET offsets -= 1  // last offset is only used for bounds check
+    SET curY = 0    // keep track of current Y position
+    FOR (idx = 0; idx < offsets && success; ++idx) BEGIN
+      SET curY2 = 0   // keeps track of initial Y position
+      SET ofs1 = EVAL ~offsets_%idx%~
+      SET idx2 = idx + 1
+      SET ofs2 = EVAL ~offsets_%idx2%~
+      WHILE (ofs1 < ofs2) BEGIN
+        SET ofs1 = INDEX_BUFFER(~area[ %TAB%]+[0-9]+[ %TAB%]+[0-9]+[ %TAB%]+[0-9]+[ %TAB%]+[0-9]+~ ofs1)
+        PATCH_IF (ofs1 > 0 && ofs1 < ofs2) BEGIN
+          SET ofs = INDEX_BUFFER(~[%WNL%]~ ofs1)
+          PATCH_IF (ofs > ofs1) BEGIN
+            READ_ASCII ofs1 line (ofs - ofs1)
+            SET deleted = ofs - ofs1
+            DELETE_BYTES ofs1 deleted
+            INNER_PATCH_SAVE line ~%line%~ BEGIN
+              REPLACE_EVALUATE
+              ~area[ %TAB%]+\([0-9]+\)[ %TAB%]+\([0-9]+\)[ %TAB%]+\([0-9]+\)[ %TAB%]+\([0-9]+\)~
+              BEGIN
+                PATCH_IF (idx = 0) BEGIN  // first slider is used for reference
+                  SET curY = MATCH2
+                END ELSE BEGIN
+                  PATCH_IF (curY2 = 0) BEGIN SET curY2 = MATCH2 END
+                  SET MATCH2 = (curY2 != MATCH2) ? (curY + MATCH2 - curY2) : curY
+                END
+              END
+              ~area %MATCH1% %MATCH2% %MATCH3% %MATCH4%~
+            END
+            SET strlen = STRING_LENGTH ~%line%~
+            INSERT_BYTES ofs1 strlen
+            WRITE_ASCIIE ofs1 ~%line%~ (strlen)
+
+            // forward offsets might have changed
+            SET diff = strlen - deleted
+            PATCH_IF (diff != 0) BEGIN
+              FOR (idx3 = idx2; idx3 <= offsets; ++idx3) BEGIN  // include upper bounds offset
+                SET EVAL ~offsets_%idx3%~ += diff
+              END
+              SET ofs2 = EVAL ~offsets_%idx2%~
+            END
+          END ELSE BEGIN
+            SET success = 0
+          END
+        END ELSE PATCH_IF (ofs1 < 0) BEGIN
+          SET success = 0
+        END
+        SET ofs1 += 1 // prevent endless loops
+      END
+      SET curY += gap
+    END
+  END
+END

@@ -17,18 +17,26 @@ LANGUAGE  ~English~
           ~%MOD_FOLDER%/languages/english/mod.tra~
 LANGUAGE  ~Francais (traduction: Gwendolyne)~
           ~french~
+          ~%MOD_FOLDER%/languages/english/setup.tra~
+          ~%MOD_FOLDER%/languages/english/mod.tra~
           ~%MOD_FOLDER%/languages/french/setup.tra~
           ~%MOD_FOLDER%/languages/french/mod.tra~
 LANGUAGE  ~Deutsch~
           ~german~
+          ~%MOD_FOLDER%/languages/english/setup.tra~
+          ~%MOD_FOLDER%/languages/english/mod.tra~
           ~%MOD_FOLDER%/languages/german/setup.tra~
           ~%MOD_FOLDER%/languages/german/mod.tra~
 LANGUAGE  ~Polski (tlumaczenie: Cahir)~
           ~polish~
+          ~%MOD_FOLDER%/languages/english/setup.tra~
+          ~%MOD_FOLDER%/languages/english/mod.tra~
           ~%MOD_FOLDER%/languages/polish/setup.tra~
           ~%MOD_FOLDER%/languages/polish/mod.tra~
 LANGUAGE  ~Portugues (traducao: Nasher)~
           ~portuguese~
+          ~%MOD_FOLDER%/languages/english/setup.tra~
+          ~%MOD_FOLDER%/languages/english/mod.tra~
           ~%MOD_FOLDER%/languages/portuguese/setup.tra~
           ~%MOD_FOLDER%/languages/portuguese/mod.tra~
 
@@ -73,6 +81,9 @@ BEGIN @2  // All available options
   ACTION_IF (GAME_IS ~pstee~) BEGIN LAF OPTION_NO_COSMETIC_ATTACKS END END
 
   ACTION_IF (NOT GAME_IS ~pstee~) BEGIN LAF OPTION_NIGHTMARE_XP_BONUS END END
+
+  ACTION_IF (NOT GAME_IS ~pstee~ &&
+             NOT MOD_IS_INSTALLED ~LeUI.tp2~ 0) BEGIN LAF OPTION_FRAME_RATE_SLIDER END END
 
 
 BEGIN @3  // Selected options
@@ -212,3 +223,11 @@ BEGIN @27 // Add in-game option "XP Bonus in Nightmare Mode"
   DESIGNATED 27
 
   LAF OPTION_NIGHTMARE_XP_BONUS END
+
+BEGIN @28 // Add in-game option "XP Bonus in Nightmare Mode"
+  REQUIRE_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 1 @103 // Component "Selected options" not selected.
+  REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~LeUI.tp2~ 0) @107 // This component is not compatible with Lefreut's Enhanced UI.
+  REQUIRE_PREDICATE (NOT GAME_IS ~pstee~) @104 // Option not available for this game.
+  DESIGNATED 28
+
+  LAF OPTION_FRAME_RATE_SLIDER END

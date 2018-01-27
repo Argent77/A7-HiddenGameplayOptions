@@ -1,6 +1,63 @@
 // *** Generic UI-related functions ***
 
 /**
+ * This patch macro sorts numeric arrays in ascending or descending order.
+ * Parameters:
+ * INT_VAR sort_size        (Optional) Number of elements in the array. Specify negative size to perform auto-detection. (Default: auto-detect size)
+ * INT_VAR sort_reverse     (Optional) Set to zero to sort in ascending order. Set to non-zero to sort in descending order. (Default: ascending order)
+ * STR_VAR sort_array_name  (Mandatory) The array's base name.
+ */
+DEFINE_PATCH_MACRO SORT_NUMERIC_ARRAY
+BEGIN
+  LOCAL_SET idx = 0 LOCAL_SET i = 0 LOCAL_SET j = 0 LOCAL_SET v1 = 0 LOCAL_SET v2 = 0
+  LOCAL_SET r = VARIABLE_IS_SET ~sort_reverse~ ? sort_reverse : 0
+  LOCAL_SET s = VARIABLE_IS_SET ~sort_size~ ? sort_size : "-1"
+
+  PATCH_IF (NOT ~%sort_array_name%~ STR_EQ ~~) BEGIN
+    // Auto-detect array size
+    PATCH_IF (s < 0) BEGIN
+      SET idx = 0
+      WHILE (idx != "-1") BEGIN
+        PATCH_IF (VARIABLE_IS_SET EVAL ~%sort_array_name%_%idx%~) BEGIN
+          SET idx += 1
+        END ELSE BEGIN
+          SET s = idx
+          SET idx = "-1"
+        END
+      END
+    END
+
+    // Sort array using "Selection Sort" algorithm
+    FOR (j = 0; j < s - 1; ++j) BEGIN
+      // Find and mark index of lowest/highest value in remaining sublist
+      SET idx = j
+      SET v1 = EVAL ~%sort_array_name%_%idx%~
+      FOR (i = j + 1; i < s; ++i) BEGIN
+        SET v2 = EVAL ~%sort_array_name%_%i%~
+        PATCH_IF ((r && v2 > v1) || (NOT r && v2 < v1)) BEGIN
+          SET idx = i
+          SET v1 = EVAL ~%sort_array_name%_%idx%~
+        END
+      END
+
+      // Swap values if needed
+      PATCH_IF (idx != j) BEGIN
+        SET v1 = EVAL ~%sort_array_name%_%idx%~
+        SET EVAL ~%sort_array_name%_%idx%~ = EVAL ~%sort_array_name%_%j%~
+        SET EVAL ~%sort_array_name%_%j%~ = v1
+      END
+    END
+  END
+END
+
+/** Action macro for sorting numeric arrays. */
+DEFINE_ACTION_MACRO SORT_NUMERIC_ARRAY
+BEGIN
+  OUTER_PATCH ~~ BEGIN LPM SORT_NUMERIC_ARRAY END
+END
+
+
+/**
  * Adds a new string variable definition into all available L_xx_YY.LUA resources.
  * INT_VAR traRef   TRA reference number of the string to add.
  * STR_VAR varName  Name of the variable to add.
@@ -147,5 +204,146 @@ RET
 BEGIN
   INNER_ACTION BEGIN
     LAF GET_LUA_VALUE STR_VAR varName = EVAL ~%varName%~ RET value END
+  END
+END
+
+
+// Used internally: implements a workaround to prevent options from being reset
+DEFINE_PATCH_FUNCTION __A7_INIT_CODE
+RET success
+BEGIN
+  SET success = 1
+
+  PATCH_IF (INDEX_BUFFER(~function[ %TAB%]+getDeferredOption~) < 0) BEGIN
+    // global function definitions
+    TEXT_SPRINT code ~`
+deferredOptions = {}
+
+function getDeferredOption(section, option)
+	if (not deferredOptions[tostring(section)]) then
+		deferredOptions[tostring(section)] = {}
+	end
+	if (not deferredOptions[section][tostring(option)]) then
+		deferredOptions[section][tostring(option)] =  tonumber(Infinity_GetINIValue(section,option)) or 0
+	end
+	return deferredOptions[section][option]
+end
+
+function setDeferredOption(section, option, value)
+	if (not deferredOptions[tostring(section)]) then
+		deferredOptions[tostring(section)] = {}
+	end
+	deferredOptions[section][tostring(option)] = tonumber(value) or 0
+end
+
+function flushDeferredOptions()
+	for s,t in pairs(deferredOptions) do
+		for o,v in pairs(t) do
+			Infinity_SetINIValue(s,o,v)
+		end
+	end
+end
+`
+~
+    SET codeLen = STRING_LENGTH ~%code%~
+    INSERT_BYTES 0 codeLen
+    WRITE_ASCIIE 0 ~%code%~
+
+    // add calls to flushDeferredOptions()
+    // 1. start menu
+    SET ofs = INDEX_BUFFER(~menu[ %TAB%%WNL%]*{[ %TAB%%WNL%]*name[ %TAB%]+['"]START['"]~)
+    PATCH_IF (ofs >= 0) BEGIN
+      SET ofs = INDEX_BUFFER(~onOpen[ %TAB%%WNL%]+"~ ofs)
+      PATCH_IF (ofs >= 0) BEGIN
+        SET ofs = INDEX_BUFFER(~"~ ofs) + 1
+        TEXT_SPRINT code ~%WNL%%TAB%%TAB%flushDeferredOptions()~
+        SET codeLen = STRING_LENGTH ~%code%~
+        INSERT_BYTES ofs codeLen
+        WRITE_ASCIIE ofs ~%code%~
+      END ELSE BEGIN
+        SET success = 0
+      END
+    END ELSE BEGIN
+      SET success = 0
+    END
+
+    // 2. quit menu
+    PATCH_IF (success) BEGIN
+      SET ofs = INDEX_BUFFER(~menu[ %TAB%%WNL%]*{[ %TAB%%WNL%]*name[ %TAB%]+['"]QuitMenu['"]~)
+      PATCH_IF (ofs >= 0) BEGIN
+        PATCH_IF (GAME_IS ~pstee~) BEGIN
+          TEXT_SPRINT name ~YES_BUTTON~
+        END ELSE BEGIN
+          TEXT_SPRINT name ~QUIT_GAME_BUTTON~
+        END
+        SET ofs = INDEX_BUFFER(~['"]%name%['"]~ ofs)
+        PATCH_IF (ofs >= 0) BEGIN
+          SET ofs = INDEX_BUFFER(~action[ %TAB%%WNL%]*"~ ofs)
+          PATCH_IF (ofs >= 0) BEGIN
+            SET ofs = INDEX_BUFFER(~"~ ofs) + 1
+            TEXT_SPRINT code ~%WNL%%TAB%%TAB%%TAB%flushDeferredOptions()~
+            SET codeLen = STRING_LENGTH ~%code%~
+            INSERT_BYTES ofs codeLen
+            WRITE_ASCIIE ofs ~%code%~
+          END ELSE BEGIN
+            SET success = 0
+          END
+        END ELSE BEGIN
+          SET success = 0
+        END
+      END ELSE BEGIN
+        SET success = 0
+      END
+    END
+
+    // 3. esc menu / start main
+    PATCH_IF (success && NOT GAME_IS ~pstee~) BEGIN
+      PATCH_IF (MOD_IS_INSTALLED ~LeUI.tp2~ 0) BEGIN
+        SET lefreut = 1
+        TEXT_SPRINT name ~START_MAIN~
+      END ELSE BEGIN
+        SET lefreut = 0
+        TEXT_SPRINT name ~ESC_MENU~
+      END
+      SET ofs = INDEX_BUFFER(~menu[ %TAB%%WNL%]*{[ %TAB%%WNL%]*name[ %TAB%]+['"]%name%['"]~)
+      PATCH_IF (ofs >= 0) BEGIN
+        SET ofs = INDEX_BUFFER(~['"]QUIT_GAME_BUTTON['"]~ ofs)
+        PATCH_IF (ofs >= 0) BEGIN
+          PATCH_IF (lefreut) BEGIN
+            // special handling: lefreut's UI
+            SET ofs = INDEX_BUFFER(~action[ %TAB%%WNL%]*"~ ofs)
+            PATCH_IF (ofs >= 0) BEGIN
+              SET ofs = INDEX_BUFFER(~"~ ofs) + 1
+              TEXT_SPRINT code ~%WNL%%TAB%%TAB%%TAB%flushDeferredOptions()~
+              SET codeLen = STRING_LENGTH ~%code%~
+              INSERT_BYTES ofs codeLen
+              WRITE_ASCIIE ofs ~%code%~
+            END ELSE BEGIN
+              SET success = 0
+            END
+          END ELSE BEGIN
+            // remaining games
+            SET ofs = INDEX_BUFFER(~['"]QUIT_BUTTON['"],[ %TAB%]*function()[ %TAB%]+Infinity_ShutdownGame()[ %TAB%]+end,~ ofs)
+            PATCH_IF (ofs >= 0) BEGIN
+              SET ofs = INDEX_BUFFER(~Infinity_ShutdownGame()~ ofs)
+              PATCH_IF (ofs > 0) BEGIN
+                TEXT_SPRINT code ~flushDeferredOptions() ~
+                SET codeLen = STRING_LENGTH ~%code%~
+                INSERT_BYTES ofs codeLen
+                WRITE_ASCIIE ofs ~%code%~
+              END ELSE BEGIN
+                SET success = 0
+              END
+            END ELSE BEGIN
+              SET success = 0
+            END
+          END
+        END ELSE BEGIN
+          SET success = 0
+        END
+      END ELSE BEGIN
+        SET success = 0
+      END
+    END
   END
 END

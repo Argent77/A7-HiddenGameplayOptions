@@ -103,6 +103,16 @@ Enable this option to limit druidic spells to level 3 - the maximum allowed spel
 
 ^NNote: You must restart the game for changes to take effect.^-~
 
+@2800 = ~Frame Rate~
+@2801 = ~This slider allows you to increase the frame rate at which the game runs, thereby speeding up all aspects of the gameplay.
+
+WARNING: Adjusting the frame rate above 30 may result in audio sync issues during cutscenes as well as mistimed spell effects during combat.
+
+^NNote: You must restart the game for changes to take effect.^-~
+@2802 = ~30 frames/sec.~
+@2803 = ~40 frames/sec.~
+@2804 = ~50 frames/sec.~
+
 
 // *** Misc. strings ***
 

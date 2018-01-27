@@ -103,6 +103,16 @@ Bei aktivierter Option sind Druidenzauber nur bis Stufe 3 verfügbar - die höch
 
 ^NHinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.^-~
 
+@2800 = ~Bildrate~
+@2801 = ~Der Schieberegler erlaubt Euch, die Bildrate, mit der das Spiel ausgeführt wird, zu erhöhen und somit alle Aspekte des Spielablaufs zu beschleunigen.
+
+WARNUNG: Die Bildrate über einen Wert von 30 einzustellen, kann in Zwischensequenzen zu Problemen durch asynchronen Ton und zu zeitlich schlecht abgestimmten Zaubereffekten während der Kämpfe führen.
+
+^NHinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.^-~
+@2802 = ~30 Bilder/Sek.~
+@2803 = ~40 Bilder/Sek.~
+@2804 = ~50 Bilder/Sek.~
+
 
 // *** Misc. strings ***
 

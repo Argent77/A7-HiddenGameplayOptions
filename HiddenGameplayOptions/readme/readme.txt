@@ -18,7 +18,8 @@ configuration file which might discourage less computer-savvy players from using
 This mods adds a number of useful options directly to the game, which includes the (in)famous 
 debug console, various graphics and feedback settings, and more.
 
-All Enhanced Edition games patched to v2.0 or higher are supported.
+All Enhanced Edition games patched to v2.0 or higher are supported, which currently includes BG:EE 
+(with or without SoD), BG2:EE, IWD:EE, PST:EE and EET.
 
 
 Installation
@@ -32,8 +33,8 @@ Compatibility
 ~~~~~~~~~~~~~
 
 The mod supports all Enhanced Edition games patched to v2.0 or higher. It is also compatible with 
-Pecca's "Dragonspear UI++" and Lefreut's Enhanced UI (LeUI). Some options may be moved into other 
-sections when these mods have been detected.
+Pecca's "Dragonspear UI++" and Lefreut's Enhanced UI (LeUI), except for one component (see below).
+Some options may be moved into other sections when these mods have been detected.
 
 The mod can not be installed together with EEUITweaks component "Hidden Game Options". You can 
 install either one, but not both at the same time.
@@ -88,14 +89,14 @@ Setting this option reveals more information about interactive regions when pres
 Option can be found in Gameplay section.
 
 
-7. Add in-game option "Allow Spacebar in Dialogs" (only available in PST:EE)
+7. Add in-game option "Allow Spacebar in Dialogs" (only available for PST:EE)
 
 Setting this option allows you to use the spacebar to continue in dialogs.
 
 Option can be found in Gameplay section.
 
 
-8. Add in-game option "Limits druidic spells for Cleric/Ranger" (not available in PST:EE)
+8. Add in-game option "Limits druidic spells for Cleric/Ranger" (not available for PST:EE)
 
 Setting this option limits druidic spell levels to level 3 for Cleric/Rangers (as per D&D rules).
 
@@ -131,7 +132,7 @@ Setting this option shows game date and time when activating pause.
 Option can be found in Gameplay > Feedback > Feedback Messages.
 
 
-13. Add in-game option "Disable Area Map Zoom" (only available in PST:EE)
+13. Add in-game option "Disable Area Map Zoom" (only available for PST:EE)
 
 Setting this option disables animation when zooming in or out of the area map screen.
 
@@ -152,7 +153,7 @@ Setting this option causes the game to pause whenever the map screen is active.
 Option can be found in Graphics > Display Options.
 
 
-16. Add in-game option "Enable Fog" (not available in PST:EE)
+16. Add in-game option "Enable Fog" (not available for PST:EE)
 
 Setting this option enables fog effects on maps.
 
@@ -166,7 +167,7 @@ Enabling this option disables movie playback.
 Option can be found in Graphics > Display Options.
 
 
-18. Add in-game option "No Cosmetic Attacks" (only available in PST:EE)
+18. Add in-game option "No Cosmetic Attacks" (only available for PST:EE)
 
 Enabling this option shows attack animations only when characters are making real attacks. 
 This option is already available in unmodded BG:EE, BG2:EE and IWD:EE.
@@ -174,11 +175,25 @@ This option is already available in unmodded BG:EE, BG2:EE and IWD:EE.
 Option can be found in Gameplay section.
 
 
-19. Add in-game option "XP Bonus in Nightmare Mode" (not available in PST:EE)
+19. Add in-game option "XP Bonus in Nightmare Mode" (not available for PST:EE)
 
 Enabling this option allows your characters to get bonus XP in Legacy of Bhaal Mode (BGEE/BG2EE) 
 or Heart of Fury Mode (IWDEE). This setting will not affect the extra XP granted by the regular 
 difficulty modes.
+
+Option can be found in Gameplay section.
+
+
+20. Add in-game option "Frame Rate" (experimental) (not available for PST:EE, not compatible with 
+    Lefreut's Enhanced UI (LeUI))
+
+This component installs a slider control that can be used to set the desired frame rate of the game. 
+You can choose between 30, 40 and 50 frames per second. The game's default is 30 fps.
+
+The component is marked as "experimental", as there are situations where setting this option has 
+no effect:
+1. When Options Gameplay > Feedback > "More Confirmation Prompts" is active.
+2. When setting frame rate in a running game and quitting directly to the desktop afterwards.
 
 Option can be found in Gameplay section.
 
@@ -207,8 +222,10 @@ ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa
 History
 ~~~~~~~
 
-1.4
+2.0
+- Added option "Set Frame Rate"
 - Added option "No Cosmetic Attacks" to PSTEE
+- Made compatible with IWD:EE v2.5 or higher
 
 1.3
 - Added Polish translation (thanks Cahir)

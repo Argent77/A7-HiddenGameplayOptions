@@ -18,7 +18,8 @@ weniger erfahrene Spieler davon abschrecken, sie zu nutzen.
 Diese Mod fügt eine Anzahl nützlicher Optionen zum Spiel hinzu, wie z.B. die Debugkonsole und 
 weitere Grafik- und Spieloptionen.
 
-Alle Enhanced Editions ab Spielversion 2.0 werden unterstützt.
+Alle Enhanced Editions ab Spielversion 2.0 werden unterstützt. Das umfasst derzeit BG:EE (mit oder 
+ohne SoD), BG2:EE, IWD:EE, PST:EE und EET.
 
 
 Installation
@@ -33,8 +34,8 @@ Kompatibilität
 ~~~~~~~~~~~~~~
 
 Die Mod unterstützt alle Enhanced Editions ab Spielversion 2.0. Sie ist außerdem mit Peccas 
-"Dragonspear UI++" and Lefreuts Enhanced UI (LeUI) kompatibel. Einige Optionen werden ggf. in 
-andere Bereiche verschoben, wenn diese Mods erkannt wurden.
+"Dragonspear UI++" und bis auf eine Komponente mit Lefreuts Enhanced UI (LeUI) kompatibel. 
+Einige Optionen werden ggf. in andere Bereiche verschoben, wenn diese Mods erkannt wurden.
 
 Die Mod kann nicht zusammen mit der EEUITweaks-Komponente "Hidden Game Options" installiert werden.
 
@@ -198,6 +199,22 @@ die zusätzlichen EP, die in den normalen Schwierigkeitsgraden gewährt werden.
 Die Option kann in den Spieleinstellungen gefunden werden.
 
 
+20. Spieloption "Bildrate" (experimentell) hinzufügen (nicht in PST:EE verfügbar, nicht mit 
+    Lefreuts Enhanced UI (LeUI) kompatibel)
+
+Diese Komponente installiert einen Schieberegler, mit dem man die Bildrate, mit der das Spiel 
+ausgeführt wird, erhöhen oder vermindern kann. Man kann zwischen 30 bis 50 Bildern pro Sekunde 
+wählen. Die Voreinstellung des Spiels ist 30 Bilder pro Sekunde.
+
+Diese Komponente wird als "experimentell" gekennzeichnet, da vorgenommene Einstellungen in 
+bestimmten Situationen vom Spiel ignoriert werden:
+1. Wenn Optionen > Spieleinstellungen > Rückmeldungen > "Zusätzliche Bestätigungsfenster" aktiv ist.
+2. Wenn die Bildrate während eines laufenden Spiels gesetzt wird, und dann das Spiel direkt 
+   verlassen wird, ohne vorher in das Hauptmenü zu springen.
+
+Die Option kann in den Spieleinstellungen gefunden werden.
+
+
 Credits
 ~~~~~~~
 
@@ -222,8 +239,10 @@ ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa
 History
 ~~~~~~~
 
-1.4
+2.0
+- Added option "Set Frame Rate"
 - Added option "No Cosmetic Attacks" to PSTEE
+- Made compatible with IWD:EE v2.5 or higher
 
 1.3
 - Added Polish translation (thanks Cahir)

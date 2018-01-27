@@ -212,8 +212,10 @@ ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa
 History
 ~~~~~~~
 
-1.4
+2.0
+- Added option "Set Frame Rate"
 - Added option "No Cosmetic Attacks" to PSTEE
+- Made compatible with IWD:EE v2.5 or higher
 
 1.3
 - Added Polish translation (thanks Cahir)

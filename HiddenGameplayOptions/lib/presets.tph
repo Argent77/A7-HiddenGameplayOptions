@@ -1,6 +1,7 @@
 // *** Predefined functions for adding specific options to the game ***
 
 INCLUDE ~%MOD_FOLDER%/lib/ui_checkbox.tph~
+INCLUDE ~%MOD_FOLDER%/lib/ui_slider.tph~
 
 /**
  * Available options sections (defined by "arrayName" parameter):
@@ -456,3 +457,33 @@ BEGIN
     success
   END
 END
+
+/** Adds in-game "Frame rate" option as a slider */
+DEFINE_ACTION_FUNCTION OPTION_FRAME_RATE_SLIDER
+BEGIN
+  LAF INSTALL_SLIDER_FRAME_RATE
+  INT_VAR
+    optLabelTra   = 2800  // Frame Rate
+    optDescTra    = 2801  // Frame rate description...
+    optInfo_0     = 2802  // 30 fps
+    optInfo_1     = 2803  // 40 fps
+    optInfo_2     = 2804  // 50 fps
+    controlID     = 5
+    numSettings   = 3
+    minSetting    = 30
+    stepSize      = 10
+    autoFail      = 1
+  STR_VAR
+    optLabelName  = "A7_FRAMERATE_LABEL"
+    optDescName   = "A7_FRAMERATE_DESCRIPTION"
+    optInfoName_0 = "A7_FRAMERATE_FPS_30"
+    optInfoName_1 = "A7_FRAMERATE_FPS_40"
+    optInfoName_2 = "A7_FRAMERATE_FPS_50"
+    condition     = "not e:IsTouchUI()"
+    iniSection    = "Program Options"
+    iniName       = "Maximum Frame Rate"
+  RET
+    success
+  END
+END
+
