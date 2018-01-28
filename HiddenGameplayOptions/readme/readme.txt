@@ -190,8 +190,10 @@ Option can be found in Gameplay section.
 This component installs a slider control that can be used to set the desired frame rate of the game. 
 You can choose between 30, 40 and 50 frames per second. The game's default is 30 fps.
 
-The component is marked as "experimental", as the setting is discarded if you change the frame 
-rate in a running game and quit directly to the desktop afterwards.
+The component is marked as "experimental", as there are situations where setting this option has 
+no effect:
+1. When Options Gameplay > Feedback > "More Confirmation Prompts" is active.
+2. When setting frame rate in a running game and quitting directly to the desktop afterwards.
 
 Option can be found in Gameplay section.
 

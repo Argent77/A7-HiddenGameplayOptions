@@ -285,28 +285,6 @@ end
             SET codeLen = STRING_LENGTH ~%code%~
             INSERT_BYTES ofs codeLen
             WRITE_ASCIIE ofs ~%code%~
-
-            // extra: add another work-around to preserve as many options as possible
-            SET ofsEnd = INDEX_BUFFER(~^[ %TAB%]*"~ ofs)
-            PATCH_IF (ofsEnd > ofs) BEGIN
-              SET ofs1 = INDEX_BUFFER(~^[ %TAB%]*Infinity_ShutdownGame()~ ofs)
-              PATCH_IF (ofs1 > ofs && ofs1 < ofsEnd) BEGIN
-                SET ofs2 = INDEX_BUFFER(~[%WNL%]~ ofs1)
-                PATCH_IF (ofs2 > ofs1 && ofs2 < ofsEnd) BEGIN
-                  DELETE_BYTES ofs1 (ofs2 - ofs1)
-                  // Infinity_ShutdownGame() is replaced by startEngine:OnQuitButtonClick().
-                  // To prevent the new function call from entering a recursive loop, we have to temporarily disable 
-                  // the option "More Confirmation Prompts".
-                  TEXT_SPRINT code ~%TAB%%TAB%%TAB%a7_tmp = Infinity_GetOption(41, 9)%WNL%%TAB%%TAB%%TAB%Infinity_ChangeOption(41, 0, 9)%WNL%~
-                  TEXT_SPRINT code ~%code%%TAB%%TAB%%TAB%startEngine:OnQuitButtonClick()%WNL%~
-                  TEXT_SPRINT code ~%code%%TAB%%TAB%%TAB%Infinity_ChangeOption(41, a7_tmp, 9)~
-                  SET codeLen = STRING_LENGTH ~%code%~
-                  INSERT_BYTES ofs1 codeLen
-                  WRITE_ASCIIE ofs1 ~%code%~
-                  SET ofs2 = ofs1 + codeLen
-                END
-              END
-            END
           END ELSE BEGIN
             SET success = 0
           END
