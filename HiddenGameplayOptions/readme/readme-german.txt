@@ -226,6 +226,16 @@ der Debugmodus aktiviert wurde.
 Die Option kann in Spieleinstellungen > Rückmeldungen gefunden werden.
 
 
+22. Spieloption "Symbol für Stufenaufstieg aktivieren" hinzufügen (nur in PST:EE verfügbar, 
+    benötigt "Level Up" Icon Tweaks)
+
+Diese Option kann genutzt werden, um ein Symbol im Portraitfenster oder Energiebalken anzuzeigen, 
+wenn ein Gruppenmitglied eine Stufe aufsteigen kann. Die Mod "'Level Up' Icon Tweaks" muss 
+installiert sein, um die Anzeige des Symbols für Stufenaufstiege ein- oder ausschalten zu können.
+
+Die Option kann in Spielmechanik > Rückmeldungen gefunden werden.
+
+
 Credits
 ~~~~~~~
 
@@ -254,6 +264,7 @@ History
 - Added option "Set Frame Rate"
 - Added option "Action Feedback"
 - Added option "No Cosmetic Attacks" to PSTEE
+- Added option "Enable Level Up Icon" to PSTEE
 - Made compatible with IWD:EE v2.5 or higher
 
 1.3

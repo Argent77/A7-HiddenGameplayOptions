@@ -87,6 +87,9 @@ BEGIN @2  // All available options
 
   ACTION_IF (NOT MOD_IS_INSTALLED ~LeUI.tp2~ 0) BEGIN LAF OPTION_ACTION_FEEDBACK_SLIDER END END
 
+  ACTION_IF (GAME_IS ~pstee~ &&
+             MOD_IS_INSTALLED ~setup-A7-LevelUpTweaks.tp2~ 0) BEGIN LAF OPTION_ENABLE_LEVEL_UP END END
+
 
 BEGIN @3  // Selected options
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @100  // Enhanced Edition game patched to v2.0 or higher required.
@@ -234,9 +237,17 @@ BEGIN @28 // Add in-game option "Frame Rate" (experimental)
 
   LAF OPTION_FRAME_RATE_SLIDER END
 
-BEGIN @29 // Add in-game option "Action Feedback" (experimental)
+BEGIN @29 // Add in-game option "Action Feedback"
   REQUIRE_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 1 @103 // Component "Selected options" not selected.
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~LeUI.tp2~ 0) @107 // This component is not compatible with Lefreut's Enhanced UI.
   DESIGNATED 29
 
   LAF OPTION_ACTION_FEEDBACK_SLIDER END
+
+BEGIN @30 // Add in-game option "Enable Level Up Icon"
+  REQUIRE_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 1 @103 // Component "Selected options" not selected.
+  REQUIRE_PREDICATE (GAME_IS ~pstee~) @104 // Option not available for this game.
+  REQUIRE_COMPONENT ~setup-A7-LevelUpTweaks.tp2~ 0 @108 // Requires "Level Up" Icon Tweaks.
+  DESIGNATED 30
+
+  LAF OPTION_ENABLE_LEVEL_UP END

@@ -24,6 +24,7 @@
 @27 = ~Spieloption "EP-Bonus im Albtraum-Modus" hinzufuegen~
 @28 = ~Spieloption "Bildrate" hinzufuegen (experimentell)~
 @29 = ~Spieloption "Aktionssymbole" hinzufuegen~
+@30 = ~Spieloption "Symbol fuer Stufenaufstieg anzeigen" hinzufuegen~
 
 @100 = ~Enhanced Edition muss v2.0 oder hoeher sein.~
 @101 = ~LUA-Datei kann nicht bearbeitet werden~
@@ -33,3 +34,4 @@
 @105 = ~Diese Option ist bereits im Spiel verfuegbar.~
 @106 = ~Diese Mod kann nicht zusammen mit der EEUITweaks-Komponente "Hidden Game Options" installiert werden.~
 @107 = ~Diese Komponente ist nicht mit Lefreuts Enhanced UI (LeUI) kompatibel.~
+@108 = ~Benoetigt die Mod "Level Up" Icon Tweaks.~

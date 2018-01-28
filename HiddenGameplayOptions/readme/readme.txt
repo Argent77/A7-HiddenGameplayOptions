@@ -208,6 +208,16 @@ You can choose between several feedback levels. Some levels may require that the
 Option can be found in Gameplay > Feedback.
 
 
+22. Add in-game option "Enable Level Up Icon" (only available for PST:EE, requires "Level Up" Icon 
+    Tweaks)
+
+This option allows you to display or hide the "Level Up" icon, that can be found in the portrait 
+window or health bar of party members that are ready to level up. It requires the mod "'Level Up' 
+Icon Tweaks" to be installed, which adds the functionality to toggle visibility of the icon.
+
+Option can be found in Gameplay > Feedback.
+
+
 Credits
 ~~~~~~~
 
@@ -236,6 +246,7 @@ History
 - Added option "Set Frame Rate"
 - Added option "Action Feedback"
 - Added option "No Cosmetic Attacks" to PSTEE
+- Added option "Enable Level Up Icon" to PSTEE
 - Made compatible with IWD:EE v2.5 or higher
 
 1.3

@@ -24,6 +24,7 @@
 @27 = ~Add in-game option "XP Bonus in Nightmare Mode"~
 @28 = ~Add in-game option "Frame Rate" (experimental)~
 @29 = ~Add in-game option "Action Feedback"~
+@30 = ~Add in-game option "Display Level Up Icon"~
 
 @100 = ~Enhanced Edition game patched to v2.0 or higher required.~
 @101 = ~Cannot patch LUA file~
@@ -33,3 +34,4 @@
 @105 = ~Option already present in this game.~
 @106 = ~This mod is not compatible with EEUITweaks component "Hidden Game Options".~
 @107 = ~This component is not compatible with Lefreut's Enhanced UI (LeUI).~
+@108 = ~Requires "Level Up" Icon Tweaks to be installed.~

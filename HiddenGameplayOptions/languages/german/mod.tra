@@ -130,6 +130,11 @@ WARNUNG: Die Bildrate über einen Wert von 30 einzustellen, kann in Zwischensequ
 @2905 = ~Hoch*~
 @2906 = ~Maximum*~
 
+@3000 = ~Symbol für Stufenaufstieg anzeigen~
+@3001 = ~Hiermit wird gesteuert, ob ein Symbol im Portraitfenster oder Energiebalken angezeigt wird, wenn ein Gruppenmitglied eine Stufe aufsteigen kann.
+
+^NHinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.^-~
+
 
 // *** Misc. strings ***
 

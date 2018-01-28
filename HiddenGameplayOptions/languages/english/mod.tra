@@ -130,6 +130,11 @@ WARNING: Adjusting the frame rate above 30 may result in audio sync issues durin
 @2905 = ~High*~
 @2906 = ~Maximum*~
 
+@3000 = ~Display Level Up Icon~
+@3001 = ~This controls whether or not a "Level Up" icon is displayed in the portrait window or health bar of party members that are ready to level up.
+
+^NNote: You must restart the game for changes to take effect.^-~
+
 
 // *** Misc. strings ***
 

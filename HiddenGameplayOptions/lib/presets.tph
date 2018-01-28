@@ -459,6 +459,28 @@ BEGIN
   END
 END
 
+/** Add in-game option "Display Level Up Icon" */
+DEFINE_ACTION_FUNCTION OPTION_ENABLE_LEVEL_UP
+BEGIN
+  OUTER_TEXT_SPRINT arrayName "messagesToggles"
+
+  LAF INSTALL_CHECK_OPTION
+  INT_VAR
+    optLabelTra   = 3000
+    optDescTra    = 3001
+    controlID     = "-184"
+    autoFail      = 1
+  STR_VAR
+    arrayName     = EVAL "%arrayName%"
+    optLabelName  = "A7_ENABLE_LEVEL_UP_LABEL"
+    optDescName   = "A7_ENABLE_LEVEL_UP_DESCRIPTION"
+    iniSection    = "Game Options"
+    iniName       = "Show Level Up Icon"
+  RET
+    success
+  END
+END
+
 /** Adds in-game "Frame rate" option as a slider */
 DEFINE_ACTION_FUNCTION OPTION_FRAME_RATE_SLIDER
 BEGIN
