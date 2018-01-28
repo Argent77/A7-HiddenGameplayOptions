@@ -1,7 +1,8 @@
 // *** Predefined functions for adding specific options to the game ***
 
 INCLUDE ~%MOD_FOLDER%/lib/ui_checkbox.tph~
-INCLUDE ~%MOD_FOLDER%/lib/ui_slider.tph~
+INCLUDE ~%MOD_FOLDER%/lib/ui_slider_framerate.tph~
+INCLUDE ~%MOD_FOLDER%/lib/ui_slider_feedback_actions.tph~
 
 /**
  * Available options sections (defined by "arrayName" parameter):
@@ -487,3 +488,32 @@ BEGIN
   END
 END
 
+/** Adds in-game "Action Feedback" option as a slider */
+DEFINE_ACTION_FUNCTION OPTION_ACTION_FEEDBACK_SLIDER
+BEGIN
+  LAF INSTALL_SLIDER_ACTION_FEEDBACK
+  INT_VAR
+    optLabelTra   = 2900  // Action Feedback
+    optDescTra    = 2901  // Action Feedback description...
+    optInfo_0     = 2902  // Disabled
+    optInfo_1     = 2903  // Low
+    optInfo_2     = 2904  // Medium
+    optInfo_3     = 2905  // High
+    optInfo_4     = 2906  // Maximum
+    controlID     = 3
+    numSettings   = 5
+    autoFail      = 1
+  STR_VAR
+    optLabelName  = "A7_ACTION_FEEDBACK_LABEL"
+    optDescName   = "A7_ACTION_FEEDBACK_DESCRIPTION"
+    optInfoName_0 = "A7_ACTION_FEEDBACK_DISABLED"
+    optInfoName_1 = "A7_ACTION_FEEDBACK_LOW"
+    optInfoName_2 = "A7_ACTION_FEEDBACK_MEDIUM"
+    optInfoName_3 = "A7_ACTION_FEEDBACK_HIGH"
+    optInfoName_4 = "A7_ACTION_FEEDBACK_MAXIMUM"
+    iniSection    = "Game Options"
+    iniName       = "Render Actions"
+  RET
+    success
+  END
+END

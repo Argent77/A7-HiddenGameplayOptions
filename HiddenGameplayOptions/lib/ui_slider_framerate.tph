@@ -1,4 +1,4 @@
-// *** UI functions for adding slider controls to option screens ***
+// *** UI functions for adding frame rate slider control ***
 
 INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
 
@@ -17,23 +17,23 @@ INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
  */
 OUTER_TEXT_SPRINT codeFrameRateSlider ~%TAB%text
 %TAB%{
-%TAB%%TAB%area  %ctl_label_x% %ctl_label_y% %ctl_label_w% %ctl_label_h%
-%TAB%%TAB%text  "%ctl_label%"
+%TAB%%TAB%area %ctl_label_x% %ctl_label_y% %ctl_label_w% %ctl_label_h%
+%TAB%%TAB%text "%ctl_label%"
 %TAB%%TAB%text style "label"
 %TAB%%TAB%text align right center
 %TAB%%TAB%text upper
 %TAB%%TAB%text highlight lua "getSelected(selectedSL, %ctl_id%)"
 %TAB%%TAB%enabled "%ctl_condition%"
-%TAB%%TAB%action 
+%TAB%%TAB%action
 %TAB%%TAB%"
-%TAB%%TAB%%TAB%helpString = '%ctl_description%' 
+%TAB%%TAB%%TAB%helpString = '%ctl_description%'
 %TAB%%TAB%%TAB%selectedOpt = 0
 %TAB%%TAB%%TAB%selectedSL = %ctl_id%
-%TAB%%TAB%" 
+%TAB%%TAB%"
 %TAB%}
 %TAB%slider
 %TAB%{
-%TAB%%TAB%area  %ctl_slider_x% %ctl_slider_y% %ctl_slider_w% %ctl_slider_h%
+%TAB%%TAB%area %ctl_slider_x% %ctl_slider_y% %ctl_slider_w% %ctl_slider_h%
 %TAB%%TAB%position "framerateSLDR"
 %TAB%%TAB%bam 'SLDRSTAR'
 %TAB%%TAB%mosaic GUISLDR
@@ -42,16 +42,16 @@ OUTER_TEXT_SPRINT codeFrameRateSlider ~%TAB%text
 %TAB%%TAB%settings %ctl_num_settings%
 %TAB%%TAB%pad %ctl_pad_x% %ctl_pad_y% %ctl_pad_w% %ctl_pad_h%
 %TAB%%TAB%enabled "%ctl_condition%"
-%TAB%%TAB%action 
+%TAB%%TAB%action
 %TAB%%TAB%"
-%TAB%%TAB%%TAB%helpString = '%ctl_description%' 
+%TAB%%TAB%%TAB%helpString = '%ctl_description%'
 %TAB%%TAB%%TAB%selectedOpt = 0
 %TAB%%TAB%%TAB%selectedSL = %ctl_id%
-%TAB%%TAB%" 
+%TAB%%TAB%"
 %TAB%}
 %TAB%label
 %TAB%{
-%TAB%%TAB%area  %ctl_info_x% %ctl_info_y% %ctl_info_w% %ctl_info_h%
+%TAB%%TAB%area %ctl_info_x% %ctl_info_y% %ctl_info_w% %ctl_info_h%
 %TAB%%TAB%text lua "getFrameRate(framerateSLDR)"
 %TAB%%TAB%text style "label"
 %TAB%%TAB%text align center center
@@ -66,16 +66,10 @@ OUTER_TEXT_SPRINT codeFrameRateSlider ~%TAB%text
  * INT_VAR optDescTra     The TRA reference number of the option description text.
  * INT_VAR optInfo_0, ... Zero, one or more additional TRA reference numbers for lua text entries.
  * INT_VAR controlID      A unique number that identifies this option.
- *                        Recommended: Use negative number to minimize interference with existing IDs.
  * INT_VAR numSettings    Number of available slider settings.
  * INT_VAR minSetting     Value representing slider position 0.
  * INT_VAR stepSize       Valud differences between slider positions.
  * INT_VAR autoFail       Set to nonzero to force termination of component installation on error.
- * STR_VAR arrayName      Name of the LUA array containing option definitions.
- *                          toggleTitles:     used by Gameplay options
- *                          feedbackToggles:  used by Gameplay > Feedback > Visual Feedback
- *                          messagesToggles:  used by Gameplay > Feedback > Feedback Messages
- *                          graphicsToggles:  used by Graphics > Display Options
  * STR_VAR optLabelName   Name of the option label variable.
  * STR_VAR optDescName    Name of the option description variable.
  * STR_VAR optInfoName_0  Zero, one or more additional strings used by the control. Number of entries 
@@ -202,7 +196,7 @@ BEGIN
 
     ACTION_IF (NOT failed AND GAME_IS ~bgee~ AND NOT GAME_INCLUDES ~sod~) BEGIN
       // Installing updated MOS background
-      COPY ~%MOD_FOLDER%/mos/GUICHISD.MOS~ ~override~
+      COPY ~%MOD_FOLDER%/mos/A7_UIGP.MOS~ ~override~
         LPF UPDATE_PVRZ_INDICES RET original_base_index new_base_index END
 
       ACTION_IF (original_base_index >= 0 AND new_base_index >= 0) BEGIN
@@ -232,7 +226,7 @@ END
  * STR_VAR optInfoName_0, ... Zero, one or more variable names referring to descriptive strings used for individual slider positions.
  * STR_VAR condition          The condition when the slider control should be visible.
  * STR_VAR iniSection         Section name of option that will be added to baldur.lua (e.g. "Program Options").
- * STR_VAR iniName            Option name that will be added to baldur.lua (e.g. "Maximum Frame Rate").
+ * STR_VAR iniName            Option name that will be added to baldur.lua (e.g. "Debug Mode").
  * RET success                Returns 1 if changes have been applied successfully, 0 otherwise.
  */
 DEFINE_PATCH_FUNCTION ADD_SLIDER_FRAME_RATE
@@ -274,7 +268,6 @@ BEGIN
         success
       END
       PATCH_IF (success) BEGIN
-        // TODO: consider (or exclude) UI mods
         PATCH_IF (GAME_IS ~bgee~) BEGIN
           PATCH_IF (GAME_INCLUDES ~sod~) BEGIN
             // BGEE+SoD
@@ -394,6 +387,25 @@ BEGIN
   PATCH_IF (ofsStart > 0) BEGIN
     SET ofsEnd = INDEX_BUFFER(~^[ %TAB%]*menu[ %TAB%%WNL%]*{~ ofsStart)
     PATCH_IF (ofsEnd > ofsStart) BEGIN
+      // adjusting screen background
+      SET ofs1 = INDEX_BUFFER(~area[ %TAB%]+0[ %TAB%]+~ ofsStart)
+      PATCH_IF (ofs1 > ofsStart && ofs1 < ofsEnd) BEGIN
+        SET ofs1 = INDEX_BUFFER(~mosaic[ %TAB%]+.+~ ofs1)
+        PATCH_IF (ofs1 > ofsStart && ofs1 < ofsEnd) BEGIN
+          SET ofs2 = INDEX_BUFFER(~[%WNL%]~ ofs1)
+          PATCH_IF (ofs2 > ofs1) BEGIN
+            READ_ASCII ofs1 line (ofs2 - ofs1)
+            DELETE_BYTES ofs1 (ofs2 - ofs1)
+            SET ofsEnd -= ofs2 - ofs1
+            TEXT_SPRINT line ~mosaic "A7_UIGP"~
+            SET strlen = STRING_LENGTH ~%line%~
+            INSERT_BYTES ofs1 strlen
+            WRITE_ASCIIE ofs1 ~%line%~
+            SET ofsEnd += strlen
+          END
+        END
+      END
+
       // adjusting info box dimension
       SET ofs1 = INDEX_BUFFER(~^[ %TAB%]*area[ %TAB%]+446[ %TAB%]+422[ %TAB%]+372[ %TAB%]+184~ ofsStart)
       PATCH_IF (ofs1 > ofsStart && ofs1 < ofsEnd) BEGIN
@@ -624,104 +636,5 @@ BEGIN
     END
   END ELSE BEGIN
     SET success = 0
-  END
-END
-
-
-// Internal function: Adjust vertical position of specific controls
-DEFINE_PATCH_FUNCTION __A7_UPDATE_SLIDER_POSITIONS
-INT_VAR
-  ofsStart  = 0   // start offset of gameplay menu structure
-  gap       = 50  // default gap between slider controls
-STR_VAR
-  // keyword_0 = ~~
-  // keyword_1 = ~~
-  // ...
-RET
-  success
-BEGIN
-  SET success = 1
-
-  // 1. initializing array of offsets
-  SET offsets = 0
-  SET idx = 0
-  WHILE (success && idx != "-1") BEGIN
-    PATCH_IF (VARIABLE_IS_SET EVAL ~keyword_%idx%~) BEGIN
-      TEXT_SPRINT keyword EVAL ~%keyword_%idx%%~
-      SET ofs1 = INDEX_BUFFER(~%keyword%~ ofsStart)
-      PATCH_IF (ofs1 > ofsStart) BEGIN
-        SET ofs1 = RINDEX_BUFFER(~^[ %TAB%]*area[ %TAB%]+[0-9]+[ %TAB%]+[0-9]+[ %TAB%]+[0-9]+[ %TAB%]+[0-9]+~ ofs1)
-        PATCH_IF (ofs1 > 0) BEGIN
-          SET EVAL ~offsets_%offsets%~ = ofs1
-          SET offsets += 1
-        END ELSE BEGIN
-          SET success = 0
-        END
-      END ELSE BEGIN
-        SET success = 0
-      END
-      SET idx += 1
-    END ELSE BEGIN
-      SET idx = "-1"
-    END
-  END
-
-  // 2. Update vertical positions
-  PATCH_IF (success) BEGIN
-    // making sure offsets are in correct order
-    SET sort_size = offsets
-    TEXT_SPRINT sort_array_name ~offsets~
-    LPM SORT_NUMERIC_ARRAY
-
-    SET offsets -= 1  // last offset is only used for bounds check
-    SET curY = 0    // keep track of current Y position
-    FOR (idx = 0; idx < offsets && success; ++idx) BEGIN
-      SET curY2 = 0   // keeps track of initial Y position
-      SET ofs1 = EVAL ~offsets_%idx%~
-      SET idx2 = idx + 1
-      SET ofs2 = EVAL ~offsets_%idx2%~
-      WHILE (ofs1 < ofs2) BEGIN
-        SET ofs1 = INDEX_BUFFER(~area[ %TAB%]+[0-9]+[ %TAB%]+[0-9]+[ %TAB%]+[0-9]+[ %TAB%]+[0-9]+~ ofs1)
-        PATCH_IF (ofs1 > 0 && ofs1 < ofs2) BEGIN
-          SET ofs = INDEX_BUFFER(~[%WNL%]~ ofs1)
-          PATCH_IF (ofs > ofs1) BEGIN
-            READ_ASCII ofs1 line (ofs - ofs1)
-            SET deleted = ofs - ofs1
-            DELETE_BYTES ofs1 deleted
-            INNER_PATCH_SAVE line ~%line%~ BEGIN
-              REPLACE_EVALUATE
-              ~area[ %TAB%]+\([0-9]+\)[ %TAB%]+\([0-9]+\)[ %TAB%]+\([0-9]+\)[ %TAB%]+\([0-9]+\)~
-              BEGIN
-                PATCH_IF (idx = 0) BEGIN  // first slider is used for reference
-                  SET curY = MATCH2
-                END ELSE BEGIN
-                  PATCH_IF (curY2 = 0) BEGIN SET curY2 = MATCH2 END
-                  SET MATCH2 = (curY2 != MATCH2) ? (curY + MATCH2 - curY2) : curY
-                END
-              END
-              ~area %MATCH1% %MATCH2% %MATCH3% %MATCH4%~
-            END
-            SET strlen = STRING_LENGTH ~%line%~
-            INSERT_BYTES ofs1 strlen
-            WRITE_ASCIIE ofs1 ~%line%~ (strlen)
-
-            // forward offsets might have changed
-            SET diff = strlen - deleted
-            PATCH_IF (diff != 0) BEGIN
-              FOR (idx3 = idx2; idx3 <= offsets; ++idx3) BEGIN  // include upper bounds offset
-                SET EVAL ~offsets_%idx3%~ += diff
-              END
-              SET ofs2 = EVAL ~offsets_%idx2%~
-            END
-          END ELSE BEGIN
-            SET success = 0
-          END
-        END ELSE PATCH_IF (ofs1 < 0) BEGIN
-          SET success = 0
-        END
-        SET ofs1 += 1 // prevent endless loops
-      END
-      SET curY += gap
-    END
   END
 END

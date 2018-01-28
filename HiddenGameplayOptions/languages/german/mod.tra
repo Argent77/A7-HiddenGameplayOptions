@@ -113,6 +113,23 @@ WARNUNG: Die Bildrate über einen Wert von 30 einzustellen, kann in Zwischensequ
 @2803 = ~40 Bilder/Sek.~
 @2804 = ~50 Bilder/Sek.~
 
+@2900 = ~Aktionssymbole~
+@2901 = ~Mit diesem Schieberegler wird eingestellt, ob oder wann neben den Charakteranimationen kleine Aktionssymbole angezeigt werden.
+  DEAKTIVIERT: Nie.
+  NIEDRIG: Nur für Verbündete im Pausenmodus.
+  MITTEL: Nur für Verbündete.
+  HOCH*: Für alle Kreaturen im Pausenmodus.
+  MAXIMUM*: Für alle Kreaturen.
+
+(*) Nur wirksam, wenn Debugmodus aktiviert ist.
+
+^NHinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.^-~
+@2902 = ~Deaktiviert~
+@2903 = ~Niedrig~
+@2904 = ~Mittel~
+@2905 = ~Hoch*~
+@2906 = ~Maximum*~
+
 
 // *** Misc. strings ***
 

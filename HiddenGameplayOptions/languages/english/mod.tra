@@ -113,6 +113,23 @@ WARNING: Adjusting the frame rate above 30 may result in audio sync issues durin
 @2803 = ~40 frames/sec.~
 @2804 = ~50 frames/sec.~
 
+@2900 = ~Action Feedback~
+@2901 = ~This slider controls if or when actions are displayed as small icons around a character's sprite.
+  DISABLED: Never.
+  LOW: Only for allies when paused.
+  MEDIUM: Only for allies.
+  HIGH*: For all creatures when paused.
+  MAXIMUM*: For all creatures.
+
+(*) Only effective when Debug Mode is enabled.
+
+^NNote: You must restart the game for changes to take effect.^-~
+@2902 = ~Disabled~
+@2903 = ~Low~
+@2904 = ~Medium~
+@2905 = ~High*~
+@2906 = ~Maximum*~
+
 
 // *** Misc. strings ***
 

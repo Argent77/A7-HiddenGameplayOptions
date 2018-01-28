@@ -34,7 +34,7 @@ Kompatibilität
 ~~~~~~~~~~~~~~
 
 Die Mod unterstützt alle Enhanced Editions ab Spielversion 2.0. Sie ist außerdem mit Peccas 
-"Dragonspear UI++" und bis auf eine Komponente mit Lefreuts Enhanced UI (LeUI) kompatibel. 
+"Dragonspear UI++" und größtenteils mit Lefreuts Enhanced UI (LeUI) kompatibel. 
 Einige Optionen werden ggf. in andere Bereiche verschoben, wenn diese Mods erkannt wurden.
 
 Die Mod kann nicht zusammen mit der EEUITweaks-Komponente "Hidden Game Options" installiert werden.
@@ -215,6 +215,17 @@ bestimmten Situationen vom Spiel ignoriert werden:
 Die Option kann in den Spieleinstellungen gefunden werden.
 
 
+21. Spieloption "Aktionssymbole" hinzufügen (nicht mit Lefreuts Enhanced UI (LeUI) kompatibel)
+
+Diese Komponente installiert einen Schieberegler, mit dem man kleine Aktionssymbole neben den 
+Charakteranimationen anzeigen kann. Diese Symbole kennzeichnen die gerade ausgeführte Aktion der 
+Charaktere, wie z.B. Kampf- oder Zauberaktionen.
+Es kann zwischen verschiedenen Anzeigevarianten gewählt werden. Einige Varianten erfordern, dass 
+der Debugmodus aktiviert wurde.
+
+Die Option kann in Spieleinstellungen > Rückmeldungen gefunden werden.
+
+
 Credits
 ~~~~~~~
 
@@ -241,6 +252,7 @@ History
 
 2.0
 - Added option "Set Frame Rate"
+- Added option "Action Feedback"
 - Added option "No Cosmetic Attacks" to PSTEE
 - Made compatible with IWD:EE v2.5 or higher
 

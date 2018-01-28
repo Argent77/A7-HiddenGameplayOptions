@@ -23,6 +23,7 @@
 @26 = ~Add in-game option "No Cosmetic Attacks"~
 @27 = ~Add in-game option "XP Bonus in Nightmare Mode"~
 @28 = ~Add in-game option "Frame Rate" (experimental)~
+@29 = ~Add in-game option "Action Feedback"~
 
 @100 = ~Enhanced Edition game patched to v2.0 or higher required.~
 @101 = ~Cannot patch LUA file~

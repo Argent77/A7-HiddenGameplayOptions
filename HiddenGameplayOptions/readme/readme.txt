@@ -33,8 +33,8 @@ Compatibility
 ~~~~~~~~~~~~~
 
 The mod supports all Enhanced Edition games patched to v2.0 or higher. It is also compatible with 
-Pecca's "Dragonspear UI++" and Lefreut's Enhanced UI (LeUI), except for one component (see below).
-Some options may be moved into other sections when these mods have been detected.
+Pecca's "Dragonspear UI++" and largely compatible with Lefreut's Enhanced UI (LeUI). Some options 
+may be moved into other sections when these mods have been detected.
 
 The mod can not be installed together with EEUITweaks component "Hidden Game Options". You can 
 install either one, but not both at the same time.
@@ -198,6 +198,16 @@ no effect:
 Option can be found in Gameplay section.
 
 
+21. Add in-game option "Action Feedback" (not compatible with Lefreut's Enhanced UI (LeUI))
+
+This component installs a slider control that can be used to show small symbols around character 
+sprites that indicate their current action (e.g. fighting, spellcasting, thieving actions). 
+You can choose between several feedback levels. Some levels may require that the Gameplay option 
+"Debug Mode" is enabled.
+
+Option can be found in Gameplay > Feedback.
+
+
 Credits
 ~~~~~~~
 
@@ -224,6 +234,7 @@ History
 
 2.0
 - Added option "Set Frame Rate"
+- Added option "Action Feedback"
 - Added option "No Cosmetic Attacks" to PSTEE
 - Made compatible with IWD:EE v2.5 or higher
 
