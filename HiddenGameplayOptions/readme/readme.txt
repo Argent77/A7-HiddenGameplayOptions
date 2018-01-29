@@ -192,7 +192,7 @@ You can choose between 30, 40 and 50 frames per second. The game's default is 30
 
 The component is marked as "experimental", as there are situations where setting this option has 
 no effect:
-1. When Options Gameplay > Feedback > "More Confirmation Prompts" is active.
+1. When Options > Gameplay > Feedback > "More Confirmation Prompts" is active.
 2. When quitting the game directly to the desktop from a running game.
 
 Option can be found in Gameplay section.
@@ -201,7 +201,7 @@ Option can be found in Gameplay section.
 21. Add in-game option "Action Feedback" (not compatible with Lefreut's Enhanced UI (LeUI))
 
 This component installs a slider control that can be used to show small symbols around character 
-sprites that indicate their current action (e.g. fighting, spellcasting, thieving actions). 
+sprites that indicate their current action (e.g. fighting, spellcasting or thieving actions). 
 You can choose between several feedback levels. Some levels may require that the Gameplay option 
 "Debug Mode" is enabled.
 
@@ -211,7 +211,7 @@ Option can be found in Gameplay > Feedback.
 22. Add in-game option "Enable Level Up Icon" (only available for PST:EE, requires "Level Up" Icon 
     Tweaks)
 
-This option allows you to display or hide the "Level Up" icon, that can be found in the portrait 
+This option allows you to show or hide the "Level Up" icon, that can be found in the portrait 
 window or health bar of party members that are ready to level up. It requires the mod "'Level Up' 
 Icon Tweaks" to be installed, which adds the functionality to toggle visibility of the icon.
 
