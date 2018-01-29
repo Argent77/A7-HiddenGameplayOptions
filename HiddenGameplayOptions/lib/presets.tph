@@ -513,15 +513,16 @@ END
 /** Adds in-game "Action Feedback" option as a slider */
 DEFINE_ACTION_FUNCTION OPTION_ACTION_FEEDBACK_SLIDER
 BEGIN
+  OUTER_SET optDescTra = GAME_IS ~pstee~ ? 2902 : 2901
   LAF INSTALL_SLIDER_ACTION_FEEDBACK
   INT_VAR
     optLabelTra   = 2900  // Action Feedback
-    optDescTra    = 2901  // Action Feedback description...
-    optInfo_0     = 2902  // Disabled
-    optInfo_1     = 2903  // Low
-    optInfo_2     = 2904  // Medium
-    optInfo_3     = 2905  // High
-    optInfo_4     = 2906  // Maximum
+    optDescTra            // Action Feedback description...
+    optInfo_0     = 2903  // Disabled
+    optInfo_1     = 2904  // Low
+    optInfo_2     = 2905  // Medium
+    optInfo_3     = 2906  // High
+    optInfo_4     = 2907  // Maximum
     controlID     = 3
     numSettings   = 5
     autoFail      = 1

@@ -123,12 +123,22 @@ WARNUNG: Die Bildrate über einen Wert von 30 einzustellen, kann in Zwischensequ
 
 (*) Nur wirksam, wenn Debugmodus aktiviert ist.
 
+Hinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.~
+@2902 = ~Hiermit wird eingestellt, ob oder wann neben den Charakteranimationen kleine Aktionssymbole angezeigt werden:
+  Deaktiviert — Nie
+  Niedrig — Nur für Verbündete im Pausenmodus
+  Mittel — Nur für Verbündete
+  Hoch* — Für alle Kreaturen im Pausenmodus
+  Maximum* — Für alle Kreaturen
+
+(*) Nur wirksam, wenn Debugmodus aktiviert ist.
+
 ^NHinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.^-~
-@2902 = ~Deaktiviert~
-@2903 = ~Niedrig~
-@2904 = ~Mittel~
-@2905 = ~Hoch*~
-@2906 = ~Maximum*~
+@2903 = ~Deaktiviert~
+@2904 = ~Niedrig~
+@2905 = ~Mittel~
+@2906 = ~Hoch*~
+@2907 = ~Maximum*~
 
 @3000 = ~Symbol für Stufenaufstieg anzeigen~
 @3001 = ~Hiermit wird gesteuert, ob ein Symbol im Portraitfenster oder Energiebalken angezeigt wird, wenn ein Gruppenmitglied eine Stufe aufsteigen kann.

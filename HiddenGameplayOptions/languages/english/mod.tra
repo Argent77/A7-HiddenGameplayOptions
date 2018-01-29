@@ -123,12 +123,22 @@ WARNING: Adjusting the frame rate above 30 may result in audio sync issues durin
 
 (*) Only effective when Debug Mode is enabled.
 
+Note: You must restart the game for changes to take effect.~
+@2902 = ~This slider controls if or when actions are displayed as small icons around a character's sprite.
+  Disabled — never
+  Low — only for allies when paused
+  Medium — only for allies
+  High* — for all creatures when paused
+  Maximum* — for all creatures
+
+(*) Only effective when Debug Mode is enabled.
+
 ^NNote: You must restart the game for changes to take effect.^-~
-@2902 = ~Disabled~
-@2903 = ~Low~
-@2904 = ~Medium~
-@2905 = ~High*~
-@2906 = ~Maximum*~
+@2903 = ~Disabled~
+@2904 = ~Low~
+@2905 = ~Medium~
+@2906 = ~High*~
+@2907 = ~Maximum*~
 
 @3000 = ~Display Level Up Icon~
 @3001 = ~This controls whether or not a "Level Up" icon is displayed in the portrait window or health bar of party members that are ready to level up.
