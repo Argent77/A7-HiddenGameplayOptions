@@ -225,8 +225,8 @@ der Debugmodus aktiviert wurde.
 Die Option kann in Spieleinstellungen > Rückmeldungen gefunden werden.
 
 
-22. Spieloption "Symbol für Stufenaufstieg aktivieren" hinzufügen (nur in PST:EE verfügbar, 
-    benötigt "Level Up" Icon Tweaks)
+22. Spieloption "Symbol für Stufenaufstieg anzeigen" hinzufügen (nur in PST:EE verfügbar, benötigt 
+    "Level Up" Icon Tweaks)
 
 Diese Option kann genutzt werden, um ein Symbol im Portraitfenster oder Energiebalken anzuzeigen, 
 wenn ein Gruppenmitglied eine Stufe aufsteigen kann. Die Mod "'Level Up' Icon Tweaks" muss 

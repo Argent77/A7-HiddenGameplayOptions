@@ -208,8 +208,8 @@ You can choose between several feedback levels. Some levels may require that the
 Option can be found in Gameplay > Feedback.
 
 
-22. Add in-game option "Enable Level Up Icon" (only available for PST:EE, requires "Level Up" Icon 
-    Tweaks)
+22. Add in-game option "Display Level Up Icon" (only available for PST:EE, requires "Level Up" 
+    Icon Tweaks)
 
 This option allows you to show or hide the "Level Up" icon, that can be found in the portrait 
 window or health bar of party members that are ready to level up. It requires the mod "'Level Up' 
