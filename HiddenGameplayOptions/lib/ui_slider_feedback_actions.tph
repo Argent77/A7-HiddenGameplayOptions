@@ -473,7 +473,7 @@ BEGIN
       LPF __A7_UPDATE_SLIDER_POSITIONS
       INT_VAR
         ofsStart
-        gap       = 70
+        gap       = 75
       STR_VAR
         keyword_0 = ~MARKER_FEEDBACK_LABEL~
         keyword_1 = ~LOCATOR_FEEDBACK_LABEL~
@@ -489,9 +489,9 @@ BEGIN
           SET ofs1 = INDEX_BUFFER(~^[ %TAB%]*button[ %TAB%%WNL%]*{~ ofs1)
         END
         PATCH_IF (ofs1 > ofsStart && ofs1 < ofsEnd) BEGIN
-          SET ctl_label_x  = 446  SET ctl_label_y  = 338  SET ctl_label_w  = 172  SET ctl_label_h  = 36
-          SET ctl_slider_x = 622  SET ctl_slider_y = 338  SET ctl_slider_w = 200  SET ctl_slider_h = 36
-          SET ctl_info_x   = 622  SET ctl_info_y   = 374  SET ctl_info_w   = 200  SET ctl_info_h   = 36
+          SET ctl_label_x  = 446  SET ctl_label_y  = 348  SET ctl_label_w  = 172  SET ctl_label_h  = 36
+          SET ctl_slider_x = 622  SET ctl_slider_y = 348  SET ctl_slider_w = 200  SET ctl_slider_h = 36
+          SET ctl_info_x   = 622  SET ctl_info_y   = 384  SET ctl_info_w   = 200  SET ctl_info_h   = 36
           SET ctl_id = controlID
           SET ctl_num_settings = numSettings
           TEXT_SPRINT ctl_label ~%optLabelName%~
@@ -534,6 +534,7 @@ BEGIN
       INT_VAR
         ofsStart
         gap
+        adjust    = "-10"
       STR_VAR
         keyword_0 = ~MARKER_FEEDBACK_LABEL~
         keyword_1 = ~LOCATOR_FEEDBACK_LABEL~
@@ -550,13 +551,13 @@ BEGIN
         END
         PATCH_IF (ofs1 > ofsStart && ofs1 < ofsEnd) BEGIN
           PATCH_IF (MOD_IS_INSTALLED ~dragonspear_ui++.tp2~ 1) BEGIN
-            SET ctl_label_x  = 110  SET ctl_label_y  = 272  SET ctl_label_w  = 186  SET ctl_label_h  = 36
-            SET ctl_slider_x = 300  SET ctl_slider_y = 272  SET ctl_slider_w = 200  SET ctl_slider_h = 36
-            SET ctl_info_x   = 300  SET ctl_info_y   = 308  SET ctl_info_w   = 200  SET ctl_info_h   = 36
+            SET ctl_label_x  = 110  SET ctl_label_y  = 262  SET ctl_label_w  = 186  SET ctl_label_h  = 36
+            SET ctl_slider_x = 300  SET ctl_slider_y = 262  SET ctl_slider_w = 200  SET ctl_slider_h = 36
+            SET ctl_info_x   = 300  SET ctl_info_y   = 298  SET ctl_info_w   = 200  SET ctl_info_h   = 36
           END ELSE BEGIN
-            SET ctl_label_x  = 110  SET ctl_label_y  = 315  SET ctl_label_w  = 186  SET ctl_label_h  = 36
-            SET ctl_slider_x = 300  SET ctl_slider_y = 315  SET ctl_slider_w = 200  SET ctl_slider_h = 36
-            SET ctl_info_x   = 300  SET ctl_info_y   = 351  SET ctl_info_w   = 200  SET ctl_info_h   = 36
+            SET ctl_label_x  = 110  SET ctl_label_y  = 305  SET ctl_label_w  = 186  SET ctl_label_h  = 36
+            SET ctl_slider_x = 300  SET ctl_slider_y = 305  SET ctl_slider_w = 200  SET ctl_slider_h = 36
+            SET ctl_info_x   = 300  SET ctl_info_y   = 341  SET ctl_info_w   = 200  SET ctl_info_h   = 36
           END
           SET ctl_id = controlID
           SET ctl_num_settings = numSettings
@@ -599,6 +600,7 @@ BEGIN
       INT_VAR
         ofsStart
         gap       = 75
+        adjust    = "-15"
       STR_VAR
         keyword_0 = ~MARKER_FEEDBACK_LABEL~
         keyword_1 = ~LOCATOR_FEEDBACK_LABEL~
@@ -614,9 +616,9 @@ BEGIN
           SET ofs1 = INDEX_BUFFER(~^[ %TAB%]*button[ %TAB%%WNL%]*{~ ofs1)
         END
         PATCH_IF (ofs1 > ofsStart && ofs1 < ofsEnd) BEGIN
-          SET ctl_label_x  = 106  SET ctl_label_y  = 315  SET ctl_label_w  = 190  SET ctl_label_h  = 36
-          SET ctl_slider_x = 300  SET ctl_slider_y = 315  SET ctl_slider_w = 200  SET ctl_slider_h = 36
-          SET ctl_info_x   = 300  SET ctl_info_y   = 351  SET ctl_info_w   = 200  SET ctl_info_h   = 36
+          SET ctl_label_x  = 106  SET ctl_label_y  = 300  SET ctl_label_w  = 190  SET ctl_label_h  = 36
+          SET ctl_slider_x = 300  SET ctl_slider_y = 300  SET ctl_slider_w = 200  SET ctl_slider_h = 36
+          SET ctl_info_x   = 300  SET ctl_info_y   = 336  SET ctl_info_w   = 200  SET ctl_info_h   = 36
           SET ctl_id = controlID
           SET ctl_num_settings = numSettings
           TEXT_SPRINT ctl_label ~%optLabelName%~
@@ -658,6 +660,7 @@ BEGIN
       INT_VAR
         ofsStart
         gap       = 75
+        adjust    = "-15"
       STR_VAR
         keyword_0 = ~MARKER_FEEDBACK_LABEL~
         keyword_1 = ~LOCATOR_FEEDBACK_LABEL~
@@ -673,9 +676,9 @@ BEGIN
           SET ofs1 = INDEX_BUFFER(~^[ %TAB%]*button[ %TAB%%WNL%]*{~ ofs1)
         END
         PATCH_IF (ofs1 > ofsStart && ofs1 < ofsEnd) BEGIN
-          SET ctl_label_x  = 106  SET ctl_label_y  = 315  SET ctl_label_w  = 132  SET ctl_label_h  = 36
-          SET ctl_slider_x = 246  SET ctl_slider_y = 315  SET ctl_slider_w = 254  SET ctl_slider_h = 36
-          SET ctl_info_x   = 246  SET ctl_info_y   = 351  SET ctl_info_w   = 254  SET ctl_info_h   = 36
+          SET ctl_label_x  = 106  SET ctl_label_y  = 300  SET ctl_label_w  = 132  SET ctl_label_h  = 36
+          SET ctl_slider_x = 246  SET ctl_slider_y = 300  SET ctl_slider_w = 254  SET ctl_slider_h = 36
+          SET ctl_info_x   = 246  SET ctl_info_y   = 336  SET ctl_info_w   = 254  SET ctl_info_h   = 36
           SET ctl_pad_x    = 8    SET ctl_pad_y    = 0    SET ctl_pad_w    = 10   SET ctl_pad_h    = 0
           SET ctl_id = controlID
           SET ctl_num_settings = numSettings

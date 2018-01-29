@@ -467,10 +467,11 @@ BEGIN
     SET ofsEnd = INDEX_BUFFER(~^[ %TAB%]*menu[ %TAB%%WNL%]*{~ ofsStart)
     PATCH_IF (ofsEnd > ofsStart) BEGIN
       // adjusting vertical position of existing sliders
+      SET gap = (MOD_IS_INSTALLED ~dragonspear_ui++.tp2~ 1) ? 55 : 50
       LPF __A7_UPDATE_SLIDER_POSITIONS
       INT_VAR
         ofsStart
-        gap       = 50
+        gap
       STR_VAR
         keyword_0 = ~TOOLTIP_DELAY_LABEL~
         keyword_1 = ~KEYBOARD_SCRLSPEED_LABEL~
@@ -489,14 +490,14 @@ BEGIN
         END
         PATCH_IF (ofs1 > ofsStart && ofs1 < ofsEnd) BEGIN
           PATCH_IF (MOD_IS_INSTALLED ~dragonspear_ui++.tp2~ 1) BEGIN
-            SET ctl_label_x  = 600  SET ctl_label_y  = 370  SET ctl_label_w  = 200  SET ctl_label_h  = 34
-            SET ctl_slider_x = 806  SET ctl_slider_y = 370  SET ctl_slider_w = 200  SET ctl_slider_h = 39
-            SET ctl_info_x   = 806  SET ctl_info_y   = 409  SET ctl_info_w   = 200  SET ctl_info_h   = 34
+            SET ctl_label_x  = 600  SET ctl_label_y  = 387  SET ctl_label_w  = 200  SET ctl_label_h  = 34
+            SET ctl_slider_x = 806  SET ctl_slider_y = 387  SET ctl_slider_w = 200  SET ctl_slider_h = 39
+            SET ctl_info_x   = 806  SET ctl_info_y   = 426  SET ctl_info_w   = 200  SET ctl_info_h   = 34
             SET ctl_pad_x    = 8    SET ctl_pad_y    = 0    SET ctl_pad_w    = 10   SET ctl_pad_h    = 0
           END ELSE BEGIN
-            SET ctl_label_x  = 112  SET ctl_label_y  = 380  SET ctl_label_w  = 188  SET ctl_label_h  = 35
-            SET ctl_slider_x = 304  SET ctl_slider_y = 380  SET ctl_slider_w = 200  SET ctl_slider_h = 40
-            SET ctl_info_x   = 304  SET ctl_info_y   = 419  SET ctl_info_w   = 200  SET ctl_info_h   = 35
+            SET ctl_label_x  = 112  SET ctl_label_y  = 375  SET ctl_label_w  = 188  SET ctl_label_h  = 35
+            SET ctl_slider_x = 304  SET ctl_slider_y = 375  SET ctl_slider_w = 200  SET ctl_slider_h = 40
+            SET ctl_info_x   = 304  SET ctl_info_y   = 414  SET ctl_info_w   = 200  SET ctl_info_h   = 35
             SET ctl_pad_x    = 8    SET ctl_pad_y    = 0    SET ctl_pad_w    = 10   SET ctl_pad_h    = 0
           END
           SET ctl_id = controlID
@@ -536,7 +537,7 @@ BEGIN
       LPF __A7_UPDATE_SLIDER_POSITIONS
       INT_VAR
         ofsStart
-        gap       = 50
+        gap       = 55
       STR_VAR
         keyword_0 = ~TOOLTIP_DELAY_LABEL~
         keyword_1 = ~KEYBOARD_SCRLSPEED_LABEL~
@@ -554,9 +555,9 @@ BEGIN
           SET ofs1 = INDEX_BUFFER(~^[ %TAB%]*button[ %TAB%%WNL%]*{~ ofs1)
         END
         PATCH_IF (ofs1 > ofsStart && ofs1 < ofsEnd) BEGIN
-          SET ctl_label_x  = 108  SET ctl_label_y  = 380  SET ctl_label_w  = 192  SET ctl_label_h  = 39
-          SET ctl_slider_x = 304  SET ctl_slider_y = 380  SET ctl_slider_w = 200  SET ctl_slider_h = 40
-          SET ctl_info_x   = 304  SET ctl_info_y   = 419  SET ctl_info_w   = 200  SET ctl_info_h   = 35
+          SET ctl_label_x  = 108  SET ctl_label_y  = 390  SET ctl_label_w  = 192  SET ctl_label_h  = 39
+          SET ctl_slider_x = 304  SET ctl_slider_y = 390  SET ctl_slider_w = 200  SET ctl_slider_h = 40
+          SET ctl_info_x   = 304  SET ctl_info_y   = 429  SET ctl_info_w   = 200  SET ctl_info_h   = 35
           SET ctl_pad_x    = 8    SET ctl_pad_y    = 0    SET ctl_pad_w    = 10   SET ctl_pad_h    = 0
           SET ctl_id = controlID
           SET ctl_num_settings = numSettings
@@ -595,7 +596,7 @@ BEGIN
       LPF __A7_UPDATE_SLIDER_POSITIONS
       INT_VAR
         ofsStart
-        gap       = 50
+        gap       = 55
       STR_VAR
         keyword_0 = ~TOOLTIP_DELAY_LABEL~
         keyword_1 = ~KEYBOARD_SCRLSPEED_LABEL~
@@ -613,9 +614,9 @@ BEGIN
           SET ofs1 = INDEX_BUFFER(~^[ %TAB%]*button[ %TAB%%WNL%]*{~ ofs1)
         END
         PATCH_IF (ofs1 > ofsStart && ofs1 < ofsEnd) BEGIN
-          SET ctl_label_x  = 108  SET ctl_label_y  = 380  SET ctl_label_w  = 144  SET ctl_label_h  = 39
-          SET ctl_slider_x = 252  SET ctl_slider_y = 380  SET ctl_slider_w = 260  SET ctl_slider_h = 40
-          SET ctl_info_x   = 252  SET ctl_info_y   = 419  SET ctl_info_w   = 200  SET ctl_info_h   = 35
+          SET ctl_label_x  = 108  SET ctl_label_y  = 390  SET ctl_label_w  = 144  SET ctl_label_h  = 39
+          SET ctl_slider_x = 252  SET ctl_slider_y = 390  SET ctl_slider_w = 260  SET ctl_slider_h = 40
+          SET ctl_info_x   = 252  SET ctl_info_y   = 429  SET ctl_info_w   = 200  SET ctl_info_h   = 35
           SET ctl_pad_x    = 8    SET ctl_pad_y    = 0    SET ctl_pad_w    = 15   SET ctl_pad_h    = 0
           SET ctl_id = controlID
           SET ctl_num_settings = numSettings

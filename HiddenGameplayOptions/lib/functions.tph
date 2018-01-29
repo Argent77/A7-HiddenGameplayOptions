@@ -354,6 +354,7 @@ DEFINE_PATCH_FUNCTION __A7_UPDATE_SLIDER_POSITIONS
 INT_VAR
   ofsStart  = 0   // start offset of gameplay menu structure
   gap       = 50  // default gap between slider controls
+  adjust    = 0   // y value to adjust for all slider control elements
 STR_VAR
   // Each keyword is used as a search term to delimit individual controls.
   // keyword_0 = ~~
@@ -414,6 +415,7 @@ BEGIN
               REPLACE_EVALUATE
               ~area[ %TAB%]+\([0-9]+\)[ %TAB%]+\([0-9]+\)[ %TAB%]+\([0-9]+\)[ %TAB%]+\([0-9]+\)~
               BEGIN
+                SET MATCH2 += adjust
                 PATCH_IF (idx = 0 && curY = 0) BEGIN  // first slider is used for reference
                   SET curY = MATCH2
                 END ELSE PATCH_IF (idx > 0) BEGIN
