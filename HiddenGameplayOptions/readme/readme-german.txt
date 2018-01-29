@@ -209,8 +209,7 @@ wählen. Die Voreinstellung des Spiels ist 30 Bilder pro Sekunde.
 Diese Komponente wird als "experimentell" gekennzeichnet, da vorgenommene Einstellungen in 
 bestimmten Situationen vom Spiel ignoriert werden:
 1. Wenn Optionen > Spieleinstellungen > Rückmeldungen > "Zusätzliche Bestätigungsfenster" aktiv ist.
-2. Wenn die Bildrate während eines laufenden Spiels gesetzt wird, und dann das Spiel direkt 
-   verlassen wird, ohne vorher in das Hauptmenü zu springen.
+2. Wenn ein laufendes Spiel beendet wird, ohne vorher in das Hauptmenü zu springen.
 
 Die Option kann in den Spieleinstellungen gefunden werden.
 

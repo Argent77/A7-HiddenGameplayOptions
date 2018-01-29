@@ -193,7 +193,7 @@ You can choose between 30, 40 and 50 frames per second. The game's default is 30
 The component is marked as "experimental", as there are situations where setting this option has 
 no effect:
 1. When Options Gameplay > Feedback > "More Confirmation Prompts" is active.
-2. When setting frame rate in a running game and quitting directly to the desktop afterwards.
+2. When quitting the game directly to the desktop from a running game.
 
 Option can be found in Gameplay section.
 
