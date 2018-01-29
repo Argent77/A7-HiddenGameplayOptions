@@ -130,6 +130,18 @@ This component installs a slider control that can be used to set the desired fra
 
 *Option can be found in Gameplay section.*
 
+#### 21. Add in-game option "Action Feedback" *(not compatible with Lefreut's Enhanced UI (LeUI))*
+
+This component installs a slider control that can be used to show small symbols around character sprites that indicate their current action (e.g. fighting, spellcasting, thieving actions). You can choose between several feedback levels. Some levels may require that the Gameplay option *"Debug Mode"* is enabled.
+
+*Option can be found in Gameplay > Feedback.*
+
+#### 22. Add in-game option "Enable Level Up Icon" *(only available for PST:EE, requires "Level Up" Icon Tweaks)*
+
+This option allows you to display or hide the "Level Up" icon, that can be found in the portrait window or health bar of party members that are ready to level up. It requires the mod *'Level Up' Icon Tweaks* to be installed, which adds the functionality to toggle visibility of the icon.
+
+*Option can be found in Gameplay > Feedback.*
+
 ## Copyright Notice
 
 The mod "Reveal Hidden Gameplay Options" is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
