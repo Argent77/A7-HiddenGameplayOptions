@@ -8,6 +8,8 @@ INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
  * INT_VAR optDescTra     The TRA reference number of the option description text.
  * INT_VAR controlID      A unique number that identifies this option.
  *                        Recommended: Use negative number to minimize interference with existing IDs.
+ * INT_VAR multiplier     An optional multiplier that can be used to adjust the resulting setting 
+ *                        if it should differ from '1' for "enabled". (Default: 1)
  * INT_VAR autoFail       Set to nonzero to force termination of component installation on error.
  * STR_VAR arrayName      Name of the LUA array containing option definitions.
  *                          toggleTitles:     used by Gameplay options
@@ -25,6 +27,7 @@ INT_VAR
   optLabelTra   = "-1"
   optDescTra    = "-1"
   controlID     = 0
+  multiplier    = 1
   autoFail      = 1
 STR_VAR
   arrayName     = "toggleTitles"
@@ -80,6 +83,7 @@ BEGIN
         LPF ADD_GAMEPLAY_OPTION
         INT_VAR
           controlID   = controlID
+          multiplier  = multiplier
         STR_VAR
           arrayName   = EVAL "%arrayName%"
           optLabel    = EVAL ~%optLabelName%~
@@ -107,6 +111,8 @@ END
  * Adds a new option to the 'Gameplay' section of the Options menu.
  * INT_VAR controlID  A unique number that identifies the option.
  *                    Recommended: Use negative number to minimize interference with existing IDs.
+ * INT_VAR multiplier An optional multiplier that can be used to adjust the resulting setting 
+ *                    if it should differ from '1' for "enabled". (Default: 1)
  * STR_VAR arrayName  Name of the LUA array containing option definitions.
  * STR_VAR optLabel   Variable name referring to option label text (e.g. "SHOW_DEBUG_CONSOLE_LABEL").
  * STR_VAR optDesc    Variable name referring to option description text (e.g. "SHOW_DEBUG_CONSOLE_DESC").
@@ -116,7 +122,8 @@ END
  */
 DEFINE_PATCH_FUNCTION ADD_GAMEPLAY_OPTION
 INT_VAR
-  controlID = 0
+  controlID   = 0
+  multiplier  = 1
 STR_VAR
   arrayName   = ""
   optLabel    = ""
@@ -136,7 +143,9 @@ BEGIN
     LPF __A7_INIT_CODE RET success END
     PATCH_IF (success) BEGIN
       LPF __A7_ADD_OPTION
-      INT_VAR controlID = controlID
+      INT_VAR
+        controlID   = controlID
+        multiplier  = multiplier
       STR_VAR
         arrayName   = EVAL "%arrayName%"
         optLabel    = EVAL ~%optLabel%~
@@ -153,7 +162,8 @@ END
 // Used internally: implement new entry in UI.MENU
 DEFINE_PATCH_FUNCTION __A7_ADD_OPTION
 INT_VAR
-  controlID = 0
+  controlID   = 0
+  multiplier  = 1
 STR_VAR
   arrayName   = ""
   optLabel    = ""
@@ -188,6 +198,7 @@ BEGIN
     INT_VAR
       startOfs    = endOfs
       controlID   = controlID
+      multiplier  = multiplier
     STR_VAR
       arrayName   = EVAL "%arrayName%"
       iniSection  = EVAL "%iniSection%"
@@ -205,6 +216,7 @@ BEGIN
       INT_VAR
         startOfs    = endOfs
         controlID   = controlID
+        multiplier  = multiplier
       STR_VAR
         arrayName   = EVAL "%arrayName%"
         iniSection  = EVAL "%iniSection%"
@@ -310,8 +322,9 @@ END
 // Used internally: specified option reads initial state from baldur.lua
 DEFINE_PATCH_FUNCTION __A7_EXPAND_READ_OPTION
 INT_VAR
-  startOfs  = 0
-  controlID = 0
+  startOfs    = 0
+  controlID   = 0
+  multiplier  = 1
 STR_VAR
   arrayName   = ""
   iniSection  = ""
@@ -355,7 +368,7 @@ BEGIN
       PATCH_IF (mode = 1) BEGIN
       TEXT_SPRINT code ~%code%%indent%~
       END
-      TEXT_SPRINT code ~%code%if (var[3] == %controlID%) then%WNL%%indent%%TAB%var[5] = getDeferredOption('%iniSection%', '%iniName%')%WNL%%indent%else~
+      TEXT_SPRINT code ~%code%if (var[3] == %controlID%) then%WNL%%indent%%TAB%if (getDeferredOption('%iniSection%', '%iniName%') == 0) then%WNL%%indent%%TAB%%TAB%var[5] = 0%WNL%%indent%%TAB%else%WNL%%indent%%TAB%%TAB%var[5] = 1%WNL%%indent%%TAB%end%WNL%%indent%else~
       PATCH_IF (mode = 1) BEGIN
         TEXT_SPRINT code ~%code%%WNL%%TAB%~
       END
@@ -383,8 +396,9 @@ END
 // Used internally: specified option writes current state of option to baldur.lua
 DEFINE_PATCH_FUNCTION __A7_EXPAND_WRITE_OPTION
 INT_VAR
-  startOfs  = 0
-  controlID = 0
+  startOfs    = 0
+  controlID   = 0
+  multiplier  = 1
 STR_VAR
   arrayName   = ""
   iniSection  = ""
@@ -395,6 +409,7 @@ RET
 BEGIN
   SET success = 0
   SET endOfs = startOfs
+  PATCH_IF (multiplier > 1) BEGIN TEXT_SPRINT factor ~ * %multiplier%~ END ELSE BEGIN TEXT_SPRINT factor ~~ END
 
   SET ofs = INDEX_BUFFER(~for[ %TAB%]+index,[ %TAB%]+var[ %TAB%]+in[ %TAB%]+pairs(%arrayName%)[ %TAB%]+do~ startOfs)
   PATCH_IF (ofs >= startOfs) BEGIN
@@ -428,7 +443,7 @@ BEGIN
       PATCH_IF (mode = 1) BEGIN
       TEXT_SPRINT code ~%code%%indent%~
       END
-      TEXT_SPRINT code ~%code%if (var[3] == %controlID%) then%WNL%%indent%%TAB%setDeferredOption('%iniSection%', '%iniName%', var[5])%WNL%%indent%else~
+      TEXT_SPRINT code ~%code%if (var[3] == %controlID%) then%WNL%%indent%%TAB%setDeferredOption('%iniSection%', '%iniName%', var[5]%factor%)%WNL%%indent%else~
       PATCH_IF (mode = 1) BEGIN
         TEXT_SPRINT code ~%code%%WNL%%TAB%~
       END

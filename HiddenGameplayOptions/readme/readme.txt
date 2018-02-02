@@ -184,7 +184,15 @@ difficulty modes.
 Option can be found in Gameplay section.
 
 
-20. Add in-game option "Frame Rate" (experimental) (not available for PST:EE, not compatible with 
+20. Add in-game option "Trigger Bored Sounds" (not compatible with Lefreut's Enhanced UI (LeUI))
+
+Enabling this option will trigger bored sounds when you haven't assigned actions to your characters 
+for an extended period of time.
+
+Option can be found in Sounds > Character Sounds or Gameplay > Feedback (PST:EE only).
+
+
+21. Add in-game option "Frame Rate" (experimental) (not available for PST:EE, not compatible with 
     Lefreut's Enhanced UI (LeUI))
 
 This component installs a slider control that can be used to set the desired frame rate of the game. 
@@ -198,7 +206,7 @@ no effect:
 Option can be found in Gameplay section.
 
 
-21. Add in-game option "Action Feedback" (not compatible with Lefreut's Enhanced UI (LeUI))
+22. Add in-game option "Action Feedback" (not compatible with Lefreut's Enhanced UI (LeUI))
 
 This component installs a slider control that can be used to show small symbols around character 
 sprites that indicate their current action (e.g. fighting, spellcasting or thieving actions). 
@@ -208,7 +216,7 @@ You can choose between several feedback levels. Some levels may require that the
 Option can be found in Gameplay > Feedback.
 
 
-22. Add in-game option "Display Level Up Icon" (only available for PST:EE, requires "Level Up" 
+23. Add in-game option "Display Level Up Icon" (only available for PST:EE, requires "Level Up" 
     Icon Tweaks)
 
 This option allows you to show or hide the "Level Up" icon, that can be found in the portrait 
@@ -245,6 +253,7 @@ History
 2.0
 - Added option "Set Frame Rate"
 - Added option "Action Feedback"
+- Added option "Trigger Bored Sounds"
 - Added option "No Cosmetic Attacks" to PSTEE
 - Added option "Enable Level Up Icon" to PSTEE
 - Made compatible with IWD:EE v2.5 or higher

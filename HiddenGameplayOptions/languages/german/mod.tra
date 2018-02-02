@@ -146,6 +146,16 @@ Hinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.
 ^NHinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.^-~
 
 
+@3100 = ~Gelangweilte Ausrufe~
+@3101 = ~Gelangweilte Ausrufe von Gruppenmitgliedern~
+@3102 = ~Diese Option aktiviert gelangweilte Ausrufe nach längerer Inaktivität.
+
+Hinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.~
+@3103 = ~Hiermit wird gesteuert, ob Gruppenmitglieder nach längerer Inaktivität gelangweilte Ausrufe tätigen.
+
+^NHinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.^-~
+
+
 // *** Misc. strings ***
 
 @10000 = ~Heimlicher Angriff~

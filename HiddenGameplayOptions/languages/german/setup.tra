@@ -22,9 +22,10 @@
 @25 = ~Spieloption "Videosequenzen deaktivieren" hinzufuegen~
 @26 = ~Spieloption "Keine kosmetischen Angriffe" hinzufuegen~
 @27 = ~Spieloption "EP-Bonus im Albtraum-Modus" hinzufuegen~
-@28 = ~Spieloption "Bildrate" hinzufuegen (experimentell)~
-@29 = ~Spieloption "Aktionssymbole" hinzufuegen~
-@30 = ~Spieloption "Symbol fuer Stufenaufstieg anzeigen" hinzufuegen~
+@28 = ~Spieloption "Gelangweilte Ausrufe aktivieren" hinzufuegen~
+@29 = ~Spieloption "Bildrate" hinzufuegen (experimentell)~
+@30 = ~Spieloption "Aktionssymbole" hinzufuegen~
+@31 = ~Spieloption "Symbol fuer Stufenaufstieg anzeigen" hinzufuegen~
 
 @100 = ~Enhanced Edition muss v2.0 oder hoeher sein.~
 @101 = ~LUA-Datei kann nicht bearbeitet werden~

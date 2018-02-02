@@ -201,7 +201,10 @@ History
 
 2.0
 - Added option "Set Frame Rate"
+- Added option "Action Feedback"
+- Added option "Trigger Bored Sounds"
 - Added option "No Cosmetic Attacks" to PSTEE
+- Added option "Enable Level Up Icon" to PSTEE
 - Made compatible with IWD:EE v2.5 or higher
 
 1.3

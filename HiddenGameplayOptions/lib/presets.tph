@@ -459,6 +459,37 @@ BEGIN
   END
 END
 
+/** Add in-game option "Bored Sounds" */
+DEFINE_ACTION_FUNCTION OPTION_BORED_TIMEOUT
+BEGIN
+  ACTION_IF (GAME_IS ~pstee~) BEGIN
+    OUTER_TEXT_SPRINT arrayName "messagesToggles"
+    OUTER_SET optLabelTra = 3101
+    OUTER_SET optDescTra = 3103
+  END ELSE BEGIN
+    OUTER_TEXT_SPRINT arrayName "soundsToggles"
+    OUTER_SET optLabelTra = 3100
+    OUTER_SET optDescTra = 3102
+  END
+
+  LAF INSTALL_CHECK_OPTION
+  INT_VAR
+    optLabelTra
+    optDescTra
+    controlID     = "-185"
+    multiplier    = 3000
+    autoFail      = 1
+  STR_VAR
+    arrayName     = EVAL "%arrayName%"
+    optLabelName  = "A7_BORED_TIMEOUT_LABEL"
+    optDescName   = "A7_BORED_TIMEOUT_DESCRIPTION"
+    iniSection    = "Game Options"
+    iniName       = "Bored Timeout"
+  RET
+    success
+  END
+END
+
 /** Add in-game option "Display Level Up Icon" */
 DEFINE_ACTION_FUNCTION OPTION_ENABLE_LEVEL_UP
 BEGIN

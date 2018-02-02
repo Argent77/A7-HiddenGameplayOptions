@@ -145,6 +145,15 @@ Note: You must restart the game for changes to take effect.~
 
 ^NNote: You must restart the game for changes to take effect.^-~
 
+@3100 = ~Bored Sounds~
+@3101 = ~Play Bored Character Sounds~
+@3102 = ~Play bored sounds after an extended period of inactivity.
+
+Note: You must restart the game for changes to take effect.~
+@3103 = ~This controls whether party members trigger bored sounds after an extended period of inactivity.
+
+^NNote: You must restart the game for changes to take effect.^-~
+
 
 // *** Misc. strings ***
 

@@ -199,7 +199,17 @@ die zusätzlichen EP, die in den normalen Schwierigkeitsgraden gewährt werden.
 Die Option kann in den Spieleinstellungen gefunden werden.
 
 
-20. Spieloption "Bildrate" (experimentell) hinzufügen (nicht in PST:EE verfügbar, nicht mit 
+20. Spieloption "Gelangweilte Ausrufe aktivieren" hinzufügen (nicht mit Lefreuts Enhanced UI 
+    (LeUI) kompatibel)
+
+Wird diese Option aktiviert, dann lösen Gruppenmitglieder gelangweilte Ausrufe aus, wenn sie über 
+einen längeren Zeitraum keine Aktionen durchgeführt haben.
+
+Die Option kann in Sound > Charaktersounds oder Spielmechanik > Rückmeldungen (nur PST:EE) gefunden 
+werden.
+
+
+21. Spieloption "Bildrate" (experimentell) hinzufügen (nicht in PST:EE verfügbar, nicht mit 
     Lefreuts Enhanced UI (LeUI) kompatibel)
 
 Diese Komponente installiert einen Schieberegler, mit dem man die Bildrate, mit der das Spiel 
@@ -214,7 +224,7 @@ bestimmten Situationen vom Spiel ignoriert werden:
 Die Option kann in den Spieleinstellungen gefunden werden.
 
 
-21. Spieloption "Aktionssymbole" hinzufügen (nicht mit Lefreuts Enhanced UI (LeUI) kompatibel)
+22. Spieloption "Aktionssymbole" hinzufügen (nicht mit Lefreuts Enhanced UI (LeUI) kompatibel)
 
 Diese Komponente installiert einen Schieberegler, mit dem man kleine Aktionssymbole neben den 
 Charakteranimationen anzeigen kann. Diese Symbole kennzeichnen die gerade ausgeführte Aktion der 
@@ -225,7 +235,7 @@ der Debugmodus aktiviert wurde.
 Die Option kann in Spieleinstellungen > Rückmeldungen gefunden werden.
 
 
-22. Spieloption "Symbol für Stufenaufstieg anzeigen" hinzufügen (nur in PST:EE verfügbar, benötigt 
+23. Spieloption "Symbol für Stufenaufstieg anzeigen" hinzufügen (nur in PST:EE verfügbar, benötigt 
     "Level Up" Icon Tweaks)
 
 Diese Option kann genutzt werden, um ein Symbol im Portraitfenster oder Energiebalken anzuzeigen, 
@@ -262,6 +272,7 @@ History
 2.0
 - Added option "Set Frame Rate"
 - Added option "Action Feedback"
+- Added option "Trigger Bored Sounds"
 - Added option "No Cosmetic Attacks" to PSTEE
 - Added option "Enable Level Up Icon" to PSTEE
 - Made compatible with IWD:EE v2.5 or higher
