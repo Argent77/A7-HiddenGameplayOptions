@@ -198,7 +198,6 @@ BEGIN
     INT_VAR
       startOfs    = endOfs
       controlID   = controlID
-      multiplier  = multiplier
     STR_VAR
       arrayName   = EVAL "%arrayName%"
       iniSection  = EVAL "%iniSection%"
@@ -324,7 +323,6 @@ DEFINE_PATCH_FUNCTION __A7_EXPAND_READ_OPTION
 INT_VAR
   startOfs    = 0
   controlID   = 0
-  multiplier  = 1
 STR_VAR
   arrayName   = ""
   iniSection  = ""
