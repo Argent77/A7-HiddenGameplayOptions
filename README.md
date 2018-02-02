@@ -124,19 +124,25 @@ Enabling this option allows your characters to get bonus XP in Legacy of Bhaal M
 
 *Option can be found in Gameplay section.*
 
-#### 20. Add in-game option "Frame Rate" (experimental) *(not available for PST:EE, not compatible with Lefreut's Enhanced UI (LeUI))*
+#### 20. Add in-game option "Trigger Bored Sounds" *(not compatible with Lefreut's Enhanced UI (LeUI))*
+
+Enabling this option will trigger bored sounds when you haven't assigned actions to your characters for an extended period of time.
+
+*Option can be found in Sounds > Character Sounds or Gameplay > Feedback (PST:EE only)*
+
+#### 21. Add in-game option "Frame Rate" (experimental) *(not available for PST:EE, not compatible with Lefreut's Enhanced UI (LeUI))*
 
 This component installs a slider control that can be used to set the desired frame rate of the game. You can choose between 30, 40 and 50 frames per second. The game's default is 30 fps.
 
 *Option can be found in Gameplay section.*
 
-#### 21. Add in-game option "Action Feedback" *(not compatible with Lefreut's Enhanced UI (LeUI))*
+#### 22. Add in-game option "Action Feedback" *(not compatible with Lefreut's Enhanced UI (LeUI))*
 
 This component installs a slider control that can be used to show small symbols around character sprites that indicate their current action (e.g. fighting, spellcasting, thieving actions). You can choose between several feedback levels. Some levels may require that the Gameplay option *"Debug Mode"* is enabled.
 
 *Option can be found in Gameplay > Feedback.*
 
-#### 22. Add in-game option "Enable Level Up Icon" *(only available for PST:EE, requires "Level Up" Icon Tweaks)*
+#### 23. Add in-game option "Enable Level Up Icon" *(only available for PST:EE, requires "Level Up" Icon Tweaks)*
 
 This option allows you to display or hide the "Level Up" icon, that can be found in the portrait window or health bar of party members that are ready to level up. It requires the mod *'Level Up' Icon Tweaks* to be installed, which adds the functionality to toggle visibility of the icon.
 
