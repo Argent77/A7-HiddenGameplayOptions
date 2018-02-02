@@ -91,7 +91,9 @@ Habilite esta opção para limitar os feitiços de druida até o nível 3 – o 
 ^NObservação: Você deve reiniciar o jogo para que as mudanças tenham efeito.^-~
 
 @2600 = ~Desabilitar Ataques Cosméticos~
-@2601 = ~Por definição, os personagens produzem animações de ataque durante uma rodada para simularem quedas e esquivas. Ative esta opção para mostrar animações de ataque apenas quando os personagens realmente estiverem atacando.~
+@2601 = ~Por definição, os personagens produzem animações de ataque durante uma rodada para simularem quedas e esquivas. Ative esta opção para mostrar animações de ataque apenas quando os personagens realmente estiverem atacando.
+
+^NObservação: Você deve reiniciar o jogo para que as mudanças tenham efeito.^-~
 
 @2700 = ~XP Bonus in Legacy of Bhaal Mode~
 @2701 = ~Enabling this option allows your characters to get bonus XP in Legacy of Bhaal Mode. This setting will not affect the extra XP granted by the regular difficulty modes.

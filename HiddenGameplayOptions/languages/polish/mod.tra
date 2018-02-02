@@ -91,7 +91,9 @@ Włączenie tej opcji spowoduje ograniczenie dostępu czarów druidycznych do 3.
 ^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
 
 @2600 = ~Wyłączenie dodatkowych animacji ataków~
-@2601 = ~Domyślnie postacie wykonują animacje ataku w czasie całej rundy, co symuluje markowanie i unikanie ciosów. Włączenie tej opcji sprawia, że pokazywane będą jedynie animacje samych ataków.~
+@2601 = ~Domyślnie postacie wykonują animacje ataku w czasie całej rundy, co symuluje markowanie i unikanie ciosów. Włączenie tej opcji sprawia, że pokazywane będą jedynie animacje samych ataków.
+
+^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
 
 @2700 = ~XP Bonus in Legacy of Bhaal Mode~
 @2701 = ~Enabling this option allows your characters to get bonus XP in Legacy of Bhaal Mode. This setting will not affect the extra XP granted by the regular difficulty modes.
