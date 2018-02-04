@@ -38,7 +38,7 @@ Lefreut's Enhanced UI (LeUI), której autorem jest Lefreut. Po wykryciu tych mod
 opcje mogą znaleźć się w innych sekcjach.
 
 Modyfikacja ta nie może być instalowana wraz z komponentem modyfikacji EEUITweaks o nazwie „Hidden 
-Game Options”. Możesz zainstalować tylko jedno z z nich.
+Game Options”. Możesz zainstalować tylko jedno z nich.
 
 Aktualizowanie plików definiujących UI może być skomplikowane. Aby zabezpieczyć się przed 
 możliwością uszkodzenia plików gry przez nieudaną aktualizację plików, zakończy się ona wymuszonym 
