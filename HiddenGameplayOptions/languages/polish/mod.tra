@@ -95,15 +95,70 @@ Włączenie tej opcji spowoduje ograniczenie dostępu czarów druidycznych do 3.
 
 ^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
 
-@2700 = ~XP Bonus in Legacy of Bhaal Mode~
-@2701 = ~Enabling this option allows your characters to get bonus XP in Legacy of Bhaal Mode. This setting will not affect the extra XP granted by the regular difficulty modes.
+@2700 = ~Premia do PD w trybie Dziedzictwo Bhaala~
+@2701 = ~Włączenie tej opcji pozwala na uzyskiwanie dodatkowej ilości PD w trybie Dziedzictwo Bhaala. Nie wpływa jednak na ilość PD otrzymywanych w przypadku zwykłych trybów gry.
 
-^NNote: You must restart the game for changes to take effect.^-~
+^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
 
-@2710 = ~XP Bonus in Heart of Fury Mode~
-@2711 = ~Enabling this option allows your characters to get bonus XP in Heart of Fury Mode. This setting will not affect the extra XP granted by the regular difficulty modes.
+@2710 = ~Premia do PD w trybie Serce Furii~
+@2711 = ~Włączenie tej opcji pozwala na uzyskiwanie dodatkowej ilości PD w trybie Serce Furii. Nie wpływa jednak na ilość PD otrzymywanych w przypadku zwykłych trybów gry.
 
-^NNote: You must restart the game for changes to take effect.^-~
+^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+
+@2800 = ~Wskaźnik ilości klatek~
+@2801 = ~Ten suwak pozwala zwiększyć liczbę klatek animacji, z jaką działa gra, przyspieszając wszystkie jej elementy.
+
+UWAGA: Ustawienie liczby klatek animacji na ponad 30 może spowodować utratę synchronizacji obrazu z dźwiękiem w przerywnikach filmowych oraz brak synchronizacji grafiki czarów z efektami ich działania.
+
+^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+
+@2802 = ~30 klatek/sek.~
+@2803 = ~40 klatek/sek.~
+@2804 = ~50 klatek/sek.~
+@2900 = ~Wskazówki dotyczące wykonywanych czynności~
+
+@2901 = ~Suwak ten kontroluje sposób przedstawiania wykonywanych przez dane istoty czynności w postaci niewielkich ikon wyświetlanych nad ich sylwetkami.
+  WYŁĄCZONY: Nigdy.
+  MAŁO: Tylko sojusznicy po zatrzymaniu gry.
+  ŚREDNIO: Tylko sojusznicy.
+  DUŻO*: Wszystkie istoty po zatrzymaniu gry.
+  MAKSIMUM*: Wszystkie istoty.
+
+(*) Działa tylko po włączeniu trybu debugowania.
+
+Uwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.~
+
+@2902 = ~Suwak ten kontroluje sposób przedstawiania wykonywanych przez dane istoty czynności w postaci niewielkich ikon wyświetlanych nad ich sylwetkami.
+  Wyłączony – nigdy
+  Mało – tylko sojusznicy po zatrzymaniu gry
+  Średnio – tylko sojusznicy
+  Dużo* – wszystkie istoty po zatrzymaniu gry
+  Maksimum* – wszystkie istoty
+
+(*) Działa tylko po włączeniu trybu debugowania.
+
+^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+
+@2903 = ~Wyłączony~
+@2904 = ~Mało~
+@2905 = ~Średnio~
+@2906 = ~Dużo*~
+@2907 = ~Maksimum*~
+
+@3000 = ~Wyświetlanie ikony zmiany poziomu~
+@3001 = ~Opcja ta pozwala wyświetlanie ikony „Zmiany poziomu” w oknie portretu lub na pasku życia członków drużyny mogących awansować na kolejny poziom.
+
+^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+
+@3100 = ~Odgłosy znudzenia~
+@3101 = ~Odtwarzanie odgłosów znudzenia~
+@3102 = ~Odtwarzanie głosów znudzenia po dłuższym okresie bezczynności.
+
+Uwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.~
+
+@3103 = ~Opcja ta pozwala na włączenie odtwarzania głosów znudzenia członków drużyny po dłuższej bezczynności.
+
+^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
 
 
 // *** Misc. strings ***

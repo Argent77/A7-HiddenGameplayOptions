@@ -21,7 +21,11 @@
 @24 = ~Dodaj w grze opcje "Wlaczenie mgly"~
 @25 = ~Dodaj w grze opcje "Wylaczenie filmow"~
 @26 = ~Dodaj w grze opcje "Wylaczenie dodatkowych animacji atakow"~
-@27 = ~Add in-game option "XP Bonus in Nightmare Mode"~
+@27 = ~Dodaj w grze opcje "Premia do PD w trybie Koszmar"~
+@28 = ~Dodaj w grze opcje "Odtwarzanie odglosow znudzenia"~
+@29 = ~Dodaj w grze opcje "Wskaznik ilosci klatek" (opcja eksperymentalna)~
+@30 = ~Dodaj w grze opcje "Wskazowki dotyczace wykonywanych czynnosci"~
+@31 = ~Dodaj w grze opcje "Wyswietlanie ikon awansu na kolejny poziom"~
 
 @100 = ~Wymagane posiadanie wersji Enhanced Edition w wersji 2.0 lub wyzszej.~
 @101 = ~Nie mozna zaktualizowac pliku LUA~
@@ -30,3 +34,5 @@
 @104 = ~Opcja niedostepna dla tej gry.~
 @105 = ~Opcja jest juz dostepna w grze.~
 @106 = ~Modyfikacja ta nie jest kompatybilna z komponentem modyfikacji EEUITweaks o nazwie "Hidden Game Options".~
+@107 = ~Ten komponent nie jest kompatybilny z modyfikacj¹ "Lefreut's Enhanced UI (LeUI)".~
+@108 = ~Wymaga uprzedniego zainstalowania modyfikacji "Ikona zmiany poziomu".~
