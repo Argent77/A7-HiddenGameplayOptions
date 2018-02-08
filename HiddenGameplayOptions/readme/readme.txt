@@ -210,8 +210,8 @@ Option can be found in Gameplay section.
 
 This component installs a slider control that can be used to show small symbols around character 
 sprites that indicate their current action (e.g. fighting, spellcasting or thieving actions). 
-You can choose between several feedback levels. Some levels may require that the Gameplay option 
-"Debug Mode" is enabled.
+You can choose between several feedback levels. Higher levels are only effective when option 
+"Debug Mode" has been enabled as well.
 
 Option can be found in Gameplay > Feedback.
 
