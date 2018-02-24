@@ -240,7 +240,7 @@ French translation: Gwendolyne
 
 Polish translation: Cahir
 
-Portuguese translation: Nasher
+Brazilian Portuguese translation: Nasher
 
 
 Copyright Notice
@@ -268,7 +268,7 @@ History
 - Marked mod incompatible with EEUITweaks component "Hidden Game Options"
 
 1.1
-- Added Portuguese translation (thanks Nasher)
+- Added Brazilian Portuguese translation (thanks Nasher)
 - Updated WeiDU setup executable to v242
 
 1.0
