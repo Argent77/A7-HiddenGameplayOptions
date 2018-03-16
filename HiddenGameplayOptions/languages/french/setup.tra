@@ -21,7 +21,11 @@
 @24 = ~Ajouter l'option de jeu "Activer le brouillard"~
 @25 = ~Ajouter l'option de jeu "Desactiver les films"~
 @26 = ~Ajouter l'option de jeu "Aucune attaque cosmetique"~
-@27 = ~Add in-game option "XP Bonus in Nightmare Mode"~
+@27 = ~Ajouter l'option de jeu "Bonus d'experience en mode cauchemar"~
+@28 = ~Ajouter l'option de jeu "Emettre des sons d'ennui"~
+@29 = ~Ajouter l'option de jeu "Nombre d'images par seconde" (experimentale)~
+@30 = ~Ajouter l'option de jeu "Feedback d'actions"~
+@31 = ~Ajouter l'option de jeu "Afficher l'icone de passage au niveau superieur"~
 
 @100 = ~Ce mod requiert un jeu beneficiant du patch v2.0 ou ulterieur.~
 @101 = ~Echec de modification du fichier LUA.~
@@ -30,6 +34,8 @@
 @104 = ~Cette option n'est pas disponible pour ce jeu.~
 @105 = ~Cette option est deja presente dans ce jeu.~
 @106 = ~Ce mod n'est pas compatible avec le composant "Options cachees du jeu" de EEUITweaks.~
+@107 = ~Ce composant n'est pas compatible avec Lefreut's Enhanced UI (LeUI).~
+@108 = ~Necessite l'installation du module "Level Up" Icon Tweaks.~
 
 
 // WeiDU prompts

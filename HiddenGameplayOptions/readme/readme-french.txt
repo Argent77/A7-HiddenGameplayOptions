@@ -19,6 +19,9 @@ experts en informatique de les utiliser.
 Ce mod ajoute directement dans le jeu de nombreuses options très utiles, dont le "célèbre" panneau 
 de débogage, plusieurs paramétrages graphiques et de feedback, et d'autres encore.
 
+Tous les jeux Enhanced Edition dotés du patch v2.0 ou supérieur sont concernés, soit BG:EE (avec ou 
+sans SoD), BG2:EE, IWD:EE, PST:EE et EET.
+
 
 Installation
 ~~~~~~~~~~~~
@@ -93,7 +96,7 @@ de la carte en appuyant sur la touche TAB.
 Elle se trouve dans la section Jeu.
 
 
-7. Ajouter l'option de jeu "Utiliser la barre d'espace dans les dialogues" (disponible uniquement dans PST:EE)
+7. Ajouter l'option de jeu "Utiliser la barre d'espace dans les dialogues" (disponible uniquement pour PST:EE)
 
 Activer cette option vous permet de continuer les conversations dans la fenêtre de 
 dialogue en utilisant la touche ESPACE.
@@ -141,7 +144,7 @@ Activer cette option affiche la date et l'heure du jeu lorsque la pause est acti
 Elle se trouve dans la section Jeu > Feedback > Messages de Feedback.
 
 
-13. Ajouter l'option de jeu "Désactiver le zoom dans la vue de la carte" (disponible uniquement dans PST:EE)
+13. Ajouter l'option de jeu "Désactiver le zoom dans la vue de la carte" (disponible uniquement pour PST:EE)
 
 Cette option désactive le zoom avant et arrière lorsqu'on ouvre ou ferme l'écran de la carte 
 de la zone.
@@ -177,25 +180,69 @@ Cette option permet de désactiver le visionnage des films.
 Elle se trouve dans la section Graphismes > Options d'affichage.
 
 
-18. Ajouter l'option de jeu "Aucune attaque cosmétique" (disponible uniquement dans PST:EE)
+18. Ajouter l'option de jeu "Aucune attaque cosmétique" (uniquement disponible pour PST:EE)
 
-Activer cette option permet de ne faire apparaître les animations des attaques que lorsque les 
-personnages attaquent réellement (aucune animation n'apparaît pendant les feintes et les esquives). 
-Elle est déjà disponible dans les jeux BG:EE, BG2:EE et IWD:EE originaux.
+Cette option restreint les animations d'attaque des personnages à leurs véritables attaques 
+(NdT : Retire toutes les feintes et les esquives, où les créatures montrent une animation 
+d'attaque, mais n'effectuent pas vraiment de jet de toucher).
+Cette option est déjà disponible dans les jeux BG:EE, BG2:EE et IWD:EE non modifiés.
 
 Elle se trouve dans la section Jeu.
 
 
-19. Add in-game option "XP Bonus in Nightmare Mode" (not available in PST:EE)
+19. Ajouter l'option de jeu "Bonus d'expérience en mode cauchemar" (pas disponible dans PST:EE)
 
-Enabling this option allows your characters to get bonus XP in Legacy of Bhaal Mode (BGEE/BG2EE) 
-or Heart of Fury Mode (IWDEE). This setting will not affect the extra XP granted by the regular 
-difficulty modes.
+Activer cette option permet à vos personnages d'obtenir le bonus d'expérience inhérent au 
+mode Succession de Bhaal (BGEE/BG2EE) ou Cœur de furie (IWDEE). Cette option n'affecte pas 
+le bonus d'expérience acquis grâce aux modes de difficulté normaux.
 
-Option can be found in Gameplay section.
+Cette option se trouve dans la section Jeu.
 
 
-Credits
+20. Ajouter l'option de jeu "Émettre des sons d'ennui" (incompatible avec Lefreut's Enhanced UI - LeUI)
+
+Activer cette option déclenche des sons d'ennui par vos personnages si vous ne leur avez pas 
+assigné d'actions pendant une longue période d'inactivité.
+
+Cette option se trouve dans la section Son > Sons du personnage ou Jeu > Feedback (uniquement pour PST:EE).
+
+
+21. Ajouter l'option de jeu "Nombre d'images par seconde" (expérimental) (pas disponible dans PST:EE, pas 
+    compatible avec Lefreut's Enhanced UI (LeUI))
+
+Ce composant installe un curseur permettant de régler le nombre d'images par secondes affichées 
+par le jeu. Vous pouvez choisir trois valeurs : 30 (valeur par défaut du jeu), 40 et 50 images 
+par seconde.
+
+Ce composant est qualifié "d'expérimental", parce que cette option ne fonctionne pas :
+1. Si le réglage Options > Jeu > Feedback > "Plus de confirmations" est activé.
+2. Lorsqu'on quitte le jeu directement à partir d'une partie en cours.
+
+Cette option se trouve dans la section Jeu.
+
+
+22. Ajouter l'option de jeu "Feedback d'actions" (Incompatible avec Lefreut's Enhanced UI - LeUI)
+
+Ce composant installe un curseur permettant d'afficher autour du sprite des personnages des 
+petites icônes qui indiquent ce qu'ils sont en train de faire (par exemple se battre, lancer 
+un sort, accomplir un larcin). Vous pouvez définir plusieurs niveaux de feedback dont certains 
+nécessitent l'activation de l'option de Jeu "Mode de débogage".
+
+Cette option se trouve dans la section Jeu > Feedback
+
+
+23. Ajouter l'option de jeu "Afficher l'icône de passage au niveau supérieur" (uniquement disponible 
+    pour PST:EE, nécessite le mod « "Level Up" Icon Tweaks »)
+
+Ce composant vous permet d'afficher ou de cacher l'icône de "passage au niveau supérieur" sur 
+le portrait ou sur la barre de santé des membres de votre groupe prêts à gagner un niveau. Elle 
+nécessite l'installation du mod « "Level Up" Icon Tweaks », qui ajoute une fonction permettant 
+d'afficher cette icône.
+
+Cette option se trouve dans la section Jeu > Feedback
+
+
+Crédits
 ~~~~~~~
 
 Coding and testing: Argent77

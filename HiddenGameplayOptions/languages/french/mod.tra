@@ -2,7 +2,6 @@
 
 // *** Game options ***
 
-//Sinon on retrouve quelques options et leur description dans l'utilitaire de config d'Icewind Dale (console, sneak attack et shake screen on critical hit).
 @1000 = ~Activer le Mode débogage~
 @1001 = ~Permet d'activer/désactiver les raccourcis clavier de triche et le panneau de débogage.
 
@@ -39,8 +38,8 @@ Appuyez sur la touche F11 pour activer ou désactiver le mode de modification de
 
 ^NNote : Vous devez redémarrer le jeu pour que les modifications prennent effet.^-~
 
-@1600 = ~Limiter les sorts de druide pour les Clercs/Rôdeurs~
-@1601 = ~Cette option contrôle le choix des sorts de druide disponibles pour les personnages multi-classés ou jumelés Clercs/Rôdeurs.
+@1600 = ~Limiter les sorts de druide pour les Prêtres/Rôdeurs~
+@1601 = ~Cette option contrôle le choix des sorts de druide disponibles pour les personnages multi-classés ou jumelés Prêtres/Rôdeurs.
 
 L'activer limite au niveau 3 les sorts de druide utilisables par les rôdeurs. Les sorts de prêtre ne sont pas affectés.
 
@@ -96,15 +95,66 @@ L'activer limite au niveau 3 les sorts de druide utilisables par les rôdeurs. L
 
 ^NNote : Vous devez redémarrer le jeu pour que les modifications prennent effet.^-~
 
-@2700 = ~XP Bonus in Legacy of Bhaal Mode~
-@2701 = ~Enabling this option allows your characters to get bonus XP in Legacy of Bhaal Mode. This setting will not affect the extra XP granted by the regular difficulty modes.
+@2700 = ~Bonus d'expérience en mode Succession de Bhaal~
+@2701 = ~Activer cette option permet à vos personnages d'obtenir le bonus d'expérience inhérent au mode Succession de Bhaal Elle n'affecte pas le bonus d'expérience acquis grâce aux modes de difficulté normaux.
 
-^NNote: You must restart the game for changes to take effect.^-~
+^NNote : Vous devez redémarrer le jeu pour que les modifications prennent effet.^-~
 
-@2710 = ~XP Bonus in Heart of Fury Mode~
-@2711 = ~Enabling this option allows your characters to get bonus XP in Heart of Fury Mode. This setting will not affect the extra XP granted by the regular difficulty modes.
+@2710 = ~Bonus d'expérience en mode Cœur de furie~
+@2711 = ~Activer cette option permet à vos personnages d'obtenir le bonus d'expérience inhérent au mode Cœur de furie. Elle n'affecte pas le bonus d'expérience acquis grâce aux modes de difficulté normaux.
 
-^NNote: You must restart the game for changes to take effect.^-~
+^NNote : Vous devez redémarrer le jeu pour que les modifications prennent effet.^-~
+
+@2800 = ~Nombre d'images par seconde~
+@2801 = ~Ce curseur vous permet d'augmenter le nombre d'images par seconde affichées par le jeu, permettant ainsi d'accélérer tous les aspects du jeu.
+
+ATTENTION : définir le nombre d'images par seconde au-dessus de 30 peut provoquer des problèmes de synchronisation audio pendant les cinématiques et décaler les effets de certains sorts pendant les combats.
+
+^NNote : Vous devez redémarrer le jeu pour que les modifications prennent effet.^-~
+@2802 = ~30 images / seconde~
+@2803 = ~40 images / seconde~
+@2804 = ~50 images / seconde~
+
+@2900 = ~Feedback d'action~
+@2901 = ~Ce curseur permet de décider si, ou quand, les actions qu'effectue un personnage sont affichées sous forme de petites icônes autour de son sprite.
+  Désactivé : jamais.
+  Bas : concerne seulement les alliés quand le jeu est en pause.
+  Moyen : concerne seulement les alliés.
+  Haut* : concerne toutes les créatures quand le jeu est en pause.
+  Maximum* : concerne toutes les créatures.
+
+(*) Ne fonctionne que si le mode débogage est activé.
+
+Note : Vous devez redémarrer le jeu pour que les modifications prennent effet.~
+@2902 = ~Ce curseur permet de décider si, ou quand, les actions qu'effectue un personnage sont affichées sous forme de petites icônes autour de son sprite.
+  Désactivé : jamais.
+  Bas : concerne seulement les alliés quand le jeu est en pause.
+  Moyen : concerne seulement les alliés.
+  Haut* : concerne toutes les créatures quand le jeu est en pause.
+  Maximum* : concerne toutes les créatures.
+
+(*) Ne fonctionne que si le mode débogage est activé.
+
+^NNote: Vous devez redémarrer le jeu pour que les modifications prennent effet.^-~
+@2903 = ~Désactivé~
+@2904 = ~Bas~
+@2905 = ~Moyen~
+@2906 = ~Haut*~
+@2907 = ~Maximum*~
+
+@3000 = ~Afficher l'icône de passage au niveau supérieur~
+@3001 = ~Afficher ou non l'icône de "passage au niveau supérieur" sur le portrait ou sur la barre de santé des membres de votre groupe prêts à gagner un niveau.
+
+^NNote: Vous devez redémarrer le jeu pour que les modifications prennent effet.^-~
+
+@3100 = ~Sons d'ennui~
+@3101 = ~Entendre les sons d'ennui des personnages~
+@3102 = ~Entendre les sons d'ennui après une longue période d'inactivité.
+
+Note : Vous devez redémarrer le jeu pour que les modifications prennent effet.~
+@3103 = ~Cette option permet de contrôler si les membres du groupe émettent des sons d'ennui après une longue période d'inactivité.
+
+^NNote : Vous devez redémarrer le jeu pour que les modifications prennent effet.^-~
 
 
 // *** Misc. strings ***
