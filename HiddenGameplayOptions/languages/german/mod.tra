@@ -164,3 +164,5 @@ Hinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.
 @10001 = ~Hinterhältiger Angriff gescheitert~
 @10002 = ~Verkrüppelnder Schlag~
 @10003 = ~Waffe ist untauglich für hinterhältigen Angriff~
+@10004 = ~Schaden durch hinterhältigen Angriff~
+@10005 = ~Verkrüppelnder Schlag~

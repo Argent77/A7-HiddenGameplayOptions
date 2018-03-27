@@ -200,6 +200,12 @@ BEGIN
           ~STRREF_FEEDBACK_SNEAK_UNUSABLE_WEAPON~ BEGIN
             SET_2DA_ENTRY_LATER "a7_set_enginest" row 1 RESOLVE_STR_REF(@10003)  // Weapon is unsuitable for sneak attack
           END
+          ~STRREF_GUI_MIXED_3E_SNEAK_ATTACK~ BEGIN
+            SET_2DA_ENTRY_LATER "a7_set_enginest" row 1 RESOLVE_STR_REF(@10004) // Sneak Attack Damage
+          END
+          ~STRREF_GUI_MIXED_CRIPPLING_STRIKE~ BEGIN
+            SET_2DA_ENTRY_LATER "a7_set_enginest" row 1 RESOLVE_STR_REF(@10005) // Crippling Strike
+          END
           DEFAULT
         END
       END

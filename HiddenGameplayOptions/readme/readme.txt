@@ -257,6 +257,7 @@ History
 - Added option "No Cosmetic Attacks" to PSTEE
 - Added option "Enable Level Up Icon" to PSTEE
 - Made compatible with IWD:EE v2.5 or higher
+- Added two missing strings for option "3E Sneak Attack"
 
 1.3
 - Added Polish translation (thanks Cahir)

@@ -95,15 +95,15 @@ Habilite esta opção para limitar os feitiços de druida até o nível 3 – o 
 
 ^NObservação: Você deve reiniciar o jogo para que as mudanças tenham efeito.^-~
 
-@2700 = ~XP Bonus in Legacy of Bhaal Mode~
-@2701 = ~Enabling this option allows your characters to get bonus XP in Legacy of Bhaal Mode. This setting will not affect the extra XP granted by the regular difficulty modes.
+@2700 = ~Bônus de EXP no Modo Legado de Bhaal~
+@2701 = ~Habilitar esta opção permite que seus personagens recebam bônus de EXP no modo Legado de Bhaal. Esta opção não afeta a EXP adicional recebida nos modos de dificuldade existentes.
 
-^NNote: You must restart the game for changes to take effect.^-~
+^NObservação: Você deve reiniciar o jogo para que as mudanças sejam aplicadas.^-~
 
-@2710 = ~XP Bonus in Heart of Fury Mode~
-@2711 = ~Enabling this option allows your characters to get bonus XP in Heart of Fury Mode. This setting will not affect the extra XP granted by the regular difficulty modes.
+@2710 = ~Bônus de EXP no modo Coração de Fúria~
+@2711 = ~Habilitar esta opção permite que seus personagens recebam bônus de EXP no modo Coração de Fúria. Esta opção não afeta a EXP adicional recebida nos modos de dificuldade existentes.
 
-^NNote: You must restart the game for changes to take effect.^-~
+^NObservação: Você deve reiniciar o jogo para que as mudanças sejam aplicadas.^-~
 
 
 // *** Misc. strings ***
@@ -112,3 +112,5 @@ Habilite esta opção para limitar os feitiços de druida até o nível 3 – o 
 @10001 = ~Ataque Furtivo ineficaz~
 @10002 = ~Ataque Incapacitante~
 @10003 = ~A arma não é adequada para ataque furtivo~
+@10004 = ~Dano de Ataque Furtivo~
+@10005 = ~Ataque Incapacitante~

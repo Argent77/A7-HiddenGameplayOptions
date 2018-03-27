@@ -163,3 +163,5 @@ Note: You must restart the game for changes to take effect.~
 @10001 = ~Sneak Attack ineffective~
 @10002 = ~Crippling Strike~
 @10003 = ~Weapon is unsuitable for sneak attack~
+@10004 = ~Sneak Attack Damage~
+@10005 = ~Crippling Strike~
