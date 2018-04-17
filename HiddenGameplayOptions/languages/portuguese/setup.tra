@@ -21,7 +21,11 @@
 @24 = ~Adicionar opcao "Habilitar Neblina"~
 @25 = ~Adicionar opcao "Desabilitar Filmes"~
 @26 = ~Adicionar opcao "Desabilitar Ataques Cosmeticos"~
-@27 = ~Add in-game option "XP Bonus in Nightmare Mode"~
+@27 = ~Adicionar opcao "Bonus de EXP no Modo Pesadelo"~
+@28 = ~Adicionar opcao "Disparar Sons de Tedio"~
+@29 = ~Adicionar opcao "Taxa de Quadros" (experimental)~
+@30 = ~Adicionar opcao "Resposta de Acao"~
+@31 = ~Adicionar opcao "Exibir Icono de Subir Nivel"~
 
 @100 = ~E necessario que o jogo tenha o patch da v2.0 ou maior.~
 @101 = ~Nao e possivel corrigir arquivo LUA~
@@ -30,3 +34,5 @@
 @104 = ~Opcao nao disponivel para este jogo.~
 @105 = ~Opcao ja presente neste jogo.~
 @106 = ~Esta modificacao nao e compativel com o componente "Opcoes Escondidas de Jogo" da modificacao EEUITweaks.~
+@107 = ~Esse componente nao e compativel com "Enhanced UI (LeUI)" de Lefreu.~
+@108 = ~Requer a modificacao "Level Up Icon Tweaks".~
