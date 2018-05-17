@@ -298,7 +298,7 @@ end
 
     // 3. esc menu / start main
     PATCH_IF (success && NOT GAME_IS ~pstee~) BEGIN
-      PATCH_IF (MOD_IS_INSTALLED ~LeUI.tp2~ 0) BEGIN
+      PATCH_IF (INSTALLED_LEUI) BEGIN
         SET lefreut = 1
         TEXT_SPRINT name ~START_MAIN~
       END ELSE BEGIN
@@ -323,9 +323,9 @@ end
             END
           END ELSE BEGIN
             // remaining games
-            SET ofs = INDEX_BUFFER(~['"]QUIT_BUTTON['"],[ %TAB%]*function()[ %TAB%]+Infinity_ShutdownGame()[ %TAB%]+end,~ ofs)
+            SET ofs = INDEX_BUFFER(~['"]QUIT_BUTTON['"],[ %TAB%]*function()[ %TAB%]+\(Infinity_ShutdownGame()\|optionsScreen:QuitGame()\)[ %TAB%]+end,?~ ofs)
             PATCH_IF (ofs >= 0) BEGIN
-              SET ofs = INDEX_BUFFER(~Infinity_ShutdownGame()~ ofs)
+              SET ofs = INDEX_BUFFER(~\(Infinity_ShutdownGame()\|optionsScreen:QuitGame()\)~ ofs)
               PATCH_IF (ofs > 0) BEGIN
                 TEXT_SPRINT code ~flushDeferredOptions() ~
                 SET codeLen = STRING_LENGTH ~%code%~

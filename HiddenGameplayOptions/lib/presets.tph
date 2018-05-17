@@ -234,7 +234,7 @@ END
 DEFINE_ACTION_FUNCTION OPTION_CRITICAL_HIT_SCREEN_SHAKE
 BEGIN
   ACTION_IF (GAME_IS ~pstee~ OR
-             MOD_IS_INSTALLED ~leui.tp2~ 0) BEGIN
+             INSTALLED_LEUI) BEGIN
     OUTER_TEXT_SPRINT arrayName "toggleTitles"
   END ELSE BEGIN
     OUTER_TEXT_SPRINT arrayName "feedbackToggles"
@@ -260,7 +260,7 @@ END
 /** Add in-game option "Show extra combat info" */
 DEFINE_ACTION_FUNCTION OPTION_EXTRA_COMBAT_INFO
 BEGIN
-  ACTION_IF (MOD_IS_INSTALLED ~leui.tp2~ 0) BEGIN
+  ACTION_IF (INSTALLED_LEUI) BEGIN
     OUTER_TEXT_SPRINT arrayName "toggleTitles"
   END ELSE BEGIN
     OUTER_TEXT_SPRINT arrayName "messagesToggles"
@@ -286,7 +286,7 @@ END
 /** Add in-game option "Show Game Date and Time on Pause" */
 DEFINE_ACTION_FUNCTION OPTION_DATE_ON_PAUSE
 BEGIN
-  ACTION_IF (MOD_IS_INSTALLED ~leui.tp2~ 0) BEGIN
+  ACTION_IF (INSTALLED_LEUI) BEGIN
     OUTER_TEXT_SPRINT arrayName "toggleTitles"
   END ELSE BEGIN
     OUTER_TEXT_SPRINT arrayName "messagesToggles"
