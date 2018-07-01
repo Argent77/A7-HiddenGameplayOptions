@@ -15,8 +15,8 @@ Die Enhanced Editions beinhalten eine große Anzahl an Optionen, die nicht dokum
 normalerweise nur direkt in der Konfigurationsdatei gesetzt werden können. Dieser Aufwand kann
 weniger erfahrene Spieler davon abschrecken, sie zu nutzen.
 
-Diese Mod fügt eine Anzahl nützlicher Optionen zum Spiel hinzu, wie z.B. die Debugkonsole und
-weitere Grafik- und Spieloptionen.
+Diese Mod fügt eine Anzahl nützlicher Optionen zum Spiel hinzu, wie z.B. die berühmt-berüchtigte
+Debugkonsole und viele weitere Grafik- und Spieloptionen.
 
 Alle Enhanced Editions ab Spielversion 2.0 werden unterstützt. Das umfasst derzeit BG:EE (mit oder
 ohne SoD), BG2:EE, IWD:EE, PST:EE und EET.
@@ -42,8 +42,6 @@ Die Mod kann nicht zusammen mit der EEUITweaks-Komponente "Hidden Game Options" 
 Das Verändern von UI-Definitionen ist eine komplizierte Angelegenheit. Um sicherzustellen, dass
 ein misslungener Schreibversuch keine Schäden anrichtet, erzwingt die Mod einen kritischen Fehler
 und stellt in dem Fall den Urzustand der Spieldateien wieder her.
-
-Diese Mod ist gegenwärtig nicht mit der EEUITweaks-Komponente "Hidden Game Options" kompatibel.
 
 
 Komponenten
