@@ -1,11 +1,11 @@
 Faire apparaître les Options de jeu cachées
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Version        : 1.3
+Version        : 2.0
 Auteur         : Argent77
 
 Téléchargement : https://github.com/Argent77/A7-HiddenGameplayOptions/releases/latest
-Discussion     : https://forums.beamdog.com/discussion/64524/mod-reveal-hidden-gameplay-options-for-all-ee-games-patched-to-v2-0-or-higher
+Discussion     : https://forums.beamdog.com/discussion/64524
 
 
 Généralités
@@ -288,7 +288,7 @@ History
 - Added option "Show Area of Effect Range"
 - Added option "No Cosmetic Attacks" to PSTEE
 - Added option "Enable Level Up Icon" to PSTEE
-- Made compatible with IWD:EE v2.5 or higher
+- Made compatible with EE patch v2.5
 - Added two missing strings for option "3E Sneak Attack"
 
 1.3
