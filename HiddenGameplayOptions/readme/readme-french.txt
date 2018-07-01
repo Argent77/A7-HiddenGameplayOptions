@@ -242,6 +242,16 @@ d'afficher cette icône.
 Cette option se trouve dans la section Jeu > Feedback
 
 
+24. Ajouter l'option de jeu "Afficher la portée des zones d'effet des sorts" (pas disponible dans
+    PST:EE)
+
+Activer cette option affiche la portée de la zone d'effet d'un sort avant de le lancer.
+
+Elle se trouve dans la section Jeu > Feedback > Feedback visuel.
+
+Attention : cette option est inopérante pour les jeux antérieurs à la version 2.5.16.6.
+
+
 Crédits
 ~~~~~~~
 
@@ -270,6 +280,7 @@ History
 - Added option "Set Frame Rate"
 - Added option "Action Feedback"
 - Added option "Trigger Bored Sounds"
+- Added option "Show Area of Effect Range"
 - Added option "No Cosmetic Attacks" to PSTEE
 - Added option "Enable Level Up Icon" to PSTEE
 - Made compatible with IWD:EE v2.5 or higher

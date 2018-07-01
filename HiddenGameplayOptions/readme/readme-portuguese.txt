@@ -234,6 +234,15 @@ funcionalidade de habilitar a visualização do ícone.
 A opção pode ser encontrada em Jogabilidade > Resposta.
 
 
+24. Adicionar opção "Mostrar Alcance da Área de Efeito" (não disponível para PST:EE)
+
+Habilitar esta opção exibe o alcance da Área de Efeito de um feitiço antes de ele ser lançado.
+
+A opção pode ser encontrada em Jogabilidade > Resposta > Resposta Visual.
+
+Observação: Esta opção não tem efeito em jogos antes da versão de correção 2.5.16.6.
+
+
 Credits
 ~~~~~~~
 
@@ -262,6 +271,7 @@ History
 - Added option "Set Frame Rate"
 - Added option "Action Feedback"
 - Added option "Trigger Bored Sounds"
+- Added option "Show Area of Effect Range"
 - Added option "No Cosmetic Attacks" to PSTEE
 - Added option "Enable Level Up Icon" to PSTEE
 - Made compatible with IWD:EE v2.5 or higher

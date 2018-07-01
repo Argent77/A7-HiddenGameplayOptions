@@ -245,6 +245,16 @@ installiert sein, um die Anzeige des Symbols für Stufenaufstiege ein- oder auss
 Die Option kann in Spielmechanik > Rückmeldungen gefunden werden.
 
 
+24. Spieloption "Wirkungsbereich von Zaubern anzeigen" hinzufügen (nicht in PST:EE verfügbar)
+
+Wenn diese Option aktiviert ist, wird der Wirkungsbereich des gewählten Zaubers angezeigt, bevor er
+gewirkt wird.
+
+Die Option kann in Spieleinstellungen > Rückmeldungen > Visuelle Rückmeldungen gefunden werden.
+
+Hinweis: Diese Option wirkt sich nur auf Spiele ab Patchversion 2.5.16.6 aus.
+
+
 Credits
 ~~~~~~~
 
@@ -273,6 +283,7 @@ History
 - Added option "Set Frame Rate"
 - Added option "Action Feedback"
 - Added option "Trigger Bored Sounds"
+- Added option "Show Area of Effect Range"
 - Added option "No Cosmetic Attacks" to PSTEE
 - Added option "Enable Level Up Icon" to PSTEE
 - Made compatible with IWD:EE v2.5 or higher

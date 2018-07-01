@@ -465,6 +465,28 @@ BEGIN
   END
 END
 
+/** Add in-game option "Display Level Up Icon" */
+DEFINE_ACTION_FUNCTION OPTION_ENABLE_LEVEL_UP
+BEGIN
+  OUTER_TEXT_SPRINT arrayName "messagesToggles"
+
+  LAF INSTALL_CHECK_OPTION
+  INT_VAR
+    optLabelTra   = 3000
+    optDescTra    = 3001
+    controlID     = "-184"
+    autoFail      = 1
+  STR_VAR
+    arrayName     = EVAL "%arrayName%"
+    optLabelName  = "A7_ENABLE_LEVEL_UP_LABEL"
+    optDescName   = "A7_ENABLE_LEVEL_UP_DESCRIPTION"
+    iniSection    = "Game Options"
+    iniName       = "Show Level Up Icon"
+  RET
+    success
+  END
+END
+
 /** Add in-game option "Bored Sounds" */
 DEFINE_ACTION_FUNCTION OPTION_BORED_TIMEOUT
 BEGIN
@@ -496,23 +518,27 @@ BEGIN
   END
 END
 
-/** Add in-game option "Display Level Up Icon" */
-DEFINE_ACTION_FUNCTION OPTION_ENABLE_LEVEL_UP
+/** Add in-game option "Show AOE" */
+DEFINE_ACTION_FUNCTION OPTION_SHOW_AOE
 BEGIN
-  OUTER_TEXT_SPRINT arrayName "messagesToggles"
+  ACTION_IF (INSTALLED_LEUI) BEGIN
+    OUTER_TEXT_SPRINT arrayName "toggleTitles"
+  END ELSE BEGIN
+    OUTER_TEXT_SPRINT arrayName "feedbackToggles"
+  END
 
   LAF INSTALL_CHECK_OPTION
   INT_VAR
-    optLabelTra   = 3000
-    optDescTra    = 3001
-    controlID     = "-184"
+    optLabelTra   = 3200
+    optDescTra    = 3201
+    controlID     = "-186"
     autoFail      = 1
   STR_VAR
     arrayName     = EVAL "%arrayName%"
-    optLabelName  = "A7_ENABLE_LEVEL_UP_LABEL"
-    optDescName   = "A7_ENABLE_LEVEL_UP_DESCRIPTION"
+    optLabelName  = "A7_SHOW_AOE_LABEL"
+    optDescName   = "A7_SHOW_AOE_DESCRIPTION"
     iniSection    = "Game Options"
-    iniName       = "Show Level Up Icon"
+    iniName       = "Show AOE"
   RET
     success
   END

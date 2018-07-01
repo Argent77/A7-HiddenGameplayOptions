@@ -98,19 +98,19 @@ Habilite esta opção para limitar os feitiços de druida até o nível 3 – o 
 @2700 = ~Bônus de EXP no Modo Legado de Bhaal~
 @2701 = ~Habilitar esta opção permite que seus personagens recebam bônus de EXP no modo Legado de Bhaal. Esta opção não afeta a EXP adicional recebida nos modos de dificuldade existentes.
 
-^NObservação: Você deve reiniciar o jogo para que as mudanças sejam aplicadas.^-~
+^NObservação: Você deve reiniciar o jogo para que as mudanças tenham efeito.^-~
 
 @2710 = ~Bônus de EXP no modo Coração de Fúria~
 @2711 = ~Habilitar esta opção permite que seus personagens recebam bônus de EXP no modo Coração de Fúria. Esta opção não afeta a EXP adicional recebida nos modos de dificuldade existentes.
 
-^NObservação: Você deve reiniciar o jogo para que as mudanças sejam aplicadas.^-~
+^NObservação: Você deve reiniciar o jogo para que as mudanças tenham efeito.^-~
 
 @2800 = ~Taxa de Quadro~
 @2801 = ~Esta barra lhe permite aumentar a taxa de quadro que o jogo utiliza, acelerando todos os aspectos da jogabilidade.
 
 AVISO: Ajustar a taxa de quadro acima de 30 pode resultar em problemas de sincronia do áudio durante filmes, bem como em efeitos dessincronizados de feitiço durante o combate.
 
-^NObservação: Você deve reiniciar o jogo para que as mudanças sejam aplicadas.^-~
+^NObservação: Você deve reiniciar o jogo para que as mudanças tenham efeito.^-~
 @2802 = ~30 quadros/seg.~
 @2803 = ~40 quadros/seg.~
 @2804 = ~50 quadros/seg.~
@@ -125,7 +125,7 @@ AVISO: Ajustar a taxa de quadro acima de 30 pode resultar em problemas de sincro
 
 (*) Apenas quando o Modo Depurador estiver ligado.
 
-Observação: Você deve reiniciar o jogo para que as mudanças sejam aplicadas.~
+Observação: Você deve reiniciar o jogo para que as mudanças tenham efeito.~
 @2902 = ~Esta barra controla se e quando as ações são exibidas como pequenos ícones ao redor de um personagem.
   Desligada — nunca
   Baixa — apenas para aliados quando pausados
@@ -135,7 +135,7 @@ Observação: Você deve reiniciar o jogo para que as mudanças sejam aplicadas.
 
 (*) Apenas quando o Modo Depurador estiver ligado.
 
-^NObservação: Você deve reiniciar o jogo para que as mudanças sejam aplicadas.^-~
+^NObservação: Você deve reiniciar o jogo para que as mudanças tenham efeito.^-~
 @2903 = ~Desligada~
 @2904 = ~Baixa~
 @2905 = ~Média~
@@ -145,16 +145,21 @@ Observação: Você deve reiniciar o jogo para que as mudanças sejam aplicadas.
 @3000 = ~Exibir Ícone de Subir Nível~
 @3001 = ~Esta opção lhe permite mostrar ou esconder o ícone "Subir Nível", que pode ser encontrado na janela de retrato ou na barra de vida dos membros da equipe que estão prontos para subirem de nível.
 
-^NObservação: Você deve reiniciar o jogo para que as mudanças sejam aplicadas.^-~
+^NObservação: Você deve reiniciar o jogo para que as mudanças tenham efeito.^-~
 
 @3100 = ~Sons de Tédio~
 @3101 = ~Reproduzir Sons de Tédio do Personagem~
 @3102 = ~Reproduzir sons de tédio após um longo período de inatividade.
 
-Observação: Você deve reiniciar o jogo para que as mudanças sejam aplicadas.~
+Observação: Você deve reiniciar o jogo para que as mudanças tenham efeito.~
 @3103 = ~Isto controla quando os membros da equipe disparam sons de tédio após um longo período de inatividade.
 
-^NObservação: Você deve reiniciar o jogo para que as mudanças sejam aplicadas.^-~
+^NObservação: Você deve reiniciar o jogo para que as mudanças tenham efeito.^-~
+
+@3200 = ~Exibir Alcance da Área de Efeito~
+@3201 = ~Habilitar esta opção exibe o alcance da Área de Efeito de um feitiço antes de ele ser lançado.
+
+^NObservação: Você deve reiniciar o jogo para que as mudanças tenham efeito.^-~
 
 
 // *** Misc. strings ***

@@ -135,7 +135,7 @@ Note : Vous devez redémarrer le jeu pour que les modifications prennent effet.~
 
 (*) Ne fonctionne que si le mode débogage est activé.
 
-^NNote: Vous devez redémarrer le jeu pour que les modifications prennent effet.^-~
+^NNote : Vous devez redémarrer le jeu pour que les modifications prennent effet.^-~
 @2903 = ~Désactivé~
 @2904 = ~Bas~
 @2905 = ~Moyen~
@@ -145,7 +145,7 @@ Note : Vous devez redémarrer le jeu pour que les modifications prennent effet.~
 @3000 = ~Afficher l'icône de passage au niveau supérieur~
 @3001 = ~Afficher ou non l'icône de "passage au niveau supérieur" sur le portrait ou sur la barre de santé des membres de votre groupe prêts à gagner un niveau.
 
-^NNote: Vous devez redémarrer le jeu pour que les modifications prennent effet.^-~
+^NNote : Vous devez redémarrer le jeu pour que les modifications prennent effet.^-~
 
 @3100 = ~Sons d'ennui~
 @3101 = ~Entendre les sons d'ennui des personnages~
@@ -153,6 +153,11 @@ Note : Vous devez redémarrer le jeu pour que les modifications prennent effet.~
 
 Note : Vous devez redémarrer le jeu pour que les modifications prennent effet.~
 @3103 = ~Cette option permet de contrôler si les membres du groupe émettent des sons d'ennui après une longue période d'inactivité.
+
+^NNote : Vous devez redémarrer le jeu pour que les modifications prennent effet.^-~
+
+@3200 = ~Afficher la portée des zones d'effet des sorts~
+@3201 = ~Activer cette option affiche la portée de la zone d'effet d'un sort avant de le lancer.
 
 ^NNote : Vous devez redémarrer le jeu pour que les modifications prennent effet.^-~
 

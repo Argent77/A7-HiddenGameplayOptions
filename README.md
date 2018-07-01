@@ -148,6 +148,12 @@ This option allows you to display or hide the "Level Up" icon, that can be found
 
 *Option can be found in Gameplay > Feedback.*
 
+#### 24. Add in-game option "Show Area of Effect Range" *(not available for PST:EE)*
+
+Setting this option displays the range of an Area of Effect spell before it is fired. This option has no effect in games before patch version 2.5.16.6.
+
+*Option can be found in Gameplay > Feedback > Visual Feedback.*
+
 ## Copyright Notice
 
 The mod "Reveal Hidden Gameplay Options" is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).

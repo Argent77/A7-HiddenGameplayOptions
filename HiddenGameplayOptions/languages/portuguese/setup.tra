@@ -26,6 +26,7 @@
 @29 = ~Adicionar opcao "Taxa de Quadros" (experimental)~
 @30 = ~Adicionar opcao "Resposta de Acao"~
 @31 = ~Adicionar opcao "Exibir Icono de Subir Nivel"~
+@32 = ~Adicionar opcao "Mostrar Alcance da Area de Efeito"~
 
 @100 = ~E necessario que o jogo tenha o patch da v2.0 ou maior.~
 @101 = ~Nao e possivel corrigir arquivo LUA~

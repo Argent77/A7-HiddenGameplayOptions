@@ -93,6 +93,8 @@ BEGIN @2  // All available options
   ACTION_IF (GAME_IS ~pstee~ &&
              MOD_IS_INSTALLED ~setup-A7-LevelUpTweaks.tp2~ 0) BEGIN LAF OPTION_ENABLE_LEVEL_UP END END
 
+  ACTION_IF (NOT GAME_IS ~pstee~) BEGIN LAF OPTION_SHOW_AOE END END
+
 
 BEGIN @3  // Selected options
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @100  // Enhanced Edition game patched to v2.0 or higher required.
@@ -275,3 +277,11 @@ BEGIN @31 // Add in-game option "Enable Level Up Icon"
   DESIGNATED 31
 
   LAF OPTION_ENABLE_LEVEL_UP END
+
+
+BEGIN @32 // Add in-game option "Show Area of Effect Radius"
+  REQUIRE_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 1 @103 // Component "Selected options" not selected.
+  REQUIRE_PREDICATE (NOT GAME_IS ~pstee~) @104 // Option not available for this game.
+  DESIGNATED 32
+
+  LAF OPTION_SHOW_AOE END

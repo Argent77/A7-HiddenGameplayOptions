@@ -26,6 +26,7 @@
 @29 = ~Ajouter l'option de jeu "Nombre d'images par seconde" (experimentale)~
 @30 = ~Ajouter l'option de jeu "Feedback d'actions"~
 @31 = ~Ajouter l'option de jeu "Afficher l'icone de passage au niveau superieur"~
+@32 = ~Ajouter l'option de jeu "Afficher la portee des zones d'effet des sorts"~
 
 @100 = ~Ce mod requiert un jeu beneficiant du patch v2.0 ou ulterieur.~
 @101 = ~Echec de modification du fichier LUA.~

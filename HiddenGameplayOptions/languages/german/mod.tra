@@ -157,6 +157,11 @@ Hinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.
 
 ^NHinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.^-~
 
+@3200 = ~Wirkungsbereich von Zaubern anzeigen~
+@3201 = ~Wenn diese Option aktiviert ist, wird der Wirkungsbereich des gewählten Zaubers angezeigt, bevor er gewirkt wird.
+
+^NHinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.^-~
+
 
 // *** Misc. strings ***
 

@@ -156,6 +156,11 @@ Note: You must restart the game for changes to take effect.~
 
 ^NNote: You must restart the game for changes to take effect.^-~
 
+@3200 = ~Show Area of Effect Range~
+@3201 = ~Enabling this setting displays the range of an Area of Effect spell before it is fired.
+
+^NNote: You must restart the game for changes to take effect.^-~
+
 
 // *** Misc. strings ***
 

@@ -189,6 +189,7 @@ lub Serce Furii (IWD:EE). Nie wpływa jednak na ilość PD otrzymywanych w przyp
 
 Opcja ta znajduje się w sekcji Opcje gry.
 
+
 20. Dodaj w grze opcję „Odtwarzanie odgłosów znudzenia” (niekompatybilne z modyfikacją Lefreut's 
     Enhanced UI (LeUI))
 
@@ -196,6 +197,7 @@ Włączenie tej opcji pozwala na odtwarzanie przez członków drużyny odgłosó
 dłuższej bezczynności.
 
 Opcja ta znajduje się w sekcji Dźwięki > Odgłosy postaci lub Opcje gry > Interakcja (tylko PST:EE).
+
 
 21. Dodaj w grze opcję „Wskaźnik ilości klatek” (opcja eksperymentalna) (niedostępne dla PST:EE, 
     niekompatybilne z modyfikacją „Lefreut's Enhanced UI (LeUI)”)
@@ -210,6 +212,7 @@ których opcja ta nie wywołuje żadnego efektu:
 
 Opcja ta znajduje się w sekcji Opcje gry.
 
+
 22. Dodaj w grze opcję „Wskazówki dotyczące wykonywanych czynności” (niekompatybilne z modyfikacją 
     „Lefreut's Enhanced UI (LeUI)”)
 
@@ -220,6 +223,7 @@ Niektóre stopnie wymagają włączenia „trybu debugowania”, znajdującego s
 
 Opcja ta znajduje się w sekcji Opcje gry > Interakcja.
 
+
 23. Dodaj w grze opcję „Wyświetlanie ikony zmiany poziomu” (dostępne tylko dla PST:EE, wymaga 
     uprzedniego zainstalowania modyfikacji „Ikona zmiany poziomu”)
 
@@ -228,6 +232,16 @@ drużyny mogących awansować na kolejny poziom. Komponent ten wymaga uprzednieg
 modyfikacji „Ikona zmiany poziomu”, która umożliwia wyświetlanie ikony awansu na kolejny poziom.
 
 Opcja ta znajduje się w sekcji Opcje gry > Interakcja.
+
+
+24. Dodaj w grze opcje „Pokazywanie zasięgu czarów obszarowych” (niedostępne w PST:EE)
+
+Opcja ta pozwala na pokazywanie zasięgu czarów obszarowych przed ich rzuceniem.
+
+Opcja ta znajduje się w sekcji Opcje gry > Interakcja > Graficzne wskazówki.
+
+Uwaga: Opcja ta nie działa w wersjach gry niższych niż 2.5.16.6.
+
 
 Credits
 ~~~~~~~
@@ -257,6 +271,7 @@ History
 - Added option "Set Frame Rate"
 - Added option "Action Feedback"
 - Added option "Trigger Bored Sounds"
+- Added option "Show Area of Effect Range"
 - Added option "No Cosmetic Attacks" to PSTEE
 - Added option "Enable Level Up Icon" to PSTEE
 - Made compatible with IWD:EE v2.5 or higher
