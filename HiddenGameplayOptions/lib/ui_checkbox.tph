@@ -8,7 +8,7 @@ INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
  * INT_VAR optDescTra     The TRA reference number of the option description text.
  * INT_VAR controlID      A unique number that identifies this option.
  *                        Recommended: Use negative number to minimize interference with existing IDs.
- * INT_VAR multiplier     An optional multiplier that can be used to adjust the resulting setting 
+ * INT_VAR multiplier     An optional multiplier that can be used to adjust the resulting setting
  *                        if it should differ from '1' for "enabled". (Default: 1)
  * INT_VAR autoFail       Set to nonzero to force termination of component installation on error.
  * STR_VAR arrayName      Name of the LUA array containing option definitions.
@@ -111,7 +111,7 @@ END
  * Adds a new option to the 'Gameplay' section of the Options menu.
  * INT_VAR controlID  A unique number that identifies the option.
  *                    Recommended: Use negative number to minimize interference with existing IDs.
- * INT_VAR multiplier An optional multiplier that can be used to adjust the resulting setting 
+ * INT_VAR multiplier An optional multiplier that can be used to adjust the resulting setting
  *                    if it should differ from '1' for "enabled". (Default: 1)
  * STR_VAR arrayName  Name of the LUA array containing option definitions.
  * STR_VAR optLabel   Variable name referring to option label text (e.g. "SHOW_DEBUG_CONSOLE_LABEL").
@@ -431,11 +431,11 @@ BEGIN
     END ELSE BEGIN
       SET mode = 0  // no matching option found
     END
-    
+
     PATCH_IF (NOT VARIABLE_IS_SET "indent") BEGIN
       TEXT_SPRINT indent ~%TAB%%TAB%%TAB%%TAB%~
     END
-    
+
     PATCH_IF (mode > 0) BEGIN
       TEXT_SPRINT code ~~
       PATCH_IF (mode = 1) BEGIN

@@ -72,7 +72,7 @@ OUTER_TEXT_SPRINT codeFrameRateSlider ~%TAB%text
  * INT_VAR autoFail       Set to nonzero to force termination of component installation on error.
  * STR_VAR optLabelName   Name of the option label variable.
  * STR_VAR optDescName    Name of the option description variable.
- * STR_VAR optInfoName_0  Zero, one or more additional strings used by the control. Number of entries 
+ * STR_VAR optInfoName_0  Zero, one or more additional strings used by the control. Number of entries
  *                        must match the number of optInfo parameters.
  * STR_VAR condition      The condition when the slider control should be visible.
  * STR_VAR iniSection     Section name of the option that will be added to baldur.lua (e.g. "Program Options").

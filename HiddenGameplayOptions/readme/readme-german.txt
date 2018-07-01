@@ -11,36 +11,36 @@ Diskussion: https://forums.beamdog.com/discussion/64524/mod-reveal-hidden-gamepl
 Übersicht
 ~~~~~~~~~
 
-Die Enhanced Editions beinhalten eine große Anzahl an Optionen, die nicht dokumentiert sind und 
-normalerweise nur direkt in der Konfigurationsdatei gesetzt werden können. Dieser Aufwand kann 
+Die Enhanced Editions beinhalten eine große Anzahl an Optionen, die nicht dokumentiert sind und
+normalerweise nur direkt in der Konfigurationsdatei gesetzt werden können. Dieser Aufwand kann
 weniger erfahrene Spieler davon abschrecken, sie zu nutzen.
 
-Diese Mod fügt eine Anzahl nützlicher Optionen zum Spiel hinzu, wie z.B. die Debugkonsole und 
+Diese Mod fügt eine Anzahl nützlicher Optionen zum Spiel hinzu, wie z.B. die Debugkonsole und
 weitere Grafik- und Spieloptionen.
 
-Alle Enhanced Editions ab Spielversion 2.0 werden unterstützt. Das umfasst derzeit BG:EE (mit oder 
+Alle Enhanced Editions ab Spielversion 2.0 werden unterstützt. Das umfasst derzeit BG:EE (mit oder
 ohne SoD), BG2:EE, IWD:EE, PST:EE und EET.
 
 
 Installation
 ~~~~~~~~~~~~
 
-Dies ist eine WeiDU Mod. Das bedeutet, sie ist sehr einfach zu installieren. Entpackt die 
-heruntergeladene Zipdatei in das Spieleverzeichnis und startet "setup-HiddenGameplayOptions.exe". 
+Dies ist eine WeiDU Mod. Das bedeutet, sie ist sehr einfach zu installieren. Entpackt die
+heruntergeladene Zipdatei in das Spieleverzeichnis und startet "setup-HiddenGameplayOptions.exe".
 Folgt den Anweisungen des Programms und die Mod ist startbereit.
 
 
 Kompatibilität
 ~~~~~~~~~~~~~~
 
-Die Mod unterstützt alle Enhanced Editions ab Spielversion 2.0. Sie ist außerdem mit Peccas 
-"Dragonspear UI++" und größtenteils mit Lefreuts Enhanced UI (LeUI) kompatibel. 
+Die Mod unterstützt alle Enhanced Editions ab Spielversion 2.0. Sie ist außerdem mit Peccas
+"Dragonspear UI++" und größtenteils mit Lefreuts Enhanced UI (LeUI) kompatibel.
 Einige Optionen werden ggf. in andere Bereiche verschoben, wenn diese Mods erkannt wurden.
 
 Die Mod kann nicht zusammen mit der EEUITweaks-Komponente "Hidden Game Options" installiert werden.
 
-Das Verändern von UI-Definitionen ist eine komplizierte Angelegenheit. Um sicherzustellen, dass 
-ein misslungener Schreibversuch keine Schäden anrichtet, erzwingt die Mod einen kritischen Fehler 
+Das Verändern von UI-Definitionen ist eine komplizierte Angelegenheit. Um sicherzustellen, dass
+ein misslungener Schreibversuch keine Schäden anrichtet, erzwingt die Mod einen kritischen Fehler
 und stellt in dem Fall den Urzustand der Spieldateien wieder her.
 
 Diese Mod ist gegenwärtig nicht mit der EEUITweaks-Komponente "Hidden Game Options" kompatibel.
@@ -51,7 +51,7 @@ Komponenten
 
 1. Versteckte Spieloptionen installieren (Hauptkomponente)
 
-Diese Komponente bietet die Möglichkeit, alle oder nur ausgewählte Optionen zu installieren. 
+Diese Komponente bietet die Möglichkeit, alle oder nur ausgewählte Optionen zu installieren.
 Weitere Informationen zu den einzelnen Optionen siehe unten.
 
 
@@ -66,7 +66,7 @@ Die Option kann in den Spieleinstellungen gefunden werden.
 
 3. Spieloption "UI Bearbeitungsmodus" hinzufügen
 
-Diese Option kann genutzt werden, um die Bearbeitungsfunktionen der Benutzeroberfläche im Spiel 
+Diese Option kann genutzt werden, um die Bearbeitungsfunktionen der Benutzeroberfläche im Spiel
 nutzen zu können.
 
 Die Option kann in den Spieleinstellungen gefunden werden.
@@ -88,7 +88,7 @@ Die Option kann in den Spieleinstellungen gefunden werden.
 
 6. Spieloption "Bereichssymbole mit TAB anzeigen" hinzufügen
 
-Diese Option kann genutzt werden, um bei gedrückter TAB-Taste zusätzlich Symbole für interaktive 
+Diese Option kann genutzt werden, um bei gedrückter TAB-Taste zusätzlich Symbole für interaktive
 Regionen zu sehen.
 
 Die Option kann in den Spieleinstellungen gefunden werden.
@@ -101,10 +101,10 @@ Diese Option kann genutzt werden, um Gespräche mit der Leertaste fortsetzen zu 
 Die Option kann in den Spieleinstellungen gefunden werden.
 
 
-8. Spieloption "Druidenzauber für Kleriker/Waldläufer einschränken" hinzufügen 
+8. Spieloption "Druidenzauber für Kleriker/Waldläufer einschränken" hinzufügen
    (nicht in PST:EE verfügbar)
 
-Diese Option kann genutzt werden, um die Verfügbarkeit von Druidenzaubern für mehrklassige 
+Diese Option kann genutzt werden, um die Verfügbarkeit von Druidenzaubern für mehrklassige
 Kleriker/Waldläufer auf die ersten drei Stufen zu beschränken.
 
 Die Option kann in den Spieleinstellungen gefunden werden.
@@ -112,8 +112,8 @@ Die Option kann in den Spieleinstellungen gefunden werden.
 
 9. Spieloption "3E Heimlicher Angriff" hinzufügen
 
-Diese Option kann genutzt werden, um die Fähigkeiten Heimlicher Angriff und Verkrüppelnder Schlag 
-ein- bzw. auszuschalten. Die Regeln für diese Fähigkeiten sind den Dungeons & Dragons®-Regeln 3 
+Diese Option kann genutzt werden, um die Fähigkeiten Heimlicher Angriff und Verkrüppelnder Schlag
+ein- bzw. auszuschalten. Die Regeln für diese Fähigkeiten sind den Dungeons & Dragons®-Regeln 3
 von Wizards of the Coast ähnlich.
 
 Die Option kann in den Spieleinstellungen gefunden werden.
@@ -136,16 +136,16 @@ Die Option kann in Spieleinstellungen > Rückmeldungen > Textrückmeldungen gefu
 
 12. Spieloption "Spielzeit und -datum im Pausenmodus anzeigen" hinzufügen
 
-Diese Option kann genutzt werden, um Spielzeit und -datum anzuzeigen, wenn der Pausenmodus 
+Diese Option kann genutzt werden, um Spielzeit und -datum anzuzeigen, wenn der Pausenmodus
 aktiviert wird.
 
 Die Option kann in Spieleinstellungen > Rückmeldungen > Textrückmeldungen gefunden werden.
 
 
-13. Spieloption "Ein- und Ausblendanimationen der Gebietskarte abschalten" hinzufügen 
+13. Spieloption "Ein- und Ausblendanimationen der Gebietskarte abschalten" hinzufügen
     (nur in PST:EE verfügbar)
 
-Diese Option kann genutzt werden, um die Ein- und Ausblendanimationen abzuschalten, die beim 
+Diese Option kann genutzt werden, um die Ein- und Ausblendanimationen abzuschalten, die beim
 Aufrufen und Beenden der Übersichtskarte des Gebiets ausgeführt werden.
 
 Die Option kann in Grafik > Darstellungsoptionen gefunden werden.
@@ -153,7 +153,7 @@ Die Option kann in Grafik > Darstellungsoptionen gefunden werden.
 
 14. Spieloption "Zoomrichtung des Mausrads umkehren" hinzufügen
 
-Diese Option kann genutzt werden, um die Richtung des Mausrads beim hinein- oder hinauszoomen 
+Diese Option kann genutzt werden, um die Richtung des Mausrads beim hinein- oder hinauszoomen
 umzukehren.
 
 Die Option kann in Grafik > Darstellungsoptionen gefunden werden.
@@ -161,7 +161,7 @@ Die Option kann in Grafik > Darstellungsoptionen gefunden werden.
 
 15. Spieloption "Spiel pausieren wenn Gebietskarte aktiv ist" hinzufügen
 
-Wenn diese Option aktiviert ist, wird das Spiel automatisch pausiert, wenn die Übersichtskarte des 
+Wenn diese Option aktiviert ist, wird das Spiel automatisch pausiert, wenn die Übersichtskarte des
 Gebiets aufgerufen wird.
 
 Die Option kann in Grafik > Darstellungsoptionen gefunden werden.
@@ -183,8 +183,8 @@ Die Option kann in Grafik > Darstellungsoptionen gefunden werden.
 
 18. Spieloption "Keine kosmetischen Angriffe" hinzufügen (nur in PST:EE verfügbar)
 
-Diese Option kann genutzt werden, um Angriffsanimationen nur dann zu zeigen, wenn Charaktere 
-tatsächlich Angriffe ausführen. In BG:EE, BG2:EE und IWD:EE ist sie bereits im unmodifizierten 
+Diese Option kann genutzt werden, um Angriffsanimationen nur dann zu zeigen, wenn Charaktere
+tatsächlich Angriffe ausführen. In BG:EE, BG2:EE und IWD:EE ist sie bereits im unmodifizierten
 Spiel enthalten.
 
 Die Option kann in den Spieleinstellungen gefunden werden.
@@ -192,31 +192,31 @@ Die Option kann in den Spieleinstellungen gefunden werden.
 
 19. Spieloption "EP-Bonus im Albtraum-Modus" hinzufügen (nicht in PST:EE verfügbar)
 
-Wird diese Option aktiviert, so erhalten Eure Charaktere einen EP-Bonus im Vermächtnis des Bhaal 
-Modus (BGEE/BG2EE) oder Herz des Zorns Modus (IWDEE). Diese Einstellung beeinflusst jedoch nicht 
+Wird diese Option aktiviert, so erhalten Eure Charaktere einen EP-Bonus im Vermächtnis des Bhaal
+Modus (BGEE/BG2EE) oder Herz des Zorns Modus (IWDEE). Diese Einstellung beeinflusst jedoch nicht
 die zusätzlichen EP, die in den normalen Schwierigkeitsgraden gewährt werden.
 
 Die Option kann in den Spieleinstellungen gefunden werden.
 
 
-20. Spieloption "Gelangweilte Ausrufe aktivieren" hinzufügen (nicht mit Lefreuts Enhanced UI 
+20. Spieloption "Gelangweilte Ausrufe aktivieren" hinzufügen (nicht mit Lefreuts Enhanced UI
     (LeUI) kompatibel)
 
-Wird diese Option aktiviert, dann lösen Gruppenmitglieder gelangweilte Ausrufe aus, wenn sie über 
+Wird diese Option aktiviert, dann lösen Gruppenmitglieder gelangweilte Ausrufe aus, wenn sie über
 einen längeren Zeitraum keine Aktionen durchgeführt haben.
 
-Die Option kann in Sound > Charaktersounds oder Spielmechanik > Rückmeldungen (nur PST:EE) gefunden 
+Die Option kann in Sound > Charaktersounds oder Spielmechanik > Rückmeldungen (nur PST:EE) gefunden
 werden.
 
 
-21. Spieloption "Bildrate" (experimentell) hinzufügen (nicht in PST:EE verfügbar, nicht mit 
+21. Spieloption "Bildrate" (experimentell) hinzufügen (nicht in PST:EE verfügbar, nicht mit
     Lefreuts Enhanced UI (LeUI) kompatibel)
 
-Diese Komponente installiert einen Schieberegler, mit dem man die Bildrate, mit der das Spiel 
-ausgeführt wird, erhöhen oder vermindern kann. Man kann zwischen 30 bis 50 Bildern pro Sekunde 
+Diese Komponente installiert einen Schieberegler, mit dem man die Bildrate, mit der das Spiel
+ausgeführt wird, erhöhen oder vermindern kann. Man kann zwischen 30 bis 50 Bildern pro Sekunde
 wählen. Die Voreinstellung des Spiels ist 30 Bilder pro Sekunde.
 
-Diese Komponente wird als "experimentell" gekennzeichnet, da vorgenommene Einstellungen in 
+Diese Komponente wird als "experimentell" gekennzeichnet, da vorgenommene Einstellungen in
 bestimmten Situationen vom Spiel ignoriert werden:
 1. Wenn Optionen > Spieleinstellungen > Rückmeldungen > "Zusätzliche Bestätigungsfenster" aktiv ist.
 2. Wenn ein laufendes Spiel beendet wird, ohne vorher in das Hauptmenü zu springen.
@@ -226,20 +226,20 @@ Die Option kann in den Spieleinstellungen gefunden werden.
 
 22. Spieloption "Aktionssymbole" hinzufügen (nicht mit Lefreuts Enhanced UI (LeUI) kompatibel)
 
-Diese Komponente installiert einen Schieberegler, mit dem man kleine Aktionssymbole neben den 
-Charakteranimationen anzeigen kann. Diese Symbole kennzeichnen die gerade ausgeführte Aktion der 
+Diese Komponente installiert einen Schieberegler, mit dem man kleine Aktionssymbole neben den
+Charakteranimationen anzeigen kann. Diese Symbole kennzeichnen die gerade ausgeführte Aktion der
 Charaktere, wie z.B. Kampf- oder Zauberaktionen.
-Es kann zwischen verschiedenen Anzeigevarianten gewählt werden. Einige Varianten erfordern, dass 
+Es kann zwischen verschiedenen Anzeigevarianten gewählt werden. Einige Varianten erfordern, dass
 der Debugmodus aktiviert wurde.
 
 Die Option kann in Spieleinstellungen > Rückmeldungen gefunden werden.
 
 
-23. Spieloption "Symbol für Stufenaufstieg anzeigen" hinzufügen (nur in PST:EE verfügbar, benötigt 
+23. Spieloption "Symbol für Stufenaufstieg anzeigen" hinzufügen (nur in PST:EE verfügbar, benötigt
     "Level Up" Icon Tweaks)
 
-Diese Option kann genutzt werden, um ein Symbol im Portraitfenster oder Energiebalken anzuzeigen, 
-wenn ein Gruppenmitglied eine Stufe aufsteigen kann. Die Mod "'Level Up' Icon Tweaks" muss 
+Diese Option kann genutzt werden, um ein Symbol im Portraitfenster oder Energiebalken anzuzeigen,
+wenn ein Gruppenmitglied eine Stufe aufsteigen kann. Die Mod "'Level Up' Icon Tweaks" muss
 installiert sein, um die Anzeige des Symbols für Stufenaufstiege ein- oder ausschalten zu können.
 
 Die Option kann in Spielmechanik > Rückmeldungen gefunden werden.

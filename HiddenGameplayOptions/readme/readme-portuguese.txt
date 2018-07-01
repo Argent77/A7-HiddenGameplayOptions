@@ -11,37 +11,37 @@ Discussion: https://forums.beamdog.com/discussion/64524/mod-reveal-hidden-gamepl
 Visão Geral
 ~~~~~~~~~~~
 
-As Edições Melhoradas fornecem um grande número de opções que não estão diretamente acessíveis no 
-menu de opções dentro do jogo, devendo serem habilitadas ou desabilitadas manualmente no arquivo 
-de configuração do jogo, o que pode desestimular jogadores pouco experientes em computação e 
+As Edições Melhoradas fornecem um grande número de opções que não estão diretamente acessíveis no
+menu de opções dentro do jogo, devendo serem habilitadas ou desabilitadas manualmente no arquivo
+de configuração do jogo, o que pode desestimular jogadores pouco experientes em computação e
 impedi-los de as usarem.
 
-Esta modificação adiciona várias opções úteis diretamente no jogo, incluindo o famoso modo 
+Esta modificação adiciona várias opções úteis diretamente no jogo, incluindo o famoso modo
 depurador, várias opções gráficas e de resposta, e mais.
 
-Para todos os jogos Edição Melhorada com versão 2.0 ou maior, atualmente incluindo BG:EE (com ou 
+Para todos os jogos Edição Melhorada com versão 2.0 ou maior, atualmente incluindo BG:EE (com ou
 sem SoD), BG2:EE, IWD:EE, PST:EE and EET.
 
 
 Instalação
 ~~~~~~~~~~
 
-Esta é uma modificação WeiDU, e isso significa que é muito fácil instalá-la. Basta descompactar 
+Esta é uma modificação WeiDU, e isso significa que é muito fácil instalá-la. Basta descompactar
 o arquivo baixado diretamente no diretório do teu jogo e executar "setup-HiddenGameplayOptions.exe".
 
 
 Compatibilidade
 ~~~~~~~~~~~~~~~
 
-A modificação serve para todos os jogos Edição Melhorada com versão 2.0 ou maior. Ela também é 
-compatível com "Dragonspear UI++" de Pecca e compatível em sua maior parte com "Enhanced UI 
-(LeUI)" de Lefreut. Algumas opções podem ser movidas para outras seções quando essas modificações 
+A modificação serve para todos os jogos Edição Melhorada com versão 2.0 ou maior. Ela também é
+compatível com "Dragonspear UI++" de Pecca e compatível em sua maior parte com "Enhanced UI
+(LeUI)" de Lefreut. Algumas opções podem ser movidas para outras seções quando essas modificações
 são detectadas.
 
-Esta modificação não pode ser instalada junto com o componente "Opções Escondidas de Jogo" da 
+Esta modificação não pode ser instalada junto com o componente "Opções Escondidas de Jogo" da
 modificação EEUITweaks. Você pode instalar uma ou outra, mas não ambas.
 
-Para garantir que a instalação falha de um patch não corrompa o jogo, ela falhará com um erro que 
+Para garantir que a instalação falha de um patch não corrompa o jogo, ela falhará com um erro que
 interromperá o processo e restaurará o estado original dos arquivos atualizados.
 
 
@@ -100,7 +100,7 @@ A opção pode ser encontrada na seção Jogabilidade.
 
 8. Adicionar opção "Limitar Feitiços de Druida para Clérigo/Mateiro" (não disponível em PST:EE)
 
-Habilitar esta opção limita os feitiços de druida até o nível 3 para Clérigos/Mateiros (nos termos 
+Habilitar esta opção limita os feitiços de druida até o nível 3 para Clérigos/Mateiros (nos termos
 das regras de D&D).
 
 A opção pode ser encontrada na seção Jogabilidade.
@@ -108,7 +108,7 @@ A opção pode ser encontrada na seção Jogabilidade.
 
 9. Adicionar opção "Ataque Furtivo da 3E"
 
-Habilitar esta opção ativa ataques furtivos e ataques incapacitantes, que são habilidades 
+Habilitar esta opção ativa ataques furtivos e ataques incapacitantes, que são habilidades
 especiais similares àquelas das regras do Dungeons & Dragons® 3ª Edição.
 
 A opção pode ser encontrada na seção Jogabilidade.
@@ -116,10 +116,10 @@ A opção pode ser encontrada na seção Jogabilidade.
 
 10. Adicionar opção "Balanço da Tela em Acerto Crítico"
 
-Habilitar esta opção dispara uma trepidação da tela sempre que um membro da equipe causa um acerto 
+Habilitar esta opção dispara uma trepidação da tela sempre que um membro da equipe causa um acerto
 crítico em combate.
 
-A opção pode ser encontrada em Jogabilidade > Informação > Informação Visual (ou na seção 
+A opção pode ser encontrada em Jogabilidade > Informação > Informação Visual (ou na seção
 Jogabilidade em PST:EE).
 
 
@@ -139,7 +139,7 @@ A opção pode ser encontrada em Jogabilidade > Informação > Informação Visu
 
 13. Adicionar opção "Desabilitar Ampliação do Mapa da Área" (disponível apenas em PST:EE)
 
-Habilitar esta opção desabilita o efeito de ampliação da câmera ao abrir ou fechar a tela do mapa 
+Habilitar esta opção desabilita o efeito de ampliação da câmera ao abrir ou fechar a tela do mapa
 da área.
 
 A opção pode ser encontrada em Gráficos > Opções de Exibição.
@@ -175,7 +175,7 @@ A opção pode ser encontrada em Gráficos > Opções de Exibição.
 
 18. Adicionar opção "Desabilitar Ataques Cosméticos" (disponível apenas em PST:EE)
 
-Habilitar esta opção mostra animações de ataque apenas apenas quando os personagens realmente 
+Habilitar esta opção mostra animações de ataque apenas apenas quando os personagens realmente
 estiverem atacando. Esta opção já está disponível na versão base do BG:EE, BG2:EE e do IWD:EE.
 
 A opção pode ser encontrada na seção Jogabilidade.
@@ -183,8 +183,8 @@ A opção pode ser encontrada na seção Jogabilidade.
 
 19. Adicionar opção "Bônus de EXP no Modo Pesadelo" (não disponível para PST:EE)
 
-Habilitar esta opção permite que seus personagens recebam bônus de experiência nos Modos Legado 
-de Bhaal (BGEE/BG2EE) ou Coração de Fúria (IWDEE). Esta opção não afeta a EXP adicional recebida 
+Habilitar esta opção permite que seus personagens recebam bônus de experiência nos Modos Legado
+de Bhaal (BGEE/BG2EE) ou Coração de Fúria (IWDEE). Esta opção não afeta a EXP adicional recebida
 nos modos de dificuldade existentes.
 
 A opção pode ser encontrada na seção Jogabilidade.
@@ -192,20 +192,20 @@ A opção pode ser encontrada na seção Jogabilidade.
 
 20. Adicionar opção "Disparar Sons de Tédio" (não compatível com "Enhanced UI (LeUI)" de Lefreut)
 
-Habilitar esta opção fará disparar sons de tédio quando você não tiver passado ações para os seus 
+Habilitar esta opção fará disparar sons de tédio quando você não tiver passado ações para os seus
 personagens após um longo período de tempo.
 
 A opção pode ser encontrada em Sons > Sons de Personagem ou Jogabilidade > Resposta (PST:EE apenas).
 
 
-21. Adicionar opção "Taxa de Quadros" (experimental) (não disponível para PST:EE, não compatível 
+21. Adicionar opção "Taxa de Quadros" (experimental) (não disponível para PST:EE, não compatível
     com "Enhanced UI (LeUI)" de Lefreut)
 
-Este componente instala uma barra de controle que pode ser usada para ajustar a taxa de quadros 
-desejada do jogo. Você pode escolher entre 30, 40 e 50 quadros por segundo. A taxa padrão do jogo 
+Este componente instala uma barra de controle que pode ser usada para ajustar a taxa de quadros
+desejada do jogo. Você pode escolher entre 30, 40 e 50 quadros por segundo. A taxa padrão do jogo
 é 30 qps.
 
-O componente é marcado como "experimental", pois há situações onde ajustar esta opção não gera 
+O componente é marcado como "experimental", pois há situações onde ajustar esta opção não gera
 resultados:
 1. Quando Opções > Jogabilidade > Resposta > "Mais Alertas de Confirmação" está ativado.
 2. Ao sair do jogo diretamente para a área de trabalho de um jogo em andamento.
@@ -215,20 +215,20 @@ A opção pode ser encontrada na seção Jogabilidade.
 
 22. Adicionar opção "Resposta de Ação" (não compatível com "Enhanced UI (LeUI)" de Lefreut)
 
-Este componente instala uma barra de controle que pode ser usada para mostrar pequenos símbolos 
-ao redor dos sprites dos personagens que indicam sua ação atual (por exemplo, lutando, lançando 
-feitiços ou realizando ações de ladino). Você pode escolher entre vários níveis de resposta. 
+Este componente instala uma barra de controle que pode ser usada para mostrar pequenos símbolos
+ao redor dos sprites dos personagens que indicam sua ação atual (por exemplo, lutando, lançando
+feitiços ou realizando ações de ladino). Você pode escolher entre vários níveis de resposta.
 Alguns níveis podem requerer que a opção de Jogabilidade "Modo Depuração" esteja ligada.
 
 A opção pode ser encontrada em Jogabilidade > Resposta.
 
 
-23. Adicionar opção "Exibir Ícono de Subir Nível" (disponível apenas para PST:EE e requer a 
+23. Adicionar opção "Exibir Ícono de Subir Nível" (disponível apenas para PST:EE e requer a
     modificação "Level Up Icon Tweaks")
 
-Esta opção lhe permite mostrar ou esconder o ícone "Subir Nível", que pode ser encontrado na 
-janela de retrato ou na barra de vida dos membros da equipe que estão prontos para subirem de 
-nível. Requer a modificação "Level Up Icon Tweaks" para ser instalada, a qual adiciona a 
+Esta opção lhe permite mostrar ou esconder o ícone "Subir Nível", que pode ser encontrado na
+janela de retrato ou na barra de vida dos membros da equipe que estão prontos para subirem de
+nível. Requer a modificação "Level Up Icon Tweaks" para ser instalada, a qual adiciona a
 funcionalidade de habilitar a visualização do ícone.
 
 A opção pode ser encontrada em Jogabilidade > Resposta.

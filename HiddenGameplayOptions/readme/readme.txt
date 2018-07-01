@@ -11,35 +11,35 @@ Discussion: https://forums.beamdog.com/discussion/64524/mod-reveal-hidden-gamepl
 Overview
 ~~~~~~~~
 
-The Enhanced Editions provide a great number of settings that are not directly accessible in the 
-in-game options menu, but instead have to be manually enabled or disabled in the game's 
+The Enhanced Editions provide a great number of settings that are not directly accessible in the
+in-game options menu, but instead have to be manually enabled or disabled in the game's
 configuration file which might discourage less computer-savvy players from using them at all.
 
-This mods adds a number of useful options directly to the game, which includes the (in)famous 
+This mods adds a number of useful options directly to the game, which includes the (in)famous
 debug console, various graphics and feedback settings, and more.
 
-All Enhanced Edition games patched to v2.0 or higher are supported, which currently includes BG:EE 
+All Enhanced Edition games patched to v2.0 or higher are supported, which currently includes BG:EE
 (with or without SoD), BG2:EE, IWD:EE, PST:EE and EET.
 
 
 Installation
 ~~~~~~~~~~~~
 
-This is a WeiDU mod, that means it is very easy to install. Simply unpack the downloaded archive 
+This is a WeiDU mod, that means it is very easy to install. Simply unpack the downloaded archive
 into your game directory and run "setup-HiddenGameplayOptions.exe".
 
 
 Compatibility
 ~~~~~~~~~~~~~
 
-The mod supports all Enhanced Edition games patched to v2.0 or higher. It is also compatible with 
-Pecca's "Dragonspear UI++" and largely compatible with Lefreut's Enhanced UI (LeUI). Some options 
+The mod supports all Enhanced Edition games patched to v2.0 or higher. It is also compatible with
+Pecca's "Dragonspear UI++" and largely compatible with Lefreut's Enhanced UI (LeUI). Some options
 may be moved into other sections when these mods have been detected.
 
-The mod can not be installed together with EEUITweaks component "Hidden Game Options". You can 
+The mod can not be installed together with EEUITweaks component "Hidden Game Options". You can
 install either one, but not both at the same time.
 
-Patching UI definition files can be tricky. To ensure that a failed patch attempt does not corrupt 
+Patching UI definition files can be tricky. To ensure that a failed patch attempt does not corrupt
 the game it will fail with a forced error and restore the original state of the patched files.
 
 
@@ -105,7 +105,7 @@ Option can be found in Gameplay section.
 
 9. Add in-game option "3E Sneak Attack"
 
-Setting this option activates Sneak Attack and Crippling Strike, which are special abilities 
+Setting this option activates Sneak Attack and Crippling Strike, which are special abilities
 similar to those from 3rd Edition Dungeons & Dragons rules.
 
 Option can be found in Gameplay section.
@@ -169,7 +169,7 @@ Option can be found in Graphics > Display Options.
 
 18. Add in-game option "No Cosmetic Attacks" (only available for PST:EE)
 
-Enabling this option shows attack animations only when characters are making real attacks. 
+Enabling this option shows attack animations only when characters are making real attacks.
 This option is already available in unmodded BG:EE, BG2:EE and IWD:EE.
 
 Option can be found in Gameplay section.
@@ -177,8 +177,8 @@ Option can be found in Gameplay section.
 
 19. Add in-game option "XP Bonus in Nightmare Mode" (not available for PST:EE)
 
-Enabling this option allows your characters to get bonus XP in Legacy of Bhaal Mode (BGEE/BG2EE) 
-or Heart of Fury Mode (IWDEE). This setting will not affect the extra XP granted by the regular 
+Enabling this option allows your characters to get bonus XP in Legacy of Bhaal Mode (BGEE/BG2EE)
+or Heart of Fury Mode (IWDEE). This setting will not affect the extra XP granted by the regular
 difficulty modes.
 
 Option can be found in Gameplay section.
@@ -186,19 +186,19 @@ Option can be found in Gameplay section.
 
 20. Add in-game option "Trigger Bored Sounds" (not compatible with Lefreut's Enhanced UI (LeUI))
 
-Enabling this option will trigger bored sounds when you haven't assigned actions to your characters 
+Enabling this option will trigger bored sounds when you haven't assigned actions to your characters
 for an extended period of time.
 
 Option can be found in Sounds > Character Sounds or Gameplay > Feedback (PST:EE only).
 
 
-21. Add in-game option "Frame Rate" (experimental) (not available for PST:EE, not compatible with 
+21. Add in-game option "Frame Rate" (experimental) (not available for PST:EE, not compatible with
     Lefreut's Enhanced UI (LeUI))
 
-This component installs a slider control that can be used to set the desired frame rate of the game. 
+This component installs a slider control that can be used to set the desired frame rate of the game.
 You can choose between 30, 40 and 50 frames per second. The game's default is 30 fps.
 
-The component is marked as "experimental", as there are situations where setting this option has 
+The component is marked as "experimental", as there are situations where setting this option has
 no effect:
 1. When Options > Gameplay > Feedback > "More Confirmation Prompts" is active.
 2. When quitting the game directly to the desktop from a running game.
@@ -208,19 +208,19 @@ Option can be found in Gameplay section.
 
 22. Add in-game option "Action Feedback" (not compatible with Lefreut's Enhanced UI (LeUI))
 
-This component installs a slider control that can be used to show small symbols around character 
-sprites that indicate their current action (e.g. fighting, spellcasting or thieving actions). 
-You can choose between several feedback levels. Higher levels are only effective when option 
+This component installs a slider control that can be used to show small symbols around character
+sprites that indicate their current action (e.g. fighting, spellcasting or thieving actions).
+You can choose between several feedback levels. Higher levels are only effective when option
 "Debug Mode" has been enabled as well.
 
 Option can be found in Gameplay > Feedback.
 
 
-23. Add in-game option "Display Level Up Icon" (only available for PST:EE, requires "Level Up" 
+23. Add in-game option "Display Level Up Icon" (only available for PST:EE, requires "Level Up"
     Icon Tweaks)
 
-This option allows you to show or hide the "Level Up" icon, that can be found in the portrait 
-window or health bar of party members that are ready to level up. It requires the mod "'Level Up' 
+This option allows you to show or hide the "Level Up" icon, that can be found in the portrait
+window or health bar of party members that are ready to level up. It requires the mod "'Level Up'
 Icon Tweaks" to be installed, which adds the functionality to toggle visibility of the icon.
 
 Option can be found in Gameplay > Feedback.

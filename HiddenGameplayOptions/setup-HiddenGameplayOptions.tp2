@@ -251,7 +251,7 @@ BEGIN @29 // Add in-game option "Frame Rate" (experimental)
                      NOT MOD_IS_INSTALLED ~leui-iwdee.tp2~ 0) @107 // This component is not compatible with Lefreut's Enhanced UI.
   REQUIRE_PREDICATE (NOT GAME_IS ~pstee~) @104 // Option not available for this game.
   // TODO: update when dragonspear_ui++.tp2 is expanded
-  // REQUIRE_PREDICATE (GAME_INCLUDES ~sod~ || 
+  // REQUIRE_PREDICATE (GAME_INCLUDES ~sod~ ||
                      // NOT MOD_IS_INSTALLED ~dragonspear_ui++.tp2~ 1) ~This component doesn't support Pecca's Dragonspear UI++ for the selected game yet.~
   DESIGNATED 29
 
@@ -263,7 +263,7 @@ BEGIN @30 // Add in-game option "Action Feedback"
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~leui.tp2~ 0 AND
                      NOT MOD_IS_INSTALLED ~leui-iwdee.tp2~ 0) @107 // This component is not compatible with Lefreut's Enhanced UI.
   // TODO: update when dragonspear_ui++.tp2 is expanded
-  // REQUIRE_PREDICATE (GAME_INCLUDES ~sod~ || 
+  // REQUIRE_PREDICATE (GAME_INCLUDES ~sod~ ||
                      // NOT MOD_IS_INSTALLED ~dragonspear_ui++.tp2~ 1) ~This component doesn't support Pecca's Dragonspear UI++ for the selected game yet.~
   DESIGNATED 30
 

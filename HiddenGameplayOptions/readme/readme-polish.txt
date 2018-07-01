@@ -11,37 +11,37 @@ Discussion: https://forums.beamdog.com/discussion/64524/mod-reveal-hidden-gamepl
 Ogólny zarys
 ~~~~~~~~~~~~
 
-Wersje Enhanced Edition oferują możliwość zmiany wielu opcji gry, które nie są dostępne z poziomu 
-menu Opcje gry, lecz trzeba je ręcznie włączać lub wyłączać przy pomocy plików konfiguracyjnych 
+Wersje Enhanced Edition oferują możliwość zmiany wielu opcji gry, które nie są dostępne z poziomu
+menu Opcje gry, lecz trzeba je ręcznie włączać lub wyłączać przy pomocy plików konfiguracyjnych
 gry. Może to zniechęcić osoby mniej obeznane z komputerami do ich używania.
 
-Modyfikacja ta dodaje wiele ciekawych opcji bezpośrednio do gry, wśród nich (nie)sławną konsolę 
+Modyfikacja ta dodaje wiele ciekawych opcji bezpośrednio do gry, wśród nich (nie)sławną konsolę
 debugowania, różne opcje graficzne oraz interfejsu i wiele więcej.
 
-Modyfikacja ta działa ze wszystkimi grami z serii Enhanced Edition w wersji 2.0 lub wyższej, 
+Modyfikacja ta działa ze wszystkimi grami z serii Enhanced Edition w wersji 2.0 lub wyższej,
 to jest: BG:EE (z dodatkiem Siege of Dragonspear lub bez), BG2:EE, IWD:EE oraz PST:EE.
 
 
 Instalacja
 ~~~~~~~~~~
 
-Jest to modyfikacja WeiDU, co oznacza, iż jest bardzo prosta w instalacji. Wystarczy rozpakować 
+Jest to modyfikacja WeiDU, co oznacza, iż jest bardzo prosta w instalacji. Wystarczy rozpakować
 pobrane archiwum do katalogu z grą, a następnie uruchomić plik „setup-HiddenGameplayOptions.exe”.
 
 
 Kompatybilność
 ~~~~~~~~~~~~~~
 
-Modyfikacja ta działa ze wszystkimi grami z serii Enhanced Edition w wersji 2.0 lub wyższej. Jest 
-również kompatybilna z modyfikacją „Dragonspear UI++”, której autorem jest Pecca oraz modyfikacją 
-Lefreut's Enhanced UI (LeUI), której autorem jest Lefreut. Po wykryciu tych modyfikacji niektóre 
+Modyfikacja ta działa ze wszystkimi grami z serii Enhanced Edition w wersji 2.0 lub wyższej. Jest
+również kompatybilna z modyfikacją „Dragonspear UI++”, której autorem jest Pecca oraz modyfikacją
+Lefreut's Enhanced UI (LeUI), której autorem jest Lefreut. Po wykryciu tych modyfikacji niektóre
 opcje mogą znaleźć się w innych sekcjach.
 
-Modyfikacja ta nie może być instalowana wraz z komponentem modyfikacji EEUITweaks o nazwie „Hidden 
+Modyfikacja ta nie może być instalowana wraz z komponentem modyfikacji EEUITweaks o nazwie „Hidden
 Game Options”. Możesz zainstalować tylko jedno z nich.
 
-Aktualizowanie plików definiujących UI może być skomplikowane. Aby zabezpieczyć się przed 
-możliwością uszkodzenia plików gry przez nieudaną aktualizację plików, zakończy się ona wymuszonym 
+Aktualizowanie plików definiujących UI może być skomplikowane. Aby zabezpieczyć się przed
+możliwością uszkodzenia plików gry przez nieudaną aktualizację plików, zakończy się ona wymuszonym
 błędem, a aktualizowane pliki zostaną przywrócone do pierwotnego stanu.
 
 
@@ -50,7 +50,7 @@ Komponenty
 
 1. Zainstaluj Ukryte opcje gry (główny komponent)
 
-Komponent umożliwia instalcję wszytkich opcji lub wybranie opcji, które mają zostać zainstalowane. 
+Komponent umożliwia instalcję wszytkich opcji lub wybranie opcji, które mają zostać zainstalowane.
 Szczegółowe informacje dotyczące poszczególnych opcji znajdują się poniżej.
 
 
@@ -86,7 +86,7 @@ Opcja ta znajduje się w sekcji Opcje gry.
 
 6. Dodaj w grze opcję „Dodatkowe informacje po wciśnięciu klawisza TAB”
 
-Włączenie tej opcji powoduje otrzymywanie dodatkowych informacji o interaktywnych regionach po 
+Włączenie tej opcji powoduje otrzymywanie dodatkowych informacji o interaktywnych regionach po
 wciśnięciu klawisza TAB.
 
 Opcja ta znajduje się w sekcji Opcje gry.
@@ -108,8 +108,8 @@ Opcja ta znajduje się w sekcji Opcje gry.
 
 9. Dodaj w grze opcję „Atak z zaskoczenia 3E”
 
-Opcja ta włącza lub wyłącza Atak z zaskoczenia oraz Druzgoczące uderzenie, będące specjalnymi 
-zdolności złodzieja, podobnymi do tych, które występują w zasadach 3. edycji Dungeons & Dragons(R), 
+Opcja ta włącza lub wyłącza Atak z zaskoczenia oraz Druzgoczące uderzenie, będące specjalnymi
+zdolności złodzieja, podobnymi do tych, które występują w zasadach 3. edycji Dungeons & Dragons(R),
 firmy Wizards of the Coast.
 
 Opcja ta znajduje się w sekcji Opcje gry.
@@ -117,7 +117,7 @@ Opcja ta znajduje się w sekcji Opcje gry.
 
 10. Dodaj w grze opcję „Drżenie ekranu po trafieniu krytycznym”
 
-Włączenie tej opcji powoduje efekt drżenia ekranu za każdym razem, gdy członek drużyny uzyska 
+Włączenie tej opcji powoduje efekt drżenia ekranu za każdym razem, gdy członek drużyny uzyska
 trafienie krytyczne.
 
 Opcja ta znajduje się w sekcji Opcje gry > Interakcja > Graficzne wskazówki (lub Opcje gry w PST:EE).
@@ -125,7 +125,7 @@ Opcja ta znajduje się w sekcji Opcje gry > Interakcja > Graficzne wskazówki (l
 
 11. Dodaj w grze opcję „Pokazywanie dodatkowych informacji o walce”
 
-Włączenie tej opcji sprawia, że na ekranie wyświetlane będą wszystkie wartości mające wpływ na 
+Włączenie tej opcji sprawia, że na ekranie wyświetlane będą wszystkie wartości mające wpływ na
 wynik testu ataku.
 
 Opcja ta znajduje się w sekcji Opcje gry > Interakcja > Informacje związane z interakcją.
@@ -140,7 +140,7 @@ Opcja ta znajduje się w sekcji Opcje gry > Interakcja > Informacje związane z 
 
 13. Dodaj w grze opcję „Wyłączenie przybliżania obszaru mapy” (dostępne tylko w PST:EE)
 
-Opcja ta powoduje wyłączenie efektu przybliżania i oddalania widoku mapy podczas otwierania lub 
+Opcja ta powoduje wyłączenie efektu przybliżania i oddalania widoku mapy podczas otwierania lub
 zamykania ekranu mapy.
 
 Opcja ta znajduje się w sekcji Grafika > Opcje wyświetlania.
@@ -176,7 +176,7 @@ Opcja ta znajduje się w sekcji Grafika > Opcje wyświetlania.
 
 18. Dodaj w grze opcję „Wyłączenie dodatkowych animacji ataków” (dostępne tylko w PST:EE)
 
-Włączenie tej opcji powoduje wyświetlanie dodatkowych animacji ataku, tylko jeśli postać faktycznie 
+Włączenie tej opcji powoduje wyświetlanie dodatkowych animacji ataku, tylko jeśli postać faktycznie
 wykonuje atak. Opcja ta jest już dostępna w niezmodyfikowanych wersjach BG:EE, BG2:EE i IWD:EE.
 
 Opcja ta znajduje się w sekcji Opcje gry.
@@ -184,28 +184,28 @@ Opcja ta znajduje się w sekcji Opcje gry.
 
 19. Dodaj w grze opcję „Premia do PD w trybie Koszmar” (niedostępne w PST:EE)
 
-Włączenie tej opcji pozwala na uzyskiwanie dodatkowej ilości PD w trybie Dziedzictwo Bhaala (BG:EE/BG2:EE) 
+Włączenie tej opcji pozwala na uzyskiwanie dodatkowej ilości PD w trybie Dziedzictwo Bhaala (BG:EE/BG2:EE)
 lub Serce Furii (IWD:EE). Nie wpływa jednak na ilość PD otrzymywanych w przypadku zwykłych trybów gry.
 
 Opcja ta znajduje się w sekcji Opcje gry.
 
 
-20. Dodaj w grze opcję „Odtwarzanie odgłosów znudzenia” (niekompatybilne z modyfikacją Lefreut's 
+20. Dodaj w grze opcję „Odtwarzanie odgłosów znudzenia” (niekompatybilne z modyfikacją Lefreut's
     Enhanced UI (LeUI))
 
-Włączenie tej opcji pozwala na odtwarzanie przez członków drużyny odgłosów znudzenia w przypadku 
+Włączenie tej opcji pozwala na odtwarzanie przez członków drużyny odgłosów znudzenia w przypadku
 dłuższej bezczynności.
 
 Opcja ta znajduje się w sekcji Dźwięki > Odgłosy postaci lub Opcje gry > Interakcja (tylko PST:EE).
 
 
-21. Dodaj w grze opcję „Wskaźnik ilości klatek” (opcja eksperymentalna) (niedostępne dla PST:EE, 
+21. Dodaj w grze opcję „Wskaźnik ilości klatek” (opcja eksperymentalna) (niedostępne dla PST:EE,
     niekompatybilne z modyfikacją „Lefreut's Enhanced UI (LeUI)”)
 
-Po zainstalowaniu tego komponentu dostępny jest suwak służący do ustawienia pożądanej ilości klatek 
+Po zainstalowaniu tego komponentu dostępny jest suwak służący do ustawienia pożądanej ilości klatek
 w grze. Można wybrać wartość 30, 40 lub 50 klatek na sekundę.
 
-Komponent ten został oznaczony jako „eksperymentalny”, gdyż istnieją następujące sytuacje, podczas 
+Komponent ten został oznaczony jako „eksperymentalny”, gdyż istnieją następujące sytuacje, podczas
 których opcja ta nie wywołuje żadnego efektu:
 1. Gdy jest aktywna opcja Opcje > Opcje gry > Interakcja > „Włącz potwierdzenie”.
 2. Gdy nastąpi wyjście z gry bezpośrednio na pulpit.
@@ -213,22 +213,22 @@ których opcja ta nie wywołuje żadnego efektu:
 Opcja ta znajduje się w sekcji Opcje gry.
 
 
-22. Dodaj w grze opcję „Wskazówki dotyczące wykonywanych czynności” (niekompatybilne z modyfikacją 
+22. Dodaj w grze opcję „Wskazówki dotyczące wykonywanych czynności” (niekompatybilne z modyfikacją
     „Lefreut's Enhanced UI (LeUI)”)
 
-Po zainstalowaniu tego komponentu dostępny jest suwak, który pozwala na wyświetlanie niewielkich 
-symboli wokół sylwetek postaci, które wskazują na rodzaj wykonywanych przez nie czynności (np. walka, 
-rzucanie czarów, czy złodziejstwo). Można wybrać spośród kilku stopni otrzymywania wskazówek. 
+Po zainstalowaniu tego komponentu dostępny jest suwak, który pozwala na wyświetlanie niewielkich
+symboli wokół sylwetek postaci, które wskazują na rodzaj wykonywanych przez nie czynności (np. walka,
+rzucanie czarów, czy złodziejstwo). Można wybrać spośród kilku stopni otrzymywania wskazówek.
 Niektóre stopnie wymagają włączenia „trybu debugowania”, znajdującego się w sekcji Opcje gry.
 
 Opcja ta znajduje się w sekcji Opcje gry > Interakcja.
 
 
-23. Dodaj w grze opcję „Wyświetlanie ikony zmiany poziomu” (dostępne tylko dla PST:EE, wymaga 
+23. Dodaj w grze opcję „Wyświetlanie ikony zmiany poziomu” (dostępne tylko dla PST:EE, wymaga
     uprzedniego zainstalowania modyfikacji „Ikona zmiany poziomu”)
 
-Opcja ta pozwala wyświetlanie ikony „Zmiany poziomu” w oknie portretu lub na pasku życia członków 
-drużyny mogących awansować na kolejny poziom. Komponent ten wymaga uprzedniego zainstalowania 
+Opcja ta pozwala wyświetlanie ikony „Zmiany poziomu” w oknie portretu lub na pasku życia członków
+drużyny mogących awansować na kolejny poziom. Komponent ten wymaga uprzedniego zainstalowania
 modyfikacji „Ikona zmiany poziomu”, która umożliwia wyświetlanie ikony awansu na kolejny poziom.
 
 Opcja ta znajduje się w sekcji Opcje gry > Interakcja.

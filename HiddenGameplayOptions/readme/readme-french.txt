@@ -11,37 +11,37 @@ Discussion     : https://forums.beamdog.com/discussion/64524/mod-reveal-hidden-g
 Généralités
 ~~~~~~~~~~~
 
-Les versions améliorées (Enhanced Editions) disposent de nombreuses options de jeu que l'on ne  
-peut pas sélectionner dans le menu des options, mais qui doivent être activées ou désactivées 
-manuellement dans le fichier de configuration du jeu ; ce qui peut décourager les joueurs moins 
+Les versions améliorées (Enhanced Editions) disposent de nombreuses options de jeu que l'on ne
+peut pas sélectionner dans le menu des options, mais qui doivent être activées ou désactivées
+manuellement dans le fichier de configuration du jeu ; ce qui peut décourager les joueurs moins
 experts en informatique de les utiliser.
 
-Ce mod ajoute directement dans le jeu de nombreuses options très utiles, dont le "célèbre" panneau 
+Ce mod ajoute directement dans le jeu de nombreuses options très utiles, dont le "célèbre" panneau
 de débogage, plusieurs paramétrages graphiques et de feedback, et d'autres encore.
 
-Tous les jeux Enhanced Edition dotés du patch v2.0 ou supérieur sont concernés, soit BG:EE (avec ou 
+Tous les jeux Enhanced Edition dotés du patch v2.0 ou supérieur sont concernés, soit BG:EE (avec ou
 sans SoD), BG2:EE, IWD:EE, PST:EE et EET.
 
 
 Installation
 ~~~~~~~~~~~~
 
-Il s'agit d'un mod WeiDU, donc très facile à installer. Il suffit de décompresser l'archive 
+Il s'agit d'un mod WeiDU, donc très facile à installer. Il suffit de décompresser l'archive
 téléchargée dans votre répertoire de jeu et de lancer "setup-HiddenGameplayOptions.exe".
 
 
 Compatibilité
 ~~~~~~~~~~~~~
 
-Ce mod s'installe sur tous les jeux Enhanced Edition dotés du patch v2.0 ou supérieur. Il est 
-aussi compatible avec Pecca's "Dragonspear UI++" et Lefreut's Enhanced UI (LeUI). Certaines 
+Ce mod s'installe sur tous les jeux Enhanced Edition dotés du patch v2.0 ou supérieur. Il est
+aussi compatible avec Pecca's "Dragonspear UI++" et Lefreut's Enhanced UI (LeUI). Certaines
 options pourront être déplacées dans d'autres sections si ces mods sont détectés.
 
-On ne peut pas installer ce mod avec le composant "Options cachées du jeu" de EEUITweaks. Vous 
+On ne peut pas installer ce mod avec le composant "Options cachées du jeu" de EEUITweaks. Vous
 devrez choisir d'en installer un seul, mais pas les deux en même temps.
 
-Modifier les fichiers de paramétrage de l'interface utilisateur (UI) peut s'avérer risqué. 
-C'est pourquoi, pour éviter de corrompre le jeu, une tentative problématique de modification sera 
+Modifier les fichiers de paramétrage de l'interface utilisateur (UI) peut s'avérer risqué.
+C'est pourquoi, pour éviter de corrompre le jeu, une tentative problématique de modification sera
 automatiquement interdite et le mod restaurera les fichiers à modifier dans leur version d'origine.
 
 
@@ -50,7 +50,7 @@ Composants
 
 1. Installer les Options de jeu cachées (composant principal)
 
-Ce composant vous permet de choisir d'installer toutes les options simultanément ou bien de les 
+Ce composant vous permet de choisir d'installer toutes les options simultanément ou bien de les
 sélectionner une par une.
 Des informations détaillées sur chaque option sont disponibles plus bas.
 
@@ -59,7 +59,8 @@ Les composants suivants sont disponibles si vous décidez de sélectionner les o
 
 2 Ajouter l'option de jeu "Activer le Mode de débogage"
 
-Ce composant vous permet d'activer les raccourcis clavier de triche et d'afficher le panneau de débogage.
+Ce composant vous permet d'activer les raccourcis clavier de triche et d'afficher le panneau de
+débogage.
 
 Cette option se trouve dans la section Jeu.
 
@@ -80,8 +81,8 @@ Elle se trouve dans la section Jeu.
 
 5. Ajouter l'option de jeu "Afficher les raccourcis clavier dans les bulles d'aide"
 
-Activer cette option affiche les touches de raccourci dans les bulles d'aide des boutons 
-de l'interface (capacités des sorts et des objets rapides lorsqu'ils sont disponibles, 
+Activer cette option affiche les touches de raccourci dans les bulles d'aide des boutons
+de l'interface (capacités des sorts et des objets rapides lorsqu'ils sont disponibles,
 boutons de la barre verticale de gauche...).
 Attention : les boutons de la barre verticale de droite n'en bénéficient pas.
 
@@ -90,23 +91,25 @@ Elle se trouve dans la section Jeu.
 
 6. Ajouter l'option de jeu "Afficher les icônes de zone sensible avec la tabulation"
 
-Activer cette option affiche des informations supplémentaires sur les régions interactives 
+Activer cette option affiche des informations supplémentaires sur les régions interactives
 de la carte en appuyant sur la touche TAB.
 
 Elle se trouve dans la section Jeu.
 
 
-7. Ajouter l'option de jeu "Utiliser la barre d'espace dans les dialogues" (disponible uniquement pour PST:EE)
+7. Ajouter l'option de jeu "Utiliser la barre d'espace dans les dialogues" (disponible uniquement
+   pour PST:EE)
 
-Activer cette option vous permet de continuer les conversations dans la fenêtre de 
+Activer cette option vous permet de continuer les conversations dans la fenêtre de
 dialogue en utilisant la touche ESPACE.
 
 Elle se trouve dans la section Jeu.
 
 
-8. Ajouter l'option de jeu "Limiter les sorts de druide pour les Clercs/Rôdeurs" (pas disponible dans PST:EE)
+8. Ajouter l'option de jeu "Limiter les sorts de druide pour les Clercs/Rôdeurs" (pas disponible
+   dans PST:EE)
 
-L'activer limite au niveau 3 les sorts de druide utilisables par les Clercs/Rôdeurs 
+L'activer limite au niveau 3 les sorts de druide utilisables par les Clercs/Rôdeurs
 (comme dans les règles papier).
 
 Elle se trouve dans la section Jeu.
@@ -114,8 +117,8 @@ Elle se trouve dans la section Jeu.
 
 9. Ajouter l'option de jeu "Attaque sournoise 3e Édition"
 
-Cette option permet d'activer/désactiver l'Attaque sournoise (Attaque insidieuse) et 
-l'Attaque handicapante (capacités similaires à celles de la troisième Édition de Donjons 
+Cette option permet d'activer/désactiver l'Attaque sournoise (Attaque insidieuse) et
+l'Attaque handicapante (capacités similaires à celles de la troisième Édition de Donjons
 et Dragons® de Wizards of the Coast).
 
 Elle se trouve dans la section Jeu.
@@ -123,7 +126,7 @@ Elle se trouve dans la section Jeu.
 
 10. Ajouter l'option de jeu "Secouer l'écran en cas de coup critique"
 
-Si cette option est activée, l'écran est secoué chaque fois qu'un membre du groupe effectue 
+Si cette option est activée, l'écran est secoué chaque fois qu'un membre du groupe effectue
 un coup critique.
 
 Elle se trouve dans la section Jeu > Feedback > Feedback visuel (ou dans la section Jeu dans PST:EE).
@@ -131,7 +134,7 @@ Elle se trouve dans la section Jeu > Feedback > Feedback visuel (ou dans la sect
 
 11. Ajouter l'option de jeu Informations de combat supplémentaires"
 
-Activer cette option affiche dans la fenêtre de dialogue tous les facteurs déterminant 
+Activer cette option affiche dans la fenêtre de dialogue tous les facteurs déterminant
 les résultats des jets d'attaque.
 
 Elle se trouve dans la section Jeu > Feedback > Messages de Feedback.
@@ -144,9 +147,10 @@ Activer cette option affiche la date et l'heure du jeu lorsque la pause est acti
 Elle se trouve dans la section Jeu > Feedback > Messages de Feedback.
 
 
-13. Ajouter l'option de jeu "Désactiver le zoom dans la vue de la carte" (disponible uniquement pour PST:EE)
+13. Ajouter l'option de jeu "Désactiver le zoom dans la vue de la carte" (disponible uniquement
+    pour PST:EE)
 
-Cette option désactive le zoom avant et arrière lorsqu'on ouvre ou ferme l'écran de la carte 
+Cette option désactive le zoom avant et arrière lorsqu'on ouvre ou ferme l'écran de la carte
 de la zone.
 
 Elle se trouve dans la section Graphismes > Options d'affichage.
@@ -182,8 +186,8 @@ Elle se trouve dans la section Graphismes > Options d'affichage.
 
 18. Ajouter l'option de jeu "Aucune attaque cosmétique" (uniquement disponible pour PST:EE)
 
-Cette option restreint les animations d'attaque des personnages à leurs véritables attaques 
-(NdT : Retire toutes les feintes et les esquives, où les créatures montrent une animation 
+Cette option restreint les animations d'attaque des personnages à leurs véritables attaques
+(NdT : Retire toutes les feintes et les esquives, où les créatures montrent une animation
 d'attaque, mais n'effectuent pas vraiment de jet de toucher).
 Cette option est déjà disponible dans les jeux BG:EE, BG2:EE et IWD:EE non modifiés.
 
@@ -192,8 +196,8 @@ Elle se trouve dans la section Jeu.
 
 19. Ajouter l'option de jeu "Bonus d'expérience en mode cauchemar" (pas disponible dans PST:EE)
 
-Activer cette option permet à vos personnages d'obtenir le bonus d'expérience inhérent au 
-mode Succession de Bhaal (BGEE/BG2EE) ou Cœur de furie (IWDEE). Cette option n'affecte pas 
+Activer cette option permet à vos personnages d'obtenir le bonus d'expérience inhérent au
+mode Succession de Bhaal (BGEE/BG2EE) ou Cœur de furie (IWDEE). Cette option n'affecte pas
 le bonus d'expérience acquis grâce aux modes de difficulté normaux.
 
 Cette option se trouve dans la section Jeu.
@@ -201,17 +205,18 @@ Cette option se trouve dans la section Jeu.
 
 20. Ajouter l'option de jeu "Émettre des sons d'ennui" (incompatible avec Lefreut's Enhanced UI - LeUI)
 
-Activer cette option déclenche des sons d'ennui par vos personnages si vous ne leur avez pas 
+Activer cette option déclenche des sons d'ennui par vos personnages si vous ne leur avez pas
 assigné d'actions pendant une longue période d'inactivité.
 
-Cette option se trouve dans la section Son > Sons du personnage ou Jeu > Feedback (uniquement pour PST:EE).
+Cette option se trouve dans la section Son > Sons du personnage ou Jeu > Feedback (uniquement pour
+PST:EE).
 
 
-21. Ajouter l'option de jeu "Nombre d'images par seconde" (expérimental) (pas disponible dans PST:EE, pas 
-    compatible avec Lefreut's Enhanced UI (LeUI))
+21. Ajouter l'option de jeu "Nombre d'images par seconde" (expérimental) (pas disponible dans PST:EE,
+    pas compatible avec Lefreut's Enhanced UI (LeUI))
 
-Ce composant installe un curseur permettant de régler le nombre d'images par secondes affichées 
-par le jeu. Vous pouvez choisir trois valeurs : 30 (valeur par défaut du jeu), 40 et 50 images 
+Ce composant installe un curseur permettant de régler le nombre d'images par secondes affichées
+par le jeu. Vous pouvez choisir trois valeurs : 30 (valeur par défaut du jeu), 40 et 50 images
 par seconde.
 
 Ce composant est qualifié "d'expérimental", parce que cette option ne fonctionne pas :
@@ -223,20 +228,20 @@ Cette option se trouve dans la section Jeu.
 
 22. Ajouter l'option de jeu "Feedback d'actions" (Incompatible avec Lefreut's Enhanced UI - LeUI)
 
-Ce composant installe un curseur permettant d'afficher autour du sprite des personnages des 
-petites icônes qui indiquent ce qu'ils sont en train de faire (par exemple se battre, lancer 
-un sort, accomplir un larcin). Vous pouvez définir plusieurs niveaux de feedback dont certains 
+Ce composant installe un curseur permettant d'afficher autour du sprite des personnages des
+petites icônes qui indiquent ce qu'ils sont en train de faire (par exemple se battre, lancer
+un sort, accomplir un larcin). Vous pouvez définir plusieurs niveaux de feedback dont certains
 nécessitent l'activation de l'option de Jeu "Mode de débogage".
 
 Cette option se trouve dans la section Jeu > Feedback
 
 
-23. Ajouter l'option de jeu "Afficher l'icône de passage au niveau supérieur" (uniquement disponible 
+23. Ajouter l'option de jeu "Afficher l'icône de passage au niveau supérieur" (uniquement disponible
     pour PST:EE, nécessite le mod « "Level Up" Icon Tweaks »)
 
-Ce composant vous permet d'afficher ou de cacher l'icône de "passage au niveau supérieur" sur 
-le portrait ou sur la barre de santé des membres de votre groupe prêts à gagner un niveau. Elle 
-nécessite l'installation du mod « "Level Up" Icon Tweaks », qui ajoute une fonction permettant 
+Ce composant vous permet d'afficher ou de cacher l'icône de "passage au niveau supérieur" sur
+le portrait ou sur la barre de santé des membres de votre groupe prêts à gagner un niveau. Elle
+nécessite l'installation du mod « "Level Up" Icon Tweaks », qui ajoute une fonction permettant
 d'afficher cette icône.
 
 Cette option se trouve dans la section Jeu > Feedback
