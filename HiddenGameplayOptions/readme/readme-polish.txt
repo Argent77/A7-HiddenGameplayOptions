@@ -1,7 +1,7 @@
 Reveal Hidden Gameplay Options
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Version:    2.0
+Version:    2.1
 Author:     Argent77
 
 Download:   https://github.com/Argent77/A7-HiddenGameplayOptions/releases/latest
@@ -266,6 +266,9 @@ ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa
 
 History
 ~~~~~~~
+
+2.1
+- Improved compatibility with Lefreut's UI mod variants
 
 2.0
 - Added option "Set Frame Rate"
