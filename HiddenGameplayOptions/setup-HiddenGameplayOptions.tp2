@@ -5,7 +5,8 @@ VERSION ~2.0~
 ASK_EVERY_COMPONENT
 
 ALWAYS
-  OUTER_SET INSTALLED_LEUI = (MOD_IS_INSTALLED ~leui.tp2~ 0) OR (MOD_IS_INSTALLED ~leui-iwdee.tp2~ 0)
+  OUTER_SET INSTALLED_LEUI = (MOD_IS_INSTALLED ~leui.tp2~ 0) OR (MOD_IS_INSTALLED ~leui-iwdee.tp2~ 0) OR
+                             (MOD_IS_INSTALLED ~leui-sod.tp2~ 0) OR (MOD_IS_INSTALLED ~leui-bg1ee.tp2~ 0)
   INCLUDE ~%MOD_FOLDER%/lib/presets.tph~
 END
 
