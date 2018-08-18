@@ -15,7 +15,7 @@ INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
  * STR_VAR LUA label text variable: ctl_label
  * STR_VAR LUA description variable: ctl_description
  */
-OUTER_TEXT_SPRINT codeFrameRateSlider ~%TAB%text
+OUTER_TEXT_SPRINT codeFrameRateText ~%TAB%text
 %TAB%{
 %TAB%%TAB%area %ctl_label_x% %ctl_label_y% %ctl_label_w% %ctl_label_h%
 %TAB%%TAB%text "%ctl_label%"
@@ -31,7 +31,8 @@ OUTER_TEXT_SPRINT codeFrameRateSlider ~%TAB%text
 %TAB%%TAB%%TAB%selectedSL = %ctl_id%
 %TAB%%TAB%"
 %TAB%}
-%TAB%slider
+~
+OUTER_TEXT_SPRINT codeFrameRateSlider ~%TAB%slider
 %TAB%{
 %TAB%%TAB%area %ctl_slider_x% %ctl_slider_y% %ctl_slider_w% %ctl_slider_h%
 %TAB%%TAB%position "framerateSLDR"
@@ -49,7 +50,28 @@ OUTER_TEXT_SPRINT codeFrameRateSlider ~%TAB%text
 %TAB%%TAB%%TAB%selectedSL = %ctl_id%
 %TAB%%TAB%"
 %TAB%}
-%TAB%label
+~
+OUTER_TEXT_SPRINT codeFrameRateSlider25 ~%TAB%slider
+%TAB%{
+%TAB%%TAB%area %ctl_slider_x% %ctl_slider_y% %ctl_slider_w% %ctl_slider_h%
+%TAB%%TAB%position "framerateSLDR"
+%TAB%%TAB%bam 'SLDRSTAR'
+%TAB%%TAB%sliderBackground 'SLDRBACK'
+%TAB%%TAB%scaleToClip
+%TAB%%TAB%sequence 0
+%TAB%%TAB%frame 1
+%TAB%%TAB%settings %ctl_num_settings%
+%TAB%%TAB%pad %ctl_pad_x% %ctl_pad_y% %ctl_pad_w% %ctl_pad_h%
+%TAB%%TAB%enabled "%ctl_condition%"
+%TAB%%TAB%action
+%TAB%%TAB%"
+%TAB%%TAB%%TAB%helpString = '%ctl_description%'
+%TAB%%TAB%%TAB%selectedOpt = 0
+%TAB%%TAB%%TAB%selectedSL = %ctl_id%
+%TAB%%TAB%"
+%TAB%}
+~
+OUTER_TEXT_SPRINT codeFrameRateLabel ~%TAB%label
 %TAB%{
 %TAB%%TAB%area %ctl_info_x% %ctl_info_y% %ctl_info_w% %ctl_info_h%
 %TAB%%TAB%text lua "getFrameRate(framerateSLDR)"
@@ -439,7 +461,7 @@ BEGIN
           TEXT_SPRINT ctl_label ~%optLabelName%~
           TEXT_SPRINT ctl_description ~%optDescName%~
 
-          TEXT_SPRINT code EVAL ~%codeFrameRateSlider%~
+          TEXT_SPRINT code EVAL ~%codeFrameRateText%%codeFrameRateSlider%%codeFrameRateLabel%~
           SET strlen = STRING_LENGTH ~%code%~
           INSERT_BYTES ofs1 strlen
           WRITE_ASCIIE ofs1 ~%code%~ (strlen)
@@ -493,11 +515,17 @@ BEGIN
             SET ctl_label_x  = 600  SET ctl_label_y  = 387  SET ctl_label_w  = 200  SET ctl_label_h  = 34
             SET ctl_slider_x = 806  SET ctl_slider_y = 387  SET ctl_slider_w = 200  SET ctl_slider_h = 39
             SET ctl_info_x   = 806  SET ctl_info_y   = 426  SET ctl_info_w   = 200  SET ctl_info_h   = 34
-            SET ctl_pad_x    = 8    SET ctl_pad_y    = 0    SET ctl_pad_w    = 10   SET ctl_pad_h    = 0
           END ELSE BEGIN
             SET ctl_label_x  = 112  SET ctl_label_y  = 375  SET ctl_label_w  = 188  SET ctl_label_h  = 35
             SET ctl_slider_x = 304  SET ctl_slider_y = 375  SET ctl_slider_w = 200  SET ctl_slider_h = 40
             SET ctl_info_x   = 304  SET ctl_info_y   = 414  SET ctl_info_w   = 200  SET ctl_info_h   = 35
+          END
+          SET isPatch25 = INDEX_BUFFER(~sliderBackground~) >= 0 ? 1 : 0
+          PATCH_IF (isPatch25) BEGIN
+            TEXT_SPRINT codeSlider ~%codeFrameRateSlider25%~
+            SET ctl_pad_x    = 5    SET ctl_pad_y    = 0    SET ctl_pad_w    = 4    SET ctl_pad_h    = 0
+          END ELSE BEGIN
+            TEXT_SPRINT codeSlider ~%codeFrameRateSlider%~
             SET ctl_pad_x    = 8    SET ctl_pad_y    = 0    SET ctl_pad_w    = 10   SET ctl_pad_h    = 0
           END
           SET ctl_id = controlID
@@ -506,7 +534,7 @@ BEGIN
           TEXT_SPRINT ctl_label ~%optLabelName%~
           TEXT_SPRINT ctl_description ~%optDescName%~
 
-          TEXT_SPRINT code EVAL ~%codeFrameRateSlider%~
+          TEXT_SPRINT code EVAL ~%codeFrameRateText%%codeSlider%%codeFrameRateLabel%~
           SET strlen = STRING_LENGTH ~%code%~
           INSERT_BYTES ofs1 strlen
           WRITE_ASCIIE ofs1 ~%code%~ (strlen)
@@ -565,7 +593,7 @@ BEGIN
           TEXT_SPRINT ctl_label ~%optLabelName%~
           TEXT_SPRINT ctl_description ~%optDescName%~
 
-          TEXT_SPRINT code EVAL ~%codeFrameRateSlider%~
+          TEXT_SPRINT code EVAL ~%codeFrameRateText%%codeFrameRateSlider%%codeFrameRateLabel%~
           SET strlen = STRING_LENGTH ~%code%~
           INSERT_BYTES ofs1 strlen
           WRITE_ASCIIE ofs1 ~%code%~ (strlen)
@@ -624,7 +652,7 @@ BEGIN
           TEXT_SPRINT ctl_label ~%optLabelName%~
           TEXT_SPRINT ctl_description ~%optDescName%~
 
-          TEXT_SPRINT code EVAL ~%codeFrameRateSlider%~
+          TEXT_SPRINT code EVAL ~%codeFrameRateText%%codeFrameRateSlider%%codeFrameRateLabel%~
           SET strlen = STRING_LENGTH ~%code%~
           INSERT_BYTES ofs1 strlen
           WRITE_ASCIIE ofs1 ~%code%~ (strlen)

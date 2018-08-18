@@ -269,6 +269,9 @@ ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa
 History
 ~~~~~~~
 
+2.2
+- Fixed compatibility issues of slider controls with SoD patch 2.5
+
 2.1
 - Improved compatibility with Lefreut's UI mod variants
 

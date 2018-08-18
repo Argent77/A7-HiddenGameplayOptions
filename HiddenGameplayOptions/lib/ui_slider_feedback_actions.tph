@@ -14,7 +14,7 @@ INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
  * STR_VAR LUA label text variable: ctl_label
  * STR_VAR LUA description variable: ctl_description
  */
-OUTER_TEXT_SPRINT codeActionFeedbackSlider ~%TAB%
+OUTER_TEXT_SPRINT codeActionFeedbackText ~%TAB%
 %TAB%text
 %TAB%{
 %TAB%%TAB%area %ctl_label_x% %ctl_label_y% %ctl_label_w% %ctl_label_h%
@@ -30,7 +30,8 @@ OUTER_TEXT_SPRINT codeActionFeedbackSlider ~%TAB%
 %TAB%%TAB%%TAB%selectedSL = %ctl_id%
 %TAB%%TAB%"
 %TAB%}
-%TAB%slider
+~
+OUTER_TEXT_SPRINT codeActionFeedbackSlider ~%TAB%slider
 %TAB%{
 %TAB%%TAB%area %ctl_slider_x% %ctl_slider_y% %ctl_slider_w% %ctl_slider_h%
 %TAB%%TAB%position "renderActionsSLDR"
@@ -47,7 +48,27 @@ OUTER_TEXT_SPRINT codeActionFeedbackSlider ~%TAB%
 %TAB%%TAB%%TAB%selectedSL = %ctl_id%
 %TAB%%TAB%"
 %TAB%}
-%TAB%label
+~
+OUTER_TEXT_SPRINT codeActionFeedbackSlider25 ~%TAB%slider
+%TAB%{
+%TAB%%TAB%area %ctl_slider_x% %ctl_slider_y% %ctl_slider_w% %ctl_slider_h%
+%TAB%%TAB%position "renderActionsSLDR"
+%TAB%%TAB%bam 'SLDRSTAR'
+%TAB%%TAB%sliderBackground 'SLDRBACK'
+%TAB%%TAB%scaleToClip
+%TAB%%TAB%sequence 0
+%TAB%%TAB%frame 1
+%TAB%%TAB%settings %ctl_num_settings%
+%TAB%%TAB%pad %ctl_pad_x% %ctl_pad_y% %ctl_pad_w% %ctl_pad_h%
+%TAB%%TAB%action
+%TAB%%TAB%"
+%TAB%%TAB%%TAB%helpString = '%ctl_description%'
+%TAB%%TAB%%TAB%selectedOpt = 0
+%TAB%%TAB%%TAB%selectedSL = %ctl_id%
+%TAB%%TAB%"
+%TAB%}
+~
+OUTER_TEXT_SPRINT codeActionFeedbackLabel ~%TAB%label
 %TAB%{
 %TAB%%TAB%area %ctl_info_x% %ctl_info_y% %ctl_info_w% %ctl_info_h%
 %TAB%%TAB%text lua "getRenderActions(renderActionsSLDR)"
@@ -497,7 +518,7 @@ BEGIN
           TEXT_SPRINT ctl_label ~%optLabelName%~
           TEXT_SPRINT ctl_description ~%optDescName%~
 
-          TEXT_SPRINT code EVAL ~%codeActionFeedbackSlider%~
+          TEXT_SPRINT code EVAL ~%codeActionFeedbackText%%codeActionFeedbackSlider%%codeActionFeedbackLabel%~
           INNER_PATCH_SAVE code ~%code%~ BEGIN
             // padding not needed
             REPLACE_TEXTUALLY ~^[ %TAB%]*pad[ %TAB%].*[%WNL%]*~ ~~
@@ -559,15 +580,24 @@ BEGIN
             SET ctl_slider_x = 300  SET ctl_slider_y = 305  SET ctl_slider_w = 200  SET ctl_slider_h = 36
             SET ctl_info_x   = 300  SET ctl_info_y   = 341  SET ctl_info_w   = 200  SET ctl_info_h   = 36
           END
+          SET isPatch25 = INDEX_BUFFER(~sliderBackground~) >= 0 ? 1 : 0
+          PATCH_IF (isPatch25) BEGIN
+            TEXT_SPRINT codeSlider ~%codeActionFeedbackSlider25%~
+            SET ctl_pad_x    = 5    SET ctl_pad_y    = 0    SET ctl_pad_w    = 4    SET ctl_pad_h    = 0
+          END ELSE BEGIN
+            TEXT_SPRINT codeSlider ~%codeActionFeedbackSlider%~
+          END
           SET ctl_id = controlID
           SET ctl_num_settings = numSettings
           TEXT_SPRINT ctl_label ~%optLabelName%~
           TEXT_SPRINT ctl_description ~%optDescName%~
 
-          TEXT_SPRINT code EVAL ~%codeActionFeedbackSlider%~
-          INNER_PATCH_SAVE code ~%code%~ BEGIN
-            // padding not needed
-            REPLACE_TEXTUALLY ~^[ %TAB%]*pad[ %TAB%].*[%WNL%]*~ ~~
+          TEXT_SPRINT code EVAL ~%codeActionFeedbackText%%codeSlider%%codeActionFeedbackLabel%~
+          PATCH_IF (NOT isPatch25) BEGIN
+            INNER_PATCH_SAVE code ~%code%~ BEGIN
+              // padding not needed
+              REPLACE_TEXTUALLY ~^[ %TAB%]*pad[ %TAB%].*[%WNL%]*~ ~~
+            END
           END
           SET strlen = STRING_LENGTH ~%code%~
           INSERT_BYTES ofs1 strlen
@@ -624,7 +654,7 @@ BEGIN
           TEXT_SPRINT ctl_label ~%optLabelName%~
           TEXT_SPRINT ctl_description ~%optDescName%~
 
-          TEXT_SPRINT code EVAL ~%codeActionFeedbackSlider%~
+          TEXT_SPRINT code EVAL ~%codeActionFeedbackText%%codeActionFeedbackSlider%%codeActionFeedbackLabel%~
           INNER_PATCH_SAVE code ~%code%~ BEGIN
             // padding not needed
             REPLACE_TEXTUALLY ~^[ %TAB%]*pad[ %TAB%].*[%WNL%]*~ ~~
@@ -685,7 +715,7 @@ BEGIN
           TEXT_SPRINT ctl_label ~%optLabelName%~
           TEXT_SPRINT ctl_description ~%optDescName%~
 
-          TEXT_SPRINT code EVAL ~%codeActionFeedbackSlider%~
+          TEXT_SPRINT code EVAL ~%codeActionFeedbackText%%codeActionFeedbackSlider%%codeActionFeedbackLabel%~
           SET strlen = STRING_LENGTH ~%code%~
           INSERT_BYTES ofs1 strlen
           WRITE_ASCIIE ofs1 ~%code%~ (strlen)
