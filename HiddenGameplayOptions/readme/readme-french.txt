@@ -1,11 +1,13 @@
 Faire apparaître les Options de jeu cachées
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Version        : 2.1
-Auteur         : Argent77
+Version :         2.1
+Auteur :          Argent77
 
-Téléchargement : https://github.com/Argent77/A7-HiddenGameplayOptions/releases/latest
-Discussion     : https://forums.beamdog.com/discussion/64524
+Téléchargement :  https://github.com/Argent77/A7-HiddenGameplayOptions/releases/latest
+                  http://www.shsforums.net/files/file/1223-reveal-hidden-gameplay-options/
+Discussion :      https://forums.beamdog.com/discussion/64524
+                  http://www.shsforums.net/forum/654-hidden-options-ee/
 
 
 Généralités
