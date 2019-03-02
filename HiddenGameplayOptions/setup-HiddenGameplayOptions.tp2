@@ -29,18 +29,24 @@ LANGUAGE  ~Deutsch~
           ~%MOD_FOLDER%/languages/english/mod.tra~
           ~%MOD_FOLDER%/languages/german/setup.tra~
           ~%MOD_FOLDER%/languages/german/mod.tra~
-LANGUAGE  ~Polski (tlumaczenie: Cahir)~
+LANGUAGE  ~Polski (translation: Cahir)~
           ~polish~
           ~%MOD_FOLDER%/languages/english/setup.tra~
           ~%MOD_FOLDER%/languages/english/mod.tra~
           ~%MOD_FOLDER%/languages/polish/setup.tra~
           ~%MOD_FOLDER%/languages/polish/mod.tra~
-LANGUAGE  ~Portugues (traducao: Nasher)~
+LANGUAGE  ~Portugues (translation: Nasher)~
           ~portuguese~
           ~%MOD_FOLDER%/languages/english/setup.tra~
           ~%MOD_FOLDER%/languages/english/mod.tra~
           ~%MOD_FOLDER%/languages/portuguese/setup.tra~
           ~%MOD_FOLDER%/languages/portuguese/mod.tra~
+LANGUAGE  ~Russian (translation: Saigon1983)~
+          ~russian~
+          ~%MOD_FOLDER%/languages/english/setup.tra~
+          ~%MOD_FOLDER%/languages/english/mod.tra~
+          ~%MOD_FOLDER%/languages/russian/setup.tra~
+          ~%MOD_FOLDER%/languages/russian/mod.tra~
 
 BEGIN @2  // All available options
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @100  // Enhanced Edition game patched to v2.0 or higher required.

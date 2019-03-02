@@ -1,0 +1,77 @@
+// -*- coding: cp1251 -*-
+/*
+@1 = ~Установить скрытые игровые опции~
+@2 = ~Все доступные опции~
+@3 = ~Выбрать опции~
+
+@10 = ~Активировать опцию "Включить режим отладки"~
+@11 = ~Активировать опцию "Включить режим настройки интерфейса"~
+@12 = ~Активировать опцию "Показывать номера строк"~
+@13 = ~Активировать опцию "Горячие клавиши на подсказках"~
+@14 = ~Активировать опцию "Специальные иконки при нажатии Tab"~
+@15 = ~Активировать опцию "Разрешить прокрутку диалогов пробелом"~
+@16 = ~Активировать опцию "Ограничить заклинания друида для Клирика/Следопыта"~
+@17 = ~Активировать опцию "Подлая атака из D&D 3"~
+@18 = ~Активировать опцию "Сотрясание экрана при критическом ударе"~
+@19 = ~Активировать опцию "Отображать дополнительную информацию о ходе сражения"~
+@20 = ~Активировать опцию "Показывать дату и время в режиме паузы"~
+@21 = ~Активировать опцию "Отключить масштабирование карты"~
+@22 = ~Активировать опцию "Инвертировать прокрутку колесом мыши"~
+@23 = ~Активировать опцию "Пауза в режиме карты"~
+@24 = ~Активировать опцию "Включить туман"~
+@25 = ~Активировать опцию "Отключить видеоролики"~
+@26 = ~Активировать опцию "Отключить косметические атаки"~
+@27 = ~Активировать опцию "Бонусный опыт на высокой сложности"~
+@28 = ~Активировать опцию "Скучающие звуки"~
+@29 = ~Активировать опцию "Частота кадров" (экспериментально)~
+@30 = ~Активировать опцию "Отображение действий"~
+@31 = ~Активировать опцию "Отображать значок повышения уровня"~
+@32 = ~Активировать опцию "Отображать область действия заклинания"~
+
+@100 = ~Требуется Enhanced Edition - версия игры с патчем v2.0 или выше.~
+@101 = ~Невозможно пропатчить LUA-файл~
+@102 = ~Невозможно пропатчить UI.MENU~
+@103 = ~Компонент "Выбрать опции" не выбран.~
+@104 = ~Опция недоступна для данной версии игры.~
+@105 = ~Опция уже присутствует в игре.~
+@106 = ~Этот мод не совместим с компонентом мода EEUITweaks "Скрытые игровые опции".~
+@107 = ~Этот мод не совместим с модом Lefreut's Enhanced UI (LeUI).~
+@108 = ~Требуется установка мода "Level Up" Icon Tweaks.~
+*/
+@1 = ~Install Hidden Gameplay Options~
+@2 = ~All available options~
+@3 = ~Selected options~
+
+@10 = ~Add in-game option "Enable Debug Mode"~
+@11 = ~Add in-game option "Enable UI Edit Mode"~
+@12 = ~Add in-game option "Show Strrefs"~
+@13 = ~Add in-game option "Hotkeys On Tooltips"~
+@14 = ~Add in-game option "Show trigger icons on tab"~
+@15 = ~Add in-game option "Allow Spacebar in Dialogs"~
+@16 = ~Add in-game option "Limit druidic spells for Cleric/Ranger"~
+@17 = ~Add in-game option "3E Sneak Attack"~
+@18 = ~Add in-game option "Critical Hit Screen Shake"~
+@19 = ~Add in-game option "Show extra combat info"~
+@20 = ~Add in-game option "Show Game Date and Time on Pause"~
+@21 = ~Add in-game option "Disable Area Map Zoom"~
+@22 = ~Add in-game option "Reverse Mouse Wheel Zoom"~
+@23 = ~Add in-game option "Pause Game on Map Screen"~
+@24 = ~Add in-game option "Enable Fog"~
+@25 = ~Add in-game option "Disable Movies"~
+@26 = ~Add in-game option "No Cosmetic Attacks"~
+@27 = ~Add in-game option "XP Bonus in Nightmare Mode"~
+@28 = ~Add in-game option "Trigger Bored Sounds"~
+@29 = ~Add in-game option "Frame Rate" (experimental)~
+@30 = ~Add in-game option "Action Feedback"~
+@31 = ~Add in-game option "Display Level Up Icon"~
+@32 = ~Add in-game option "Show Area of Effect Range"~
+
+@100 = ~Enhanced Edition game patched to v2.0 or higher required.~
+@101 = ~Cannot patch LUA file~
+@102 = ~Cannot patch UI.MENU~
+@103 = ~Component "Selected options" not selected.~
+@104 = ~Option not available for this game.~
+@105 = ~Option already present in this game.~
+@106 = ~This mod is not compatible with EEUITweaks component "Hidden Game Options".~
+@107 = ~This component is not compatible with Lefreut's Enhanced UI (LeUI).~
+@108 = ~Requires "Level Up" Icon Tweaks to be installed.~

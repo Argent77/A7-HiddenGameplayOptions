@@ -269,6 +269,9 @@ ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa
 History
 ~~~~~~~
 
+2.3
+- Added Russian translation (thanks Saigon1983)
+
 2.2
 - Fixed compatibility issues of slider controls with SoD patch 2.5
 
