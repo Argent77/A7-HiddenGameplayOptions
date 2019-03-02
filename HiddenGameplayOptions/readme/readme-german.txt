@@ -268,6 +268,8 @@ Polish translation: Cahir
 
 Brazilian Portuguese translation: Nasher
 
+Russian translation: Saigon1983
+
 
 Copyright Notice
 ~~~~~~~~~~~~~~~~
@@ -281,6 +283,7 @@ History
 
 2.3
 - Added Russian translation (thanks Saigon1983)
+- Expanded frame rate slider to support 60 fps
 
 2.2
 - Fixed compatibility issues of slider controls with SoD patch 2.5

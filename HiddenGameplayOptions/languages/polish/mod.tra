@@ -115,8 +115,9 @@ UWAGA: Ustawienie liczby klatek animacji na ponad 30 może spowodować utratę s
 @2802 = ~30 klatek/sek.~
 @2803 = ~40 klatek/sek.~
 @2804 = ~50 klatek/sek.~
-@2900 = ~Wskazówki dotyczące wykonywanych czynności~
+@2805 = ~60 klatek/sek.~
 
+@2900 = ~Wskazówki dotyczące wykonywanych czynności~
 @2901 = ~Suwak ten kontroluje sposób przedstawiania wykonywanych przez dane istoty czynności w postaci niewielkich ikon wyświetlanych nad ich sylwetkami.
   WYŁĄCZONY: Nigdy.
   MAŁO: Tylko sojusznicy po zatrzymaniu gry.

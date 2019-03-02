@@ -114,6 +114,7 @@ AVISO: Ajustar a taxa de quadro acima de 30 pode resultar em problemas de sincro
 @2802 = ~30 quadros/seg.~
 @2803 = ~40 quadros/seg.~
 @2804 = ~50 quadros/seg.~
+@2805 = ~60 quadros/seg.~
 
 @2900 = ~Resposta de Ação~
 @2901 = ~Esta barra controla se e quando as ações são exibidas como pequenos ícones ao redor de um personagem.

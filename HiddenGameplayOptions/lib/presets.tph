@@ -554,8 +554,9 @@ BEGIN
     optInfo_0     = 2802  // 30 fps
     optInfo_1     = 2803  // 40 fps
     optInfo_2     = 2804  // 50 fps
+    optInfo_3     = 2805  // 60 fps
     controlID     = 5
-    numSettings   = 3
+    numSettings   = 4
     minSetting    = 30
     stepSize      = 10
     autoFail      = 1
@@ -565,6 +566,7 @@ BEGIN
     optInfoName_0 = "A7_FRAMERATE_FPS_30"
     optInfoName_1 = "A7_FRAMERATE_FPS_40"
     optInfoName_2 = "A7_FRAMERATE_FPS_50"
+    optInfoName_3 = "A7_FRAMERATE_FPS_60"
     condition     = "not e:IsTouchUI()"
     iniSection    = "Program Options"
     iniName       = "Maximum Frame Rate"
