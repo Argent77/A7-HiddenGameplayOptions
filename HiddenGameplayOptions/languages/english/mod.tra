@@ -182,6 +182,11 @@ Note: You must restart the game for changes to take effect.~
 
 ^NNote: You must restart the game for changes to take effect.^-~
 
+@3700 = ~Render Dynamic Search Map~
+@3701 = ~Controls whether holding down CTRL will show an overlay of dynamic search map regions, such as blocked doorways or the personal space of creatures.
+
+^NNote: You must restart the game for changes to take effect.^-~
+
 
 // *** Misc. strings ***
 

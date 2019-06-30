@@ -632,6 +632,28 @@ BEGIN
   END
 END
 
+/** Add in-game option "Render Dynamic Search Map" */
+DEFINE_ACTION_FUNCTION OPTION_RENDER_DYNAMIC_SEARCH_MAP
+BEGIN
+  OUTER_TEXT_SPRINT arrayName "graphicsToggles"
+
+  LAF INSTALL_CHECK_OPTION
+  INT_VAR
+    optLabelTra   = 3700
+    optDescTra    = 3701
+    controlID     = "-191"
+    autoFail      = 1
+  STR_VAR
+    arrayName     = EVAL "%arrayName%"
+    optLabelName  = "A7_RENDER_DYNAMIC_SEARCH_MAP_LABEL"
+    optDescName   = "A7_RENDER_DYNAMIC_SEARCH_MAP_DESCRIPTION"
+    iniSection    = "Game Options"
+    iniName       = "Render Dynamic Search Map"
+  RET
+    success
+  END
+END
+
 /** Adds in-game "Frame rate" option as a slider */
 DEFINE_ACTION_FUNCTION OPTION_FRAME_RATE_SLIDER
 BEGIN

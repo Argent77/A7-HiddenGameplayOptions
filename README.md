@@ -178,6 +178,12 @@ Controls whether holding down SHIFT will show an overlay of the static search ma
 
 *Option can be found in Graphics > Display Options.*
 
+#### 29. Add in-game option "Render Dynamic Search Map"
+
+Controls whether holding down CTRL will show an overlay of dynamic search map regions, such as blocked doorways or the personal space of creatures.
+
+*Option can be found in Graphics > Display Options.*
+
 ## Copyright Notice
 
 The mod "Reveal Hidden Gameplay Options" is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).

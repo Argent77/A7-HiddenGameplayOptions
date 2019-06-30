@@ -110,6 +110,8 @@ BEGIN @2  // All available options
 
   LAF OPTION_RENDER_SEARCH_MAP END
 
+  LAF OPTION_RENDER_DYNAMIC_SEARCH_MAP END
+
 
 BEGIN @3  // Selected options
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @100  // Enhanced Edition game patched to v2.0 or higher required.
@@ -329,3 +331,10 @@ BEGIN @36 // Add in-game option "Render Search Map"
   DESIGNATED 36
 
   LAF OPTION_RENDER_SEARCH_MAP END
+
+
+BEGIN @37 // Add in-game option "Render Dynamic Search Map"
+  REQUIRE_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 1 @103 // Component "Selected options" not selected.
+  DESIGNATED 37
+
+  LAF OPTION_RENDER_DYNAMIC_SEARCH_MAP END
