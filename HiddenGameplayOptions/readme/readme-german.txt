@@ -255,6 +255,46 @@ Die Option kann in Spieleinstellungen > Rückmeldungen > Visuelle Rückmeldungen
 Hinweis: Diese Option wirkt sich nur auf Spiele ab Patchversion 2.5.16.6 aus.
 
 
+25. Spieloption "Enhanced Path Search" hinzufügen
+
+Verbessert die Wegfindung, in dem der Suchpfad der Gruppenmitglieder fortlaufend neu berechnet
+wird.
+
+Die Option kann in den Spieleinstellungen gefunden werden.
+
+
+26. Spieloption "Expire Trap Highlights" hinzufügen (not available for PST:EE)
+
+Hiermit wird gesteuert, ob die Anzeige entdeckter Fallen und versteckter Türen nach eine Weile 
+wieder verschwinden soll.
+
+Die Option kann in Spieleinstellungen > Rückmeldungen > Visuelle Rückmeldungen gefunden werden.
+
+
+27. Spieloption "Show Learnable Spells" hinzufügen
+
+Hiermit wird gesteuert, ob ein grüner Farbton für Schriftrollen angezeigt werden soll, die für den 
+Charakter erlernbar sind.
+
+Die Option kann in Grafik > Darstellungsoptionen gefunden werden.
+
+
+28. Spieloption "Render Search Map" hinzufügen
+
+Gibt an, ob bei gedrückter UMSCHALT-Taste die statische Suchkarte für das aktuelle Gebiet 
+eingeblendet werden soll.
+
+Die Option kann in Grafik > Darstellungsoptionen gefunden werden.
+
+
+29. Spieloption "Render Dynamic Search Map" hinzufügen
+
+Gibt an, ob bei gedrückter STRG-Taste eine dynamische Suchkarte eingeblendet werden soll, die z.B. 
+für blockierte Türen oder den eingenommenen Raum von Spielfiguren errechnet wird.
+
+Die Option kann in Grafik > Darstellungsoptionen gefunden werden.
+
+
 Credits
 ~~~~~~~
 

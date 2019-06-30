@@ -163,6 +163,31 @@ Hinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.
 
 ^NHinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.^-~
 
+@3300 = ~Verbesserte Wegfindung~
+@3301 = ~Verbessert die Wegfindung, in dem der Suchpfad der Gruppenmitglieder fortlaufend neu berechnet wird.
+
+^NHinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.^-~
+
+@3400 = ~Anzeige von Fallen auslaufen lassen~
+@3401 = ~Hiermit wird gesteuert, ob die Anzeige entdeckter Fallen und versteckter Türen nach eine Weile wieder verschwinden soll.
+
+^NHinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.^-~
+
+@3500 = ~Erlernbare Zauber anzeigen~
+@3501 = ~Hiermit wird gesteuert, ob ein grüner Farbton für Schriftrollen angezeigt werden soll, die für den Charakter erlernbar sind.
+
+^NHinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.^-~
+
+@3600 = ~Suchkarte anzeigen~
+@3601 = ~Gibt an, ob bei gedrückter UMSCHALT-Taste die statische Suchkarte für das aktuelle Gebiet eingeblendet werden soll.
+
+^NHinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.^-~
+
+@3700 = ~Dynamische Suchkarte anzeigen~
+@3701 = ~Gibt an, ob bei gedrückter STRG-Taste eine dynamische Suchkarte eingeblendet werden soll, die z.B. für blockierte Türen oder den eingenommenen Raum von Spielfiguren errechnet wird.
+
+^NHinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.^-~
+
 
 // *** Misc. strings ***
 

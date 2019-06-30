@@ -27,6 +27,11 @@
 @30 = ~Spieloption "Aktionssymbole" hinzufuegen~
 @31 = ~Spieloption "Symbol fuer Stufenaufstieg anzeigen" hinzufuegen~
 @32 = ~Spieloption "Wirkungsbereich von Zaubern anzeigen" hinzufuegen~
+@33 = ~Spieloption "Verbesserte Wegfindung" hinzufuegen~
+@34 = ~Spieloption "Anzeige von Fallen auslaufen lassen" hinzufuegen~
+@35 = ~Spieloption "Erlernbare Zauber anzeigen" hinzufuegen~
+@36 = ~Spieloption "Suchkarte anzeigen" hinzufuegen~
+@37 = ~Spieloption "Dynamische Suchkarte anzeigen" hinzufuegen~
 
 @100 = ~Enhanced Edition muss v2.0 oder hoeher sein.~
 @101 = ~LUA-Datei kann nicht bearbeitet werden~
