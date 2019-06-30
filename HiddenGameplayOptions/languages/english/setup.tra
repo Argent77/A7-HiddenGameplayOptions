@@ -30,6 +30,7 @@
 @33 = ~Add in-game option "Enhanced Path Search"~
 @34 = ~Add in-game option "Expire Trap Highlights"~
 @35 = ~Add in-game option "Show Learnable Spells"~
+@36 = ~Add in-game option "Render Search Map"~
 
 @100 = ~Enhanced Edition game patched to v2.0 or higher required.~
 @101 = ~Cannot patch LUA file~

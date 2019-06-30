@@ -258,6 +258,13 @@ Controls whether a green tint is shown for spell scrolls that can be written to 
 Option can be found in Graphics > Display Options.
 
 
+28. Add in-game option "Render Search Map"
+
+Controls whether holding down SHIFT will show an overlay of the static search map for the current area.
+
+Option can be found in Graphics > Display Options.
+
+
 Credits
 ~~~~~~~
 

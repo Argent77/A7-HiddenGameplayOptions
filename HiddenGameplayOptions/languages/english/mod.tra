@@ -177,6 +177,11 @@ Note: You must restart the game for changes to take effect.~
 
 ^NNote: You must restart the game for changes to take effect.^-~
 
+@3600 = ~Render Search Map~
+@3601 = ~Controls whether holding down SHIFT will show an overlay of the static search map for the current area.
+
+^NNote: You must restart the game for changes to take effect.^-~
+
 
 // *** Misc. strings ***
 

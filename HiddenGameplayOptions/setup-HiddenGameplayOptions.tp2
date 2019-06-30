@@ -108,6 +108,8 @@ BEGIN @2  // All available options
 
   LAF OPTION_SHOW_LEARNABLE_SPELLS END
 
+  LAF OPTION_RENDER_SEARCH_MAP END
+
 
 BEGIN @3  // Selected options
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @100  // Enhanced Edition game patched to v2.0 or higher required.
@@ -320,3 +322,10 @@ BEGIN @35 // Add in-game option "Show Learnable Spells"
   DESIGNATED 35
 
   LAF OPTION_SHOW_LEARNABLE_SPELLS END
+
+
+BEGIN @36 // Add in-game option "Render Search Map"
+  REQUIRE_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 1 @103 // Component "Selected options" not selected.
+  DESIGNATED 36
+
+  LAF OPTION_RENDER_SEARCH_MAP END
