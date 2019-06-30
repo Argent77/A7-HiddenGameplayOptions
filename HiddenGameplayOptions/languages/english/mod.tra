@@ -172,6 +172,11 @@ Note: You must restart the game for changes to take effect.~
 
 ^NNote: You must restart the game for changes to take effect.^-~
 
+@3500 = ~Show Learnable Spells~
+@3501 = ~Controls whether a green tint is shown for spell scrolls that can be written to a mage's spellbook.
+
+^NNote: You must restart the game for changes to take effect.^-~
+
 
 // *** Misc. strings ***
 

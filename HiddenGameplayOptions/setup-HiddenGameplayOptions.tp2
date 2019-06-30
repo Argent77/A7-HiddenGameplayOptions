@@ -106,6 +106,8 @@ BEGIN @2  // All available options
 
   ACTION_IF (NOT GAME_IS ~pstee~) BEGIN LAF OPTION_EXPIRE_TRAP_HIGHLIGHTS END END
 
+  LAF OPTION_SHOW_LEARNABLE_SPELLS END
+
 
 BEGIN @3  // Selected options
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @100  // Enhanced Edition game patched to v2.0 or higher required.
@@ -311,3 +313,10 @@ BEGIN @34 // Add in-game option "Expire Trap Highlights"
   DESIGNATED 34
 
   LAF OPTION_EXPIRE_TRAP_HIGHLIGHTS END
+
+
+BEGIN @35 // Add in-game option "Show Learnable Spells"
+  REQUIRE_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 1 @103 // Component "Selected options" not selected.
+  DESIGNATED 35
+
+  LAF OPTION_SHOW_LEARNABLE_SPELLS END

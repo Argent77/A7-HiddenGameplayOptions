@@ -251,6 +251,13 @@ Controls whether highlighting of detected traps or hidden doors should disappear
 Option can be found in Gameplay > Feedback > Visual Feedback.
 
 
+27. Add in-game option "Show Learnable Spells"
+
+Controls whether a green tint is shown for spell scrolls that can be written to a mage's spellbook.
+
+Option can be found in Graphics > Display Options.
+
+
 Credits
 ~~~~~~~
 

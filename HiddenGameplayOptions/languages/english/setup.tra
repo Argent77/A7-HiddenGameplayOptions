@@ -29,6 +29,7 @@
 @32 = ~Add in-game option "Show Area of Effect Range"~
 @33 = ~Add in-game option "Enhanced Path Search"~
 @34 = ~Add in-game option "Expire Trap Highlights"~
+@35 = ~Add in-game option "Show Learnable Spells"~
 
 @100 = ~Enhanced Edition game patched to v2.0 or higher required.~
 @101 = ~Cannot patch LUA file~
