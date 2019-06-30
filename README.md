@@ -160,6 +160,12 @@ Improves pathfinding by continuously recalculating the search path of characters
 
 *Option can be found in Gameplay section.*
 
+#### 26. Add in-game option "Expire Trap Highlights" *(not available for PST:EE)*
+
+Controls whether highlighting of detected traps or hidden doors should disappear after while.
+
+*Option can be found in Gameplay > Feedback > Visual Feedback.*
+
 ## Copyright Notice
 
 The mod "Reveal Hidden Gameplay Options" is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).

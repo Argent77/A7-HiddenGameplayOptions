@@ -167,6 +167,11 @@ Note: You must restart the game for changes to take effect.~
 
 ^NNote: You must restart the game for changes to take effect.^-~
 
+@3400 = ~Expire Trap Highlights~
+@3401 = ~Controls whether highlighting of detected traps or hidden doors should disappear after while.
+
+^NNote: You must restart the game for changes to take effect.^-~
+
 
 // *** Misc. strings ***
 
