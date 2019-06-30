@@ -544,6 +544,28 @@ BEGIN
   END
 END
 
+/** Add in-game option "Enhanced Path Search" */
+DEFINE_ACTION_FUNCTION OPTION_ENHANCED_PATH_SEARCH
+BEGIN
+  OUTER_TEXT_SPRINT arrayName "toggleTitles"
+
+  LAF INSTALL_CHECK_OPTION
+  INT_VAR
+    optLabelTra   = 3300
+    optDescTra    = 3301
+    controlID     = "-187"
+    autoFail      = 1
+  STR_VAR
+    arrayName     = EVAL "%arrayName%"
+    optLabelName  = "A7_ENHANCED_PATH_SEARCH_LABEL"
+    optDescName   = "A7_ENHANCED_PATH_SEARCH_DESCRIPTION"
+    iniSection    = "Game Options"
+    iniName       = "Enhanced Path Search"
+  RET
+    success
+  END
+END
+
 /** Adds in-game "Frame rate" option as a slider */
 DEFINE_ACTION_FUNCTION OPTION_FRAME_RATE_SLIDER
 BEGIN

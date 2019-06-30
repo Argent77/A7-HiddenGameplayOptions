@@ -162,6 +162,11 @@ Note: You must restart the game for changes to take effect.~
 
 ^NNote: You must restart the game for changes to take effect.^-~
 
+@3300 = ~Enhanced Path Search~
+@3301 = ~Improves pathfinding by continuously recalculating the search path of characters.
+
+^NNote: You must restart the game for changes to take effect.^-~
+
 
 // *** Misc. strings ***
 

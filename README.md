@@ -154,6 +154,12 @@ Setting this option displays the range of an Area of Effect spell before it is f
 
 *Option can be found in Gameplay > Feedback > Visual Feedback.*
 
+#### 25. Add in-game option "Enhanced Path Search"
+
+Improves pathfinding by continuously recalculating the search path of characters.
+
+*Option can be found in Gameplay section.*
+
 ## Copyright Notice
 
 The mod "Reveal Hidden Gameplay Options" is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).

@@ -237,6 +237,13 @@ Option can be found in Gameplay > Feedback > Visual Feedback.
 Note: This option has no effect in games before patch version 2.5.16.6.
 
 
+25. Add in-game option "Enhanced Path Search"
+
+Improves pathfinding by continuously recalculating the search path of characters.
+
+Option can be found in Gameplay section.
+
+
 Credits
 ~~~~~~~
 
