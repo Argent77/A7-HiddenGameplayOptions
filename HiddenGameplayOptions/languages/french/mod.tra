@@ -162,6 +162,31 @@ Note : Vous devez redémarrer le jeu pour que les modifications prennent effet.~
 
 ^NNote : Vous devez redémarrer le jeu pour que les modifications prennent effet.^-~
 
+@3300 = ~Recherche d'itineraire amelioree~
+@3301 = ~Activer cette option améliore la recherche d'itinéraires en recalculant en permanence le meilleur itinéraire disponible pour les personnages.
+
+^NNote : Vous devez redémarrer le jeu pour que les modifications prennent effet.^-~
+
+@3400 = ~Faire disparaître la surbrillance des pièges~
+@3401 = ~Activer cette option permet de faire disparaître au bout d'un moment la surbrillance des pièges et des portes secrètes détectés.
+
+^NNote : Vous devez redémarrer le jeu pour que les modifications prennent effet.^-~
+
+@3500 = ~Afficher les sorts à apprendre~
+@3501 = ~Activer cette option permet de colorer légèrement en vert les parchemins de sorts que le personnage peut écrire dans son livre de sorts.
+
+^NNote : Vous devez redémarrer le jeu pour que les modifications prennent effet.^-~
+
+@3600 = ~Afficher la carte des déplacements~
+@3601 = ~Activer cette option permet d'afficher la carte des déplacements de la zone en appuyant sur la touche MAJ.
+
+^NNote : Vous devez redémarrer le jeu pour que les modifications prennent effet.^-~
+
+@3700 = ~Afficher la carte dynamique des obstacles~
+@3701 = ~Activer cette option permet d'afficher les obstacles dans une zone (comme les passages de porte bloqués ou l'espace qu'occupent les créatures) en appuyant sur la touche CTRL.
+
+^NNote : Vous devez redémarrer le jeu pour que les modifications prennent effet.^-~
+
 
 // *** Misc. strings ***
 

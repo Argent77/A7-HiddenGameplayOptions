@@ -259,6 +259,41 @@ Elle se trouve dans la section Jeu > Feedback > Feedback visuel.
 Attention : cette option est inopérante pour les jeux antérieurs à la version 2.5.16.6.
 
 
+25. Ajouter l'option de jeu "Afficher la portée des zones d'effet des sorts"
+
+Activer cette option améliore la recherche d'itinéraires en recalculant en permanence le meilleur itinéraire disponible pour les personnages..
+
+Elle se trouve dans la section Jeu.
+
+
+26. Ajouter l'option de jeu "Faire disparaître la surbrillance des pièges" (pas disponible dans PST:EE)
+
+Activer cette option permet de faire disparaître au bout d'un moment la surbrillance des pièges et des portes secrètes détectés.
+
+Elle se trouve dans la section Jeu > Feedback > Feedback visuel.
+
+
+27. Ajouter l'option de jeu "Afficher les sorts à apprendre"
+
+Activer cette option permet de colorer légèrement en vert les parchemins de sorts que le personnage peut écrire dans son livre de sorts.
+
+Elle se trouve dans la section Graphismes > Options d'affichage.
+
+
+28. Ajouter l'option de jeu "Afficher la carte des déplacements"
+
+Activer cette option permet d'afficher la carte des déplacements de la zone en appuyant sur la touche MAJ.
+
+Elle se trouve dans la section Graphismes > Options d'affichage.
+
+
+29. Ajouter l'option de jeu "Afficher la carte dynamique des obstacles"
+
+Activer cette option permet d'afficher les obstacles dans une zone (comme les passages de porte bloqués ou l'espace qu'occupent les créatures) en appuyant sur la touche CTRL.
+
+Elle se trouve dans la section Graphismes > Options d'affichage.
+
+
 Crédits
 ~~~~~~~
 
@@ -287,6 +322,11 @@ History
 
 2.3
 - Added Russian translation (thanks Saigon1983)
+- Added option "Show Learnable Spells"
+- Added option "Expire Trap Highlights"
+- Added option "Enhanced Path Search"
+- Added option "Render Dynamic Search Map"
+- Added option "Render Search Map"
 - Expanded frame rate slider to support 60 fps
 
 2.2

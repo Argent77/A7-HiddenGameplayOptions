@@ -27,6 +27,11 @@
 @30 = ~Ajouter l'option de jeu "Feedback d'actions"~
 @31 = ~Ajouter l'option de jeu "Afficher l'icone de passage au niveau superieur"~
 @32 = ~Ajouter l'option de jeu "Afficher la portee des zones d'effet des sorts"~
+@33 = ~Ajouter l'option de jeu "Recherche d'itineraire amelioree"~
+@34 = ~Ajouter l'option de jeu "Faire disparaitre la surbrillance des pieges"~
+@35 = ~Ajouter l'option de jeu "Afficher les sorts a apprendre"~
+@36 = ~Ajouter l'option de jeu "Afficher la carte des deplacements"~
+@37 = ~Ajouter l'option de jeu "Afficher la carte dynamique des obstacles"~
 
 @100 = ~Ce mod requiert un jeu beneficiant du patch v2.0 ou ulterieur.~
 @101 = ~Echec de modification du fichier LUA.~
