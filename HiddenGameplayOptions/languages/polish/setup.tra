@@ -27,6 +27,11 @@
 @30 = ~Dodaj w grze opcje "Wskazowki dotyczace wykonywanych czynnosci"~
 @31 = ~Dodaj w grze opcje "Wyswietlanie ikon awansu na kolejny poziom"~
 @32 = ~Dodaj w grze opcje "Pokazywanie zasiegu czarow obszarowych"~
+@33 = ~Dodaj w grze opcje "Ulepszone wyszukiwanie sciezek"~
+@34 = ~Dodaj w grze opcje "Wygaszanie podswietlania pulapek"~
+@35 = ~Dodaj w grze opcje "Pokazuj czary, ktorych mozna sie nauczyc"~
+@36 = ~Dodaj w grze opcje "Renderowanie wyszukiwania na mapie"~
+@37 = ~Dodaj w grze opcje "Renderowanie dynamicznego wyszukiwania na mapie"~
 
 @100 = ~Wymagane posiadanie wersji Enhanced Edition w wersji 2.0 lub wyzszej.~
 @101 = ~Nie mozna zaktualizowac pliku LUA~

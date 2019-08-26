@@ -229,20 +229,61 @@ Opcja ta znajduje się w sekcji Opcje gry > Interakcja.
 23. Dodaj w grze opcję „Wyświetlanie ikony zmiany poziomu” (dostępne tylko dla PST:EE, wymaga
     uprzedniego zainstalowania modyfikacji „Ikona zmiany poziomu”)
 
-Opcja ta pozwala wyświetlanie ikony „Zmiany poziomu” w oknie portretu lub na pasku życia członków
+Opcja ta pozwala na wyświetlanie ikony „Zmiany poziomu” w oknie portretu lub na pasku życia członków
 drużyny mogących awansować na kolejny poziom. Komponent ten wymaga uprzedniego zainstalowania
 modyfikacji „Ikona zmiany poziomu”, która umożliwia wyświetlanie ikony awansu na kolejny poziom.
 
 Opcja ta znajduje się w sekcji Opcje gry > Interakcja.
 
 
-24. Dodaj w grze opcje „Pokazywanie zasięgu czarów obszarowych” (niedostępne w PST:EE)
+24. Dodaj w grze opcję „Pokazywanie zasięgu czarów obszarowych” (niedostępne w PST:EE)
 
 Opcja ta pozwala na pokazywanie zasięgu czarów obszarowych przed ich rzuceniem.
 
 Opcja ta znajduje się w sekcji Opcje gry > Interakcja > Graficzne wskazówki.
 
 Uwaga: Opcja ta nie działa w wersjach gry niższych niż 2.5.16.6.
+
+
+25. Dodaj w grze opcję „Ulepszone wyszukiwanie ścieżek”
+
+Opcja ta poprawia odnajdywanie ścieżek poprzez ciągłe przeliczanie algorytmu wyszukiwania ścieżek 
+poruszających się postaci.
+
+Opcja ta znajduje się w sekcji Opcje gry.
+
+
+26. Dodaj w grze opcję „Wygaszanie podświetlania pułapek” (niedostępne w PST:EE)
+
+Opcja ta pozwala na włączanie lub wyłączanie wygaszania po upływie pewnego czasu podświetlania pułapek 
+i ukrytych drzwi.
+
+Opcja ta znajduje się w sekcji Opcje gry > Interakcja > Graficzne wskazówki.
+
+
+27. Dodaj w grze opcję „Pokazuj czary, których można się nauczyć”
+
+Opcja ta pozwala na włączenie lub wyłączenie wyświetlania zielonej obwódki wokół czarów, które można 
+zapisać do księgi zaklęć.
+
+Opcja ta znajduje się w sekcji Grafika > Opcje wyświetlania.
+
+
+28. Dodaj w grze opcję „Renderowanie wyszukiwania na mapie”
+
+Opcja ta pozwala na włączanie i wyłączanie możliwości użycia klawisza SHIFT do wyświetlania powłoki 
+statycznego wyszukiwania lokacji na mapie dla aktualnie odwiedzanego obszaru.
+
+Opcja ta znajduje się w sekcji Grafika > Opcje wyświetlania.
+
+
+29. Dodaj w grze opcję „Renderowanie dynamicznego wyszukiwania na mapie”
+
+Opcja ta pozwala na włączanie i wyłączanie możliwości użycia klawisza CTRL do wyświetlania powłoki 
+dynamicznego wyszukiwania regionów, na przykład zablokowanych przejść czy przestrzeni osobistej 
+zajmowanej przez istoty.
+
+Opcja ta znajduje się w sekcji Grafika > Opcje wyświetlania.
 
 
 Credits
@@ -273,6 +314,11 @@ History
 
 2.3
 - Added Russian translation (thanks Saigon1983)
+- Added option "Show Learnable Spells"
+- Added option "Expire Trap Highlights"
+- Added option "Enhanced Path Search"
+- Added option "Render Dynamic Search Map"
+- Added option "Render Search Map"
 - Expanded frame rate slider to support 60 fps
 
 2.2

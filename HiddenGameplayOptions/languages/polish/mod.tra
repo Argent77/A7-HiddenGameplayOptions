@@ -166,6 +166,31 @@ Uwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.~
 
 ^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
 
+@3300 = ~Ulepszone wyszukiwanie ścieżek~
+@3301 = ~Opcja ta poprawia odnajdywanie ścieżek poprzez ciągłe przeliczanie algorytmu wyszukiwania ścieżek poruszających się postaci.
+
+^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+
+@3400 = ~Wygaszanie podświetlania pułapek~
+@3401 = ~Opcja ta pozwala na włączanie lub wyłączanie wygaszania po upływie pewnego czasu podświetlania pułapek i ukrytych drzwi.
+
+^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+
+@3500 = ~Pokazuj czary, których można się nauczyć~
+@3501 = ~Controls whether a green tint is shown for spell scrolls that can be written to a mage's spellbook.
+
+^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+
+@3600 = ~Renderowanie wyszukiwania na mapie~
+@3601 = ~Opcja ta pozwala na włączanie i wyłączanie możliwości użycia klawisza SHIFT do wyświetlania powłoki statycznego wyszukiwania lokacji na mapie dla aktualnie odwiedzanego obszaru.
+
+^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+
+@3700 = ~Renderowanie dynamicznego wyszukiwania na mapie~
+@3701 = ~Opcja ta pozwala na włączanie i wyłączanie możliwości użycia klawisza CTRL do wyświetlania powłoki dynamicznego wyszukiwania regionów, na przykład zablokowanych przejść czy przestrzeni zajmowanej przez istoty.
+
+^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+
 
 // *** Misc. strings ***
 
