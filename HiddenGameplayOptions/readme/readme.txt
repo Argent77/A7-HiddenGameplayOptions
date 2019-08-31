@@ -300,6 +300,11 @@ History
 
 2.3
 - Added Russian translation (thanks Saigon1983)
+- Added option "Show Learnable Spells"
+- Added option "Expire Trap Highlights"
+- Added option "Enhanced Path Search"
+- Added option "Render Dynamic Search Map"
+- Added option "Render Search Map"
 - Expanded frame rate slider to support 60 fps
 
 2.2
