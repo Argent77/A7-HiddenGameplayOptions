@@ -152,15 +152,40 @@
 @3101 = ~Проигрывать звуки скучающих персонажей~
 @3102 = ~Включение этой опции будет проигрывать звуки скучающих персонажей, которыми они становятся, если долгое время не отдавать им приказы.
 
-^NПримечание: Для того, чтобы изменения вступили в силу, необходимо перезапустить игру.^-~
+Примечание: Для того, чтобы изменения вступили в силу, необходимо перезапустить игру.~
 @3103 = ~Включение этой опции будет проигрывать звуки скучающих персонажей, которыми они становятся, если долгое время не отдавать им приказы.
 
-^Примечание: Для того, чтобы изменения вступили в силу, необходимо перезапустить игру.^-~
+^NПримечание: Для того, чтобы изменения вступили в силу, необходимо перезапустить игру.^-~
 
 @3200 = ~Отображать область действия заклинания~
 @3201 = ~Включение этой опции позволит видеть радиус действия заклинания перед его применением (например, радиус охвата огненного щара).
 
 ^NПримечание: Для того, чтобы изменения вступили в силу, необходимо перезапустить игру.^-~
+
+@3300 = ~Enhanced Path Search~
+@3301 = ~Improves pathfinding by continuously recalculating the search path of characters.
+
+^NNote: You must restart the game for changes to take effect.^-~
+
+@3400 = ~Expire Trap Highlights~
+@3401 = ~Controls whether highlighting of detected traps or hidden doors should disappear after while.
+
+^NNote: You must restart the game for changes to take effect.^-~
+
+@3500 = ~Show Learnable Spells~
+@3501 = ~Controls whether a green tint is shown for spell scrolls that can be written to a mage's spellbook.
+
+^NNote: You must restart the game for changes to take effect.^-~
+
+@3600 = ~Render Search Map~
+@3601 = ~Controls whether holding down SHIFT will show an overlay of the static search map for the current area.
+
+^NNote: You must restart the game for changes to take effect.^-~
+
+@3700 = ~Render Dynamic Search Map~
+@3701 = ~Controls whether holding down CTRL will show an overlay of dynamic search map regions, such as blocked doorways or the personal space of creatures.
+
+^NNote: You must restart the game for changes to take effect.^-~
 
 
 // *** Misc. strings ***

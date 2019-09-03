@@ -162,6 +162,31 @@ Observação: Você deve reiniciar o jogo para que as mudanças tenham efeito.~
 
 ^NObservação: Você deve reiniciar o jogo para que as mudanças tenham efeito.^-~
 
+@3300 = ~Enhanced Path Search~
+@3301 = ~Improves pathfinding by continuously recalculating the search path of characters.
+
+^NNote: You must restart the game for changes to take effect.^-~
+
+@3400 = ~Expire Trap Highlights~
+@3401 = ~Controls whether highlighting of detected traps or hidden doors should disappear after while.
+
+^NNote: You must restart the game for changes to take effect.^-~
+
+@3500 = ~Show Learnable Spells~
+@3501 = ~Controls whether a green tint is shown for spell scrolls that can be written to a mage's spellbook.
+
+^NNote: You must restart the game for changes to take effect.^-~
+
+@3600 = ~Render Search Map~
+@3601 = ~Controls whether holding down SHIFT will show an overlay of the static search map for the current area.
+
+^NNote: You must restart the game for changes to take effect.^-~
+
+@3700 = ~Render Dynamic Search Map~
+@3701 = ~Controls whether holding down CTRL will show an overlay of dynamic search map regions, such as blocked doorways or the personal space of creatures.
+
+^NNote: You must restart the game for changes to take effect.^-~
+
 
 // *** Misc. strings ***
 
