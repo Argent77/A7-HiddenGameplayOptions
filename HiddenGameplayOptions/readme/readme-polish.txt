@@ -205,7 +205,7 @@ Opcja ta znajduje się w sekcji Dźwięki > Odgłosy postaci lub Opcje gry > Int
     niekompatybilne z modyfikacją „Lefreut's Enhanced UI (LeUI)”)
 
 Po zainstalowaniu tego komponentu dostępny jest suwak służący do ustawienia pożądanej ilości klatek
-w grze. Można wybrać wartość 30, 40 lub 50 klatek na sekundę.
+w grze. Można wybrać wartość 30, 40, 50 lub 60 klatek na sekundę.
 
 Komponent ten został oznaczony jako „eksperymentalny”, gdyż istnieją następujące sytuacje, podczas
 których opcja ta nie wywołuje żadnego efektu:

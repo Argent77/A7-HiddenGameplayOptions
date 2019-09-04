@@ -218,7 +218,7 @@ PST:EE).
     pas compatible avec Lefreut's Enhanced UI (LeUI))
 
 Ce composant installe un curseur permettant de régler le nombre d'images par secondes affichées
-par le jeu. Vous pouvez choisir trois valeurs : 30 (valeur par défaut du jeu), 40 et 50 images
+par le jeu. Vous pouvez choisir trois valeurs : 30 (valeur par défaut du jeu), 40, 50 et 60 images
 par seconde.
 
 Ce composant est qualifié "d'expérimental", parce que cette option ne fonctionne pas :
