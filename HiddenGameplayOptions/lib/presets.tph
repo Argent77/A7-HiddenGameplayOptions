@@ -569,7 +569,11 @@ END
 /** Add in-game option "Expire Trap Highlights" */
 DEFINE_ACTION_FUNCTION OPTION_EXPIRE_TRAP_HIGHLIGHTS
 BEGIN
-  OUTER_TEXT_SPRINT arrayName "feedbackToggles"
+  ACTION_IF (INSTALLED_LEUI) BEGIN
+    OUTER_TEXT_SPRINT arrayName "toggleTitles"
+  END ELSE BEGIN
+    OUTER_TEXT_SPRINT arrayName "feedbackToggles"
+  END
 
   LAF INSTALL_CHECK_OPTION
   INT_VAR
