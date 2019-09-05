@@ -1,7 +1,7 @@
 Reveal Hidden Gameplay Options
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Version:    2.3
+Version:    2.4
 Author:     Argent77
 
 Download:   https://github.com/Argent77/A7-HiddenGameplayOptions/releases/latest
@@ -297,6 +297,10 @@ ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa
 
 History
 ~~~~~~~
+
+2.4
+- Fixed a compatibility issue with "Lefreut Enhanced UI" in option "Expire Trap Highlights"
+- Fixed several typos in the readme
 
 2.3
 - Added Russian translation (thanks Saigon1983)

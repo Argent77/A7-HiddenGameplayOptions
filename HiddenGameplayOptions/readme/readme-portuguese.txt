@@ -1,7 +1,7 @@
 Reveal Hidden Gameplay Options
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Versão:     2.3
+Versão:     2.4
 Author:     Argent77
 
 Download:   https://github.com/Argent77/A7-HiddenGameplayOptions/releases/latest
@@ -204,8 +204,8 @@ A opção pode ser encontrada em Sons > Sons de Personagem ou Jogabilidade > Res
     com "Enhanced UI (LeUI)" de Lefreut)
 
 Este componente instala uma barra de controle que pode ser usada para ajustar a taxa de quadros
-desejada do jogo. Você pode escolher entre 30, 40 e 50 quadros por segundo. A taxa padrão do jogo
-é 30 qps.
+desejada do jogo. Você pode escolher entre 30, 40, 50 e 60 quadros por segundo. A taxa padrão do
+jogo é 30 qps.
 
 O componente é marcado como "experimental", pois há situações onde ajustar esta opção não gera
 resultados:
@@ -270,6 +270,10 @@ ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa
 
 History
 ~~~~~~~
+
+2.4
+- Fixed a compatibility issue with "Lefreut Enhanced UI" in option "Expire Trap Highlights"
+- Fixed several typos in the readme
 
 2.3
 - Added Russian translation (thanks Saigon1983)
