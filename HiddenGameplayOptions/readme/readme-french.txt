@@ -134,7 +134,7 @@ un coup critique.
 Elle se trouve dans la section Jeu > Feedback > Feedback visuel (ou dans la section Jeu dans PST:EE).
 
 
-11. Ajouter l'option de jeu Informations de combat supplémentaires"
+11. Ajouter l'option de jeu "Informations de combat supplémentaires"
 
 Activer cette option affiche dans la fenêtre de dialogue tous les facteurs déterminant
 les résultats des jets d'attaque.
@@ -218,8 +218,8 @@ PST:EE).
     pas compatible avec Lefreut's Enhanced UI (LeUI))
 
 Ce composant installe un curseur permettant de régler le nombre d'images par secondes affichées
-par le jeu. Vous pouvez choisir trois valeurs : 30 (valeur par défaut du jeu), 40, 50 et 60 images
-par seconde.
+par le jeu. Vous pouvez choisir quatre valeurs : 30 (valeur par défaut du jeu), 40, 50 et 60
+images par seconde.
 
 Ce composant est qualifié "d'expérimental", parce que cette option ne fonctionne pas :
 1. Si le réglage Options > Jeu > Feedback > "Plus de confirmations" est activé.
@@ -259,7 +259,7 @@ Elle se trouve dans la section Jeu > Feedback > Feedback visuel.
 Attention : cette option est inopérante pour les jeux antérieurs à la version 2.5.16.6.
 
 
-25. Ajouter l'option de jeu "Afficher la portée des zones d'effet des sorts"
+25. Ajouter l'option de jeu "Recherche d'itinéraire améliorée"
 
 Activer cette option améliore la recherche d'itinéraires en recalculant en permanence le meilleur itinéraire disponible pour les personnages..
 
