@@ -1,9 +1,6 @@
 // -*- coding: us-ascii -*-
 
-@1 = ~Install Hidden Gameplay Options~
-@2 = ~All available options~
-@3 = ~Selected options~
-
+@1 = ~Install all Hidden Gameplay Options at once~
 @10 = ~Add in-game option "Enable Debug Mode"~
 @11 = ~Add in-game option "Enable UI Edit Mode"~
 @12 = ~Add in-game option "Show Strrefs"~
@@ -36,7 +33,7 @@
 @100 = ~Enhanced Edition game patched to v2.0 or higher required.~
 @101 = ~Cannot patch LUA file~
 @102 = ~Cannot patch UI.MENU~
-@103 = ~Component "Selected options" not selected.~
+@103 = ~Option is already installed.~
 @104 = ~Option not available for this game.~
 @105 = ~Option already present in this game.~
 @106 = ~This mod is not compatible with EEUITweaks component "Hidden Game Options".~
