@@ -48,13 +48,14 @@ the game it will fail with a forced error and restore the original state of the 
 Components
 ~~~~~~~~~~
 
-1. Install Hidden Gameplay Options (main component)
+1. Install all Hidden Gameplay Options at once
 
-This component allows you to choose whether to install selected options individually or all at once.
+This is a convenience option that allows you to install all available options at once.
 See more detailed information about individual options below.
 
 
-The following components are available when you chose to select options individually:
+The following components are available if you skip the component "Install Hidden Gameplay Options
+at once":
 
 2. Add in-game option "Enable Debug Mode"
 
@@ -260,16 +261,31 @@ Option can be found in Graphics > Display Options.
 
 28. Add in-game option "Render Search Map"
 
-Controls whether holding down SHIFT will show an overlay of the static search map for the current area.
+Controls whether holding down SHIFT will show an overlay of the static search map for the current
+area.
 
 Option can be found in Graphics > Display Options.
 
 
 29. Add in-game option "Render Dynamic Search Map"
 
-Controls whether holding down CTRL will show an overlay of dynamic search map regions, such as blocked doorways or the personal space of creatures.
+Controls whether holding down CTRL will show an overlay of dynamic search map regions, such as
+blocked doorways or the personal space of creatures.
 
 Option can be found in Graphics > Display Options.
+
+
+30. Add in-game options for Tweak Anthology's "Create Interval Saves" (requires Tweaks Anthology
+    component "Create interval saves")
+
+This component installs two options to the Gameplay section:
+- Enable Interval Saves:
+  Controls whether the game is saved at regular intervals.
+- Create Interval Saves during Combat:
+  Controls whether interval saves are created even during combat.
+
+Both options are only effective if Tweaks Anthology's mod component "Create interval saves" is
+installed.
 
 
 Credits
@@ -285,7 +301,7 @@ Polish translation: Cahir
 
 Brazilian Portuguese translation: Nasher
 
-Russian translation: Saigon1983
+Russian translation: Saigon1983, yota13
 
 
 Copyright Notice
@@ -297,6 +313,11 @@ ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa
 
 History
 ~~~~~~~
+
+2.5
+- Added two Gameplay options for controlling Tweak Anthology's "Create Interval Saves" feature
+- Simplified installation process by removing artificial component to install options individually
+- Updated Russian translation (thanks yota13)
 
 2.4
 - Fixed a compatibility issue with "Lefreut Enhanced UI" in option "Expire Trap Highlights"

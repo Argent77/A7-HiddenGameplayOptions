@@ -187,6 +187,16 @@ Note: You must restart the game for changes to take effect.~
 
 ^NNote: You must restart the game for changes to take effect.^-~
 
+@3800 = ~Enable Interval Saves~
+@3801 = ~Controls whether the game is saved at regular intervals. This option requires Tweaks Anthology's mod component "Create interval saves" to be installed.
+
+^NNote: You must restart the game for changes to take effect.^-~
+
+@3810 = ~Create Interval Saves during Combat~
+@3811 = ~Controls whether interval saves are created even during combat. This option requires Tweaks Anthology's mod component "Create interval saves" to be installed.
+
+^NNote: You must restart the game for changes to take effect.^-~
+
 
 // *** Misc. strings ***
 

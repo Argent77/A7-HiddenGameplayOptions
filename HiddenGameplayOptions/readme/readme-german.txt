@@ -49,13 +49,14 @@ und stellt in dem Fall den Urzustand der Spieldateien wieder her.
 Komponenten
 ~~~~~~~~~~~
 
-1. Versteckte Spieloptionen installieren (Hauptkomponente)
+1. Alle versteckten Spieloptionen auf einmal installieren
 
-Diese Komponente bietet die Möglichkeit, alle oder nur ausgewählte Optionen zu installieren.
+Diese Komponente bietet die Möglichkeit, alle verfügbaren Spieloptionen auf einmal zu installieren.
 Weitere Informationen zu den einzelnen Optionen siehe unten.
 
 
-Die folgenden Komponenten sind verfügbar, wenn "Nur ausgewählte Optionen" ausgewählt wurde:
+Die folgenden Komponenten sind nur verfügbar, wenn "Alle versteckten Spieloptionen auf einmal
+installieren" nicht installiert wurde:
 
 2. Spieloption "Debugmodus" hinzufügen
 
@@ -295,6 +296,19 @@ für blockierte Türen oder den eingenommenen Raum von Spielfiguren errechnet wi
 Die Option kann in Grafik > Darstellungsoptionen gefunden werden.
 
 
+30. Spieloptionen für Tweak Anthologys "Regelmäßige Spielstände erzeugen" hinzufügen (benötigt
+    Tweak Anthologys Modkomponente "Regelmäßige Spielstände erzeugen")
+
+Diese Komponente installiert zwei Optionen in die Spieleinstellungen:
+- Regelmäßige Spielstände aktivieren:
+  Wenn diese Option aktiviert ist, wird in regelmäßigen Abständen ein Spielstand angelegt.
+- Regelmäßige Spielstände während des Kampfes erzeugen:
+  Wenn diese Option aktiviert ist, werden regelmäßige Spielstände auch während eines Kampfes angelegt.
+
+Beide Optionen sind nur wirksam, wenn die Komponente "Regelmäßige Spielstände erzeugen" von Tweaks
+Anthology installiert wurde.
+
+
 Credits
 ~~~~~~~
 
@@ -320,6 +334,10 @@ ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa
 
 History
 ~~~~~~~
+
+2.5
+- Added two Gameplay options for controlling Tweak Anthology's "Create Interval Saves" feature
+- Simplified installation process by removing artificial component to install options individually
 
 2.4
 - Fixed a compatibility issue with "Lefreut Enhanced UI" in option "Expire Trap Highlights"

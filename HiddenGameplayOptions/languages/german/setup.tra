@@ -1,9 +1,6 @@
 // -*- coding: us-ascii -*-
 
-@1 = ~Versteckte Spieloptionen installieren~
-@2 = ~Alle verfuegbaren Optionen~
-@3 = ~Nur ausgewaehlte Optionen~
-
+@1 = ~Alle versteckten Spieloptionen auf einmal installieren~
 @10 = ~Spieloption "Debugmodus" hinzufuegen~
 @11 = ~Spieloption "UI Bearbeitungsmodus" hinzufuegen~
 @12 = ~Spieloption "Strrefs anzeigen" hinzufuegen~
@@ -32,16 +29,18 @@
 @35 = ~Spieloption "Erlernbare Zauber anzeigen" hinzufuegen~
 @36 = ~Spieloption "Suchkarte anzeigen" hinzufuegen~
 @37 = ~Spieloption "Dynamische Suchkarte anzeigen" hinzufuegen~
+@38 = ~Spieloptionen fuer Tweak Anthologys "Regelmaessige Spielstaende erzeugen" hinzufuegen~
 
 @100 = ~Enhanced Edition muss v2.0 oder hoeher sein.~
 @101 = ~LUA-Datei kann nicht bearbeitet werden~
 @102 = ~UI.MENU kann nicht bearbeitet werden~
-@103 = ~Komponente "Nur ausgewaehlte Optionen" wurde nicht installiert.~
+@103 = ~Die Option wurde bereits installiert.~
 @104 = ~Die Option ist fuer dieses Spiel nicht verfuegbar.~
 @105 = ~Diese Option ist bereits im Spiel verfuegbar.~
 @106 = ~Diese Mod kann nicht zusammen mit der EEUITweaks-Komponente "Hidden Game Options" installiert werden.~
 @107 = ~Diese Komponente ist nicht mit Lefreuts Enhanced UI (LeUI) kompatibel.~
 @108 = ~Benoetigt die Mod "Level Up" Icon Tweaks.~
+@109 = ~Benoetigt Tweaks Anthologys Modkomponente "Regelmaessige Spielstaende erzeugen".~
 
 
 // WeiDU prompts

@@ -10,11 +10,11 @@ This mods adds a number of useful options directly to the game, which includes t
 
 ## Components
 
-### 1. Install Hidden Gameplay Options *(main component)*
+### 1. Install all Hidden Gameplay Options at once
 
-This component allows you to choose whether to install selected options individually or all at once. See more detailed information about individual options below.
+This is a convenience option that allows you to install all available options at once. See more detailed information about individual options below.
 
-**The following components are available when you chose to select options individually:**
+**The following components are available if you skip the component "Install Hidden Gameplay Options at once":**
 
 #### 2. Add in-game option "Enable Debug Mode"
 
@@ -183,6 +183,15 @@ Controls whether holding down SHIFT will show an overlay of the static search ma
 Controls whether holding down CTRL will show an overlay of dynamic search map regions, such as blocked doorways or the personal space of creatures.
 
 *Option can be found in Graphics > Display Options.*
+
+#### 30. Add in-game options for Tweak Anthology's "Create Interval Saves" *(requires Tweaks Anthology component "Create interval saves")*
+
+This component installs two options to the Gameplay section:
+- **Enable Interval Saves:** Controls whether the game is saved at regular intervals.
+- **Create Interval Saves during Combat:** Controls whether interval saves are created even during combat.
+
+Both options are only effective if Tweaks Anthology's mod component "Create interval saves" is installed.
+
 
 ## Copyright Notice
 

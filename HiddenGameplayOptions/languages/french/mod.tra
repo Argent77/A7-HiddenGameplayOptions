@@ -187,6 +187,16 @@ Note : Vous devez redémarrer le jeu pour que les modifications prennent effet.~
 
 ^NNote : Vous devez redémarrer le jeu pour que les modifications prennent effet.^-~
 
+@3800 = ~Activer les sauvegardes périodiques~
+@3801 = ~Permet de sauvegarder le jeu à des intervalles réguliers. Ce réglage nécessite l'installation du composant "Créer des sauvegardes périodiques" du mod Tweaks Anthology.
+
+^NNote : Vous devez redémarrer le jeu pour que les modifications prennent effet.^-~
+
+@3810 = ~Créer des sauvegardes périodiques pendant les combats~
+@3811 = ~Permet de créer des sauvegardes périodiques même pendant les combats. Ce réglage nécessite l'installation du composant "Créer des sauvegardes périodiques" du mod Tweaks Anthology.
+
+^NNote : Vous devez redémarrer le jeu pour que les modifications prennent effet.^-~
+
 
 // *** Misc. strings ***
 

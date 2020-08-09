@@ -188,6 +188,16 @@ Hinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.
 
 ^NHinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.^-~
 
+@3800 = ~Regelmäßige Spielstände aktivieren~
+@3801 = ~Wenn diese Option aktiviert ist, wird in regelmäßigen Abständen ein Spielstand angelegt. Diese Option erfordert die Komponente "Regelmäßige Spielstände erzeugen" von Tweaks Anthology.
+
+^NHinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.^-~
+
+@3810 = ~Regelmäßige Spielstände während des Kampfes erzeugen~
+@3811 = ~Wenn diese Option aktiviert ist, werden regelmäßige Spielstände auch während eines Kampfes angelegt. Diese Option erfordert die Komponente "Regelmäßige Spielstände erzeugen" von Tweaks Anthology.
+
+^NHinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.^-~
+
 
 // *** Misc. strings ***
 

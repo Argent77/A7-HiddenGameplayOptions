@@ -70,6 +70,7 @@
 @35 = ~Add in-game option "Show Learnable Spells"~
 @36 = ~Add in-game option "Render Search Map"~
 @37 = ~Add in-game option "Render Dynamic Search Map"~
+@38 = ~Add in-game options for Tweak Anthology's "Create Interval Saves"~
 
 @100 = ~Enhanced Edition game patched to v2.0 or higher required.~
 @101 = ~Cannot patch LUA file~
@@ -80,3 +81,4 @@
 @106 = ~This mod is not compatible with EEUITweaks component "Hidden Game Options".~
 @107 = ~This component is not compatible with Lefreut's Enhanced UI (LeUI).~
 @108 = ~Requires "Level Up" Icon Tweaks to be installed.~
+@109 = ~Requires Tweaks Anthology's "Create interval saves" to be installed.~

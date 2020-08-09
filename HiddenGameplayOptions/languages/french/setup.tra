@@ -1,8 +1,6 @@
 // -*- coding: us-ascii -*-
 
-@1 = ~Installer les options de jeu cachees~
-@2 = ~Toutes les options disponibles~
-@3 = ~Une selection d'options~
+@1 = ~Installer simultanement toutes les options de jeu cachees~
 
 @10 = ~Ajouter l'option de jeu "Activer le Mode de debogage"~
 @11 = ~Ajouter l'option de jeu "Activer le mode de modification de l'interface utilisateur"~
@@ -32,6 +30,7 @@
 @35 = ~Ajouter l'option de jeu "Afficher les sorts a apprendre"~
 @36 = ~Ajouter l'option de jeu "Afficher la carte des deplacements"~
 @37 = ~Ajouter l'option de jeu "Afficher la carte dynamique des obstacles"~
+@38 = ~Ajouter les options de jeu pour le composant "Creer des sauvegardes periodiques" de Tweaks Anthology~
 
 @100 = ~Ce mod requiert un jeu beneficiant du patch v2.0 ou ulterieur.~
 @101 = ~Echec de modification du fichier LUA.~
@@ -42,6 +41,7 @@
 @106 = ~Ce mod n'est pas compatible avec le composant "Options cachees du jeu" de EEUITweaks.~
 @107 = ~Ce composant n'est pas compatible avec Lefreut's Enhanced UI (LeUI).~
 @108 = ~Necessite l'installation du module "Level Up" Icon Tweaks.~
+@109 = ~Necessite l'installation du composant "Creer des sauvegardes periodiques" de Tweaks Anthology.~
 
 
 // WeiDU prompts

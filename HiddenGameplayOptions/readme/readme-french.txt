@@ -50,14 +50,14 @@ automatiquement interdite et le mod restaurera les fichiers à modifier dans leu
 Composants
 ~~~~~~~~~~
 
-1. Installer les Options de jeu cachées (composant principal)
+1. Installer simultanément toutes les Options de jeu cachées
 
-Ce composant vous permet de choisir d'installer toutes les options simultanément ou bien de les
-sélectionner une par une.
+Ce composant vous permet d'installer simultanément toutes les options disponibles pour votre jeu.
 Des informations détaillées sur chaque option sont disponibles plus bas.
 
 
-Les composants suivants sont disponibles si vous décidez de sélectionner les options une par une :
+Les composants suivants sont disponibles si vous décidez de sélectionner les options une par une,
+sans passer par le composant précédent :
 
 2 Ajouter l'option de jeu "Activer le Mode de débogage"
 
@@ -249,8 +249,7 @@ d'afficher cette icône.
 Cette option se trouve dans la section Jeu > Feedback
 
 
-24. Ajouter l'option de jeu "Afficher la portée des zones d'effet des sorts" (pas disponible dans
-    PST:EE)
+24. Ajouter l'option de jeu "Afficher la portée des zones d'effet des sorts" (pas disponible dans PST:EE)
 
 Activer cette option affiche la portée de la zone d'effet d'un sort avant de le lancer.
 
@@ -261,21 +260,24 @@ Attention : cette option est inopérante pour les jeux antérieurs à la version
 
 25. Ajouter l'option de jeu "Recherche d'itinéraire améliorée"
 
-Activer cette option améliore la recherche d'itinéraires en recalculant en permanence le meilleur itinéraire disponible pour les personnages..
+Activer cette option améliore la recherche d'itinéraires en recalculant en permanence le meilleur
+itinéraire disponible pour les personnages..
 
 Elle se trouve dans la section Jeu.
 
 
 26. Ajouter l'option de jeu "Faire disparaître la surbrillance des pièges" (pas disponible dans PST:EE)
 
-Activer cette option permet de faire disparaître au bout d'un moment la surbrillance des pièges et des portes secrètes détectés.
+Activer cette option permet de faire disparaître au bout d'un moment la surbrillance des pièges et
+des portes secrètes détectés.
 
 Elle se trouve dans la section Jeu > Feedback > Feedback visuel.
 
 
 27. Ajouter l'option de jeu "Afficher les sorts à apprendre"
 
-Activer cette option permet de colorer légèrement en vert les parchemins de sorts que le personnage peut écrire dans son livre de sorts.
+Activer cette option permet de colorer légèrement en vert les parchemins de sorts que le personnage
+peut écrire dans son livre de sorts.
 
 Elle se trouve dans la section Graphismes > Options d'affichage.
 
@@ -289,9 +291,23 @@ Elle se trouve dans la section Graphismes > Options d'affichage.
 
 29. Ajouter l'option de jeu "Afficher la carte dynamique des obstacles"
 
-Activer cette option permet d'afficher les obstacles dans une zone (comme les passages de porte bloqués ou l'espace qu'occupent les créatures) en appuyant sur la touche CTRL.
+Activer cette option permet d'afficher les obstacles dans une zone (comme les passages de porte
+bloqués ou l'espace qu'occupent les créatures) en appuyant sur la touche CTRL.
 
 Elle se trouve dans la section Graphismes > Options d'affichage.
+
+
+30. Ajouter les options de jeu pour  pour le composant "Créer des sauvegardes périodiques" de Tweaks Anthology
+    (nécessite l'installation de ce composant)
+
+Ce composant propose deux options dans la section Jeu :
+- Activer les sauvegardes périodiques
+  Permet de sauvegarder le jeu à des intervalles réguliers.
+- Créer des sauvegardes périodiques pendant les combats
+  Permet de créer des sauvegardes périodiques même pendant les combats.
+
+Ces deux options ne sont opérationnelles que si le composant "Créer des sauvegardes périodiques"
+de Tweaks Anthology est installé.
 
 
 Crédits
@@ -307,7 +323,7 @@ Polish translation: Cahir
 
 Brazilian Portuguese translation: Nasher
 
-Russian translation: Saigon1983
+Russian translation: Saigon1983, yota13
 
 
 Copyright Notice
@@ -319,6 +335,11 @@ ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa
 
 History
 ~~~~~~~
+
+2.5
+- Added two Gameplay options for controlling Tweak Anthology's "Create Interval Saves" feature
+- Simplified installation process by removing artificial component to install options individually
+- Updated Russian translation (thanks yota13)
 
 2.4
 - Fixed a compatibility issue with "Lefreut Enhanced UI" in option "Expire Trap Highlights"
