@@ -1,7 +1,7 @@
 Reveal Hidden Gameplay Options
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Version:    2.4
+Version:    2.5
 Author:     Argent77
 
 Download:   https://github.com/Argent77/A7-HiddenGameplayOptions/releases/latest
@@ -311,6 +311,11 @@ ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa
 
 History
 ~~~~~~~
+
+2.5
+- Added two Gameplay options for controlling Tweak Anthology's "Create Interval Saves" feature
+- Simplified installation process by removing artificial component to install options individually
+- Updated Russian translation (thanks yota13)
 
 2.4
 - Fixed a compatibility issue with "Lefreut Enhanced UI" in option "Expire Trap Highlights"
