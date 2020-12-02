@@ -287,6 +287,8 @@ This component installs two options to the Gameplay section:
 Both options are only effective if Tweaks Anthology's mod component "Create interval saves" is
 installed.
 
+Options can be found in Gameplay section.
+
 
 Credits
 ~~~~~~~

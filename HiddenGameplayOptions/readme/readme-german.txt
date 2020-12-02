@@ -308,6 +308,8 @@ Diese Komponente installiert zwei Optionen in die Spieleinstellungen:
 Beide Optionen sind nur wirksam, wenn die Komponente "Regelmäßige Spielstände erzeugen" von Tweaks
 Anthology installiert wurde.
 
+Die Optionen können in den Spieleinstellungen gefunden werden.
+
 
 Credits
 ~~~~~~~
