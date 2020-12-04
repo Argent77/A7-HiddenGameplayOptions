@@ -47,6 +47,12 @@ LANGUAGE  ~Russian (translation: Saigon1983)~
           ~%MOD_FOLDER%/languages/english/mod.tra~
           ~%MOD_FOLDER%/languages/russian/setup.tra~
           ~%MOD_FOLDER%/languages/russian/mod.tra~
+LANGUAGE  ~Korean (translation: begaborn)~
+          ~korean~
+          ~%MOD_FOLDER%/languages/english/setup.tra~
+          ~%MOD_FOLDER%/languages/english/mod.tra~
+          ~%MOD_FOLDER%/languages/korean/setup.tra~
+          ~%MOD_FOLDER%/languages/korean/mod.tra~
 
 BEGIN @1  // Install all Hidden Gameplay Options at once
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @100  // Enhanced Edition game patched to v2.0 or higher required.

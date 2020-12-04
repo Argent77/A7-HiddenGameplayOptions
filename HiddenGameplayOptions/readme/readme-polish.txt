@@ -301,6 +301,8 @@ Brazilian Portuguese translation: Nasher
 
 Russian translation: Saigon1983
 
+Korean translation: begaborn
+
 
 Copyright Notice
 ~~~~~~~~~~~~~~~~
@@ -311,6 +313,10 @@ ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa
 
 History
 ~~~~~~~
+
+2.6
+- Added Korean translation (thanks begaborn)
+- Added missing info to readme
 
 2.5
 - Added two Gameplay options for controlling Tweak Anthology's "Create Interval Saves" feature
