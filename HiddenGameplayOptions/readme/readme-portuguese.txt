@@ -29,7 +29,7 @@ Instalação
 ~~~~~~~~~~
 
 Esta é uma modificação WeiDU, e isso significa que é muito fácil instalá-la. Basta descompactar
-o arquivo baixado diretamente no diretório do teu jogo e executar "setup-A7-HiddenGameplayOptions.exe".
+o arquivo baixado diretamente no diretório do teu jogo e executar "setup-HiddenGameplayOptions.exe".
 
 
 Compatibilidade
