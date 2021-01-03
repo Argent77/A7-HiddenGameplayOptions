@@ -28,7 +28,7 @@ Instalacja
 ~~~~~~~~~~
 
 Jest to modyfikacja WeiDU, co oznacza, iż jest bardzo prosta w instalacji. Wystarczy rozpakować
-pobrane archiwum do katalogu z grą, a następnie uruchomić plik „setup-HiddenGameplayOptions.exe”.
+pobrane archiwum do katalogu z grą, a następnie uruchomić plik „setup-A7-HiddenGameplayOptions.exe”.
 
 
 Kompatybilność

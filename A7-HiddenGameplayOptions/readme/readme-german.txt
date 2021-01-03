@@ -28,7 +28,7 @@ Installation
 ~~~~~~~~~~~~
 
 Dies ist eine WeiDU Mod. Das bedeutet, sie ist sehr einfach zu installieren. Entpackt die
-heruntergeladene Zipdatei in das Spieleverzeichnis und startet "setup-HiddenGameplayOptions.exe".
+heruntergeladene Zipdatei in das Spieleverzeichnis und startet "setup-A7-HiddenGameplayOptions.exe".
 Folgt den Anweisungen des Programms und die Mod ist startbereit.
 
 

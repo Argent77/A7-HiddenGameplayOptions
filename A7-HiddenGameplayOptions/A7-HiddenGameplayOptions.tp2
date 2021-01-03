@@ -1,4 +1,4 @@
-BACKUP ~HiddenGameplayOptions/backup~
+BACKUP ~A7-HiddenGameplayOptions/backup~
 SUPPORT ~https://forums.beamdog.com/discussion/64524~
 VERSION ~2.5~
 
@@ -15,165 +15,165 @@ README ~%MOD_FOLDER%/readme/readme-%LANGUAGE%.txt~
 
 LANGUAGE  ~English~
           ~english~
-          ~%MOD_FOLDER%/languages/english/setup.tra~
-          ~%MOD_FOLDER%/languages/english/mod.tra~
+          ~A7-HiddenGameplayOptions/languages/english/setup.tra~
+          ~A7-HiddenGameplayOptions/languages/english/mod.tra~
 LANGUAGE  ~Francais (traduction: Gwendolyne)~
           ~french~
-          ~%MOD_FOLDER%/languages/english/setup.tra~
-          ~%MOD_FOLDER%/languages/english/mod.tra~
-          ~%MOD_FOLDER%/languages/french/setup.tra~
-          ~%MOD_FOLDER%/languages/french/mod.tra~
+          ~A7-HiddenGameplayOptions/languages/english/setup.tra~
+          ~A7-HiddenGameplayOptions/languages/english/mod.tra~
+          ~A7-HiddenGameplayOptions/languages/french/setup.tra~
+          ~A7-HiddenGameplayOptions/languages/french/mod.tra~
 LANGUAGE  ~Deutsch~
           ~german~
-          ~%MOD_FOLDER%/languages/english/setup.tra~
-          ~%MOD_FOLDER%/languages/english/mod.tra~
-          ~%MOD_FOLDER%/languages/german/setup.tra~
-          ~%MOD_FOLDER%/languages/german/mod.tra~
+          ~A7-HiddenGameplayOptions/languages/english/setup.tra~
+          ~A7-HiddenGameplayOptions/languages/english/mod.tra~
+          ~A7-HiddenGameplayOptions/languages/german/setup.tra~
+          ~A7-HiddenGameplayOptions/languages/german/mod.tra~
 LANGUAGE  ~Polski (translation: Cahir)~
           ~polish~
-          ~%MOD_FOLDER%/languages/english/setup.tra~
-          ~%MOD_FOLDER%/languages/english/mod.tra~
-          ~%MOD_FOLDER%/languages/polish/setup.tra~
-          ~%MOD_FOLDER%/languages/polish/mod.tra~
+          ~A7-HiddenGameplayOptions/languages/english/setup.tra~
+          ~A7-HiddenGameplayOptions/languages/english/mod.tra~
+          ~A7-HiddenGameplayOptions/languages/polish/setup.tra~
+          ~A7-HiddenGameplayOptions/languages/polish/mod.tra~
 LANGUAGE  ~Portugues (translation: Nasher)~
           ~portuguese~
-          ~%MOD_FOLDER%/languages/english/setup.tra~
-          ~%MOD_FOLDER%/languages/english/mod.tra~
-          ~%MOD_FOLDER%/languages/portuguese/setup.tra~
-          ~%MOD_FOLDER%/languages/portuguese/mod.tra~
+          ~A7-HiddenGameplayOptions/languages/english/setup.tra~
+          ~A7-HiddenGameplayOptions/languages/english/mod.tra~
+          ~A7-HiddenGameplayOptions/languages/portuguese/setup.tra~
+          ~A7-HiddenGameplayOptions/languages/portuguese/mod.tra~
 LANGUAGE  ~Russian (translation: Saigon1983)~
           ~russian~
-          ~%MOD_FOLDER%/languages/english/setup.tra~
-          ~%MOD_FOLDER%/languages/english/mod.tra~
-          ~%MOD_FOLDER%/languages/russian/setup.tra~
-          ~%MOD_FOLDER%/languages/russian/mod.tra~
+          ~A7-HiddenGameplayOptions/languages/english/setup.tra~
+          ~A7-HiddenGameplayOptions/languages/english/mod.tra~
+          ~A7-HiddenGameplayOptions/languages/russian/setup.tra~
+          ~A7-HiddenGameplayOptions/languages/russian/mod.tra~
 LANGUAGE  ~Korean (translation: begaborn)~
           ~korean~
-          ~%MOD_FOLDER%/languages/english/setup.tra~
-          ~%MOD_FOLDER%/languages/english/mod.tra~
-          ~%MOD_FOLDER%/languages/korean/setup.tra~
-          ~%MOD_FOLDER%/languages/korean/mod.tra~
+          ~A7-HiddenGameplayOptions/languages/english/setup.tra~
+          ~A7-HiddenGameplayOptions/languages/english/mod.tra~
+          ~A7-HiddenGameplayOptions/languages/korean/setup.tra~
+          ~A7-HiddenGameplayOptions/languages/korean/mod.tra~
 
 BEGIN @1  // Install all Hidden Gameplay Options at once
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @100  // Enhanced Edition game patched to v2.0 or higher required.
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @106  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
   DESIGNATED 0
 
-  ACTION_IF (NOT MOD_IS_INSTALLED ~setup-HiddenGameplayOptions.tp2~ 10) BEGIN
+  ACTION_IF (NOT MOD_IS_INSTALLED ~A7-HiddenGameplayOptions.tp2~ 10) BEGIN
     LAF OPTION_DEBUG_CONSOLE END
   END
 
-  ACTION_IF (NOT MOD_IS_INSTALLED ~setup-HiddenGameplayOptions.tp2~ 11) BEGIN
+  ACTION_IF (NOT MOD_IS_INSTALLED ~A7-HiddenGameplayOptions.tp2~ 11) BEGIN
     LAF OPTION_UI_EDIT_MODE END
   END
 
-  ACTION_IF (NOT MOD_IS_INSTALLED ~setup-HiddenGameplayOptions.tp2~ 12) BEGIN
+  ACTION_IF (NOT MOD_IS_INSTALLED ~A7-HiddenGameplayOptions.tp2~ 12) BEGIN
     LAF OPTION_SHOW_STRREFS END
   END
 
-  ACTION_IF (NOT MOD_IS_INSTALLED ~setup-HiddenGameplayOptions.tp2~ 13) BEGIN
+  ACTION_IF (NOT MOD_IS_INSTALLED ~A7-HiddenGameplayOptions.tp2~ 13) BEGIN
     LAF OPTION_TOOLTIP_HOTKEYS END
   END
 
-  ACTION_IF (NOT MOD_IS_INSTALLED ~setup-HiddenGameplayOptions.tp2~ 14) BEGIN
+  ACTION_IF (NOT MOD_IS_INSTALLED ~A7-HiddenGameplayOptions.tp2~ 14) BEGIN
     LAF OPTION_TRIGGER_ICONS END
   END
 
-  ACTION_IF (NOT MOD_IS_INSTALLED ~setup-HiddenGameplayOptions.tp2~ 15) BEGIN
+  ACTION_IF (NOT MOD_IS_INSTALLED ~A7-HiddenGameplayOptions.tp2~ 15) BEGIN
     ACTION_IF (GAME_IS ~pstee~) BEGIN LAF OPTION_ALLOW_SPACE_IN_DIALOG END END
   END
 
-  ACTION_IF (NOT MOD_IS_INSTALLED ~setup-HiddenGameplayOptions.tp2~ 16) BEGIN
+  ACTION_IF (NOT MOD_IS_INSTALLED ~A7-HiddenGameplayOptions.tp2~ 16) BEGIN
     ACTION_IF (NOT GAME_IS ~pstee~) BEGIN LAF OPTION_CLERIC_RANGER_SPELLS END END
   END
 
-  ACTION_IF (NOT MOD_IS_INSTALLED ~setup-HiddenGameplayOptions.tp2~ 17) BEGIN
+  ACTION_IF (NOT MOD_IS_INSTALLED ~A7-HiddenGameplayOptions.tp2~ 17) BEGIN
     ACTION_IF (NOT GAME_IS ~iwdee~) BEGIN LAF OPTION_SNEAK_ATTACK END END
   END
 
-  ACTION_IF (NOT MOD_IS_INSTALLED ~setup-HiddenGameplayOptions.tp2~ 18) BEGIN
+  ACTION_IF (NOT MOD_IS_INSTALLED ~A7-HiddenGameplayOptions.tp2~ 18) BEGIN
     LAF OPTION_CRITICAL_HIT_SCREEN_SHAKE END
   END
 
-  ACTION_IF (NOT MOD_IS_INSTALLED ~setup-HiddenGameplayOptions.tp2~ 19) BEGIN
+  ACTION_IF (NOT MOD_IS_INSTALLED ~A7-HiddenGameplayOptions.tp2~ 19) BEGIN
     LAF OPTION_EXTRA_COMBAT_INFO END
   END
 
-  ACTION_IF (NOT MOD_IS_INSTALLED ~setup-HiddenGameplayOptions.tp2~ 20) BEGIN
+  ACTION_IF (NOT MOD_IS_INSTALLED ~A7-HiddenGameplayOptions.tp2~ 20) BEGIN
     LAF OPTION_DATE_ON_PAUSE END
   END
 
-  ACTION_IF (NOT MOD_IS_INSTALLED ~setup-HiddenGameplayOptions.tp2~ 21) BEGIN
+  ACTION_IF (NOT MOD_IS_INSTALLED ~A7-HiddenGameplayOptions.tp2~ 21) BEGIN
     ACTION_IF (GAME_IS ~pstee~) BEGIN LAF OPTION_DISABLE_MAP_ZOOM END END
   END
 
-  ACTION_IF (NOT MOD_IS_INSTALLED ~setup-HiddenGameplayOptions.tp2~ 22) BEGIN
+  ACTION_IF (NOT MOD_IS_INSTALLED ~A7-HiddenGameplayOptions.tp2~ 22) BEGIN
     LAF OPTION_REVERSE_WHEEL_ZOOM END
   END
 
-  ACTION_IF (NOT MOD_IS_INSTALLED ~setup-HiddenGameplayOptions.tp2~ 23) BEGIN
+  ACTION_IF (NOT MOD_IS_INSTALLED ~A7-HiddenGameplayOptions.tp2~ 23) BEGIN
     LAF OPTION_PAUSING_MAP END
   END
 
-  ACTION_IF (NOT MOD_IS_INSTALLED ~setup-HiddenGameplayOptions.tp2~ 24) BEGIN
+  ACTION_IF (NOT MOD_IS_INSTALLED ~A7-HiddenGameplayOptions.tp2~ 24) BEGIN
     ACTION_IF (NOT GAME_IS ~pstee~) BEGIN LAF OPTION_ENABLE_FOG END END
   END
 
-  ACTION_IF (NOT MOD_IS_INSTALLED ~setup-HiddenGameplayOptions.tp2~ 25) BEGIN
+  ACTION_IF (NOT MOD_IS_INSTALLED ~A7-HiddenGameplayOptions.tp2~ 25) BEGIN
     LAF OPTION_DISABLE_MOVIES END
   END
 
-  ACTION_IF (NOT MOD_IS_INSTALLED ~setup-HiddenGameplayOptions.tp2~ 26) BEGIN
+  ACTION_IF (NOT MOD_IS_INSTALLED ~A7-HiddenGameplayOptions.tp2~ 26) BEGIN
     ACTION_IF (GAME_IS ~pstee~) BEGIN LAF OPTION_NO_COSMETIC_ATTACKS END END
   END
 
-  ACTION_IF (NOT MOD_IS_INSTALLED ~setup-HiddenGameplayOptions.tp2~ 27) BEGIN
+  ACTION_IF (NOT MOD_IS_INSTALLED ~A7-HiddenGameplayOptions.tp2~ 27) BEGIN
     ACTION_IF (NOT GAME_IS ~pstee~) BEGIN LAF OPTION_NIGHTMARE_XP_BONUS END END
   END
 
-  ACTION_IF (NOT MOD_IS_INSTALLED ~setup-HiddenGameplayOptions.tp2~ 28) BEGIN
+  ACTION_IF (NOT MOD_IS_INSTALLED ~A7-HiddenGameplayOptions.tp2~ 28) BEGIN
     ACTION_IF (NOT INSTALLED_LEUI) BEGIN LAF OPTION_BORED_TIMEOUT END END
   END
 
-  ACTION_IF (NOT MOD_IS_INSTALLED ~setup-HiddenGameplayOptions.tp2~ 29) BEGIN
+  ACTION_IF (NOT MOD_IS_INSTALLED ~A7-HiddenGameplayOptions.tp2~ 29) BEGIN
     ACTION_IF (NOT GAME_IS ~pstee~ &&
                NOT INSTALLED_LEUI) BEGIN LAF OPTION_FRAME_RATE_SLIDER END END
   END
 
-  ACTION_IF (NOT MOD_IS_INSTALLED ~setup-HiddenGameplayOptions.tp2~ 30) BEGIN
+  ACTION_IF (NOT MOD_IS_INSTALLED ~A7-HiddenGameplayOptions.tp2~ 30) BEGIN
     ACTION_IF (NOT INSTALLED_LEUI) BEGIN LAF OPTION_ACTION_FEEDBACK_SLIDER END END
   END
 
-  ACTION_IF (NOT MOD_IS_INSTALLED ~setup-HiddenGameplayOptions.tp2~ 31) BEGIN
+  ACTION_IF (NOT MOD_IS_INSTALLED ~A7-HiddenGameplayOptions.tp2~ 31) BEGIN
     ACTION_IF (GAME_IS ~pstee~ &&
-               MOD_IS_INSTALLED ~setup-A7-LevelUpTweaks.tp2~ 0) BEGIN LAF OPTION_ENABLE_LEVEL_UP END END
+               MOD_IS_INSTALLED ~A7-LevelUpTweaks.tp2~ 0) BEGIN LAF OPTION_ENABLE_LEVEL_UP END END
   END
 
-  ACTION_IF (NOT MOD_IS_INSTALLED ~setup-HiddenGameplayOptions.tp2~ 32) BEGIN
+  ACTION_IF (NOT MOD_IS_INSTALLED ~A7-HiddenGameplayOptions.tp2~ 32) BEGIN
     ACTION_IF (NOT GAME_IS ~pstee~) BEGIN LAF OPTION_SHOW_AOE END END
   END
 
-  ACTION_IF (NOT MOD_IS_INSTALLED ~setup-HiddenGameplayOptions.tp2~ 33) BEGIN
+  ACTION_IF (NOT MOD_IS_INSTALLED ~A7-HiddenGameplayOptions.tp2~ 33) BEGIN
     LAF OPTION_ENHANCED_PATH_SEARCH END
   END
 
-  ACTION_IF (NOT MOD_IS_INSTALLED ~setup-HiddenGameplayOptions.tp2~ 34) BEGIN
+  ACTION_IF (NOT MOD_IS_INSTALLED ~A7-HiddenGameplayOptions.tp2~ 34) BEGIN
     ACTION_IF (NOT GAME_IS ~pstee~) BEGIN LAF OPTION_EXPIRE_TRAP_HIGHLIGHTS END END
   END
 
-  ACTION_IF (NOT MOD_IS_INSTALLED ~setup-HiddenGameplayOptions.tp2~ 35) BEGIN
+  ACTION_IF (NOT MOD_IS_INSTALLED ~A7-HiddenGameplayOptions.tp2~ 35) BEGIN
     LAF OPTION_SHOW_LEARNABLE_SPELLS END
   END
 
-  ACTION_IF (NOT MOD_IS_INSTALLED ~setup-HiddenGameplayOptions.tp2~ 36) BEGIN
+  ACTION_IF (NOT MOD_IS_INSTALLED ~A7-HiddenGameplayOptions.tp2~ 36) BEGIN
     LAF OPTION_RENDER_SEARCH_MAP END
   END
 
-  ACTION_IF (NOT MOD_IS_INSTALLED ~setup-HiddenGameplayOptions.tp2~ 37) BEGIN
+  ACTION_IF (NOT MOD_IS_INSTALLED ~A7-HiddenGameplayOptions.tp2~ 37) BEGIN
     LAF OPTION_RENDER_DYNAMIC_SEARCH_MAP END
   END
 
-  ACTION_IF (NOT MOD_IS_INSTALLED ~setup-HiddenGameplayOptions.tp2~ 38 &&
+  ACTION_IF (NOT MOD_IS_INSTALLED ~A7-HiddenGameplayOptions.tp2~ 38 &&
              (MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3350 ||
               MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3351 ||
               MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3352 ||
@@ -189,42 +189,42 @@ BEGIN @1  // Install all Hidden Gameplay Options at once
 
 
 BEGIN @10 // Add in-game option "Enable Debug Mode"
-  FORBID_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
+  FORBID_COMPONENT ~A7-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
   DESIGNATED 10
 
   LAF OPTION_DEBUG_CONSOLE END
 
 
 BEGIN @11 // Add in-game option "Enable UI Edit Mode"
-  FORBID_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
+  FORBID_COMPONENT ~A7-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
   DESIGNATED 11
 
   LAF OPTION_UI_EDIT_MODE END
 
 
 BEGIN @12 // Add in-game option "Show Strrefs"
-  FORBID_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
+  FORBID_COMPONENT ~A7-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
   DESIGNATED 12
 
   LAF OPTION_SHOW_STRREFS END
 
 
 BEGIN @13 // Add in-game option "Hotkeys On Tooltips"
-  FORBID_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
+  FORBID_COMPONENT ~A7-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
   DESIGNATED 13
 
   LAF OPTION_TOOLTIP_HOTKEYS END
 
 
 BEGIN @14 // Add in-game option "Show trigger icons on tab"
-  FORBID_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
+  FORBID_COMPONENT ~A7-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
   DESIGNATED 14
 
   LAF OPTION_TRIGGER_ICONS END
 
 
 BEGIN @15 // Add in-game option "Allow Spacebar in Dialogs"
-  FORBID_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
+  FORBID_COMPONENT ~A7-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
   REQUIRE_PREDICATE (GAME_IS ~pstee~) @104 // Option not available for this game.
   DESIGNATED 15
 
@@ -232,7 +232,7 @@ BEGIN @15 // Add in-game option "Allow Spacebar in Dialogs"
 
 
 BEGIN @16 // Add in-game option "Limit druidic spells for Cleric/Ranger"
-  FORBID_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
+  FORBID_COMPONENT ~A7-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
   REQUIRE_PREDICATE (NOT GAME_IS ~pstee~) @104 // Option not available for this game.
   DESIGNATED 16
 
@@ -240,7 +240,7 @@ BEGIN @16 // Add in-game option "Limit druidic spells for Cleric/Ranger"
 
 
 BEGIN @17 // Add in-game option "3E Sneak Attack"
-  FORBID_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
+  FORBID_COMPONENT ~A7-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
   REQUIRE_PREDICATE (NOT GAME_IS ~iwdee~) @105 // Option already present in this game.
   DESIGNATED 17
 
@@ -248,28 +248,28 @@ BEGIN @17 // Add in-game option "3E Sneak Attack"
 
 
 BEGIN @18 // Add in-game option "Critical Hit Screen Shake"
-  FORBID_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
+  FORBID_COMPONENT ~A7-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
   DESIGNATED 18
 
   LAF OPTION_CRITICAL_HIT_SCREEN_SHAKE END
 
 
 BEGIN @19 // Add in-game option "Show extra combat info"
-  FORBID_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
+  FORBID_COMPONENT ~A7-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
   DESIGNATED 19
 
   LAF OPTION_EXTRA_COMBAT_INFO END
 
 
 BEGIN @20 // Add in-game option "Show Game Date and Time on Pause"
-  FORBID_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
+  FORBID_COMPONENT ~A7-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
   DESIGNATED 20
 
   LAF OPTION_DATE_ON_PAUSE END
 
 
 BEGIN @21 // Add in-game option "Disable Area Map Zoom"
-  FORBID_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
+  FORBID_COMPONENT ~A7-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
   REQUIRE_PREDICATE (GAME_IS ~pstee~) @104 // Option not available for this game.
   DESIGNATED 21
 
@@ -277,21 +277,21 @@ BEGIN @21 // Add in-game option "Disable Area Map Zoom"
 
 
 BEGIN @22 // Add in-game option "Reverse Mouse Wheel Zoom"
-  FORBID_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
+  FORBID_COMPONENT ~A7-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
   DESIGNATED 22
 
   LAF OPTION_REVERSE_WHEEL_ZOOM END
 
 
 BEGIN @23 // Add in-game option "Pause Game on Map Screen"
-  FORBID_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
+  FORBID_COMPONENT ~A7-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
   DESIGNATED 23
 
   LAF OPTION_PAUSING_MAP END
 
 
 BEGIN @24 // Add in-game option "Enable Fog"
-  FORBID_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
+  FORBID_COMPONENT ~A7-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
   REQUIRE_PREDICATE (NOT GAME_IS ~pstee~) @104 // Option not available for this game.
   DESIGNATED 24
 
@@ -299,14 +299,14 @@ BEGIN @24 // Add in-game option "Enable Fog"
 
 
 BEGIN @25 // Add in-game option "Disable Movies"
-  FORBID_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
+  FORBID_COMPONENT ~A7-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
   DESIGNATED 25
 
   LAF OPTION_DISABLE_MOVIES END
 
 
 BEGIN @26 // Add in-game option "No Cosmetic Attacks"
-  FORBID_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
+  FORBID_COMPONENT ~A7-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
   REQUIRE_PREDICATE (GAME_IS ~pstee~) @104 // Option not available for this game.
   DESIGNATED 26
 
@@ -314,7 +314,7 @@ BEGIN @26 // Add in-game option "No Cosmetic Attacks"
 
 
 BEGIN @27 // Add in-game option "XP Bonus in Nightmare Mode"
-  FORBID_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
+  FORBID_COMPONENT ~A7-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
   REQUIRE_PREDICATE (NOT GAME_IS ~pstee~) @104 // Option not available for this game.
   DESIGNATED 27
 
@@ -322,7 +322,7 @@ BEGIN @27 // Add in-game option "XP Bonus in Nightmare Mode"
 
 
 BEGIN @28 // Add in-game option "Trigger Bored Sounds"
-  FORBID_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
+  FORBID_COMPONENT ~A7-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~leui.tp2~ 0 AND
                      NOT MOD_IS_INSTALLED ~leui-iwdee.tp2~ 0) @107 // This component is not compatible with Lefreut's Enhanced UI.
   DESIGNATED 28
@@ -331,7 +331,7 @@ BEGIN @28 // Add in-game option "Trigger Bored Sounds"
 
 
 BEGIN @29 // Add in-game option "Frame Rate" (experimental)
-  FORBID_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
+  FORBID_COMPONENT ~A7-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~leui.tp2~ 0 AND
                      NOT MOD_IS_INSTALLED ~leui-iwdee.tp2~ 0) @107 // This component is not compatible with Lefreut's Enhanced UI.
   REQUIRE_PREDICATE (NOT GAME_IS ~pstee~) @104 // Option not available for this game.
@@ -344,7 +344,7 @@ BEGIN @29 // Add in-game option "Frame Rate" (experimental)
 
 
 BEGIN @30 // Add in-game option "Action Feedback"
-  FORBID_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
+  FORBID_COMPONENT ~A7-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~leui.tp2~ 0 AND
                      NOT MOD_IS_INSTALLED ~leui-iwdee.tp2~ 0) @107 // This component is not compatible with Lefreut's Enhanced UI.
   // TODO: update when dragonspear_ui++.tp2 is expanded
@@ -356,16 +356,16 @@ BEGIN @30 // Add in-game option "Action Feedback"
 
 
 BEGIN @31 // Add in-game option "Enable Level Up Icon"
-  FORBID_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
+  FORBID_COMPONENT ~A7-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
   REQUIRE_PREDICATE (GAME_IS ~pstee~) @104 // Option not available for this game.
-  REQUIRE_COMPONENT ~setup-A7-LevelUpTweaks.tp2~ 0 @108 // Requires "Level Up" Icon Tweaks.
+  REQUIRE_COMPONENT ~A7-LevelUpTweaks.tp2~ 0 @108 // Requires "Level Up" Icon Tweaks.
   DESIGNATED 31
 
   LAF OPTION_ENABLE_LEVEL_UP END
 
 
 BEGIN @32 // Add in-game option "Show Area of Effect Radius"
-  FORBID_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
+  FORBID_COMPONENT ~A7-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
   REQUIRE_PREDICATE (NOT GAME_IS ~pstee~) @104 // Option not available for this game.
   DESIGNATED 32
 
@@ -373,14 +373,14 @@ BEGIN @32 // Add in-game option "Show Area of Effect Radius"
 
 
 BEGIN @33 // Add in-game option "Enhanced Path Search"
-  FORBID_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
+  FORBID_COMPONENT ~A7-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
   DESIGNATED 33
 
   LAF OPTION_ENHANCED_PATH_SEARCH END
 
 
 BEGIN @34 // Add in-game option "Expire Trap Highlights"
-  FORBID_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
+  FORBID_COMPONENT ~A7-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
   REQUIRE_PREDICATE (NOT GAME_IS ~pstee~) @104 // Option not available for this game.
   DESIGNATED 34
 
@@ -388,28 +388,28 @@ BEGIN @34 // Add in-game option "Expire Trap Highlights"
 
 
 BEGIN @35 // Add in-game option "Show Learnable Spells"
-  FORBID_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
+  FORBID_COMPONENT ~A7-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
   DESIGNATED 35
 
   LAF OPTION_SHOW_LEARNABLE_SPELLS END
 
 
 BEGIN @36 // Add in-game option "Render Search Map"
-  FORBID_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
+  FORBID_COMPONENT ~A7-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
   DESIGNATED 36
 
   LAF OPTION_RENDER_SEARCH_MAP END
 
 
 BEGIN @37 // Add in-game option "Render Dynamic Search Map"
-  FORBID_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
+  FORBID_COMPONENT ~A7-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
   DESIGNATED 37
 
   LAF OPTION_RENDER_DYNAMIC_SEARCH_MAP END
 
 
 BEGIN @38 // Add in-game options for Tweak Anthology's "Create Interval Saves"
-  FORBID_COMPONENT ~setup-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
+  FORBID_COMPONENT ~A7-HiddenGameplayOptions.tp2~ 0 @103 // Option is already installed
   REQUIRE_PREDICATE (MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3350 ||
                      MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3351 ||
                      MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3352 ||
