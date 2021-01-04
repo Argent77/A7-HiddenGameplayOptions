@@ -1,7 +1,7 @@
 Reveal Hidden Gameplay Options
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Version:    2.5
+Version:    2.6
 Author:     Argent77
 
 Download:   https://github.com/Argent77/A7-HiddenGameplayOptions/releases/latest
@@ -320,7 +320,11 @@ History
 
 2.6
 - Added Korean translation (thanks begaborn)
+- Added Project Infinity metadata
+- Added German translation for WeiDU prompts
+- Added WeiDU SUPPORT information
 - Added missing info to readme
+- Fixed potential display issues with component names in WeiDU.log and Project Infinity
 
 2.5
 - Added two Gameplay options for controlling Tweak Anthology's "Create Interval Saves" feature

@@ -1,7 +1,7 @@
 Faire apparaître les Options de jeu cachées
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Version :         2.5
+Version :         2.6
 Auteur :          Argent77
 
 Téléchargement :  https://github.com/Argent77/A7-HiddenGameplayOptions/releases/latest
@@ -340,7 +340,11 @@ History
 
 2.6
 - Added Korean translation (thanks begaborn)
+- Added Project Infinity metadata
+- Added German translation for WeiDU prompts
+- Added WeiDU SUPPORT information
 - Added missing info to readme
+- Fixed potential display issues with component names in WeiDU.log and Project Infinity
 
 2.5
 - Added two Gameplay options for controlling Tweak Anthology's "Create Interval Saves" feature
