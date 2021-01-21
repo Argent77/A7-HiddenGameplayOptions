@@ -1,17 +1,22 @@
-BACKUP ~HiddenGameplayOptions/backup~
+BACKUP ~weidu_external/backup/HiddenGameplayOptions~
 SUPPORT ~https://forums.beamdog.com/discussion/64524~
 VERSION ~2.6~
 
 ASK_EVERY_COMPONENT
 
 ALWAYS
+  // required because of non-standard BACKUP path
+  OUTER_TEXT_SPRINT MOD_FOLDER ~HiddenGameplayOptions~
+  // root folder for mutable data
+  OUTER_TEXT_SPRINT WORK_FOLDER ~weidu_external~
+
   OUTER_SET INSTALLED_LEUI = (MOD_IS_INSTALLED ~leui.tp2~ 0) OR (MOD_IS_INSTALLED ~leui-iwdee.tp2~ 0) OR
                              (MOD_IS_INSTALLED ~leui-sod.tp2~ 0) OR (MOD_IS_INSTALLED ~leui-bg1ee.tp2~ 0)
   INCLUDE ~%MOD_FOLDER%/lib/presets.tph~
 END
 
-README ~%MOD_FOLDER%/readme/readme-%LANGUAGE%.txt~
-       ~%MOD_FOLDER%/readme/readme.txt~
+README ~HiddenGameplayOptions/readme/readme-%LANGUAGE%.txt~
+       ~HiddenGameplayOptions/readme/readme.txt~
 
 LANGUAGE  ~English~
           ~english~
