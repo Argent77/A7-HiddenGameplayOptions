@@ -1,13 +1,13 @@
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/Argent77/A7-HiddenGameplayOptions?color=darkred&include_prereleases&label=latest%20release)](https://GitHub.com/Argent77/A7-HiddenGameplayOptions/releases/latest)
-[![GitHub release date (latest by date)](https://img.shields.io/github/release-date/Argent77/A7-HiddenGameplayOptions?color=gold)](https://GitHub.com/Argent77/A7-HiddenGameplayOptions/releases/latest)
-[![Github downloads (all releases)](https://img.shields.io/github/downloads/Argent77/A7-HiddenGameplayOptions/total.svg?color=blueviolet)](https://GitHub.com/Argent77/A7-HiddenGameplayOptions/releases)
-[![Platform](https://img.shields.io/static/v1?label=platform&message=Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Project%20Infinity&color=informational)](https://GitHub.com/Argent77/A7-HiddenGameplayOptions/releases/latest)
-[![Language](https://img.shields.io/static/v1?label=language&message=English%20%7C%20French%20%7C%20German%20%7C%20Korean%20%7C%20Polish%20%7C%20Brazilian%20Portuguese%20%7C%20Russian&color=limegreen)]()
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/Argent77/A7-HiddenGameplayOptions?color=darkred&include_prereleases&label=latest%20release)](https://github.com/Argent77/A7-HiddenGameplayOptions/releases/latest)
+[![Github downloads (all releases)](https://img.shields.io/github/downloads/Argent77/A7-HiddenGameplayOptions/total.svg?color=gold)](https://github.com/Argent77/A7-HiddenGameplayOptions/releases)
+[![Platform](https://img.shields.io/static/v1?label=platform&message=Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Project%20Infinity&color=informational)](https://github.com/Argent77/A7-HiddenGameplayOptions/releases/latest)
+[![Supported games](https://img.shields.io/static/v1?label=supported%20games&message=BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE%20%7C%20PST%3AEE&color=indigo)](https://github.com/Argent77/A7-HiddenGameplayOptions)
+[![Language](https://img.shields.io/static/v1?label=language&message=English%20%7C%20French%20%7C%20German%20%7C%20Korean%20%7C%20Polish%20%7C%20Brazilian%20Portuguese%20%7C%20Russian&color=limegreen)](https://github.com/Argent77/A7-HiddenGameplayOptions)
 
 # Reveal Hidden Gameplay Options
 *A mod that makes a number of useful options directly accessible within Enhanced Edition games.*
 
-[![Beamdog Forums](https://img.shields.io/static/v1?label=Discussion&message=Beamdog%20Forums&color=444&labelColor=eee&style=flat)](https://forums.beamdog.com/discussion/64524)
+[![Beamdog Forums](https://img.shields.io/static/v1?label=Discussion&message=Beamdog%20Forums&color=444&labelColor=eee&style=for-the-badge)](https://forums.beamdog.com/discussion/64524 "Beamdog Forums")
 
 ## Overview
 The Enhanced Editions provide a great number of settings that are not directly accessible in the in-game options menu, but instead have to be manually enabled or disabled in the game's configuration file which might discourage less computer-savvy players from using them at all.
