@@ -1,0 +1,388 @@
+// *** Keybinding-related functions ***
+
+// Entry function for updating spell keybindings. Call this!
+DEFINE_ACTION_FUNCTION INSTALL_SPELL_KEYBINDINGS
+INT_VAR
+  type = 0  // 1=SPPR, 2=SPWI (3=SPIN, 4=SPCL <- unused)
+BEGIN
+  LAF GET_SPELL_ENTRIES INT_VAR type RET_ARRAY entries END
+
+  COPY_EXISTING ~bgee.lua~ ~override~
+    LPF LUA_GET_KEY_CATEGORY INT_VAR type RET category END
+    PATCH_IF (category != 0) BEGIN
+      LPF UPDATE_KEYBINDINGS INT_VAR category STR_VAR array = ~entries~ END
+    END ELSE BEGIN
+      PATCH_FAIL @501 // Cannot patch LUA file
+    END
+  BUT_ONLY
+END
+
+
+// Retrieves a list of spell resrefs and associated spell name strrefs from SPELL.IDS
+// and available class ability (CLAB) tables.
+DEFINE_ACTION_FUNCTION GET_SPELL_ENTRIES
+INT_VAR
+  type = 0  // 1=SPPR, 2=SPWI
+RET_ARRAY
+  entries   // defined as: $entries(~prefix~) = strref
+BEGIN
+  ACTION_MATCH type WITH
+    1 BEGIN OUTER_TEXT_SPRINT prefix ~SPPR~ END
+    2 BEGIN OUTER_TEXT_SPRINT prefix ~SPWI~ END
+    DEFAULT OUTER_TEXT_SPRINT prefix ~~
+  END
+
+
+  ACTION_IF (NOT ~%prefix%~ STR_EQ ~~) BEGIN
+    ACTION_CLEAR_ARRAY ~entries~
+  
+    // getting list of hidden spells
+    ACTION_CLEAR_ARRAY ~hidden~
+    COPY_EXISTING ~hidespl.2da~ ~override~
+      READ_2DA_ENTRIES_NOW hide_table 1
+      FOR (row = 3; row < hide_table; ++row) BEGIN
+        READ_2DA_ENTRY_FORMER hide_table row 0 resref
+        PATCH_IF (~%resref%~ STRING_MATCHES_REGEXP ~%prefix%[1-9][0-9][0-9]~ = 0) BEGIN
+          READ_2DA_ENTRY_FORMER hide_table row 1 value
+          PATCH_IF (IS_AN_INT ~value~ && value != 0) BEGIN
+            TO_UPPER ~resref~
+            SET $hidden(~%resref%~) = 1
+          END
+        END
+      END
+    BUT_ONLY IF_EXISTS
+
+    // collecting spells from BGEE.LUA keybinding array
+    COPY_EXISTING ~bgee.lua~ ~override~
+      LPF LUA_GET_KEY_CATEGORY INT_VAR type RET category END
+      PATCH_IF (category != 0) BEGIN
+        LPF LUA_READ_ARRAY_DATA
+          STR_VAR name = ~keybindings~
+          RET buffer offset
+        END
+        PATCH_IF (offset >= 0) BEGIN
+          INNER_PATCH ~%buffer%~ BEGIN
+            REPLACE_EVALUATE
+              ~{[ %TAB%]*-?[0-9]+[ %TAB%]*,[ %TAB%]*[0-9]+[ %TAB%]*,[ %TAB%]*'\([^']*\)'[ %TAB%]*,[^%WNL%]*~
+              BEGIN
+                TO_UPPER ~MATCH1~
+                PATCH_IF (~%MATCH1%~ STRING_MATCHES_REGEXP ~%prefix%[1-9][0-9][0-9]~ = 0 &&
+                          FILE_EXISTS_IN_GAME ~%MATCH1%.SPL~) BEGIN
+                  SET $entries(~%MATCH1%~) = "-1"
+                END
+              END
+              ~~
+          END
+        END
+      END
+    BUT_ONLY IF_EXISTS
+
+    // collecting spells from SPELL.IDS
+    COPY_EXISTING ~spell.ids~ ~override~
+      READ_2DA_ENTRIES_NOW lines 2
+      FOR (row = 0; row < lines; ++row) BEGIN
+        READ_2DA_ENTRY_FORMER lines row 0 value
+        PATCH_IF (IS_AN_INT ~value~ &&              // numeric value
+                  (value / 1000) = type &&          // of requested spell type
+                  ((value / 100) MODULO 10) > 0 &&  // level >= 1
+                  (value MODULO 100) < 50)          // only visible spell entries
+        BEGIN
+          INNER_PATCH_SAVE resref ~%value%~ BEGIN
+            INSERT_BYTES 0 3
+            WRITE_ASCIIE 0 ~%prefix%~ (4)
+          END
+          PATCH_IF (FILE_EXISTS_IN_GAME ~%resref%.SPL~ &&
+                    NOT VARIABLE_IS_SET $hidden(~%resref%~)) BEGIN
+            SET $entries(~%resref%~) = "-1"
+          END
+        END
+      END
+    BUT_ONLY IF_EXISTS
+
+    // collecting spells from class ability tables
+    ACTION_CLEAR_ARRAY ~clabs~
+    ACTION_IF (FILE_EXISTS_IN_GAME ~CLABSH01.2DA~) BEGIN
+      OUTER_SET $clabs(~CLABSH01~) = 1  // hardcoded CLAB
+    END
+    COPY_EXISTING ~kitlist.2da~ ~override~
+      READ_2DA_ENTRIES_NOW kits 6
+      FOR (row = 1; row < kits; ++row) BEGIN
+        READ_2DA_ENTRY_FORMER kits row 5 clab
+        TO_UPPER ~clab~
+        PATCH_IF (FILE_EXISTS_IN_GAME ~%clab%.2DA~) BEGIN
+          SET $clabs(~%clab%~) = 1
+        END
+      END
+    BUT_ONLY IF_EXISTS
+
+    ACTION_PHP_EACH clabs AS clab => _ BEGIN
+      COPY_EXISTING ~%clab%.2DA~ ~override~
+        COUNT_2DA_COLS num_cols
+        READ_2DA_ENTRIES_NOW table num_cols
+        FOR (row = 0; row < table; ++row) BEGIN
+          FOR (col = 0; col < num_cols; ++col) BEGIN
+            READ_2DA_ENTRY_FORMER table row col value
+            PATCH_IF (~%value%~ STRING_MATCHES_REGEXP ~GA_%prefix%[1-9][0-9][0-9]~ = 0) BEGIN
+              LPF SUBSTRING INT_VAR start = 3 length = 7 STR_VAR string = EVAL ~%value%~ RET substring END
+              TO_UPPER ~substring~
+              PATCH_IF (FILE_EXISTS_IN_GAME ~%substring%.SPL~) BEGIN
+                SET $entries(~%substring%~) = "-1"
+              END
+            END
+          END
+        END
+      BUT_ONLY IF_EXISTS
+    END
+
+    // collecting spells from HLA tables
+    ACTION_CLEAR_ARRAY ~luabbr~
+    COPY_EXISTING ~luabbr.2da~ ~override~
+      READ_2DA_ENTRIES_NOW hla_table 1
+      FOR (row = 3; row < hla_table; ++row) BEGIN
+        READ_2DA_ENTRY_FORMER hla_table row 1 suffix
+        TO_UPPER ~suffix~
+        PATCH_IF (FILE_EXISTS_IN_GAME ~LU%suffix%.2DA~) BEGIN
+          SET $luabbr(~LU%suffix%~) = 1
+        END
+      END
+    BUT_ONLY IF_EXISTS
+
+    ACTION_PHP_EACH luabbr AS hla_res => _ BEGIN
+      COPY_EXISTING ~%hla_res%.2DA~ ~override~
+        COUNT_2DA_COLS num_cols
+        READ_2DA_ENTRIES_NOW table num_cols
+        FOR (row = 0; row < table; ++row) BEGIN
+          READ_2DA_ENTRY_FORMER table row 1 value
+          PATCH_IF (~%value%~ STRING_MATCHES_REGEXP ~GA_%prefix%[1-9][0-9][0-9]~ = 0) BEGIN
+            LPF SUBSTRING INT_VAR start = 3 length = 7 STR_VAR string = EVAL ~%value%~ RET substring END
+            TO_UPPER ~substring~
+            PATCH_IF (FILE_EXISTS_IN_GAME ~%substring%.SPL~) BEGIN
+              SET $entries(~%substring%~) = "-1"
+            END
+          END
+        END
+      BUT_ONLY IF_EXISTS
+    END
+
+    // sorting SPL resrefs by name
+    ACTION_SORT_ARRAY_INDICES ~entries~ LEXICOGRAPHICALLY
+
+    // retrieving spell names
+    ACTION_PHP_EACH entries AS resref => _ BEGIN
+      COPY_EXISTING ~%resref%.SPL~ ~override~
+        READ_LONG NAME1 strref
+        PATCH_IF (strref >= 0) BEGIN
+          SET $entries(~%resref%~) = strref
+        END
+      BUT_ONLY IF_EXISTS
+    END
+  END
+END
+
+
+// Reads a raw block of data containing the specified lua array.
+DEFINE_PATCH_FUNCTION LUA_READ_ARRAY_DATA
+STR_VAR
+  name = ~~ // array name
+RET
+  buffer    // storage for raw array data
+  offset
+BEGIN
+  SET offset = "-1"
+  TEXT_SPRINT buffer ~~
+  PATCH_IF (NOT ~%name%~ STR_EQ ~~) BEGIN
+    SET idx1 = INDEX_BUFFER(~^[ %TAB%]*%name%[ %TAB%]*=~)
+    PATCH_IF (idx1 >= 0) BEGIN
+      SET ofs_start = idx1
+      SET ofs_end = idx1
+      SET level = 0 // current number of opened curly braces
+      SET match = 0 // boolean, indicates whether array block is processed
+      SET idx2 = idx1
+      WHILE ((match = 0 || level > 0) && idx1 >= 0 && idx2 >= 0) BEGIN
+        SET idx2 = INDEX_BUFFER(~[%WNL%]~ idx1)
+        PATCH_IF (idx2 >= idx1) BEGIN
+          READ_ASCII idx1 line (idx2 - idx1)
+          INNER_PATCH ~%line%~ BEGIN
+            REPLACE_TEXTUALLY ~--.*~ ~~ // trim (hopefully only) comments
+            REPLACE_EVALUATE
+              ~\([{}]\)~
+              BEGIN
+                PATCH_IF (~%MATCH1%~ STR_EQ ~{~) BEGIN
+                  SET match = 1
+                  SET level += 1
+                END ELSE PATCH_IF (~%MATCH1%~ STR_EQ ~}~) BEGIN
+                  SET level -= 1
+                END
+              END
+              ~~
+          END
+          SET idx1 = INDEX_BUFFER(~[^%WNL%]~ idx2)
+        END
+      END
+      PATCH_IF (idx1 >= 0 && idx2 >= 0) BEGIN
+        SET ofs_end = INDEX_BUFFER(~[^%WNL%]~ idx2)
+      END
+      PATCH_IF (ofs_end > ofs_start) BEGIN
+        SET offset = ofs_start
+        READ_ASCII ofs_start buffer (ofs_end - ofs_start)
+      END
+    END
+  END
+END
+
+
+// Retrieves the keybinding category for the specified spell type.
+// Returns 0 if no category found.
+DEFINE_PATCH_FUNCTION LUA_GET_KEY_CATEGORY
+INT_VAR
+  type = 0  // 1=SPPR, 2=SPWI
+RET
+  category
+BEGIN
+  SET category = 0
+  PATCH_MATCH type WITH
+    1 BEGIN TEXT_SPRINT key ~ASSIGN_KEYS_PRIESTSPELLS~ END
+    2 BEGIN TEXT_SPRINT key ~ASSIGN_KEYS_MAGESPELLS~ END
+    DEFAULT TEXT_SPRINT key ~~
+  END
+
+  PATCH_IF (NOT ~%key%~ STR_EQ ~~) BEGIN
+    LPF LUA_READ_ARRAY_DATA
+      STR_VAR name = ~keycategories~
+      RET buffer
+    END
+
+    PATCH_IF (NOT ~%buffer%~ STR_EQ ~~) BEGIN
+      INNER_PATCH ~%buffer%~ BEGIN
+        REPLACE_EVALUATE
+          ~{[ %TAB%]*\([0-9]+\)[ %TAB%]*,[ %TAB%]*"%key%"~
+          BEGIN
+            PATCH_IF (IS_AN_INT ~MATCH1~) BEGIN
+              SET category = MATCH1
+            END
+          END
+          ~~
+      END
+    END
+  END
+END
+
+
+// Updates all keybindings for the specified category with the values defined by the given array.
+DEFINE_PATCH_FUNCTION UPDATE_KEYBINDINGS
+INT_VAR
+  category = 0
+STR_VAR
+  array = ~entries~
+BEGIN
+  LPF LUA_READ_ARRAY_DATA
+    STR_VAR name = ~keybindings~
+    RET buffer offset
+  END
+
+  PATCH_IF (offset >= 0) BEGIN
+    INNER_PATCH_SAVE out_buffer ~%buffer%~ BEGIN
+      TEXT_SPRINT regex_linebreak ~[%WNL%]~
+      TEXT_SPRINT regex_not_linebreak ~[^%WNL%]~
+      TEXT_SPRINT regex_entry ~^[ %TAB%]*{[ %TAB%]*-?[0-9]+[ %TAB%]*,[ %TAB%]*[0-9]+[ %TAB%]*,~
+      TEXT_SPRINT regex_entry_cat ~^[ %TAB%]*{[ %TAB%]*-?[0-9]+[ %TAB%]*,[ %TAB%]*%category%[ %TAB%]*,~
+      TEXT_SPRINT regex_entry_index_eval ~{[ %TAB%]*\(-?[0-9]+\)[ %TAB%]*,~
+      TEXT_SPRINT regex_entry_index_eval_all ~\({[ %TAB%]*\)\(-?[0-9]+\)\([ %TAB%]*,\)~
+
+      SET ofs_start = INDEX_BUFFER(~%regex_entry_cat%~)
+
+      PATCH_IF (ofs_start >= 0) BEGIN
+        // 1. determine first entry index
+        // SET ofs1 = ofs_start
+        // SET ofs2 = INDEX_BUFFER(~%regex_linebreak%~ ofs1)
+        // PATCH_IF (ofs2 > index) BEGIN
+          // READ_ASCII ofs_start line (ofs2 - ofs1)
+          // INNER_PATCH ~%line%~ BEGIN
+            // REPLACE_EVALUATE
+              // ~%regex_entry_index_eval%~
+              // BEGIN
+                // PATCH_IF (IS_AN_INT ~MATCH1~ && index < 0) BEGIN
+                  // SET index = MATCH1
+                // END
+              // END
+              // ~~
+          // END
+        // END
+
+      SET index = 1  // entry index
+        // PATCH_IF (index >= 0) BEGIN
+          // 2. remove existing entries
+          SET ofs1 = ofs_start
+          WHILE (ofs1 >= 0) BEGIN
+            SET ofs2 = INDEX_BUFFER(~%regex_linebreak%~ ofs1)
+            PATCH_IF (ofs2 >= ofs1) BEGIN
+              // include line break characters
+              SET ofs2 = INDEX_BUFFER(~%regex_not_linebreak%~ ofs2)
+            END
+            PATCH_IF (ofs2 >= ofs1) BEGIN
+              DELETE_BYTES ofs1 (ofs2 - ofs1)
+            END
+            SET ofs1 = INDEX_BUFFER(~%regex_entry_cat%~ ofs1)
+          END
+
+          // 3. recreate entries from array
+          PATCH_PHP_EACH EVAL ~%array%~ AS resref => strref BEGIN
+            PATCH_IF (strref >= 0) BEGIN
+              GET_STRREF strref desc
+              TEXT_SPRINT line ~%TAB%%TAB%{ %index%, %category%,  '%resref%',%TAB%%TAB%%TAB%%TAB%%TAB%%strref%,%TAB%'',%TAB%%TAB%0,%TAB%0 }, -- %desc%%WNL%~
+              SET index += 1
+
+              SET line_len = STRING_LENGTH ~%line%~
+              INSERT_BYTES ofs_start line_len
+              WRITE_ASCIIE ofs_start ~%line%~ (line_len)
+              SET ofs_start += line_len
+            END
+          END
+
+          // 4. update entry indices in whole array
+          SET index = 1
+          SET ofs1 = INDEX_BUFFER(~%regex_entry%~)
+          WHILE (ofs1 >= 0) BEGIN
+            SET ofs2 = INDEX_BUFFER(~%regex_linebreak%~ ofs1)
+            PATCH_IF (ofs2 >= ofs1) BEGIN
+              READ_ASCII ofs1 line (ofs2 - ofs1)
+              INNER_PATCH_SAVE line_out ~%line%~ BEGIN
+                REPLACE_EVALUATE
+                  ~%regex_entry_index_eval_all%~
+                  BEGIN
+                    PATCH_IF (IS_AN_INT ~MATCH2~ && MATCH2 != index) BEGIN
+                      SET index_out = index
+                    END ELSE BEGIN
+                      TEXT_SPRINT index_out ~%MATCH2%~
+                    END
+                    SET index += 1
+                  END
+                  ~%MATCH1%%index_out%%MATCH3%~
+              END
+              PATCH_IF (NOT ~%line_out%~ STR_EQ ~%line%~) BEGIN
+                SET len_src = STRING_LENGTH ~%line%~
+                DELETE_BYTES ofs1 len_src
+                SET len_dst = STRING_LENGTH ~%line_out%~
+                INSERT_BYTES ofs1 len_dst
+                WRITE_ASCIIE ofs1 ~%line_out%~ (len_dst)
+                SET ofs2 = ofs1 + len_dst
+              END
+            END
+            SET ofs1 = INDEX_BUFFER(~%regex_entry%~ ofs2)
+          END
+        // END
+      END
+    END
+
+    PATCH_IF (index >= 0) BEGIN
+      SET len_src = STRING_LENGTH ~%buffer%~
+      DELETE_BYTES offset len_src
+
+      SET len_dst = STRING_LENGTH ~%out_buffer%~
+      INSERT_BYTES offset len_dst
+      WRITE_ASCIIE offset ~%out_buffer%~ (len_dst)
+    END
+  END ELSE BEGIN
+    PATCH_FAIL @501 // Cannot patch LUA file
+  END
+END

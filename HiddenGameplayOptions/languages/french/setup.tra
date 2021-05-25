@@ -32,16 +32,16 @@
 @37 = ~Ajouter l'option de jeu "Afficher la carte dynamique des obstacles"~
 @38 = ~Ajouter les options de jeu pour le composant "Creer des sauvegardes periodiques" de Tweaks Anthology~
 
-@100 = ~Ce mod requiert un jeu beneficiant du patch v2.0 ou ulterieur.~
-@101 = ~Echec de modification du fichier LUA.~
-@102 = ~Echec de modification du fichier UI.MENU.~
-@103 = ~Necessite l'installation du composant "Une selection d'options".~
-@104 = ~Cette option n'est pas disponible pour ce jeu.~
-@105 = ~Cette option est deja presente dans ce jeu.~
-@106 = ~Ce mod n'est pas compatible avec le composant "Options cachees du jeu" de EEUITweaks.~
-@107 = ~Ce composant n'est pas compatible avec Lefreut's Enhanced UI (LeUI).~
-@108 = ~Necessite l'installation du module "Level Up" Icon Tweaks.~
-@109 = ~Necessite l'installation du composant "Creer des sauvegardes periodiques" de Tweaks Anthology.~
+@500 = ~Ce mod requiert un jeu beneficiant du patch v2.0 ou ulterieur.~
+@501 = ~Echec de modification du fichier LUA.~
+@502 = ~Echec de modification du fichier UI.MENU.~
+@503 = ~Necessite l'installation du composant "Une selection d'options".~
+@504 = ~Cette option n'est pas disponible pour ce jeu.~
+@505 = ~Cette option est deja presente dans ce jeu.~
+@506 = ~Ce mod n'est pas compatible avec le composant "Options cachees du jeu" de EEUITweaks.~
+@507 = ~Ce composant n'est pas compatible avec Lefreut's Enhanced UI (LeUI).~
+@508 = ~Necessite l'installation du module "Level Up" Icon Tweaks.~
+@509 = ~Necessite l'installation du composant "Creer des sauvegardes periodiques" de Tweaks Anthology.~
 
 
 // WeiDU prompts

@@ -198,6 +198,11 @@ Hinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.
 
 ^NHinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.^-~
 
+@3900 = ~Spielpause in Dialogen erzwingen~
+@3901 = ~Wenn diese Option aktiviert ist, wird das Spiel automatisch pausiert, während Gespräche geführt werden.
+
+^NHinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.^-~
+
 
 // *** Misc. strings ***
 

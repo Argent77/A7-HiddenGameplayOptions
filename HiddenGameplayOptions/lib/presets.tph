@@ -702,6 +702,33 @@ BEGIN
   END
 END
 
+/** Add in-game option "Force Dialog Pause" */
+DEFINE_ACTION_FUNCTION OPTION_FORCE_DIALOG_PAUSE
+BEGIN
+  ACTION_IF (GAME_IS ~pstee~ OR
+             INSTALLED_LEUI) BEGIN
+    OUTER_TEXT_SPRINT arrayName "toggleTitles"
+  END ELSE BEGIN
+    OUTER_TEXT_SPRINT arrayName "feedbackToggles"
+  END
+
+  LAF INSTALL_CHECK_OPTION
+  INT_VAR
+    optLabelTra   = 3900
+    optDescTra    = 3901
+    controlID     = "-194"
+    autoFail      = 1
+  STR_VAR
+    arrayName     = EVAL "%arrayName%"
+    optLabelName  = "A7_FORCE_DIALOG_PAUSE_LABEL"
+    optDescName   = "A7_FORCE_DIALOG_PAUSE_DESCRIPTION"
+    iniSection    = "Game Options"
+    iniName       = "Force Dialog Pause"
+  RET
+    success
+  END
+END
+
 /** Adds in-game "Frame rate" option as a slider */
 DEFINE_ACTION_FUNCTION OPTION_FRAME_RATE_SLIDER
 BEGIN

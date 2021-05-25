@@ -311,6 +311,31 @@ Anthology installiert wurde.
 Die Optionen können in den Spieleinstellungen gefunden werden.
 
 
+31. Spieloption "Spielpause in Dialogen erzwingen" hinzufügen
+
+Wenn diese Option aktiviert ist, wird das Spiel automatisch pausiert, während ein Gespräch
+geführt wird. Diese Option macht die Komponente "Spielpause bei allen Dialogen erzwingen" von
+Tweaks Anthology überflüssig.
+
+Die Option kann in Spieleinstellungen > Rückmeldungen > Visuelle Rückmeldungen gefunden werden.
+In PST:EE kann diese Option in den Spieleinstellungen gefunden werden.
+
+
+32. Tastenbelegungen für Priester- und/oder Magierzauber aktualisieren
+
+Diese Option aktualisiert die Liste aller verfügbaren Priester- und/oder Magierzauber. Es werden
+alle regulären Zauber und hochstufigen Fähigkeiten des Spiels selbst und aus Mods berücksichtigt,
+die zum Zeitpunkt der Installation vorhanden sind.
+
+Folgende Unteroptionen stehen zur Auswahl:
+- Tastenbelegungen nur für Priesterzauber aktualisieren
+- Tastenbelegungen nur für Magierzauber aktualisieren
+- Tastenbelegungen für Priester- und Magierzauber aktualisieren
+
+Diese Option ist nicht in der Hauptkomponente "Alle versteckten Spieloptionen auf einmal
+installieren" enthalten.
+
+
 Credits
 ~~~~~~~
 
@@ -338,6 +363,11 @@ ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa
 
 History
 ~~~~~~~
+
+3.0
+- Added option "Force Dialog Pause"
+- Added multiple choice option "Update keybindings for priest and/or mage spells"
+- Improved conditions for installing game options
 
 2.6
 - Added Korean translation (thanks begaborn)

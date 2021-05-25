@@ -30,17 +30,23 @@
 @36 = ~Spieloption "Suchkarte anzeigen" hinzufuegen~
 @37 = ~Spieloption "Dynamische Suchkarte anzeigen" hinzufuegen~
 @38 = ~Spieloptionen fuer Tweak Anthologys "Regelmaessige Spielstaende erzeugen" hinzufuegen~
+@39 = ~Spieloption "Spielpause in Dialogen erzwingen" hinzufuegen~
 
-@100 = ~Enhanced Edition muss v2.0 oder hoeher sein.~
-@101 = ~LUA-Datei kann nicht bearbeitet werden~
-@102 = ~UI.MENU kann nicht bearbeitet werden~
-@103 = ~Die Option wurde bereits installiert.~
-@104 = ~Die Option ist fuer dieses Spiel nicht verfuegbar.~
-@105 = ~Diese Option ist bereits im Spiel verfuegbar.~
-@106 = ~Diese Mod kann nicht zusammen mit der EEUITweaks-Komponente "Hidden Game Options" installiert werden.~
-@107 = ~Diese Komponente ist nicht mit Lefreuts Enhanced UI (LeUI) kompatibel.~
-@108 = ~Benoetigt die Mod "Level Up" Icon Tweaks.~
-@109 = ~Benoetigt Tweaks Anthologys Modkomponente "Regelmaessige Spielstaende erzeugen".~
+@100 = ~Tastenbelegungen aktualisieren~
+@101 = ~nur fuer Priesterzauber~
+@102 = ~nur fuer Magierzauber~
+@103 = ~fuer Priester- und Magierzauber~
+
+@500 = ~Enhanced Edition muss v2.0 oder hoeher sein.~
+@501 = ~LUA-Datei kann nicht bearbeitet werden~
+@502 = ~UI.MENU kann nicht bearbeitet werden~
+@503 = ~Die Option wurde bereits installiert.~
+@504 = ~Die Option ist fuer dieses Spiel nicht verfuegbar.~
+@505 = ~Diese Option ist bereits im Spiel verfuegbar.~
+@506 = ~Diese Mod kann nicht zusammen mit der EEUITweaks-Komponente "Hidden Game Options" installiert werden.~
+@507 = ~Diese Komponente ist nicht mit Lefreuts Enhanced UI (LeUI) kompatibel.~
+@508 = ~Benoetigt die Mod "Level Up" Icon Tweaks.~
+@509 = ~Benoetigt Tweaks Anthologys Modkomponente "Regelmaessige Spielstaende erzeugen".~
 
 
 // WeiDU prompts

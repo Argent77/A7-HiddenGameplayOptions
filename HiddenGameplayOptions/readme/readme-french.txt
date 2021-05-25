@@ -338,6 +338,11 @@ ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa
 History
 ~~~~~~~
 
+3.0
+- Added option "Force Dialog Pause"
+- Added multiple choice option "Update keybindings for priest and/or mage spells"
+- Improved conditions for installing game options
+
 2.6
 - Added Korean translation (thanks begaborn)
 - Added Project Infinity metadata

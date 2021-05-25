@@ -33,12 +33,12 @@
 @36 = ~Dodaj w grze opcje "Renderowanie wyszukiwania na mapie"~
 @37 = ~Dodaj w grze opcje "Renderowanie dynamicznego wyszukiwania na mapie"~
 
-@100 = ~Wymagane posiadanie wersji Enhanced Edition w wersji 2.0 lub wyzszej.~
-@101 = ~Nie mozna zaktualizowac pliku LUA~
-@102 = ~Nie mozna zaktualizowac UI.MENU~
-@103 = ~Nie wybrano komponentu "Wybrane opcje".~
-@104 = ~Opcja niedostepna dla tej gry.~
-@105 = ~Opcja jest juz dostepna w grze.~
-@106 = ~Modyfikacja ta nie jest kompatybilna z komponentem modyfikacji EEUITweaks o nazwie "Hidden Game Options".~
-@107 = ~Ten komponent nie jest kompatybilny z modyfikacja "Lefreut's Enhanced UI (LeUI)".~
-@108 = ~Wymaga uprzedniego zainstalowania modyfikacji "Ikona zmiany poziomu".~
+@500 = ~Wymagane posiadanie wersji Enhanced Edition w wersji 2.0 lub wyzszej.~
+@501 = ~Nie mozna zaktualizowac pliku LUA~
+@502 = ~Nie mozna zaktualizowac UI.MENU~
+@503 = ~Nie wybrano komponentu "Wybrane opcje".~
+@504 = ~Opcja niedostepna dla tej gry.~
+@505 = ~Opcja jest juz dostepna w grze.~
+@506 = ~Modyfikacja ta nie jest kompatybilna z komponentem modyfikacji EEUITweaks o nazwie "Hidden Game Options".~
+@507 = ~Ten komponent nie jest kompatybilny z modyfikacja "Lefreut's Enhanced UI (LeUI)".~
+@508 = ~Wymaga uprzedniego zainstalowania modyfikacji "Ikona zmiany poziomu".~

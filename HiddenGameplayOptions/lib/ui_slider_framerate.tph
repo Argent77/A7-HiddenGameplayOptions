@@ -142,7 +142,7 @@ BEGIN
     END
     ACTION_IF (NOT success) BEGIN
       ACTION_IF (autoFail) BEGIN
-        FAIL @101 // Cannot patch LUA file
+        FAIL @501 // Cannot patch LUA file
       END ELSE BEGIN
         OUTER_SET failed = 1
       END
@@ -156,7 +156,7 @@ BEGIN
       END
       ACTION_IF (NOT success) BEGIN
         ACTION_IF (autoFail) BEGIN
-          FAIL @101 // Cannot patch LUA file
+          FAIL @501 // Cannot patch LUA file
         END ELSE BEGIN
           OUTER_SET failed = 1
         END
@@ -177,7 +177,7 @@ BEGIN
             END
             ACTION_IF (NOT success) BEGIN
               ACTION_IF (autoFail) BEGIN
-                FAIL @101 // Cannot patch LUA file
+                FAIL @501 // Cannot patch LUA file
               END ELSE BEGIN
                 OUTER_SET failed = 1
               END
@@ -209,7 +209,7 @@ BEGIN
         END
         PATCH_IF (NOT success) BEGIN
           PATCH_IF (autoFail) BEGIN
-            PATCH_FAIL @102 // Cannot patch UI.MENU
+            PATCH_FAIL @502 // Cannot patch UI.MENU
           END ELSE BEGIN
             SET failed = 1
           END

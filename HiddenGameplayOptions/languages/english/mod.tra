@@ -197,6 +197,11 @@ Note: You must restart the game for changes to take effect.~
 
 ^NNote: You must restart the game for changes to take effect.^-~
 
+@3900 = ~Force Dialog Pause~
+@3901 = ~Enabling this option forces the game to pause while conversations are taking place.
+
+^NNote: You must restart the game for changes to take effect.^-~
+
 
 // *** Misc. strings ***
 

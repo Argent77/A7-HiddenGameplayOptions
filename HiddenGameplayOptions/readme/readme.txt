@@ -50,8 +50,8 @@ Components
 
 1. Install all Hidden Gameplay Options at once
 
-This is a convenience option that allows you to install all available options at once.
-See more detailed information about individual options below.
+This is a convenience option that allows you to install all available options at once, except for
+the keybinding options. See more detailed information about individual options below.
 
 
 The following components are available if you skip the component "Install Hidden Gameplay Options
@@ -290,6 +290,29 @@ installed.
 Options can be found in Gameplay section.
 
 
+31. Add in-game option "Force Dialog Pause"
+
+Enabling this option forces the game to pause while conversations are active.
+This option makes Tweaks Anthology's mod component "Force All Dialogue to Pause" redundant.
+
+Option can be found in Gameplay > Feedback > Visual Feedback (or Gameplay section in PST:EE).
+
+
+32. Update key bindings for priest and/or mage spells
+
+This component recreates the key bindings for priest spells and/or mage spells. It considers all
+regular spells and High Level Abilities (HLAs) available at the time of installation, which
+includes the original game spells as well as spells added by mods.
+
+It comes in three flavors:
+- Update key bindings for priest spells only
+- Update key bindings for mage spells only
+- Update key bindings for priest and mage spells
+
+This component is not included in the convenience option "Install all Hidden Gameplay Options
+at once".
+
+
 Credits
 ~~~~~~~
 
@@ -317,6 +340,11 @@ ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa
 
 History
 ~~~~~~~
+
+3.0
+- Added option "Force Dialog Pause"
+- Added multiple choice option "Update keybindings for priest and/or mage spells"
+- Improved conditions for installing game options
 
 2.6
 - Added Korean translation (thanks begaborn)
