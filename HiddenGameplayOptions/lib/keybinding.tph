@@ -292,85 +292,66 @@ BEGIN
       SET ofs_start = INDEX_BUFFER(~%regex_entry_cat%~)
 
       PATCH_IF (ofs_start >= 0) BEGIN
-        // 1. determine first entry index
-        // SET ofs1 = ofs_start
-        // SET ofs2 = INDEX_BUFFER(~%regex_linebreak%~ ofs1)
-        // PATCH_IF (ofs2 > index) BEGIN
-          // READ_ASCII ofs_start line (ofs2 - ofs1)
-          // INNER_PATCH ~%line%~ BEGIN
-            // REPLACE_EVALUATE
-              // ~%regex_entry_index_eval%~
-              // BEGIN
-                // PATCH_IF (IS_AN_INT ~MATCH1~ && index < 0) BEGIN
-                  // SET index = MATCH1
-                // END
-              // END
-              // ~~
-          // END
-        // END
-
-      SET index = 1  // entry index
-        // PATCH_IF (index >= 0) BEGIN
-          // 2. remove existing entries
-          SET ofs1 = ofs_start
-          WHILE (ofs1 >= 0) BEGIN
-            SET ofs2 = INDEX_BUFFER(~%regex_linebreak%~ ofs1)
-            PATCH_IF (ofs2 >= ofs1) BEGIN
-              // include line break characters
-              SET ofs2 = INDEX_BUFFER(~%regex_not_linebreak%~ ofs2)
-            END
-            PATCH_IF (ofs2 >= ofs1) BEGIN
-              DELETE_BYTES ofs1 (ofs2 - ofs1)
-            END
-            SET ofs1 = INDEX_BUFFER(~%regex_entry_cat%~ ofs1)
+        // remove existing entries
+        SET ofs1 = ofs_start
+        WHILE (ofs1 >= 0) BEGIN
+          SET ofs2 = INDEX_BUFFER(~%regex_linebreak%~ ofs1)
+          PATCH_IF (ofs2 >= ofs1) BEGIN
+            // include line break characters
+            SET ofs2 = INDEX_BUFFER(~%regex_not_linebreak%~ ofs2)
           END
-
-          // 3. recreate entries from array
-          PATCH_PHP_EACH EVAL ~%array%~ AS resref => strref BEGIN
-            PATCH_IF (strref >= 0) BEGIN
-              GET_STRREF strref desc
-              TEXT_SPRINT line ~%TAB%%TAB%{ %index%, %category%,  '%resref%',%TAB%%TAB%%TAB%%TAB%%TAB%%strref%,%TAB%'',%TAB%%TAB%0,%TAB%0 }, -- %desc%%WNL%~
-              SET index += 1
-
-              SET line_len = STRING_LENGTH ~%line%~
-              INSERT_BYTES ofs_start line_len
-              WRITE_ASCIIE ofs_start ~%line%~ (line_len)
-              SET ofs_start += line_len
-            END
+          PATCH_IF (ofs2 >= ofs1) BEGIN
+            DELETE_BYTES ofs1 (ofs2 - ofs1)
           END
+          SET ofs1 = INDEX_BUFFER(~%regex_entry_cat%~ ofs1)
+        END
 
-          // 4. update entry indices in whole array
-          SET index = 1
-          SET ofs1 = INDEX_BUFFER(~%regex_entry%~)
-          WHILE (ofs1 >= 0) BEGIN
-            SET ofs2 = INDEX_BUFFER(~%regex_linebreak%~ ofs1)
-            PATCH_IF (ofs2 >= ofs1) BEGIN
-              READ_ASCII ofs1 line (ofs2 - ofs1)
-              INNER_PATCH_SAVE line_out ~%line%~ BEGIN
-                REPLACE_EVALUATE
-                  ~%regex_entry_index_eval_all%~
-                  BEGIN
-                    PATCH_IF (IS_AN_INT ~MATCH2~ && MATCH2 != index) BEGIN
-                      SET index_out = index
-                    END ELSE BEGIN
-                      TEXT_SPRINT index_out ~%MATCH2%~
-                    END
-                    SET index += 1
+        // recreate entries from array
+        SET index = 1  // entry index
+        PATCH_PHP_EACH EVAL ~%array%~ AS resref => strref BEGIN
+          PATCH_IF (strref >= 0) BEGIN
+            GET_STRREF strref desc
+            TEXT_SPRINT line ~%TAB%%TAB%{ %index%, %category%,  '%resref%',%TAB%%TAB%%TAB%%TAB%%TAB%%strref%,%TAB%'',%TAB%%TAB%0,%TAB%0 }, -- %desc%%WNL%~
+            SET index += 1
+
+            SET line_len = STRING_LENGTH ~%line%~
+            INSERT_BYTES ofs_start line_len
+            WRITE_ASCIIE ofs_start ~%line%~ (line_len)
+            SET ofs_start += line_len
+          END
+        END
+
+        // update entry indices in whole array
+        SET index = 1  // entry index
+        SET ofs1 = INDEX_BUFFER(~%regex_entry%~)
+        WHILE (ofs1 >= 0) BEGIN
+          SET ofs2 = INDEX_BUFFER(~%regex_linebreak%~ ofs1)
+          PATCH_IF (ofs2 >= ofs1) BEGIN
+            READ_ASCII ofs1 line (ofs2 - ofs1)
+            INNER_PATCH_SAVE line_out ~%line%~ BEGIN
+              REPLACE_EVALUATE
+                ~%regex_entry_index_eval_all%~
+                BEGIN
+                  PATCH_IF (IS_AN_INT ~MATCH2~ && MATCH2 != index) BEGIN
+                    SET index_out = index
+                  END ELSE BEGIN
+                    TEXT_SPRINT index_out ~%MATCH2%~
                   END
-                  ~%MATCH1%%index_out%%MATCH3%~
-              END
-              PATCH_IF (NOT ~%line_out%~ STR_EQ ~%line%~) BEGIN
-                SET len_src = STRING_LENGTH ~%line%~
-                DELETE_BYTES ofs1 len_src
-                SET len_dst = STRING_LENGTH ~%line_out%~
-                INSERT_BYTES ofs1 len_dst
-                WRITE_ASCIIE ofs1 ~%line_out%~ (len_dst)
-                SET ofs2 = ofs1 + len_dst
-              END
+                  SET index += 1
+                END
+                ~%MATCH1%%index_out%%MATCH3%~
             END
-            SET ofs1 = INDEX_BUFFER(~%regex_entry%~ ofs2)
+            PATCH_IF (NOT ~%line_out%~ STR_EQ ~%line%~) BEGIN
+              SET len_src = STRING_LENGTH ~%line%~
+              DELETE_BYTES ofs1 len_src
+              SET len_dst = STRING_LENGTH ~%line_out%~
+              INSERT_BYTES ofs1 len_dst
+              WRITE_ASCIIE ofs1 ~%line_out%~ (len_dst)
+              SET ofs2 = ofs1 + len_dst
+            END
           END
-        // END
+          SET ofs1 = INDEX_BUFFER(~%regex_entry%~ ofs2)
+        END
       END
     END
 
