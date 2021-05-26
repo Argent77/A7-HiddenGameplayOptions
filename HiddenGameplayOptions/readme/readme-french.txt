@@ -323,7 +323,7 @@ Polish translation: Cahir
 
 Brazilian Portuguese translation: Nasher
 
-Russian translation: Saigon1983, yota13
+Russian translation: Saigon1983, yota13, Austin87
 
 Korean translation: begaborn
 
