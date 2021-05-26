@@ -10,8 +10,10 @@ ALWAYS
   // root folder for mutable data
   OUTER_TEXT_SPRINT WORK_FOLDER ~weidu_external~
 
-  OUTER_SET INSTALLED_LEUI = (MOD_IS_INSTALLED ~leui.tp2~ 0) OR (MOD_IS_INSTALLED ~leui-iwdee.tp2~ 0) OR
-                             (MOD_IS_INSTALLED ~leui-sod.tp2~ 0) OR (MOD_IS_INSTALLED ~leui-bg1ee.tp2~ 0)
+  OUTER_SET INSTALLED_LEUI = (MOD_IS_INSTALLED ~leui.tp2~ 0) ||
+                             (MOD_IS_INSTALLED ~leui-iwdee.tp2~ 0) ||
+                             (MOD_IS_INSTALLED ~leui-sod.tp2~ 0) ||
+                             (MOD_IS_INSTALLED ~leui-bg1ee.tp2~ 0)
   INCLUDE ~%MOD_FOLDER%/lib/presets.tph~
 END
 
@@ -85,15 +87,21 @@ BEGIN @1  // Install all Hidden Gameplay Options at once
   END
 
   ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 15) BEGIN
-    ACTION_IF (GAME_IS ~pstee~) BEGIN LAF OPTION_ALLOW_SPACE_IN_DIALOG END END
+    ACTION_IF (GAME_IS ~pstee~) BEGIN
+      LAF OPTION_ALLOW_SPACE_IN_DIALOG END
+    END
   END
 
   ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 16) BEGIN
-    ACTION_IF (NOT GAME_IS ~pstee~) BEGIN LAF OPTION_CLERIC_RANGER_SPELLS END END
+    ACTION_IF (NOT GAME_IS ~pstee~) BEGIN
+      LAF OPTION_CLERIC_RANGER_SPELLS END
+    END
   END
 
   ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 17) BEGIN
-    ACTION_IF (NOT GAME_IS ~iwdee~) BEGIN LAF OPTION_SNEAK_ATTACK END END
+    ACTION_IF (NOT GAME_IS ~iwdee~) BEGIN
+      LAF OPTION_SNEAK_ATTACK END
+    END
   END
 
   ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 18) BEGIN
@@ -109,7 +117,9 @@ BEGIN @1  // Install all Hidden Gameplay Options at once
   END
 
   ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 21) BEGIN
-    ACTION_IF (GAME_IS ~pstee~) BEGIN LAF OPTION_DISABLE_MAP_ZOOM END END
+    ACTION_IF (GAME_IS ~pstee~) BEGIN
+      LAF OPTION_DISABLE_MAP_ZOOM END
+    END
   END
 
   ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 22) BEGIN
@@ -121,7 +131,9 @@ BEGIN @1  // Install all Hidden Gameplay Options at once
   END
 
   ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 24) BEGIN
-    ACTION_IF (NOT GAME_IS ~pstee~) BEGIN LAF OPTION_ENABLE_FOG END END
+    ACTION_IF (NOT GAME_IS ~pstee~) BEGIN
+      LAF OPTION_ENABLE_FOG END
+    END
   END
 
   ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 25) BEGIN
@@ -129,33 +141,47 @@ BEGIN @1  // Install all Hidden Gameplay Options at once
   END
 
   ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 26) BEGIN
-    ACTION_IF (GAME_IS ~pstee~) BEGIN LAF OPTION_NO_COSMETIC_ATTACKS END END
+    ACTION_IF (GAME_IS ~pstee~) BEGIN
+      LAF OPTION_NO_COSMETIC_ATTACKS END
+    END
   END
 
   ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 27) BEGIN
-    ACTION_IF (NOT GAME_IS ~pstee~) BEGIN LAF OPTION_NIGHTMARE_XP_BONUS END END
+    ACTION_IF (NOT GAME_IS ~pstee~) BEGIN
+      LAF OPTION_NIGHTMARE_XP_BONUS END
+    END
   END
 
   ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 28) BEGIN
-    ACTION_IF (NOT INSTALLED_LEUI) BEGIN LAF OPTION_BORED_TIMEOUT END END
+    ACTION_IF (NOT INSTALLED_LEUI) BEGIN
+      LAF OPTION_BORED_TIMEOUT END
+    END
   END
 
   ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 29) BEGIN
     ACTION_IF (NOT GAME_IS ~pstee~ &&
-               NOT INSTALLED_LEUI) BEGIN LAF OPTION_FRAME_RATE_SLIDER END END
+               NOT INSTALLED_LEUI) BEGIN
+      LAF OPTION_FRAME_RATE_SLIDER END
+    END
   END
 
   ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 30) BEGIN
-    ACTION_IF (NOT INSTALLED_LEUI) BEGIN LAF OPTION_ACTION_FEEDBACK_SLIDER END END
+    ACTION_IF (NOT INSTALLED_LEUI) BEGIN
+      LAF OPTION_ACTION_FEEDBACK_SLIDER END
+    END
   END
 
   ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 31) BEGIN
     ACTION_IF (GAME_IS ~pstee~ &&
-               MOD_IS_INSTALLED ~A7-LevelUpTweaks.tp2~ 0) BEGIN LAF OPTION_ENABLE_LEVEL_UP END END
+               MOD_IS_INSTALLED ~A7-LevelUpTweaks.tp2~ 0) BEGIN
+      LAF OPTION_ENABLE_LEVEL_UP END
+    END
   END
 
   ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 32) BEGIN
-    ACTION_IF (NOT GAME_IS ~pstee~) BEGIN LAF OPTION_SHOW_AOE END END
+    ACTION_IF (NOT GAME_IS ~pstee~) BEGIN
+      LAF OPTION_SHOW_AOE END
+    END
   END
 
   ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 33) BEGIN
@@ -163,7 +189,9 @@ BEGIN @1  // Install all Hidden Gameplay Options at once
   END
 
   ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 34) BEGIN
-    ACTION_IF (NOT GAME_IS ~pstee~) BEGIN LAF OPTION_EXPIRE_TRAP_HIGHLIGHTS END END
+    ACTION_IF (NOT GAME_IS ~pstee~) BEGIN
+      LAF OPTION_EXPIRE_TRAP_HIGHLIGHTS END
+    END
   END
 
   ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 35) BEGIN
@@ -179,15 +207,15 @@ BEGIN @1  // Install all Hidden Gameplay Options at once
   END
 
   ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 38 &&
-             (MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3350 ||
-              MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3351 ||
-              MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3352 ||
-              MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3353 ||
-              MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3354 ||
-              MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3355 ||
-              MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3356 ||
-              MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3357 ||
-              MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3358)) BEGIN
+             ((MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3350) ||
+              (MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3351) ||
+              (MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3352) ||
+              (MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3353) ||
+              (MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3354) ||
+              (MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3355) ||
+              (MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3356) ||
+              (MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3357) ||
+              (MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3358))) BEGIN
     LAF OPTION_ENABLE_INTERVAL_SAVES END
     LAF OPTION_INTERVAL_SAVES_COMBAT END
   END
