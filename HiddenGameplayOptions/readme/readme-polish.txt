@@ -286,6 +286,44 @@ zajmowanej przez istoty.
 Opcja ta znajduje się w sekcji Grafika > Opcje wyświetlania.
 
 
+30. Dodaj w grze opcje przeznaczone dla komponentu „Tworzenie zapisow gry w regularnych odstepach czasu”
+    z modyfikacji Tweaks Anthology (wymaga uprzedniego zainstalowania komponentu „Tworzenie zapisow gry
+    w regularnych odstepach czasu” z modyfikacji Tweaks Anthology)
+
+Komponent ten pozwala na zainstalowanie dwóch opcji w sekcji Opcje gry:
+- Włączenie zapisywania stanu gry w regularnych odstępach czasu:
+Opcja ta pozwala na włączenie zapisywania stanu gry w regularnych odstępach czasu.
+- Tworzenie zapisów gry w regularnych odstępach czasu w trakcie walki:
+Opcja ta pozwala na włączenie zapisywania stanu gry w regularnych odstępach czasu również w trakcie walki.
+
+Obie opcje są aktywne tylko po uprzednim zainstalowaniu komponentu „Tworzenie zapisow gry w
+regularnych odstepach czasu” z modyfikacji Tweaks Anthology.
+
+Opcje te znajdują się w sekcji Opcje gry.
+
+
+31. Dodaj w grze opcję „Zatrzymywanie gry podczas dialogów”
+
+Po włączeniu tej opcji gra będzie automatycznie zatrzymywana podczas dialogów.
+Komponent ten działa identycznie jak komponent „Wszystkie dialogi zatrzymuja grę” z modyfikacji
+Tweaks Anthology.
+
+Opcja ta znajduje się w sekcji Opcje gry > Interakcja > Graficzne wskazówki (lub w sekcji Opcje gry
+w przypadku PST:EE)
+
+
+32. Zaktualizuj przypisanie klawiszy dla czarów kapłańskich i/lub maga
+
+Komponent ten pozwala na ponowne przypisanie klawiszy dla czarów kapłańskich i/lub maga.
+Uwzględnia wszystkie czary i wysokopoziomowe zdolności dostępne w momencie instalacji, zarówno z
+oryginalnej gry, jak i z innych modyfikacji.
+
+Do wyboru są trzy opcje:
+- Zaktualizowanie przypisania klawiszy tylko dla czarów kapłańskich.
+- Zaktualizowanie przypisania klawiszy tylko dla czarów maga.
+- Zaktualizowanie przypisania klawiszy dla czarów kapłańskich i maga.
+
+
 Credits
 ~~~~~~~
 

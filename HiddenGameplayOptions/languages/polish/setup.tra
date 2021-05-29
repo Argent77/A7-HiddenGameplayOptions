@@ -1,9 +1,6 @@
 // -*- coding: us-ascii -*-
 
-@1 = ~Zainstaluj Ukryte opcje gry~
-@2 = ~Wszystkie dostepne opcje~
-@3 = ~Wybrane opcje~
-
+@1 = ~Zainstaluj wszystkie Ukryte opcje gry~
 @10 = ~Dodaj w grze opcje "Wlacz tryb debugowania"~
 @11 = ~Dodaj w grze opcje "Wlaczanie trybu edycji UI"~
 @12 = ~Dodaj w grze opcje "Pokazywanie strrefow"~
@@ -32,6 +29,13 @@
 @35 = ~Dodaj w grze opcje "Pokazuj czary, ktorych mozna sie nauczyc"~
 @36 = ~Dodaj w grze opcje "Renderowanie wyszukiwania na mapie"~
 @37 = ~Dodaj w grze opcje "Renderowanie dynamicznego wyszukiwania na mapie"~
+@38 = ~Dodaj w grze opcje przeznaczone dla komponentu "Tworzenie zapisow gry w regularnych odstepach czasu" z modyfikacji Tweaks Anthology~
+@39 = ~Dodaj w grze opcje "Zatrzymywanie gry podczas dialogow"~
+
+@100 = ~Zaktualizuj przypisanie klawiszy~
+@101 = ~tylko dla czarow kaplanskich~
+@102 = ~tylko dla czarow maga~
+@103 = ~dla czarow kaplanskich i maga~
 
 @500 = ~Wymagane posiadanie wersji Enhanced Edition w wersji 2.0 lub wyzszej.~
 @501 = ~Nie mozna zaktualizowac pliku LUA~
@@ -42,3 +46,4 @@
 @506 = ~Modyfikacja ta nie jest kompatybilna z komponentem modyfikacji EEUITweaks o nazwie "Hidden Game Options".~
 @507 = ~Ten komponent nie jest kompatybilny z modyfikacja "Lefreut's Enhanced UI (LeUI)".~
 @508 = ~Wymaga uprzedniego zainstalowania modyfikacji "Ikona zmiany poziomu".~
+@509 = ~Wymaga uprzedniego zainstalowania komponentu "Tworzenie zapisow gry w regularnych odstepach czasu" z modyfikacji Tweaks Anthology~

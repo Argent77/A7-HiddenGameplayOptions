@@ -190,6 +190,20 @@ Uwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.~
 
 ^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
 
+@3800 = ~Włączenie zapisywania stanu gry w regularnych odstępach czasu~
+@3801 = ~Opcja ta pozwala na włączenie zapisywania stanu gry w regularnych odstępach czasu. Do jej poprawnego działania wymagane jest zainstalowanie komponentu „Tworzenie zapisów gry w regularnych odstępach czasu” z modyfikacji Tweaks Anthology.
+
+^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+
+@3810 = ~Tworzenie zapisów gry w regularnych odstępach czasu w trakcie walki~
+@3811 = ~Opcja ta pozwala na włączenie zapisywania stanu gry w regularnych odstępach czasu również w trakcie walki. Do jej poprawnego działania wymagane jest zainstalowanie komponentu „Tworzenie zapisów gry w regularnych odstępach czasu” z modyfikacji Tweaks Anthology.
+
+^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+
+@3900 = ~Zatrzymywanie gry podczas dialogów~
+@3901 = ~Po włączeniu tej opcji gra będzie automatycznie zatrzymywana podczas dialogów.
+
+^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
 
 // *** Misc. strings ***
 
