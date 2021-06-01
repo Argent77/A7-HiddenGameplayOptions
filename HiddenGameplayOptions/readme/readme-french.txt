@@ -52,7 +52,8 @@ Composants
 
 1. Installer simultanément toutes les Options de jeu cachées
 
-Ce composant vous permet d'installer simultanément toutes les options disponibles pour votre jeu.
+Ce composant vous permet d'installer simultanément toutes les options disponibles pour votre jeu,
+sauf les options de touches de raccourci clavier.
 Des informations détaillées sur chaque option sont disponibles plus bas.
 
 
@@ -297,7 +298,7 @@ bloqués ou l'espace qu'occupent les créatures) en appuyant sur la touche CTRL.
 Elle se trouve dans la section Graphismes > Options d'affichage.
 
 
-30. Ajouter les options de jeu pour  pour le composant "Créer des sauvegardes périodiques" de Tweaks Anthology
+30. Ajouter les options de jeu pour le composant "Créer des sauvegardes périodiques" de Tweaks Anthology
     (nécessite l'installation de ce composant)
 
 Ce composant propose deux options dans la section Jeu :
@@ -308,6 +309,28 @@ Ce composant propose deux options dans la section Jeu :
 
 Ces deux options ne sont opérationnelles que si le composant "Créer des sauvegardes périodiques"
 de Tweaks Anthology est installé.
+
+Elle se trouve dans la section Jeu.
+
+31. Ajouter l'option de jeu "Forcer la mise en pause pendant les dialogues"
+
+Activer cette option oblige le heu à se mettre en pause pendant la conduite des dialogues.
+Elle rend le composant "Mode pause dans tous les dialogues" redondant.
+
+Elle se trouve dans la section Jeu > Feedback > Feedback visuel (ou dans la section Jeu dans PST:EE).
+
+32. Mettre à jour les raccourcis clavier des sorts divins et/ou profanes
+
+Ce composant recrée la table des touches de raccourci clavier des sorts divins et/ou profanes. Il prend
+en compte tous les sorts et toutes les capacités de haut niveau (HLA) disponibles au moment de l'installation,
+Cette liste comprend aussi les sortilèges installés par des mods.
+
+Il propose trois options d'installation :
+- Mettre à jour uniquement les raccourcis clavier des sortilèges divins
+- Mettre à jour uniquement les raccourcis clavier des sortilèges profanes
+- Mettre à jour les raccourcis clavier des sortilèges divins et profanes
+
+Ce composant n'est pas couvert par le composant "Installer simultanément toutes les Options de jeu cachées".
 
 
 Crédits

@@ -31,11 +31,17 @@
 @36 = ~Ajouter l'option de jeu "Afficher la carte des deplacements"~
 @37 = ~Ajouter l'option de jeu "Afficher la carte dynamique des obstacles"~
 @38 = ~Ajouter les options de jeu pour le composant "Creer des sauvegardes periodiques" de Tweaks Anthology~
+@39 = ~Ajouter l'option de jeu "Forcer la mise en pause des dialogues"~
+
+@100 = ~Mettre a jour les raccourcis clavier~
+@101 = ~seulement pour les sortileges divins~
+@102 = ~seulement pour les sortileges profanes~
+@103 = ~pour les sortileges divins et profanes~
 
 @500 = ~Ce mod requiert un jeu beneficiant du patch v2.0 ou ulterieur.~
 @501 = ~Echec de modification du fichier LUA.~
 @502 = ~Echec de modification du fichier UI.MENU.~
-@503 = ~Necessite l'installation du composant "Une selection d'options".~
+@503 = ~Cette option est deja installee.~
 @504 = ~Cette option n'est pas disponible pour ce jeu.~
 @505 = ~Cette option est deja presente dans ce jeu.~
 @506 = ~Ce mod n'est pas compatible avec le composant "Options cachees du jeu" de EEUITweaks.~
@@ -137,3 +143,7 @@ Veuillez indiquer quelle langue du jeu a ete utilisee quand vous avez installe c
 @-1061= "
 Utilisation de"
 @-1062= " et "
+
+@-1063= "INSTALLATION ABANDONNEE"
+@-1064= "Abandon de l'installation de ["
+@-1065= "], retour a l'etat anterieur"
