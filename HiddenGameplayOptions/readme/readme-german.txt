@@ -1,7 +1,7 @@
 Versteckte Spieloptionen anzeigen
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Version:    2.6
+Version:    3.0
 Author:     Argent77
 
 Download:   https://github.com/Argent77/A7-HiddenGameplayOptions/releases/latest
