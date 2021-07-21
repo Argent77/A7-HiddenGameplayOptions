@@ -31,6 +31,13 @@ Dies ist eine WeiDU Mod. Das bedeutet, sie ist sehr einfach zu installieren. Ent
 heruntergeladene Zipdatei in das Spieleverzeichnis und startet "setup-HiddenGameplayOptions.exe".
 Folgt den Anweisungen des Programms und die Mod ist startbereit.
 
+Hinweis zu „Belagerung von Drachenspeer” (SoD):
+Sowohl GOG als auch Steam installieren die „Belagerung von Drachenspeer”-Erweiterung in einem
+Format, welches nicht ohne Weiteres modifiziert werden kann. Ihr müsst zuerst eine Mod namens
+DLC Merger in Eurem SoD-Spiel installieren, bevor diese oder weitere WeiDU-basierte Mods
+installiert werden können.
+Sie kann hier heruntergeladen werden: https://github.com/Argent77/A7-DlcMerger/releases/latest
+
 
 Kompatibilität
 ~~~~~~~~~~~~~~

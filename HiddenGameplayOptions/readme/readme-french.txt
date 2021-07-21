@@ -31,6 +31,13 @@ Installation
 Il s'agit d'un mod WeiDU, donc très facile à installer. Il suffit de décompresser l'archive
 téléchargée dans votre répertoire de jeu et de lancer "setup-HiddenGameplayOptions.exe".
 
+Note spéciale pour Siege of Dragonspear fourni par Steam/GOG:
+Good Old Games (GOG) et Steam fournissent le contenu de Siege of Dragonspear dans un format que
+WeiDU, l'outil utilisé pour installer ce mod, ne peut pas reconnaitre. Vous devez donc lancer
+le programme DLC Merger dans votre répertoire de SoD avant d'installer ce mod, ou tout autre mod
+utilisant WeiDU.
+Vous pouvez le télécharger ici : https://github.com/Argent77/A7-DlcMerger/releases/latest
+
 
 Compatibilité
 ~~~~~~~~~~~~~
