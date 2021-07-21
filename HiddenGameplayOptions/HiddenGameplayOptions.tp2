@@ -65,6 +65,7 @@ BEGIN @1  // Install all Hidden Gameplay Options at once
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @500  // Enhanced Edition game patched to v2.0 or higher required.
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
   DESIGNATED 0
+  LABEL ~A7-HIDDENGAMEPLAYOPTIONS-INSTALL_ALL~
 
   ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 10) BEGIN
     LAF OPTION_DEBUG_CONSOLE END
@@ -230,6 +231,7 @@ BEGIN @10 // Add in-game option "Enable Debug Mode"
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @500  // Enhanced Edition game patched to v2.0 or higher required.
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
   DESIGNATED 10
+  LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_ENABLE_DEBUG_MODE~
 
   LAF OPTION_DEBUG_CONSOLE END
 
@@ -239,6 +241,7 @@ BEGIN @11 // Add in-game option "Enable UI Edit Mode"
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @500  // Enhanced Edition game patched to v2.0 or higher required.
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
   DESIGNATED 11
+  LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_ENABLE_UI_EDIT_MODE~
 
   LAF OPTION_UI_EDIT_MODE END
 
@@ -248,6 +251,7 @@ BEGIN @12 // Add in-game option "Show Strrefs"
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @500  // Enhanced Edition game patched to v2.0 or higher required.
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
   DESIGNATED 12
+  LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_SHOW_STRREFS~
 
   LAF OPTION_SHOW_STRREFS END
 
@@ -257,6 +261,7 @@ BEGIN @13 // Add in-game option "Hotkeys On Tooltips"
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @500  // Enhanced Edition game patched to v2.0 or higher required.
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
   DESIGNATED 13
+  LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_HOTKEYS_ON_TOOLTIPS~
 
   LAF OPTION_TOOLTIP_HOTKEYS END
 
@@ -266,6 +271,7 @@ BEGIN @14 // Add in-game option "Show trigger icons on tab"
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @500  // Enhanced Edition game patched to v2.0 or higher required.
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
   DESIGNATED 14
+  LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_SHOW_TRIGGER_ICONS_ON_TAB~
 
   LAF OPTION_TRIGGER_ICONS END
 
@@ -276,6 +282,7 @@ BEGIN @15 // Add in-game option "Allow Spacebar in Dialogs"
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
   REQUIRE_PREDICATE (GAME_IS ~pstee~) @504 // Option not available for this game.
   DESIGNATED 15
+  LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_ALLOW_SPACEBAR_IN_DIALOGS~
 
   LAF OPTION_ALLOW_SPACE_IN_DIALOG END
 
@@ -286,6 +293,7 @@ BEGIN @16 // Add in-game option "Limit druidic spells for Cleric/Ranger"
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
   REQUIRE_PREDICATE (NOT GAME_IS ~pstee~) @504 // Option not available for this game.
   DESIGNATED 16
+  LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_LIMIT_DRUIDIC_SPELLS_FOR_CLERIC_RANGER~
 
   LAF OPTION_CLERIC_RANGER_SPELLS END
 
@@ -296,6 +304,7 @@ BEGIN @17 // Add in-game option "3E Sneak Attack"
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
   REQUIRE_PREDICATE (NOT GAME_IS ~iwdee~) @505 // Option already present in this game.
   DESIGNATED 17
+  LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_3E_SNEAK_ATTACK~
 
   LAF OPTION_SNEAK_ATTACK END
 
@@ -305,6 +314,7 @@ BEGIN @18 // Add in-game option "Critical Hit Screen Shake"
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @500  // Enhanced Edition game patched to v2.0 or higher required.
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
   DESIGNATED 18
+  LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_CRITICAL_HIT_SCREEN_SHAKE~
 
   LAF OPTION_CRITICAL_HIT_SCREEN_SHAKE END
 
@@ -314,6 +324,7 @@ BEGIN @19 // Add in-game option "Show extra combat info"
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @500  // Enhanced Edition game patched to v2.0 or higher required.
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
   DESIGNATED 19
+  LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_SHOW_EXTRA_COMBAT_INFO~
 
   LAF OPTION_EXTRA_COMBAT_INFO END
 
@@ -323,6 +334,7 @@ BEGIN @20 // Add in-game option "Show Game Date and Time on Pause"
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @500  // Enhanced Edition game patched to v2.0 or higher required.
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
   DESIGNATED 20
+  LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_SHOW_GAME_DATE_AND_TIME_ON_PAUSE~
 
   LAF OPTION_DATE_ON_PAUSE END
 
@@ -333,6 +345,7 @@ BEGIN @21 // Add in-game option "Disable Area Map Zoom"
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
   REQUIRE_PREDICATE (GAME_IS ~pstee~) @504 // Option not available for this game.
   DESIGNATED 21
+  LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_DISABLE_AREA_MAP_ZOOM~
 
   LAF OPTION_DISABLE_MAP_ZOOM END
 
@@ -342,6 +355,7 @@ BEGIN @22 // Add in-game option "Reverse Mouse Wheel Zoom"
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @500  // Enhanced Edition game patched to v2.0 or higher required.
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
   DESIGNATED 22
+  LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_REVERSE_MOUSE_WHEEL_ZOOM~
 
   LAF OPTION_REVERSE_WHEEL_ZOOM END
 
@@ -351,6 +365,7 @@ BEGIN @23 // Add in-game option "Pause Game on Map Screen"
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @500  // Enhanced Edition game patched to v2.0 or higher required.
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
   DESIGNATED 23
+  LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_PAUSE_GAME_ON_MAP_SCREEN~
 
   LAF OPTION_PAUSING_MAP END
 
@@ -361,6 +376,7 @@ BEGIN @24 // Add in-game option "Enable Fog"
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
   REQUIRE_PREDICATE (NOT GAME_IS ~pstee~) @504 // Option not available for this game.
   DESIGNATED 24
+  LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_ENABLE_FOG~
 
   LAF OPTION_ENABLE_FOG END
 
@@ -370,6 +386,7 @@ BEGIN @25 // Add in-game option "Disable Movies"
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @500  // Enhanced Edition game patched to v2.0 or higher required.
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
   DESIGNATED 25
+  LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_DISABLE_MOVIES~
 
   LAF OPTION_DISABLE_MOVIES END
 
@@ -380,6 +397,7 @@ BEGIN @26 // Add in-game option "No Cosmetic Attacks"
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
   REQUIRE_PREDICATE (GAME_IS ~pstee~) @504 // Option not available for this game.
   DESIGNATED 26
+  LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_NO_COSMETIC_ATTACKS~
 
   LAF OPTION_NO_COSMETIC_ATTACKS END
 
@@ -390,6 +408,7 @@ BEGIN @27 // Add in-game option "XP Bonus in Nightmare Mode"
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
   REQUIRE_PREDICATE (NOT GAME_IS ~pstee~) @504 // Option not available for this game.
   DESIGNATED 27
+  LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_XP_BONUS_IN_NIGHTMARE_MODE~
 
   LAF OPTION_NIGHTMARE_XP_BONUS END
 
@@ -401,6 +420,7 @@ BEGIN @28 // Add in-game option "Trigger Bored Sounds"
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~leui.tp2~ 0 AND
                      NOT MOD_IS_INSTALLED ~leui-iwdee.tp2~ 0) @507 // This component is not compatible with Lefreut's Enhanced UI.
   DESIGNATED 28
+  LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_TRIGGER_BORED_SOUNDS~
 
   LAF OPTION_BORED_TIMEOUT END
 
@@ -416,6 +436,7 @@ BEGIN @29 // Add in-game option "Frame Rate" (experimental)
   // REQUIRE_PREDICATE (GAME_INCLUDES ~sod~ ||
                      // NOT MOD_IS_INSTALLED ~dragonspear_ui++.tp2~ 1) ~This component doesn't support Pecca's Dragonspear UI++ for the selected game yet.~
   DESIGNATED 29
+  LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_FRAME_RATE~
 
   LAF OPTION_FRAME_RATE_SLIDER END
 
@@ -430,6 +451,7 @@ BEGIN @30 // Add in-game option "Action Feedback"
   // REQUIRE_PREDICATE (GAME_INCLUDES ~sod~ ||
                      // NOT MOD_IS_INSTALLED ~dragonspear_ui++.tp2~ 1) ~This component doesn't support Pecca's Dragonspear UI++ for the selected game yet.~
   DESIGNATED 30
+  LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_ACTION_FEEDBACK~
 
   LAF OPTION_ACTION_FEEDBACK_SLIDER END
 
@@ -441,6 +463,7 @@ BEGIN @31 // Add in-game option "Enable Level Up Icon"
   REQUIRE_PREDICATE (GAME_IS ~pstee~) @504 // Option not available for this game.
   REQUIRE_COMPONENT ~A7-LevelUpTweaks.tp2~ 0 @508 // Requires "Level Up" Icon Tweaks.
   DESIGNATED 31
+  LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_ENABLE_LEVEL_UP_ICON~
 
   LAF OPTION_ENABLE_LEVEL_UP END
 
@@ -451,6 +474,7 @@ BEGIN @32 // Add in-game option "Show Area of Effect Radius"
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
   REQUIRE_PREDICATE (NOT GAME_IS ~pstee~) @504 // Option not available for this game.
   DESIGNATED 32
+  LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_SHOW_AOE_RADIUS~
 
   LAF OPTION_SHOW_AOE END
 
@@ -460,6 +484,7 @@ BEGIN @33 // Add in-game option "Enhanced Path Search"
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @500  // Enhanced Edition game patched to v2.0 or higher required.
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
   DESIGNATED 33
+  LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_ENHANCED_PATH_SEARCH~
 
   LAF OPTION_ENHANCED_PATH_SEARCH END
 
@@ -470,6 +495,7 @@ BEGIN @34 // Add in-game option "Expire Trap Highlights"
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
   REQUIRE_PREDICATE (NOT GAME_IS ~pstee~) @504 // Option not available for this game.
   DESIGNATED 34
+  LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_EXPIRE_TRAP_HIGHLIGHTS~
 
   LAF OPTION_EXPIRE_TRAP_HIGHLIGHTS END
 
@@ -479,6 +505,7 @@ BEGIN @35 // Add in-game option "Show Learnable Spells"
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @500  // Enhanced Edition game patched to v2.0 or higher required.
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
   DESIGNATED 35
+  LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_SHOW_LEARNABLE_SPELLS~
 
   LAF OPTION_SHOW_LEARNABLE_SPELLS END
 
@@ -488,6 +515,7 @@ BEGIN @36 // Add in-game option "Render Search Map"
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @500  // Enhanced Edition game patched to v2.0 or higher required.
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
   DESIGNATED 36
+  LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_RENDER_SEARCH_MAP~
 
   LAF OPTION_RENDER_SEARCH_MAP END
 
@@ -497,6 +525,7 @@ BEGIN @37 // Add in-game option "Render Dynamic Search Map"
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @500  // Enhanced Edition game patched to v2.0 or higher required.
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
   DESIGNATED 37
+  LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_RENDER_DYNAMIC_SEARCH_MAP~
 
   LAF OPTION_RENDER_DYNAMIC_SEARCH_MAP END
 
@@ -515,6 +544,7 @@ BEGIN @38 // Add in-game options for Tweak Anthology's "Create Interval Saves"
                      MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3357 ||
                      MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3358) @509 // Requires Tweaks Anthology's "Create interval saves" to be installed.
   DESIGNATED 38
+  LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_CREATE_INTERVAL_SAVES~
 
   LAF OPTION_ENABLE_INTERVAL_SAVES END
   LAF OPTION_INTERVAL_SAVES_COMBAT END
@@ -525,6 +555,7 @@ BEGIN @39 // Add in-game option "Force Dialog Pause"
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @500  // Enhanced Edition game patched to v2.0 or higher required.
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
   DESIGNATED 39
+  LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_FORCE_DIALOG_PAUSE~
 
   LAF OPTION_FORCE_DIALOG_PAUSE END
 
@@ -534,6 +565,7 @@ BEGIN @101 // for priest spells only
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~bgee.lua~ @500 // Enhanced Edition game patched to v2.0 or higher required.
   SUBCOMPONENT @100  // Update key bindings
   DESIGNATED 101
+  LABEL ~A7-HIDDENGAMEPLAYOPTIONS-KEYBINDING_PRIEST~
 
   INCLUDE ~%MOD_FOLDER%/lib/keybinding.tph~
   LAF INSTALL_SPELL_KEYBINDINGS INT_VAR type = 1 END
@@ -543,6 +575,7 @@ BEGIN @102 // for mage spells only
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~bgee.lua~ @500 // Enhanced Edition game patched to v2.0 or higher required.
   SUBCOMPONENT @100  // Update key bindings
   DESIGNATED 102
+  LABEL ~A7-HIDDENGAMEPLAYOPTIONS-KEYBINDING_MAGE~
 
   INCLUDE ~%MOD_FOLDER%/lib/keybinding.tph~
   LAF INSTALL_SPELL_KEYBINDINGS INT_VAR type = 2 END
@@ -552,6 +585,7 @@ BEGIN @103 // for priest and mage spells
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~bgee.lua~ @500 // Enhanced Edition game patched to v2.0 or higher required.
   SUBCOMPONENT @100  // Update key bindings
   DESIGNATED 103
+  LABEL ~A7-HIDDENGAMEPLAYOPTIONS-KEYBINDING_PRIEST_MAGE~
 
   INCLUDE ~%MOD_FOLDER%/lib/keybinding.tph~
   LAF INSTALL_SPELL_KEYBINDINGS INT_VAR type = 1 END
