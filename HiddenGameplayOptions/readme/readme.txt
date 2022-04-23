@@ -37,8 +37,8 @@ any other WeiDU-based mods can be installed.
 It can be downloaded from here: https://github.com/Argent77/A7-DlcMerger/releases/latest
 
 
-Compatibility
-~~~~~~~~~~~~~
+Compatibility & Installation Order
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The mod supports all Enhanced Edition games patched to v2.0 or higher. It is also compatible with
 Pecca's "Dragonspear UI++" and largely compatible with Lefreut's Enhanced UI (LeUI). Some options
@@ -49,6 +49,8 @@ install either one, but not both at the same time.
 
 Patching UI definition files can be tricky. To ensure that a failed patch attempt does not corrupt
 the game it will fail with a forced error and restore the original state of the patched files.
+
+It is recommended to install this mod after Tweaks Anthology and any GUI mods.
 
 
 Components

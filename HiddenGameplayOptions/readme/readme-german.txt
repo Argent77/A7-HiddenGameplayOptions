@@ -39,8 +39,8 @@ installiert werden können.
 Sie kann hier heruntergeladen werden: https://github.com/Argent77/A7-DlcMerger/releases/latest
 
 
-Kompatibilität
-~~~~~~~~~~~~~~
+Kompatibilität & Installationsreihenfolge
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Die Mod unterstützt alle Enhanced Editions ab Spielversion 2.0. Sie ist außerdem mit Peccas
 "Dragonspear UI++" und größtenteils mit Lefreuts Enhanced UI (LeUI) kompatibel.
@@ -51,6 +51,8 @@ Die Mod kann nicht zusammen mit der EEUITweaks-Komponente "Hidden Game Options" 
 Das Verändern von UI-Definitionen ist eine komplizierte Angelegenheit. Um sicherzustellen, dass
 ein misslungener Schreibversuch keine Schäden anrichtet, erzwingt die Mod einen kritischen Fehler
 und stellt in dem Fall den Urzustand der Spieldateien wieder her.
+
+Diese Mod sollte nach Tweaks Anthology und allen GUI-Mods installiert werden.
 
 
 Komponenten
