@@ -282,12 +282,14 @@ BEGIN
 
   PATCH_IF (offset >= 0) BEGIN
     INNER_PATCH_SAVE out_buffer ~%buffer%~ BEGIN
+      // Matches linebreak characters
       TEXT_SPRINT regex_linebreak ~[%WNL%]~
+      // Negation of "regex_linebreak"
       TEXT_SPRINT regex_not_linebreak ~[^%WNL%]~
-      TEXT_SPRINT regex_entry ~^[ %TAB%]*{[ %TAB%]*-?[0-9]+[ %TAB%]*,[ %TAB%]*[0-9]+[ %TAB%]*,~
+      // Matches entry of specific category
       TEXT_SPRINT regex_entry_cat ~^[ %TAB%]*{[ %TAB%]*-?[0-9]+[ %TAB%]*,[ %TAB%]*%category%[ %TAB%]*,~
-      TEXT_SPRINT regex_entry_index_eval ~{[ %TAB%]*\(-?[0-9]+\)[ %TAB%]*,~
-      TEXT_SPRINT regex_entry_index_eval_all ~\({[ %TAB%]*\)\(-?[0-9]+\)\([ %TAB%]*,\)~
+      // Matches entry; captures index and category
+      TEXT_SPRINT regex_entry_index_cat_eval ~{[ %TAB%]*\(-?[0-9]+\)[ %TAB%]*,[ %TAB%]*\(-?[0-9]+\)[ %TAB%]*,~
 
       SET ofs_start = INDEX_BUFFER(~%regex_entry_cat%~)
 
@@ -306,10 +308,24 @@ BEGIN
           SET ofs1 = INDEX_BUFFER(~%regex_entry_cat%~ ofs1)
         END
 
+        // register reserved index values
+        REPLACE_EVALUATE
+          ~%regex_entry_index_cat_eval%~
+          BEGIN
+            PATCH_IF (IS_AN_INT ~MATCH1~ && IS_AN_INT ~MATCH2~ && MATCH2 != category) BEGIN
+              SET $reserved_indices(~%MATCH1%~) = 1
+            END
+          END
+          ~%MATCH0%~
+
         // recreate entries from array
         SET index = 1  // entry index
         PATCH_PHP_EACH EVAL ~%array%~ AS resref => strref BEGIN
           PATCH_IF (strref >= 0) BEGIN
+            // don't overwrite existing index values
+            WHILE (VARIABLE_IS_SET $reserved_indices(~%index%~)) BEGIN
+              SET index += 1
+            END
             GET_STRREF strref desc
             TEXT_SPRINT line ~%TAB%%TAB%{ %index%, %category%,  '%resref%',%TAB%%TAB%%TAB%%TAB%%TAB%%strref%,%TAB%'',%TAB%%TAB%0,%TAB%0 }, -- %desc%%WNL%~
             SET index += 1
@@ -319,38 +335,6 @@ BEGIN
             WRITE_ASCIIE ofs_start ~%line%~ (line_len)
             SET ofs_start += line_len
           END
-        END
-
-        // update entry indices in whole array
-        SET index = 1  // entry index
-        SET ofs1 = INDEX_BUFFER(~%regex_entry%~)
-        WHILE (ofs1 >= 0) BEGIN
-          SET ofs2 = INDEX_BUFFER(~%regex_linebreak%~ ofs1)
-          PATCH_IF (ofs2 >= ofs1) BEGIN
-            READ_ASCII ofs1 line (ofs2 - ofs1)
-            INNER_PATCH_SAVE line_out ~%line%~ BEGIN
-              REPLACE_EVALUATE
-                ~%regex_entry_index_eval_all%~
-                BEGIN
-                  PATCH_IF (IS_AN_INT ~MATCH2~ && MATCH2 != index) BEGIN
-                    SET index_out = index
-                  END ELSE BEGIN
-                    TEXT_SPRINT index_out ~%MATCH2%~
-                  END
-                  SET index += 1
-                END
-                ~%MATCH1%%index_out%%MATCH3%~
-            END
-            PATCH_IF (NOT ~%line_out%~ STR_EQ ~%line%~) BEGIN
-              SET len_src = STRING_LENGTH ~%line%~
-              DELETE_BYTES ofs1 len_src
-              SET len_dst = STRING_LENGTH ~%line_out%~
-              INSERT_BYTES ofs1 len_dst
-              WRITE_ASCIIE ofs1 ~%line_out%~ (len_dst)
-              SET ofs2 = ofs1 + len_dst
-            END
-          END
-          SET ofs1 = INDEX_BUFFER(~%regex_entry%~ ofs2)
         END
       END
     END
