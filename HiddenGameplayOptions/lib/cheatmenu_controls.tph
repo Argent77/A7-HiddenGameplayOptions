@@ -1,0 +1,105 @@
+DEFINE_PATCH_FUNCTION ui_replace_cheat_menu
+STR_VAR
+  filename = ~~
+RET
+  success
+BEGIN
+  SET success = 0
+  PATCH_IF (FILE_EXISTS ~%filename%~) BEGIN
+    // finding and removing original cheat menu
+    SET ofs = INDEX_BUFFER(~^[ %TAB%]*name[ %TAB%]+["']cheatMenu['"]~)
+    PATCH_IF (ofs >= 0) BEGIN
+      SET ofs_menu_start = RINDEX_BUFFER(~^[ %TAB%]*menu[ %TAB%%WNL%]+{~ ofs)
+      SET pcount = 1
+      SET ofs_end = INDEX_BUFFER(~[%WNL%]~ ofs)
+      WHILE (pcount > 0) BEGIN
+        SET ofs_start = INDEX_BUFFER(~[^%WNL%]~ ofs_end)
+        SET ofs_end = INDEX_BUFFER(~[%WNL%]~ ofs_start)
+        READ_ASCII ofs_start line (ofs_end - ofs_start)
+        INNER_PATCH ~%line%~ BEGIN
+          REPLACE_EVALUATE ~\([{}]\)~ BEGIN
+            PATCH_IF (~%MATCH1%~ STR_EQ ~{~) BEGIN
+              SET pcount += 1
+            END ELSE BEGIN
+              SET pcount -= 1
+            END
+          END ~%MATCH1%~
+        END
+      END
+      SET ofs_menu_end = ofs_end
+      DELETE_BYTES ofs_menu_start (ofs_menu_end - ofs_menu_start)
+
+      // inserting new content
+      SET file_len = SIZE_OF_FILE ~%filename%~
+      PATCH_IF (file_len > 0) BEGIN
+        INSERT_FILE ofs_menu_start ~%filename%~
+        SET success = 1
+      END
+    END
+  END
+END
+
+
+// Preparing lua functions and tables
+COPY ~%MOD_FOLDER%/menu/ui-vars.menu~ ~%MOD_FOLDER%/menu/ui-vars.menu~
+  READ_ASCII 0 ui_vars (BUFFER_LENGTH)
+BUT_ONLY
+
+// Resolving tra references
+OUTER_PATCH_SAVE ui_vars ~%ui_vars%~ BEGIN
+  REPLACE_EVALUATE ~@\([0-9]+\)~ BEGIN
+    PATCH_IF (IS_AN_INT ~MATCH1~) BEGIN
+      SPRINT msg (AT "MATCH1")
+      SPRINT msg ~"%msg%"~
+    END ELSE BEGIN
+      SPRINT msg ~""~
+      PATCH_WARN ~Not a valid tra reference: %MATCH0%~
+    END
+  END ~%msg%~
+END
+
+
+// Add before/after vanilla variable initializations
+COPY_EXISTING ~ui.menu~ ~override~
+  // inserting lua variables
+  SET ofs = INDEX_BUFFER(~^[ %TAB%]*cheatGoldAmt[ %TAB%]*=[ %TAB%]*[0-9]+~)
+  PATCH_IF (ofs >= 0) BEGIN
+    SET len = STRING_LENGTH ~%ui_vars%~
+    INSERT_BYTES ofs len
+    WRITE_ASCIIE ofs ~%ui_vars%~ (len)
+  END ELSE BEGIN
+    PATCH_FAIL ~Could not find cheat menu definition in UI.MENU~
+  END
+
+  // replacing cheat menu
+  LPF ui_replace_cheat_menu
+    STR_VAR filename = EVAL ~%MOD_FOLDER%/menu/ui-%game_mode%.menu~
+    RET success
+  END
+  PATCH_IF (NOT success) BEGIN
+    PATCH_FAIL ~Could not update cheat menu definition to UI.MENU~
+  END
+BUT_ONLY
+
+
+// PSTEE: Installing modified background image for cheat menu
+ACTION_IF (~%game_mode%~ STR_EQ ~pstee~) BEGIN
+  COPY ~%MOD_FOLDER%/mos/cheatbg0.mos~ ~override~
+    LPF UPDATE_PVRZ_INDICES
+      RET original_base_index new_base_index index_range
+    END
+
+  OUTER_FOR (i = 0; i < index_range; ++i) BEGIN
+    OUTER_SET src_idx = original_base_index + i
+    OUTER_SPRINT index ~0000%src_idx%~
+    OUTER_PATCH_SAVE index ~%index%~ BEGIN DELETE_BYTES 0 (BUFFER_LENGTH - 4) END
+
+    LAF INSTALL_PVRZ
+      INT_VAR
+        original_base_index
+        new_base_index
+      STR_VAR
+        source_file = EVAL ~%MOD_FOLDER%/mos/mos%index%.pvrz~
+    END
+  END
+END

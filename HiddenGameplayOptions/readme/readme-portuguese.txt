@@ -273,6 +273,11 @@ ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa
 History
 ~~~~~~~
 
+4.0
+- Added new components "Improved Cheat Menu" and "Update resource tables for Improved Cheat Menu"
+- Added labels for Project Infinity
+- Fixed potential keybinding issues in PST:EE caused by the "Update keybindings" component
+
 3.0
 - Added option "Force Dialog Pause"
 - Added multiple choice option "Update keybindings for priest and/or mage spells"

@@ -1,0 +1,12 @@
+// Initializations
+INCLUDE ~%MOD_FOLDER%/lib/cheatmenu_init.tph~
+
+// Removing existing resource tables for the Cheat Menu
+INCLUDE ~%MOD_FOLDER%/lib/lua_clean.tph~
+
+// Recreating tables for items, spells, stores, creatures and commands
+INCLUDE ~%MOD_FOLDER%/lib/lua_items.tph~
+INCLUDE ~%MOD_FOLDER%/lib/lua_spells.tph~
+INCLUDE ~%MOD_FOLDER%/lib/lua_stores.tph~
+INCLUDE ~%MOD_FOLDER%/lib/lua_creatures.tph~
+INCLUDE ~%MOD_FOLDER%/lib/lua_commands.tph~

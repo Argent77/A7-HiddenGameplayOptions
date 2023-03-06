@@ -1,0 +1,213 @@
+// Spells to exclude from the list
+ACTION_DEFINE_ASSOCIATIVE_ARRAY blacklist_items BEGIN
+  // nothing yet
+END
+
+// Validates the given SPL resref and returns additional information
+DEFINE_PATCH_FUNCTION VALIDATE_SPL
+STR_VAR
+  resref = ~~
+RET
+  valid // 0: invalid, 1: valid
+  type  // 0: Special, 1: Wizard, 2: Priest, 3: Psionic, 4: Innate, 5: Bard song
+  name  // spell name as string
+BEGIN
+  SET valid = FILE_EXISTS_IN_GAME ~%resref%.SPL~
+  SET type = "-1"
+  SPRINT name ~~
+
+  PATCH_IF (valid) BEGIN
+    INNER_ACTION BEGIN
+      COPY_EXISTING ~%resref%.SPL~ ~override~
+        READ_SLONG NAME1 strref ELSE 0
+        READ_STRREF NAME1 name ELSE ~<Invalid Strref>~
+        SET type = SHORT_AT 0x1c
+        PATCH_IF (type < 0 || type > 5 || strref <= 0 || ~%name%~ STRING_CONTAINS_REGEXP ~^<Invalid Strref~ = 0) BEGIN
+          SET valid = 0
+          SET type = "-1"
+          SPRINT name ~~
+        END
+      BUT_ONLY
+    END
+  END
+END
+
+
+// *** Assembling list of eligible spells ***
+// Array: $spells(~%resref%~) = [enabled]
+// Array: $spell_types(~%resref%~) = spell_type
+// Array: $spell_names(~%resref%~) = %spell_name%
+
+// Scanning SPELL.IDS for available spells
+COPY_EXISTING ~spell.ids~ ~override~
+  READ_2DA_ENTRIES_NOW spell_ids 1
+  FOR (row = 1; row < spell_ids; ++row) BEGIN
+    READ_2DA_ENTRY_FORMER spell_ids row 0 spell_num
+    PATCH_IF (IS_AN_INT ~spell_num~) BEGIN
+      SET spell_idx = spell_num MODULO 100
+      SET spell_lvl = (spell_num / 100) MODULO 10
+      SET spell_type = (spell_num / 1000) MODULO 10
+      PATCH_IF ((spell_type = 1 || spell_type = 2) && spell_lvl > 0 && spell_idx < 50) BEGIN
+        LPF RES_NAME_OF_SPELL_NUM
+          INT_VAR spell_num
+          RET spell_res
+        END
+        TO_UPPER ~spell_res~
+        LPF VALIDATE_SPL STR_VAR resref = EVAL ~%spell_res%~ RET valid type name END
+        PATCH_IF (valid) BEGIN
+          SET $spells(~%spell_res%~) = 1
+          SET $spell_types(~%spell_res%~) = type
+          SPRINT $spell_names(~%spell_res%~) ~%name%~
+        END
+      END
+    END
+  END
+BUT_ONLY
+
+// Disabling hidden spells
+COPY_EXISTING ~hidespl.2da~ ~override~
+  READ_2DA_ENTRIES_NOW hidespl 1
+  FOR (row = 3; row < hidespl; ++row) BEGIN
+    READ_2DA_ENTRY_FORMER hidespl row 0 resref
+    TO_UPPER ~resref~
+    PATCH_IF (VARIABLE_IS_SET $spells(~%resref%~)) BEGIN
+      READ_2DA_ENTRY_FORMER hidespl row 1 hidden
+      SET v = (IS_AN_INT ~hidden~) ? hidden = 0 : 0
+      SET $spells(~%resref%~) = v
+    END
+  END
+BUT_ONLY IF_EXISTS
+
+
+// Scanning CLAB files associated with character classes and kits (only GA_* entries)
+// Collecting predefined class-related CLAB tables
+ACTION_DEFINE_ASSOCIATIVE_ARRAY clab_list BEGIN
+  ~CLABMA01~  => 1
+  ~CLABFI01~  => 1
+  ~CLABPR01~  => 1
+  ~CLABTH01~  => 1
+  ~CLABBA01~  => 1
+  ~CLABPA01~  => 1
+  ~CLABDR01~  => 1
+  ~CLABRN01~  => 1
+  ~CLABSO01~  => 1
+  ~CLABMO01~  => 1
+  ~CLABSH01~  => 1
+END
+
+// Collecting kit-related CLAB tables
+COPY_EXISTING ~kitlist.2da~ ~override~
+  READ_2DA_ENTRIES_NOW kitlist 1
+  READ_2DA_ENTRY_FORMER kitlist 1 0 default
+  FOR (row = 3; row < kitlist; ++row) BEGIN
+    READ_2DA_ENTRY_FORMER kitlist row 5 clab_res
+    PATCH_IF (NOT ~%clab_res%~ STR_EQ ~%default%~ && FILE_EXISTS_IN_GAME ~%clab_res%.2da~) BEGIN
+      TO_UPPER ~clab_res~
+      SET $clab_list(~%clab_list%~) = 1
+    END
+  END
+BUT_ONLY IF_EXISTS
+
+// Scanning CLABs for spells
+ACTION_PHP_EACH clab_list AS clab_res => _ BEGIN
+  COPY_EXISTING ~%clab_res%.2DA~ ~override~
+    COUNT_2DA_COLS num_cols
+    READ_2DA_ENTRIES_NOW clab_table 1
+    FOR (row = 3; row < clab_table; ++row) BEGIN
+      FOR (col = 1; col < num_cols; ++col) BEGIN
+        READ_2DA_ENTRY_FORMER clab_table row col value
+        PATCH_IF (~%value%~ STRING_MATCHES_REGEXP ~GA_.+~ = 0) BEGIN
+          INNER_PATCH_SAVE resref ~%value%~ BEGIN REPLACE_TEXTUALLY ~GA_~ ~~ END
+          TO_UPPER ~resref~
+          LPF VALIDATE_SPL STR_VAR resref RET valid type name END
+          PATCH_IF (valid) BEGIN
+            SET $spells(~%resref%~) = 1
+            SET $spell_types(~%resref%~) = type
+            SPRINT $spell_names(~%resref%~) ~%name%~
+          END
+        END
+      END
+    END
+  BUT_ONLY IF_EXISTS
+END
+
+
+// Scanning HLA-related files associated with character classes and kits (only GA_* entries)
+// Collecting HLA tables
+COPY_EXISTING ~luabbr.2da~ ~override~
+  READ_2DA_ENTRIES_NOW luabbr 1
+  FOR (row = 3; row < luabbr; ++row) BEGIN
+    READ_2DA_ENTRY_FORMER luabbr row 1 value
+    SPRINT resref ~LU%value%~
+    PATCH_IF (FILE_EXISTS_IN_GAME ~%resref%.2DA~) BEGIN
+      TO_UPPER ~resref~
+      SET $hlas(~%resref%~) = 1
+    END
+  END
+BUT_ONLY IF_EXISTS
+
+// Scanning HLA tables for spells
+ACTION_PHP_EACH hlas AS hla_res => _ BEGIN
+  COPY_EXISTING ~%hla_res%.2DA~ ~override~
+    COUNT_2DA_COLS num_cols
+    READ_2DA_ENTRIES_NOW hla_table 1
+    FOR (row = 3; row < hla_table; ++row) BEGIN
+      READ_2DA_ENTRY_FORMER hla_table row 1 value
+      PATCH_IF (~%value%~ STRING_MATCHES_REGEXP ~GA_.+~ = 0) BEGIN
+        INNER_PATCH_SAVE resref ~%value%~ BEGIN REPLACE_TEXTUALLY ~GA_~ ~~ END
+        TO_UPPER ~resref~
+        LPF VALIDATE_SPL STR_VAR resref RET valid type name END
+        PATCH_IF (valid) BEGIN
+          SET $spells(~%resref%~) = 1
+          SET $spell_types(~%resref%~) = type
+          SPRINT $spell_names(~%resref%~) ~%name%~
+        END
+      END
+    END
+  BUT_ONLY IF_EXISTS
+END
+
+
+// Disabling blacklisted spells
+ACTION_PHP_EACH spells AS resref => value BEGIN
+  ACTION_IF (value != 0) BEGIN
+    OUTER_SET exclude = VARIABLE_IS_SET $blacklist(~%resref%~)
+    ACTION_IF (exclude) BEGIN
+      ACTION_IF ($blacklist(~%resref%~) STRING_CONTAINS_REGEXP ~\b%game_mode%\b~ = 0) BEGIN
+        OUTER_SET $spells(~%resref%~) = 0
+      END
+    END
+  END
+END
+
+
+// Sorting for better readability
+ACTION_SORT_ARRAY_INDICES spells
+
+
+// Printing list as Lua array
+OUTER_SPRINT spell_list ~~
+ACTION_PHP_EACH spells AS resref => visible BEGIN
+  ACTION_IF (visible) BEGIN
+    OUTER_SPRINT name $spell_names(~%resref%~)
+    OUTER_PATCH_SAVE name ~%name%~ BEGIN
+      REPLACE_TEXTUALLY ~"~ ~\"~
+      REPLACE_TEXTUALLY ~[%WNL%%TAB%]~ ~ ~
+    END
+
+    OUTER_SET type = $spell_types(~%resref%~) MODULO 6
+    OUTER_SPRINT spell_list ~%spell_list%%WNL%%TAB%{"%resref%", %type%, "%name%"},~
+  END
+END
+OUTER_SPRINT spell_list ~%spell_list%%WNL%~
+OUTER_SPRINT a7spellList ~-- List of spells for debug console%WNL%a7spellList = {%spell_list%}%WNL%~
+
+// Adding array to Lua file
+COPY_EXISTING ~bgee.lua~ ~override~
+  SET ofs = INDEX_BUFFER(~fontcolors[ %TAB%%WNL%]*=[ %TAB%%WNL%]*{~)
+  PATCH_IF (ofs < 0) BEGIN SET ofs = 0 END
+
+  SET len = STRING_LENGTH ~%a7spellList%~
+  INSERT_BYTES ofs len
+  WRITE_ASCIIE ofs ~%a7spellList%~ (len)
+BUT_ONLY

@@ -1,0 +1,43 @@
+// COMMANDS.LUA: Provides a list of useful script and lua commands
+// Format: description, command, mode, [argument]
+// mode: 
+//  - 0: C:Eval() command; add to cheat console
+//  - 1: C:Eval() command; execute instantly
+//  - 2: lua command; add to cheat console
+//  - 3: Special: Execute C:AdvanceRealTime(argument) instantly, with "argument" in 4th array position
+//  - 4: Special: Execute C:StrrefOn() instantly
+//  - 5: Special: Execute C:StrrefOff() instantly
+
+// Preparing lua table
+ACTION_IF (~%game_mode%~ STR_EQ ~pstee~) BEGIN
+  COPY ~%MOD_FOLDER%/lua/bgee-commands-pstee.lua~ ~%MOD_FOLDER%/lua/bgee-commands-pstee.lua~
+    READ_ASCII 0 lua_table (BUFFER_LENGTH)
+  BUT_ONLY
+END ELSE BEGIN
+  COPY ~%MOD_FOLDER%/lua/bgee-commands.lua~ ~%MOD_FOLDER%/lua/bgee-commands.lua~
+    READ_ASCII 0 lua_table (BUFFER_LENGTH)
+  BUT_ONLY
+END
+
+// Resolving tra references
+OUTER_PATCH_SAVE lua_table ~%lua_table%~ BEGIN
+  REPLACE_EVALUATE ~@\([0-9]+\)~ BEGIN
+    PATCH_IF (IS_AN_INT ~MATCH1~) BEGIN
+      SPRINT msg (AT "MATCH1")
+      SPRINT msg ~"%msg%"~
+    END ELSE BEGIN
+      SPRINT msg ~""~
+      PATCH_WARN ~Not a valid tra reference: %MATCH0%~
+    END
+  END ~%msg%~
+END
+
+// Adding array to Lua file
+COPY_EXISTING ~bgee.lua~ ~override~
+  // Inserting lua table
+  SET ofs = INDEX_BUFFER(~fontcolors[ %TAB%%WNL%]*=[ %TAB%%WNL%]*{~)
+  PATCH_IF (ofs < 0) BEGIN SET ofs = 0 END
+  SET len = STRING_LENGTH ~%lua_table%~
+  INSERT_BYTES ofs len
+  WRITE_ASCIIE ofs ~%lua_table%~ (len)
+BUT_ONLY

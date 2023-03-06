@@ -1,0 +1,502 @@
+menu
+{
+	name 'cheatMenu'
+	ignoreEsc
+	ignoreNav 1
+
+	label
+	{
+		enabled "cheatMenuCollapsed ~= nil"
+		area 100 0 822 298
+		mosaic 'CHEATBG0'
+	}
+
+  -- TOGGLE BUTTONS START
+  button
+  {
+    enabled "cheatMenuCollapsed ~= nil and a7cheatListType == 0"
+    area    610 15 138 56
+    bam			NORMBUTT
+    sequence  6
+    text      "A7_TOGGLE_AREAS_BUTTON"
+    text style	"button"
+    action    "a7cheatListType = 1"
+  }
+  button
+  {
+    enabled "cheatMenuCollapsed ~= nil and a7cheatListType == 1"
+    area    610 15 138 56
+    bam			NORMBUTT
+    sequence  6
+    text      "A7_TOGGLE_ITEMS_BUTTON"
+    text style	"button"
+    action    "a7cheatListType = 2"
+  }
+  button
+  {
+    enabled "cheatMenuCollapsed ~= nil and a7cheatListType == 2"
+    area    610 15 138 56
+    bam			NORMBUTT
+    sequence  6
+    text      "A7_TOGGLE_SPELLS_BUTTON"
+    text style	"button"
+    action    "a7cheatListType = 3"
+  }
+  button
+  {
+    enabled "cheatMenuCollapsed ~= nil and a7cheatListType == 3"
+    area    610 15 138 56
+    bam			NORMBUTT
+    sequence  6
+    text      "A7_TOGGLE_STORES_BUTTON"
+    text style	"button"
+    action    "a7cheatListType = 4"
+  }
+  button
+  {
+    enabled "cheatMenuCollapsed ~= nil and a7cheatListType == 4"
+    area    610 15 138 56
+    bam			NORMBUTT
+    sequence  6
+    text      "A7_TOGGLE_CREATURES_BUTTON"
+    text style	"button"
+    action    "a7cheatListType = 5"
+  }
+  button
+  {
+    enabled "cheatMenuCollapsed ~= nil and a7cheatListType == 5"
+    area    610 15 138 56
+    bam			NORMBUTT
+    sequence  6
+    text      "A7_TOGGLE_COMMANDS_BUTTON"
+    text style	"button"
+    action    "a7cheatListType = 0"
+  }
+  -- TOGGLE BUTTONS END
+
+  -- ITEM LIST START
+	list
+	{
+		column
+		{
+			width 25
+			label
+			{
+				area 0 0 -1 -1
+				text lua "a7itemList[rowNumber][1]"
+				text style "list"
+        text highlight 1
+			}
+		}
+		column
+		{
+			width 75
+			label
+			{
+				area 0 0 -1 -1
+				text lua "a7itemList[rowNumber][2]"
+				text style "list"
+        text highlight 1
+			}
+		}
+    enabled "cheatMenuCollapsed ~= nil and a7cheatListType == 1"
+		area 122 6 480 234
+
+		rowheight	18
+		table		"a7itemList"
+		var		a7cheatCreateItem
+		scrollbar	'CGSCRL1'
+		hidehighlight
+		highlight color 255 255 255 255
+		focus color 255 255 255 255
+	}
+	button
+	{
+    enabled "cheatMenuCollapsed ~= nil and a7cheatListType == 1"
+		area		122 240 113 46
+		bam			NORMBUTT
+		sequence	6
+		text		"A7_CREATE_BUTTON"
+		text style	"button"
+		action 		"C:CreateItem(a7itemList[a7cheatCreateItem][1],a7cheatItemCharge1,a7cheatItemCharge2,a7cheatItemCharge3)"
+	}
+  label
+  {
+    enabled "cheatMenuCollapsed ~= nil and a7cheatListType == 1"
+    area    242 240 104 46
+    text    "A7_AMOUNT_LABEL"
+    text style "label"
+    text align right center
+  }
+  edit
+  {
+    enabled "cheatMenuCollapsed ~= nil and a7cheatListType == 1"
+    area 350 256 36 20
+    var a7cheatItemCharge1
+    scrollbar	'CGSCRL1'
+    text style "edit"
+    maxlines 1
+    fill    80 60 30 64
+  }
+  edit
+  {
+    enabled "cheatMenuCollapsed ~= nil and a7cheatListType == 1"
+    area 390 256 36 20
+    var a7cheatItemCharge2
+    scrollbar	'CGSCRL1'
+    text style "edit"
+    maxlines 1
+    fill    80 60 30 64
+  }
+  edit
+  {
+    enabled "cheatMenuCollapsed ~= nil and a7cheatListType == 1"
+    area 430 256 36 20
+    var a7cheatItemCharge3
+    scrollbar	'CGSCRL1'
+    text style "edit"
+    maxlines 1
+    fill    80 60 30 64
+  }
+  -- ITEM LIST END
+
+  -- SPELL LIST START
+	list
+	{
+		column
+		{
+			width 23
+			label
+			{
+				area 0 0 -1 -1
+				text lua "a7spellList[rowNumber][1]"
+				text style "list"
+        text highlight 1
+			}
+		}
+		column
+		{
+			width 20
+			label
+			{
+				area 0 0 -1 -1
+				text lua "a7luaSpellType(a7spellList[rowNumber][2])"
+				text style "list"
+        text highlight 1
+			}
+		}
+		column
+		{
+			width 57
+			label
+			{
+				area 0 0 -1 -1
+				text lua "a7spellList[rowNumber][3]"
+				text style "list"
+        text highlight 1
+			}
+		}
+    enabled "cheatMenuCollapsed ~= nil and a7cheatListType == 2"
+		area 122 6 480 234
+
+		rowheight	18
+		table		"a7spellList"
+		var		a7cheatAddSpell
+		scrollbar	'CGSCRL1'
+		hidehighlight
+		highlight color 255 255 255 255
+		focus color 255 255 255 255
+	}
+	button
+	{
+    enabled "cheatMenuCollapsed ~= nil and a7cheatListType == 2"
+		area		122 240 113 46
+		bam			NORMBUTT
+		sequence	6
+		text		"A7_COMMAND_BUTTON"
+		text style	"button"
+    action "a7luaSpellCommand(a7cheatAddSpell)"
+	}
+  -- SPELL LIST END
+
+  -- STORE LIST START
+	list
+	{
+		column
+		{
+			width 25
+			label
+			{
+				area 0 0 -1 -1
+				text lua "a7storeList[rowNumber][1]"
+				text style "list"
+        text highlight 1
+			}
+		}
+		column
+		{
+			width 75
+			label
+			{
+				area 0 0 -1 -1
+				text lua "a7storeList[rowNumber][2]"
+				text style "list"
+        text highlight 1
+			}
+		}
+    enabled "cheatMenuCollapsed ~= nil and a7cheatListType == 3"
+		area 122 6 480 234
+
+		rowheight	18
+		table		"a7storeList"
+		var		a7cheatOpenStore
+		scrollbar	'CGSCRL1'
+		hidehighlight
+		highlight color 255 255 255 255
+		focus color 255 255 255 255
+	}
+	button
+	{
+    enabled "cheatMenuCollapsed ~= nil and a7cheatListType == 3"
+		area		122 240 113 46
+		bam			NORMBUTT
+		sequence	6
+		text		"A7_OPEN_BUTTON"
+		text style	"button"
+		action 		"C:StartStore(a7storeList[a7cheatOpenStore][1])"
+	}
+  -- STORE LIST END
+
+  -- CREATURE LIST START
+	list
+	{
+		column
+		{
+			width 23
+			label
+			{
+				area 0 0 -1 -1
+				text lua "a7creatureList[rowNumber][1]"
+				text style "list"
+        text highlight 1
+			}
+		}
+		column
+		{
+			width 20
+			label
+			{
+				area 0 0 -1 -1
+				text lua "a7luaAllegiance(a7creatureList[rowNumber][2])"
+				text style "list"
+        text highlight 1
+			}
+		}
+		column
+		{
+			width 57
+			label
+			{
+				area 0 0 -1 -1
+				text lua "a7creatureList[rowNumber][3]"
+				text style "list"
+        text highlight 1
+			}
+		}
+    enabled "cheatMenuCollapsed ~= nil and a7cheatListType == 4"
+		area 122 6 480 234
+
+		rowheight	18
+		table		"a7creatureList"
+		var		a7cheatSpawnCreature
+		scrollbar	'CGSCRL1'
+		hidehighlight
+		highlight color 255 255 255 255
+		focus color 255 255 255 255
+	}
+	button
+	{
+    enabled "cheatMenuCollapsed ~= nil and a7cheatListType == 4"
+		area		122 240 113 46
+		bam			NORMBUTT
+		sequence	6
+		text		"A7_CREATE_BUTTON"
+		text style	"button"
+		action 		"C:CreateCreature(a7creatureList[a7cheatSpawnCreature][1])"
+	}
+  -- CREATURE LIST END
+
+  -- COMMAND LIST START
+	list
+	{
+		column
+		{
+			width 100
+			label
+			{
+				area 0 0 -1 -1
+				text lua "a7commandList[rowNumber][1]"
+				text style "list"
+        text highlight 1
+			}
+		}
+    enabled "cheatMenuCollapsed ~= nil and a7cheatListType == 5"
+		area 122 6 480 234
+
+		rowheight	18
+		table		"a7commandList"
+		var		a7cheatApplyCommand
+		scrollbar	'CGSCRL1'
+		hidehighlight
+		highlight color 255 255 255 255
+		focus color 255 255 255 255
+    action "a7commandMode = a7commandList[a7cheatApplyCommand][3]"
+	}
+	button
+	{
+    enabled "cheatMenuCollapsed ~= nil and a7cheatListType == 5 and (a7commandMode == 0 or a7commandMode == 2)"
+		area		122 240 113 46
+		bam			NORMBUTT
+		sequence	6
+		text		"A7_COMMAND_BUTTON"
+		text style	"button"
+		action 		"a7luaCommand(a7cheatApplyCommand)"
+	}
+	button
+	{
+    enabled "cheatMenuCollapsed ~= nil and a7cheatListType == 5 and not (a7commandMode == 0 or a7commandMode == 2)"
+		area		122 240 113 46
+		bam			NORMBUTT
+		sequence	6
+		text		"A7_PERFORM_BUTTON"
+		text style	"button"
+		action 		"a7luaCommand(a7cheatApplyCommand)"
+	}
+  -- COMMAND LIST END
+
+  -- AREA LIST START
+	list
+	{
+		column
+		{
+			width 20
+			label
+			{
+				area 0 0 -1 -1
+				text lua "cheatAreas[rowNumber][1]"
+				text style "list"
+				text highlight 1
+			}
+		}
+		column
+		{
+			width 80
+			label
+			{
+				area 0 0 -1 -1
+				text lua "Infinity_FetchString(cheatAreas[rowNumber][2])"
+				text style "list"
+				text highlight 1
+			}
+		}
+		enabled "cheatMenuCollapsed ~= nil and a7cheatListType == 0"
+		area 122 6 480 234
+
+		rowheight	18
+		table		"cheatAreas"
+		var		cheatTeleportArea
+		scrollbar	'CGSCRL1'
+		hidehighlight
+		highlight color 255 255 255 255
+		focus color 255 255 255 255
+	}
+	button
+	{
+		enabled "cheatMenuCollapsed ~= nil and a7cheatListType == 0"
+		area		122 240 113 46
+		bam			NORMBUTT
+		text		"TRAVEL_BUTTON"
+		text style	"button"
+		action 		"C:MoveToArea(cheatAreas[cheatTeleportArea][1])"
+	}
+  -- AREA LIST END
+
+	button
+	{
+		enabled "cheatMenuCollapsed ~= nil"
+		area		610 83 138 56
+		bam			NORMBUTT
+		text			"GODBOW_LABEL"
+		text style	"button"
+		action		"C:CreateItem('EVISCERA')"
+	}
+
+	button
+	{
+		enabled "cheatMenuCollapsed ~= nil"
+		area		610 151 138 56
+		bam			NORMBUTT
+		text			"GIVE_GOLD_LABEL"
+		text style	"button"
+		action		"C:AddGold(cheatGoldAmt)"
+	}
+	edit
+	{
+		enabled "cheatMenuCollapsed ~= nil"
+		area		760 161 130 24
+		var		cheatGoldAmt
+		scrollbar	'CGSCRL1'
+		text style	"edit"
+		maxlines	1
+    fill    80 60 30 64
+	}
+
+	button
+	{
+		enabled "cheatMenuCollapsed ~= nil"
+		area		610 223 138 56
+		bam			NORMBUTT
+		text			"GIVE_XP_LABEL"
+		text style	"button"
+		action		"C:SetCurrentXP(cheatXpAmt)"
+	}
+	edit
+	{
+		enabled "cheatMenuCollapsed ~= nil"
+		area		760 229 128 24
+		var		cheatXpAmt
+		scrollbar	'CGSCRL1'
+		text style	"edit"
+		maxlines	1
+    fill    80 60 30 64
+	}
+
+	button
+	{
+		enabled "cheatMenuCollapsed ~= nil"
+		area		760 83 138 56
+		bam			NORMBUTT
+		text			"EXPLORE_LABEL"
+		text style	"button"
+		action		"C:ExploreArea()"
+	}
+
+	button
+	{
+		enabled "cheatMenuCollapsed ~= nil"
+		area		473 240 113 46
+		bam			NORMBUTT
+		text		"HIDE_CHEATS_BUTTON"
+		text style	"button"
+		action "cheatMenuCollapsed = nil"
+	}
+	button
+	{
+		enabled "cheatMenuCollapsed == nil"
+		area		462 6 138 56
+		bam			NORMBUTT
+		text		"SHOW_CHEATS_BUTTON"
+		text style	"button"
+		action "cheatMenuCollapsed = 1"
+	}
+}

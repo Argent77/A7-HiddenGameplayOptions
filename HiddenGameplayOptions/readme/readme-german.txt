@@ -45,6 +45,8 @@ Kompatibilität & Installationsreihenfolge
 Die Mod unterstützt alle Enhanced Editions ab Spielversion 2.0. Sie ist außerdem mit Peccas
 "Dragonspear UI++" und größtenteils mit Lefreuts Enhanced UI (LeUI) kompatibel.
 Einige Optionen werden ggf. in andere Bereiche verschoben, wenn diese Mods erkannt wurden.
+Das "Verbesserte Cheatmenü" könnte kleinere Grafikfehler beinhalten, falls Lefreuts Enhanced UI
+installiert ist. Sie wirken sich aber nicht auf die Funktionalität aus.
 
 Die Mod kann nicht zusammen mit der EEUITweaks-Komponente "Hidden Game Options" installiert werden.
 
@@ -52,7 +54,9 @@ Das Verändern von UI-Definitionen ist eine komplizierte Angelegenheit. Um siche
 ein misslungener Schreibversuch keine Schäden anrichtet, erzwingt die Mod einen kritischen Fehler
 und stellt in dem Fall den Urzustand der Spieldateien wieder her.
 
-Diese Mod sollte nach Tweaks Anthology und allen GUI-Mods installiert werden.
+Diese Mod sollte nach Tweaks Anthology und allen GUI-Mods installiert werden. Die Komponente
+"Verbessertes Cheatmenü" sollte idealerweise nach allen Mods installiert werden, die neue Inhalte
+zum Spiel hinzufügen.
 
 
 Komponenten
@@ -345,6 +349,38 @@ Diese Option ist nicht in der Hauptkomponente "Alle versteckten Spieloptionen au
 installieren" enthalten.
 
 
+33. Verbessertes Cheatmenü
+
+Diese Komponente erweitert das Cheatmenü, das zusammen mit der Debugkonsole geöffnet wird, um eine
+Reihe von Zusatzfunktionen:
+- Eine Liste aller verfügbaren Gegenstände, die im Gepäck des Gruppenmitglieds erzeugt werden können,
+- Eine Liste aller verfügbaren Zauber und Fähigkeiten, die einem ausgewählten Charakter hinzugefügt
+  werden können,
+- Eine Liste aller verfügbaren Läden, in denen man Käufe tätigen, Gegenstände identifizieren oder
+  Tempel- und Rastmöglichkeiten nutzen kann,
+- Eine Liste aller Kreaturen, die auf der Karte erzeugt werden können,
+- Eine Sammlung nützlicher Debug- und Skriptbefehle, wie z.B. die Wiederherstellung von gefallenen
+  Waldläufern und Paladinen, ein- und ausschalten der Anzeige von Strref-Werten für Text im Spiel,
+  Änderung des Gruppenrufs oder das Vorstellen der Spiel- bzw. Realzeit.
+
+Die folgenden GUI-Mods werden unterstützt:
+- lefreut's Enhanced UI (alle Varianten): Könnte kleinere Grafikfehler beinhalten, die sich aber
+  nicht auf die Funktionalität auswirken.
+- Peccas Dragonspear UI++
+- Classic BG UI (von K4f4r)
+
+Diese Komponente ist auch in der Hauptkomponente "Alle versteckten Spieloptionen auf einmal
+installieren" enthalten.
+
+
+34. Ressourcenlisten des "Verbesserten Cheatmenus" aktualisieren
+
+Diese Komponente erlaubt es, die Listen der angezeigten Ressourcen (Gegenstände, Zauber, etc.)
+zu aktualisieren, die vom "Verbesserten Cheatmenü" genutzt werden, ohne die Hauptkomponente erneut
+installieren zu müssen. Sie wird nicht in der WeiDU.log registriert und kann daher jederzeit so oft
+wie gewünscht aufgerufen werden.
+
+
 Credits
 ~~~~~~~
 
@@ -372,6 +408,11 @@ ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa
 
 History
 ~~~~~~~
+
+4.0
+- Added new components "Improved Cheat Menu" and "Update resource tables for Improved Cheat Menu"
+- Added labels for Project Infinity
+- Fixed potential keybinding issues in PST:EE caused by the "Update keybindings" component
 
 3.0
 - Added option "Force Dialog Pause"

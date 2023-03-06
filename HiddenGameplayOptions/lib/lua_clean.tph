@@ -1,0 +1,45 @@
+DEFINE_PATCH_FUNCTION remove_lua_array
+INT_VAR
+  has_comment = 1 // whether the array definition is introduced by a Lua comment
+STR_VAR
+  array_name = ~~
+BEGIN
+  PATCH_IF (NOT ~%array_name%~ STR_EQ ~~) BEGIN
+    SET ofs1 = INDEX_BUFFER(~^[ %TAB%]*%array_name%[ %TAB%%WNL%]*=[ %TAB%%WNL%]*{~)
+    PATCH_IF (ofs1 >= 0) BEGIN
+      SET ofs2 = INDEX_BUFFER(~^[ %TAB%]*}~ ofs1)
+      PATCH_IF (ofs2 > ofs1) BEGIN
+        SET ofs3 = INDEX_BUFFER(~[%WNL%]~ ofs2)
+        SET ofs3 = INDEX_BUFFER(~[^%WNL%]~ ofs3)
+        SET ofs2 = (ofs3 > ofs2) ? ofs3 : ofs2
+        
+        PATCH_IF (has_comment) BEGIN
+          SET line_end = ofs1
+          WHILE (line_end >= 0) BEGIN
+            SET line_end = RINDEX_BUFFER(~[%WNL%]~ line_end)
+            SET line_start = RINDEX_BUFFER(~^~ line_end)
+            PATCH_IF (line_start >= 0) BEGIN
+              READ_ASCII line_start line (line_end - line_start)
+              PATCH_IF (~%line%~ STRING_CONTAINS_REGEXP ~^[ %TAB%]*--~ = 0) BEGIN
+                SET ofs1 = line_start
+                SET line_end = line_start
+              END ELSE BEGIN
+                SET line_end = "-1"
+              END
+            END
+          END
+        END
+
+        DELETE_BYTES ofs1 (ofs2 - ofs1)
+      END
+    END
+  END
+END
+
+COPY_EXISTING ~bgee.lua~ ~override~
+  LPF remove_lua_array STR_VAR array_name = ~a7itemList~ END
+  LPF remove_lua_array STR_VAR array_name = ~a7spellList~ END
+  LPF remove_lua_array STR_VAR array_name = ~a7storeList~ END
+  LPF remove_lua_array STR_VAR array_name = ~a7creatureList~ END
+  LPF remove_lua_array STR_VAR array_name = ~a7commandList~ END
+BUT_ONLY

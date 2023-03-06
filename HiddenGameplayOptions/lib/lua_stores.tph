@@ -1,0 +1,53 @@
+// Stores to exclude from the list
+ACTION_DEFINE_ASSOCIATIVE_ARRAY blacklist_stores BEGIN
+  // nothing yet
+END
+
+// Generating stores list
+COPY_EXISTING_REGEXP ~.+\.sto~ ~override~
+  // checking blacklist
+  SPRINT resref ~%SOURCE_RES%~
+  TO_UPPER ~resref~
+  SET exclude = VARIABLE_IS_SET $blacklist_stores(~%resref%~)
+  PATCH_IF (exclude) BEGIN
+    SET exclude = ($blacklist_stores(~%resref%~) STRING_CONTAINS_REGEXP ~\b%game_mode%\b~ = 0)
+  END
+
+  PATCH_IF (NOT exclude) BEGIN
+    READ_ASCII 0 sig (8)
+    PATCH_IF (~%sig%~ STR_EQ ~STORV1.0~ || ~%sig%~ STR_EQ ~STORV1.1~) BEGIN
+      READ_SLONG STORE_NAME strref ELSE 0
+      READ_STRREF STORE_NAME name ELSE ~<Invalid Strref>~
+      PATCH_IF (strref <= 0 || STRING_LENGTH ~%name%~ > 80 ||
+                ~%name%~ STRING_CONTAINS_REGEXP ~^<Invalid Strref~ = 0) BEGIN
+        SPRINT name ~~
+      END
+
+      PATCH_IF (NOT ~%name%~ STR_EQ ~~) BEGIN
+        SPRINT $stores(~%resref%~) ~%name%~
+      END
+    END
+  END
+BUT_ONLY
+
+// Creating Lua array
+OUTER_SPRINT store_list ~~
+ACTION_PHP_EACH stores AS resref => name BEGIN
+  OUTER_PATCH_SAVE name ~%name%~ BEGIN
+    REPLACE_TEXTUALLY ~"~ ~\"~
+    REPLACE_TEXTUALLY ~[%WNL%%TAB%]~ ~ ~
+  END
+  OUTER_SPRINT store_list ~%store_list%%WNL%%TAB%{"%resref%", "%name%"},~
+END
+OUTER_SPRINT store_list ~%store_list%%WNL%~
+OUTER_SPRINT a7storeList ~-- List of items for debug console%WNL%a7storeList = {%store_list%}%WNL%~
+
+// Adding array to Lua file
+COPY_EXISTING ~bgee.lua~ ~override~
+  SET ofs = INDEX_BUFFER(~fontcolors[ %TAB%%WNL%]*=[ %TAB%%WNL%]*{~)
+  PATCH_IF (ofs < 0) BEGIN SET ofs = 0 END
+
+  SET len = STRING_LENGTH ~%a7storeList%~
+  INSERT_BYTES ofs len
+  WRITE_ASCIIE ofs ~%a7storeList%~ (len)
+BUT_ONLY

@@ -8,6 +8,8 @@
 *A mod that makes a number of useful options directly accessible within Enhanced Edition games.*
 
 [![Beamdog Forums](https://img.shields.io/static/v1?label=Discussion&message=Beamdog%20Forums&color=444&labelColor=eee&style=for-the-badge)](https://forums.beamdog.com/discussion/64524 "Beamdog Forums")
+&nbsp;&nbsp;
+[![SHS Forums](https://img.shields.io/static/v1?label=Discussion&message=SHS%20Forums&color=951514&labelColor=eee&style=for-the-badge)](http://www.shsforums.net/forum/654-hidden-options-ee/ "Spellhold Studios Forums")
 
 ## Overview
 The Enhanced Editions provide a great number of settings that are not directly accessible in the in-game options menu, but instead have to be manually enabled or disabled in the game's configuration file which might discourage less computer-savvy players from using them at all.
@@ -217,6 +219,25 @@ It comes in three flavors:
 
 *Note: This component is not included in the convenience option "Install all Hidden Gameplay Options at once".*
 
+#### 33. Improved Cheat Menu
+
+This component expands the cheat menu, which can be opened if the debug console is enabled, by a number of options:
+- A list of available items that can be created in the party's inventory,
+- A list of available spells and abilities that can be added to selected characters,
+- A list of available stores which can be opened to make purchases, identify items, or peruse temple services and rest options,
+- A list of available creatures which can be spawned on the map,
+- A collection of useful debug and script commands, such as fixing fallen rangers or paladins, toggling on/off strref display for game text, changing party reputation, or advancing (game or real) time.
+
+The following UI mods are supported:
+- lefreut's Enhanced UI (*all variants*)
+- Pecca's Dragonspear UI++
+- Classic BG UI (by K4f4r)
+
+*Note: This component is also included in the convenience option "Install all Hidden Gameplay Options at once".*
+
+#### 34. Update resource tables for "Improved Cheat Menu"
+
+This component allows you to update the resource tables used by the "Improved Cheat Menu" without having to reinstall the whole mod. It doesn't register to the WeiDU.log, so it can be called at any time as often as desired.
 
 
 ## Copyright Notice

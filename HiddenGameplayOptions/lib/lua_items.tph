@@ -1,0 +1,82 @@
+// Items to exclude from the list
+ACTION_DEFINE_ASSOCIATIVE_ARRAY blacklist_items BEGIN
+  ~PRINCESS~  => ~bgee eet~
+  ~PRINCES2~  => ~bgee eet~
+  ~SW1H53~    => ~bgee eet~
+  ~SW2HD2~    => ~bgee eet~
+
+  ~OHBREW01~  => ~bg2ee eet~
+  ~OHBREW02~  => ~bg2ee eet~
+  ~OHBREW03~  => ~bg2ee eet~
+  ~OHBREW04~  => ~bg2ee eet~
+  ~RINGJOIA~  => ~bg2ee eet~
+  ~SCRL5S~    => ~bg2ee eet~
+  ~TTGEM01~   => ~bg2ee eet~
+  ~TTGEM02~   => ~bg2ee eet~
+  ~TTKEY01~   => ~bg2ee eet~
+  ~TTLEAT~    => ~bg2ee eet~
+  ~TTPOT~     => ~bg2ee eet~
+  ~TTSCRL01~  => ~bg2ee eet~
+  ~TTSCRL02~  => ~bg2ee eet~
+  ~TTSHLD01~  => ~bg2ee eet~
+  ~TTSWORD1~  => ~bg2ee eet~
+  ~TTSWORD2~  => ~bg2ee eet~
+  ~TTTREAS~   => ~bg2ee eet~
+  ~TTWAND~    => ~bg2ee eet~
+END
+
+// Generating items list
+COPY_EXISTING_REGEXP ~.+\.itm~ ~override~
+  // checking blacklist
+  SPRINT resref ~%SOURCE_RES%~
+  TO_UPPER ~resref~
+  SET exclude = VARIABLE_IS_SET $blacklist_items(~%resref%~)
+  PATCH_IF (exclude) BEGIN
+    SET exclude = ($blacklist_items(~%resref%~) STRING_CONTAINS_REGEXP ~\b%game_mode%\b~ = 0)
+  END
+  
+  PATCH_IF (NOT exclude) BEGIN
+    READ_ASCII 0 sig (8)
+    PATCH_IF (~%sig%~ STR_EQ ~ITM V1  ~) BEGIN
+      READ_SLONG NAME2 strref ELSE 0
+      READ_STRREF NAME2 name ELSE ~<Invalid Strref>~
+      PATCH_IF (strref <= 0 || STRING_LENGTH ~%name%~ > 80 ||
+                ~%name%~ STRING_CONTAINS_REGEXP ~^<Invalid Strref~ = 0) BEGIN
+        READ_SLONG NAME1 strref ELSE 0
+        READ_STRREF NAME1 name ELSE ~<Invalid Strref>~
+        PATCH_IF (strref <= 0 || ~%name%~ STRING_CONTAINS_REGEXP ~^<Invalid Strref~ = 0) BEGIN
+          SPRINT name ~~
+        END
+      END
+
+      READ_LONG 0x18 flags
+
+      PATCH_IF ((NOT ~%name%~ STR_EQ ~~) &&
+                ((flags & (BIT2 | BIT3)) = (BIT2 | BIT3))) BEGIN // Droppable and Displayable
+        SPRINT $items(~%resref%~) ~%name%~
+      END
+    END
+  END
+BUT_ONLY
+
+// Creating Lua array
+OUTER_SPRINT item_list ~~
+ACTION_PHP_EACH items AS resref => name BEGIN
+  OUTER_PATCH_SAVE name ~%name%~ BEGIN
+    REPLACE_TEXTUALLY ~"~ ~\"~
+    REPLACE_TEXTUALLY ~[%WNL%%TAB%]~ ~ ~
+  END
+  OUTER_SPRINT item_list ~%item_list%%WNL%%TAB%{"%resref%", "%name%"},~
+END
+OUTER_SPRINT item_list ~%item_list%%WNL%~
+OUTER_SPRINT a7itemList ~-- List of items for debug console%WNL%a7itemList = {%item_list%}%WNL%~
+
+// Adding array to Lua file
+COPY_EXISTING ~bgee.lua~ ~override~
+  SET ofs = INDEX_BUFFER(~fontcolors[ %TAB%%WNL%]*=[ %TAB%%WNL%]*{~)
+  PATCH_IF (ofs < 0) BEGIN SET ofs = 0 END
+
+  SET len = STRING_LENGTH ~%a7itemList%~
+  INSERT_BYTES ofs len
+  WRITE_ASCIIE ofs ~%a7itemList%~ (len)
+BUT_ONLY

@@ -1,0 +1,27 @@
+// Initializations
+INCLUDE ~%MOD_FOLDER%/lib/cheatmenu_init.tph~
+
+// Creating tables for items, spells, stores, creatures and commands
+INCLUDE ~%MOD_FOLDER%/lib/lua_items.tph~
+INCLUDE ~%MOD_FOLDER%/lib/lua_spells.tph~
+INCLUDE ~%MOD_FOLDER%/lib/lua_stores.tph~
+INCLUDE ~%MOD_FOLDER%/lib/lua_creatures.tph~
+INCLUDE ~%MOD_FOLDER%/lib/lua_commands.tph~
+
+// Adding UI components
+INCLUDE ~%MOD_FOLDER%/lib/cheatmenu_labels.tph~
+INCLUDE ~%MOD_FOLDER%/lib/cheatmenu_controls.tph~
+
+
+// Installing marker to prevent the "Update resource tables" component
+// to be called in the same session as this component
+<<<<<<<< .../inlined/a7-HiddenGameplayOptions/a7_rhgo_cheats.mrk
+marker
+>>>>>>>>
+COPY + ~.../inlined/a7-HiddenGameplayOptions/a7_rhgo_cheats.mrk~ ~override/a7_rhgo_cheats.mrk~
+
+ACTION_IF (~%WEIDU_OS%~ STR_EQ ~win32~) BEGIN
+  AT_EXIT ~del /f /q override\a7_rhgo_cheats.mrk >nul 2>&1~
+END ELSE BEGIN
+  AT_EXIT ~rm -f override/a7_rhgo_cheats.mrk >/dev/null 2>&1~
+END

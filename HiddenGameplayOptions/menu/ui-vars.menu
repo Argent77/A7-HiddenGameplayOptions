@@ -1,0 +1,79 @@
+function a7luaSpellCommand(spellIdx)
+  if (spellIdx ~= nil) then
+    local resref = a7spellList[a7cheatAddSpell][1]
+    local splType = a7spellList[a7cheatAddSpell][2]
+    if (splType == 1 or splType == 2) then
+      luaEdit = "C:AddSpell(\""..resref.."\")"
+    else
+      luaEdit = "C:Eval('AddSpecialAbility(\""..resref.."\")')"
+    end
+    Infinity_FocusTextEdit('luaEditArea'); 
+  end
+end
+
+function a7luaSpellType(splType)
+  return a7cheatSpellTable[1 + splType]
+end
+
+function a7luaAllegiance(ea)
+  if (ea >= 200) then
+    return a7cheatAllegianceTable[3]
+  elseif (ea >= 2 and ea < 31) then
+    return a7cheatAllegianceTable[1]
+  else
+    return a7cheatAllegianceTable[2]
+  end
+end
+
+function a7luaCommand(commandIdx)
+  if (commandIdx ~= nil) then
+    local mode = a7commandList[commandIdx][3]
+    local cmd = a7commandList[commandIdx][2]
+    if (mode == 0) then
+      -- Insert "C:Eval(cmd)" to lua console
+      luaEdit = "C:Eval('"..cmd.."')"
+      Infinity_FocusTextEdit('luaEditArea'); 
+    elseif (mode == 1) then
+      -- Execute "C:Eval(cmd)" instantly
+      C:Eval(cmd)
+    elseif (mode == 2) then
+      -- Insert lua command to lua console
+      luaEdit = cmd
+      Infinity_FocusTextEdit('luaEditArea'); 
+    elseif (mode == 3) then
+      -- Special: Execute C:AdvanceRealTime(arg) instantly
+      local arg = a7commandList[commandIdx][4]
+      if (arg ~= nil) then
+        C:AdvanceRealTime(arg)
+      end
+    elseif (mode == 4) then
+      -- Special: Execute C:StrrefOn() instantly
+      C:StrrefOn()
+    elseif (mode == 5) then
+      -- Special: Execute C:StrrefOff() instantly
+      C:StrrefOff()
+    end
+  end
+end
+
+a7cheatSpellTable = {
+  @20300,
+  @20301,
+  @20302,
+  @20303,
+  @20304,
+  @20305
+}
+a7cheatAllegianceTable = {
+  @20310,
+  @20311,
+  @20312
+}
+
+-- Types: 0=Areas, 1=Items, 2=Spells, 3=Stores, 4=Creatures, 5=Commands
+a7cheatListType = 0
+a7cheatItemCharge1 = 1
+a7cheatItemCharge2 = 0
+a7cheatItemCharge3 = 0
+a7commandMode = 0
+

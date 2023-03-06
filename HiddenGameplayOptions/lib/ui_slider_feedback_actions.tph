@@ -262,7 +262,7 @@ BEGIN
 
     ACTION_IF (NOT failed AND GAME_IS ~bgee~ AND NOT GAME_INCLUDES ~sod~) BEGIN
       // Installing updated MOS background
-      COPY ~%MOD_FOLDER%/mos/A7_UIGPF.MOS~ ~override~
+      COPY ~%MOD_FOLDER%/mos/a7_uigpf.mos~ ~override~
         LPF UPDATE_PVRZ_INDICES RET original_base_index new_base_index END
 
       ACTION_IF (original_base_index >= 0 AND new_base_index >= 0) BEGIN
@@ -271,7 +271,7 @@ BEGIN
           original_base_index
           new_base_index
         STR_VAR
-          source_file = EVAL ~%MOD_FOLDER%/mos/MOS1001.PVRZ~
+          source_file = EVAL ~%MOD_FOLDER%/mos/mos1001.pvrz~
         END
       END
     END

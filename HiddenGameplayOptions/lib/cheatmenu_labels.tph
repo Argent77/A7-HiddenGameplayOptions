@@ -1,0 +1,76 @@
+// UI labels used for the new debug window controls
+ACTION_DEFINE_ASSOCIATIVE_ARRAY ui_strings BEGIN
+  // label => tra reference
+  ~A7_CREATE_BUTTON~            => 20000
+  ~A7_COMMAND_BUTTON~           => 20001
+  ~A7_OPEN_BUTTON~              => 20002
+  ~A7_PERFORM_BUTTON~           => 20003
+  ~A7_AMOUNT_LABEL~             => 20004
+  ~A7_TOGGLE_AREAS_BUTTON~      => 20005
+  ~A7_TOGGLE_ITEMS_BUTTON~      => 20006
+  ~A7_TOGGLE_SPELLS_BUTTON~     => 20007
+  ~A7_TOGGLE_STORES_BUTTON~     => 20008
+  ~A7_TOGGLE_CREATURES_BUTTON~  => 20009
+  ~A7_TOGGLE_COMMANDS_BUTTON~   => 20010
+  ~A7_TOGGLE_AREAS_TOOLTIP~     => 20011
+  ~A7_TOGGLE_ITEMS_TOOLTIP~     => 20012
+  ~A7_TOGGLE_SPELLS_TOOLTIP~    => 20013
+  ~A7_TOGGLE_STORES_TOOLTIP~    => 20014
+  ~A7_TOGGLE_CREATURES_TOOLTIP~ => 20015
+  ~A7_TOGGLE_COMMANDS_TOOLTIP~  => 20016
+  ~A7_TOGGLE_CMD_LUA_TOOLTIP~   => 20017
+  ~A7_TOGGLE_CMD_RUN_TOOLTIP~   => 20018
+END
+
+
+// Updating UI-related files
+OUTER_SPRINT lang_lua_file ~L_%EE_LANGUAGE%.lua~
+ACTION_IF (NOT FILE_EXISTS_IN_GAME ~%lang_lua_file%~) BEGIN
+  OUTER_SPRINT lang_lua_file ~L_en_US.lua~
+  ACTION_IF (NOT FILE_EXISTS_IN_GAME ~%lang_lua_file%~) BEGIN
+    OUTER_SPRINT lang_lua_file ~bgee.lua~
+  END
+END
+
+// Tra reference offset adjustment for the current game
+OUTER_SET tra_ofs = (~%game_mode%~ STR_EQ ~pstee~) ? 100 : 0
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~%lang_lua_file%~) BEGIN
+  COPY_EXISTING ~%lang_lua_file%~ ~override~
+    PATCH_IF (~%game_mode%~ STR_EQ ~pstee~) BEGIN
+      SET ofs = INDEX_BUFFER(~^[ %TAB%]*GODBOW_LABEL[ %TAB%%WNL%]*=~)
+    END ELSE BEGIN
+      SET ofs = INDEX_BUFFER(~uiStrings[ %TAB%%WNL%]*=[ %TAB%%WNL%]*{~)
+      PATCH_IF (ofs >= 0) BEGIN
+        // SET ofs = INDEX_BUFFER(~{~ ofs) + 1
+        SET ofs = INDEX_BUFFER(~[%WNL%]~ ofs)
+        SET ofs = INDEX_BUFFER(~[^%WNL%]~ ofs)
+      END
+    END
+
+    PATCH_IF (ofs >= 0) BEGIN
+      // creating lua array entries
+      SPRINT text ~~
+      PHP_EACH ui_strings AS label => tra_ref BEGIN
+        SET tra_ref += tra_ofs
+        PATCH_IF (NOT TRA_ENTRY_EXISTS("tra_ref")) BEGIN
+          // tra entry may not exist for the current game
+          SET tra_ref -= tra_ofs
+        END
+        PATCH_IF (TRA_ENTRY_EXISTS("tra_ref")) BEGIN
+          SPRINT string (AT ~tra_ref~)
+          SPRINT text ~%text%%TAB%%label% = "%string%",%WNL%~
+        END
+      END
+
+      // adding lua array entries
+      SET len = STRING_LENGTH ~%text%~
+      INSERT_BYTES ofs len
+      WRITE_ASCIIE ofs ~%text%~ (len)
+    END ELSE BEGIN
+      PATCH_FAIL ~String array not found in %lang_lua_file%: uiStrings~
+    END
+  BUT_ONLY
+END ELSE BEGIN
+  FAIL ~File not found: %lang_lua_file%~
+END

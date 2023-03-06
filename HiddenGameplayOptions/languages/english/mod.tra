@@ -211,3 +211,85 @@ Note: You must restart the game for changes to take effect.~
 @10003 = ~Weapon is unsuitable for sneak attack~
 @10004 = ~Sneak Attack Damage~
 @10005 = ~Crippling Strike~
+
+
+// *** Strings for the Cheat Menu ***
+
+@20000 = ~CREATE~
+@20001 = ~COMMAND~
+@20002 = ~OPEN~
+@20003 = ~PERFORM~
+@20004 = ~Amount/Charges:~
+@20005 = ~<< AREAS~
+@20006 = ~<< ITEMS~
+@20007 = ~<< SPELLS~
+@20008 = ~<< STORES~
+@20009 = ~<< CREATURES~
+@20010 = ~<< COMMANDS~
+@20011 = ~Click to activate list of items.~
+@20012 = ~Click to activate list of spells.~
+@20013 = ~Click to activate list of stores.~
+@20014 = ~Click to activate list of creatures.~
+@20015 = ~Click to activate list of commands.~
+@20016 = ~Click to activate list of areas.~
+@20017 = ~Command will be added to Lua console.~
+@20018 = ~Command will be executed instantly.~
+
+// PSTEE-specific labels
+@20100 = ~Create~
+@20101 = ~Command~
+@20102 = ~Open~
+@20103 = ~Perform~
+@20105 = ~<< Areas~
+@20106 = ~<< Items~
+@20107 = ~<< Spells~
+@20108 = ~<< Stores~
+@20109 = ~<< Creatures~
+@20110 = ~<< Commands~
+
+// Translator note: Quotation marks in strings must be escaped
+@20200 = ~Remove \"Fallen Ranger\" status from the selected character~
+@20201 = ~Remove \"Fallen Paladin\" status from the selected character~
+@20202 = ~Lock screen on the selected character~
+@20203 = ~Remove screen lock from the selected character~
+@20204 = ~Increase party reputation by 2~
+@20205 = ~Decrease party reputation by 2~
+@20206 = ~Set time of day to next \"Morning\"~
+@20207 = ~Set time of day to next \"Noon\"~
+@20208 = ~Set time of day to next \"Dusk\"~
+@20209 = ~Set time of day to next \"Midnight\"~
+@20210 = ~Advance game time by 8 hours~
+@20211 = ~Advance real time by one hour~
+@20212 = ~Advance real time by one day~
+@20213 = ~Change weather to \"Clear\"~
+@20214 = ~Change weather to \"Rain\"~
+@20215 = ~Change weather to \"Snow\"~
+@20216 = ~Change weather to \"Fog\"~
+@20217 = ~Destroy all ground piles in the area~
+@20218 = ~Enable strref display for game text~
+@20219 = ~Disable strref display for game text~
+@20220 = ~Show end credits and return to the main menu~
+
+// PSTEE-specific additions
+// Translator note: Quotation marks in strings must be escaped
+@20250 = ~Increase moral value (Good..Evil) by 2~
+@20251 = ~Decrease moral value (Good..Evil) by 2~
+@20252 = ~Increase ethical value (Lawful..Chaotic) by 2~
+@20253 = ~Decrease ethical value (Lawful..Chaotic) by 2~
+@20254 = ~Increase \"Murder\" count by 1~
+@20255 = ~Decrease \"Murder\" count by 1~
+@20256 = ~Increase \"Lady\" value by 1~
+@20257 = ~Decrease \"Lady\" value by 1~
+
+// Spell types
+@20300 = ~Special~
+@20301 = ~Wizard~
+@20302 = ~Priest~
+@20303 = ~Psionic~
+@20304 = ~Innate~
+@20305 = ~Bard Song~
+
+// Creature allegiances
+@20310 = ~friendly~
+@20311 = ~neutral~
+@20312 = ~hostile~

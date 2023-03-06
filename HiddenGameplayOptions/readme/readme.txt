@@ -34,7 +34,7 @@ Note for Siege of Dragonspear (SoD):
 GOG and Steam both install the "Siege of Dragonspear" expansion in a way that is not moddable out
 of the box. You must install a mod called "DLC Merger" on your SoD installation before this or
 any other WeiDU-based mods can be installed.
-It can be downloaded from here: https://github.com/Argent77/A7-DlcMerger/releases/latest
+The mod can be downloaded here: https://github.com/Argent77/A7-DlcMerger/releases/latest
 
 
 Compatibility & Installation Order
@@ -42,7 +42,9 @@ Compatibility & Installation Order
 
 The mod supports all Enhanced Edition games patched to v2.0 or higher. It is also compatible with
 Pecca's "Dragonspear UI++" and largely compatible with Lefreut's Enhanced UI (LeUI). Some options
-may be moved into other sections when these mods have been detected.
+may be moved into other sections when these mods have been detected. The "Improved Cheat Menu"
+may also produce some minor visual glitches if Lefreut's Enhanced UI is installed. Functionality
+is not adversely affected, however.
 
 The mod can not be installed together with EEUITweaks component "Hidden Game Options". You can
 install either one, but not both at the same time.
@@ -50,7 +52,8 @@ install either one, but not both at the same time.
 Patching UI definition files can be tricky. To ensure that a failed patch attempt does not corrupt
 the game it will fail with a forced error and restore the original state of the patched files.
 
-It is recommended to install this mod after Tweaks Anthology and any GUI mods.
+It is recommended to install this mod after Tweaks Anthology and any GUI mods. The component
+"Improved Cheat Menu" should be installed after any content mods to maximize its usefulness.
 
 
 Components
@@ -321,6 +324,36 @@ This component is not included in the convenience option "Install all Hidden Gam
 at once".
 
 
+33. Improved Cheat Menu
+
+This component expands the cheat menu, which can be opened if the debug console is enabled, by
+a number of options:
+- A list of available items that can be created in the party's inventory,
+- A list of available spells and abilities that can be added to selected characters,
+- A list of available stores which can be opened to make purchases, identify items, or peruse
+  temple services and rest options,
+- A list of available creatures which can be spawned on the map,
+- A collection of useful debug and script commands, such as fixing fallen rangers or paladins,
+  toggling on/off strref display for game text, changing party reputation, or advancing (game
+  or real) time.
+
+The following UI mods are supported:
+- lefreut's Enhanced UI (all variants): May produce minor visual glitches which don't affect
+  functionality.
+- Pecca's Dragonspear UI++
+- Classic BG UI (by K4f4r)
+
+This component is also included in the convenience option "Install all Hidden Gameplay Options
+at once".
+
+
+34. Update resource tables for "Improved Cheat Menu"
+
+This component allows you to update the resource tables used by the "Improved Cheat Menu" without
+having to reinstall the whole mod. It doesn't register to the WeiDU.log, so it can be called at
+any time as often as desired.
+
+
 Credits
 ~~~~~~~
 
@@ -348,6 +381,11 @@ ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa
 
 History
 ~~~~~~~
+
+4.0
+- Added new components "Improved Cheat Menu" and "Update resource tables for Improved Cheat Menu"
+- Added labels for Project Infinity
+- Fixed potential keybinding issues in PST:EE caused by the "Update keybindings" component
 
 3.0
 - Added option "Force Dialog Pause"

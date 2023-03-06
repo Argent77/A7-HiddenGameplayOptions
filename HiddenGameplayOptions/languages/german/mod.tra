@@ -212,3 +212,85 @@ Hinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.
 @10003 = ~Waffe ist untauglich für hinterhältigen Angriff~
 @10004 = ~Schaden durch hinterhältigen Angriff~
 @10005 = ~Verkrüppelnder Schlag~
+
+
+// *** Strings for the Cheat Menu ***
+
+@20000 = ~ERSTELLEN~
+@20001 = ~BEFEHL~
+@20002 = ~ÖFFNEN~
+@20003 = ~AUSFÜHREN~
+@20004 = ~Anzahl/Ladungen:~
+@20005 = ~<< GEBIETE~
+@20006 = ~<< GEGENSTÄNDE~
+@20007 = ~<< ZAUBER~
+@20008 = ~<< LÄDEN~
+@20009 = ~<< KREATUREN~
+@20010 = ~<< BEFEHLE~
+@20011 = ~Klicken, um Liste der Gegenstände zu aktivieren.~
+@20012 = ~Klicken, um Liste der Zauber zu aktivieren.~
+@20013 = ~Klicken, um Liste der Läden zu aktivieren.~
+@20014 = ~Klicken, um Liste der Kreaturen zu aktivieren.~
+@20015 = ~Klicken, um Befehlsliste zu aktivieren.~
+@20016 = ~Klicken, um Liste der Gebiete zu aktivieren.~
+@20017 = ~Befehl wird in die Lua-Konsole eingefügt.~
+@20018 = ~Befehl wird sofort ausgeführt.~
+
+// PSTEE-specific labels
+@20100 = ~Erstellen~
+@20101 = ~Befehl~
+@20102 = ~Öffnen~
+@20103 = ~Ausführen~
+@20105 = ~<< Gebiete~
+@20106 = ~<< Gegenstände~
+@20107 = ~<< Zauber~
+@20108 = ~<< Läden~
+@20109 = ~<< Kreaturen~
+@20110 = ~<< Befehle~
+
+// Translator note: Quotation marks in strings must be escaped
+@20200 = ~Status \"Gefallener Waldläufer\" vom ausgewählten Charakter entfernen~
+@20201 = ~Status \"Gefallener Paladin\" vom ausgewählten Charakter entfernen~
+@20202 = ~Bildschirm auf den ausgewählten Charakter fixieren~
+@20203 = ~Fixierung des Bildschirms vom ausgewählten Charakter entfernen~
+@20204 = ~Ruf der Gruppe um 2 erhöhen~
+@20205 = ~Ruf der Gruppe um 2 vermindern~
+@20206 = ~Tageszeit auf nächsten \"Morgen\" setzen~
+@20207 = ~Tageszeit auf nächsten \"Mittag\" setzen~
+@20208 = ~Tageszeit auf nächsten \"Abend\" setzen~
+@20209 = ~Tageszeit auf nächste \"Mitternacht\" setzen~
+@20210 = ~Spielzeit um 8 Stunden vorstellen~
+@20211 = ~Realzeit um eine Stunde vorstellen~
+@20212 = ~Realzeit um einen Tag vorstellen~
+@20213 = ~Wetter auf \"Klar\" ändern~
+@20214 = ~Wetter auf \"Regen\" ändern~
+@20215 = ~Wetter auf \"Schnee\" ändern~
+@20216 = ~Wetter auf \"Nebel\" ändern~
+@20217 = ~Alle abgelegten Gegenstände auf dem Boden zerstören~
+@20218 = ~Anzeige von Strref-Werten für Text im Spiel aktivieren~
+@20219 = ~Anzeige von Strref-Werten für Text im Spiel deaktivieren~
+@20220 = ~Abspann des Spiels anzeigen und zum Startmenü zurückkehren~
+
+// PSTEE-specific additions
+// Translator note: Quotation marks in strings must be escaped
+@20250 = ~Moral (Gut..Böse) um 2 erhöhen~
+@20251 = ~Moral (Gut..Böse) um 2 vermindern~
+@20252 = ~Ethik (Rechtschaffend..Chaotisch) um 2 erhöhen~
+@20253 = ~Ethik (Rechtschaffend..Chaotisch) um 2 vermindern~
+@20254 = ~\"Mord\"-Anzahl um 1 erhöhen~
+@20255 = ~\"Mord\"-Anzahl um 1 vermindern~
+@20256 = ~\"Lady\"-Wert um 1 erhöhen~
+@20257 = ~\"Lady\"-Wert um 1 vermindern~
+
+// Spell types
+@20300 = ~Speziell~
+@20301 = ~Zauberer~
+@20302 = ~Priester~
+@20303 = ~Psi-Kraft~
+@20304 = ~Angeboren~
+@20305 = ~Bardenlied~
+
+// Creature allegiance
+@20310 = ~freundlich~
+@20311 = ~neutral~
+@20312 = ~feindlich~

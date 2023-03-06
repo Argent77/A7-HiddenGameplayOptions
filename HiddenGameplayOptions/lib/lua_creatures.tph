@@ -1,0 +1,94 @@
+DEFINE_PATCH_FUNCTION check_cre_effect
+INT_VAR
+  opcode = "-1"
+RET
+  found
+BEGIN
+  SET found = 0
+  PATCH_IF (opcode >= 0) BEGIN
+    READ_BYTE 0x33 eff_v2
+    READ_LONG 0x2c4 ofs_fx
+    READ_LONG 0x2c8 num_fx
+    SET eff_size = eff_v2 ? 264 : 48
+
+    FOR (i = 0; i < num_fx; ++i) BEGIN
+      SET ofs = ofs_fx + i * eff_size
+      SET cur_opcode = eff_v2 ? (LONG_AT (ofs + 8)) : (SHORT_AT ofs)
+      PATCH_IF (cur_opcode = opcode) BEGIN
+        SET found = 1
+        SET i = num_fx
+      END
+    END
+  END
+END
+
+// Creatures to exclude from the list
+ACTION_DEFINE_ASSOCIATIVE_ARRAY blacklist_creatures BEGIN
+  // nothing yet
+END
+
+// Generating creatures list
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+  // checking blacklist
+  SPRINT resref ~%SOURCE_RES%~
+  TO_UPPER ~resref~
+  SET exclude = VARIABLE_IS_SET $blacklist_creatures(~%resref%~)
+  PATCH_IF (exclude) BEGIN
+    SET exclude = ($blacklist_creatures(~%resref%~) STRING_CONTAINS_REGEXP ~\b%game_mode%\b~ = 0)
+  END
+  
+  PATCH_IF (NOT exclude) BEGIN
+    READ_ASCII 0 sig (8)
+    PATCH_IF (~%sig%~ STR_EQ ~CRE V1.0~) BEGIN
+      READ_SLONG NAME2 strref ELSE 0
+      READ_STRREF NAME2 name ELSE ~<Invalid Strref>~
+      PATCH_IF (strref <= 0 || STRING_LENGTH ~%name%~ > 80 ||
+                ~%name%~ STRING_CONTAINS_REGEXP ~^<Invalid Strref~ = 0) BEGIN
+        READ_SLONG NAME1 strref ELSE 0
+        READ_STRREF NAME1 name ELSE ~<Invalid Strref>~
+        PATCH_IF (strref <= 0 || ~%name%~ STRING_CONTAINS_REGEXP ~^<Invalid Strref~ = 0) BEGIN
+          SPRINT name ~~
+        END
+      END
+
+      READ_LONG 0x28 anim_id
+      READ_BYTE 0x270 allegiance
+
+      LPF check_cre_effect
+        INT_VAR opcode = 271  // Disable creature
+        RET disabled = found
+      END
+
+      PATCH_IF ((NOT ~%name%~ STR_EQ ~~) &&
+                ((anim_id & 0xf000) != 0xd000) && // no "bird" animation
+                (NOT disabled))
+      BEGIN
+        SPRINT $creatures(~%resref%~) ~%name%~
+        SET $creatures_ea(~%resref%~) = allegiance
+      END
+    END
+  END
+BUT_ONLY
+
+// Creating Lua array
+OUTER_SPRINT creature_list ~~
+ACTION_PHP_EACH creatures AS resref => name BEGIN
+  OUTER_PATCH_SAVE name ~%name%~ BEGIN
+    REPLACE_TEXTUALLY ~"~ ~\"~
+    REPLACE_TEXTUALLY ~[%WNL%%TAB%]~ ~ ~
+  END
+  OUTER_SET ea = $creatures_ea(~%resref%~)
+  OUTER_SPRINT creature_list ~%creature_list%%WNL%%TAB%{"%resref%", %ea%, "%name%"},~
+END
+OUTER_SPRINT creature_list ~%creature_list%%WNL%~
+OUTER_SPRINT a7creatureList ~-- List of creatures for debug console%WNL%a7creatureList = {%creature_list%}%WNL%~
+
+// Adding array to Lua file
+COPY_EXISTING ~bgee.lua~ ~override~
+  SET ofs = INDEX_BUFFER(~fontcolors[ %TAB%%WNL%]*=[ %TAB%%WNL%]*{~)
+  PATCH_IF (ofs < 0) BEGIN SET ofs = 0 END
+
+  SET len = STRING_LENGTH ~%a7creatureList%~
+  INSERT_BYTES ofs len
+  WRITE_ASCIIE ofs ~%a7creatureList%~ (len)
+BUT_ONLY
