@@ -33,11 +33,11 @@ ACTION_IF (NOT FILE_EXISTS_IN_GAME ~%lang_lua_file%~) BEGIN
 END
 
 // Tra reference offset adjustment for the current game
-OUTER_SET tra_ofs = (~%game_mode%~ STR_EQ ~pstee~) ? 100 : 0
+OUTER_SET tra_ofs = (~%ui_mode%~ STR_EQ ~pstee~) ? 100 : 0
 
 ACTION_IF (FILE_EXISTS_IN_GAME ~%lang_lua_file%~) BEGIN
   COPY_EXISTING ~%lang_lua_file%~ ~override~
-    PATCH_IF (~%game_mode%~ STR_EQ ~pstee~) BEGIN
+    PATCH_IF (~%ui_mode%~ STR_EQ ~pstee~) BEGIN
       SET ofs = INDEX_BUFFER(~^[ %TAB%]*GODBOW_LABEL[ %TAB%%WNL%]*=~)
     END ELSE BEGIN
       SET ofs = INDEX_BUFFER(~uiStrings[ %TAB%%WNL%]*=[ %TAB%%WNL%]*{~)

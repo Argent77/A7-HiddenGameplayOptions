@@ -73,7 +73,7 @@ COPY_EXISTING ~ui.menu~ ~override~
 
   // replacing cheat menu
   LPF ui_replace_cheat_menu
-    STR_VAR filename = EVAL ~%MOD_FOLDER%/menu/ui-%game_mode%.menu~
+    STR_VAR filename = EVAL ~%MOD_FOLDER%/menu/ui-%ui_mode%.menu~
     RET success
   END
   PATCH_IF (NOT success) BEGIN
@@ -83,7 +83,7 @@ BUT_ONLY
 
 
 // PSTEE: Installing modified background image for cheat menu
-ACTION_IF (~%game_mode%~ STR_EQ ~pstee~) BEGIN
+ACTION_IF (~%ui_mode%~ STR_EQ ~pstee~) BEGIN
   COPY ~%MOD_FOLDER%/mos/cheatbg0.mos~ ~override~
     LPF UPDATE_PVRZ_INDICES
       RET original_base_index new_base_index index_range

@@ -1,28 +1,23 @@
 // Items to exclude from the list
 ACTION_DEFINE_ASSOCIATIVE_ARRAY blacklist_items BEGIN
-  ~PRINCESS~  => ~bgee eet~
-  ~PRINCES2~  => ~bgee eet~
-  ~SW1H53~    => ~bgee eet~
-  ~SW2HD2~    => ~bgee eet~
-
-  ~OHBREW01~  => ~bg2ee eet~
-  ~OHBREW02~  => ~bg2ee eet~
-  ~OHBREW03~  => ~bg2ee eet~
-  ~OHBREW04~  => ~bg2ee eet~
-  ~RINGJOIA~  => ~bg2ee eet~
-  ~SCRL5S~    => ~bg2ee eet~
-  ~TTGEM01~   => ~bg2ee eet~
-  ~TTGEM02~   => ~bg2ee eet~
-  ~TTKEY01~   => ~bg2ee eet~
-  ~TTLEAT~    => ~bg2ee eet~
-  ~TTPOT~     => ~bg2ee eet~
-  ~TTSCRL01~  => ~bg2ee eet~
-  ~TTSCRL02~  => ~bg2ee eet~
-  ~TTSHLD01~  => ~bg2ee eet~
-  ~TTSWORD1~  => ~bg2ee eet~
-  ~TTSWORD2~  => ~bg2ee eet~
-  ~TTTREAS~   => ~bg2ee eet~
-  ~TTWAND~    => ~bg2ee eet~
+  ~SW1H53~    => ~bgee sod~
+  ~SW2HD2~    => ~bgee sod eet~
+  ~PRINCESS~  => ~sod eet~
+  ~PRINCES2~  => ~sod eet~
+  ~RINGJOIA~  => ~bg2ee~
+  ~SCRL5S~    => ~bg2ee~
+  ~TTGEM01~   => ~bg2ee~
+  ~TTGEM02~   => ~bg2ee~
+  ~TTKEY01~   => ~bg2ee~
+  ~TTLEAT~    => ~bg2ee~
+  ~TTPOT~     => ~bg2ee~
+  ~TTSCRL01~  => ~bg2ee~
+  ~TTSCRL02~  => ~bg2ee~
+  ~TTSHLD01~  => ~bg2ee~
+  ~TTSWORD1~  => ~bg2ee~
+  ~TTSWORD2~  => ~bg2ee~
+  ~TTTREAS~   => ~bg2ee~
+  ~TTWAND~    => ~bg2ee~
 END
 
 // Generating items list
@@ -32,7 +27,7 @@ COPY_EXISTING_REGEXP ~.+\.itm~ ~override~
   TO_UPPER ~resref~
   SET exclude = VARIABLE_IS_SET $blacklist_items(~%resref%~)
   PATCH_IF (exclude) BEGIN
-    SET exclude = ($blacklist_items(~%resref%~) STRING_CONTAINS_REGEXP ~\b%game_mode%\b~ = 0)
+    SET exclude = ($blacklist_items(~%resref%~) STRING_CONTAINS_REGEXP ~\b%game%\b~ = 0)
   END
   
   PATCH_IF (NOT exclude) BEGIN

@@ -1,18 +1,24 @@
 // Determine game mode
 ACTION_IF (GAME_IS ~eet~) BEGIN
-  OUTER_SPRINT game_mode ~eet~
+  OUTER_SPRINT game ~eet~
+  OUTER_SPRINT ui_mode ~bg2ee~
 END ELSE ACTION_IF (GAME_IS ~bgee~) BEGIN
   ACTION_IF (GAME_INCLUDES ~sod~) BEGIN
-    OUTER_SPRINT game_mode ~sod~
+    OUTER_SPRINT game ~sod~
+    OUTER_SPRINT ui_mode ~sod~
   END ELSE BEGIN
-    OUTER_SPRINT game_mode ~bgee~
+    OUTER_SPRINT game ~bgee~
+    OUTER_SPRINT ui_mode ~bgee~
   END
 END ELSE ACTION_IF (GAME_IS ~bg2ee~) BEGIN
-  OUTER_SPRINT game_mode ~bg2ee~
+  OUTER_SPRINT game ~bg2ee~
+  OUTER_SPRINT ui_mode ~bg2ee~
 END ELSE ACTION_IF (GAME_IS ~iwdee~) BEGIN
-  OUTER_SPRINT game_mode ~iwdee~
+  OUTER_SPRINT game ~iwdee~
+  OUTER_SPRINT ui_mode ~iwdee~
 END ELSE ACTION_IF (GAME_IS ~pstee~) BEGIN
-  OUTER_SPRINT game_mode ~pstee~
+  OUTER_SPRINT game ~pstee~
+  OUTER_SPRINT ui_mode ~pstee~
 END ELSE BEGIN
   // Should never happen
   ABORT @500  // Enhanced Edition game patched to v2.0 or higher required.
@@ -21,9 +27,9 @@ END
 // Final adjustments
 ACTION_IF (MOD_IS_INSTALLED ~dragonspear_ui++.tp2~ 1) BEGIN
   // Dragonspear UI++
-  OUTER_SPRINT game_mode ~sod~
+  OUTER_SPRINT ui_mode ~sod~
 END ELSE ACTION_IF (GAME_IS ~bgee~ &&
                     RESOURCE_CONTAINS ~ui.menu~ ~\bGUIWPKPC\b~) BEGIN
   // Classic BG UI (non-WeiDU mod)
-  OUTER_SPRINT game_mode ~cbgui~
+  OUTER_SPRINT ui_mode ~cbgui~
 END

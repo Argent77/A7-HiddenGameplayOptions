@@ -173,7 +173,7 @@ ACTION_PHP_EACH spells AS resref => value BEGIN
   ACTION_IF (value != 0) BEGIN
     OUTER_SET exclude = VARIABLE_IS_SET $blacklist(~%resref%~)
     ACTION_IF (exclude) BEGIN
-      ACTION_IF ($blacklist(~%resref%~) STRING_CONTAINS_REGEXP ~\b%game_mode%\b~ = 0) BEGIN
+      ACTION_IF ($blacklist(~%resref%~) STRING_CONTAINS_REGEXP ~\b%game%\b~ = 0) BEGIN
         OUTER_SET $spells(~%resref%~) = 0
       END
     END

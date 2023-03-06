@@ -1,6 +1,6 @@
 // Stores to exclude from the list
 ACTION_DEFINE_ASSOCIATIVE_ARRAY blacklist_stores BEGIN
-  // nothing yet
+  ~STORE1~  => ~pstee~
 END
 
 // Generating stores list
@@ -10,7 +10,7 @@ COPY_EXISTING_REGEXP ~.+\.sto~ ~override~
   TO_UPPER ~resref~
   SET exclude = VARIABLE_IS_SET $blacklist_stores(~%resref%~)
   PATCH_IF (exclude) BEGIN
-    SET exclude = ($blacklist_stores(~%resref%~) STRING_CONTAINS_REGEXP ~\b%game_mode%\b~ = 0)
+    SET exclude = ($blacklist_stores(~%resref%~) STRING_CONTAINS_REGEXP ~\b%game%\b~ = 0)
   END
 
   PATCH_IF (NOT exclude) BEGIN

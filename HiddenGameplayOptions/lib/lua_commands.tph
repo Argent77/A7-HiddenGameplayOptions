@@ -9,7 +9,7 @@
 //  - 5: Special: Execute C:StrrefOff() instantly
 
 // Preparing lua table
-ACTION_IF (~%game_mode%~ STR_EQ ~pstee~) BEGIN
+ACTION_IF (~%ui_mode%~ STR_EQ ~pstee~) BEGIN
   COPY ~%MOD_FOLDER%/lua/bgee-commands-pstee.lua~ ~%MOD_FOLDER%/lua/bgee-commands-pstee.lua~
     READ_ASCII 0 lua_table (BUFFER_LENGTH)
   BUT_ONLY

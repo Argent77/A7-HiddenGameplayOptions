@@ -34,7 +34,7 @@ COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
   TO_UPPER ~resref~
   SET exclude = VARIABLE_IS_SET $blacklist_creatures(~%resref%~)
   PATCH_IF (exclude) BEGIN
-    SET exclude = ($blacklist_creatures(~%resref%~) STRING_CONTAINS_REGEXP ~\b%game_mode%\b~ = 0)
+    SET exclude = ($blacklist_creatures(~%resref%~) STRING_CONTAINS_REGEXP ~\b%game%\b~ = 0)
   END
   
   PATCH_IF (NOT exclude) BEGIN
