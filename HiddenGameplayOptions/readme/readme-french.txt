@@ -44,7 +44,9 @@ Compatibilité
 
 Ce mod s'installe sur tous les jeux Enhanced Edition dotés du patch v2.0 ou supérieur. Il est
 aussi compatible avec Pecca's "Dragonspear UI++" et Lefreut's Enhanced UI (LeUI). Certaines
-options pourront être déplacées dans d'autres sections si ces mods sont détectés.
+options pourront être déplacées dans d'autres sections si ces mods sont détectés. 
+L'Écran de triche amélioré peut également provoquer de légères anomalies visuelles si
+Lefreut's Enhanced UI est installé, mais les fonctionnalités ne sont nullement affectées.
 
 On ne peut pas installer ce mod avec le composant "Options cachées du jeu" de EEUITweaks. Vous
 devrez choisir d'en installer un seul, mais pas les deux en même temps.
@@ -52,6 +54,10 @@ devrez choisir d'en installer un seul, mais pas les deux en même temps.
 Modifier les fichiers de paramétrage de l'interface utilisateur (UI) peut s'avérer risqué.
 C'est pourquoi, pour éviter de corrompre le jeu, une tentative problématique de modification sera
 automatiquement interdite et le mod restaurera les fichiers à modifier dans leur version d'origine.
+
+Il est recommandé d'installer ce mod après Tweaks Anthology et tous les mods d'interface utilisateur.
+Le composant "Écran de triche" devrait être installé après tous les mods qui ajoutent du contenu afin 
+de profiter pleinement de son potentiel.
 
 
 Composants
@@ -338,6 +344,38 @@ Il propose trois options d'installation :
 - Mettre à jour les raccourcis clavier des sortilèges divins et profanes
 
 Ce composant n'est pas couvert par le composant "Installer simultanément toutes les Options de jeu cachées".
+
+
+33. Écran de triche amélioré
+
+Ce composant enrichit l'écran de triche (CLUAConsole), accessible si le panneau de
+débogage est activée (debug mode), il donne accès à plusieurs options :
+
+- Une liste des objets disponibles susceptibles d'être créés dans l'inventaire des membres du groupe,
+- Une liste des sorts et capacités disponibles susceptibles d'être attribués aux personnages sélectionnés
+  (le curseur de la souris doit être placé sur le personnage désiré),
+- Une liste des magasins disponibles qui deviennent accessibles pour effectuer des achats, 
+  identifier des objets, utiliser les services des temples et se reposer dans les auberges,
+- Une liste des créatures existantes pouvant être générées dans la zone,
+- Une collection de commandes de débogage et de script utiles, telles que l'annulation de la déchéance
+  pour les rôdeurs et les paladins déchus, la possibilité d'activer ou de désactiver l'affichage des
+  numéros de ligne pour les textes du jeu, la modification de la réputation du groupe ou bien l'avancement 
+  du temps (temps réel et temps du jeu)
+
+Compatible avec les mods d'interface utilisateur suivants :
+- lefreut's Enhanced UI (toutes les déclinaisons): peut provoquer de légères anomalies visuelles n'affectant 
+  pas les fonctionnalités.
+- Dragonspear UI++ de Pecca
+- Classic BG UI (de K4f4r)
+
+Ce composant est couvert par le composant "Installer simultanément toutes les Options de jeu cachées".
+
+
+34. Mise à jour des fichiers existants pour le composant "Écran de triche amélioré"
+
+Ce composant vous permet de mettre à jour les ressources du jeu utilisées par "l'Écran de triche amélioré"
+sans avoir à réinstaller tout le mod. Il n'apparaît pas dans le fichier WeiDU.log et peut donc être installé
+à n'importe quel moment et réinstallé autant de fois que nécessaire.
 
 
 Crédits
