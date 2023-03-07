@@ -337,7 +337,7 @@ Coding and testing: Argent77
 
 Additional coding help: AncientCowboy
 
-French translation: Gwendolyne
+French translation: Gwendolyne, JohnBob
 
 Polish translation: Cahir
 
