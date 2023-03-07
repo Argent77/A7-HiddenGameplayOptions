@@ -4,13 +4,7 @@ menu
 	ignoreEsc
 
 	onOpen
-	"
-		if game:GetMissionPackInfo25() then
-			cheatAreaDisplayList = cheatAreasHoW
-		else
-			cheatAreaDisplayList = cheatAreas
-		end
-	"
+%on_open_content%
 
 	label
 	{

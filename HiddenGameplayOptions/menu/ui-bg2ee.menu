@@ -4,17 +4,7 @@ menu
 	ignoreEsc
 
 	onOpen
-	"
-		if game:GetMissionPackInfo() then
-			cheatAreaDisplayList = cheatAreasTutorial
-		elseif game:GetMissionPackInfoTBP() then
-			cheatAreaDisplayList = cheatAreasArena
-		elseif game:GetMissionPackInfo25() then
-			cheatAreaDisplayList = cheatAreasExpansion
-		else
-			cheatAreaDisplayList = cheatAreas
-		end
-	"
+%on_open_content%
 
 	label
 	{
