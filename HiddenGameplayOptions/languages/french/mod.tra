@@ -211,3 +211,86 @@ Note : Vous devez redémarrer le jeu pour que les modifications prennent effet.~
 @10003 = ~Cette arme ne peut être utilisée pour une attaque insidieuse.~
 @10004 = ~Dégâts d'attaque insidieuse~
 @10005 = ~Attaque handicapante~
+
+
+// *** Strings for the Cheat Menu ***
+
+@20000 = ~CRÉER~
+@20001 = ~OBTENIR~
+@20002 = ~OUVRIR~ // ACCEDER
+@20003 = ~APPLIQUER~
+@20004 = ~Quantité / Charges:~
+@20005 = ~<< ZONES~
+@20006 = ~<< OBJETS~
+@20007 = ~<< SORTS~
+@20008 = ~<< MAGASINS~
+@20009 = ~<< CRÉATURES~
+@20010 = ~<< COMMANDES~
+@20011 = ~Cliquez pour activer la liste des objets.~
+@20012 = ~Cliquez pour activer la liste des sorts.~
+@20013 = ~Cliquez pour activer la liste des magasins.~
+@20014 = ~Cliquez pour activer la liste des créatures.~
+@20015 = ~Cliquez pour activer la liste des commandes.~
+@20016 = ~Cliquez pour activer la liste des zones.~
+@20017 = ~La commande sera ajoutée à la console Lua.~
+@20018 = ~La commande sera exécutée instantanément.~
+
+// PSTEE-specific labels
+@20100 = ~Créer~
+@20101 = ~Obtenir~
+@20102 = ~Ouvrir~
+@20103 = ~Appliquer~
+@20105 = ~<< Zones~
+@20106 = ~<< Objets~
+@20107 = ~<< Sorts~
+@20108 = ~<< Magasins~
+@20109 = ~<< Créatures~
+@20110 = ~<< Commandes~
+
+// Translator note: Quotation marks in strings must be escaped
+@20200 = ~Retirer le statut de \"Rôdeur déchu\" au personnage sélectionné~
+@20201 = ~Retirer le statut de \"Paladin déchu\" au personnage sélectionné~
+@20202 = ~Verrouiller l'écran sur le personnage sélectionné~
+@20203 = ~Retirer le verrouillage de l'écran du personnage~
+@20204 = ~Augmenter la réputation du groupe de 2 points~
+@20205 = ~Réduire la réputation du groupe de 2 points~
+@20206 = ~Avancer l'heure jusqu'au \"Matin\"~
+@20207 = ~Avancer l'heure jusqu'à \"Midi\"~
+@20208 = ~Avancer l'heure jusqu'au \"Crépuscule\"~
+@20209 = ~Avancer l'heure jusqu'à \"Minuit\"~
+@20210 = ~Avancer le temps de 8 heures~
+@20211 = ~Avancer d'une heure en temps réel~
+@20212 = ~Avancer d'un jour en temps réel~
+@20213 = ~Changer le climat pour un \"Temps clair\"~
+@20214 = ~Changer le climat pour de la \"Pluie\"~
+@20215 = ~Changer le climat pour de la \"Neige\"~
+@20216 = ~Changer le climat pour du \"Brouillard\"~
+@20217 = ~Détruire tous les objets au sol dans la zone~
+@20218 = ~Afficher les numéros de ligne pour les textes~
+@20219 = ~Désactiver l'affichage des numéros de ligne~
+@20220 = ~Afficher les crédits et revenir au menu principal~
+
+// PSTEE-specific additions
+// Translator note: Quotation marks in strings must be escaped
+@20250 = ~Augmenter la valeur morale (Bon..Mauvais) de 2~
+@20251 = ~Réduire la valeur morale (Bon..Mauvais) de 2~
+@20252 = ~Augmenter l’éthique (Loyal..Chaotique) de 2~
+@20253 = ~Réduire l’éthique (Loyal..Chaotique) de 2~
+@20254 = ~Augmenter le décompte des \"Meurtre\" de 1~
+@20255 = ~Réduire le décompte des \"Meurtre\" de 1~
+@20256 = ~Augmenter la valeur de \"La Dame\" de 1~
+@20257 = ~Diminuer la valeur de \"La Dame\" de 1~
+
+// Spell types
+@20300 = ~Spécial~
+@20301 = ~Mage~
+@20302 = ~Clerc~
+@20303 = ~Psionique~
+@20304 = ~Inné~
+@20305 = ~Chant du barde~
+
+// Creature allegiances
+@20310 = ~amical~
+@20311 = ~neutre~
+@20312 = ~hostile~
+

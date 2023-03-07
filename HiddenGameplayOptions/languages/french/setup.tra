@@ -38,6 +38,9 @@
 @102 = ~seulement pour les sortileges profanes~
 @103 = ~pour les sortileges divins et profanes~
 
+@200 = ~Ecran de triche ameliore~
+@201 = ~Mise a jour des fichiers existants pour le composant "Ecran de triche ameliore"~
+
 @500 = ~Ce mod requiert un jeu beneficiant du patch v2.0 ou ulterieur.~
 @501 = ~Echec de modification du fichier LUA.~
 @502 = ~Echec de modification du fichier UI.MENU.~
@@ -48,6 +51,8 @@
 @507 = ~Ce composant n'est pas compatible avec Lefreut's Enhanced UI (LeUI).~
 @508 = ~Necessite l'installation du module "Level Up" Icon Tweaks.~
 @509 = ~Necessite l'installation du composant "Creer des sauvegardes periodiques" de Tweaks Anthology.~
+@510 = ~Necessite l'installation du composant "Ecran de triche ameliore".~
+@511 = ~Ce composant est destine a etre utilise separement si necessaire.~
 
 
 // WeiDU prompts
