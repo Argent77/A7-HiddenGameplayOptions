@@ -21,15 +21,18 @@ END ELSE ACTION_IF (GAME_IS ~pstee~) BEGIN
   OUTER_SPRINT ui_mode ~pstee~
 END ELSE BEGIN
   // Should never happen
-  ABORT @500  // Enhanced Edition game patched to v2.0 or higher required.
+  FAIL @500  // Enhanced Edition game patched to v2.0 or higher required.
 END
 
 // Final adjustments
-ACTION_IF (MOD_IS_INSTALLED ~dragonspear_ui++.tp2~ 1) BEGIN
+ACTION_IF (MOD_IS_INSTALLED ~eet_gui.tp2~ 0) BEGIN
+  // EET alternative GUI
+  OUTER_SPRINT ui_mode ~sod~
+END ELSE ACTION_IF (MOD_IS_INSTALLED ~dragonspear_ui++.tp2~ 1) BEGIN
   // Dragonspear UI++
   OUTER_SPRINT ui_mode ~sod~
 END ELSE ACTION_IF (MOD_IS_INSTALLED ~tipun_gui.tp2~ 10) BEGIN
-  // Tipun's GUI mod
+  // Tipun's User Interface for Enhanced Edition Games
   OUTER_SPRINT ui_mode ~tgui-%game%~
 END ELSE ACTION_IF (GAME_IS ~bgee~ &&
                     RESOURCE_CONTAINS ~ui.menu~ ~\bGUIWPKPC\b~) BEGIN
