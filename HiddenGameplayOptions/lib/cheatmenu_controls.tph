@@ -30,12 +30,12 @@ BEGIN
 
       // extracting "onOpen" section from the original ui.menu
       SPRINT on_open_content ~~
-      SET ofs_on_open = INDEX_BUFFER(~\bonOpen\b~ ofs_menu_start)
+      SET ofs_on_open = INDEX_BUFFER(~^[ %TAB%]*onOpen\b~ ofs_menu_start)
       PATCH_IF (ofs_on_open >= ofs_menu_start && ofs_on_open < ofs_menu_end) BEGIN
-        SET ofs_on_open = INDEX_BUFFER(~^[ %TAB%]*"~ ofs_on_open)
+        SET ofs_on_open = INDEX_BUFFER(~[%WNL%]~ ofs_on_open - 2) // set before first line break
         SET ofs_on_open_end = INDEX_BUFFER(~"~ ofs_on_open) + 1
         SET ofs_on_open_end = INDEX_BUFFER(~^[ %TAB%]*"~ ofs_on_open_end)
-        PATCH_IF (ofs_on_open_end > ofs_on_open) BEGIN
+        PATCH_IF (ofs_on_open_end > ofs_on_open && ofs_on_open_end < ofs_menu_end) BEGIN
           SET ofs_on_open_end = INDEX_BUFFER(~[%WNL%]~ ofs_on_open_end)
           READ_ASCII ofs_on_open on_open_content (ofs_on_open_end - ofs_on_open)
         END

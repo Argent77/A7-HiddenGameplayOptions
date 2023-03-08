@@ -231,6 +231,7 @@ This component expands the cheat menu, which can be opened if the debug console 
 The following UI mods are supported:
 - lefreut's Enhanced UI (*all variants*)
 - Pecca's Dragonspear UI++
+- Tipun's User Interface
 - Classic BG UI (by K4f4r)
 
 *Note: This component is also included in the convenience option "Install all Hidden Gameplay Options at once".*

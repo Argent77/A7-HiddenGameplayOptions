@@ -341,6 +341,7 @@ The following UI mods are supported:
 - lefreut's Enhanced UI (all variants): May produce minor visual glitches which don't affect
   functionality.
 - Pecca's Dragonspear UI++
+- Tipun's User Interface
 - Classic BG UI (by K4f4r)
 
 This component is also included in the convenience option "Install all Hidden Gameplay Options

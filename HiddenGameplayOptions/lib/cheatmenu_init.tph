@@ -28,6 +28,9 @@ END
 ACTION_IF (MOD_IS_INSTALLED ~dragonspear_ui++.tp2~ 1) BEGIN
   // Dragonspear UI++
   OUTER_SPRINT ui_mode ~sod~
+END ELSE ACTION_IF (MOD_IS_INSTALLED ~tipun_gui.tp2~ 10) BEGIN
+  // Tipun's GUI mod
+  OUTER_SPRINT ui_mode ~tgui-%game%~
 END ELSE ACTION_IF (GAME_IS ~bgee~ &&
                     RESOURCE_CONTAINS ~ui.menu~ ~\bGUIWPKPC\b~) BEGIN
   // Classic BG UI (non-WeiDU mod)

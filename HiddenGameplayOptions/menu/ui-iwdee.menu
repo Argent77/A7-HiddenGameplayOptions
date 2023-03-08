@@ -2,8 +2,6 @@ menu
 {
 	name 'cheatMenu'
 	ignoreEsc
-
-	onOpen
 %on_open_content%
 
 	label

@@ -3,7 +3,7 @@ menu
 	name 'cheatMenu'
 	ignoreEsc
 	ignoreNav 1
-
+%on_open_content%
 	label
 	{
 		enabled "cheatMenuCollapsed ~= nil"

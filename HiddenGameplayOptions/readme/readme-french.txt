@@ -366,6 +366,7 @@ Compatible avec les mods d'interface utilisateur suivants :
 - lefreut's Enhanced UI (toutes les déclinaisons): peut provoquer de légères anomalies visuelles n'affectant 
   pas les fonctionnalités.
 - Dragonspear UI++ de Pecca
+- User Interface de Tipun
 - Classic BG UI (de K4f4r)
 
 Ce composant est couvert par le composant "Installer simultanément toutes les Options de jeu cachées".

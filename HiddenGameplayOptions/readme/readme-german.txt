@@ -367,6 +367,7 @@ Die folgenden GUI-Mods werden unterstützt:
 - lefreut's Enhanced UI (alle Varianten): Könnte kleinere Grafikfehler beinhalten, die sich aber
   nicht auf die Funktionalität auswirken.
 - Peccas Dragonspear UI++
+- Tipuns User Interface
 - Classic BG UI (von K4f4r)
 
 Diese Komponente ist auch in der Hauptkomponente "Alle versteckten Spieloptionen auf einmal
