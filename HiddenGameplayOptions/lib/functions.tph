@@ -449,3 +449,69 @@ BEGIN
     END
   END
 END
+
+
+// Returns the start and end offsets of the first matching menu structure with the specified parameters.
+// Parameters:
+// INT_VAR start_of   Offset to start the search
+// STR_VAR name       Name of the structure (e.g. menu, label, list, button, ...), may be specified as regular expression.
+// STR_VAR contains   A regular expression that matches a string inside the desired structure.
+// RET start_ofs      Start offset of the first matching menu structure, right before the structure name. -1 if no match found.
+// RET end_ofs        End offset of the menu structure, right behind the closing curly bracket. -1 if no match found.
+DEFINE_PATCH_FUNCTION GET_UI_STRUCTURE
+INT_VAR
+  start_ofs = 0
+STR_VAR
+  name = ~~
+  contains = ~~
+RET
+  start_ofs
+  end_ofs
+BEGIN
+  SET end_ofs = "-1"
+
+  PATCH_IF (NOT ~%name%~ STR_EQ ~~) BEGIN
+    SET match = 0
+    SET ofs1 = start_ofs
+    SET ofs2 = ofs1
+    // looping through structures until match is found
+    WHILE (match = 0 && ofs2 >= 0) BEGIN
+      // getting extent of structure
+      SET ofs1 = INDEX_BUFFER(~%name%[ %TAB%%WNL%]*{~ ofs1)
+      PATCH_IF (ofs1 >= 0) BEGIN
+        SET ofs2 = INDEX_BUFFER(~{~ ofs1)
+        SET level = 1
+        WHILE (level > 0) BEGIN
+          SET ofs2 = INDEX_BUFFER(~[{}]~ ofs2 + 1)
+          PATCH_IF (ofs2 >= 0) BEGIN
+            // matching content
+            PATCH_IF (level = 1) BEGIN
+              READ_ASCII ofs1 chunk (ofs2 - ofs1)
+              SET match = (~%contains%~ STR_EQ ~~) || (~%chunk%~ STRING_CONTAINS_REGEXP ~%contains%~ = 0)
+            END
+
+            READ_ASCII ofs2 char (1)
+            SET level += (~%char%~ STR_EQ ~{~) ? 1 : "-1"
+          END ELSE BEGIN
+            SET level = "-1"
+            SET match = 0
+          END
+        END // WHILE (level > 0)
+      END // PATCH_IF (ofs1 >= 0)
+
+      PATCH_IF (NOT match) BEGIN
+        SET ofs1 = ofs2 + 1
+      END
+    END // WHILE (match = 0 && ofs1 >= 0)
+
+    PATCH_IF (match) BEGIN
+      SET start_ofs = ofs1
+      SET end_ofs = ofs2 + 1
+    END
+
+  END // PATCH_IF (NOT ~%name%~ STR_EQ ~~)
+
+  PATCH_IF (end_ofs < 0) BEGIN
+    SET start_ofs = end_ofs
+  END
+END

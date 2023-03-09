@@ -1,4 +1,8 @@
-DEFINE_PATCH_FUNCTION ui_replace_cheat_menu
+INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
+
+// Replaces the whole cheat menu definition in the current MENU file by the content of the
+// file specified by "filename". Returns the success state.
+DEFINE_PATCH_FUNCTION UI_REPLACE_CHEAT_MENU
 STR_VAR
   filename = ~~
 RET
@@ -6,28 +10,17 @@ RET
 BEGIN
   SET success = 0
   PATCH_IF (FILE_EXISTS ~%filename%~) BEGIN
-    // finding and original cheat menu
-    SET ofs = INDEX_BUFFER(~^[ %TAB%]*name[ %TAB%]+["']cheatMenu['"]~)
-    PATCH_IF (ofs >= 0) BEGIN
-      SET ofs_menu_start = RINDEX_BUFFER(~^[ %TAB%]*menu[ %TAB%%WNL%]+{~ ofs)
-      SET pcount = 1
-      SET ofs_end = INDEX_BUFFER(~[%WNL%]~ ofs)
-      WHILE (pcount > 0) BEGIN
-        SET ofs_start = INDEX_BUFFER(~[^%WNL%]~ ofs_end)
-        SET ofs_end = INDEX_BUFFER(~[%WNL%]~ ofs_start)
-        READ_ASCII ofs_start line (ofs_end - ofs_start)
-        INNER_PATCH ~%line%~ BEGIN
-          REPLACE_EVALUATE ~\([{}]\)~ BEGIN
-            PATCH_IF (~%MATCH1%~ STR_EQ ~{~) BEGIN
-              SET pcount += 1
-            END ELSE BEGIN
-              SET pcount -= 1
-            END
-          END ~%MATCH1%~
-        END
-      END
-      SET ofs_menu_end = ofs_end
+    // finding original cheat menu
+    LPF GET_UI_STRUCTURE
+      STR_VAR
+        name = ~menu~
+        contains = EVAL ~name[ %TAB%]+["']cheatMenu['"]~
+      RET
+        ofs_menu_start = start_ofs
+        ofs_menu_end = end_ofs
+    END
 
+    PATCH_IF (ofs_menu_start >= 0) BEGIN
       // extracting "onOpen" section from the original ui.menu
       SPRINT on_open_content ~~
       SET ofs_on_open = INDEX_BUFFER(~^[ %TAB%]*onOpen\b~ ofs_menu_start)
@@ -87,7 +80,7 @@ COPY_EXISTING ~ui.menu~ ~override~
   END
 
   // replacing cheat menu
-  LPF ui_replace_cheat_menu
+  LPF UI_REPLACE_CHEAT_MENU
     STR_VAR filename = EVAL ~%MOD_FOLDER%/menu/ui-%ui_mode%.menu~
     RET success
   END

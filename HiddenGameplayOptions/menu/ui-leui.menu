@@ -1,0 +1,450 @@
+menu
+{
+	name 'cheatMenu'
+	ignoreEsc
+  align center top
+  offset -50 10
+%on_open_content%
+
+	label
+	{
+		area 100 0 809 298
+		bam 'GUWBTP30'
+	}
+
+  -- TOGGLE BUTTONS START
+  button
+  {
+    enabled "a7cheatListType == 0"
+    area    615 120 140 42
+    bam			GUIOSTSM
+    sequence  6
+    text      "A7_TOGGLE_AREAS_BUTTON"
+    tooltip lua "t('A7_TOGGLE_AREAS_TOOLTIP')"
+    text style	"button"
+    action    "a7cheatListType = 1"
+  }
+  button
+  {
+    enabled "a7cheatListType == 1"
+    area    615 120 140 42
+    bam			GUIOSTSM
+    sequence  6
+    text      "A7_TOGGLE_ITEMS_BUTTON"
+    tooltip lua "t('A7_TOGGLE_ITEMS_TOOLTIP')"
+    text style	"button"
+    action    "a7cheatListType = 2"
+  }
+  button
+  {
+    enabled "a7cheatListType == 2"
+    area    615 120 140 42
+    bam			GUIOSTSM
+    sequence  6
+    text      "A7_TOGGLE_SPELLS_BUTTON"
+    tooltip lua "t('A7_TOGGLE_SPELLS_TOOLTIP')"
+    text style	"button"
+    action    "a7cheatListType = 3"
+  }
+  button
+  {
+    enabled "a7cheatListType == 3"
+    area    615 120 140 42
+    bam			GUIOSTSM
+    sequence  6
+    text      "A7_TOGGLE_STORES_BUTTON"
+    tooltip lua "t('A7_TOGGLE_STORES_TOOLTIP')"
+    text style	"button"
+    action    "a7cheatListType = 4"
+  }
+  button
+  {
+    enabled "a7cheatListType == 4"
+    area    615 120 140 42
+    bam			GUIOSTSM
+    sequence  6
+    text      "A7_TOGGLE_CREATURES_BUTTON"
+    tooltip lua "t('A7_TOGGLE_CREATURES_TOOLTIP')"
+    text style	"button"
+    action    "a7cheatListType = 5"
+  }
+  button
+  {
+    enabled "a7cheatListType == 5"
+    area    615 120 140 42
+    bam			GUIOSTSM
+    sequence  6
+    text      "A7_TOGGLE_COMMANDS_BUTTON"
+    tooltip lua "t('A7_TOGGLE_COMMANDS_TOOLTIP')"
+    text style	"button"
+    action    "a7cheatListType = 0"
+  }
+  -- TOGGLE BUTTONS END
+
+  -- ITEM LIST START
+	list
+	{
+		column
+		{
+			width 25
+			label
+			{
+				area 0 0 -1 -1
+				text lua "a7itemList[rowNumber][1]"
+				text style "list"
+			}
+		}
+		column
+		{
+			width 75
+			label
+			{
+				area 0 0 -1 -1
+				text lua "a7itemList[rowNumber][2]"
+				text style "list"
+			}
+		}
+    enabled "a7cheatListType == 1"
+		area 122 6 492 240
+
+		rowheight	18
+		table		"a7itemList"
+		var		a7cheatCreateItem
+		scrollbar	'GUISCRC'
+	}
+	button
+	{
+    enabled "a7cheatListType == 1"
+		area		122 246 140 42
+		bam			GUIOSTSM
+		sequence	6
+		text		"A7_CREATE_BUTTON"
+		text style	"button"
+		action 		"C:CreateItem(a7itemList[a7cheatCreateItem][1],a7cheatItemCharge1,a7cheatItemCharge2,a7cheatItemCharge3)"
+	}
+  label
+  {
+    enabled "a7cheatListType == 1"
+    area    275 246 165 42
+    text    "A7_AMOUNT_LABEL"
+    text style "label"
+    text align right center
+  }
+  edit
+  {
+    enabled "a7cheatListType == 1"
+    area 450 256 40 24
+    var a7cheatItemCharge1
+    text style "edit"
+    maxlines 1
+  }
+  edit
+  {
+    enabled "a7cheatListType == 1"
+    area 500 256 40 24
+    var a7cheatItemCharge2
+    text style "edit"
+    maxlines 1
+  }
+  edit
+  {
+    enabled "a7cheatListType == 1"
+    area 550 256 40 24
+    var a7cheatItemCharge3
+    text style "edit"
+    maxlines 1
+  }
+  -- ITEM LIST END
+
+  -- SPELL LIST START
+	list
+	{
+		column
+		{
+			width 23
+			label
+			{
+				area 0 0 -1 -1
+				text lua "a7spellList[rowNumber][1]"
+				text style "list"
+			}
+		}
+		column
+		{
+			width 20
+			label
+			{
+				area 0 0 -1 -1
+				text lua "a7luaSpellType(a7spellList[rowNumber][2])"
+				text style "list"
+			}
+		}
+		column
+		{
+			width 57
+			label
+			{
+				area 0 0 -1 -1
+				text lua "a7spellList[rowNumber][3]"
+				text style "list"
+			}
+		}
+    enabled "a7cheatListType == 2"
+		area 122 6 492 240
+
+		rowheight	18
+		table		"a7spellList"
+		var		a7cheatAddSpell
+		scrollbar	'GUISCRC'
+	}
+	button
+	{
+    enabled "a7cheatListType == 2"
+		area		122 246 140 42
+		bam			GUIOSTSM
+		sequence	6
+		text		"A7_COMMAND_BUTTON"
+		text style	"button"
+    action "a7luaSpellCommand(a7cheatAddSpell)"
+	}
+  -- SPELL LIST END
+
+  -- STORE LIST START
+	list
+	{
+		column
+		{
+			width 25
+			label
+			{
+				area 0 0 -1 -1
+				text lua "a7storeList[rowNumber][1]"
+				text style "list"
+			}
+		}
+		column
+		{
+			width 75
+			label
+			{
+				area 0 0 -1 -1
+				text lua "a7storeList[rowNumber][2]"
+				text style "list"
+			}
+		}
+    enabled "a7cheatListType == 3"
+		area 122 6 492 240
+
+		rowheight	18
+		table		"a7storeList"
+		var		a7cheatOpenStore
+		scrollbar	'GUISCRC'
+	}
+	button
+	{
+    enabled "a7cheatListType == 3"
+		area		122 246 140 42
+		bam			GUIOSTSM
+		sequence	6
+		text		"A7_OPEN_BUTTON"
+		text style	"button"
+		action 		"C:StartStore(a7storeList[a7cheatOpenStore][1])"
+	}
+  -- STORE LIST END
+
+  -- CREATURE LIST START
+	list
+	{
+		column
+		{
+			width 23
+			label
+			{
+				area 0 0 -1 -1
+				text lua "a7creatureList[rowNumber][1]"
+				text style "list"
+			}
+		}
+		column
+		{
+			width 20
+			label
+			{
+				area 0 0 -1 -1
+				text lua "a7luaAllegiance(a7creatureList[rowNumber][2])"
+				text style "list"
+			}
+		}
+		column
+		{
+			width 57
+			label
+			{
+				area 0 0 -1 -1
+				text lua "a7creatureList[rowNumber][3]"
+				text style "list"
+			}
+		}
+    enabled "a7cheatListType == 4"
+		area 122 6 492 240
+
+		rowheight	18
+		table		"a7creatureList"
+		var		a7cheatSpawnCreature
+		scrollbar	'GUISCRC'
+	}
+	button
+	{
+    enabled "a7cheatListType == 4"
+		area		122 246 140 42
+		bam			GUIOSTSM
+		sequence	6
+		text		"A7_CREATE_BUTTON"
+		text style	"button"
+		action 		"C:CreateCreature(a7creatureList[a7cheatSpawnCreature][1])"
+	}
+  -- CREATURE LIST END
+
+  -- COMMAND LIST START
+	list
+	{
+		column
+		{
+			width 100
+			label
+			{
+				area 0 0 -1 -1
+				text lua "a7commandList[rowNumber][1]"
+				text style "list"
+			}
+		}
+    enabled "a7cheatListType == 5"
+		area 122 6 492 240
+
+		rowheight	18
+		table		"a7commandList"
+		var		a7cheatApplyCommand
+		scrollbar	'GUISCRC'
+    action "a7commandMode = a7commandList[a7cheatApplyCommand][3]"
+	}
+	button
+	{
+    enabled "a7cheatListType == 5 and (a7commandMode == 0 or a7commandMode == 2)"
+		area		122 246 140 42
+		bam			GUIOSTSM
+		sequence	6
+		text		"A7_COMMAND_BUTTON"
+    tooltip lua "t('A7_TOGGLE_CMD_LUA_TOOLTIP')"
+		text style	"button"
+		action 		"a7luaCommand(a7cheatApplyCommand)"
+	}
+	button
+	{
+    enabled "a7cheatListType == 5 and not (a7commandMode == 0 or a7commandMode == 2)"
+		area		122 246 140 42
+		bam			GUIOSTSM
+		sequence	6
+		text		"A7_PERFORM_BUTTON"
+    tooltip lua "t('A7_TOGGLE_CMD_RUN_TOOLTIP')"
+		text style	"button"
+    action 		"a7luaCommand(a7cheatApplyCommand)"
+	}
+  -- COMMAND LIST END
+
+  -- AREA LIST START
+	list
+	{
+		column
+		{
+			width 20
+			label
+			{
+				area 0 0 -1 -1
+				text lua "cheatAreaDisplayList[rowNumber][1]"
+				text style "list"
+			}
+		}
+		column
+		{
+			width 80
+			label
+			{
+				area 0 0 -1 -1
+				text lua "cheatAreaDisplayList[rowNumber][2]"
+				text style "list"
+			}
+		}
+    enabled "a7cheatListType == 0"
+		area 122 6 492 240
+
+		rowheight	18
+		table		"cheatAreaDisplayList"
+		var		cheatTeleportArea
+		scrollbar	'GUISCRC'
+	}
+	button
+	{
+    enabled "a7cheatListType == 0"
+		area		122 246 140 42
+		bam			GUIOSTSM
+		sequence	6
+		text		"TRAVEL_BUTTON"
+		text style	"button"
+		action 		"C:MoveToArea(cheatAreaDisplayList[cheatTeleportArea][1])"
+	}
+  -- AREA LIST END
+
+	button
+	{
+		area		615 162 140 42
+		bam			GUIOSTSM
+		sequence	6
+		text			"GODBOW_LABEL"
+		text style	"button"
+		action		"C:CreateItem('godbow')"
+	}
+
+	button
+	{
+		area		615 204 140 42
+		bam			GUIOSTSM
+		sequence	6
+		text			"GIVE_GOLD_LABEL"
+		text style	"button"
+		action		"C:AddGold(cheatGoldAmt)"
+	}
+	edit
+	{
+		area		761 204 138 42
+		var		cheatGoldAmt
+		text style	"edit"
+		maxlines	1
+	}
+
+	button
+	{
+		area		615 246 140 42
+		bam			GUIOSTSM
+		sequence	6
+		text			"GIVE_XP_LABEL"
+		text style	"button"
+		action		"C:SetCurrentXP(cheatXpAmt)"
+	}
+	edit
+	{
+		area		761 246 138 42
+		var		cheatXpAmt
+		text style	"edit"
+		maxlines	1
+	}
+
+	button
+	{
+		area		761 162 140 42
+		bam			GUIOSTSM
+		sequence	6
+		text			"EXPLORE_LABEL"
+		text style	"button"
+		action		"C:ExploreArea()"
+	}
+}
