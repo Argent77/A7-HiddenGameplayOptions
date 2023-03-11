@@ -1,143 +1,143 @@
 menu
 {
-	name 'cheatMenu'
-	ignoreEsc	
+  name 'cheatMenu'
+  ignoreEsc  
 %on_open_content%
 
-	label
-	{
-		area 100 0 809 298
-		mosaic 'FCGWBT30'	
-	}
-	label
-	{
-		area 136 16 448 222
-		fill 111 111 111 64
-	}
+  label
+  {
+    area    100 0 809 298
+    mosaic  'FCGWBT30'  
+  }
+  label
+  {
+    area  136 16 448 222
+    fill  111 111 111 64
+  }
 
   -- TOGGLE BUTTONS START
   button
   {
     enabled "a7cheatListType == 0"
     area    605 120 140 30
-    bam			GUIBUTNS
+    bam     GUIBUTNS
     sequence  2
-    text      "A7_TOGGLE_AREAS_BUTTON"
+    text    "A7_TOGGLE_AREAS_BUTTON"
     tooltip lua "t('A7_TOGGLE_AREAS_TOOLTIP')"
-    text style	"button"
-    action    "a7cheatListType = 1"
+    text style  "button"
+    action  "a7cheatListType = 1"
   }
   button
   {
     enabled "a7cheatListType == 1"
     area    605 120 140 30
-    bam			GUIBUTNS
+    bam     GUIBUTNS
     sequence  2
-    text      "A7_TOGGLE_ITEMS_BUTTON"
+    text    "A7_TOGGLE_ITEMS_BUTTON"
     tooltip lua "t('A7_TOGGLE_ITEMS_TOOLTIP')"
-    text style	"button"
-    action    "a7cheatListType = 2"
+    text style  "button"
+    action  "a7cheatListType = 2"
   }
   button
   {
     enabled "a7cheatListType == 2"
     area    605 120 140 30
-    bam			GUIBUTNS
+    bam     GUIBUTNS
     sequence  2
-    text      "A7_TOGGLE_SPELLS_BUTTON"
+    text    "A7_TOGGLE_SPELLS_BUTTON"
     tooltip lua "t('A7_TOGGLE_SPELLS_TOOLTIP')"
-    text style	"button"
-    action    "a7cheatListType = 3"
+    text style  "button"
+    action  "a7cheatListType = 3"
   }
   button
   {
     enabled "a7cheatListType == 3"
     area    605 120 140 30
-    bam			GUIBUTNS
+    bam     GUIBUTNS
     sequence  2
-    text      "A7_TOGGLE_STORES_BUTTON"
+    text    "A7_TOGGLE_STORES_BUTTON"
     tooltip lua "t('A7_TOGGLE_STORES_TOOLTIP')"
-    text style	"button"
-    action    "a7cheatListType = 4"
+    text style  "button"
+    action  "a7cheatListType = 4"
   }
   button
   {
     enabled "a7cheatListType == 4"
     area    605 120 140 30
-    bam			GUIBUTNS
+    bam     GUIBUTNS
     sequence  2
-    text      "A7_TOGGLE_CREATURES_BUTTON"
+    text    "A7_TOGGLE_CREATURES_BUTTON"
     tooltip lua "t('A7_TOGGLE_CREATURES_TOOLTIP')"
-    text style	"button"
-    action    "a7cheatListType = 5"
+    text style  "button"
+    action  "a7cheatListType = 5"
   }
   button
   {
     enabled "a7cheatListType == 5"
     area    605 120 140 30
-    bam			GUIBUTNS
+    bam     GUIBUTNS
     sequence  2
-    text      "A7_TOGGLE_COMMANDS_BUTTON"
+    text    "A7_TOGGLE_COMMANDS_BUTTON"
     tooltip lua "t('A7_TOGGLE_COMMANDS_TOOLTIP')"
-    text style	"button"
-    action    "a7cheatListType = 0"
+    text style  "button"
+    action  "a7cheatListType = 0"
   }
   -- TOGGLE BUTTONS END
 
   -- ITEM LIST START
-	list
-	{
-		column
-		{
-			width 25
-			label
-			{
-				area -8 0 -1 -1
-				mosaic lua "zZspellBookBkg(rowNumber, a7cheatCreateItem, 'fcatrtbm')"
-				respectClipping
-			}
-			label
-			{
-				area 8 0 -1 -1
-				text lua "a7itemList[rowNumber][1]"
-				text style "list"
+  list
+  {
+    column
+    {
+      width 25
+      label
+      {
+        area -8 0 -1 -1
+        mosaic lua "zZspellBookBkg(rowNumber, a7cheatCreateItem, 'fcatrtbm')"
+        respectClipping
+      }
+      label
+      {
+        area 8 0 -1 -1
+        text lua "a7itemList[rowNumber][1]"
+        text style "list"
         text color 'O'
-			}
-		}
-		column
-		{
-			width 75
-			label
-			{
-				area -8 0 -1 -1
-				mosaic lua "zZspellBookBkg(rowNumber, a7cheatCreateItem, 'fcatrtbm')"
-				respectClipping
-			}
-			label
-			{
-				area 8 0 -1 -1
-				text lua "a7itemList[rowNumber][2]"
-				text style "list"
-			}
-		}
+      }
+    }
+    column
+    {
+      width 75
+      label
+      {
+        area -8 0 -1 -1
+        mosaic lua "zZspellBookBkg(rowNumber, a7cheatCreateItem, 'fcatrtbm')"
+        respectClipping
+      }
+      label
+      {
+        area 8 0 -1 -1
+        text lua "a7itemList[rowNumber][2]"
+        text style "list"
+      }
+    }
     enabled "a7cheatListType == 1"
-		area 136 16 448 222
-		hidehighlight
-		rowheight	22
-		table		"a7itemList"
-		var		a7cheatCreateItem
-		scrollbar	'GUISCRC'
-	}
-	button
-	{
+    area    136 16 448 222
+    hidehighlight
+    rowheight  22
+    table   "a7itemList"
+    var     a7cheatCreateItem
+    scrollbar 'GUISCRC'
+  }
+  button
+  {
     enabled "a7cheatListType == 1"
-		area		132 246 140 30
-		bam			GUIBUTNS
-		sequence	2
-		text		"A7_CREATE_BUTTON"
-		text style	"button"
-		action 		"C:CreateItem(a7itemList[a7cheatCreateItem][1],a7cheatItemCharge1,a7cheatItemCharge2,a7cheatItemCharge3)"
-	}
+    area    132 246 140 30
+    bam     GUIBUTNS
+    sequence  2
+    text    "A7_CREATE_BUTTON"
+    text style  "button"
+    action  "C:CreateItem(a7itemList[a7cheatCreateItem][1],a7cheatItemCharge1,a7cheatItemCharge2,a7cheatItemCharge3)"
+  }
   label
   {
     enabled "a7cheatListType == 1"
@@ -149,8 +149,8 @@ menu
   edit
   {
     enabled "a7cheatListType == 1"
-    area 450 252 40 24
-    var a7cheatItemCharge1
+    area    450 252 40 24
+    var     a7cheatItemCharge1
     text style "edit"
     text color '$'
     maxlines 1
@@ -158,8 +158,8 @@ menu
   edit
   {
     enabled "a7cheatListType == 1"
-    area 500 252 40 24
-    var a7cheatItemCharge2
+    area    500 252 40 24
+    var     a7cheatItemCharge2
     text style "edit"
     text color '$'
     maxlines 1
@@ -167,8 +167,8 @@ menu
   edit
   {
     enabled "a7cheatListType == 1"
-    area 550 252 40 24
-    var a7cheatItemCharge3
+    area    550 252 40 24
+    var     a7cheatItemCharge3
     text style "edit"
     text color '$'
     maxlines 1
@@ -176,377 +176,377 @@ menu
   -- ITEM LIST END
 
   -- SPELL LIST START
-	list
-	{
-		column
-		{
-			width 23
-			label
-			{
-				area -8 0 -1 -1
-				mosaic lua "zZspellBookBkg(rowNumber, a7cheatAddSpell, 'fcatrtbm')"
-				respectClipping
-			}
-			label
-			{
-				area 8 0 -1 -1
-				text lua "a7spellList[rowNumber][1]"
-				text style "list"
+  list
+  {
+    column
+    {
+      width 23
+      label
+      {
+        area -8 0 -1 -1
+        mosaic lua "zZspellBookBkg(rowNumber, a7cheatAddSpell, 'fcatrtbm')"
+        respectClipping
+      }
+      label
+      {
+        area 8 0 -1 -1
+        text lua "a7spellList[rowNumber][1]"
+        text style "list"
         text color 'O'
-			}
-		}
-		column
-		{
-			width 20
-			label
-			{
-				area -8 0 -1 -1
-				mosaic lua "zZspellBookBkg(rowNumber, a7cheatAddSpell, 'fcatrtbm')"
-				respectClipping
-			}
-			label
-			{
-				area 8 0 -1 -1
-				text lua "a7luaSpellType(a7spellList[rowNumber][2])"
-				text style "list"
-			}
-		}
-		column
-		{
-			width 57
-			label
-			{
-				area -8 0 -1 -1
-				mosaic lua "zZspellBookBkg(rowNumber, a7cheatAddSpell, 'fcatrtbm')"
-				respectClipping
-			}
-			label
-			{
-				area 8 0 -1 -1
-				text lua "a7spellList[rowNumber][3]"
-				text style "list"
-			}
-		}
+      }
+    }
+    column
+    {
+      width 20
+      label
+      {
+        area -8 0 -1 -1
+        mosaic lua "zZspellBookBkg(rowNumber, a7cheatAddSpell, 'fcatrtbm')"
+        respectClipping
+      }
+      label
+      {
+        area 8 0 -1 -1
+        text lua "a7luaSpellType(a7spellList[rowNumber][2])"
+        text style "list"
+      }
+    }
+    column
+    {
+      width 57
+      label
+      {
+        area -8 0 -1 -1
+        mosaic lua "zZspellBookBkg(rowNumber, a7cheatAddSpell, 'fcatrtbm')"
+        respectClipping
+      }
+      label
+      {
+        area 8 0 -1 -1
+        text lua "a7spellList[rowNumber][3]"
+        text style "list"
+      }
+    }
     enabled "a7cheatListType == 2"
-		area 136 16 448 222
-		hidehighlight
-		rowheight	22
-		table		"a7spellList"
-		var		a7cheatAddSpell
-		scrollbar	'GUISCRC'
-	}
-	button
-	{
+    area    136 16 448 222
+    hidehighlight
+    rowheight  22
+    table   "a7spellList"
+    var     a7cheatAddSpell
+    scrollbar 'GUISCRC'
+  }
+  button
+  {
     enabled "a7cheatListType == 2"
-		area		132 246 140 30
-		bam			GUIBUTNS
-		sequence	2
-		text		"A7_COMMAND_BUTTON"
-		text style	"button"
-    action "a7luaSpellCommand(a7cheatAddSpell)"
-	}
+    area    132 246 140 30
+    bam     GUIBUTNS
+    sequence  2
+    text    "A7_COMMAND_BUTTON"
+    text style  "button"
+    action  "a7luaSpellCommand(a7cheatAddSpell)"
+  }
   -- SPELL LIST END
 
   -- STORE LIST START
-	list
-	{
-		column
-		{
-			width 25
-			label
-			{
-				area -8 0 -1 -1
-				mosaic lua "zZspellBookBkg(rowNumber, a7cheatOpenStore, 'fcatrtbm')"
-				respectClipping
-			}
-			label
-			{
-				area 8 0 -1 -1
-				text lua "a7storeList[rowNumber][1]"
-				text style "list"
+  list
+  {
+    column
+    {
+      width 25
+      label
+      {
+        area -8 0 -1 -1
+        mosaic lua "zZspellBookBkg(rowNumber, a7cheatOpenStore, 'fcatrtbm')"
+        respectClipping
+      }
+      label
+      {
+        area 8 0 -1 -1
+        text lua "a7storeList[rowNumber][1]"
+        text style "list"
         text color 'O'
-			}
-		}
-		column
-		{
-			width 75
-			label
-			{
-				area -8 0 -1 -1
-				mosaic lua "zZspellBookBkg(rowNumber, a7cheatOpenStore, 'fcatrtbm')"
-				respectClipping
-			}
-			label
-			{
-				area 8 0 -1 -1
-				text lua "a7storeList[rowNumber][2]"
-				text style "list"
-			}
-		}
+      }
+    }
+    column
+    {
+      width 75
+      label
+      {
+        area -8 0 -1 -1
+        mosaic lua "zZspellBookBkg(rowNumber, a7cheatOpenStore, 'fcatrtbm')"
+        respectClipping
+      }
+      label
+      {
+        area 8 0 -1 -1
+        text lua "a7storeList[rowNumber][2]"
+        text style "list"
+      }
+    }
     enabled "a7cheatListType == 3"
-		area 136 16 448 222
-		hidehighlight
-		rowheight	22
-		table		"a7storeList"
-		var		a7cheatOpenStore
-		scrollbar	'GUISCRC'
-	}
-	button
-	{
+    area    136 16 448 222
+    hidehighlight
+    rowheight  22
+    table   "a7storeList"
+    var     a7cheatOpenStore
+    scrollbar 'GUISCRC'
+  }
+  button
+  {
     enabled "a7cheatListType == 3"
-		area		132 246 140 30
-		bam			GUIBUTNS
-		sequence	2
-		text		"A7_OPEN_BUTTON"
-		text style	"button"
-		action 		"C:StartStore(a7storeList[a7cheatOpenStore][1])"
-	}
+    area    132 246 140 30
+    bam     GUIBUTNS
+    sequence  2
+    text    "A7_OPEN_BUTTON"
+    text style  "button"
+    action  "C:StartStore(a7storeList[a7cheatOpenStore][1])"
+  }
   -- STORE LIST END
 
   -- CREATURE LIST START
-	list
-	{
-		column
-		{
-			width 23
-			label
-			{
-				area -8 0 -1 -1
-				mosaic lua "zZspellBookBkg(rowNumber, a7cheatSpawnCreature, 'fcatrtbm')"
-				respectClipping
-			}
-			label
-			{
-				area 8 0 -1 -1
-				text lua "a7creatureList[rowNumber][1]"
-				text style "list"
+  list
+  {
+    column
+    {
+      width 23
+      label
+      {
+        area -8 0 -1 -1
+        mosaic lua "zZspellBookBkg(rowNumber, a7cheatSpawnCreature, 'fcatrtbm')"
+        respectClipping
+      }
+      label
+      {
+        area 8 0 -1 -1
+        text lua "a7creatureList[rowNumber][1]"
+        text style "list"
         text color 'O'
-			}
-		}
-		column
-		{
-			width 20
-			label
-			{
-				area -8 0 -1 -1
-				mosaic lua "zZspellBookBkg(rowNumber, a7cheatSpawnCreature, 'fcatrtbm')"
-				respectClipping
-			}
-			label
-			{
-				area 8 0 -1 -1
-				text lua "a7luaAllegiance(a7creatureList[rowNumber][2])"
-				text style "list"
-			}
-		}
-		column
-		{
-			width 57
-			label
-			{
-				area -8 0 -1 -1
-				mosaic lua "zZspellBookBkg(rowNumber, a7cheatSpawnCreature, 'fcatrtbm')"
-				respectClipping
-			}
-			label
-			{
-				area 8 0 -1 -1
-				text lua "a7creatureList[rowNumber][3]"
-				text style "list"
-			}
-		}
+      }
+    }
+    column
+    {
+      width 20
+      label
+      {
+        area -8 0 -1 -1
+        mosaic lua "zZspellBookBkg(rowNumber, a7cheatSpawnCreature, 'fcatrtbm')"
+        respectClipping
+      }
+      label
+      {
+        area 8 0 -1 -1
+        text lua "a7luaAllegiance(a7creatureList[rowNumber][2])"
+        text style "list"
+      }
+    }
+    column
+    {
+      width 57
+      label
+      {
+        area -8 0 -1 -1
+        mosaic lua "zZspellBookBkg(rowNumber, a7cheatSpawnCreature, 'fcatrtbm')"
+        respectClipping
+      }
+      label
+      {
+        area 8 0 -1 -1
+        text lua "a7creatureList[rowNumber][3]"
+        text style "list"
+      }
+    }
     enabled "a7cheatListType == 4"
-		area 136 16 448 222
-		hidehighlight
-		rowheight	22
-		table		"a7creatureList"
-		var		a7cheatSpawnCreature
-		scrollbar	'GUISCRC'
-	}
-	button
-	{
+    area    136 16 448 222
+    hidehighlight
+    rowheight  22
+    table   "a7creatureList"
+    var     a7cheatSpawnCreature
+    scrollbar 'GUISCRC'
+  }
+  button
+  {
     enabled "a7cheatListType == 4"
-		area		132 246 140 30
-		bam			GUIBUTNS
-		sequence	2
-		text		"A7_CREATE_BUTTON"
-		text style	"button"
-		action 		"C:CreateCreature(a7creatureList[a7cheatSpawnCreature][1])"
-	}
+    area    132 246 140 30
+    bam     GUIBUTNS
+    sequence  2
+    text    "A7_CREATE_BUTTON"
+    text style  "button"
+    action  "C:CreateCreature(a7creatureList[a7cheatSpawnCreature][1])"
+  }
   -- CREATURE LIST END
 
   -- COMMAND LIST START
-	list
-	{
-		column
-		{
-			width 100
-			label
-			{
-				area -8 0 -1 -1
-				mosaic lua "zZspellBookBkg(rowNumber, a7cheatApplyCommand, 'fcatrtb0')"
-				respectClipping
-			}
-			label
-			{
-				area 8 0 -1 -1
-				text lua "a7commandList[rowNumber][1]"
-				text style "list"
-			}
-		}
+  list
+  {
+    column
+    {
+      width 100
+      label
+      {
+        area -8 0 -1 -1
+        mosaic lua "zZspellBookBkg(rowNumber, a7cheatApplyCommand, 'fcatrtb0')"
+        respectClipping
+      }
+      label
+      {
+        area 8 0 -1 -1
+        text lua "a7commandList[rowNumber][1]"
+        text style "list"
+      }
+    }
     enabled "a7cheatListType == 5"
-		area 136 16 448 222
-		hidehighlight
-		rowheight	22
-		table		"a7commandList"
-		var		a7cheatApplyCommand
-		scrollbar	'GUISCRC'
-    action "a7commandMode = a7commandList[a7cheatApplyCommand][3]"
-	}
-	button
-	{
+    area    136 16 448 222
+    hidehighlight
+    rowheight  22
+    table   "a7commandList"
+    var     a7cheatApplyCommand
+    scrollbar 'GUISCRC'
+    action  "a7commandMode = a7commandList[a7cheatApplyCommand][3]"
+  }
+  button
+  {
     enabled "a7cheatListType == 5 and (a7commandMode == 0 or a7commandMode == 2)"
-		area		132 246 140 30
-		bam			GUIBUTNS
-		sequence	2
-		text		"A7_COMMAND_BUTTON"
+    area    132 246 140 30
+    bam     GUIBUTNS
+    sequence  2
+    text    "A7_COMMAND_BUTTON"
     tooltip lua "t('A7_TOGGLE_CMD_LUA_TOOLTIP')"
-		text style	"button"
-		action 		"a7luaCommand(a7cheatApplyCommand)"
-	}
-	button
-	{
+    text style  "button"
+    action  "a7luaCommand(a7cheatApplyCommand)"
+  }
+  button
+  {
     enabled "a7cheatListType == 5 and not (a7commandMode == 0 or a7commandMode == 2)"
-		area		132 246 140 30
-		bam			GUIBUTNS
-		sequence	2
-		text		"A7_PERFORM_BUTTON"
+    area    132 246 140 30
+    bam     GUIBUTNS
+    sequence  2
+    text    "A7_PERFORM_BUTTON"
     tooltip lua "t('A7_TOGGLE_CMD_RUN_TOOLTIP')"
-		text style	"button"
-    action 		"a7luaCommand(a7cheatApplyCommand)"
-	}
+    text style  "button"
+    action  "a7luaCommand(a7cheatApplyCommand)"
+  }
   -- COMMAND LIST END
 
   -- AREA LIST START
-	list
-	{
-		column 
-		{
-			width 20
-			label
-			{
-				area -8 0 -1 -1
-				mosaic lua "zZspellBookBkg(rowNumber, cheatTeleportArea, 'fcatrtbm')"
-				respectClipping
-			}
-			label
-			{
-				area 8 0 -1 -1
-				text lua "cheatAreaDisplayList[rowNumber][1]"
-				text style "list"
-				text color	'O'
-			}
-		}
-		column 
-		{ 
-			width 80
-			label
-			{
-				area -8 0 -1 -1
-				mosaic lua "zZspellBookBkg(rowNumber, cheatTeleportArea, 'fcatrtbm')"
-				respectClipping
-			}
-			label
-			{
-				area 0 0 -1 -1
-				text lua "cheatAreaDisplayList[rowNumber][2]"
-				text style "list"
-			}
-		}
+  list
+  {
+    column 
+    {
+      width 20
+      label
+      {
+        area -8 0 -1 -1
+        mosaic lua "zZspellBookBkg(rowNumber, cheatTeleportArea, 'fcatrtbm')"
+        respectClipping
+      }
+      label
+      {
+        area 8 0 -1 -1
+        text lua "cheatAreaDisplayList[rowNumber][1]"
+        text style "list"
+        text color  'O'
+      }
+    }
+    column 
+    { 
+      width 80
+      label
+      {
+        area -8 0 -1 -1
+        mosaic lua "zZspellBookBkg(rowNumber, cheatTeleportArea, 'fcatrtbm')"
+        respectClipping
+      }
+      label
+      {
+        area 0 0 -1 -1
+        text lua "cheatAreaDisplayList[rowNumber][2]"
+        text style "list"
+      }
+    }
     enabled "a7cheatListType == 0"
-		area 136 16 448 222
-		hidehighlight
-		rowheight	22
-		table		"cheatAreaDisplayList"
-		var		cheatTeleportArea
-		scrollbar	'GUISCRC'
-	}
-	button
-	{
+    area    136 16 448 222
+    hidehighlight
+    rowheight  22
+    table   "cheatAreaDisplayList"
+    var     cheatTeleportArea
+    scrollbar 'GUISCRC'
+  }
+  button
+  {
     enabled "a7cheatListType == 0"
-		area		132 246 140 30
-		bam			GUIBUTNS
-		sequence	2
-		text		"TRAVEL_BUTTON"
-		text style	"button"
-		action 		"C:MoveToArea(cheatAreaDisplayList[cheatTeleportArea][1])"
-	}
+    area    132 246 140 30
+    bam     GUIBUTNS
+    sequence  2
+    text    "TRAVEL_BUTTON"
+    text style  "button"
+    action  "C:MoveToArea(cheatAreaDisplayList[cheatTeleportArea][1])"
+  }
   -- AREA LIST END
 
-	label
-	{
-		area		605 40 279 56
-		bam			'title'
-		sequence	0
+  label
+  {
+    area    605 40 279 56
+    bam     'title'
+    sequence  0
     frame lua "startCampaignData[selectedCampaign].title"
-		scaleToClip
-	}
+    scaleToClip
+  }
 
-	button
-	{
-		area		605 162 140 30
-		bam			GUIBUTNS
-		sequence	2
-		text			"GODBOW_LABEL"
-		text style	"button"
-		action		"C:CreateItem('godbow')"
-	}
+  button
+  {
+    area    605 162 140 30
+    bam     GUIBUTNS
+    sequence  2
+    text    "GODBOW_LABEL"
+    text style  "button"
+    action  "C:CreateItem('godbow')"
+  }
 
-	button
-	{
-		area		605 204 140 30
-		bam			GUIBUTNS
-		sequence	2
-		text		"GIVE_GOLD_LABEL"
-		text style	"button"
-		action		"C:AddGold(cheatGoldAmt)"
-	}
-	edit
-	{
-		area		751 204 138 30
-		var			cheatGoldAmt
-		text style	"edit"
-		text color	'$'
-		text align	left center
-		maxlines	1
-	}
+  button
+  {
+    area    605 204 140 30
+    bam     GUIBUTNS
+    sequence  2
+    text    "GIVE_GOLD_LABEL"
+    text style  "button"
+    action  "C:AddGold(cheatGoldAmt)"
+  }
+  edit
+  {
+    area    751 204 138 30
+    var     cheatGoldAmt
+    text style  "edit"
+    text color  '$'
+    text align  left center
+    maxlines  1
+  }
 
-	button
-	{
-		area		605 246 140 30
-		bam			GUIBUTNS
-		sequence	2
-		text		"GIVE_XP_LABEL"
-		text style	"button"
-		action		"C:SetCurrentXP(cheatXpAmt)"
-	}
-	edit
-	{
-		area		751 246 138 30
-		var			cheatXpAmt
-		text style	"edit"
-		text color	'$'
-		text align	left center
-		maxlines	1
-	}
+  button
+  {
+    area    605 246 140 30
+    bam     GUIBUTNS
+    sequence  2
+    text    "GIVE_XP_LABEL"
+    text style  "button"
+    action  "C:SetCurrentXP(cheatXpAmt)"
+  }
+  edit
+  {
+    area    751 246 138 30
+    var     cheatXpAmt
+    text style  "edit"
+    text color  '$'
+    text align  left center
+    maxlines  1
+  }
 
-	button
-	{
-		area		751 162 140 30
-		bam			GUIBUTNS
-		sequence	2
-		text		"EXPLORE_LABEL"
-		text style	"button"
-		action		"C:ExploreArea()"
-	}
+  button
+  {
+    area    751 162 140 30
+    bam     GUIBUTNS
+    sequence  2
+    text    "EXPLORE_LABEL"
+    text style  "button"
+    action  "C:ExploreArea()"
+  }
 }
