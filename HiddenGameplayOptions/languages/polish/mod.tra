@@ -213,3 +213,84 @@ Uwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.~
 @10003 = ~Broń nie nadaje się do przeprowadzenia ataku z zaskoczenia~
 @10004 = ~Obrażenia po ataku z zaskoczenia~
 @10005 = ~Druzgocące uderzenie~
+
+// *** Strings for the Cheat Menu ***
+
+@20000 = ~STWÓRZ~
+@20001 = ~POLECENIE~
+@20002 = ~OTWÓRZ~
+@20003 = ~WYKONAJ~
+@20004 = ~Ilość/ładunki:~
+@20005 = ~<< OBSZARY~
+@20006 = ~<< PRZEDMIOTY~
+@20007 = ~<< CZARY~
+@20008 = ~<< SKLEPY~
+@20009 = ~<< STWORZENIA~
+@20010 = ~<< POLECENIA~
+@20011 = ~Kliknij, aby aktywować listę przedmiotów.~
+@20012 = ~Kliknij, aby aktywować listę czarów.~
+@20013 = ~Kliknij, aby aktywować listę sklepów.~
+@20014 = ~Kliknij, aby aktywować listę stworzeń.~
+@20015 = ~Kliknij, aby aktywować listę komend.~
+@20016 = ~Kliknij, aby aktywować listę obszarów.~
+@20017 = ~Polecenie zostanie dodane do konsoli Lua.~
+@20018 = ~Polecenie zostanie natychmiast wykonane.~
+
+// PSTEE-specific labels
+@20100 = ~Stwórz~
+@20101 = ~Polecenie~
+@20102 = ~Otwórz~
+@20103 = ~Wykonaj~
+@20105 = ~<< Obszary~
+@20106 = ~<< Przedmioty~
+@20107 = ~<< Czary~
+@20108 = ~<< Sklepy~
+@20109 = ~<< Stworzenia~
+@20110 = ~<< Polecenia~
+
+// Translator note: Quotation marks in strings must be escaped
+@20200 = ~Usuń status „Upadłego łowcy” z wybranej postaci~
+@20201 = ~Usuń status „Upadłego paladyna” z wybranej postaci~
+@20202 = ~Zablokuj ekran na wybranej postaci~
+@20203 = ~Usuń blokadę ekranu z wybranej postaci~
+@20204 = ~Zwiększ reputację drużyny o 2~
+@20205 = ~Zmniejsz reputację drużyny o 2~
+@20206 = ~Ustaw czas dnia na następny „Poranek”~
+@20207 = ~Ustaw czas dnia na następne „Południe”~
+@20208 = ~Ustaw czas dnia na następny „Wieczór”~
+@20209 = ~Ustaw czas dnia na następną „Północ”~
+@20210 = ~Przewiń czas gry o 8 godzin~
+@20211 = ~Przewiń czas rzeczywisty o godzinę~
+@20212 = ~Przewiń czas rzeczywisty o dzień~
+@20213 = ~Zmień pogodę na „Bezchmurna”~
+@20214 = ~Zmień pogodę na „Deszczowa”~
+@20215 = ~Zmień pogodę na „Śnieżna”~
+@20216 = ~Zmień pogodę na „Mglista”~
+@20217 = ~Zniszcz wszystkie stosy na ziemi na wybranym obszarze~
+@20218 = ~Włącz wyświetlanie numerów linii dialogowych dla wyświetlanego tekstu~
+@20219 = ~Wyłącz wyświetlanie numerów linii dialogowych dla wyświetlanego tekstu~
+@20220 = ~Pokaż napisy końcowe i wróć do menu głównego~
+
+// PSTEE-specific additions
+// Translator note: Quotation marks in strings must be escaped
+@20250 = ~Zwiększ o 2 wartość charakteru na osi moralnej (Dobry..Zły)~
+@20251 = ~Zmniejsz o 2 wartość charakteru na osi moralnej (Dobry..Zły)~
+@20252 = ~Zwiększ o 2 wartość charakteru na osi etycznej (Praworządny..Chaotyczny)~
+@20253 = ~Zmniejsz o 2 wartość charakteru na osi etycznej (Praworządny..Chaotyczny)~
+@20254 = ~Zwiększ o 1 wartość parametru „Morderstwo”~
+@20255 = ~Zmniejsz o 1 wartość parametru „Morderstwo”~
+@20256 = ~Zwiększ o 1 wartość parametru „Pani”~
+@20257 = ~Zmniejsz o 1 wartość parametru „Pani”~
+
+// Spell types
+@20300 = ~Specjalny~
+@20301 = ~Maga~
+@20302 = ~Kapłański~
+@20303 = ~Psioniczny~
+@20304 = ~Wrodzony~
+@20305 = ~Pieśń barda~
+
+// Creature allegiances
+@20310 = ~przyjazny~
+@20311 = ~neutralny~
+@20312 = ~wrogi~

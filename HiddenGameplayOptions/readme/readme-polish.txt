@@ -30,20 +30,23 @@ Instalacja
 Jest to modyfikacja WeiDU, co oznacza, iż jest bardzo prosta w instalacji. Wystarczy rozpakować
 pobrane archiwum do katalogu z grą, a następnie uruchomić plik „setup-HiddenGameplayOptions.exe”.
 
-Informacja dla osób grających w Siege of Dragonspear (SoD):
-GOG i Steam instalują „Siege of Dragonspear” w sposób, który nie pozwala na bezpośrednie
-modowanie gry. Aby można było instalować jakiekolwiek modyfikacje oparte na WeiDU, niezbędne
-jest zainstalowanie w folderze SoD modyfikacji o nazwie „DLC Merger”.
-Można ją pobrać stąd: https://github.com/Argent77/A7-DlcMerger/releases/latest
+Uwagi dla grających w dodatek Siege of Dragonspear (SoD):
+Dodatek „Siege of Dragonspear” nie jest instalowany jak standardowa modyfikacja na platformach GoG
+lub Steam, w zwiazku z czym nie może być modowany bez wcześniejszego przygotowania. Przed instalacją
+tej, czy jakiejkolwiek innej modyfikacji opartej na WeiDU, należy zainstalować modyfikację o nazwie
+„DLC Merger”.
+Można ją pobrać ze strony: https://github.com/Argent77/A7-DlcMerger/releases/latest
 
 
-Kompatybilność
-~~~~~~~~~~~~~~
+Kompatybilność i kolejność instalacji
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Modyfikacja ta działa ze wszystkimi grami z serii Enhanced Edition w wersji 2.0 lub wyższej. Jest
-również kompatybilna z modyfikacją „Dragonspear UI++”, której autorem jest Pecca oraz modyfikacją
-Lefreut's Enhanced UI (LeUI), której autorem jest Lefreut. Po wykryciu tych modyfikacji niektóre
-opcje mogą znaleźć się w innych sekcjach.
+również kompatybilna z modyfikacją „Dragonspear UI++”, której autorem jest Pecca i w dużej mierze
+z modyfikacją Lefreut's Enhanced UI (LeUI), której autorem jest Lefreut. Po wykryciu tych modyfikacji
+niektóre opcje mogą znaleźć się w innych sekcjach. Komponent „Ulepszone menu opcji ułatwiających grę”
+może powodować drobne wizualne usterki, jeśli został zainstalowany wraz z modyfikacją Lefreut's Enhanced UI.
+Błędy te nie mają żadnego wpływu na funkcjonalność komponentu.
 
 Modyfikacja ta nie może być instalowana wraz z komponentem modyfikacji EEUITweaks o nazwie „Hidden
 Game Options”. Możesz zainstalować tylko jedno z nich.
@@ -51,6 +54,10 @@ Game Options”. Możesz zainstalować tylko jedno z nich.
 Aktualizowanie plików definiujących UI może być skomplikowane. Aby zabezpieczyć się przed
 możliwością uszkodzenia plików gry przez nieudaną aktualizację plików, zakończy się ona wymuszonym
 błędem, a aktualizowane pliki zostaną przywrócone do pierwotnego stanu.
+
+Rekomendowana jest instalcja tej modyfikacji po Tweaks Anthology, jak również modyfikacjach modyfikujących
+interfejs użytkownika. W celu zwiększenia użyteczności, komponent „Ulepszone menu opcji ułatwiających grę”
+powinien być instalowany po modyfikacjach dodających nową zawartość do gry.
 
 
 Komponenty
@@ -253,7 +260,7 @@ Uwaga: Opcja ta nie działa w wersjach gry niższych niż 2.5.16.6.
 
 25. Dodaj w grze opcję „Ulepszone wyszukiwanie ścieżek”
 
-Opcja ta poprawia odnajdywanie ścieżek poprzez ciągłe przeliczanie algorytmu wyszukiwania ścieżek 
+Opcja ta poprawia odnajdywanie ścieżek poprzez ciągłe przeliczanie algorytmu wyszukiwania ścieżek
 poruszających się postaci.
 
 Opcja ta znajduje się w sekcji Opcje gry.
@@ -261,7 +268,7 @@ Opcja ta znajduje się w sekcji Opcje gry.
 
 26. Dodaj w grze opcję „Wygaszanie podświetlania pułapek” (niedostępne w PST:EE)
 
-Opcja ta pozwala na włączanie lub wyłączanie wygaszania po upływie pewnego czasu podświetlania pułapek 
+Opcja ta pozwala na włączanie lub wyłączanie wygaszania po upływie pewnego czasu podświetlania pułapek
 i ukrytych drzwi.
 
 Opcja ta znajduje się w sekcji Opcje gry > Interakcja > Graficzne wskazówki.
@@ -269,7 +276,7 @@ Opcja ta znajduje się w sekcji Opcje gry > Interakcja > Graficzne wskazówki.
 
 27. Dodaj w grze opcję „Pokazuj czary, których można się nauczyć”
 
-Opcja ta pozwala na włączenie lub wyłączenie wyświetlania zielonej obwódki wokół czarów, które można 
+Opcja ta pozwala na włączenie lub wyłączenie wyświetlania zielonej obwódki wokół czarów, które można
 zapisać do księgi zaklęć.
 
 Opcja ta znajduje się w sekcji Grafika > Opcje wyświetlania.
@@ -277,7 +284,7 @@ Opcja ta znajduje się w sekcji Grafika > Opcje wyświetlania.
 
 28. Dodaj w grze opcję „Renderowanie wyszukiwania na mapie”
 
-Opcja ta pozwala na włączanie i wyłączanie możliwości użycia klawisza SHIFT do wyświetlania powłoki 
+Opcja ta pozwala na włączanie i wyłączanie możliwości użycia klawisza SHIFT do wyświetlania powłoki
 statycznego wyszukiwania lokacji na mapie dla aktualnie odwiedzanego obszaru.
 
 Opcja ta znajduje się w sekcji Grafika > Opcje wyświetlania.
@@ -285,8 +292,8 @@ Opcja ta znajduje się w sekcji Grafika > Opcje wyświetlania.
 
 29. Dodaj w grze opcję „Renderowanie dynamicznego wyszukiwania na mapie”
 
-Opcja ta pozwala na włączanie i wyłączanie możliwości użycia klawisza CTRL do wyświetlania powłoki 
-dynamicznego wyszukiwania regionów, na przykład zablokowanych przejść czy przestrzeni osobistej 
+Opcja ta pozwala na włączanie i wyłączanie możliwości użycia klawisza CTRL do wyświetlania powłoki
+dynamicznego wyszukiwania regionów, na przykład zablokowanych przejść czy przestrzeni osobistej
 zajmowanej przez istoty.
 
 Opcja ta znajduje się w sekcji Grafika > Opcje wyświetlania.
@@ -325,9 +332,37 @@ Uwzględnia wszystkie czary i wysokopoziomowe zdolności dostępne w momencie in
 oryginalnej gry, jak i z innych modyfikacji.
 
 Do wyboru są trzy opcje:
-- Zaktualizowanie przypisania klawiszy tylko dla czarów kapłańskich.
-- Zaktualizowanie przypisania klawiszy tylko dla czarów maga.
+- Zaktualizowanie przypisania klawiszy tylko dla czarów kapłańskich,
+- Zaktualizowanie przypisania klawiszy tylko dla czarów maga,
 - Zaktualizowanie przypisania klawiszy dla czarów kapłańskich i maga.
+
+33. Ulepszone menu opcji ułatwiających grę
+
+Komponent ten rozszerza o dodatkowe możliwości menu opcji ułatwiających grę, które można otworzyć po
+aktywacji konsoli debugowania. Poniżej nowe dostępne opcje:
+- Lista dostępnych przedmiotów, które można przywołać do ekwipunku drużyny,
+- Lista dostępnych czarów i zdolności specjalnych, które można dodać do wybranych postaci,
+- Lista dostępnych sklepów, które można otworzyć w celu dokonania zakupu lub sprzedaży, identyfikacji
+  przedmiotu, skorzystania z usług świątyni, czy też odpoczynku,
+- Lista dostępnych stworzeń, które można przywołać na mapie gry,
+- Zestawienie przydatnych poleceń skryptowych lub do debugowania, takich jak zlikwidowanie statusu
+  upadłości łowcy lub paladyna, włączenie lub wyłączenie wyświetlania numerów linii dialogowych,
+  zmiana reputacji drużyny, czy też czy też przewinięcie czasu (rzeczywistego lub gry).
+
+Komponent ten jest kompatybilny z następującymi modyfikacjami:
+- Lefreut's Enhanced UI (wszystkie warianty): może powodować drobne wizualne usterki, które nie wpływają
+  na funkcjonalność (autor: lefreut),
+- Dragonspear UI++ (autor: Pecca),
+- Tipun's User Interface (autor: tipun),
+- Classic BG UI (autor: K4f4r).
+
+Komponent ten został również uwzględniony w opcji instalacji: „Zainstaluj wszystkie Ukryte opcje gry”.
+
+34. Zaktualizuj tabele zasobów dla komponentu „Ulepszone menu opcji ułatwiających grę”
+
+Komponent ten pozwala na aktualizację tabeli zasobów używanych przez komponent „Ulepszone menu opcji
+ułatwiających grę”, bez konieczności ponownej instalacji całej modyfikacji. Nie następuje rejestracja w logu
+WeiDU, można go więc wywołać w dowolnym momencie.
 
 
 Credits

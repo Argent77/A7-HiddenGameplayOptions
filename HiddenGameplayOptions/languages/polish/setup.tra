@@ -37,6 +37,9 @@
 @102 = ~tylko dla czarow maga~
 @103 = ~dla czarow kaplanskich i maga~
 
+@200 = ~Ulepszone menu opcji ulatwiajacych gre~
+@201 = ~Zaktualizuj tabele zasobów dla komponentu "Ulepszone menu opcji ulatwiajacych gre"~
+
 @500 = ~Wymagane posiadanie wersji Enhanced Edition w wersji 2.0 lub wyzszej.~
 @501 = ~Nie mozna zaktualizowac pliku LUA~
 @502 = ~Nie mozna zaktualizowac UI.MENU~
@@ -47,3 +50,5 @@
 @507 = ~Ten komponent nie jest kompatybilny z modyfikacja "Lefreut's Enhanced UI (LeUI)".~
 @508 = ~Wymaga uprzedniego zainstalowania modyfikacji "Ikona zmiany poziomu".~
 @509 = ~Wymaga uprzedniego zainstalowania komponentu "Tworzenie zapisow gry w regularnych odstepach czasu" z modyfikacji Tweaks Anthology~
+@510 = ~Wymaga uprzedniego zainstalowania komponentu "Ulepszone menu opcji ulatwiajacych gre"~
+@511 = ~Komponent ten mozna wywolac w dowolnym momencie.~
