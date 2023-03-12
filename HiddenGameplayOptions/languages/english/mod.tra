@@ -247,7 +247,7 @@ Note: You must restart the game for changes to take effect.~
 @20109 = ~<< Creatures~
 @20110 = ~<< Commands~
 
-// Translator note: Quotation marks in strings must be escaped
+// Translator note: (Ascii) Quotation marks in strings must be escaped
 @20200 = ~Remove \"Fallen Ranger\" status from the selected character~
 @20201 = ~Remove \"Fallen Paladin\" status from the selected character~
 @20202 = ~Lock screen on the selected character~
@@ -271,7 +271,7 @@ Note: You must restart the game for changes to take effect.~
 @20220 = ~Show end credits and return to the main menu~
 
 // PSTEE-specific additions
-// Translator note: Quotation marks in strings must be escaped
+// Translator note: (Ascii) Quotation marks in strings must be escaped
 @20250 = ~Increase moral value (Good..Evil) by 2~
 @20251 = ~Decrease moral value (Good..Evil) by 2~
 @20252 = ~Increase ethical value (Lawful..Chaotic) by 2~

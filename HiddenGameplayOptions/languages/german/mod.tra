@@ -249,23 +249,23 @@ Hinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.
 @20110 = ~<< Befehle~
 
 // Translator note: Quotation marks in strings must be escaped
-@20200 = ~Status \"Gefallener Waldläufer\" vom ausgewählten Charakter entfernen~
-@20201 = ~Status \"Gefallener Paladin\" vom ausgewählten Charakter entfernen~
+@20200 = ~Status „Gefallener Waldläufer“ vom ausgewählten Charakter entfernen~
+@20201 = ~Status „Gefallener Paladin“ vom ausgewählten Charakter entfernen~
 @20202 = ~Bildschirm auf den ausgewählten Charakter fixieren~
 @20203 = ~Fixierung des Bildschirms vom ausgewählten Charakter entfernen~
 @20204 = ~Ruf der Gruppe um 2 erhöhen~
 @20205 = ~Ruf der Gruppe um 2 vermindern~
-@20206 = ~Tageszeit auf nächsten \"Morgen\" setzen~
-@20207 = ~Tageszeit auf nächsten \"Mittag\" setzen~
-@20208 = ~Tageszeit auf nächsten \"Abend\" setzen~
-@20209 = ~Tageszeit auf nächste \"Mitternacht\" setzen~
+@20206 = ~Tageszeit auf nächsten „Morgen“ setzen~
+@20207 = ~Tageszeit auf nächsten „Mittag“ setzen~
+@20208 = ~Tageszeit auf nächsten „Abend“ setzen~
+@20209 = ~Tageszeit auf nächste „Mitternacht“ setzen~
 @20210 = ~Spielzeit um 8 Stunden vorstellen~
 @20211 = ~Realzeit um eine Stunde vorstellen~
 @20212 = ~Realzeit um einen Tag vorstellen~
-@20213 = ~Wetter auf \"Klar\" ändern~
-@20214 = ~Wetter auf \"Regen\" ändern~
-@20215 = ~Wetter auf \"Schnee\" ändern~
-@20216 = ~Wetter auf \"Nebel\" ändern~
+@20213 = ~Wetter auf „Klar“ ändern~
+@20214 = ~Wetter auf „Regen“ ändern~
+@20215 = ~Wetter auf „Schnee“ ändern~
+@20216 = ~Wetter auf „Nebel“ ändern~
 @20217 = ~Alle abgelegten Gegenstände auf dem Boden zerstören~
 @20218 = ~Anzeige von Strref-Werten für Text im Spiel aktivieren~
 @20219 = ~Anzeige von Strref-Werten für Text im Spiel deaktivieren~
@@ -277,10 +277,10 @@ Hinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.
 @20251 = ~Moral (Gut..Böse) um 2 vermindern~
 @20252 = ~Ethik (Rechtschaffend..Chaotisch) um 2 erhöhen~
 @20253 = ~Ethik (Rechtschaffend..Chaotisch) um 2 vermindern~
-@20254 = ~\"Mord\"-Anzahl um 1 erhöhen~
-@20255 = ~\"Mord\"-Anzahl um 1 vermindern~
-@20256 = ~\"Lady\"-Wert um 1 erhöhen~
-@20257 = ~\"Lady\"-Wert um 1 vermindern~
+@20254 = ~„Mord“-Anzahl um 1 erhöhen~
+@20255 = ~„Mord“-Anzahl um 1 vermindern~
+@20256 = ~„Lady“-Wert um 1 erhöhen~
+@20257 = ~„Lady“-Wert um 1 vermindern~
 
 // Spell types
 @20300 = ~Speziell~
