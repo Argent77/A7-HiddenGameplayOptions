@@ -16,6 +16,7 @@ menu
     enabled "a7cheatListType == 0"
     area    620 156 140 30
     bam			GUIWPKPC
+    ScaleToClip
     sequence  1
     text    "A7_TOGGLE_AREAS_BUTTON"
     tooltip lua "t('A7_TOGGLE_AREAS_TOOLTIP')"
@@ -28,6 +29,7 @@ menu
     enabled "a7cheatListType == 1"
     area    620 156 140 30
     bam			GUIWPKPC
+    ScaleToClip
     sequence  1
     text    "A7_TOGGLE_ITEMS_BUTTON"
     tooltip lua "t('A7_TOGGLE_ITEMS_TOOLTIP')"
@@ -40,6 +42,7 @@ menu
     enabled "a7cheatListType == 2"
     area    620 156 140 30
     bam			GUIWPKPC
+    ScaleToClip
     sequence  1
     text    "A7_TOGGLE_SPELLS_BUTTON"
     tooltip lua "t('A7_TOGGLE_SPELLS_TOOLTIP')"
@@ -52,6 +55,7 @@ menu
     enabled "a7cheatListType == 3"
     area    620 156 140 30
     bam			GUIWPKPC
+    ScaleToClip
     sequence  1
     text    "A7_TOGGLE_STORES_BUTTON"
     tooltip lua "t('A7_TOGGLE_STORES_TOOLTIP')"
@@ -64,6 +68,7 @@ menu
     enabled "a7cheatListType == 4"
     area    620 156 140 30
     bam			GUIWPKPC
+    ScaleToClip
     sequence  1
     text    "A7_TOGGLE_CREATURES_BUTTON"
     tooltip lua "t('A7_TOGGLE_CREATURES_TOOLTIP')"
@@ -76,6 +81,7 @@ menu
     enabled "a7cheatListType == 5"
     area    620 156 140 30
     bam			GUIWPKPC
+    ScaleToClip
     sequence  1
     text    "A7_TOGGLE_COMMANDS_BUTTON"
     tooltip lua "t('A7_TOGGLE_COMMANDS_TOOLTIP')"
