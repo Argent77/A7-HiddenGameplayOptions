@@ -76,6 +76,9 @@
 @102 = ~for mage spells only~
 @103 = ~for priest and mage spells~
 
+@200 = ~Improved Cheat Menu~
+@201 = ~Update resource tables for "Improved Cheat Menu"~
+
 @500 = ~Enhanced Edition game patched to v2.0 or higher required.~
 @501 = ~Cannot patch LUA file~
 @502 = ~Cannot patch UI.MENU~
@@ -86,3 +89,5 @@
 @507 = ~This component is not compatible with Lefreut's Enhanced UI (LeUI).~
 @508 = ~Requires "Level Up" Icon Tweaks to be installed.~
 @509 = ~Requires Tweaks Anthology's "Create interval saves" to be installed.~
+@510 = ~Requires component "Improved Cheat Menu" to be installed.~
+@511 = ~This component is intended to be called separately if needed.~

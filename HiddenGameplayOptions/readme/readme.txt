@@ -383,6 +383,9 @@ ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa
 History
 ~~~~~~~
 
+4.1
+- Updated Russian translation (thanks yota13)
+
 4.0
 - Added new components "Improved Cheat Menu" and "Update resource tables for Improved Cheat Menu"
 - Added labels for Project Infinity
