@@ -28,8 +28,9 @@ END
 ACTION_IF (MOD_IS_INSTALLED ~eet_gui.tp2~ 0) BEGIN
   // EET alternative GUI
   OUTER_SPRINT ui_mode ~sod~
-END ELSE ACTION_IF (MOD_IS_INSTALLED ~dragonspear_ui++.tp2~ 1) BEGIN
-  // Dragonspear UI++
+END ELSE ACTION_IF (MOD_IS_INSTALLED ~dragonspear_ui++.tp2~ 1 ||
+                    MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) BEGIN
+  // Dragonspear UI++ or Infinity UI++
   OUTER_SPRINT ui_mode ~sod~
 END ELSE ACTION_IF (MOD_IS_INSTALLED ~leui.tp2~ 0 ||
                     MOD_IS_INSTALLED ~leui-bg1ee.tp2~ 0 ||
