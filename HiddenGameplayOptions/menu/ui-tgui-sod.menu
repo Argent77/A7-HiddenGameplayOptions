@@ -126,7 +126,7 @@ menu
     rowheight  22
     table   "a7itemList"
     var     a7cheatCreateItem
-    scrollbar 'GUISCRC'
+    scrollbar '%ui_scrollbar%'
   }
   button
   {
@@ -233,7 +233,7 @@ menu
     rowheight  22
     table   "a7spellList"
     var     a7cheatAddSpell
-    scrollbar 'GUISCRC'
+    scrollbar '%ui_scrollbar%'
   }
   button
   {
@@ -289,7 +289,7 @@ menu
     rowheight  22
     table   "a7storeList"
     var     a7cheatOpenStore
-    scrollbar 'GUISCRC'
+    scrollbar '%ui_scrollbar%'
   }
   button
   {
@@ -361,7 +361,7 @@ menu
     rowheight  22
     table   "a7creatureList"
     var     a7cheatSpawnCreature
-    scrollbar 'GUISCRC'
+    scrollbar '%ui_scrollbar%'
   }
   button
   {
@@ -400,7 +400,7 @@ menu
     rowheight  22
     table   "a7commandList"
     var     a7cheatApplyCommand
-    scrollbar 'GUISCRC'
+    scrollbar '%ui_scrollbar%'
     action  "a7commandMode = a7commandList[a7cheatApplyCommand][3]"
   }
   button
@@ -469,7 +469,7 @@ menu
     rowheight  22
     table   "cheatAreaDisplayList"
     var     cheatTeleportArea
-    scrollbar 'GUISCRC'
+    scrollbar '%ui_scrollbar%'
   }
   button
   {

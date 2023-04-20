@@ -2,23 +2,29 @@
 ACTION_IF (GAME_IS ~eet~) BEGIN
   OUTER_SPRINT game ~eet~
   OUTER_SPRINT ui_mode ~bg2ee~
+  OUTER_SPRINT ui_scrollbar ~GUISCRC~
 END ELSE ACTION_IF (GAME_IS ~bgee~) BEGIN
   ACTION_IF (GAME_INCLUDES ~sod~) BEGIN
     OUTER_SPRINT game ~sod~
     OUTER_SPRINT ui_mode ~sod~
+    OUTER_SPRINT ui_scrollbar ~GUISCRC~
   END ELSE BEGIN
     OUTER_SPRINT game ~bgee~
     OUTER_SPRINT ui_mode ~bgee~
+    OUTER_SPRINT ui_scrollbar ~GUISCRC~
   END
 END ELSE ACTION_IF (GAME_IS ~bg2ee~) BEGIN
   OUTER_SPRINT game ~bg2ee~
   OUTER_SPRINT ui_mode ~bg2ee~
+  OUTER_SPRINT ui_scrollbar ~GUISCRC~
 END ELSE ACTION_IF (GAME_IS ~iwdee~) BEGIN
   OUTER_SPRINT game ~iwdee~
   OUTER_SPRINT ui_mode ~iwdee~
+  OUTER_SPRINT ui_scrollbar ~GUISCRC~
 END ELSE ACTION_IF (GAME_IS ~pstee~) BEGIN
   OUTER_SPRINT game ~pstee~
   OUTER_SPRINT ui_mode ~pstee~
+  OUTER_SPRINT ui_scrollbar ~CGSCRL1~
 END ELSE BEGIN
   // Should never happen
   FAIL @500  // Enhanced Edition game patched to v2.0 or higher required.
@@ -28,20 +34,28 @@ END
 ACTION_IF (MOD_IS_INSTALLED ~eet_gui.tp2~ 0) BEGIN
   // EET alternative GUI
   OUTER_SPRINT ui_mode ~sod~
-END ELSE ACTION_IF (MOD_IS_INSTALLED ~dragonspear_ui++.tp2~ 1 ||
-                    MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) BEGIN
-  // Dragonspear UI++ or Infinity UI++
+  OUTER_SPRINT ui_scrollbar ~GUISCRC~
+END ELSE ACTION_IF (MOD_IS_INSTALLED ~dragonspear_ui++.tp2~ 1) BEGIN
+  // Dragonspear UI++
   OUTER_SPRINT ui_mode ~sod~
+  OUTER_SPRINT ui_scrollbar ~GUISCRC~
+END ELSE ACTION_IF (MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) BEGIN
+  // Infinity UI++
+  OUTER_SPRINT ui_mode ~sod~
+  OUTER_SPRINT ui_scrollbar ~rgdscrl1~
 END ELSE ACTION_IF (MOD_IS_INSTALLED ~leui.tp2~ 0 ||
                     MOD_IS_INSTALLED ~leui-bg1ee.tp2~ 0 ||
                     MOD_IS_INSTALLED ~leui-sod.tp2~ 0) BEGIN
   // lefreut's Enhanced UI
   OUTER_SPRINT ui_mode ~leui~
+  OUTER_SPRINT ui_scrollbar ~GUISCRC~
 END ELSE ACTION_IF (MOD_IS_INSTALLED ~tipun_gui.tp2~ 10) BEGIN
   // Tipun's User Interface for Enhanced Edition Games
   OUTER_SPRINT ui_mode ~tgui-%game%~
+  OUTER_SPRINT ui_scrollbar ~GUISCRC~
 END ELSE ACTION_IF (GAME_IS ~bgee~ &&
                     RESOURCE_CONTAINS ~ui.menu~ ~\bGUIWPKPC\b~) BEGIN
   // Classic BG UI (non-WeiDU mod)
   OUTER_SPRINT ui_mode ~cbgui~
+  OUTER_SPRINT ui_scrollbar ~GUISCRC~
 END

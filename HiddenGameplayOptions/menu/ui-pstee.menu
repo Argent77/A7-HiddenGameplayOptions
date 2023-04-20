@@ -105,7 +105,7 @@ menu
     rowheight  18
     table   "a7itemList"
     var     a7cheatCreateItem
-    scrollbar 'CGSCRL1'
+    scrollbar '%ui_scrollbar%'
     hidehighlight
     highlight color 255 255 255 255
     focus color 255 255 255 255
@@ -133,7 +133,7 @@ menu
     enabled "cheatMenuCollapsed ~= nil and a7cheatListType == 1"
     area    350 256 36 20
     var     a7cheatItemCharge1
-    scrollbar 'CGSCRL1'
+    scrollbar '%ui_scrollbar%'
     text style "edit"
     maxlines 1
     fill    80 60 30 64
@@ -143,7 +143,7 @@ menu
     enabled "cheatMenuCollapsed ~= nil and a7cheatListType == 1"
     area    390 256 36 20
     var     a7cheatItemCharge2
-    scrollbar 'CGSCRL1'
+    scrollbar '%ui_scrollbar%'
     text style "edit"
     maxlines 1
     fill    80 60 30 64
@@ -153,7 +153,7 @@ menu
     enabled "cheatMenuCollapsed ~= nil and a7cheatListType == 1"
     area    430 256 36 20
     var     a7cheatItemCharge3
-    scrollbar 'CGSCRL1'
+    scrollbar '%ui_scrollbar%'
     text style "edit"
     maxlines 1
     fill    80 60 30 64
@@ -202,7 +202,7 @@ menu
     rowheight  18
     table   "a7spellList"
     var     a7cheatAddSpell
-    scrollbar 'CGSCRL1'
+    scrollbar '%ui_scrollbar%'
     hidehighlight
     highlight color 255 255 255 255
     focus color 255 255 255 255
@@ -250,7 +250,7 @@ menu
     rowheight  18
     table   "a7storeList"
     var     a7cheatOpenStore
-    scrollbar 'CGSCRL1'
+    scrollbar '%ui_scrollbar%'
     hidehighlight
     highlight color 255 255 255 255
     focus color 255 255 255 255
@@ -309,7 +309,7 @@ menu
     rowheight  18
     table   "a7creatureList"
     var     a7cheatSpawnCreature
-    scrollbar 'CGSCRL1'
+    scrollbar '%ui_scrollbar%'
     hidehighlight
     highlight color 255 255 255 255
     focus color 255 255 255 255
@@ -346,7 +346,7 @@ menu
     rowheight  18
     table   "a7commandList"
     var     a7cheatApplyCommand
-    scrollbar  'CGSCRL1'
+    scrollbar '%ui_scrollbar%'
     hidehighlight
     highlight color 255 255 255 255
     focus color 255 255 255 255
@@ -405,7 +405,7 @@ menu
     rowheight  18
     table   "cheatAreas"
     var     cheatTeleportArea
-    scrollbar 'CGSCRL1'
+    scrollbar '%ui_scrollbar%'
     hidehighlight
     highlight color 255 255 255 255
     focus color 255 255 255 255
@@ -445,7 +445,7 @@ menu
     enabled "cheatMenuCollapsed ~= nil"
     area    760 161 130 24
     var     cheatGoldAmt
-    scrollbar 'CGSCRL1'
+    scrollbar '%ui_scrollbar%'
     text style  "edit"
     maxlines  1
     fill    80 60 30 64
@@ -465,7 +465,7 @@ menu
     enabled "cheatMenuCollapsed ~= nil"
     area    760 229 128 24
     var     cheatXpAmt
-    scrollbar 'CGSCRL1'
+    scrollbar '%ui_scrollbar%'
     text style  "edit"
     maxlines  1
     fill    80 60 30 64
