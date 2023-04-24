@@ -28,6 +28,8 @@ ACTION_DEFINE_ASSOCIATIVE_ARRAY blacklist_creatures BEGIN
 END
 
 // Generating creatures list
+OUTER_SET name1 = GAME_IS ~pstee~ ? NAME1 : NAME2
+OUTER_SET name2 = GAME_IS ~pstee~ ? NAME2 : NAME1
 COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
   // checking blacklist
   SPRINT resref ~%SOURCE_RES%~
@@ -40,12 +42,12 @@ COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
   PATCH_IF (NOT exclude) BEGIN
     READ_ASCII 0 sig (8)
     PATCH_IF (~%sig%~ STR_EQ ~CRE V1.0~) BEGIN
-      READ_SLONG NAME2 strref ELSE 0
-      READ_STRREF NAME2 name ELSE ~<Invalid Strref>~
+      READ_SLONG name1 strref ELSE 0
+      READ_STRREF name1 name ELSE ~<Invalid Strref>~
       PATCH_IF (strref <= 0 || STRING_LENGTH ~%name%~ > 80 ||
                 ~%name%~ STRING_CONTAINS_REGEXP ~^<Invalid Strref~ = 0) BEGIN
-        READ_SLONG NAME1 strref ELSE 0
-        READ_STRREF NAME1 name ELSE ~<Invalid Strref>~
+        READ_SLONG name2 strref ELSE 0
+        READ_STRREF name2 name ELSE ~<Invalid Strref>~
         PATCH_IF (strref <= 0 || ~%name%~ STRING_CONTAINS_REGEXP ~^<Invalid Strref~ = 0) BEGIN
           SPRINT name ~~
         END
