@@ -235,6 +235,9 @@ Hinweis: Ihr müsst das Spiel neu starten, damit die Änderungen wirksam werden.
 @20016 = ~Klicken, um Liste der Gebiete zu aktivieren.~
 @20017 = ~Befehl wird in die Lua-Konsole eingefügt.~
 @20018 = ~Befehl wird sofort ausgeführt.~
+@20019 = ~Filter:~
+@20020 = ~Löschen~
+@20021 = ~Filtertext hier eingeben~
 
 // PSTEE-specific labels
 @20100 = ~Erstellen~

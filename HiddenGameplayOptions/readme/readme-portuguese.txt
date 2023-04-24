@@ -273,6 +273,11 @@ ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa
 History
 ~~~~~~~
 
+4.2
+- Added compatibility with Pecca's Infinity UI++ for "Improved Cheat Menu"
+- Added quick filters for the cheat menu lists (areas, items, spells, stores and creatures) to
+  "Improved Cheat Menu"
+
 4.1
 - Updated Russian translation (thanks yota13)
 

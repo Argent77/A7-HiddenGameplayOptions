@@ -234,6 +234,9 @@ Note: You must restart the game for changes to take effect.~
 @20016 = ~Click to activate list of areas.~
 @20017 = ~Command will be added to Lua console.~
 @20018 = ~Command will be executed instantly.~
+@20019 = ~Filter:~
+@20020 = ~Clear~
+@20021 = ~Enter filter text here~
 
 // PSTEE-specific labels
 @20100 = ~Create~

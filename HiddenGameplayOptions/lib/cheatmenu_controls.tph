@@ -22,7 +22,7 @@ BEGIN
 
     PATCH_IF (ofs_menu_start >= 0) BEGIN
       // extracting "onOpen" section from the original ui.menu
-      SPRINT on_open_content ~~
+      SPRINT on_open_content ~%WNL%%TAB%onOpen%WNL%%TAB%"%WNL%%TAB%"%WNL%~  // defaults to empty "onOpen" block
       SET ofs_on_open = INDEX_BUFFER(~^[ %TAB%]*onOpen\b~ ofs_menu_start)
       PATCH_IF (ofs_on_open >= ofs_menu_start && ofs_on_open < ofs_menu_end) BEGIN
         SET ofs_on_open = INDEX_BUFFER(~[%WNL%]~ ofs_on_open - 2) // set before first line break
@@ -31,6 +31,21 @@ BEGIN
         PATCH_IF (ofs_on_open_end > ofs_on_open && ofs_on_open_end < ofs_menu_end) BEGIN
           SET ofs_on_open_end = INDEX_BUFFER(~[%WNL%]~ ofs_on_open_end)
           READ_ASCII ofs_on_open on_open_content (ofs_on_open_end - ofs_on_open)
+        END
+      END
+
+      // inserting new commands to "onOpen" block
+      INNER_ACTION BEGIN
+        COPY ~%MOD_FOLDER%/menu/ui-onopen~ ~%MOD_FOLDER%/menu/ui-onopen~
+          READ_ASCII 0 ui_onopen (BUFFER_LENGTH)
+        BUT_ONLY
+      END
+      INNER_PATCH_SAVE on_open_content ~%on_open_content%~ BEGIN
+        SET ofs = RINDEX_BUFFER(~^[ %TAB%]*"~)
+        PATCH_IF (ofs >= 0) BEGIN
+          SET len = STRING_LENGTH ~%ui_onopen%~
+          INSERT_BYTES ofs len
+          WRITE_ASCIIE ofs ~%ui_onopen%~ (len)
         END
       END
 
@@ -49,12 +64,8 @@ END
 
 
 // Preparing lua functions and tables
-COPY ~%MOD_FOLDER%/menu/ui-vars.menu~ ~%MOD_FOLDER%/menu/ui-vars.menu~
-  READ_ASCII 0 ui_vars (BUFFER_LENGTH)
-BUT_ONLY
-
-// Resolving tra references
-OUTER_PATCH_SAVE ui_vars ~%ui_vars%~ BEGIN
+COPY ~%MOD_FOLDER%/lua/M_a7rhgo.lua~ ~override~
+  // Resolving tra references
   REPLACE_EVALUATE ~@\([0-9]+\)~ BEGIN
     PATCH_IF (IS_AN_INT ~MATCH1~) BEGIN
       SPRINT msg (AT "MATCH1")
@@ -64,7 +75,10 @@ OUTER_PATCH_SAVE ui_vars ~%ui_vars%~ BEGIN
       PATCH_WARN ~Not a valid tra reference: %MATCH0%~
     END
   END ~%msg%~
-END
+
+COPY ~%MOD_FOLDER%/menu/ui-vars.menu~ ~%MOD_FOLDER%/menu/ui-vars.menu~
+  READ_ASCII 0 ui_vars (BUFFER_LENGTH)
+BUT_ONLY
 
 
 // Add before/after vanilla variable initializations

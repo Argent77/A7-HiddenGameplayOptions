@@ -367,6 +367,7 @@ Die folgenden GUI-Mods werden unterstützt:
 - lefreut's Enhanced UI (alle Varianten): Könnte kleinere Grafikfehler beinhalten, die sich aber
   nicht auf die Funktionalität auswirken.
 - Peccas Dragonspear UI++
+- Peccas Infinity UI++
 - Tipuns User Interface
 - Classic BG UI (von K4f4r)
 
@@ -409,6 +410,11 @@ ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa
 
 History
 ~~~~~~~
+
+4.2
+- Added compatibility with Pecca's Infinity UI++ for "Improved Cheat Menu"
+- Added quick filters for the cheat menu lists (areas, items, spells, stores and creatures) to
+  "Improved Cheat Menu"
 
 4.1
 - Updated Russian translation (thanks yota13)

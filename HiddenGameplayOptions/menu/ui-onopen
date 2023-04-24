@@ -1,0 +1,5 @@
+		a7luaFilter(%ui_vars_area_list%, a7cheatAreaList, {1, 2}, a7cheatAreaFilter, %ui_vars_area_strref%)
+		a7luaFilter(a7itemList, a7cheatItemList, {1, 2}, a7cheatItemFilter)
+		a7luaFilter(a7spellList, a7cheatSpellList, {1, 3}, a7cheatSpellFilter)
+		a7luaFilter(a7storeList, a7cheatStoreList, {1, 2}, a7cheatStoreFilter)
+		a7luaFilter(a7creatureList, a7cheatCreatureList, {1, 3}, a7cheatCreatureFilter)

@@ -230,7 +230,7 @@ This component expands the cheat menu, which can be opened if the debug console 
 
 The following UI mods are supported:
 - lefreut's Enhanced UI (*all variants*)
-- Pecca's Dragonspear UI++
+- Pecca's Dragonspear UI++ and Infinity UI++
 - Tipun's User Interface
 - Classic BG UI (by K4f4r)
 

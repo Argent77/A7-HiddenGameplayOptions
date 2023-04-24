@@ -80,6 +80,44 @@ menu
   -- TOGGLE BUTTONS END
 
   -- ITEM LIST START
+  label
+  {
+    enabled "a7cheatListType == 1"
+    area    122 8 65 30
+    text    "A7_FILTER_LABEL"
+    text style "label"
+    text align left center
+  }
+  edit
+  {
+    enabled "a7cheatListType == 1"
+    name    "a7cheatItemFilterEdit"
+    area    193 14 280 24
+    var     a7cheatItemFilter
+    placeholder 'A7_FILTER_PLACEHOLDER'
+    text style "edit"
+    maxlines 1
+    fill    112 111 111 32
+    actionAlt "
+      a7luaFilter(a7itemList, a7cheatItemList, {1, 2}, a7cheatItemFilter)
+      return 1
+    "
+  }
+  button
+  {
+    enabled "a7cheatListType == 1"
+    area    480 8 120 34
+    scaleToClip
+    bam     GUIBUTNS
+    sequence  6
+    text    "A7_CLEAR_BUTTON"
+    text style  "button"
+    action  "
+      a7cheatItemFilter = ''
+      a7luaFilter(a7itemList, a7cheatItemList, {1, 2}, a7cheatItemFilter)
+      Infinity_FocusTextEdit('a7cheatItemFilterEdit')
+    "
+  }
   list
   {
     column
@@ -88,7 +126,7 @@ menu
       label
       {
         area 0 0 -1 -1
-        text lua "a7itemList[rowNumber][1]"
+        text lua "a7cheatItemList[rowNumber][1]"
         text style "list"
       }
     }
@@ -98,15 +136,15 @@ menu
       label
       {
         area 0 0 -1 -1
-        text lua "a7itemList[rowNumber][2]"
+        text lua "a7cheatItemList[rowNumber][2]"
         text style "list"
       }
     }
     enabled "a7cheatListType == 1"
-    area    122 6 492 240
+    area    122 46 492 200
 
     rowheight  18
-    table   "a7itemList"
+    table   "a7cheatItemList"
     var     a7cheatCreateItem
     scrollbar '%ui_scrollbar%'
   }
@@ -118,7 +156,7 @@ menu
     sequence  6
     text    "A7_CREATE_BUTTON"
     text style  "button"
-    action  "C:CreateItem(a7itemList[a7cheatCreateItem][1],a7cheatItemCharge1,a7cheatItemCharge2,a7cheatItemCharge3)"
+    action  "C:CreateItem(a7cheatItemList[a7cheatCreateItem][1],a7cheatItemCharge1,a7cheatItemCharge2,a7cheatItemCharge3)"
   }
   label
   {
@@ -135,6 +173,7 @@ menu
     var     a7cheatItemCharge1
     text style "edit"
     maxlines 1
+    fill    112 111 111 32
   }
   edit
   {
@@ -143,6 +182,7 @@ menu
     var     a7cheatItemCharge2
     text style "edit"
     maxlines 1
+    fill    112 111 111 32
   }
   edit
   {
@@ -151,10 +191,49 @@ menu
     var     a7cheatItemCharge3
     text style "edit"
     maxlines 1
+    fill    112 111 111 32
   }
   -- ITEM LIST END
 
   -- SPELL LIST START
+  label
+  {
+    enabled "a7cheatListType == 2"
+    area    122 8 65 30
+    text    "A7_FILTER_LABEL"
+    text style "label"
+    text align left center
+  }
+  edit
+  {
+    enabled "a7cheatListType == 2"
+    name    "a7cheatSpellFilterEdit"
+    area    193 14 280 24
+    var     a7cheatSpellFilter
+    placeholder 'A7_FILTER_PLACEHOLDER'
+    text style "edit"
+    maxlines 1
+    fill    112 111 111 32
+    actionAlt "
+      a7luaFilter(a7spellList, a7cheatSpellList, {1, 3}, a7cheatSpellFilter)
+      return 1
+    "
+  }
+  button
+  {
+    enabled "a7cheatListType == 2"
+    area    480 8 120 34
+    scaleToClip
+    bam     GUIBUTNS
+    sequence  6
+    text    "A7_CLEAR_BUTTON"
+    text style  "button"
+    action  "
+      a7cheatSpellFilter = ''
+      a7luaFilter(a7spellList, a7cheatSpellList, {1, 3}, a7cheatSpellFilter)
+      Infinity_FocusTextEdit('a7cheatSpellFilterEdit')
+    "
+  }
   list
   {
     column
@@ -163,7 +242,7 @@ menu
       label
       {
         area 0 0 -1 -1
-        text lua "a7spellList[rowNumber][1]"
+        text lua "a7cheatSpellList[rowNumber][1]"
         text style "list"
       }
     }
@@ -173,7 +252,7 @@ menu
       label
       {
         area 0 0 -1 -1
-        text lua "a7luaSpellType(a7spellList[rowNumber][2])"
+        text lua "a7luaSpellType(a7cheatSpellList[rowNumber][2])"
         text style "list"
       }
     }
@@ -183,15 +262,15 @@ menu
       label
       {
         area 0 0 -1 -1
-        text lua "a7spellList[rowNumber][3]"
+        text lua "a7cheatSpellList[rowNumber][3]"
         text style "list"
       }
     }
     enabled "a7cheatListType == 2"
-    area    122 6 492 240
+    area    122 46 492 200
 
     rowheight  18
-    table   "a7spellList"
+    table   "a7cheatSpellList"
     var     a7cheatAddSpell
     scrollbar '%ui_scrollbar%'
   }
@@ -208,6 +287,44 @@ menu
   -- SPELL LIST END
 
   -- STORE LIST START
+  label
+  {
+    enabled "a7cheatListType == 3"
+    area    122 8 65 30
+    text    "A7_FILTER_LABEL"
+    text style "label"
+    text align left center
+  }
+  edit
+  {
+    enabled "a7cheatListType == 3"
+    name    "a7cheatStoreFilterEdit"
+    area    193 14 280 24
+    var     a7cheatStoreFilter
+    placeholder 'A7_FILTER_PLACEHOLDER'
+    text style "edit"
+    maxlines 1
+    fill    112 111 111 32
+    actionAlt "
+      a7luaFilter(a7storeList, a7cheatStoreList, {1, 2}, a7cheatStoreFilter)
+      return 1
+    "
+  }
+  button
+  {
+    enabled "a7cheatListType == 3"
+    area    480 8 120 34
+    scaleToClip
+    bam     GUIBUTNS
+    sequence  6
+    text    "A7_CLEAR_BUTTON"
+    text style  "button"
+    action  "
+      a7cheatStoreFilter = ''
+      a7luaFilter(a7storeList, a7cheatStoreList, {1, 2}, a7cheatStoreFilter)
+      Infinity_FocusTextEdit('a7cheatStoreFilterEdit')
+    "
+  }
   list
   {
     column
@@ -216,7 +333,7 @@ menu
       label
       {
         area 0 0 -1 -1
-        text lua "a7storeList[rowNumber][1]"
+        text lua "a7cheatStoreList[rowNumber][1]"
         text style "list"
       }
     }
@@ -226,15 +343,15 @@ menu
       label
       {
         area 0 0 -1 -1
-        text lua "a7storeList[rowNumber][2]"
+        text lua "a7cheatStoreList[rowNumber][2]"
         text style "list"
       }
     }
     enabled "a7cheatListType == 3"
-    area    122 6 492 240
+    area    122 46 492 200
 
     rowheight  18
-    table   "a7storeList"
+    table   "a7cheatStoreList"
     var     a7cheatOpenStore
     scrollbar '%ui_scrollbar%'
   }
@@ -246,11 +363,49 @@ menu
     sequence  6
     text    "A7_OPEN_BUTTON"
     text style  "button"
-    action  "C:StartStore(a7storeList[a7cheatOpenStore][1])"
+    action  "C:StartStore(a7cheatStoreList[a7cheatOpenStore][1])"
   }
   -- STORE LIST END
 
   -- CREATURE LIST START
+  label
+  {
+    enabled "a7cheatListType == 4"
+    area    122 8 65 30
+    text    "A7_FILTER_LABEL"
+    text style "label"
+    text align left center
+  }
+  edit
+  {
+    enabled "a7cheatListType == 4"
+    name    "a7cheatCreatureFilterEdit"
+    area    193 14 280 24
+    var     a7cheatCreatureFilter
+    placeholder 'A7_FILTER_PLACEHOLDER'
+    text style "edit"
+    maxlines 1
+    fill    112 111 111 32
+    actionAlt "
+      a7luaFilter(a7creatureList, a7cheatCreatureList, {1, 3}, a7cheatCreatureFilter)
+      return 1
+    "
+  }
+  button
+  {
+    enabled "a7cheatListType == 4"
+    area    480 8 120 34
+    scaleToClip
+    bam     GUIBUTNS
+    sequence  6
+    text    "A7_CLEAR_BUTTON"
+    text style  "button"
+    action  "
+      a7cheatCreatureFilter = ''
+      a7luaFilter(a7creatureList, a7cheatCreatureList, {1, 3}, a7cheatCreatureFilter)
+      Infinity_FocusTextEdit('a7cheatCreatureFilterEdit')
+    "
+  }
   list
   {
     column
@@ -259,7 +414,7 @@ menu
       label
       {
         area 0 0 -1 -1
-        text lua "a7creatureList[rowNumber][1]"
+        text lua "a7cheatCreatureList[rowNumber][1]"
         text style "list"
       }
     }
@@ -269,7 +424,7 @@ menu
       label
       {
         area 0 0 -1 -1
-        text lua "a7luaAllegiance(a7creatureList[rowNumber][2])"
+        text lua "a7luaAllegiance(a7cheatCreatureList[rowNumber][2])"
         text style "list"
       }
     }
@@ -279,15 +434,15 @@ menu
       label
       {
         area 0 0 -1 -1
-        text lua "a7creatureList[rowNumber][3]"
+        text lua "a7cheatCreatureList[rowNumber][3]"
         text style "list"
       }
     }
     enabled "a7cheatListType == 4"
-    area    122 6 492 240
+    area    122 46 492 200
 
     rowheight  18
-    table   "a7creatureList"
+    table   "a7cheatCreatureList"
     var     a7cheatSpawnCreature
     scrollbar '%ui_scrollbar%'
   }
@@ -299,7 +454,7 @@ menu
     sequence  6
     text    "A7_CREATE_BUTTON"
     text style  "button"
-    action  "C:CreateCreature(a7creatureList[a7cheatSpawnCreature][1])"
+    action  "C:CreateCreature(a7cheatCreatureList[a7cheatSpawnCreature][1])"
   }
   -- CREATURE LIST END
 
@@ -350,6 +505,44 @@ menu
   -- COMMAND LIST END
 
   -- AREA LIST START
+  label
+  {
+    enabled "a7cheatListType == 0"
+    area    122 8 65 30
+    text    "A7_FILTER_LABEL"
+    text style "label"
+    text align left center
+  }
+  edit
+  {
+    enabled "a7cheatListType == 0"
+    name    "a7cheatAreaFilterEdit"
+    area    193 14 280 24
+    var     a7cheatAreaFilter
+    placeholder 'A7_FILTER_PLACEHOLDER'
+    text style "edit"
+    maxlines 1
+    fill    112 111 111 32
+    actionAlt "
+      a7luaFilter(cheatAreaDisplayList, a7cheatAreaList, {1, 2}, a7cheatAreaFilter)
+      return 1
+    "
+  }
+  button
+  {
+    enabled "a7cheatListType == 0"
+    area    480 8 120 34
+    scaleToClip
+    bam     GUIBUTNS
+    sequence  6
+    text    "A7_CLEAR_BUTTON"
+    text style  "button"
+    action  "
+      a7cheatAreaFilter = ''
+      a7luaFilter(cheatAreaDisplayList, a7cheatAreaList, {1, 2}, a7cheatAreaFilter)
+      Infinity_FocusTextEdit('a7cheatAreaFilterEdit')
+    "
+  }
   list
   {
     column
@@ -358,7 +551,7 @@ menu
       label
       {
         area 0 0 -1 -1
-        text lua "cheatAreaDisplayList[rowNumber][1]"
+        text lua "a7cheatAreaList[rowNumber][1]"
         text style "list"
       }
     }
@@ -368,15 +561,15 @@ menu
       label
       {
         area 0 0 -1 -1
-        text lua "cheatAreaDisplayList[rowNumber][2]"
+        text lua "a7cheatAreaList[rowNumber][2]"
         text style "list"
       }
     }
     enabled "a7cheatListType == 0"
-    area    122 6 492 240
+    area    122 46 492 200
 
     rowheight  18
-    table   "cheatAreaDisplayList"
+    table   "a7cheatAreaList"
     var     cheatTeleportArea
     scrollbar '%ui_scrollbar%'
   }
@@ -388,7 +581,7 @@ menu
     sequence  6
     text    "TRAVEL_BUTTON"
     text style  "button"
-    action  "C:MoveToArea(cheatAreaDisplayList[cheatTeleportArea][1])"
+    action  "C:MoveToArea(a7cheatAreaList[cheatTeleportArea][1])"
   }
   -- AREA LIST END
 
@@ -417,6 +610,7 @@ menu
     var     cheatGoldAmt
     text style  "edit"
     maxlines  1
+    fill    112 111 111 32
   }
 
   button
@@ -434,6 +628,7 @@ menu
     var     cheatXpAmt
     text style  "edit"
     maxlines  1
+    fill    112 111 111 32
   }
 
   button
