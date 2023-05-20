@@ -67,11 +67,8 @@ OUTER_SPRINT item_list ~%item_list%%WNL%~
 OUTER_SPRINT a7itemList ~-- List of items for debug console%WNL%a7itemList = {%item_list%}%WNL%~
 
 // Adding array to Lua file
-COPY_EXISTING ~bgee.lua~ ~override~
-  SET ofs = INDEX_BUFFER(~fontcolors[ %TAB%%WNL%]*=[ %TAB%%WNL%]*{~)
-  PATCH_IF (ofs < 0) BEGIN SET ofs = 0 END
-
+COPY_EXISTING ~M_a7rhgo.lua~ ~override~
   SET len = STRING_LENGTH ~%a7itemList%~
-  INSERT_BYTES ofs len
-  WRITE_ASCIIE ofs ~%a7itemList%~ (len)
+  INSERT_BYTES 0 len
+  WRITE_ASCIIE 0 ~%a7itemList%~ (len)
 BUT_ONLY

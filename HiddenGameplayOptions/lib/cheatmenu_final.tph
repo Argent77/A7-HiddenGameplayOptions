@@ -1,0 +1,11 @@
+// Misc. finalizations
+
+// Adding descriptive comment for resource tables
+COPY_EXISTING ~M_a7rhgo.lua~ ~override~
+  SPRINT comment          ~--------------------------------------------------------------%WNL%~
+  SPRINT comment ~%comment%-- Resource tables used by "Reveal Hidden Gameplay Options" --%WNL%~
+  SPRINT comment ~%comment%--------------------------------------------------------------%WNL%%WNL%~
+  SET len = STRING_LENGTH ~%comment%~
+  INSERT_BYTES 0 len
+  WRITE_ASCIIE 0 ~%comment%~ (len)
+BUT_ONLY IF_EXISTS

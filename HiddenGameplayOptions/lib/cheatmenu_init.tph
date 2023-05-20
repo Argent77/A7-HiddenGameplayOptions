@@ -56,3 +56,17 @@ END ELSE ACTION_IF (GAME_IS ~bgee~ &&
   // Classic BG UI (non-WeiDU mod)
   OUTER_SPRINT ui_mode ~cbgui~
 END
+
+
+// Preparing lua functions and tables
+COPY ~%MOD_FOLDER%/lua/M_a7rhgo.lua~ ~override~
+  // Resolving tra references
+  REPLACE_EVALUATE ~@\([0-9]+\)~ BEGIN
+    PATCH_IF (IS_AN_INT ~MATCH1~) BEGIN
+      SPRINT msg (AT "MATCH1")
+      SPRINT msg ~"%msg%"~
+    END ELSE BEGIN
+      SPRINT msg ~""~
+      PATCH_WARN ~Not a valid tra reference: %MATCH0%~
+    END
+  END ~%msg%~

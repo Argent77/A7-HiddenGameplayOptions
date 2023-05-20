@@ -36,7 +36,7 @@ BEGIN
   END
 END
 
-COPY_EXISTING ~bgee.lua~ ~override~
+COPY_EXISTING ~M_a7rhgo.lua~ ~override~
   LPF remove_lua_array STR_VAR array_name = ~a7itemList~ END
   LPF remove_lua_array STR_VAR array_name = ~a7spellList~ END
   LPF remove_lua_array STR_VAR array_name = ~a7storeList~ END

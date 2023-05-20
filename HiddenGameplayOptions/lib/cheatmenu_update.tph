@@ -10,3 +10,6 @@ INCLUDE ~%MOD_FOLDER%/lib/lua_spells.tph~
 INCLUDE ~%MOD_FOLDER%/lib/lua_stores.tph~
 INCLUDE ~%MOD_FOLDER%/lib/lua_creatures.tph~
 INCLUDE ~%MOD_FOLDER%/lib/lua_commands.tph~
+
+// Finalizations
+INCLUDE ~%MOD_FOLDER%/lib/cheatmenu_final.tph~

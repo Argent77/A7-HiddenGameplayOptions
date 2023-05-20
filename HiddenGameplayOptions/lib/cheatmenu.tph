@@ -12,6 +12,8 @@ INCLUDE ~%MOD_FOLDER%/lib/lua_commands.tph~
 INCLUDE ~%MOD_FOLDER%/lib/cheatmenu_labels.tph~
 INCLUDE ~%MOD_FOLDER%/lib/cheatmenu_controls.tph~
 
+// Finalizations
+INCLUDE ~%MOD_FOLDER%/lib/cheatmenu_final.tph~
 
 // Installing marker to prevent the "Update resource tables" component
 // to be called in the same session as this component

@@ -86,11 +86,8 @@ OUTER_SPRINT creature_list ~%creature_list%%WNL%~
 OUTER_SPRINT a7creatureList ~-- List of creatures for debug console%WNL%a7creatureList = {%creature_list%}%WNL%~
 
 // Adding array to Lua file
-COPY_EXISTING ~bgee.lua~ ~override~
-  SET ofs = INDEX_BUFFER(~fontcolors[ %TAB%%WNL%]*=[ %TAB%%WNL%]*{~)
-  PATCH_IF (ofs < 0) BEGIN SET ofs = 0 END
-
+COPY_EXISTING ~M_a7rhgo.lua~ ~override~
   SET len = STRING_LENGTH ~%a7creatureList%~
-  INSERT_BYTES ofs len
-  WRITE_ASCIIE ofs ~%a7creatureList%~ (len)
+  INSERT_BYTES 0 len
+  WRITE_ASCIIE 0 ~%a7creatureList%~ (len)
 BUT_ONLY

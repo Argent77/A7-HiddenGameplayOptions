@@ -63,19 +63,6 @@ BEGIN
 END
 
 
-// Preparing lua functions and tables
-COPY ~%MOD_FOLDER%/lua/M_a7rhgo.lua~ ~override~
-  // Resolving tra references
-  REPLACE_EVALUATE ~@\([0-9]+\)~ BEGIN
-    PATCH_IF (IS_AN_INT ~MATCH1~) BEGIN
-      SPRINT msg (AT "MATCH1")
-      SPRINT msg ~"%msg%"~
-    END ELSE BEGIN
-      SPRINT msg ~""~
-      PATCH_WARN ~Not a valid tra reference: %MATCH0%~
-    END
-  END ~%msg%~
-
 COPY ~%MOD_FOLDER%/menu/ui-vars.menu~ ~%MOD_FOLDER%/menu/ui-vars.menu~
   READ_ASCII 0 ui_vars (BUFFER_LENGTH)
 BUT_ONLY

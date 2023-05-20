@@ -33,11 +33,8 @@ OUTER_PATCH_SAVE lua_table ~%lua_table%~ BEGIN
 END
 
 // Adding array to Lua file
-COPY_EXISTING ~bgee.lua~ ~override~
-  // Inserting lua table
-  SET ofs = INDEX_BUFFER(~fontcolors[ %TAB%%WNL%]*=[ %TAB%%WNL%]*{~)
-  PATCH_IF (ofs < 0) BEGIN SET ofs = 0 END
+COPY_EXISTING ~M_a7rhgo.lua~ ~override~
   SET len = STRING_LENGTH ~%lua_table%~
-  INSERT_BYTES ofs len
-  WRITE_ASCIIE ofs ~%lua_table%~ (len)
+  INSERT_BYTES 0 len
+  WRITE_ASCIIE 0 ~%lua_table%~ (len)
 BUT_ONLY
