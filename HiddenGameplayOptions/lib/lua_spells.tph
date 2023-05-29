@@ -110,25 +110,32 @@ BUT_ONLY IF_EXISTS
 
 // Scanning CLABs for spells
 ACTION_PHP_EACH clab_list AS clab_res => _ BEGIN
-  COPY_EXISTING ~%clab_res%.2DA~ ~override~
-    COUNT_2DA_COLS num_cols
-    READ_2DA_ENTRIES_NOW clab_table 1
-    FOR (row = 3; row < clab_table; ++row) BEGIN
-      FOR (col = 1; col < num_cols; ++col) BEGIN
-        READ_2DA_ENTRY_FORMER clab_table row col value
-        PATCH_IF (~%value%~ STRING_MATCHES_REGEXP ~GA_.+~ = 0) BEGIN
-          INNER_PATCH_SAVE resref ~%value%~ BEGIN REPLACE_TEXTUALLY ~GA_~ ~~ END
-          TO_UPPER ~resref~
-          LPF VALIDATE_SPL STR_VAR resref RET valid type name END
-          PATCH_IF (valid) BEGIN
-            SET $spells(~%resref%~) = 1
-            SET $spell_types(~%resref%~) = type
-            SPRINT $spell_names(~%resref%~) ~%name%~
+  WITH_SCOPE BEGIN
+    COPY_EXISTING ~%clab_res%.2DA~ ~override~
+      COUNT_2DA_COLS num_cols
+      READ_2DA_ENTRIES_NOW clab_table 1
+      FOR (row = 3; row < clab_table; ++row) BEGIN
+        FOR (col = 1; col < num_cols; ++col) BEGIN
+          PATCH_IF (VARIABLE_IS_SET $clab_table(~%row%~ ~%col%~)) BEGIN
+            READ_2DA_ENTRY_FORMER clab_table row col value
+            PATCH_IF (~%value%~ STRING_MATCHES_REGEXP ~GA_.+~ = 0) BEGIN
+              INNER_PATCH_SAVE resref ~%value%~ BEGIN REPLACE_TEXTUALLY ~GA_~ ~~ END
+              TO_UPPER ~resref~
+              LPF VALIDATE_SPL STR_VAR resref RET valid type name END
+              PATCH_IF (valid) BEGIN
+                SET $spells(~%resref%~) = 1
+                SET $spell_types(~%resref%~) = type
+                SPRINT $spell_names(~%resref%~) ~%name%~
+              END
+            END
+          END ELSE BEGIN
+            PATCH_WARN ~WARNING: [%SOURCE_FILE%] Unexpected number of columns in row %row% (expected: %num_cols%, found: %col%)~
+            SET col = num_cols
           END
         END
       END
-    END
-  BUT_ONLY IF_EXISTS
+    BUT_ONLY IF_EXISTS
+  END
 END
 
 

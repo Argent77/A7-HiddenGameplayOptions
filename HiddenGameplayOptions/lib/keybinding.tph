@@ -116,22 +116,29 @@ BEGIN
     BUT_ONLY IF_EXISTS
 
     ACTION_PHP_EACH clabs AS clab => _ BEGIN
-      COPY_EXISTING ~%clab%.2DA~ ~override~
-        COUNT_2DA_COLS num_cols
-        READ_2DA_ENTRIES_NOW table num_cols
-        FOR (row = 0; row < table; ++row) BEGIN
-          FOR (col = 0; col < num_cols; ++col) BEGIN
-            READ_2DA_ENTRY_FORMER table row col value
-            PATCH_IF (~%value%~ STRING_MATCHES_REGEXP ~GA_%prefix%[1-9][0-9][0-9]~ = 0) BEGIN
-              LPF SUBSTRING INT_VAR start = 3 length = 7 STR_VAR string = EVAL ~%value%~ RET substring END
-              TO_UPPER ~substring~
-              PATCH_IF (FILE_EXISTS_IN_GAME ~%substring%.SPL~) BEGIN
-                SET $entries(~%substring%~) = "-1"
+      WITH_SCOPE BEGIN
+        COPY_EXISTING ~%clab%.2DA~ ~override~
+          COUNT_2DA_COLS num_cols
+          READ_2DA_ENTRIES_NOW clab_table num_cols
+          FOR (row = 0; row < clab_table; ++row) BEGIN
+            FOR (col = 0; col < num_cols; ++col) BEGIN
+              PATCH_IF (VARIABLE_IS_SET $clab_table(~%row%~ ~%col%~)) BEGIN
+                READ_2DA_ENTRY_FORMER clab_table row col value
+                PATCH_IF (~%value%~ STRING_MATCHES_REGEXP ~GA_%prefix%[1-9][0-9][0-9]~ = 0) BEGIN
+                  LPF SUBSTRING INT_VAR start = 3 length = 7 STR_VAR string = EVAL ~%value%~ RET substring END
+                  TO_UPPER ~substring~
+                  PATCH_IF (FILE_EXISTS_IN_GAME ~%substring%.SPL~) BEGIN
+                    SET $entries(~%substring%~) = "-1"
+                  END
+                END
+              END ELSE BEGIN
+                PATCH_WARN ~WARNING: [%SOURCE_FILE%] Unexpected number of columns in row %row% (expected: %num_cols%, found: %col%)~
+                SET col = num_cols
               END
             END
           END
-        END
-      BUT_ONLY IF_EXISTS
+        BUT_ONLY IF_EXISTS
+      END
     END
 
     // collecting spells from HLA tables
