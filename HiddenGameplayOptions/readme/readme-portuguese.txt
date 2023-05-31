@@ -275,6 +275,10 @@ History
 
 4.3
 - Improved compatibility of "Improved Cheat Menu" with Iwdification and SCS
+- Added support for BG2EE version of Pecca's Dragonspear UI++
+- Added compatibility checks for Pecca's Infinity UI
+- Added compatibility checks for K4f4r's Classic BG UI
+- Added compatibility checks for Tipun's User Interface
 
 4.2
 - Added compatibility with Pecca's Infinity UI++ for "Improved Cheat Menu"

@@ -52,7 +52,9 @@
 @509 = ~Benoetigt Tweaks Anthologys Modkomponente "Regelmaessige Spielstaende erzeugen".~
 @510 = ~Benoetigt die Modkomponente "Verbessertes Cheatmenu".~
 @511 = ~Diese Komponente ist dafuer gedacht, bei Bedarf separat aufgerufen zu werden.~
-
+@512 = ~Diese Komponente ist nicht mit Peccas Infinity UI kompatibel.~
+@513 = ~Diese Komponente ist nicht mit K4f4rs Classic BG UI kompatibel.~
+@514 = ~Diese Komponente ist nicht mit Tipuns User Interface kompatibel.~
 
 // WeiDU prompts
 @-1000= "Die %TP2_FILE_NAME%-Mod besitzt"

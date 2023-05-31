@@ -52,3 +52,6 @@
 @509 = ~Requires Tweaks Anthology's "Create interval saves" to be installed.~
 @510 = ~Requires component "Improved Cheat Menu" to be installed.~
 @511 = ~This component is intended to be called separately if needed.~
+@512 = ~This component is not compatible with Pecca's Infinity UI.~
+@513 = ~This component is not compatible with K4f4r's Classic BG UI.~
+@514 = ~This component is not compatible with Tipun's User Interface.~

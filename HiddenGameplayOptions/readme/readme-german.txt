@@ -43,10 +43,13 @@ Kompatibilität & Installationsreihenfolge
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Die Mod unterstützt alle Enhanced Editions ab Spielversion 2.0. Sie ist außerdem mit Peccas
-"Dragonspear UI++" und größtenteils mit Lefreuts Enhanced UI (LeUI) kompatibel.
+"Dragonspear UI++" und größtenteils mit Lefreuts Enhanced UI (LeUI), K4f4rs Classic BG UI und
+Tipuns User Interface kompatibel.
 Einige Optionen werden ggf. in andere Bereiche verschoben, wenn diese Mods erkannt wurden.
 Das "Verbesserte Cheatmenü" könnte kleinere Grafikfehler beinhalten, falls Lefreuts Enhanced UI
 installiert ist. Sie wirken sich aber nicht auf die Funktionalität aus.
+
+Peccas "Infinity UI" ist nur mit dem "Verbesserten Cheatmenü" kompatibel.
 
 Die Mod kann nicht zusammen mit der EEUITweaks-Komponente "Hidden Game Options" installiert werden.
 
@@ -413,6 +416,10 @@ History
 
 4.3
 - Improved compatibility of "Improved Cheat Menu" with Iwdification and SCS
+- Added support for BG2EE version of Pecca's Dragonspear UI++
+- Added compatibility checks for Pecca's Infinity UI
+- Added compatibility checks for K4f4r's Classic BG UI
+- Added compatibility checks for Tipun's User Interface
 
 4.2
 - Added compatibility with Pecca's Infinity UI++ for "Improved Cheat Menu"

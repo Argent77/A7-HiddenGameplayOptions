@@ -41,10 +41,14 @@ Compatibility & Installation Order
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The mod supports all Enhanced Edition games patched to v2.0 or higher. It is also compatible with
-Pecca's "Dragonspear UI++" and largely compatible with Lefreut's Enhanced UI (LeUI). Some options
-may be moved into other sections when these mods have been detected. The "Improved Cheat Menu"
-may also produce some minor visual glitches if Lefreut's Enhanced UI is installed. Functionality
-is not adversely affected, however.
+Pecca's "Dragonspear UI++", and largely compatible with Lefreut's Enhanced UI (LeUI), K4f4r's
+Classic BG UI and Tipun's User Interface.
+Some options may be moved into other sections when these mods have been detected. The "Improved
+Cheat Menu" may also produce some minor visual glitches if Lefreut's Enhanced UI is installed.
+Functionality is not adversely affected, however.
+
+Pecca's "Infinity UI" is mostly incompatible with this mod, except for the "Improved Cheat Menu"
+subcomponent.
 
 The mod can not be installed together with EEUITweaks component "Hidden Game Options". You can
 install either one, but not both at the same time.
@@ -207,7 +211,7 @@ Option can be found in Sounds > Character Sounds or Gameplay > Feedback (PST:EE 
 
 
 21. Add in-game option "Frame Rate" (experimental) (not available for PST:EE, not compatible with
-    Lefreut's Enhanced UI (LeUI))
+    Lefreut's Enhanced UI (LeUI) and K4f4r's Classic BG UI)
 
 This component installs a slider control that can be used to set the desired frame rate of the game.
 You can choose between 30, 40, 50 and 60 frames per second. The game's default is 30 fps.
@@ -220,7 +224,8 @@ no effect:
 Option can be found in Gameplay section.
 
 
-22. Add in-game option "Action Feedback" (not compatible with Lefreut's Enhanced UI (LeUI))
+22. Add in-game option "Action Feedback" (not compatible with Lefreut's Enhanced UI (LeUI),
+    K4f4r's Classic BG UI and Tipun's User Interface)
 
 This component installs a slider control that can be used to show small symbols around character
 sprites that indicate their current action (e.g. fighting, spellcasting or thieving actions).
@@ -386,6 +391,10 @@ History
 
 4.3
 - Improved compatibility of "Improved Cheat Menu" with Iwdification and SCS
+- Added support for BG2EE version of Pecca's Dragonspear UI++
+- Added compatibility checks for Pecca's Infinity UI
+- Added compatibility checks for K4f4r's Classic BG UI
+- Added compatibility checks for Tipun's User Interface
 
 4.2
 - Added compatibility with Pecca's Infinity UI++ for "Improved Cheat Menu"

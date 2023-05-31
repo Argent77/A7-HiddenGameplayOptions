@@ -515,3 +515,29 @@ BEGIN
     SET start_ofs = end_ofs
   END
 END
+
+
+// Reads content of an inlined file of the given name.
+// Parameters:
+// STR_VAR name File name without extension (no default).
+// STR_VAR ext  File extension without leading dot (default: menu)
+// STR_VAR path File path (default: .../inlined/hiddengameplayoptions)
+// RET code     Content of the specified file.
+DEFINE_PATCH_FUNCTION LOAD_INLINED_DATA
+STR_VAR
+  name = ~~
+  ext = ~menu~
+  path = ~.../inlined/hiddengameplayoptions~
+RET
+  code
+BEGIN
+  SPRINT code ~~
+  PATCH_IF (NOT ~%name%~ STR_EQ ~~) BEGIN
+    INNER_ACTION BEGIN
+      COPY - ~%path%/%name%.%ext%~ ~%path%/%name%.%ext%~
+        SET len = BUFFER_LENGTH
+        READ_ASCII 0 code (len)
+      BUT_ONLY
+    END
+  END
+END
