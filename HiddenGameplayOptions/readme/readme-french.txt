@@ -39,14 +39,16 @@ utilisant WeiDU.
 Vous pouvez le télécharger ici : https://github.com/Argent77/A7-DlcMerger/releases/latest
 
 
-Compatibilité
-~~~~~~~~~~~~~
+Compatibilité et Ordre d'installation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Ce mod s'installe sur tous les jeux Enhanced Edition dotés du patch v2.0 ou supérieur. Il est
-aussi compatible avec Pecca's "Dragonspear UI++" et Lefreut's Enhanced UI (LeUI). Certaines
-options pourront être déplacées dans d'autres sections si ces mods sont détectés. 
+aussi compatible avec "Dragonspear UI ++" de Pecca, Lefreut's Enhanced UI (LeUI), Classic BG UI de K4f4r et l'interface Tipun_Gui.
+Certaines options pourront être déplacées dans d'autres sections si ces mods sont détectés. 
 L'Écran de triche amélioré peut également provoquer de légères anomalies visuelles si
 Lefreut's Enhanced UI est installé, mais les fonctionnalités ne sont nullement affectées.
+
+"Infinity UI ++" de Pecca est en très grande partie incompatible avec ce mod, à l'exception du sous-composant "Écran de triche amélioré"
 
 On ne peut pas installer ce mod avec le composant "Options cachées du jeu" de EEUITweaks. Vous
 devrez choisir d'en installer un seul, mais pas les deux en même temps.
@@ -229,7 +231,7 @@ PST:EE).
 
 
 21. Ajouter l'option de jeu "Nombre d'images par seconde" (expérimental) (pas disponible dans PST:EE,
-    pas compatible avec Lefreut's Enhanced UI (LeUI))
+    pas compatible avec Lefreut's Enhanced UI (LeUI) et Classic BG UI de K4f4r)
 
 Ce composant installe un curseur permettant de régler le nombre d'images par secondes affichées
 par le jeu. Vous pouvez choisir quatre valeurs : 30 (valeur par défaut du jeu), 40, 50 et 60
@@ -242,7 +244,7 @@ Ce composant est qualifié "d'expérimental", parce que cette option ne fonction
 Cette option se trouve dans la section Jeu.
 
 
-22. Ajouter l'option de jeu "Feedback d'actions" (Incompatible avec Lefreut's Enhanced UI - LeUI)
+22. Ajouter l'option de jeu "Feedback d'actions" (Incompatible avec Lefreut's Enhanced UI - LeUI, Classic BG UI de K4f4r et l'interface Tipun_Gui)
 
 Ce composant installe un curseur permettant d'afficher autour du sprite des personnages des
 petites icônes qui indiquent ce qu'ils sont en train de faire (par exemple se battre, lancer

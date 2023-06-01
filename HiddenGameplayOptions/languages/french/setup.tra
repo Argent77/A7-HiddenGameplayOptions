@@ -53,6 +53,9 @@
 @509 = ~Necessite l'installation du composant "Creer des sauvegardes periodiques" de Tweaks Anthology.~
 @510 = ~Necessite l'installation du composant "Ecran de triche ameliore".~
 @511 = ~Ce composant est destine a etre utilise separement si necessaire.~
+@512 = ~Ce composant n'est pas compatible avec Infinity UI++ de Pecca.~
+@513 = ~Ce composant n'est pas compatible avec Classic BG UI de K4f4r.~
+@514 = ~Ce composant n'est pas compatible avec l'interface Tipun_Gui.~
 
 
 // WeiDU prompts
