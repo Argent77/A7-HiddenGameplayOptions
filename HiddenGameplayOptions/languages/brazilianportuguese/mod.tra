@@ -1,0 +1,298 @@
+// -*- coding: utf-8 -*-
+
+// *** Game options ***
+
+@1000 = ~Ativar Modo de Debug~
+@1001 = ~Ativar esta configuração permite a você ativar as teclas de trapaça e o console do debug.
+
+Use o atalho do teclado CTRL+SPACE pra ativar o console. Os comandos do console incluem ^PC:AddGold(número)^-, ^PC:CreateItem("nome")^-, ^PC:SetCurrentXP(número)^- e muitos mais.
+
+As teclas de trapaça incluem o CTRL+Y pra matar instantaneamente as criaturas sob o cursor do mouse, CTRL+R pra curar e dissipar os efeitos dos personagens sob o cursor do mouse, CTRL+J pra teleportar membros do grupo selecionados para o local atual do cursor do mouse, CTRL+T pra avançar o tempo de jogo em uma hora, CTRL+4 pra alternar a visibilidade de regiões interativas e muito mais.
+
+^NNota: Você deve reiniciar o jogo pra que as mudanças tenham efeito.^-~
+
+@1100 = ~Ativar Modo de Edição da Interface do Usuário~
+@1101 = ~Ativar esta configuração permite a você usar a funcionalidade de edição da Interface do Usuário no jogo.
+
+Pressione F11 pra ativar ou desativar o modo de edição da Interface do Usuário. Enquanto este modo está ativo é possível arrastar os elementos da Interface do Usuário pela tela. Pressione F5 pra pré-visualizar as mudanças da Interface do Usuário sem reiniciar o jogo. Pressionar o TAB enquanto paira o cursor do mouse sobre um elemento da Interface do Usuário mostra qual número de linha no UI.MENU define esse elemento.
+
+^NNota: Você deve reiniciar o jogo pra que as mudanças tenham efeito.^-~
+
+@1200 = ~Mostrar Strrefs~
+@1201 = ~Ativar esta configuração coloca os números de referência da string na frente das strings do jogo.
+
+Nota: Você deve reiniciar o jogo pra que as mudanças tenham efeito.^-~
+
+@1300 = ~Teclas de Atalhos nas Dicas das Ferramentas~
+@1301 = ~Quando esta configuração é ativada as dicas das ferramentas exibirão as teclas de atalhos quando disponíveis.
+
+Nota: Você deve reiniciar o jogo pra que as mudanças tenham efeito.^-~
+
+@1400 = ~Mostrar os Ícones dos Gatilhos ao Pressionar TAB~
+@1401 = ~Ativar esta configuração revela informação adicional sobre regiões interativas quando pressionar a Tecla TAB.
+
+Nota: Você deve reiniciar o jogo pra que as mudanças tenham efeito.^-~
+
+@1500 = ~Permitir a Barra de Espaço nos Diálogos~
+@1501 = ~Ativar esta configuração permite a você continuar com as conversas usando a barra de espaço.
+
+Nota: Você deve reiniciar o jogo pra que as mudanças tenham efeito.^-~
+
+@1600 = ~Limitar os Feitiços dos Druidas pros Clérigos/Rangers~
+@1601 = ~Esta configuração controla a disponibilidade de feitiços do druida pros Clérigos/Rangers multi-classe ou de classe dupla.
+
+Ative esta configuração pra limitar os feitiços do druida até o nível 3 – o nível máximo de feitiços disponível pros rangers. Os feitiços do clérigo não são afetados por esta configuração.
+
+Nota: Você deve reiniciar o jogo pra que as mudanças tenham efeito.^-~
+
+@1700 = ~Ataque Furtivo da 3E~
+@1701 = ~Ativar esta configuração ativa o Ataques Furtivo e o Ataque Incapacitante os quais são habilidades especiais similares a aquelas das regras da 3a edição do Dungeons & Dragons® da Wizards of the Coast.
+
+Nota: Você deve reiniciar o jogo pra que as mudanças tenham efeito.^-~
+
+@1800 = ~Tremor da Tela no Golpe Crítico~
+@1801 = ~Ativar esta configuração dispara um tremor de tela sempre que um membro do grupo faz um golpe crítico em combate.
+
+Nota: Você deve reiniciar o jogo pra que as mudanças tenham efeito.^-~
+
+@1900 = ~Mostrar Informações Extras do Combate~
+@1901 = ~Ativar esta configuração permite a você ver todos os fatores que influenciam uma jogada de ataque.
+
+Nota: Você deve reiniciar o jogo pra que as mudanças tenham efeito.^-~
+
+@2000 = ~Mostrar a Data e Hora do Jogo ao Pausar~
+@2001 = ~Mostra a data e a hora do jogo quando ativar a pausa.
+
+Nota: Você deve reiniciar o jogo pra que as mudanças tenham efeito.^-~
+
+@2100 = ~Desativar o Zoom do Mapa da Área~
+@2101 = ~Desativa o aumento/diminuição do efeito do zoom quando abrir ou fechar a tela do mapa da área.
+
+Nota: Você deve reiniciar o jogo pra que as mudanças tenham efeito.^-~
+
+@2200 = ~Reverter o Zoom da Roda do Mouse~
+@2201 = ~Reverte a direção do zoom quando usar a roda do mouse.
+
+Nota: Você deve reiniciar o jogo pra que as mudanças tenham efeito.^-~
+
+@2300 = ~Pausar o Jogo na Tela do Mapa~
+@2301 = ~Pausa automaticamente o jogo enquanto olha na tela do mapa.
+
+Nota: Você deve reiniciar o jogo pra que as mudanças tenham efeito.^-~
+
+@2400 = ~Ativar Neblina~
+@2401 = ~Ativa os efeitos de neblina nos mapas.
+
+Nota: Você deve reiniciar o jogo pra que as mudanças tenham efeito.^-~
+
+@2500 = ~Desativar Filmes~
+@2501 = ~Ativar esta configuração desativa a reprodução de filmes.
+
+Nota: Você deve reiniciar o jogo pra que as mudanças tenham efeito.^-~
+
+@2600 = ~Desativar Ataques Cosméticos~
+@2601 = ~Mostrar as animações de ataque só quando os personagens estão fazendo ataques reais. De outro modo os personagens percorrem as animações de ataque através de um round pra simular a movimentação e esquiva.
+
+Nota: Você deve reiniciar o jogo pra que as mudanças tenham efeito.^-~
+
+@2700 = ~Bônus de EXP no Modo Legado de Bhaal~
+@2701 = ~Ativar esta configuração permite que seus personagens obtenham bônus de EXP no modo Legado de Bhaal. Esta configuração não afetará a EXP extra garantida nos modos de dificuldade regular.
+
+Nota: Você deve reiniciar o jogo pra que as mudanças tenham efeito.^-~
+
+@2710 = ~Bônus de EXP no modo Coração da Fúria~
+@2711 = ~Ativar esta configuração permite que seus personagens obtenham bônus de EXP no modo Coração da Fúria. Esta configuração não afetará a EXP extra garantida nos modos de dificuldade regular.
+
+Nota: Você deve reiniciar o jogo pra que as mudanças tenham efeito.^-~
+
+@2800 = ~Taxa dos Frames~
+@2801 = ~Esta barra permite a você aumentar a taxa dos frames na qual o jogo executa assim acelerando todos os aspectos da jogabilidade.
+
+AVISO: Ajustar a taxa dos frames acima de 30 pode resultar em problemas de sincronia do áudio durante as cenas dos filmes bem como em efeitos dos feitiços sem sincronia durante o combate.
+
+Nota: Você deve reiniciar o jogo pra que as mudanças tenham efeito.^-~
+@2802 = ~30 frames/seg.~
+@2803 = ~40 frames/seg.~
+@2804 = ~50 frames/seg.~
+@2805 = ~60 frames/seg.~
+
+@2900 = ~Feedback da Ação~
+@2901 = ~Esta barra controla se ou quando as ações são exibidas como ícones pequenos ao redor da imagem móvel de um personagem.
+  DESATIVADA: Nunca.
+  BAIXA: Só pra aliados quando pausado.
+  MÉDIA: Só pra aliados.
+  ALTA: Pra todas as criaturas quando pausado.
+  MÁXIMA: Pra todas as criaturas.
+
+(*) Só é efetivo quando o Modo de Debug está ativado.
+
+Nota: Você deve reiniciar o jogo pra que as mudanças tenham efeito.~
+@2902 = ~Esta barra controla se ou quando as ações são exibidas como ícones pequenos ao redor da imagem móvel de um personagem.
+  Desativada — Nunca
+  Baixa — Só pra aliados quando pausado
+  Média — Só pra aliados
+  Alta — Pra todas as criaturas quando pausado
+  Máxima — Pra todas as criaturas
+
+(*) Só é efetivo quando o Modo de Debug está ativado.
+
+Nota: Você deve reiniciar o jogo pra que as mudanças tenham efeito.^-~
+@2903 = ~Desativada~
+@2904 = ~Baixa~
+@2905 = ~Média~
+@2906 = ~Alta~
+@2907 = ~Máxima~
+
+@3000 = ~Exibir Ícone de Subida de Nível~
+@3001 = ~Isto controla se um ícone de "Subida de Nível" é exibido ou não na janela de retratos ou na barra de vida dos membros do grupo que estão prontos pra subirem de nível.
+
+Nota: Você deve reiniciar o jogo pra que as mudanças tenham efeito.^-~
+
+@3100 = ~Sons de Tédio~
+@3101 = ~Reproduzir Sons de Tédio do Personagem~
+@3102 = ~Reproduzir sons de tédio após um período extendido de inatividade.
+
+Nota: Você deve reiniciar o jogo pra que as mudanças tenham efeito.~
+@3103 = ~Isto controla se os membros do grupo disparam sons de tédio após um período extendido de inatividade.
+
+Nota: Você deve reiniciar o jogo pra que as mudanças tenham efeito.^-~
+
+@3200 = ~Exibir o Alcance da Área de Efeito~
+@3201 = ~Ativar esta configuração exibe o alcance da Área de Efeito de um feitiço antes dele ser lançado.
+
+Nota: Você deve reiniciar o jogo pra que as mudanças tenham efeito.^-~
+
+@3300 = ~Busca do Caminho Melhorada~
+@3301 = ~Melhora o descobrimento do caminho ao recalcular continuamente a busca por caminhos dos personagens.
+
+^NNota: Você deve reiniciar o jogo para as mudanças terem efeito.^-~
+
+@3400 = ~Expiração dos Destaques das Armadilhas~
+@3401 = ~Controla se o destaque das armadilhas detectadas ou portas escondidas devem desaparecer após um tempo.
+
+^NNota: Você deve reiniciar o jogo para as mudanças terem efeito.^-~
+
+@3500 = ~Mostrar os Feitiços Que Se Pode Aprender~
+@3501 = ~Controla se uma tinta verde é mostrada pros pergaminhos de feitiços que podem ser escritos no livro de feitiços de um mago.
+
+^NNota: Você deve reiniciar o jogo para as mudanças terem efeito.^-~
+
+@3600 = ~Renderizar o Mapa da Busca~
+@3601 = ~Controla se o SHIFT pressionado mostrará uma sobreposição do mapa estático da busca para a área atual.
+
+^NNota: Você deve reiniciar o jogo para as mudanças terem efeito.^-~
+
+@3700 = ~Renderizar o Mapa Dinâmico da Busca~
+@3701 = ~Controla se o CTRL pressionado mostrará uma sobreposição do mapa dinâmico da busca tais como portas bloqueadas ou o espaço pessoal das criaturas.
+
+^NNota: Você deve reiniciar o jogo para as mudanças terem efeito.^-~
+
+@3800 = ~Ativar os Saves com Intervalo~
+@3801 = ~Controla se o jogo é salvo a intervalos regulares. Esta opção requer que o componente do mod Tweaks Anthology "Criar Saves com Intervalo" esteja instalado.
+
+^NNota: Você deve reiniciar o jogo para as mudanças terem efeito.^-~
+
+@3810 = ~Criar Saves com Intervalo Durante o Combate~
+@3811 = ~Controla se os saves com intervalo são criados até mesmo durante o combate. Esta opção requer que o componente do mod Tweaks Anthology "Criar Saves com Intervalo" esteja instalado.
+
+^NNota: Você deve reiniciar o jogo para as mudanças terem efeito.^-~
+
+@3900 = ~Forçar a Pausa nos Diálogos~
+@3901 = ~Ativar esta opção força a pausa no jogo enquanto as conversas estão acontecendo.
+
+^NNota: Você deve reiniciar o jogo para as mudanças terem efeito.^-~
+
+
+// *** Misc. strings ***
+
+@10000 = ~Ataque Furtivo~
+@10001 = ~Ataque Furtivo Ineficaz~
+@10002 = ~Ataque Incapacitante~
+@10003 = ~A Arma é Inadequada pro Ataque Furtivo~
+@10004 = ~Dano do Ataque Furtivo~
+@10005 = ~Ataque Incapacitante~
+
+
+// *** Strings for the Cheat Menu ***
+
+@20000 = ~CRIAR~
+@20001 = ~COMANDO~
+@20002 = ~ABRIR~
+@20003 = ~EXECUTAR~
+@20004 = ~Quantia/Cargas:~
+@20005 = ~<< ÁREAS~
+@20006 = ~<< ITENS~
+@20007 = ~<< FEITIÇOS~
+@20008 = ~<< LOJAS~
+@20009 = ~<< CRIATURAS~
+@20010 = ~<< COMANDOS~
+@20011 = ~Clique pra ativar a lista de itens.~
+@20012 = ~Clique pra ativar a lista de feitiços.~
+@20013 = ~Clique pra ativar a lista de lojas.~
+@20014 = ~Clique pra ativar a lista de criaturas.~
+@20015 = ~Clique pra ativar a lista de comandos.~
+@20016 = ~Clique pra ativar a lista de áreas.~
+@20017 = ~O comando será adicionado ao console do Lua.~
+@20018 = ~O comando será executado instantaneamente.~
+@20019 = ~Filtro:~
+@20020 = ~Limpar~
+@20021 = ~Insira o texto do filtro aqui~
+
+// PSTEE-specific labels
+@20100 = ~Criar~
+@20101 = ~Comando~
+@20102 = ~Abrir~
+@20103 = ~Executar~
+@20105 = ~<< Áreas~
+@20106 = ~<< Itens~
+@20107 = ~<< Feitiços~
+@20108 = ~<< Lojas~
+@20109 = ~<< Criaturas~
+@20110 = ~<< Comandos~
+
+// Translator note: (Ascii) Quotation marks in strings must be escaped
+@20200 = ~Remover o status \"Fallen Ranger\" do personagem selecionado~
+@20201 = ~Remover o status \"Fallen Paladin\" do personagem selecionado~
+@20202 = ~Travar a tela no personagem selecionado~
+@20203 = ~Remover a trava da tela do personagem selecionado~
+@20204 = ~Aumentar a reputação do grupo em 2~
+@20205 = ~Diminuir a reputação do grupo em 2~
+@20206 = ~Definir a hora do dia para a próxima \"Morning\"~
+@20207 = ~Definir a hora do dia para o próximo \"Noon\"~
+@20208 = ~Definir a hora do dia para o próximo \"Dusk\"~
+@20209 = ~Definir a hora do dia para a próxima \"Midnight\"~
+@20210 = ~Avançar o tempo do jogo em 8 horas~
+@20211 = ~Avançar o tempo real em uma hora~
+@20212 = ~Avançar o tempo real em um dia~
+@20213 = ~Mudar o tempo para \"Clear\"~
+@20214 = ~Mudar o tempo para \"Rain\"~
+@20215 = ~Mudar o tempo para \"Snow\"~
+@20216 = ~Mudar o tempo para \"Fog\"~
+@20217 = ~Destruir todas as pilhas do solo na área~
+@20218 = ~Ativar a exibição do strref pro texto do jogo~
+@20219 = ~Desativar a exibição do strref pro texto do jogo~
+@20220 = ~Mostrar os créditos finais e retornar para o menu principal~
+
+// PSTEE-specific additions
+// Translator note: (Ascii) Quotation marks in strings must be escaped
+@20250 = ~Aumentar o valor da moral (Bom..Mau) em 2~
+@20251 = ~Diminuir o valor da moral (Bom..Mau) em 2~
+@20252 = ~Aumentar o valor ético (Lawful..Chaotic) em 2~
+@20253 = ~Diminuir o valor ético (Lawful..Chaotic) em 2~
+@20254 = ~Aumentar a contagem dos \"Murder\" em 1~
+@20255 = ~Diminuir a contagem dos \"Murder\" em 1~
+@20256 = ~Aumentar o valor da \"Lady\" em 1~
+@20257 = ~Diminuir o valor da \"Lady\" value em 1~
+
+// Spell types
+@20300 = ~Especial~
+@20301 = ~Mago~
+@20302 = ~Sacerdote~
+@20303 = ~Psiônico~
+@20304 = ~Inato~
+@20305 = ~Canção do Bardo~
+
+// Creature allegiances
+@20310 = ~Amistoso~
+@20311 = ~Neutro~
+@20312 = ~Hostil~

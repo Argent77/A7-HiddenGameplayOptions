@@ -1,0 +1,57 @@
+// -*- coding: us-ascii -*-
+
+@1 = ~Instalar todas as Opções de Jogabilidade Ocultas de uma vez~
+@10 = ~Adicionar opção dentro do jogo "Ativar Modo de Debug"~
+@11 = ~Adicionar opção dentro do jogo "Ativar Modo de Edição da Interface do Usuário"~
+@12 = ~Adicionar opção dentro do jogo "Mostrar Strrefs"~
+@13 = ~Adicionar opção dentro do jogo "Teclas de Atalho nas Dicas das Ferramentas"~
+@14 = ~Adicionar opção dentro do jogo "Mostrar os ícones dos gatilhos quando pressionar TAB"~
+@15 = ~Adicionar opção dentro do jogo "Permitir a Barra de Espaco nos Diálogos"~
+@16 = ~Adicionar opção dentro do jogo "Limitar os Feitiços dos Druidas pros Clérigos/Rangers"~
+@17 = ~Adicionar opção dentro do jogo "Ataque Furtivo da 3E"~
+@18 = ~Adicionar opção dentro do jogo "Tremor da Tela no Golpe Crítico"~
+@19 = ~Adicionar opção dentro do jogo "Mostrar Informações Extras do Combate"~
+@20 = ~Adicionar opção dentro do jogo "Mostrar a Data e Hora do Jogo ao Pausar"~
+@21 = ~Adicionar opção dentro do jogo "Desativar o Zoom do Mapa da Área"~
+@22 = ~Adicionar opção dentro do jogo "Reverter o Zoom da Roda do Mouse"~
+@23 = ~Adicionar opção dentro do jogo "Pausar o Jogo na Tela do Mapa"~
+@24 = ~Adicionar opção dentro do jogo "Ativar Neblina"~
+@25 = ~Adicionar opção dentro do jogo "Desativar Filmes"~
+@26 = ~Adicionar opção dentro do jogo "Sem Ataques Cosméticos"~
+@27 = ~Adicionar opção dentro do jogo "Bônus de EXP no Modo Pesadelo"~
+@28 = ~Adicionar opção dentro do jogo "Disparar os Sons de Tédio"~
+@29 = ~Adicionar opção dentro do jogo "Taxa dos Frames" (experimental)~
+@30 = ~Adicionar opção dentro do jogo "Feedback das Ações"~
+@31 = ~Adicionar opção dentro do jogo "Exibir o Ícone da Subida de Nível"~
+@32 = ~Adicionar opção dentro do jogo "Mostrar o Alcance da Area de Efeito"~
+@33 = ~Adicionar opção dentro do jogo "Busca do Caminho Melhorada"~
+@34 = ~Adicionar opção dentro do jogo "Expiração do Destaque das Armadilhas"~
+@35 = ~Adicionar opção dentro do jogo "Mostrar Feitiços Que Podem Ser Aprendidos"~
+@36 = ~Adicionar opção dentro do jogo "Renderizar o Mapa da Busca"~
+@37 = ~Adicionar opção dentro do jogo "Renderizar o Mapa Dinâmico da Busca"~
+@38 = ~Adicionar opções dentro do jogo pro Tweaks Anthology "Criar Saves com Intervalo"~
+@39 = ~Adicionar opção dentro do jogo "Forçar a Pausa no Diálogo"~
+
+@100 = ~Atualizar as associações com as teclas~
+@101 = ~Só pros feitiços do sacerdote~
+@102 = ~Só pros feitiços do mago~
+@103 = ~Pros feitiços do sacerdote e do mago~
+
+@200 = ~Menu Melhorado das Trapaças~
+@201 = ~Atualizar as tabelas dos recursos pro "Menu Melhorado das Trapaças"~
+
+@500 = ~É requerido que o jogo Enhanced Edition seja da versão 2.0 ou superior.~
+@501 = ~Não pôde aplicar o patch no arquivo LUA~
+@502 = ~Não pôde aplicar o patch no UI.MENU~
+@503 = ~A opção já está instalada.~
+@504 = ~A opção não está disponível pra este jogo.~
+@505 = ~A opção já está presente neste jogo.~
+@506 = ~Este mod nao é compatível com o componente "Opções Ocultas do Jogo" do mod EEUITweaks.~
+@507 = ~Este componente não é compatível com o Lefreut's Enhanced UI (LeUI).~
+@508 = ~Requer que o "Level Up" Icon Tweaks esteja instalado.~
+@509 = ~Requer que o "Criar Saves com Intervalo" do Tweaks Anthology esteja instalado.~
+@510 = ~Requer que o componente "Menu Melhorado das Trapaças" esteja instalado.~
+@511 = ~É pretendido que este componente seja chamado separadamente se necessário.~
+@512 = ~Este componente não é compatível com o Infinity UI do Pecca.~
+@513 = ~Este componente não é compatível com o Classic BG UI do K4f4r.~
+@514 = ~Este componente não é compatível com o Tipun's User Interface.~

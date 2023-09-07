@@ -393,7 +393,7 @@ French translation: Gwendolyne, JohnBob
 
 Polish translation: Cahir
 
-Brazilian Portuguese translation: Nasher
+Brazilian Portuguese translation: Nasher, Felipefpl
 
 Russian translation: Saigon1983, yota13, Austin87
 
@@ -416,6 +416,8 @@ History
 - Added compatibility checks for Pecca's Infinity UI
 - Added compatibility checks for K4f4r's Classic BG UI
 - Added compatibility checks for Tipun's User Interface
+- Updated French translation
+- Updated Brazilian Portuguese translation
 
 4.2
 - Added compatibility with Pecca's Infinity UI++ for "Improved Cheat Menu"

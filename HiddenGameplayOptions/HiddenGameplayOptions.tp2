@@ -52,12 +52,12 @@ LANGUAGE  ~Polski (translation: Cahir)~
           ~HiddenGameplayOptions/languages/english/mod.tra~
           ~HiddenGameplayOptions/languages/polish/setup.tra~
           ~HiddenGameplayOptions/languages/polish/mod.tra~
-LANGUAGE  ~Portugues (translation: Nasher)~
-          ~portuguese~
+LANGUAGE  ~Português do Brasil (translation: Nasher, Felipefpl)~
+          ~brazilianportuguese~
           ~HiddenGameplayOptions/languages/english/setup.tra~
           ~HiddenGameplayOptions/languages/english/mod.tra~
-          ~HiddenGameplayOptions/languages/portuguese/setup.tra~
-          ~HiddenGameplayOptions/languages/portuguese/mod.tra~
+          ~HiddenGameplayOptions/languages/brazilianportuguese/setup.tra~
+          ~HiddenGameplayOptions/languages/brazilianportuguese/mod.tra~
 LANGUAGE  ~Russian (translation: Saigon1983, yota13, Austin87)~
           ~russian~
           ~HiddenGameplayOptions/languages/english/setup.tra~
