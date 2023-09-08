@@ -1,7 +1,7 @@
 Revelar Opções Ocultas da Jogabilidade
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Versão:     4.2
+Versão:     4.3
 Author:     Argent77
 
 Download:   https://github.com/Argent77/A7-HiddenGameplayOptions/releases/latest
@@ -390,8 +390,8 @@ Histórico
 - Added compatibility checks for Pecca's Infinity UI
 - Added compatibility checks for K4f4r's Classic BG UI
 - Added compatibility checks for Tipun's User Interface
-- Updated French translation
-- Updated Brazilian Portuguese translation
+- Updated French translation (thanks JohnBob)
+- Updated Brazilian Portuguese translation (thanks Felipe)
 
 4.2
 - Added compatibility with Pecca's Infinity UI++ for "Improved Cheat Menu"

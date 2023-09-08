@@ -1,7 +1,7 @@
 Faire apparaître les Options de jeu cachées
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Version :         4.2
+Version :         4.3
 Auteur :          Argent77
 
 Téléchargement :  https://github.com/Argent77/A7-HiddenGameplayOptions/releases/latest
@@ -393,7 +393,7 @@ French translation: Gwendolyne, JohnBob
 
 Polish translation: Cahir
 
-Brazilian Portuguese translation: Nasher, Felipefpl
+Brazilian Portuguese translation: Nasher, Felipe
 
 Russian translation: Saigon1983, yota13, Austin87
 
@@ -416,8 +416,8 @@ History
 - Added compatibility checks for Pecca's Infinity UI
 - Added compatibility checks for K4f4r's Classic BG UI
 - Added compatibility checks for Tipun's User Interface
-- Updated French translation
-- Updated Brazilian Portuguese translation
+- Updated French translation (thanks JohnBob)
+- Updated Brazilian Portuguese translation (thanks Felipe)
 
 4.2
 - Added compatibility with Pecca's Infinity UI++ for "Improved Cheat Menu"
