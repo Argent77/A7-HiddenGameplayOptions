@@ -1,0 +1,57 @@
+// -*- coding: us-ascii -*-
+
+@1 = ~Installa tutto Hidden Gameplay Options~
+@10 = ~Aggiungi opzione di gioco "Enable Debug Mode"~
+@11 = ~Aggiungi opzione di gioco "Enable UI Edit Mode"~
+@12 = ~Aggiungi opzione di gioco "Show Strrefs"~
+@13 = ~Aggiungi opzione di gioco "Hotkeys On Tooltips"~
+@14 = ~Aggiungi opzione di gioco "Show trigger icons on tab"~
+@15 = ~Aggiungi opzione di gioco "Allow Spacebar in Dialogs"~
+@16 = ~Aggiungi opzione di gioco "Limit druidic spells for Cleric/Ranger"~
+@17 = ~Aggiungi opzione di gioco "3E Sneak Attack"~
+@18 = ~Aggiungi opzione di gioco "Critical Hit Screen Shake"~
+@19 = ~Aggiungi opzione di gioco "Show extra combat info"~
+@20 = ~Aggiungi opzione di gioco "Show Game Date and Time on Pause"~
+@21 = ~Aggiungi opzione di gioco "Disable Area Map Zoom"~
+@22 = ~Aggiungi opzione di gioco "Reverse Mouse Wheel Zoom"~
+@23 = ~Aggiungi opzione di gioco "Pause Game on Map Screen"~
+@24 = ~Aggiungi opzione di gioco "Enable Fog"~
+@25 = ~Aggiungi opzione di gioco "Disable Movies"~
+@26 = ~Aggiungi opzione di gioco "No Cosmetic Attacks"~
+@27 = ~Aggiungi opzione di gioco "XP Bonus in Nightmare Mode"~
+@28 = ~Aggiungi opzione di gioco "Trigger Bored Sounds"~
+@29 = ~Aggiungi opzione di gioco "Frame Rate" (experimental)~
+@30 = ~Aggiungi opzione di gioco "Action Feedback"~
+@31 = ~Aggiungi opzione di gioco "Display Level Up Icon"~
+@32 = ~Aggiungi opzione di gioco "Show Area of Effect Range"~
+@33 = ~Aggiungi opzione di gioco "Enhanced Path Search"~
+@34 = ~Aggiungi opzione di gioco "Expire Trap Highlights"~
+@35 = ~Aggiungi opzione di gioco "Show Learnable Spells"~
+@36 = ~Aggiungi opzione di gioco "Render Search Map"~
+@37 = ~Aggiungi opzione di gioco "Render Dynamic Search Map"~
+@38 = ~Aggiungi opzioni di gioco per Tweak Anthology's "Create Interval Saves"~
+@39 = ~Aggiungi opzione di gioco "Force Dialog Pause"~
+
+@100 = ~Aggiorna key bindings~
+@101 = ~solo per gli incantesimi del sacerdote~
+@102 = ~solo per gli incantesimi del mago~
+@103 = ~per entrambi~
+
+@200 = ~Improved Cheat Menu~
+@201 = ~Aggiorna le tabelle delle risorse per "Improved Cheat Menu"~
+
+@500 = ~Enhanced Edition game patched to v2.0 or higher required.~
+@501 = ~Cannot patch LUA file~
+@502 = ~Cannot patch UI.MENU~
+@503 = ~Option is already installed.~
+@504 = ~Option not available for this game.~
+@505 = ~Option already present in this game.~
+@506 = ~This mod is not compatible with EEUITweaks component "Hidden Game Options".~
+@507 = ~This component is not compatible with Lefreut's Enhanced UI (LeUI).~
+@508 = ~Requires "Level Up" Icon Tweaks to be installed.~
+@509 = ~Requires Tweaks Anthology's "Create interval saves" to be installed.~
+@510 = ~Requires component "Improved Cheat Menu" to be installed.~
+@511 = ~This component is intended to be called separately if needed.~
+@512 = ~This component is not compatible with Pecca's Infinity UI.~
+@513 = ~This component is not compatible with K4f4r's Classic BG UI.~
+@514 = ~This component is not compatible with Tipun's User Interface.~

@@ -365,6 +365,8 @@ Ajuda com programação adicional: AncientCowboy
 
 Tradução pro Francês: Gwendolyne, JohnBob
 
+Italian translation: Zaramorte
+
 Tradução pro Polonês: Cahir
 
 Tradução pro Português Brasileiro: Nasher, Felipe
@@ -383,6 +385,9 @@ ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa
 
 Histórico
 ~~~~~~~~~
+
+4.4
+- Added Italian translation (thanks Zaramorte)
 
 4.3
 - Improved compatibility of "Improved Cheat Menu" with Iwdification and SCS

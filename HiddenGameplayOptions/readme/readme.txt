@@ -370,6 +370,8 @@ Additional coding help: AncientCowboy
 
 French translation: Gwendolyne, JohnBob
 
+Italian translation: Zaramorte
+
 Polish translation: Cahir
 
 Brazilian Portuguese translation: Nasher, Felipe
@@ -388,6 +390,9 @@ ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa
 
 History
 ~~~~~~~
+
+4.4
+- Added Italian translation (thanks Zaramorte)
 
 4.3
 - Improved compatibility of "Improved Cheat Menu" with Iwdification and SCS

@@ -1,0 +1,298 @@
+// -*- coding: utf-8 -*-
+
+// *** Game options ***
+
+@1000 = ~Enable Debug Mode~
+@1001 = ~Abilitando questa impostazione puoi attivare le cheat key e la console di debug.
+
+Usa la keyboard shortcut CTRL+SPACE per attivare la console. I comandi della console includono ^PC:AddGold(number)^-, ^PC:CreateItem("name")^-, ^PC:SetCurrentXP(number)^-, e molti altri.
+
+Le cheat keys includono CTRL+Y per insta-kill le creature sotto il cursore del mouse, CTRL+R per curare e dissipare gli effetti dai personaggi sotto il cursore del mouse, CTRL+J per teletrasportare i membri del gruppo selezionati nella posizione corrente del cursore, CTRL+T per far avanzare il tempo di gioco di un'ora, CTRL+4 per attivare/disattivare la visibilità delle regioni interattive e molto altro.
+
+^NNota: È necessario riavviare il gioco affinché le modifiche abbiano effetto.^-~
+
+@1100 = ~Enable UI Edit Mode~
+@1101 = ~Abilitando questa impostazione puoi utilizzare la funzionalità di modifica dell'interfaccia utente nel gioco.
+
+Premi F11 per attivare o disattivare UI edit mode. Mentre questa modalità è attiva è possibile trascinare gli elementi dell'interfaccia utente sullo schermo. Premi F5 per visualizzare in anteprima le modifiche all'interfaccia utente senza riavviare il gioco. Premi TAB mentre passi il mouse su un elemento dell'interfaccia utente per mostrare quale numero di riga in UI.MENU definisce quell'elemento.
+
+^NNota: È necessario riavviare il gioco affinché le modifiche abbiano effetto.^-~
+
+@1200 = ~Show Strrefs~
+@1201 = ~Abilitando questa impostazione si posizionano i numeri di riferimento delle stringhe davanti alle stringhe del gioco.
+
+^NNota: È necessario riavviare il gioco affinché le modifiche abbiano effetto.^-~
+
+@1300 = ~Hotkeys On Tooltips~
+@1301 = ~Quando questa impostazione è abilitata, le descrizioni comandi mostreranno i tasti di scelta rapida quando disponibili.
+
+^NNota: È necessario riavviare il gioco affinché le modifiche abbiano effetto.^-~
+
+@1400 = ~Show Trigger Icons on Tab~
+@1401 = ~L'abilitazione di questa impostazione rivela informazioni aggiuntive sulle regioni interattive quando si preme il tasto TAB.
+
+^NNota: È necessario riavviare il gioco affinché le modifiche abbiano effetto.^-~
+
+@1500 = ~Allow Spacebar in Dialogs~
+@1501 = ~L'abilitazione di questa impostazione ti consente di continuare le conversazioni utilizzando la barra spaziatrice.
+
+^NNota: È necessario riavviare il gioco affinché le modifiche abbiano effetto.^-~
+
+@1600 = ~Limit druidic spells for Cleric/Ranger~
+@1601 = ~Questa impostazione controlla la disponibilità degli incantesimi druidici per Chierici/Ranger multiclasse o biclasse.
+
+Abilita questa opzione per limitare gli incantesimi druidici al livello 3, il livello massimo di incantesimi consentito ai ranger. Gli incantesimi del chierico non sono influenzati da questa opzione.
+
+^NNota: È necessario riavviare il gioco affinché le modifiche abbiano effetto.^-~
+
+@1700 = ~3E Sneak Attack~
+@1701 = ~Abilitando questa impostazione si attiva l'Attacco Furtivo e il Colpo Paralizzante, che sono abilità speciali simili a quelle delle regole di Dungeons & Dragons® della terza edizione di Wizards of the Coast.
+
+^NNota: È necessario riavviare il gioco affinché le modifiche abbiano effetto.^-~
+
+@1800 = ~Screen Shake on Critical Hit~
+@1801 = ~Abilitare questa impostazione fa vibrare lo schermo ogni volta che un membro del gruppo mette a segno un colpo critico in combattimento.
+
+^NNota: È necessario riavviare il gioco affinché le modifiche abbiano effetto.^-~
+
+@1900 = ~Show Extra Combat Info~
+@1901 = ~Abilitare questa impostazione ti consente di vedere tutti i fattori che influenzano un tiro per colpire.
+
+^NNota: È necessario riavviare il gioco affinché le modifiche abbiano effetto.^-~
+
+@2000 = ~Show Game Date and Time on Pause~
+@2001 = ~Mostra la data e l'ora del gioco quando si attiva la pausa.
+
+^NNota: È necessario riavviare il gioco affinché le modifiche abbiano effetto.^-~
+
+@2100 = ~Disable Area Map Zoom~
+@2101 = ~Disabilita l'effetto di ingrandimento/riduzione all'apertura o alla chiusura della schermata della mappa dell'area.
+
+^NNota: È necessario riavviare il gioco affinché le modifiche abbiano effetto.^-~
+
+@2200 = ~Reverse Mouse Wheel Zoom~
+@2201 = ~Inverte la direzione dello zoom quando si utilizza la rotellina del mouse.
+
+^NNota: È necessario riavviare il gioco affinché le modifiche abbiano effetto.^-~
+
+@2300 = ~Pause Game on Map Screen~
+@2301 = ~Mette automaticamente in pausa il gioco mentre guardi la schermata della mappa.
+
+^NNota: È necessario riavviare il gioco affinché le modifiche abbiano effetto.^-~
+
+@2400 = ~Enable Fog~
+@2401 = ~Abilita gli effetti di nebbia sulle mappe.
+
+^NNota: È necessario riavviare il gioco affinché le modifiche abbiano effetto.^-~
+
+@2500 = ~Disable Movies~
+@2501 = ~L'abilitazione di questa impostazione disabilita la riproduzione del filmato.
+
+^NNota: È necessario riavviare il gioco affinché le modifiche abbiano effetto.^-~
+
+@2600 = ~No Cosmetic Attacks~
+@2601 = ~Mostra le animazioni di attacco solo quando i personaggi stanno effettuando attacchi reali. Altrimenti, i personaggi eseguono animazioni di attacco durante il round per simulare finte e schivate.
+
+^NNota: È necessario riavviare il gioco affinché le modifiche abbiano effetto.^-~
+
+@2700 = ~XP Bonus in Legacy of Bhaal Mode~
+@2701 = ~Abilitare questa opzione consente ai tuoi personaggi di ottenere XP bonus in modalità Retaggio di Bhaal. Questa impostazione non influenzerà gli XP extra concessi dalle normali modalità di difficoltà.
+
+^NNota: È necessario riavviare il gioco affinché le modifiche abbiano effetto.^-~
+
+@2710 = ~XP Bonus in Heart of Fury Mode~
+@2711 = ~Abilitare questa opzione consente ai tuoi personaggi di ottenere XP bonus nella modalità Cuore di Furia. Questa impostazione non influenzerà gli XP extra concessi dalle normali modalità di difficoltà.
+
+^NNota: È necessario riavviare il gioco affinché le modifiche abbiano effetto.^-~
+
+@2800 = ~Frame Rate~
+@2801 = ~Questo cursore ti consente di aumentare la frequenza dei fotogrammi con cui viene eseguito il gioco, accelerando così tutti gli aspetti del gioco.
+
+ATTENZIONE: la regolazione del frame rate superiore a 30 può causare problemi di sincronizzazione audio durante i filmati e effetti degli incantesimi errati durante il combattimento.
+
+^NNota: È necessario riavviare il gioco affinché le modifiche abbiano effetto.^-~
+@2802 = ~30 frames/sec.~
+@2803 = ~40 frames/sec.~
+@2804 = ~50 frames/sec.~
+@2805 = ~60 frames/sec.~
+
+@2900 = ~Action Feedback~
+@2901 = ~Questo cursore controlla se e quando le azioni vengono visualizzate come piccole icone attorno allo sprite di un personaggio.
+  DISABILITATO: Mai.
+  BASSO: solo per gli alleati quando è in pausa.
+  MEDIO: solo per gli alleati.
+  ALTO*: Per tutte le creature quando sono in pausa.
+  MASSIMO*: Per tutte le creature.
+
+(*) Efficace solo quando la modalità debug è abilitata.
+
+Nota: è necessario riavviare il gioco affinché le modifiche abbiano effetto.~
+@2902 = ~Questo cursore controlla se e quando le azioni vengono visualizzate come piccole icone attorno allo sprite di un personaggio.
+  DISABILITATO: Mai.
+  BASSO: solo per gli alleati quando è in pausa.
+  MEDIO: solo per gli alleati.
+  ALTO*: Per tutte le creature quando sono in pausa.
+  MASSIMO*: Per tutte le creature.
+
+(*) Efficace solo quando la modalità debug è abilitata.
+
+^NNota: È necessario riavviare il gioco affinché le modifiche abbiano effetto.^-~
+@2903 = ~Disabilitato~
+@2904 = ~Basso~
+@2905 = ~Medio~
+@2906 = ~Alto*~
+@2907 = ~Massimo*~
+
+@3000 = ~Display Level Up Icon~
+@3001 = ~Controlla se l'icona "Sali di livello" viene visualizzata o meno nella finestra del ritratto o nella barra della salute dei membri del gruppo che sono pronti a salire di livello.
+
+^NNota: È necessario riavviare il gioco affinché le modifiche abbiano effetto.^-~
+
+@3100 = ~Bored Sounds~
+@3101 = ~Riproduci suoni di personaggi annoiati~
+@3102 = ~Riproduci suoni annoiati dopo un lungo periodo di inattività.
+
+Nota: è necessario riavviare il gioco affinché le modifiche abbiano effetto.~
+@3103 = ~Controlla se i membri del gruppo attivano suoni annoiati dopo un lungo periodo di inattività.
+
+^NNota: È necessario riavviare il gioco affinché le modifiche abbiano effetto.^-~
+
+@3200 = ~Show Area of Effect Range~
+@3201 = ~Abilitando questa impostazione viene visualizzata la portata di un incantesimo ad area di effetto prima che venga lanciato.
+
+^NNota: È necessario riavviare il gioco affinché le modifiche abbiano effetto.^-~
+
+@3300 = ~Enhanced Path Search~
+@3301 = ~Migliora il pathfinding ricalcolando continuamente il percorso di ricerca dei caratteri.
+
+^NNota: È necessario riavviare il gioco affinché le modifiche abbiano effetto.^-~
+
+@3400 = ~Expire Trap Highlights~
+@3401 = ~Controlla se l'evidenziazione delle trappole rilevate o delle porte nascoste deve scomparire dopo un po'.
+
+^NNota: È necessario riavviare il gioco affinché le modifiche abbiano effetto.^-~
+
+@3500 = ~Show Learnable Spells~
+@3501 = ~Controlla se viene mostrata una tinta verde per le pergamene degli incantesimi che possono essere scritte nel libro degli incantesimi di un mago.
+
+^NNota: È necessario riavviare il gioco affinché le modifiche abbiano effetto.^-~
+
+@3600 = ~Render Search Map~
+@3601 = ~Controlla se tenendo premuto SHIFT verrà mostrata una sovrapposizione della mappa di ricerca statica per l'area corrente.
+
+^NNota: È necessario riavviare il gioco affinché le modifiche abbiano effetto.^-~
+
+@3700 = ~Render Dynamic Search Map~
+@3701 = ~Controlla se tenendo premuto CTRL verrà mostrata una sovrapposizione di regioni della mappa di ricerca dinamica, come porte bloccate o lo spazio personale delle creature.
+
+^NNota: È necessario riavviare il gioco affinché le modifiche abbiano effetto.^-~
+
+@3800 = ~Enable Interval Saves~
+@3801 = ~Controlla se il gioco viene salvato a intervalli regolari. Questa opzione richiede l'installazione del componente mod di Tweaks Anthology "Crea salvataggi a intervalli"..
+
+^NNota: È necessario riavviare il gioco affinché le modifiche abbiano effetto.^-~
+
+@3810 = ~Create Interval Saves during Combat~
+@3811 = ~Controlla se vengono creati salvataggi a intervalli anche durante il combattimento. Questa opzione richiede l'installazione del componente mod di Tweaks Anthology "Crea salvataggi a intervalli"..
+
+^NNota: È necessario riavviare il gioco affinché le modifiche abbiano effetto.^-~
+
+@3900 = ~Force Dialog Pause~
+@3901 = ~Abilitando questa opzione, il gioco verrà messo in pausa durante le conversazioni.
+
+^NNota: È necessario riavviare il gioco affinché le modifiche abbiano effetto.^-~
+
+
+// *** Misc. strings ***
+
+@10000 = ~Attacco Furtivo~
+@10001 = ~Attacco Furtivo ineffettivo~
+@10002 = ~Colpo paralizzante~
+@10003 = ~L'arma non è adatta per attacchi furtivi~
+@10004 = ~Danno da attacco furtivo~
+@10005 = ~Colpo paralizzante~
+
+
+// *** Strings for the Cheat Menu ***
+
+@20000 = ~CREA~
+@20001 = ~COMANDO~
+@20002 = ~APRI~
+@20003 = ~ESEGUI~
+@20004 = ~Numero/Cariche:~
+@20005 = ~<< AREE~
+@20006 = ~<< OGGETTI~
+@20007 = ~<< MAGIE~
+@20008 = ~<< NEGOZI~
+@20009 = ~<< CREATURE~
+@20010 = ~<< COMANDI~
+@20011 = ~Fare clic per attivare l'elenco di oggetti.~
+@20012 = ~Fare clic per attivare l'elenco di magie.~
+@20013 = ~Fare clic per attivare l'elenco di negozi.~
+@20014 = ~Fare clic per attivare l'elenco di creature.~
+@20015 = ~Fare clic per attivare l'elenco di comandi.~
+@20016 = ~Fare clic per attivare l'elenco di areae.~
+@20017 = ~Il comando verrà aggiunto a Lua console.~
+@20018 = ~Il comando verrà eseguito immediatamente.~
+@20019 = ~Filtro:~
+@20020 = ~Cancella~
+@20021 = ~Inserisci qui il testo del filtro~
+
+// PSTEE-specific labels
+@20100 = ~Crea~
+@20101 = ~Comando~
+@20102 = ~Apri~
+@20103 = ~Esegui~
+@20105 = ~<< Aree~
+@20106 = ~<< Oggetti~
+@20107 = ~<< Magie~
+@20108 = ~<< Negozi~
+@20109 = ~<< Creature~
+@20110 = ~<< Comandi~
+
+// Translator note: (Ascii) Quotation marks in strings must be escaped
+@20200 = ~Rimuovi \"Ranger Decaduto\" status dal personaggio selezionato~
+@20201 = ~Rimuovi \"Paladino Decaduto\" status dal personaggio selezionato~
+@20202 = ~Schermata di blocco sul personaggio selezionato~
+@20203 = ~Rimuovi il blocco dello schermo dal personaggio selezionato~
+@20204 = ~Aumenta la reputazione del party di 2~
+@20205 = ~Diminuisci la reputazione del party di 2~
+@20206 = ~Imposta l'ora del giorno alla prossima \"Mattina\"~
+@20207 = ~Imposta l'ora del giorno al prossimo \"Mezzogiorno\"~
+@20208 = ~Imposta l'ora del giorno alla prossima \"Sera\"~
+@20209 = ~Imposta l'ora del giorno alla prossima \"Mezzanotte\"~
+@20210 = ~Avanza il tempo di gioco di 8 ore~
+@20211 = ~Avanza in tempo reale di 1 ora~
+@20212 = ~Avanza in tempo reale di 1 giorno~
+@20213 = ~Cambia il tempo in \"Sereno\"~
+@20214 = ~Cambia il tempo in \"Pioggia\"~
+@20215 = ~Cambia il tempo in \"Neve\"~
+@20216 = ~Cambia il tempo in \"Nebbia\"~
+@20217 = ~Distruggi tutti i cumuli a terra nell'area~
+@20218 = ~Abilita visualizzazione strref per il testo del gioco~
+@20219 = ~Disabilita visualizzazione strref per il testo del gioco~
+@20220 = ~Mostra i credit e torna al menu principale~
+
+// PSTEE-specific additions
+// Translator note: (Ascii) Quotation marks in strings must be escaped
+@20250 = ~Aumenta valore morale (Buono..Malvagio) di 2~
+@20251 = ~Diminuisci valore morale (Buono..Malvagio) di 2~
+@20252 = ~Aumenta valore etico (Legale..Caotico) di 2~
+@20253 = ~Diminuisci valore etico (Legale..Caotico) di 2~
+@20254 = ~Aumenta conto \"Uccisioni\" di 1~
+@20255 = ~Diminuisci conto \"Uccisioni\" di 1~
+@20256 = ~Aumenta valore \"Lady\" di 1~
+@20257 = ~Diminuisci valore \"Lady\" di 1~
+
+// Spell types
+@20300 = ~Speciale~
+@20301 = ~Stregone~
+@20302 = ~Prete~
+@20303 = ~Psionico~
+@20304 = ~Innato~
+@20305 = ~canzone bardo~
+
+// Creature allegiances
+@20310 = ~amichevole~
+@20311 = ~neutrale~
+@20312 = ~ostile~

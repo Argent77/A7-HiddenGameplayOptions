@@ -70,6 +70,12 @@ LANGUAGE  ~Korean (translation: begaborn)~
           ~HiddenGameplayOptions/languages/english/mod.tra~
           ~HiddenGameplayOptions/languages/korean/setup.tra~
           ~HiddenGameplayOptions/languages/korean/mod.tra~
+LANGUAGE  ~Italian (translation: Zaramorte)~
+          ~italian~
+          ~HiddenGameplayOptions/languages/english/setup.tra~
+          ~HiddenGameplayOptions/languages/english/mod.tra~
+          ~HiddenGameplayOptions/languages/italian/setup.tra~
+          ~HiddenGameplayOptions/languages/italian/mod.tra~
 
 BEGIN @1  // Install all Hidden Gameplay Options at once
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @500  // Enhanced Edition game patched to v2.0 or higher required.
