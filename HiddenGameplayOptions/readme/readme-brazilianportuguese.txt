@@ -1,7 +1,7 @@
 Revelar Opções Ocultas da Jogabilidade
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Versão:     4.3
+Versão:     4.4
 Author:     Argent77
 
 Download:   https://github.com/Argent77/A7-HiddenGameplayOptions/releases/latest
