@@ -41,7 +41,7 @@ END ELSE ACTION_IF (MOD_IS_INSTALLED ~dragonspear_ui++.tp2~ 1) BEGIN
   OUTER_SPRINT ui_mode ~sod~
 END ELSE ACTION_IF (MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) BEGIN
   // Infinity UI++
-  OUTER_SPRINT ui_mode ~sod~
+  OUTER_SPRINT ui_mode ~iui~
   OUTER_SPRINT ui_scrollbar ~rgdscrl1~
 END ELSE ACTION_IF (MOD_IS_INSTALLED ~leui.tp2~ 0 ||
                     MOD_IS_INSTALLED ~leui-bg1ee.tp2~ 0 ||

@@ -1,0 +1,810 @@
+menu
+{
+	name 'cheatMenu'
+	ignoreEsc
+	align left top
+%on_open_content%
+	
+	label
+	{
+		area 10 20 420 600
+		mosaic lua "'rgdjbox' .. RgUISkin"
+	}
+	label
+	{
+		bam 'RGDJSHND'
+		sequence lua "RgUISkin"
+		ScaleToClip
+		area 0 0 440 75
+	}
+	label
+	{
+		area 0 610 440 30
+		bam 'RGDJSHND'
+		sequence lua "RgUISkin"
+		frame 1
+		ScaleToClip
+	}
+	
+	-- TOGGLE BUTTONS START
+  button
+  {
+    --enabled "a7cheatListType == 0"
+    area    18 15 50 45
+    bam rgdmenub
+	sequence 0
+	ScaleToClip
+	highlightgroup	rgcheatsection
+    --text    "A7_TOGGLE_AREAS_BUTTON"
+    tooltip lua "t('A7_TOGGLE_COMMANDS_TOOLTIP')" -- tooltip order shifted backwards by 1 because of different selection style
+    action  "a7cheatListType = 0"
+  }
+  button
+  {
+    --enabled "a7cheatListType == 1"
+    area    77 15 50 45
+    bam rgdmenub
+	sequence 2
+	ScaleToClip
+	highlightgroup	rgcheatsection
+    --text    "A7_TOGGLE_ITEMS_BUTTON"
+    tooltip lua "t('A7_TOGGLE_AREAS_TOOLTIP')"  -- tooltip order shifted backwards by 1 because of different selection style
+    action  "a7cheatListType = 1"
+  }
+  button
+  {
+    --enabled "a7cheatListType == 2"
+    area    136 15 50 45
+    bam rgdmenub
+	sequence 4
+	ScaleToClip
+	highlightgroup	rgcheatsection
+    --text    "A7_TOGGLE_SPELLS_BUTTON"
+    tooltip lua "t('A7_TOGGLE_ITEMS_TOOLTIP')"  -- tooltip order shifted backwards by 1 because of different selection style
+    action  "a7cheatListType = 2"
+  }
+  button
+  {
+    --enabled "a7cheatListType == 3"
+    area    195 15 50 45
+    bam rgdmenub
+	sequence 13
+	ScaleToClip
+	highlightgroup	rgcheatsection
+    --text    "A7_TOGGLE_STORES_BUTTON"
+    tooltip lua "t('A7_TOGGLE_SPELLS_TOOLTIP')" -- tooltip order shifted backwards by 1 because of different selection style
+    action  "a7cheatListType = 3"
+  }
+  button
+  {
+    --enabled "a7cheatListType == 4"
+    area    254 15 50 45
+    bam rgdmenub
+	sequence 3
+	ScaleToClip
+	highlightgroup	rgcheatsection
+    --text    "A7_TOGGLE_CREATURES_BUTTON"
+    tooltip lua "t('A7_TOGGLE_STORES_TOOLTIP')" -- tooltip order shifted backwards by 1 because of different selection style
+    action  "a7cheatListType = 4"
+  }
+  button
+  {
+    --enabled "a7cheatListType == 5"
+    area    313 15 50 45
+    bam rgdmenub
+	sequence 6
+	ScaleToClip
+	highlightgroup	rgcheatsection
+    --text    "A7_TOGGLE_COMMANDS_BUTTON"
+    tooltip lua "t('A7_TOGGLE_CREATURES_TOOLTIP')"  -- tooltip order shifted backwards by 1 because of different selection style
+    action  "a7cheatListType = 5"
+  }
+  
+  button -- lua history
+  {
+  	area		372 15 50 45
+  	bam rgdmenub
+  	sequence 8
+  	ScaleToClip
+  	highlightgroup	rgcheatsection
+	tooltip lua "t('RG_CHEATHISTORY')"
+  	action "a7cheatListType = 6"	
+  }
+  -- TOGGLE BUTTONS END
+
+  -- ITEM LIST START
+  label
+  {
+  	enabled "a7cheatListType == 1"
+  	bam 'rgdsrch1'
+  	sequence lua "rgUISkin"
+  	ScaleToClip
+  	area 24 356 392 40
+  }
+  edit
+  {
+    enabled "a7cheatListType == 1"
+    name    "a7cheatItemFilterEdit"
+    area    65 364 310 24
+    var     a7cheatItemFilter
+    --placeholder 'A7_FILTER_PLACEHOLDER'
+    text style "edit"
+    maxlines 1
+    fill    112 111 111 64
+    actionAlt "
+      a7luaFilter(a7itemList, a7cheatItemList, {1, 2}, a7cheatItemFilter)
+      return 1
+    "
+  }
+  button
+  {
+    enabled "a7cheatListType == 1"
+    area 375 364 24 24
+  	bam 'rgdbin1'
+  	scaleToClip
+  	opacity 60
+  	fill            112 111 111 64
+    action  "
+      a7cheatItemFilter = ''
+      a7luaFilter(a7itemList, a7cheatItemList, {1, 2}, a7cheatItemFilter)
+      Infinity_FocusTextEdit('a7cheatItemFilterEdit')
+    "
+  }
+  list
+  {
+    column
+    {
+      width 100
+	  label
+	  {
+	  	area 0 0 -1 -1
+	  	bam rgdslct
+	  	sequence lua "rgGetSelectedHighlight(rowNumber, a7cheatCreateItem)"
+	  	ScaleToClip
+	  }
+      label
+      {
+        area 10 0 110 -1
+        text lua "a7cheatItemList[rowNumber][1]"
+        text style "normal"
+      }
+	  label
+      {
+        area 120 0 -1 -1
+        text lua "a7cheatItemList[rowNumber][2]"
+        text style "normal"
+      }
+    }
+    enabled "a7cheatListType == 1"
+    area    20 75 400 275
+	hideHighlight
+    rowheight 24
+    table     "a7cheatItemList"
+    var       a7cheatCreateItem
+    scrollbar '%ui_scrollbar%'
+  }
+  button
+  {
+    enabled "a7cheatListType == 1"
+    bam 'rgdbuts1'
+	sequence lua "rgUISkin"
+	ScaleToClip
+	area 192 404 226 46
+	text lua	"rgString('A7_CREATE_BUTTON')"
+	text style	"button"
+	pad 0 0 0 0
+    action  "C:CreateItem(a7cheatItemList[a7cheatCreateItem][1],a7cheatItemCharge1,a7cheatItemCharge2,a7cheatItemCharge3)"
+  }
+  
+  button 
+  {
+	enabled "a7cheatListType == 1"
+	bam 'rgdbuts1'
+	sequence lua "rgUISkin"
+	ScaleToClip
+	area 22 404 166 46
+	text style "button"
+	pad 0 0 0 0
+	clickable false
+	text ""
+  }
+  edit
+  {
+    enabled "a7cheatListType == 1"
+    area    28 415 48 24
+    var     a7cheatItemCharge1
+    text style "edit"
+    maxlines 1
+    fill    112 111 111 64
+  }
+  edit
+  {
+    enabled "a7cheatListType == 1"
+    area    81 415 48 24
+    var     a7cheatItemCharge2
+    text style "edit"
+    maxlines 1
+    fill    112 111 111 64
+  }
+  edit
+  {
+    enabled "a7cheatListType == 1"
+    area    134 415 48 24
+    var     a7cheatItemCharge3
+    text style "edit"
+    maxlines 1
+    fill    112 111 111 64
+  }
+  -- ITEM LIST END
+
+  -- SPELL LIST START
+  label
+  {
+  	enabled "a7cheatListType == 2"
+  	bam 'rgdsrch1'
+  	sequence lua "rgUISkin"
+  	ScaleToClip
+  	area 24 356 392 40
+  }
+  edit
+  {
+    enabled "a7cheatListType == 2"
+    name    "a7cheatSpellFilterEdit"
+    area    65 364 310 24
+    var     a7cheatSpellFilter
+    --placeholder 'A7_FILTER_PLACEHOLDER'
+    text style "edit"
+    maxlines 1
+    fill    112 111 111 64
+    actionAlt "
+      a7luaFilter(a7spellList, a7cheatSpellList, {1, 3}, a7cheatSpellFilter)
+      return 1
+    "
+  }
+  button
+  {
+    enabled "a7cheatListType == 2"
+    area 375 364 24 24
+  	bam 'rgdbin1'
+  	scaleToClip
+  	opacity 60
+  	fill            112 111 111 64
+    action  "
+      a7cheatSpellFilter = ''
+      a7luaFilter(a7spellList, a7cheatSpellList, {1, 3}, a7cheatSpellFilter)
+      Infinity_FocusTextEdit('a7cheatSpellFilterEdit')
+    "
+  }
+  list
+  {
+    column
+    {
+      width 100
+	  label
+	  {
+	  	area 0 0 -1 -1
+	  	bam rgdslct
+	  	sequence lua "rgGetSelectedHighlight(rowNumber, a7cheatAddSpell)"
+	  	ScaleToClip
+	  }
+	  label
+      {
+        area 10 0 24 24
+        --text lua "a7luaSpellType(a7cheatSpellList[rowNumber][2])" 
+        --text style "normal"
+		bam 'guibtact'
+		frame lua "rgGetCheatSpellTypeIcons(a7cheatSpellList[rowNumber][2])"
+		scaleToClip
+      }
+      label
+      {
+        area 40 0 85 -1
+        text lua "a7cheatSpellList[rowNumber][1]"
+        text style "normal"
+      }
+	  label
+      {
+        area 125 0 -1 -1
+        text lua "a7cheatSpellList[rowNumber][3]"
+        text style "normal"
+      }
+    }
+    enabled "a7cheatListType == 2"
+    area    20 75 400 275
+	hidehighlight
+    rowheight 24
+    table     "a7cheatSpellList"
+    var       a7cheatAddSpell
+    scrollbar '%ui_scrollbar%'
+  }
+  --button
+  --{
+  --  enabled "a7cheatListType == 2"
+  --  area    122 246 140 42
+  --  bam     GUIOSTSM
+  --  sequence  6
+  --  text    "A7_COMMAND_BUTTON"
+  --  text style  "button"
+  --  action  "a7luaSpellCommand(a7cheatAddSpell)"
+  --}
+  label
+  {
+  	enabled "a7cheatListType == 2"
+  	area 20 400 400 50
+  	text	"RG_CHEATSPELL"
+  	text style	"normal"
+  }
+  button 
+  {
+  	name "rgCheatButtonLearnSpell"
+  	enabled "a7cheatListType == 2"
+  	area 0 0 70 70
+  	action
+  	"
+  		a7luaSpellCommand(a7cheatAddSpell)
+  		Infinity_LuaConsoleInput(luaEditObjectId,luaEditDebugDump)
+  		return -1
+  	"
+  }
+  -- SPELL LIST END
+
+  -- STORE LIST START
+  label
+  {
+  	enabled "a7cheatListType == 3"
+  	bam 'rgdsrch1'
+  	sequence lua "rgUISkin"
+  	ScaleToClip
+  	area 24 356 392 40
+  }
+  edit
+  {
+    enabled "a7cheatListType == 3"
+    name    "a7cheatStoreFilterEdit"
+    area    65 364 310 24
+    var     a7cheatStoreFilter
+    --placeholder 'A7_FILTER_PLACEHOLDER'
+    text style "edit"
+    maxlines 1
+    fill    112 111 111 64
+    actionAlt "
+      a7luaFilter(a7storeList, a7cheatStoreList, {1, 2}, a7cheatStoreFilter)
+      return 1
+    "
+  }
+  button
+  {
+    enabled "a7cheatListType == 3"
+    area 375 364 24 24
+  	bam 'rgdbin1'
+  	scaleToClip
+  	opacity 60
+  	fill            112 111 111 64
+    action  "
+      a7cheatStoreFilter = ''
+      a7luaFilter(a7storeList, a7cheatStoreList, {1, 2}, a7cheatStoreFilter)
+      Infinity_FocusTextEdit('a7cheatStoreFilterEdit')
+    "
+  }
+  list
+  {
+    column
+    {
+      width 100
+	  label
+	  {
+	  	area 0 0 -1 -1
+	  	bam rgdslct
+	  	sequence lua "rgGetSelectedHighlight(rowNumber, a7cheatOpenStore)"
+	  	ScaleToClip
+	  }
+      label
+      {
+        area 10 0 110 -1
+        text lua "a7cheatStoreList[rowNumber][1]"
+        text style "normal"
+      }
+	  label
+      {
+        area 120 0 -1 -1
+        text lua "a7cheatStoreList[rowNumber][2]"
+        text style "normal"
+      }
+    }
+    enabled "a7cheatListType == 3"
+    area    20 75 400 275
+	hideHighlight
+    rowheight 24
+    table     "a7cheatStoreList"
+    var       a7cheatOpenStore
+    scrollbar '%ui_scrollbar%'
+  }
+  button
+  {
+    enabled "a7cheatListType == 3"
+    bam 'RGDMBUT1'
+	sequence lua "rgUISkin"
+	ScaleToClip
+	area 15 396 410 60
+	text lua	"rgString('A7_OPEN_BUTTON')"
+	text style	"button"
+	pad 0 0 0 0
+    action  "C:StartStore(a7cheatStoreList[a7cheatOpenStore][1])"
+  }
+  -- STORE LIST END
+
+  -- CREATURE LIST START
+  label
+  {
+  	enabled "a7cheatListType == 4"
+  	bam 'rgdsrch1'
+  	sequence lua "rgUISkin"
+  	ScaleToClip
+  	area 24 356 392 40
+  }
+  edit
+  {
+    enabled "a7cheatListType == 4"
+    name    "a7cheatCreatureFilterEdit"
+    area    65 364 310 24
+    var     a7cheatCreatureFilter
+    --placeholder 'A7_FILTER_PLACEHOLDER'
+    text style "edit"
+    maxlines 1
+    fill    112 111 111 64
+    actionAlt "
+      a7luaFilter(a7creatureList, a7cheatCreatureList, {1, 3}, a7cheatCreatureFilter)
+      return 1
+    "
+  }
+  button
+  {
+    enabled "a7cheatListType == 4"
+    area 375 364 24 24
+  	bam 'rgdbin1'
+  	scaleToClip
+  	opacity 60
+  	fill            112 111 111 64
+    action  "
+      a7cheatCreatureFilter = ''
+      a7luaFilter(a7creatureList, a7cheatCreatureList, {1, 3}, a7cheatCreatureFilter)
+      Infinity_FocusTextEdit('a7cheatCreatureFilterEdit')
+    "
+  }
+  list
+  {
+    column
+    {
+      width 100
+	  label
+	  {
+	  	area 0 0 -1 -1
+	  	bam rgdslct
+	  	sequence lua "rgGetSelectedHighlight(rowNumber, a7cheatSpawnCreature)"
+	  	ScaleToClip
+	  }
+	  label
+      {
+        area 10 2 20 20
+        --text lua "a7luaAllegiance(a7cheatCreatureList[rowNumber][2])"
+        --text style "normal"
+		bam rgdxbt2
+		scaleToClip
+		sequence lua "rgGetCheatCreatureAllegiance(a7cheatCreatureList[rowNumber][2])"
+      }
+      label
+      {
+        area 35 0 115 -1
+        text lua "a7cheatCreatureList[rowNumber][1]"
+        text style "normal"
+      }
+	  label
+      {
+        area 150 0 -1 -1
+        text lua "a7cheatCreatureList[rowNumber][3]"
+        text style "normal"
+      }
+    }
+    enabled "a7cheatListType == 4"
+    area    20 75 400 275
+	hideHighlight
+    rowheight 24
+    table     "a7cheatCreatureList"
+    var       a7cheatSpawnCreature
+    scrollbar '%ui_scrollbar%'
+  }
+  button
+  {
+    enabled "a7cheatListType == 4"
+	bam 'RGDMBUT1'
+	sequence lua "rgUISkin"
+	ScaleToClip
+	area 15 396 410 60
+	text lua	"rgString('A7_CREATE_BUTTON')"
+	text style	"button"
+	pad 0 0 0 0
+    action  "C:CreateCreature(a7cheatCreatureList[a7cheatSpawnCreature][1])"
+  }
+  -- CREATURE LIST END
+
+  -- COMMAND LIST START
+  list
+  {
+    column
+    {
+      width 100
+	  label
+	  {
+	  	area 0 0 -1 -1
+	  	bam rgdslct
+	  	sequence lua "rgGetSelectedHighlight(rowNumber, a7cheatApplyCommand)"
+	  	ScaleToClip
+	  }
+      label
+      {
+        area 10 0 -1 -1
+        text lua "a7commandList[rowNumber][1]"
+        text style "normal"
+      }
+    }
+    enabled "a7cheatListType == 5"
+    area    20 75 400 315
+	hideHighlight
+    rowheight 24
+    table     "a7commandList"
+    var       a7cheatApplyCommand
+    scrollbar '%ui_scrollbar%'
+    action    "a7commandMode = a7commandList[a7cheatApplyCommand][3]"
+  }
+  button
+  {
+    enabled "a7cheatListType == 5 and (a7commandMode == 0 or a7commandMode == 2)"
+	name "rgCheatCommandButton"
+	--bam 'RGDMBUT1'
+	--sequence lua "rgUISkin"
+	--ScaleToClip
+	area 15 396 410 60
+	--text lua	"rgString('A7_COMMAND_BUTTON')"
+    --tooltip lua "t('A7_TOGGLE_CMD_LUA_TOOLTIP')"
+	--text style	"button"
+	--pad 0 0 0 0
+    action  "
+		a7luaCommand(a7cheatApplyCommand)
+		Infinity_LuaConsoleInput(luaEditObjectId,luaEditDebugDump)
+  		return -1
+	"
+  }
+  label
+  {
+  	enabled "a7cheatListType == 5 and (a7commandMode == 0 or a7commandMode == 2)"
+  	area 20 400 400 50
+  	text	"RG_CHEATCOMMAND"
+  	text style	"normal"
+  }
+  button
+  {
+    enabled "a7cheatListType == 5 and not (a7commandMode == 0 or a7commandMode == 2)"
+	bam 'RGDMBUT1'
+	sequence lua "rgUISkin"
+	ScaleToClip
+	area 15 396 410 60
+	text lua	"rgString('A7_PERFORM_BUTTON')"
+    tooltip lua "t('A7_TOGGLE_CMD_RUN_TOOLTIP')"
+	text style	"button"
+	pad 0 0 0 0
+    action  "a7luaCommand(a7cheatApplyCommand)"
+  }
+  -- COMMAND LIST END
+
+  -- AREA LIST START
+  label
+  {
+  	enabled "a7cheatListType == 0"
+  	bam 'rgdsrch1'
+  	sequence lua "rgUISkin"
+  	ScaleToClip
+  	area 24 356 392 40
+  }
+  edit
+  {
+    enabled "a7cheatListType == 0"
+    name    "a7cheatAreaFilterEdit"
+    area    65 364 310 24
+    var     a7cheatAreaFilter
+    --placeholder 'A7_FILTER_PLACEHOLDER'
+    text style "edit"
+    maxlines 1
+    fill    112 111 111 64
+    actionAlt "
+      a7luaFilter(cheatAreaDisplayList, a7cheatAreaList, {1, 2}, a7cheatAreaFilter)
+      return 1
+    "
+  }
+  button
+  {
+    enabled "a7cheatListType == 0"
+    area 375 364 24 24
+  	bam 'rgdbin1'
+  	scaleToClip
+  	opacity 60
+  	fill            112 111 111 64
+    action  "
+      a7cheatAreaFilter = ''
+      a7luaFilter(cheatAreaDisplayList, a7cheatAreaList, {1, 2}, a7cheatAreaFilter)
+      Infinity_FocusTextEdit('a7cheatAreaFilterEdit')
+    "
+  }
+  list
+  {
+    column
+    {
+      width 100
+	  label
+	  {
+	  	area 0 0 -1 -1
+	  	bam rgdslct
+	  	sequence lua "rgGetSelectedHighlight(rowNumber, cheatTeleportArea)"
+	  	ScaleToClip
+	  }
+      label
+      {
+        area 10 0 100 20
+        text lua "a7cheatAreaList[rowNumber][1]"
+        text style "normal"
+      }
+	  label
+      {
+        area 75 0 -1 20
+        text lua "a7cheatAreaList[rowNumber][2]"
+        text style "normal"
+      }
+    }
+    enabled "a7cheatListType == 0"
+    area 20 75 400 275
+	hidehighlight
+    rowheight 20
+    table     "a7cheatAreaList"
+    var       cheatTeleportArea
+    scrollbar '%ui_scrollbar%'
+  }
+  button
+  {
+    enabled "a7cheatListType == 0"
+    bam 'RGDMBUT1'
+	sequence lua "rgUISkin"
+	ScaleToClip
+	area 15 396 410 60
+	text lua	"rgString('TRAVEL_BUTTON')"
+	text style	"button"
+	pad 0 0 0 0
+    action  "C:MoveToArea(a7cheatAreaList[cheatTeleportArea][1])"
+  }
+  -- AREA LIST END
+  
+  
+	--history list
+	list
+	{
+		column 
+		{ 
+			width 100
+			label
+			{
+				area 0 0 -1 -1
+				bam rgdslct
+				sequence lua "rgGetSelectedHighlight(rowNumber, luaEditHistoryListSelected)"
+				ScaleToClip
+			}
+			label
+			{
+				area 10 0 -1 -1
+				text lua "luaEditHistory[rowNumber]"
+				text style	"normal"
+			}
+		}
+		hideHighlight
+		enabled "a7cheatListType == 6"
+		area 20 75 400 240
+		rowheight	24
+		var luaEditHistoryListSelected
+		table		"luaEditHistory"
+		scrollbar	'%ui_scrollbar%'
+		action
+		"
+			rgLuaEditMiscListSelected = nil
+			luaEdit = luaEditHistory[luaEditHistoryListSelected]
+			Infinity_FocusTextEdit('luaEditArea'); 
+		"
+	}
+	
+	
+	
+	button 
+	{
+		bam 'rgdbuts1' 
+		sequence lua "rgUISkin"
+		ScaleToClip
+		area 22 460 166 46
+		text lua	"rgString('GODBOW_LABEL')"
+		text style	"button"
+		pad 0 0 0 0
+		action		"C:CreateItem('godbow')"
+	}
+	button 
+	{
+		bam 'rgdbuts1'
+		sequence lua "rgUISkin"
+		ScaleToClip
+		area 192 510 226 46
+		--pad 10 8 10 8
+		text style "button"
+		pad 0 0 0 0
+		text lua "rgString('GIVE_GOLD_LABEL')"
+		action		"C:AddGold(cheatGoldAmt)"
+	}
+	button 
+	{
+		bam 'rgdbuts1'
+		sequence lua "rgUISkin"
+		ScaleToClip
+		area 22 510 166 46
+		text style "button"
+		pad 0 0 0 0
+		clickable false
+		text ""
+	}
+	edit
+	{
+		area		28 521 154 24
+		var		cheatGoldAmt
+		text style	"edit"
+		maxlines	1
+		fill            112 111 111 64
+	}
+
+
+	button 
+	{
+		bam 'rgdbuts1'
+		sequence lua "rgUISkin"
+		ScaleToClip
+		area 22 560 166 46
+		text style "button"
+		pad 0 0 0 0
+		clickable false
+		text ""
+	}
+	button 
+	{
+		bam 'rgdbuts1'
+		sequence lua "rgUISkin"
+		ScaleToClip
+		area 192 560 226 46
+		--pad 10 8 10 8
+		text style "button"
+		pad 0 0 0 0
+		text lua "rgString('GIVE_XP_LABEL')"
+		action		"C:SetCurrentXP(cheatXpAmt)"
+	}
+	edit
+	{
+		area		28 571 154 24
+		var		cheatXpAmt
+		text style	"edit"
+		maxlines	1
+		fill            112 111 111 64
+	}
+
+	button 
+	{
+		bam 'rgdbuts1'
+		sequence lua "rgUISkin"
+		ScaleToClip
+		area 192 460 226 46
+		--pad 10 8 10 8
+		text style "button"
+		pad 0 0 0 0
+		text lua "rgString('EXPLORE_LABEL')"
+		action		"C:ExploreArea()"
+	}
+}

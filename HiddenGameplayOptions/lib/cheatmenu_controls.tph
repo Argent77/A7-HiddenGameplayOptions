@@ -47,6 +47,14 @@ BEGIN
           INSERT_BYTES ofs len
           WRITE_ASCIIE ofs ~%ui_onopen%~ (len)
         END
+
+        // Note: Infinity UI requires additional lines
+        PATCH_IF (~%ui_mode%~ STR_EQ ~iui~) BEGIN
+          // clone and replace
+          REPLACE_TEXTUALLY
+            ~^\(\([ %TAB%]*Infinity_SetArea(\)'rgCheatButtonLearnSpell'\(.*\)\)~
+            ~\1%WNL%\2'rgCheatCommandButton'\3~
+        END
       END
 
       // removing original cheat menu
