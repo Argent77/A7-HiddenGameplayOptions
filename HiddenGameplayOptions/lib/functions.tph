@@ -541,3 +541,32 @@ BEGIN
     END
   END
 END
+
+
+// Prints a log message to the console that indicates a component is being installed.
+// Parameters:
+// INT_VAR tra_ref  Tra reference of the component label
+DEFINE_ACTION_FUNCTION PRINT_INSTALL
+INT_VAR tra_ref = "-1"
+BEGIN
+  ACTION_IF (tra_ref >= 0) BEGIN
+    OUTER_SPRINT label ( AT "tra_ref" )
+    OUTER_SPRINT msg @-1016 // Installing
+    OUTER_SPRINT msg ~%msg% "%label%"~
+    PRINT ~%msg%~
+  END
+END
+
+// Prints a log message to the console that indicates a component is being skipped.
+// Parameters:
+// INT_VAR tra_ref  Tra reference of the component label
+DEFINE_ACTION_FUNCTION PRINT_SKIP
+INT_VAR tra_ref = "-1"
+BEGIN
+  ACTION_IF (tra_ref >= 0) BEGIN
+    OUTER_SPRINT label ( AT "tra_ref" )
+    OUTER_SPRINT msg @-1020 // Skipping
+    OUTER_SPRINT msg ~%msg% "%label%"~
+    PRINT ~%msg%~
+  END
+END
