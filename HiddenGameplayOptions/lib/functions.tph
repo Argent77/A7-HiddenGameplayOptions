@@ -323,7 +323,7 @@ end
             END
           END ELSE BEGIN
             // remaining games
-            SET ofs = INDEX_BUFFER(~['"]QUIT_BUTTON['"],[ %TAB%]*function()[ %TAB%]+\(Infinity_ShutdownGame()\|optionsScreen:QuitGame()\)[ %TAB%]+end,?~ ofs)
+            SET ofs = INDEX_BUFFER(~['"]QUIT_BUTTON['"],[ %TAB%]*function()[ %TAB%]+\(.*Infinity_ShutdownGame()\|optionsScreen:QuitGame()\)[ %TAB%]+end,?~ ofs)
             PATCH_IF (ofs >= 0) BEGIN
               SET ofs = INDEX_BUFFER(~\(Infinity_ShutdownGame()\|optionsScreen:QuitGame()\)~ ofs)
               PATCH_IF (ofs > 0) BEGIN

@@ -251,66 +251,70 @@ BEGIN
   SET success = 0
   SET endOfs = startOfs
 
-  SET ofs = INDEX_BUFFER(~%arrayName%[ %TAB%]*=[ %TAB%]*{~ startOfs)
-  PATCH_IF (ofs >= startOfs) BEGIN
-    SET ofs = INDEX_BUFFER(~[%WNL%]~ ofs)
-    SET ofs1 = INDEX_BUFFER(~{~ ofs)
-    PATCH_IF (ofs1 >= ofs) BEGIN
-      SET ofs2 = INDEX_BUFFER(~},~ ofs1)
-      PATCH_IF (ofs2 >= ofs1) BEGIN
-        READ_ASCII ofs1 line (ofs2 - ofs1)
+  SET ofs = 0
+  WHILE (ofs >= 0) BEGIN  // there may be multiple array definitions present
+    SET ofs = INDEX_BUFFER(~%arrayName%[ %TAB%]*=[ %TAB%]*{~ startOfs)
+    PATCH_IF (ofs >= startOfs) BEGIN
+      SET ofs = INDEX_BUFFER(~[%WNL%]~ ofs)
+      SET ofs1 = INDEX_BUFFER(~{~ ofs)
+      PATCH_IF (ofs1 >= ofs) BEGIN
+        SET ofs2 = INDEX_BUFFER(~},~ ofs1)
+        PATCH_IF (ofs2 >= ofs1) BEGIN
+          READ_ASCII ofs1 line (ofs2 - ofs1)
 
-        SET itemCount = 1
-        INNER_PATCH ~%line%~ BEGIN
-          // counting array items
-          REPLACE_EVALUATE ~,~ BEGIN SET itemCount += 1 END ~,~
+          SET itemCount = 1
+          INNER_PATCH ~%line%~ BEGIN
+            // counting array items
+            REPLACE_EVALUATE ~,~ BEGIN SET itemCount += 1 END ~,~
 
-          // determining quotation type for string arguments
-          SET ofsQuote = INDEX_BUFFER(~["']~)
-          PATCH_IF (ofsQuote >= 0) BEGIN
-            READ_ASCII ofsQuote quote (1)
-          END ELSE BEGIN
-            TEXT_SPRINT quote ~"~
-          END
+            // determining quotation type for string arguments
+            SET ofsQuote = INDEX_BUFFER(~["']~)
+            PATCH_IF (ofsQuote >= 0) BEGIN
+              READ_ASCII ofsQuote quote (1)
+            END ELSE BEGIN
+              TEXT_SPRINT quote ~"~
+            END
 
-          // getting format for option description
-          TEXT_SPRINT argLabel ~%quote%%optLabel%%quote%~
-          TEXT_SPRINT argDesc  ~%quote%%optDesc%%quote%~
-          INNER_PATCH_SAVE arg2 ~%line%~ BEGIN REPLACE_TEXTUALLY ~[^,]+,[ %TAB%]*\([^,]+\).*~ ~\1~ END
-          PATCH_IF (~%arg2%~ STRING_MATCHES_REGEXP ~[ %TAB%]*-?[0-9]+[ %TAB%]*~ = 0) BEGIN
-            LPF GET_LUA_VALUE STR_VAR varName = EVAL ~%optDesc%~ RET value END
-            TEXT_SPRINT argDesc ~%value%~
-          END
-        END
-
-        // generating array item string
-        PATCH_IF (itemCount > 3) BEGIN
-          TEXT_SPRINT entry ~{%argLabel%, %argDesc%, %controlID%~
-          FOR (idx = 3; idx < itemCount; idx += 1) BEGIN
-            TEXT_SPRINT entry ~%entry%, 0~
-          END
-          TEXT_SPRINT entry ~%entry%},%WNL%~
-          SET entryLen = STRING_LENGTH ~%entry%~
-
-          // adding new entry
-          SET ofs = INDEX_BUFFER(~%LNL%[ %TAB%]*}[ %TAB%%WNL%]~ ofs2) + 1
-
-          // making sure last array entry contains a terminating comma
-          SET ofs2 = RINDEX_BUFFER(~}~ (ofs - 1))
-          PATCH_IF (ofs2 >= 0 && ofs2 < ofs) BEGIN
-            READ_ASCII ofs2 buf (ofs - ofs2 - 1)
-            PATCH_IF (~%buf%~ STRING_CONTAINS_REGEXP ~,~ != 0) BEGIN
-              SET ofs2 += 1
-              INSERT_BYTES ofs2 1
-              WRITE_ASCII ofs2 ~,~
-              SET ofs += 1
+            // getting format for option description
+            TEXT_SPRINT argLabel ~%quote%%optLabel%%quote%~
+            TEXT_SPRINT argDesc  ~%quote%%optDesc%%quote%~
+            INNER_PATCH_SAVE arg2 ~%line%~ BEGIN REPLACE_TEXTUALLY ~[^,]+,[ %TAB%]*\([^,]+\).*~ ~\1~ END
+            PATCH_IF (~%arg2%~ STRING_MATCHES_REGEXP ~[ %TAB%]*-?[0-9]+[ %TAB%]*~ = 0) BEGIN
+              LPF GET_LUA_VALUE STR_VAR varName = EVAL ~%optDesc%~ RET value END
+              TEXT_SPRINT argDesc ~%value%~
             END
           END
 
-          INSERT_BYTES ofs entryLen
-          WRITE_ASCIIE ofs ~%entry%~
-          SET endOfs = ofs + entryLen + 1
-          SET success = 1
+          // generating array item string
+          PATCH_IF (itemCount > 3) BEGIN
+            TEXT_SPRINT entry ~{%argLabel%, %argDesc%, %controlID%~
+            FOR (idx = 3; idx < itemCount; idx += 1) BEGIN
+              TEXT_SPRINT entry ~%entry%, 0~
+            END
+            TEXT_SPRINT entry ~%entry%},%WNL%~
+            SET entryLen = STRING_LENGTH ~%entry%~
+
+            // adding new entry
+            SET ofs = INDEX_BUFFER(~%LNL%[ %TAB%]*}[ %TAB%%WNL%]~ ofs2) + 1
+
+            // making sure last array entry contains a terminating comma
+            SET ofs2 = RINDEX_BUFFER(~}~ (ofs - 1))
+            PATCH_IF (ofs2 >= 0 && ofs2 < ofs) BEGIN
+              READ_ASCII ofs2 buf (ofs - ofs2 - 1)
+              PATCH_IF (~%buf%~ STRING_CONTAINS_REGEXP ~,~ != 0) BEGIN
+                SET ofs2 += 1
+                INSERT_BYTES ofs2 1
+                WRITE_ASCII ofs2 ~,~
+                SET ofs += 1
+              END
+            END
+
+            INSERT_BYTES ofs entryLen
+            WRITE_ASCIIE ofs ~%entry%~
+            SET endOfs = ofs + entryLen + 1
+            SET startOfs = endOfs
+            SET success = 1
+          END
         END
       END
     END
