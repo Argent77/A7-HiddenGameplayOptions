@@ -76,6 +76,10 @@ LANGUAGE  ~Italian (translation: Zaramorte)~
           ~HiddenGameplayOptions/languages/english/mod.tra~
           ~HiddenGameplayOptions/languages/italian/setup.tra~
           ~HiddenGameplayOptions/languages/italian/mod.tra~
+LANGUAGE  ~Simplified Chinese~
+          ~schinese~
+          ~HiddenGameplayOptions/languages/schinese/setup.tra~
+          ~HiddenGameplayOptions/languages/schinese/mod.tra~
 
 BEGIN @1  // Install all Hidden Gameplay Options at once
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @500  // Enhanced Edition game patched to v2.0 or higher required.
@@ -83,290 +87,188 @@ BEGIN @1  // Install all Hidden Gameplay Options at once
   DESIGNATED 0
   LABEL ~A7-HIDDENGAMEPLAYOPTIONS-INSTALL_ALL~
 
-  OUTER_SET tra_ref = 10
   ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 10) BEGIN
-    LAF PRINT_INSTALL INT_VAR tra_ref END
-    LAF OPTION_DEBUG_CONSOLE END
-  END ELSE BEGIN
-    LAF PRINT_SKIP INT_VAR tra_ref END
+    ACTION_IF (NOT INSTALLED_INFINITY_UI) BEGIN
+      LAF OPTION_DEBUG_CONSOLE END
+    END
   END
 
-  OUTER_SET tra_ref = 11
   ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 11) BEGIN
-    LAF PRINT_INSTALL INT_VAR tra_ref END
-    LAF OPTION_UI_EDIT_MODE END
-  END ELSE BEGIN
-    LAF PRINT_SKIP INT_VAR tra_ref END
+    ACTION_IF (NOT INSTALLED_INFINITY_UI) BEGIN
+      LAF OPTION_UI_EDIT_MODE END
+    END
   END
 
-  OUTER_SET tra_ref = 12
   ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 12) BEGIN
-    LAF PRINT_INSTALL INT_VAR tra_ref END
-    LAF OPTION_SHOW_STRREFS END
-  END ELSE BEGIN
-    LAF PRINT_SKIP INT_VAR tra_ref END
+    ACTION_IF (NOT INSTALLED_INFINITY_UI) BEGIN
+      LAF OPTION_SHOW_STRREFS END
+    END
   END
 
-  OUTER_SET tra_ref = 13
   ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 13) BEGIN
-    LAF PRINT_INSTALL INT_VAR tra_ref END
-    LAF OPTION_TOOLTIP_HOTKEYS END
-  END ELSE BEGIN
-    LAF PRINT_SKIP INT_VAR tra_ref END
+    ACTION_IF (NOT INSTALLED_INFINITY_UI) BEGIN
+      LAF OPTION_TOOLTIP_HOTKEYS END
+    END
   END
 
-  OUTER_SET tra_ref = 14
   ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 14) BEGIN
-    LAF PRINT_INSTALL INT_VAR tra_ref END
-    LAF OPTION_TRIGGER_ICONS END
-  END ELSE BEGIN
-    LAF PRINT_SKIP INT_VAR tra_ref END
+    ACTION_IF (NOT INSTALLED_INFINITY_UI) BEGIN
+      LAF OPTION_TRIGGER_ICONS END
+    END
   END
 
-  OUTER_SET tra_ref = 15
   ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 15) BEGIN
     ACTION_IF (GAME_IS ~pstee~) BEGIN
-      LAF PRINT_INSTALL INT_VAR tra_ref END
       LAF OPTION_ALLOW_SPACE_IN_DIALOG END
-    END ELSE BEGIN
-      LAF PRINT_SKIP INT_VAR tra_ref END
     END
-  END ELSE BEGIN
-    LAF PRINT_SKIP INT_VAR tra_ref END
   END
 
-  OUTER_SET tra_ref = 16
   ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 16) BEGIN
-    ACTION_IF (NOT GAME_IS ~pstee~) BEGIN
-      LAF PRINT_INSTALL INT_VAR tra_ref END
+    ACTION_IF (NOT GAME_IS ~pstee~ &&
+               NOT INSTALLED_INFINITY_UI) BEGIN
       LAF OPTION_CLERIC_RANGER_SPELLS END
-    END ELSE BEGIN
-      LAF PRINT_SKIP INT_VAR tra_ref END
     END
-  END ELSE BEGIN
-    LAF PRINT_SKIP INT_VAR tra_ref END
   END
 
-  OUTER_SET tra_ref = 17
   ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 17) BEGIN
-    ACTION_IF (NOT GAME_IS ~iwdee~) BEGIN
-      LAF PRINT_INSTALL INT_VAR tra_ref END
+    ACTION_IF (NOT GAME_IS ~iwdee~ &&
+               NOT INSTALLED_INFINITY_UI) BEGIN
       LAF OPTION_SNEAK_ATTACK END
-    END ELSE BEGIN
-      LAF PRINT_SKIP INT_VAR tra_ref END
     END
-  END ELSE BEGIN
-    LAF PRINT_SKIP INT_VAR tra_ref END
   END
 
-  OUTER_SET tra_ref = 18
   ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 18) BEGIN
-    LAF PRINT_INSTALL INT_VAR tra_ref END
-    LAF OPTION_CRITICAL_HIT_SCREEN_SHAKE END
-  END ELSE BEGIN
-    LAF PRINT_SKIP INT_VAR tra_ref END
+    ACTION_IF (NOT INSTALLED_INFINITY_UI) BEGIN
+      LAF OPTION_CRITICAL_HIT_SCREEN_SHAKE END
+    END
   END
 
-  OUTER_SET tra_ref = 19
   ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 19) BEGIN
-    LAF PRINT_INSTALL INT_VAR tra_ref END
-    LAF OPTION_EXTRA_COMBAT_INFO END
-  END ELSE BEGIN
-    LAF PRINT_SKIP INT_VAR tra_ref END
+    ACTION_IF (NOT INSTALLED_INFINITY_UI) BEGIN
+      LAF OPTION_EXTRA_COMBAT_INFO END
+    END
   END
 
-  OUTER_SET tra_ref = 20
   ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 20) BEGIN
-    LAF PRINT_INSTALL INT_VAR tra_ref END
-    LAF OPTION_DATE_ON_PAUSE END
-  END ELSE BEGIN
-    LAF PRINT_SKIP INT_VAR tra_ref END
+    ACTION_IF (NOT INSTALLED_INFINITY_UI) BEGIN
+      LAF OPTION_DATE_ON_PAUSE END
+    END
   END
 
-  OUTER_SET tra_ref = 21
   ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 21) BEGIN
     ACTION_IF (GAME_IS ~pstee~) BEGIN
-      LAF PRINT_INSTALL INT_VAR tra_ref END
       LAF OPTION_DISABLE_MAP_ZOOM END
-    END ELSE BEGIN
-      LAF PRINT_SKIP INT_VAR tra_ref END
     END
-  END ELSE BEGIN
-    LAF PRINT_SKIP INT_VAR tra_ref END
   END
 
-  OUTER_SET tra_ref = 22
   ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 22) BEGIN
-    LAF PRINT_INSTALL INT_VAR tra_ref END
-    LAF OPTION_REVERSE_WHEEL_ZOOM END
-  END ELSE BEGIN
-    LAF PRINT_SKIP INT_VAR tra_ref END
-  END
-
-  OUTER_SET tra_ref = 23
-  ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 23) BEGIN
-    LAF PRINT_INSTALL INT_VAR tra_ref END
-    LAF OPTION_PAUSING_MAP END
-  END ELSE BEGIN
-    LAF PRINT_SKIP INT_VAR tra_ref END
-  END
-
-  OUTER_SET tra_ref = 24
-  ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 24) BEGIN
-    ACTION_IF (NOT GAME_IS ~pstee~) BEGIN
-      LAF PRINT_INSTALL INT_VAR tra_ref END
-      LAF OPTION_ENABLE_FOG END
-    END ELSE BEGIN
-      LAF PRINT_SKIP INT_VAR tra_ref END
+    ACTION_IF (NOT INSTALLED_INFINITY_UI) BEGIN
+      LAF OPTION_REVERSE_WHEEL_ZOOM END
     END
-  END ELSE BEGIN
-    LAF PRINT_SKIP INT_VAR tra_ref END
   END
 
-  OUTER_SET tra_ref = 25
+  ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 23) BEGIN
+    ACTION_IF (NOT INSTALLED_INFINITY_UI) BEGIN
+      LAF OPTION_PAUSING_MAP END
+    END
+  END
+
+  ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 24) BEGIN
+    ACTION_IF (NOT GAME_IS ~pstee~ &&
+               NOT INSTALLED_INFINITY_UI) BEGIN
+      LAF OPTION_ENABLE_FOG END
+    END
+  END
+
   ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 25) BEGIN
-    LAF PRINT_INSTALL INT_VAR tra_ref END
-    LAF OPTION_DISABLE_MOVIES END
-  END ELSE BEGIN
-    LAF PRINT_SKIP INT_VAR tra_ref END
+    ACTION_IF (NOT INSTALLED_INFINITY_UI) BEGIN
+      LAF OPTION_DISABLE_MOVIES END
+    END
   END
 
-  OUTER_SET tra_ref = 26
   ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 26) BEGIN
     ACTION_IF (GAME_IS ~pstee~) BEGIN
-      LAF PRINT_INSTALL INT_VAR tra_ref END
       LAF OPTION_NO_COSMETIC_ATTACKS END
-    END ELSE BEGIN
-      LAF PRINT_SKIP INT_VAR tra_ref END
     END
-  END ELSE BEGIN
-    LAF PRINT_SKIP INT_VAR tra_ref END
   END
 
-  OUTER_SET tra_ref = 27
   ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 27) BEGIN
-    ACTION_IF (NOT GAME_IS ~pstee~) BEGIN
-      LAF PRINT_INSTALL INT_VAR tra_ref END
+    ACTION_IF (NOT GAME_IS ~pstee~ &&
+               NOT INSTALLED_INFINITY_UI) BEGIN
       LAF OPTION_NIGHTMARE_XP_BONUS END
-    END ELSE BEGIN
-      LAF PRINT_SKIP INT_VAR tra_ref END
     END
-  END ELSE BEGIN
-    LAF PRINT_SKIP INT_VAR tra_ref END
   END
 
-  OUTER_SET tra_ref = 28
   ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 28) BEGIN
-    ACTION_IF (NOT INSTALLED_LEUI) BEGIN
-      LAF PRINT_INSTALL INT_VAR tra_ref END
+    ACTION_IF (NOT INSTALLED_LEUI &&
+               NOT INSTALLED_INFINITY_UI) BEGIN
       LAF OPTION_BORED_TIMEOUT END
-    END ELSE BEGIN
-      LAF PRINT_SKIP INT_VAR tra_ref END
     END
-  END ELSE BEGIN
-    LAF PRINT_SKIP INT_VAR tra_ref END
   END
 
-  OUTER_SET tra_ref = 29
   ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 29) BEGIN
     ACTION_IF (NOT GAME_IS ~pstee~ &&
                NOT INSTALLED_LEUI &&
                NOT INSTALLED_INFINITY_UI &&
                NOT INSTALLED_CBGUI) BEGIN
-      LAF PRINT_INSTALL INT_VAR tra_ref END
       LAF OPTION_FRAME_RATE_SLIDER END
-    END ELSE BEGIN
-      LAF PRINT_SKIP INT_VAR tra_ref END
     END
-  END ELSE BEGIN
-    LAF PRINT_SKIP INT_VAR tra_ref END
   END
 
-  OUTER_SET tra_ref = 30
   ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 30) BEGIN
     ACTION_IF (NOT INSTALLED_LEUI &&
                NOT INSTALLED_INFINITY_UI &&
                NOT INSTALLED_CBGUI &&
                NOT INSTALLED_TIPUN_UI) BEGIN
-      LAF PRINT_INSTALL INT_VAR tra_ref END
       LAF OPTION_ACTION_FEEDBACK_SLIDER END
-    END ELSE BEGIN
-      LAF PRINT_SKIP INT_VAR tra_ref END
     END
-  END ELSE BEGIN
-    LAF PRINT_SKIP INT_VAR tra_ref END
   END
 
-  OUTER_SET tra_ref = 31
   ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 31) BEGIN
     ACTION_IF (GAME_IS ~pstee~ &&
                MOD_IS_INSTALLED ~A7-LevelUpTweaks.tp2~ 0) BEGIN
-      LAF PRINT_INSTALL INT_VAR tra_ref END
       LAF OPTION_ENABLE_LEVEL_UP END
-    END ELSE BEGIN
-      LAF PRINT_SKIP INT_VAR tra_ref END
     END
-  END ELSE BEGIN
-    LAF PRINT_SKIP INT_VAR tra_ref END
   END
 
-  OUTER_SET tra_ref = 32
   ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 32) BEGIN
-    ACTION_IF (NOT GAME_IS ~pstee~) BEGIN
-      LAF PRINT_INSTALL INT_VAR tra_ref END
+    ACTION_IF (NOT GAME_IS ~pstee~ &&
+               NOT INSTALLED_INFINITY_UI) BEGIN
       LAF OPTION_SHOW_AOE END
-    END ELSE BEGIN
-      LAF PRINT_SKIP INT_VAR tra_ref END
     END
-  END ELSE BEGIN
-    LAF PRINT_SKIP INT_VAR tra_ref END
   END
 
-  OUTER_SET tra_ref = 33
   ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 33) BEGIN
-    LAF PRINT_INSTALL INT_VAR tra_ref END
-    LAF OPTION_ENHANCED_PATH_SEARCH END
-  END ELSE BEGIN
-    LAF PRINT_SKIP INT_VAR tra_ref END
-  END
-
-  OUTER_SET tra_ref = 34
-  ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 34) BEGIN
-    ACTION_IF (NOT GAME_IS ~pstee~) BEGIN
-      LAF PRINT_INSTALL INT_VAR tra_ref END
-      LAF OPTION_EXPIRE_TRAP_HIGHLIGHTS END
-    END ELSE BEGIN
-      LAF PRINT_SKIP INT_VAR tra_ref END
+    ACTION_IF (NOT INSTALLED_INFINITY_UI) BEGIN
+      LAF OPTION_ENHANCED_PATH_SEARCH END
     END
-  END ELSE BEGIN
-    LAF PRINT_SKIP INT_VAR tra_ref END
   END
 
-  OUTER_SET tra_ref = 35
+  ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 34) BEGIN
+    ACTION_IF (NOT GAME_IS ~pstee~ &&
+               NOT INSTALLED_INFINITY_UI) BEGIN
+      LAF OPTION_EXPIRE_TRAP_HIGHLIGHTS END
+    END
+  END
+
   ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 35) BEGIN
-    LAF PRINT_INSTALL INT_VAR tra_ref END
-    LAF OPTION_SHOW_LEARNABLE_SPELLS END
-  END ELSE BEGIN
-    LAF PRINT_SKIP INT_VAR tra_ref END
+    ACTION_IF (NOT INSTALLED_INFINITY_UI) BEGIN
+      LAF OPTION_SHOW_LEARNABLE_SPELLS END
+    END
   END
 
-  OUTER_SET tra_ref = 36
   ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 36) BEGIN
-    LAF PRINT_INSTALL INT_VAR tra_ref END
-    LAF OPTION_RENDER_SEARCH_MAP END
-  END ELSE BEGIN
-    LAF PRINT_SKIP INT_VAR tra_ref END
+    ACTION_IF (NOT INSTALLED_INFINITY_UI) BEGIN
+      LAF OPTION_RENDER_SEARCH_MAP END
+    END
   END
 
-  OUTER_SET tra_ref = 37
   ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 37) BEGIN
-    LAF PRINT_INSTALL INT_VAR tra_ref END
-    LAF OPTION_RENDER_DYNAMIC_SEARCH_MAP END
-  END ELSE BEGIN
-    LAF PRINT_SKIP INT_VAR tra_ref END
+    ACTION_IF (NOT INSTALLED_INFINITY_UI) BEGIN
+      LAF OPTION_RENDER_DYNAMIC_SEARCH_MAP END
+    END
   END
 
-  OUTER_SET tra_ref = 38
   ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 38 &&
              ((MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3350) ||
               (MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3351) ||
@@ -377,27 +279,20 @@ BEGIN @1  // Install all Hidden Gameplay Options at once
               (MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3356) ||
               (MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3357) ||
               (MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3358))) BEGIN
-    LAF PRINT_INSTALL INT_VAR tra_ref END
-    LAF OPTION_ENABLE_INTERVAL_SAVES END
-    LAF OPTION_INTERVAL_SAVES_COMBAT END
-  END ELSE BEGIN
-    LAF PRINT_SKIP INT_VAR tra_ref END
+    ACTION_IF (NOT INSTALLED_INFINITY_UI) BEGIN
+      LAF OPTION_ENABLE_INTERVAL_SAVES END
+      LAF OPTION_INTERVAL_SAVES_COMBAT END
+    END
   END
 
-  OUTER_SET tra_ref = 39
   ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 39) BEGIN
-    LAF PRINT_INSTALL INT_VAR tra_ref END
-    LAF OPTION_FORCE_DIALOG_PAUSE END
-  END ELSE BEGIN
-    LAF PRINT_SKIP INT_VAR tra_ref END
+    ACTION_IF (NOT INSTALLED_INFINITY_UI) BEGIN
+      LAF OPTION_FORCE_DIALOG_PAUSE END
+    END
   END
 
-  OUTER_SET tra_ref = 200
   ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 200) BEGIN
-    LAF PRINT_INSTALL INT_VAR tra_ref END
     INCLUDE ~%MOD_FOLDER%/lib/cheatmenu.tph~
-  END ELSE BEGIN
-    LAF PRINT_SKIP INT_VAR tra_ref END
   END
 
 
@@ -405,7 +300,7 @@ BEGIN @10 // Add in-game option "Enable Debug Mode"
   FORBID_COMPONENT ~HiddenGameplayOptions.tp2~ 0 @503 // Option is already installed
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @500  // Enhanced Edition game patched to v2.0 or higher required.
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
-  // REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) @512 // This mod is not compatible with Pecca's Infinity UI.
+  REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) @512 // This mod is not compatible with Pecca's Infinity UI.
   DESIGNATED 10
   LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_ENABLE_DEBUG_MODE~
 
@@ -416,7 +311,7 @@ BEGIN @11 // Add in-game option "Enable UI Edit Mode"
   FORBID_COMPONENT ~HiddenGameplayOptions.tp2~ 0 @503 // Option is already installed
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @500  // Enhanced Edition game patched to v2.0 or higher required.
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
-  // REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) @512 // This mod is not compatible with Pecca's Infinity UI.
+  REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) @512 // This mod is not compatible with Pecca's Infinity UI.
   DESIGNATED 11
   LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_ENABLE_UI_EDIT_MODE~
 
@@ -427,7 +322,7 @@ BEGIN @12 // Add in-game option "Show Strrefs"
   FORBID_COMPONENT ~HiddenGameplayOptions.tp2~ 0 @503 // Option is already installed
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @500  // Enhanced Edition game patched to v2.0 or higher required.
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
-  // REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) @512 // This mod is not compatible with Pecca's Infinity UI.
+  REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) @512 // This mod is not compatible with Pecca's Infinity UI.
   DESIGNATED 12
   LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_SHOW_STRREFS~
 
@@ -438,7 +333,7 @@ BEGIN @13 // Add in-game option "Hotkeys On Tooltips"
   FORBID_COMPONENT ~HiddenGameplayOptions.tp2~ 0 @503 // Option is already installed
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @500  // Enhanced Edition game patched to v2.0 or higher required.
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
-  // REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) @512 // This mod is not compatible with Pecca's Infinity UI.
+  REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) @512 // This mod is not compatible with Pecca's Infinity UI.
   DESIGNATED 13
   LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_HOTKEYS_ON_TOOLTIPS~
 
@@ -449,7 +344,7 @@ BEGIN @14 // Add in-game option "Show trigger icons on tab"
   FORBID_COMPONENT ~HiddenGameplayOptions.tp2~ 0 @503 // Option is already installed
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @500  // Enhanced Edition game patched to v2.0 or higher required.
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
-  // REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) @512 // This mod is not compatible with Pecca's Infinity UI.
+  REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) @512 // This mod is not compatible with Pecca's Infinity UI.
   DESIGNATED 14
   LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_SHOW_TRIGGER_ICONS_ON_TAB~
 
@@ -471,7 +366,7 @@ BEGIN @16 // Add in-game option "Limit druidic spells for Cleric/Ranger"
   FORBID_COMPONENT ~HiddenGameplayOptions.tp2~ 0 @503 // Option is already installed
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @500  // Enhanced Edition game patched to v2.0 or higher required.
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
-  // REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) @512 // This mod is not compatible with Pecca's Infinity UI.
+  REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) @512 // This mod is not compatible with Pecca's Infinity UI.
   REQUIRE_PREDICATE (NOT GAME_IS ~pstee~) @504 // Option not available for this game.
   DESIGNATED 16
   LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_LIMIT_DRUIDIC_SPELLS_FOR_CLERIC_RANGER~
@@ -483,7 +378,7 @@ BEGIN @17 // Add in-game option "3E Sneak Attack"
   FORBID_COMPONENT ~HiddenGameplayOptions.tp2~ 0 @503 // Option is already installed
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @500  // Enhanced Edition game patched to v2.0 or higher required.
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
-  // REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) @512 // This mod is not compatible with Pecca's Infinity UI.
+  REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) @512 // This mod is not compatible with Pecca's Infinity UI.
   REQUIRE_PREDICATE (NOT GAME_IS ~iwdee~) @505 // Option already present in this game.
   DESIGNATED 17
   LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_3E_SNEAK_ATTACK~
@@ -495,7 +390,7 @@ BEGIN @18 // Add in-game option "Critical Hit Screen Shake"
   FORBID_COMPONENT ~HiddenGameplayOptions.tp2~ 0 @503 // Option is already installed
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @500  // Enhanced Edition game patched to v2.0 or higher required.
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
-  // REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) @512 // This mod is not compatible with Pecca's Infinity UI.
+  REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) @512 // This mod is not compatible with Pecca's Infinity UI.
   DESIGNATED 18
   LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_CRITICAL_HIT_SCREEN_SHAKE~
 
@@ -506,7 +401,7 @@ BEGIN @19 // Add in-game option "Show extra combat info"
   FORBID_COMPONENT ~HiddenGameplayOptions.tp2~ 0 @503 // Option is already installed
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @500  // Enhanced Edition game patched to v2.0 or higher required.
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
-  // REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) @512 // This mod is not compatible with Pecca's Infinity UI.
+  REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) @512 // This mod is not compatible with Pecca's Infinity UI.
   DESIGNATED 19
   LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_SHOW_EXTRA_COMBAT_INFO~
 
@@ -517,7 +412,7 @@ BEGIN @20 // Add in-game option "Show Game Date and Time on Pause"
   FORBID_COMPONENT ~HiddenGameplayOptions.tp2~ 0 @503 // Option is already installed
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @500  // Enhanced Edition game patched to v2.0 or higher required.
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
-  // REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) @512 // This mod is not compatible with Pecca's Infinity UI.
+  REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) @512 // This mod is not compatible with Pecca's Infinity UI.
   DESIGNATED 20
   LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_SHOW_GAME_DATE_AND_TIME_ON_PAUSE~
 
@@ -539,7 +434,7 @@ BEGIN @22 // Add in-game option "Reverse Mouse Wheel Zoom"
   FORBID_COMPONENT ~HiddenGameplayOptions.tp2~ 0 @503 // Option is already installed
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @500  // Enhanced Edition game patched to v2.0 or higher required.
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
-  // REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) @512 // This mod is not compatible with Pecca's Infinity UI.
+  REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) @512 // This mod is not compatible with Pecca's Infinity UI.
   DESIGNATED 22
   LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_REVERSE_MOUSE_WHEEL_ZOOM~
 
@@ -550,7 +445,7 @@ BEGIN @23 // Add in-game option "Pause Game on Map Screen"
   FORBID_COMPONENT ~HiddenGameplayOptions.tp2~ 0 @503 // Option is already installed
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @500  // Enhanced Edition game patched to v2.0 or higher required.
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
-  // REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) @512 // This mod is not compatible with Pecca's Infinity UI.
+  REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) @512 // This mod is not compatible with Pecca's Infinity UI.
   DESIGNATED 23
   LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_PAUSE_GAME_ON_MAP_SCREEN~
 
@@ -561,7 +456,7 @@ BEGIN @24 // Add in-game option "Enable Fog"
   FORBID_COMPONENT ~HiddenGameplayOptions.tp2~ 0 @503 // Option is already installed
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @500  // Enhanced Edition game patched to v2.0 or higher required.
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
-  // REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) @512 // This mod is not compatible with Pecca's Infinity UI.
+  REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) @512 // This mod is not compatible with Pecca's Infinity UI.
   REQUIRE_PREDICATE (NOT GAME_IS ~pstee~) @504 // Option not available for this game.
   DESIGNATED 24
   LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_ENABLE_FOG~
@@ -573,7 +468,7 @@ BEGIN @25 // Add in-game option "Disable Movies"
   FORBID_COMPONENT ~HiddenGameplayOptions.tp2~ 0 @503 // Option is already installed
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @500  // Enhanced Edition game patched to v2.0 or higher required.
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
-  // REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) @512 // This mod is not compatible with Pecca's Infinity UI.
+  REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) @512 // This mod is not compatible with Pecca's Infinity UI.
   DESIGNATED 25
   LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_DISABLE_MOVIES~
 
@@ -595,7 +490,7 @@ BEGIN @27 // Add in-game option "XP Bonus in Nightmare Mode"
   FORBID_COMPONENT ~HiddenGameplayOptions.tp2~ 0 @503 // Option is already installed
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @500  // Enhanced Edition game patched to v2.0 or higher required.
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
-  // REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) @512 // This mod is not compatible with Pecca's Infinity UI.
+  REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) @512 // This mod is not compatible with Pecca's Infinity UI.
   REQUIRE_PREDICATE (NOT GAME_IS ~pstee~) @504 // Option not available for this game.
   DESIGNATED 27
   LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_XP_BONUS_IN_NIGHTMARE_MODE~
@@ -609,7 +504,7 @@ BEGIN @28 // Add in-game option "Trigger Bored Sounds"
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~leui.tp2~ 0 AND
                      NOT MOD_IS_INSTALLED ~leui-iwdee.tp2~ 0) @507 // This component is not compatible with Lefreut's Enhanced UI.
-  // REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) @512 // This mod is not compatible with Pecca's Infinity UI.
+  REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) @512 // This mod is not compatible with Pecca's Infinity UI.
   DESIGNATED 28
   LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_TRIGGER_BORED_SOUNDS~
 
@@ -662,7 +557,7 @@ BEGIN @32 // Add in-game option "Show Area of Effect Radius"
   FORBID_COMPONENT ~HiddenGameplayOptions.tp2~ 0 @503 // Option is already installed
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @500  // Enhanced Edition game patched to v2.0 or higher required.
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
-  // REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) @512 // This mod is not compatible with Pecca's Infinity UI.
+  REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) @512 // This mod is not compatible with Pecca's Infinity UI.
   REQUIRE_PREDICATE (NOT GAME_IS ~pstee~) @504 // Option not available for this game.
   DESIGNATED 32
   LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_SHOW_AOE_RADIUS~
@@ -674,7 +569,7 @@ BEGIN @33 // Add in-game option "Enhanced Path Search"
   FORBID_COMPONENT ~HiddenGameplayOptions.tp2~ 0 @503 // Option is already installed
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @500  // Enhanced Edition game patched to v2.0 or higher required.
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
-  // REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) @512 // This mod is not compatible with Pecca's Infinity UI.
+  REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) @512 // This mod is not compatible with Pecca's Infinity UI.
   DESIGNATED 33
   LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_ENHANCED_PATH_SEARCH~
 
@@ -685,7 +580,7 @@ BEGIN @34 // Add in-game option "Expire Trap Highlights"
   FORBID_COMPONENT ~HiddenGameplayOptions.tp2~ 0 @503 // Option is already installed
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @500  // Enhanced Edition game patched to v2.0 or higher required.
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
-  // REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) @512 // This mod is not compatible with Pecca's Infinity UI.
+  REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) @512 // This mod is not compatible with Pecca's Infinity UI.
   REQUIRE_PREDICATE (NOT GAME_IS ~pstee~) @504 // Option not available for this game.
   DESIGNATED 34
   LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_EXPIRE_TRAP_HIGHLIGHTS~
@@ -697,7 +592,7 @@ BEGIN @35 // Add in-game option "Show Learnable Spells"
   FORBID_COMPONENT ~HiddenGameplayOptions.tp2~ 0 @503 // Option is already installed
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @500  // Enhanced Edition game patched to v2.0 or higher required.
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
-  // REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) @512 // This mod is not compatible with Pecca's Infinity UI.
+  REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) @512 // This mod is not compatible with Pecca's Infinity UI.
   DESIGNATED 35
   LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_SHOW_LEARNABLE_SPELLS~
 
@@ -708,7 +603,7 @@ BEGIN @36 // Add in-game option "Render Search Map"
   FORBID_COMPONENT ~HiddenGameplayOptions.tp2~ 0 @503 // Option is already installed
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @500  // Enhanced Edition game patched to v2.0 or higher required.
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
-  // REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) @512 // This mod is not compatible with Pecca's Infinity UI.
+  REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) @512 // This mod is not compatible with Pecca's Infinity UI.
   DESIGNATED 36
   LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_RENDER_SEARCH_MAP~
 
@@ -719,7 +614,7 @@ BEGIN @37 // Add in-game option "Render Dynamic Search Map"
   FORBID_COMPONENT ~HiddenGameplayOptions.tp2~ 0 @503 // Option is already installed
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @500  // Enhanced Edition game patched to v2.0 or higher required.
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
-  // REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) @512 // This mod is not compatible with Pecca's Infinity UI.
+  REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) @512 // This mod is not compatible with Pecca's Infinity UI.
   DESIGNATED 37
   LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_RENDER_DYNAMIC_SEARCH_MAP~
 
@@ -730,7 +625,7 @@ BEGIN @38 // Add in-game options for Tweak Anthology's "Create Interval Saves"
   FORBID_COMPONENT ~HiddenGameplayOptions.tp2~ 0 @503 // Option is already installed
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @500  // Enhanced Edition game patched to v2.0 or higher required.
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
-  // REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) @512 // This mod is not compatible with Pecca's Infinity UI.
+  REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) @512 // This mod is not compatible with Pecca's Infinity UI.
   REQUIRE_PREDICATE (MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3350 ||
                      MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3351 ||
                      MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3352 ||
@@ -751,7 +646,7 @@ BEGIN @39 // Add in-game option "Force Dialog Pause"
   FORBID_COMPONENT ~HiddenGameplayOptions.tp2~ 0 @503 // Option is already installed
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @500  // Enhanced Edition game patched to v2.0 or higher required.
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
-  // REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) @512 // This mod is not compatible with Pecca's Infinity UI.
+  REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) @512 // This mod is not compatible with Pecca's Infinity UI.
   DESIGNATED 39
   LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_FORCE_DIALOG_PAUSE~
 
