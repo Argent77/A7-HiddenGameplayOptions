@@ -401,6 +401,8 @@ Russian translation: Saigon1983, yota13, Austin87
 
 Korean translation: begaborn
 
+Simplified Chinese translation: Lzw104522773
+
 
 Copyright Notice
 ~~~~~~~~~~~~~~~~

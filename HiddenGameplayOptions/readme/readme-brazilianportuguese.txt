@@ -375,6 +375,8 @@ Tradução pro Russo: Saigon1983, yota13, Austin87
 
 Tradução pro Coreano: begaborn
 
+Tradução pro Chinês Simplificado: Lzw104522773
+
 
 Nota do Copyright
 ~~~~~~~~~~~~~~~~~
