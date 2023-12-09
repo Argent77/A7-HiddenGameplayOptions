@@ -1,7 +1,7 @@
 Faire apparaître les Options de jeu cachées
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Version :         4.4
+Version :         4.5
 Auteur :          Argent77
 
 Téléchargement :  https://github.com/Argent77/A7-HiddenGameplayOptions/releases/latest
@@ -47,8 +47,6 @@ aussi compatible avec "Dragonspear UI ++" de Pecca, Lefreut's Enhanced UI (LeUI)
 Certaines options pourront être déplacées dans d'autres sections si ces mods sont détectés. 
 L'Écran de triche amélioré peut également provoquer de légères anomalies visuelles si
 Lefreut's Enhanced UI est installé, mais les fonctionnalités ne sont nullement affectées.
-
-"Infinity UI ++" de Pecca est en très grande partie incompatible avec ce mod, à l'exception du sous-composant "Écran de triche amélioré"
 
 On ne peut pas installer ce mod avec le composant "Options cachées du jeu" de EEUITweaks. Vous
 devrez choisir d'en installer un seul, mais pas les deux en même temps.
@@ -413,6 +411,13 @@ ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa
 
 History
 ~~~~~~~
+
+4.5
+- Added compatibility with Pecca's Infinity UI++
+- Added Simplified Chinese translation (thanks Lzw104522773)
+- Updated Russian translation
+- Fixed positioning of Action Feedback slider in Dragonspear UI++
+- Improved installation feedback for the "Install all" component
 
 4.4
 - Added Italian translation (thanks Zaramorte)

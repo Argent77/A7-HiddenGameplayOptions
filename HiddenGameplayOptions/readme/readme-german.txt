@@ -1,7 +1,7 @@
 Versteckte Spieloptionen anzeigen
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Version:    4.4
+Version:    4.5
 Author:     Argent77
 
 Download:   https://github.com/Argent77/A7-HiddenGameplayOptions/releases/latest
@@ -48,8 +48,6 @@ Tipuns User Interface kompatibel.
 Einige Optionen werden ggf. in andere Bereiche verschoben, wenn diese Mods erkannt wurden.
 Das "Verbesserte Cheatmenü" könnte kleinere Grafikfehler beinhalten, falls Lefreuts Enhanced UI
 installiert ist. Sie wirken sich aber nicht auf die Funktionalität aus.
-
-Peccas "Infinity UI" ist nur mit dem "Verbesserten Cheatmenü" kompatibel.
 
 Die Mod kann nicht zusammen mit der EEUITweaks-Komponente "Hidden Game Options" installiert werden.
 
@@ -417,6 +415,13 @@ ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa
 
 History
 ~~~~~~~
+
+4.5
+- Added compatibility with Pecca's Infinity UI++
+- Added Simplified Chinese translation (thanks Lzw104522773)
+- Updated Russian translation
+- Fixed positioning of Action Feedback slider in Dragonspear UI++
+- Improved installation feedback for the "Install all" component
 
 4.4
 - Added Italian translation (thanks Zaramorte)

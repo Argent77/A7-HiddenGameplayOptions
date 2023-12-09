@@ -1,7 +1,7 @@
 Reveal Hidden Gameplay Options
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Version:    4.4
+Version:    4.5
 Author:     Argent77
 
 Download:   https://github.com/Argent77/A7-HiddenGameplayOptions/releases/latest
@@ -397,6 +397,13 @@ ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa
 
 History
 ~~~~~~~
+
+4.5
+- Added compatibility with Pecca's Infinity UI++
+- Added Simplified Chinese translation (thanks Lzw104522773)
+- Updated Russian translation
+- Fixed positioning of Action Feedback slider in Dragonspear UI++
+- Improved installation feedback for the "Install all" component
 
 4.4
 - Added Italian translation (thanks Zaramorte)

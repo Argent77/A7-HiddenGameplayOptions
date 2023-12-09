@@ -1,7 +1,7 @@
 Reveal Hidden Gameplay Options
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Version:    4.4
+Version:    4.5
 Author:     Argent77
 
 Download:   https://github.com/Argent77/A7-HiddenGameplayOptions/releases/latest
@@ -46,9 +46,6 @@ Classic BG UI and Tipun's User Interface.
 Some options may be moved into other sections when these mods have been detected. The "Improved
 Cheat Menu" may also produce some minor visual glitches if Lefreut's Enhanced UI is installed.
 Functionality is not adversely affected, however.
-
-Pecca's "Infinity UI" is mostly incompatible with this mod, except for the "Improved Cheat Menu"
-subcomponent.
 
 The mod can not be installed together with EEUITweaks component "Hidden Game Options". You can
 install either one, but not both at the same time.
@@ -392,6 +389,13 @@ ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa
 
 History
 ~~~~~~~
+
+4.5
+- Added compatibility with Pecca's Infinity UI++
+- Added Simplified Chinese translation (thanks Lzw104522773)
+- Updated Russian translation
+- Fixed positioning of Action Feedback slider in Dragonspear UI++
+- Improved installation feedback for the "Install all" component
 
 4.4
 - Added Italian translation (thanks Zaramorte)
