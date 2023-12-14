@@ -41,8 +41,8 @@ Compatibility & Installation Order
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The mod supports all Enhanced Edition games patched to v2.0 or higher. It is also compatible with
-Pecca's "Dragonspear UI++", and largely compatible with Lefreut's Enhanced UI (LeUI), K4f4r's
-Classic BG UI and Tipun's User Interface.
+Pecca's "Dragonspear UI++" and "Infinity UI++", and largely compatible with all of Lefreut's
+Enhanced UI variants, K4f4r's Classic BG UI and Tipun's User Interface.
 Some options may be moved into other sections when these mods have been detected. The "Improved
 Cheat Menu" may also produce some minor visual glitches if Lefreut's Enhanced UI is installed.
 Functionality is not adversely affected, however.
