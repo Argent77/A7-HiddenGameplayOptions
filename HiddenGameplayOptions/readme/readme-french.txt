@@ -399,7 +399,7 @@ Russian translation: Saigon1983, yota13, Austin87
 
 Korean translation: begaborn
 
-Simplified Chinese translation: Lzw104522773
+Simplified Chinese translation: Lewis Liu
 
 
 Copyright Notice
@@ -414,7 +414,7 @@ History
 
 4.5
 - Added compatibility with Pecca's Infinity UI++
-- Added Simplified Chinese translation (thanks Lzw104522773)
+- Added Simplified Chinese translation (thanks Lewis Liu)
 - Updated Russian translation
 - Fixed positioning of Action Feedback slider in Dragonspear UI++
 - Improved installation feedback for the "Install all" component
