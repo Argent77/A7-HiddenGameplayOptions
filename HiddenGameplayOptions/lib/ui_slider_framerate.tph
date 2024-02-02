@@ -87,7 +87,7 @@ INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
 >>>>>>>>
 
 /**
- * Adds a frame rate slider to the Gameplay section of the game.
+ * Adds a frame rate slider to the Gameplay or Graphics section of the game.
  * INT_VAR optLabelTra    The TRA reference number of the option label string.
  * INT_VAR optDescTra     The TRA reference number of the option description text.
  * INT_VAR optInfo_0, ... Zero, one or more additional TRA reference numbers for lua text entries.
@@ -242,7 +242,7 @@ END
 
 
 /**
- * Adds a frame rate slider to the 'Gameplay' section of the Options menu.
+ * Adds a frame rate slider to the 'Gameplay' or 'Graphics' section of the Options menu.
  * INT_VAR controlID          A unique number that identifies the slider control.
  * INT_VAR numSettings        Number of available slider settings.
  * INT_VAR minSetting         Value representing slider position 0.
@@ -282,35 +282,39 @@ BEGIN
             NOT ~%iniName%~ STR_EQ ~~) BEGIN
     LPF __A7_INIT_CODE RET success END
     PATCH_IF (success) BEGIN
-      LPF __A7_INIT_SLIDER_FRAME_RATE
-      INT_VAR
-        numSettings
-        minSetting
-        stepSize
-      STR_VAR
-        iniSection
-        iniName
-      RET
-        success
-      END
-      PATCH_IF (success) BEGIN
-        PATCH_IF (GAME_IS ~bgee~) BEGIN
-          PATCH_IF (GAME_INCLUDES ~sod~ || INSTALLED_DRAGONSPEAR_UI) BEGIN
-            // BGEE+SoD
-            LPF __A7_ADD_SLIDER_FRAME_RATE_BGSOD RET success END
-          END ELSE BEGIN
-            // Pure BG1EE
-            LPF __A7_ADD_SLIDER_FRAME_RATE_BGEE RET success END
-          END
-        END ELSE PATCH_IF (GAME_IS ~iwdee~) BEGIN
-          // IWDEE
-          LPF __A7_ADD_SLIDER_FRAME_RATE_IWDEE RET success END
-        END ELSE PATCH_IF (GAME_IS ~eet~ && MOD_IS_INSTALLED ~EET_gui.tp2~ 0) BEGIN
-          // EET with SoD GUI
+      PATCH_IF (INSTALLED_DRAGONSPEAR_UI) BEGIN
+        // Dragonspear UI++
+        LPF __A7_ADD_SLIDER_FRAME_RATE_DRAGONSPEAR_UI RET success END
+      END ELSE PATCH_IF (GAME_IS ~bgee~) BEGIN
+        PATCH_IF (GAME_INCLUDES ~sod~) BEGIN
+          // BGEE+SoD
           LPF __A7_ADD_SLIDER_FRAME_RATE_BGSOD RET success END
         END ELSE BEGIN
-          // BG2EE or EET
-          LPF __A7_ADD_SLIDER_FRAME_RATE_BG2EE RET success END
+          // Pure BG1EE
+          LPF __A7_ADD_SLIDER_FRAME_RATE_BGEE RET success END
+        END
+      END ELSE PATCH_IF (GAME_IS ~iwdee~) BEGIN
+        // IWDEE
+        LPF __A7_ADD_SLIDER_FRAME_RATE_IWDEE RET success END
+      END ELSE PATCH_IF (GAME_IS ~eet~ && MOD_IS_INSTALLED ~EET_gui.tp2~ 0) BEGIN
+        // EET with SoD GUI
+        LPF __A7_ADD_SLIDER_FRAME_RATE_BGSOD RET success END
+      END ELSE BEGIN
+        // BG2EE or EET
+        LPF __A7_ADD_SLIDER_FRAME_RATE_BG2EE RET success END
+      END
+
+      PATCH_IF (success) BEGIN
+        LPF __A7_INIT_SLIDER_FRAME_RATE
+        INT_VAR
+          numSettings
+          minSetting
+          stepSize
+        STR_VAR
+          iniSection
+          iniName
+        RET
+          success
         END
       END
     END
@@ -332,8 +336,13 @@ BEGIN
   SET success = 0
 
   // implements common functionality
+  PATCH_IF (INSTALLED_DRAGONSPEAR_UI) BEGIN
+    TEXT_SPRINT sliderLabel ~fontSizeSLDR~
+  END ELSE BEGIN
+    TEXT_SPRINT sliderLabel ~difficultySLDR~
+  END
   // framerateSLDR = 0
-  SET ofs = INDEX_BUFFER(~difficultySLDR[ %TAB%]*=[ %TAB%]*0~)
+  SET ofs = INDEX_BUFFER(~%sliderLabel%[ %TAB%]*=[ %TAB%]*0~)
   PATCH_IF (ofs > 0) BEGIN
     SET ofs = INDEX_BUFFER(~[%WNL%]~ ofs)
     PATCH_IF (ofs > 0) BEGIN
@@ -372,7 +381,7 @@ BEGIN
 
   // framerateSLDR = (math.min(math.max(getDeferredOption('Program Options', 'Maximum Frame Rate'), min), max) - min) / step
   PATCH_IF (ofs > 0) BEGIN
-    SET ofs = INDEX_BUFFER(~difficultySLDR[ %TAB%]*=[ %TAB%]*Infinity_GetOption~)
+    SET ofs = INDEX_BUFFER(~%sliderLabel%[ %TAB%]*=[ %TAB%]*Infinity_GetOption~)
     PATCH_IF (ofs > 0) BEGIN
       SET ofs = INDEX_BUFFER(~[%WNL%]~ ofs)
       PATCH_IF (ofs > 0) BEGIN
@@ -387,14 +396,29 @@ BEGIN
 
   // setDeferredOption('Program Options', 'Maximum Frame Rate', (framerateSLDR * step) + min)
   PATCH_IF (ofs > 0) BEGIN
-    SET ofs = INDEX_BUFFER(~Infinity_ChangeOption([ %TAB%]*12,[ %TAB%]*difficultySLDR.+)~)
-    PATCH_IF (ofs > 0) BEGIN
-      SET ofs = INDEX_BUFFER(~[%WNL%]~ ofs)
+    PATCH_IF (INSTALLED_DRAGONSPEAR_UI) BEGIN
+      // add to slider control
+      SET ofs = INDEX_BUFFER(~position "framerateSLDR"~ ofs)
+      PATCH_IF (ofs >= 0) BEGIN
+        SET ofs = INDEX_BUFFER(~^[ %TAB%]*helpString = 'A7_FRAMERATE_DESCRIPTION'~ ofs)
+        PATCH_IF (ofs > 0) BEGIN
+          TEXT_SPRINT line ~%TAB%%TAB%%TAB%setDeferredOption('%iniSection%', '%iniName%', (framerateSLDR * %stepSize%) + %minSetting%)%WNL%~
+          SET strlen = STRING_LENGTH ~%line%~
+          INSERT_BYTES ofs strlen
+          WRITE_ASCIIE ofs ~%line%~ (strlen)
+        END
+      END
+    END ELSE BEGIN
+      // add to collective section of option updates
+      SET ofs = INDEX_BUFFER(~Infinity_ChangeOption([ %TAB%]*[0-9]+,[ %TAB%]*%sliderLabel%.+)~)
       PATCH_IF (ofs > 0) BEGIN
-        TEXT_SPRINT line ~%WNL%%TAB%%TAB%%TAB%setDeferredOption('%iniSection%', '%iniName%', (framerateSLDR * %stepSize%) + %minSetting%)~
-        SET strlen = STRING_LENGTH ~%line%~
-        INSERT_BYTES ofs strlen
-        WRITE_ASCIIE ofs ~%line%~ (strlen)
+        SET ofs = INDEX_BUFFER(~[%WNL%]~ ofs)
+        PATCH_IF (ofs > 0) BEGIN
+          TEXT_SPRINT line ~%WNL%%TAB%%TAB%%TAB%setDeferredOption('%iniSection%', '%iniName%', (framerateSLDR * %stepSize%) + %minSetting%)~
+          SET strlen = STRING_LENGTH ~%line%~
+          INSERT_BYTES ofs strlen
+          WRITE_ASCIIE ofs ~%line%~ (strlen)
+        END
       END
     END
   END
@@ -496,7 +520,7 @@ BEGIN
     SET ofsEnd = INDEX_BUFFER(~^[ %TAB%]*menu[ %TAB%%WNL%]*{~ ofsStart)
     PATCH_IF (ofsEnd > ofsStart) BEGIN
       // adjusting vertical position of existing sliders
-      SET gap = INSTALLED_DRAGONSPEAR_UI ? 55 : 50
+      SET gap = 50
       LPF __A7_UPDATE_SLIDER_POSITIONS
       INT_VAR
         ofsStart
@@ -518,11 +542,7 @@ BEGIN
           SET ofs1 = INDEX_BUFFER(~^[ %TAB%]*button[ %TAB%%WNL%]*{~ ofs1)
         END
         PATCH_IF (ofs1 > ofsStart && ofs1 < ofsEnd) BEGIN
-          PATCH_IF (INSTALLED_DRAGONSPEAR_UI) BEGIN
-            SET ctl_label_x  = 600  SET ctl_label_y  = 387  SET ctl_label_w  = 200  SET ctl_label_h  = 34
-            SET ctl_slider_x = 806  SET ctl_slider_y = 387  SET ctl_slider_w = 200  SET ctl_slider_h = 39
-            SET ctl_info_x   = 806  SET ctl_info_y   = 426  SET ctl_info_w   = 200  SET ctl_info_h   = 34
-          END ELSE PATCH_IF (INSTALLED_TIPUN_UI) BEGIN
+          PATCH_IF (INSTALLED_TIPUN_UI) BEGIN
             SET ctl_label_x  =  64  SET ctl_label_y  = 387  SET ctl_label_w  = 192  SET ctl_label_h  = 34
             SET ctl_slider_x = 266  SET ctl_slider_y = 387  SET ctl_slider_w = 200  SET ctl_slider_h = 39
             SET ctl_info_x   = 266  SET ctl_info_y   = 426  SET ctl_info_w   = 200  SET ctl_info_h   = 34
@@ -554,6 +574,57 @@ BEGIN
         END ELSE BEGIN
           SET success = 0
         END
+      END
+    END ELSE BEGIN
+      SET success = 0
+    END
+  END ELSE BEGIN
+    SET success = 0
+  END
+END
+
+
+DEFINE_PATCH_FUNCTION __A7_ADD_SLIDER_FRAME_RATE_DRAGONSPEAR_UI
+RET
+  success
+BEGIN
+  SET success = 1
+
+  SET ofsStart = INDEX_BUFFER(~name[ %TAB%]+['"]OPTIONS_GRAPHICS['"]~)
+  PATCH_IF (ofsStart > 0) BEGIN
+    SET ofsEnd = INDEX_BUFFER(~^[ %TAB%]*menu[ %TAB%%WNL%]*{~ ofsStart)
+    PATCH_IF (ofsEnd > ofsStart) BEGIN
+      // adding frame rate slider code
+      SET ofs1 = INDEX_BUFFER(~^[ %TAB%]*slider[ %TAB%%WNL%]*{~ ofsStart)
+      PATCH_IF (ofs1 > ofsStart) BEGIN
+        SET ofs1 = INDEX_BUFFER(~^[ %TAB%]*button[ %TAB%%WNL%]*{~ ofs1)
+      END
+      PATCH_IF (ofs1 > ofsStart && ofs1 < ofsEnd) BEGIN
+        SET ctl_label_x  = 596  SET ctl_label_y  = 200  SET ctl_label_w  = 200  SET ctl_label_h  = 34
+        SET ctl_slider_x = 798  SET ctl_slider_y = 200  SET ctl_slider_w = 200  SET ctl_slider_h = 39
+        SET ctl_info_x   = 798  SET ctl_info_y   = 239  SET ctl_info_w   = 200  SET ctl_info_h   = 34
+        SET isPatch25 = INDEX_BUFFER(~sliderBackground~) >= 0 ? 1 : 0
+        PATCH_IF (isPatch25) BEGIN
+          LPF LOAD_INLINED_DATA STR_VAR name = ~codeFrameRateSlider25~ RET codeSlider = code END
+          SET ctl_pad_x    = 5    SET ctl_pad_y    = 0    SET ctl_pad_w    = 4    SET ctl_pad_h    = 0
+        END ELSE BEGIN
+          LPF LOAD_INLINED_DATA STR_VAR name = ~codeFrameRateSlider~ RET codeSlider = code END
+          SET ctl_pad_x    = 8    SET ctl_pad_y    = 0    SET ctl_pad_w    = 10   SET ctl_pad_h    = 0
+        END
+        SET ctl_id = controlID
+        SET ctl_num_settings = numSettings
+        TEXT_SPRINT ctl_condition ~%condition%~
+        TEXT_SPRINT ctl_label ~%optLabelName%~
+        TEXT_SPRINT ctl_description ~%optDescName%~
+
+        LPF LOAD_INLINED_DATA STR_VAR name = ~codeFrameRateText~ RET codeFrameRateText = code END
+        LPF LOAD_INLINED_DATA STR_VAR name = ~codeFrameRateLabel~ RET codeFrameRateLabel = code END
+        TEXT_SPRINT code EVAL ~%codeFrameRateText%%codeSlider%%codeFrameRateLabel%~
+        SET strlen = STRING_LENGTH ~%code%~
+        INSERT_BYTES ofs1 strlen
+        WRITE_ASCIIE ofs1 ~%code%~ (strlen)
+      END ELSE BEGIN
+        SET success = 0
       END
     END ELSE BEGIN
       SET success = 0

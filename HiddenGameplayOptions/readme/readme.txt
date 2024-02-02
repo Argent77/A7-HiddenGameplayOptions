@@ -218,7 +218,8 @@ no effect:
 1. When Options > Gameplay > Feedback > "More Confirmation Prompts" is active.
 2. When quitting the game directly to the desktop from a running game.
 
-Option can be found in Gameplay section.
+Option can be found in Graphics section if Dragonspear UI++ is installed, otherwise it can be found
+in Gameplay section.
 
 
 22. Add in-game option "Action Feedback" (not compatible with Lefreut's Enhanced UI (LeUI),
@@ -389,6 +390,9 @@ ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa
 
 History
 ~~~~~~~
+
+4.7
+- Fixed potential placement issues of frame rate slider if Dragonspear UI++ is installed
 
 4.6
 - Updated Simplified Chinese translation

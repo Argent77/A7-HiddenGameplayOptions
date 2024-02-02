@@ -398,6 +398,9 @@ ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa
 History
 ~~~~~~~
 
+4.7
+- Fixed potential placement issues of frame rate slider if Dragonspear UI++ is installed
+
 4.6
 - Updated Simplified Chinese translation
 - Updated Project Infinity metadata

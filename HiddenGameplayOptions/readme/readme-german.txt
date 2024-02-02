@@ -236,7 +236,8 @@ bestimmten Situationen vom Spiel ignoriert werden:
 1. Wenn Optionen > Spieleinstellungen > Rückmeldungen > "Zusätzliche Bestätigungsfenster" aktiv ist.
 2. Wenn ein laufendes Spiel beendet wird, ohne vorher in das Hauptmenü zu springen.
 
-Die Option kann in den Spieleinstellungen gefunden werden.
+Die Option kann in den Grafikeinstellungen gefunden werden, wenn Dragonspear UI++ installiert ist.
+Ansonsten kann sie in den Spieleinstellungen gefunden werden.
 
 
 22. Spieloption "Aktionssymbole" hinzufügen (nicht mit Lefreuts Enhanced UI (LeUI) kompatibel)
@@ -415,6 +416,9 @@ ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa
 
 History
 ~~~~~~~
+
+4.7
+- Fixed potential placement issues of frame rate slider if Dragonspear UI++ is installed
 
 4.6
 - Updated Simplified Chinese translation
