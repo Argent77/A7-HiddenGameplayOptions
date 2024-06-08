@@ -115,6 +115,9 @@ WARNUNG: Die Bildrate über einen Wert von 30 einzustellen, kann in Zwischensequ
 @2803 = ~40 Bilder/Sek.~
 @2804 = ~50 Bilder/Sek.~
 @2805 = ~60 Bilder/Sek.~
+@2806 = ~35 Bilder/Sek.~
+@2807 = ~45 Bilder/Sek.~
+@2808 = ~55 Bilder/Sek.~
 
 @2900 = ~Aktionssymbole~
 @2901 = ~Mit diesem Schieberegler wird eingestellt, ob oder wann neben den Charakteranimationen kleine Aktionssymbole angezeigt werden.

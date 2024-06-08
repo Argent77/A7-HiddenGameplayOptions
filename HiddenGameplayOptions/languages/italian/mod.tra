@@ -115,6 +115,9 @@ ATTENZIONE: la regolazione del frame rate superiore a 30 può causare problemi d
 @2803 = ~40 frames/sec.~
 @2804 = ~50 frames/sec.~
 @2805 = ~60 frames/sec.~
+@2806 = ~35 frames/sec.~
+@2807 = ~45 frames/sec.~
+@2808 = ~55 frames/sec.~
 
 @2900 = ~Action Feedback~
 @2901 = ~Questo cursore controlla se e quando le azioni vengono visualizzate come piccole icone attorno allo sprite di un personaggio.

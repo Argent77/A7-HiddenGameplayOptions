@@ -115,6 +115,9 @@ WARNING: Adjusting the frame rate above 30 may result in audio sync issues durin
 @2803 = ~40 frames/sec.~
 @2804 = ~50 frames/sec.~
 @2805 = ~60 frames/sec.~
+@2806 = ~35 frames/sec.~
+@2807 = ~45 frames/sec.~
+@2808 = ~55 frames/sec.~
 
 @2900 = ~Action Feedback~
 @2901 = ~This slider controls if or when actions are displayed as small icons around a character's sprite.
