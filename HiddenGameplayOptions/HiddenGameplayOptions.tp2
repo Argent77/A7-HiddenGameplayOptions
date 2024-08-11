@@ -82,6 +82,12 @@ LANGUAGE  ~Simplified Chinese (translation: Lewis Liu)~
           ~HiddenGameplayOptions/languages/english/mod.tra~
           ~HiddenGameplayOptions/languages/schinese/setup.tra~
           ~HiddenGameplayOptions/languages/schinese/mod.tra~
+LANGUAGE  ~Spanish (translation: alaisFcZ, IOVIVO)~
+          ~spanish~
+          ~HiddenGameplayOptions/languages/english/setup.tra~
+          ~HiddenGameplayOptions/languages/english/mod.tra~
+          ~HiddenGameplayOptions/languages/spanish/setup.tra~
+          ~HiddenGameplayOptions/languages/spanish/mod.tra~
 
 BEGIN @1  // Install all Hidden Gameplay Options at once
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @500  // Enhanced Edition game patched to v2.0 or higher required.

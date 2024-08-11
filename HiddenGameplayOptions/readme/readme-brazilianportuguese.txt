@@ -365,7 +365,7 @@ Ajuda com programação adicional: AncientCowboy
 
 Tradução pro Francês: Gwendolyne, JohnBob
 
-Italian translation: Zaramorte
+Tradução pro Italiano: Zaramorte
 
 Tradução pro Polonês: Cahir
 
@@ -376,6 +376,8 @@ Tradução pro Russo: Saigon1983, yota13, Austin87
 Tradução pro Coreano: begaborn
 
 Tradução pro Chinês Simplificado: Lewis Liu
+
+Tradução pro Espanhol: alaisFcZ, IOVIVO
 
 
 Nota do Copyright

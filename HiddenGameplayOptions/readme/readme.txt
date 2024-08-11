@@ -380,6 +380,8 @@ Korean translation: begaborn
 
 Simplified Chinese translation: Lewis Liu
 
+Spanish translation: alaisFcZ, IOVIVO
+
 
 Copyright Notice
 ~~~~~~~~~~~~~~~~

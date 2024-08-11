@@ -1,0 +1,57 @@
+// -*- coding: us-ascii -*-
+
+@1 = ~Instala todas las opciones de juego ocultas a la vez~
+@10 = ~optar en el juego "Habilitar modo de depuracion"~
+@11 = ~optar en el juego "Habilitar modo de edicion de IU"~
+@12 = ~optar en el juego "Mostrar Strrefs"~
+@13 = ~optar en el juego "Teclas de acceso rapido en informacion sobre herramientas"~
+@14 = ~optar en el juego "Mostrar iconos habitual en la tab"~
+@15 = ~optar en el juego "Permitir barra espaciadora en los cuadros de dialogo"~
+@16 = ~optar en el juego "Limitar hechizos druidicos para clerigo/explorador"~
+@17 = ~optar en el juego "Ataque furtivo 3E"~
+@18 = ~optar en el juego "Vibracion de pantalla con golpe critico"~
+@19 = ~optar en el juego "Mostrar informacion de combate adicional"~
+@20 = ~optar en el juego "Mostrar fecha y hora del juego en pausa"~
+@21 = ~optar en el juego "Desactivar zoom del mapa de area"~
+@22 = ~optar en el juego "Zoom inverso de la rueda del mouse"~
+@23 = ~optar en el juego "Pausar el juego en la pantalla del mapa"~
+@24 = ~optar en el juego "Habilitar niebla"~
+@25 = ~optar en el juego "Desactivar peliculas"~
+@26 = ~optar en el juego "Sin ataques cosmeticos"~
+@27 = ~optar en el juego "XP Bonos en modo Pesadilla"~
+@28 = ~optar en el juego "Activar sonidos aburridos"~
+@29 = ~optar en el juego "Velocidad de fotogramas" (experimental)~
+@30 = ~optar en el juego "Comentarios de accion"~
+@31 = ~optar en el juego "Mostrar icono de subir de nivel"~
+@32 = ~optar en el juego "Mostrar area de rango de efecto"~
+@33 = ~optar en el juego "Busqueda de ruta mejorada"~
+@34 = ~optar en el juego "Trampa de caducidad Destacados"~
+@35 = ~optar en el juego "Mostrar hechizos al aprender"~
+@36 = ~optar en el juego "Renderizar mapa de busqueda"~
+@37 = ~optar en el juego "Renderizar mapa de busqueda dinamica"~
+@38 = ~Agregar opciones en el juego para "Crear guardados a intervalos" de Tweak Anthology~
+@39 = ~optar en el juego "Forzar pausa del dialogo"~
+
+@100 = ~Actualizar combinaciones de teclas~
+@101 = ~solo para hechizos de sacerdote~
+@102 = ~solo para hechizos de mago~
+@103 = ~para hechizos de sacerdote y mago~
+
+@200 = ~Menu de trucos mejorado~
+@201 = ~Actualizar tablas de recursos para el "Menu de trucos mejorado"~
+
+@500 = ~Se requiere juego de edicion mejorada parcheado a v2.0 o superior.~
+@501 = ~No se puede parchear el archivo LUA~
+@502 = ~No se puede parchear UI.MENU~
+@503 = ~La Opcion ya esta instalada.~
+@504 = ~Opcion no disponible para este juego.~
+@505 = ~La Opcion ya esta presente en este juego.~
+@506 = ~Este mod no es compatible con el componente "Opciones de juego ocultas" de EEUITweaks.~
+@507 = ~Este componente no es compatible con la interfaz de usuario mejorada (LeUI) de Lefreut.~
+@508 = ~Requiere "Subir de nivel" Ajustes de iconos que se instalaran.~
+@509 = ~Requiere la Opcion "Crear guardados de intervalo" de Tweaks Anthology. para ser instalado.~
+@510 = ~Requiere el componente "Menu de trucos mejorado" para ser instalado.~
+@511 = ~Este componente debe llamarse por separado si es necesario.~
+@512 = ~Este componente no es compatible con la interfaz de usuario Infinity de Pecca.~
+@513 = ~Este componente no es compatible con la interfaz de usuario clasica de BG de K4f4r.~
+@514 = ~Este componente no es compatible con la interfaz de usuario de Tipun.~
