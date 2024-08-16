@@ -345,7 +345,17 @@ This option makes Tweaks Anthology's mod component "Force All Dialogue to Pause"
 Option can be found in Gameplay > Feedback > Visual Feedback (or Gameplay section in PST:EE).
 
 
-34. Update key bindings for priest and/or mage spells
+34. Add in-game option for Tweak Anthology's "Restored Loading Hints" (requires Tweaks Anthology
+    component "Restored Loading Hints")
+
+Enabling this option shows loading hints from original Baldur's Gate II in the log window of the
+game. This option requires Tweaks Anthology's mod component "Restored Loading Hints" to be
+installed.
+
+Option can be found in Gameplay section.
+
+
+35. Update key bindings for priest and/or mage spells
 
 This component recreates the key bindings for priest spells and/or mage spells. It considers all
 regular spells and High Level Abilities (HLAs) available at the time of installation, which

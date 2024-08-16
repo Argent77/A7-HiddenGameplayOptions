@@ -388,15 +388,15 @@ BEGIN @1  // Install all Hidden Gameplay Options at once
 
   OUTER_SET tra_ref = 38
   ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 38 &&
-             ((MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3350) ||
-              (MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3351) ||
-              (MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3352) ||
-              (MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3353) ||
-              (MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3354) ||
-              (MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3355) ||
-              (MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3356) ||
-              (MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3357) ||
-              (MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3358))) BEGIN
+             ((MOD_IS_INSTALLED ~cdtweaks.tp2~ 3350) ||
+              (MOD_IS_INSTALLED ~cdtweaks.tp2~ 3351) ||
+              (MOD_IS_INSTALLED ~cdtweaks.tp2~ 3352) ||
+              (MOD_IS_INSTALLED ~cdtweaks.tp2~ 3353) ||
+              (MOD_IS_INSTALLED ~cdtweaks.tp2~ 3354) ||
+              (MOD_IS_INSTALLED ~cdtweaks.tp2~ 3355) ||
+              (MOD_IS_INSTALLED ~cdtweaks.tp2~ 3356) ||
+              (MOD_IS_INSTALLED ~cdtweaks.tp2~ 3357) ||
+              (MOD_IS_INSTALLED ~cdtweaks.tp2~ 3358))) BEGIN
     LAF PRINT_INSTALL INT_VAR tra_ref END
     LAF OPTION_ENABLE_INTERVAL_SAVES END
     LAF OPTION_INTERVAL_SAVES_COMBAT END
@@ -408,6 +408,15 @@ BEGIN @1  // Install all Hidden Gameplay Options at once
   ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 39) BEGIN
     LAF PRINT_INSTALL INT_VAR tra_ref END
     LAF OPTION_FORCE_DIALOG_PAUSE END
+  END ELSE BEGIN
+    LAF PRINT_SKIP INT_VAR tra_ref END
+  END
+
+  OUTER_SET tra_ref = 40
+  ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 40 &&
+             MOD_IS_INSTALLED ~cdtweaks.tp2~ 3400) BEGIN
+    LAF PRINT_INSTALL INT_VAR tra_ref END
+    LAF OPTION_SHOW_RESTORED_LOADING_HINTS END
   END ELSE BEGIN
     LAF PRINT_SKIP INT_VAR tra_ref END
   END
@@ -763,15 +772,15 @@ BEGIN @38 // Add in-game options for Tweak Anthology's "Create Interval Saves"
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @500  // Enhanced Edition game patched to v2.0 or higher required.
   REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
   // REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) @512 // This mod is not compatible with Pecca's Infinity UI.
-  REQUIRE_PREDICATE (MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3350 ||
-                     MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3351 ||
-                     MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3352 ||
-                     MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3353 ||
-                     MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3354 ||
-                     MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3355 ||
-                     MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3356 ||
-                     MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3357 ||
-                     MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ 3358) @509 // Requires Tweaks Anthology's "Create interval saves" to be installed.
+  REQUIRE_PREDICATE (MOD_IS_INSTALLED ~cdtweaks.tp2~ 3350 ||
+                     MOD_IS_INSTALLED ~cdtweaks.tp2~ 3351 ||
+                     MOD_IS_INSTALLED ~cdtweaks.tp2~ 3352 ||
+                     MOD_IS_INSTALLED ~cdtweaks.tp2~ 3353 ||
+                     MOD_IS_INSTALLED ~cdtweaks.tp2~ 3354 ||
+                     MOD_IS_INSTALLED ~cdtweaks.tp2~ 3355 ||
+                     MOD_IS_INSTALLED ~cdtweaks.tp2~ 3356 ||
+                     MOD_IS_INSTALLED ~cdtweaks.tp2~ 3357 ||
+                     MOD_IS_INSTALLED ~cdtweaks.tp2~ 3358) @509 // Requires Tweaks Anthology's "Create interval saves" to be installed.
   DESIGNATED 38
   LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_CREATE_INTERVAL_SAVES~
 
@@ -788,6 +797,18 @@ BEGIN @39 // Add in-game option "Force Dialog Pause"
   LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_FORCE_DIALOG_PAUSE~
 
   LAF OPTION_FORCE_DIALOG_PAUSE END
+
+
+BEGIN @40 // Add in-game options for Tweak Anthology's "Restored Loading Hints"
+  FORBID_COMPONENT ~HiddenGameplayOptions.tp2~ 0 @503 // Option is already installed
+  REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @500  // Enhanced Edition game patched to v2.0 or higher required.
+  REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~EEUITWEAKS.TP2~ 1010) @506  // This mod is not compatible with EEUITweaks component "Hidden Game Options".
+  // REQUIRE_PREDICATE (NOT MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) @512 // This mod is not compatible with Pecca's Infinity UI.
+  REQUIRE_PREDICATE (MOD_IS_INSTALLED ~cdtweaks.tp2~ 3400) @515 // Requires Tweaks Anthology's "Restored Loading Hints" to be installed.
+  DESIGNATED 40
+  LABEL ~A7-HIDDENGAMEPLAYOPTIONS-OPTION_RESTORED_LOADING_HINTS~
+
+  LAF OPTION_SHOW_RESTORED_LOADING_HINTS END
 
 
 BEGIN @101 // for priest spells only

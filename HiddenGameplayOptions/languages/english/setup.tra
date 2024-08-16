@@ -31,6 +31,7 @@
 @37 = ~Add in-game option "Render Dynamic Search Map"~
 @38 = ~Add in-game options for Tweak Anthology's "Create Interval Saves"~
 @39 = ~Add in-game option "Force Dialog Pause"~
+@40 = ~Add in-game options for Tweak Anthology's "Restored Loading Hints"~
 
 @100 = ~Update key bindings~
 @101 = ~for priest spells only~
@@ -55,3 +56,4 @@
 @512 = ~This component is not compatible with Pecca's Infinity UI.~
 @513 = ~This component is not compatible with K4f4r's Classic BG UI.~
 @514 = ~This component is not compatible with Tipun's User Interface.~
+@515 = ~Requires Tweaks Anthology's "Restored Loading Hints" to be installed.~

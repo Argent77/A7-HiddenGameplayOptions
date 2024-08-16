@@ -729,6 +729,28 @@ BEGIN
   END
 END
 
+/** Add in-game options for Tweak Anthology's "Restored Loading Hints" */
+DEFINE_ACTION_FUNCTION OPTION_SHOW_RESTORED_LOADING_HINTS
+BEGIN
+  OUTER_TEXT_SPRINT arrayName "toggleTitles"
+
+  LAF INSTALL_CHECK_OPTION
+  INT_VAR
+    optLabelTra   = 4000
+    optDescTra    = 4001
+    controlID     = "-195"
+    autoFail      = 1
+  STR_VAR
+    arrayName     = EVAL "%arrayName%"
+    optLabelName  = "A7_RESTORE_LOADING_HINTS_LABEL"
+    optDescName   = "A7_RESTORE_LOADING_HINTS_DESCRIPTION"
+    iniSection    = "Script"
+    iniName       = "ShowRestoredLoadingHints"
+  RET
+    success
+  END
+END
+
 /** Adds in-game "Frame rate" option as a slider */
 DEFINE_ACTION_FUNCTION OPTION_FRAME_RATE_SLIDER
 BEGIN

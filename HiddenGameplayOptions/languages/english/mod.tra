@@ -205,6 +205,11 @@ Note: You must restart the game for changes to take effect.~
 
 ^NNote: You must restart the game for changes to take effect.^-~
 
+@4000 = ~Show Restored Loading Hints~
+@4001 = ~Enabling this option shows loading hints from original Baldur's Gate II in the log window of the game. This option requires Tweaks Anthology's mod component "Restored Loading Hints" to be installed.
+
+^NNote: You must restart the game for changes to take effect.^-~
+
 
 // *** Misc. strings ***
 

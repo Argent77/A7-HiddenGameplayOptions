@@ -371,7 +371,17 @@ Die Option kann in Spieleinstellungen > Rückmeldungen > Visuelle Rückmeldungen
 In PST:EE kann diese Option in den Spieleinstellungen gefunden werden.
 
 
-34. Tastenbelegungen für Priester- und/oder Magierzauber aktualisieren
+34. Spieloption für Tweak Anthologys "Wiederhergestellte Ladehinweise" hinzufügen (benötigt
+    Tweak Anthologys Modkomponente "Wiederhergestellte Ladehinweise")
+
+Wenn diese Option aktiviert ist, dann werden die Ladehinweise vom originalen Baldurs Gate II im 
+Dialogfenster des Spiels angezeigt. Diese Option ist nur wirksam, wenn die Komponente
+"Wiederhergestellte Ladehinweise" von Tweaks Anthology installiert wurde.
+
+Die Option kann in den Spieleinstellungen gefunden werden.
+
+
+35. Tastenbelegungen für Priester- und/oder Magierzauber aktualisieren
 
 Diese Option aktualisiert die Liste aller verfügbaren Priester- und/oder Magierzauber. Es werden
 alle regulären Zauber und hochstufigen Fähigkeiten des Spiels selbst und aus Mods berücksichtigt,
