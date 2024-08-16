@@ -69,274 +69,7 @@ Komponent umożliwia instalcję wszytkich opcji lub wybranie opcji, które mają
 Szczegółowe informacje dotyczące poszczególnych opcji znajdują się poniżej.
 
 
-Poniższe komponenty będą dostępne, jeśli zdecydujesz się na wybór opcji do instalacji:
-
-2. Dodaj w grze opcję „Włącz tryb debugowania”
-
-Włączenie tej opcji pozwala na aktywowanie konsoli debugowania oraz klawiszy ułatwiających grę.
-
-Opcja ta znajduje się w sekcji Opcje gry.
-
-
-3. Dodaj w grze opcję „Włączanie trybu edycji UI”
-
-Włączenie tej opcji pozwala na edycję Interfejsu Użytkownika w trakcie gry.
-
-Opcja ta znajduje się w sekcji Opcje gry.
-
-
-4. Dodaj w grze opcję „Pokazywanie strrefów”
-
-Włączenie tej opcji pozwala na pokazywanie numerów linii dialogowych przed wyświetlanym tekstem.
-
-Opcja ta znajduje się w sekcji Opcje gry.
-
-
-5. Dodaj w grze opcję „Klawisze skrótu przy podpowiedziach”
-
-Włączenie tej opcji powoduje wyświetlanie informacji o klawiszu skrótu w okienku podpowiedzi.
-
-Opcja ta znajduje się w sekcji Opcje gry.
-
-
-6. Dodaj w grze opcję „Dodatkowe informacje po wciśnięciu klawisza TAB”
-
-Włączenie tej opcji powoduje otrzymywanie dodatkowych informacji o interaktywnych regionach po
-wciśnięciu klawisza TAB.
-
-Opcja ta znajduje się w sekcji Opcje gry.
-
-
-7. Dodaj w grze opcję „Możliwość używania klawisza Spacji podczas dialogów” (dostępne tylko w PST:EE)
-
-SWłączenie tej opcji umożliwia kontynuowanie rozmowy przy użyciu klawisza Spacji.
-
-Opcja ta znajduje się w sekcji Opcje gry.
-
-
-8. Dodaj w grze opcję „Ograniczenie czarów druidycznych dla kapłanów/łowców” (niedostępne w PST:EE)
-
-Opcja ta kontroluje dostępność czarów druidycznych dla wieloklasowych i dwuklasowych kapłanów/łowców.
-
-Opcja ta znajduje się w sekcji Opcje gry.
-
-
-9. Dodaj w grze opcję „Atak z zaskoczenia 3E”
-
-Opcja ta włącza lub wyłącza Atak z zaskoczenia oraz Druzgoczące uderzenie, będące specjalnymi
-zdolności złodzieja, podobnymi do tych, które występują w zasadach 3. edycji Dungeons & Dragons(R),
-firmy Wizards of the Coast.
-
-Opcja ta znajduje się w sekcji Opcje gry.
-
-
-10. Dodaj w grze opcję „Drżenie ekranu po trafieniu krytycznym”
-
-Włączenie tej opcji powoduje efekt drżenia ekranu za każdym razem, gdy członek drużyny uzyska
-trafienie krytyczne.
-
-Opcja ta znajduje się w sekcji Opcje gry > Interakcja > Graficzne wskazówki (lub Opcje gry w PST:EE).
-
-
-11. Dodaj w grze opcję „Pokazywanie dodatkowych informacji o walce”
-
-Włączenie tej opcji sprawia, że na ekranie wyświetlane będą wszystkie wartości mające wpływ na
-wynik testu ataku.
-
-Opcja ta znajduje się w sekcji Opcje gry > Interakcja > Informacje związane z interakcją.
-
-
-12. Dodaj w grze opcję „Wyświetlanie czasu i daty po zatrzymaniu gry”
-
-Włączenie tej opcji spowoduje wyświetlenie aktualnej daty i czasu w grze po aktywowaniu pauzy.
-
-Opcja ta znajduje się w sekcji Opcje gry > Interakcja > Informacje związane z interakcją.
-
-
-13. Dodaj w grze opcję „Wyłączenie przybliżania obszaru mapy” (dostępne tylko w PST:EE)
-
-Opcja ta powoduje wyłączenie efektu przybliżania i oddalania widoku mapy podczas otwierania lub
-zamykania ekranu mapy.
-
-Opcja ta znajduje się w sekcji Grafika > Opcje wyświetlania.
-
-
-14. Dodaj w grze opcję „Odwrócenie kierunku przybliżania ekranu za pomocą myszy”
-
-Opcja ta powoduje odwrócenie kierunku przybliżania i oddalania ekranu za pomocą kółka myszy.
-
-Opcja ta znajduje się w sekcji Grafika > Opcje wyświetlania.
-
-
-15. Dodaj w grze opcję „Zatrzymywanie gry na ekranie mapy”
-
-Włączenie tej opcji powoduje automatyczne zatrzymanie gry po wejściu na ekran mapy.
-
-Opcja ta znajduje się w sekcji Grafika > Opcje wyświetlania.
-
-
-16. Dodaj w grze opcję „Włączenie mgły” (niedostępne w PST:EE)
-
-Włączenie tej opcji powoduje pojawienie się na ekranie mapy efektów związanych z mgłą.
-
-Opcja ta znajduje się w sekcji Grafika > Opcje wyświetlania.
-
-
-17. Dodaj w grze opcję „Wyłączenie filmów”
-
-Włączenie tej opcji powoduje zablokowanie odtwarzania filmów.
-
-Opcja ta znajduje się w sekcji Grafika > Opcje wyświetlania.
-
-
-18. Dodaj w grze opcję „Wyłączenie dodatkowych animacji ataków” (dostępne tylko w PST:EE)
-
-Włączenie tej opcji powoduje wyświetlanie dodatkowych animacji ataku, tylko jeśli postać faktycznie
-wykonuje atak. Opcja ta jest już dostępna w niezmodyfikowanych wersjach BG:EE, BG2:EE i IWD:EE.
-
-Opcja ta znajduje się w sekcji Opcje gry.
-
-
-19. Dodaj w grze opcję „Premia do PD w trybie Koszmar” (niedostępne w PST:EE)
-
-Włączenie tej opcji pozwala na uzyskiwanie dodatkowej ilości PD w trybie Dziedzictwo Bhaala (BG:EE/BG2:EE)
-lub Serce Furii (IWD:EE). Nie wpływa jednak na ilość PD otrzymywanych w przypadku zwykłych trybów gry.
-
-Opcja ta znajduje się w sekcji Opcje gry.
-
-
-20. Dodaj w grze opcję „Odtwarzanie odgłosów znudzenia” (niekompatybilne z modyfikacją Lefreut's
-    Enhanced UI (LeUI))
-
-Włączenie tej opcji pozwala na odtwarzanie przez członków drużyny odgłosów znudzenia w przypadku
-dłuższej bezczynności.
-
-Opcja ta znajduje się w sekcji Dźwięki > Odgłosy postaci lub Opcje gry > Interakcja (tylko PST:EE).
-
-
-21. Dodaj w grze opcję „Wskaźnik ilości klatek” (opcja eksperymentalna) (niedostępne dla PST:EE,
-    niekompatybilne z modyfikacją „Lefreut's Enhanced UI (LeUI)”)
-
-Po zainstalowaniu tego komponentu dostępny jest suwak służący do ustawienia pożądanej ilości klatek
-w grze. Można wybrać wartość 30, 40, 50 lub 60 klatek na sekundę.
-
-Komponent ten został oznaczony jako „eksperymentalny”, gdyż istnieją następujące sytuacje, podczas
-których opcja ta nie wywołuje żadnego efektu:
-1. Gdy jest aktywna opcja Opcje > Opcje gry > Interakcja > „Włącz potwierdzenie”.
-2. Gdy nastąpi wyjście z gry bezpośrednio na pulpit.
-
-Opcja ta znajduje się w sekcji Opcje gry.
-
-
-22. Dodaj w grze opcję „Wskazówki dotyczące wykonywanych czynności” (niekompatybilne z modyfikacją
-    „Lefreut's Enhanced UI (LeUI)”)
-
-Po zainstalowaniu tego komponentu dostępny jest suwak, który pozwala na wyświetlanie niewielkich
-symboli wokół sylwetek postaci, które wskazują na rodzaj wykonywanych przez nie czynności (np. walka,
-rzucanie czarów, czy złodziejstwo). Można wybrać spośród kilku stopni otrzymywania wskazówek.
-Niektóre stopnie wymagają włączenia „trybu debugowania”, znajdującego się w sekcji Opcje gry.
-
-Opcja ta znajduje się w sekcji Opcje gry > Interakcja.
-
-
-23. Dodaj w grze opcję „Wyświetlanie ikony zmiany poziomu” (dostępne tylko dla PST:EE, wymaga
-    uprzedniego zainstalowania modyfikacji „Ikona zmiany poziomu”)
-
-Opcja ta pozwala na wyświetlanie ikony „Zmiany poziomu” w oknie portretu lub na pasku życia członków
-drużyny mogących awansować na kolejny poziom. Komponent ten wymaga uprzedniego zainstalowania
-modyfikacji „Ikona zmiany poziomu”, która umożliwia wyświetlanie ikony awansu na kolejny poziom.
-
-Opcja ta znajduje się w sekcji Opcje gry > Interakcja.
-
-
-24. Dodaj w grze opcję „Pokazywanie zasięgu czarów obszarowych” (niedostępne w PST:EE)
-
-Opcja ta pozwala na pokazywanie zasięgu czarów obszarowych przed ich rzuceniem.
-
-Opcja ta znajduje się w sekcji Opcje gry > Interakcja > Graficzne wskazówki.
-
-Uwaga: Opcja ta nie działa w wersjach gry niższych niż 2.5.16.6.
-
-
-25. Dodaj w grze opcję „Ulepszone wyszukiwanie ścieżek”
-
-Opcja ta poprawia odnajdywanie ścieżek poprzez ciągłe przeliczanie algorytmu wyszukiwania ścieżek
-poruszających się postaci.
-
-Opcja ta znajduje się w sekcji Opcje gry.
-
-
-26. Dodaj w grze opcję „Wygaszanie podświetlania pułapek” (niedostępne w PST:EE)
-
-Opcja ta pozwala na włączanie lub wyłączanie wygaszania po upływie pewnego czasu podświetlania pułapek
-i ukrytych drzwi.
-
-Opcja ta znajduje się w sekcji Opcje gry > Interakcja > Graficzne wskazówki.
-
-
-27. Dodaj w grze opcję „Pokazuj czary, których można się nauczyć”
-
-Opcja ta pozwala na włączenie lub wyłączenie wyświetlania zielonej obwódki wokół czarów, które można
-zapisać do księgi zaklęć.
-
-Opcja ta znajduje się w sekcji Grafika > Opcje wyświetlania.
-
-
-28. Dodaj w grze opcję „Renderowanie wyszukiwania na mapie”
-
-Opcja ta pozwala na włączanie i wyłączanie możliwości użycia klawisza SHIFT do wyświetlania powłoki
-statycznego wyszukiwania lokacji na mapie dla aktualnie odwiedzanego obszaru.
-
-Opcja ta znajduje się w sekcji Grafika > Opcje wyświetlania.
-
-
-29. Dodaj w grze opcję „Renderowanie dynamicznego wyszukiwania na mapie”
-
-Opcja ta pozwala na włączanie i wyłączanie możliwości użycia klawisza CTRL do wyświetlania powłoki
-dynamicznego wyszukiwania regionów, na przykład zablokowanych przejść czy przestrzeni osobistej
-zajmowanej przez istoty.
-
-Opcja ta znajduje się w sekcji Grafika > Opcje wyświetlania.
-
-
-30. Dodaj w grze opcje przeznaczone dla komponentu „Tworzenie zapisow gry w regularnych odstepach czasu”
-    z modyfikacji Tweaks Anthology (wymaga uprzedniego zainstalowania komponentu „Tworzenie zapisow gry
-    w regularnych odstepach czasu” z modyfikacji Tweaks Anthology)
-
-Komponent ten pozwala na zainstalowanie dwóch opcji w sekcji Opcje gry:
-- Włączenie zapisywania stanu gry w regularnych odstępach czasu:
-Opcja ta pozwala na włączenie zapisywania stanu gry w regularnych odstępach czasu.
-- Tworzenie zapisów gry w regularnych odstępach czasu w trakcie walki:
-Opcja ta pozwala na włączenie zapisywania stanu gry w regularnych odstępach czasu również w trakcie walki.
-
-Obie opcje są aktywne tylko po uprzednim zainstalowaniu komponentu „Tworzenie zapisow gry w
-regularnych odstepach czasu” z modyfikacji Tweaks Anthology.
-
-Opcje te znajdują się w sekcji Opcje gry.
-
-
-31. Dodaj w grze opcję „Zatrzymywanie gry podczas dialogów”
-
-Po włączeniu tej opcji gra będzie automatycznie zatrzymywana podczas dialogów.
-Komponent ten działa identycznie jak komponent „Wszystkie dialogi zatrzymuja grę” z modyfikacji
-Tweaks Anthology.
-
-Opcja ta znajduje się w sekcji Opcje gry > Interakcja > Graficzne wskazówki (lub w sekcji Opcje gry
-w przypadku PST:EE)
-
-
-32. Zaktualizuj przypisanie klawiszy dla czarów kapłańskich i/lub maga
-
-Komponent ten pozwala na ponowne przypisanie klawiszy dla czarów kapłańskich i/lub maga.
-Uwzględnia wszystkie czary i wysokopoziomowe zdolności dostępne w momencie instalacji, zarówno z
-oryginalnej gry, jak i z innych modyfikacji.
-
-Do wyboru są trzy opcje:
-- Zaktualizowanie przypisania klawiszy tylko dla czarów kapłańskich,
-- Zaktualizowanie przypisania klawiszy tylko dla czarów maga,
-- Zaktualizowanie przypisania klawiszy dla czarów kapłańskich i maga.
-
-33. Ulepszone menu opcji ułatwiających grę
+2. Ulepszone menu opcji ułatwiających grę
 
 Komponent ten rozszerza o dodatkowe możliwości menu opcji ułatwiających grę, które można otworzyć po
 aktywacji konsoli debugowania. Poniżej nowe dostępne opcje:
@@ -359,11 +92,280 @@ Komponent ten jest kompatybilny z następującymi modyfikacjami:
 
 Komponent ten został również uwzględniony w opcji instalacji: „Zainstaluj wszystkie Ukryte opcje gry”.
 
-34. Zaktualizuj tabele zasobów dla komponentu „Ulepszone menu opcji ułatwiających grę”
+
+3. Zaktualizuj tabele zasobów dla komponentu „Ulepszone menu opcji ułatwiających grę”
 
 Komponent ten pozwala na aktualizację tabeli zasobów używanych przez komponent „Ulepszone menu opcji
 ułatwiających grę”, bez konieczności ponownej instalacji całej modyfikacji. Nie następuje rejestracja w logu
 WeiDU, można go więc wywołać w dowolnym momencie.
+
+
+Poniższe komponenty będą dostępne, jeśli zdecydujesz się na wybór opcji do instalacji:
+
+4. Dodaj w grze opcję „Włącz tryb debugowania”
+
+Włączenie tej opcji pozwala na aktywowanie konsoli debugowania oraz klawiszy ułatwiających grę.
+
+Opcja ta znajduje się w sekcji Opcje gry.
+
+
+5. Dodaj w grze opcję „Włączanie trybu edycji UI”
+
+Włączenie tej opcji pozwala na edycję Interfejsu Użytkownika w trakcie gry.
+
+Opcja ta znajduje się w sekcji Opcje gry.
+
+
+6. Dodaj w grze opcję „Pokazywanie strrefów”
+
+Włączenie tej opcji pozwala na pokazywanie numerów linii dialogowych przed wyświetlanym tekstem.
+
+Opcja ta znajduje się w sekcji Opcje gry.
+
+
+7. Dodaj w grze opcję „Klawisze skrótu przy podpowiedziach”
+
+Włączenie tej opcji powoduje wyświetlanie informacji o klawiszu skrótu w okienku podpowiedzi.
+
+Opcja ta znajduje się w sekcji Opcje gry.
+
+
+8. Dodaj w grze opcję „Dodatkowe informacje po wciśnięciu klawisza TAB”
+
+Włączenie tej opcji powoduje otrzymywanie dodatkowych informacji o interaktywnych regionach po
+wciśnięciu klawisza TAB.
+
+Opcja ta znajduje się w sekcji Opcje gry.
+
+
+9. Dodaj w grze opcję „Możliwość używania klawisza Spacji podczas dialogów” (dostępne tylko w PST:EE)
+
+SWłączenie tej opcji umożliwia kontynuowanie rozmowy przy użyciu klawisza Spacji.
+
+Opcja ta znajduje się w sekcji Opcje gry.
+
+
+10. Dodaj w grze opcję „Ograniczenie czarów druidycznych dla kapłanów/łowców” (niedostępne w PST:EE)
+
+Opcja ta kontroluje dostępność czarów druidycznych dla wieloklasowych i dwuklasowych kapłanów/łowców.
+
+Opcja ta znajduje się w sekcji Opcje gry.
+
+
+11. Dodaj w grze opcję „Atak z zaskoczenia 3E”
+
+Opcja ta włącza lub wyłącza Atak z zaskoczenia oraz Druzgoczące uderzenie, będące specjalnymi
+zdolności złodzieja, podobnymi do tych, które występują w zasadach 3. edycji Dungeons & Dragons(R),
+firmy Wizards of the Coast.
+
+Opcja ta znajduje się w sekcji Opcje gry.
+
+
+12. Dodaj w grze opcję „Drżenie ekranu po trafieniu krytycznym”
+
+Włączenie tej opcji powoduje efekt drżenia ekranu za każdym razem, gdy członek drużyny uzyska
+trafienie krytyczne.
+
+Opcja ta znajduje się w sekcji Opcje gry > Interakcja > Graficzne wskazówki (lub Opcje gry w PST:EE).
+
+
+13. Dodaj w grze opcję „Pokazywanie dodatkowych informacji o walce”
+
+Włączenie tej opcji sprawia, że na ekranie wyświetlane będą wszystkie wartości mające wpływ na
+wynik testu ataku.
+
+Opcja ta znajduje się w sekcji Opcje gry > Interakcja > Informacje związane z interakcją.
+
+
+14. Dodaj w grze opcję „Wyświetlanie czasu i daty po zatrzymaniu gry”
+
+Włączenie tej opcji spowoduje wyświetlenie aktualnej daty i czasu w grze po aktywowaniu pauzy.
+
+Opcja ta znajduje się w sekcji Opcje gry > Interakcja > Informacje związane z interakcją.
+
+
+15. Dodaj w grze opcję „Wyłączenie przybliżania obszaru mapy” (dostępne tylko w PST:EE)
+
+Opcja ta powoduje wyłączenie efektu przybliżania i oddalania widoku mapy podczas otwierania lub
+zamykania ekranu mapy.
+
+Opcja ta znajduje się w sekcji Grafika > Opcje wyświetlania.
+
+
+16. Dodaj w grze opcję „Odwrócenie kierunku przybliżania ekranu za pomocą myszy”
+
+Opcja ta powoduje odwrócenie kierunku przybliżania i oddalania ekranu za pomocą kółka myszy.
+
+Opcja ta znajduje się w sekcji Grafika > Opcje wyświetlania.
+
+
+17. Dodaj w grze opcję „Zatrzymywanie gry na ekranie mapy”
+
+Włączenie tej opcji powoduje automatyczne zatrzymanie gry po wejściu na ekran mapy.
+
+Opcja ta znajduje się w sekcji Grafika > Opcje wyświetlania.
+
+
+18. Dodaj w grze opcję „Włączenie mgły” (niedostępne w PST:EE)
+
+Włączenie tej opcji powoduje pojawienie się na ekranie mapy efektów związanych z mgłą.
+
+Opcja ta znajduje się w sekcji Grafika > Opcje wyświetlania.
+
+
+19. Dodaj w grze opcję „Wyłączenie filmów”
+
+Włączenie tej opcji powoduje zablokowanie odtwarzania filmów.
+
+Opcja ta znajduje się w sekcji Grafika > Opcje wyświetlania.
+
+
+20. Dodaj w grze opcję „Wyłączenie dodatkowych animacji ataków” (dostępne tylko w PST:EE)
+
+Włączenie tej opcji powoduje wyświetlanie dodatkowych animacji ataku, tylko jeśli postać faktycznie
+wykonuje atak. Opcja ta jest już dostępna w niezmodyfikowanych wersjach BG:EE, BG2:EE i IWD:EE.
+
+Opcja ta znajduje się w sekcji Opcje gry.
+
+
+21. Dodaj w grze opcję „Premia do PD w trybie Koszmar” (niedostępne w PST:EE)
+
+Włączenie tej opcji pozwala na uzyskiwanie dodatkowej ilości PD w trybie Dziedzictwo Bhaala (BG:EE/BG2:EE)
+lub Serce Furii (IWD:EE). Nie wpływa jednak na ilość PD otrzymywanych w przypadku zwykłych trybów gry.
+
+Opcja ta znajduje się w sekcji Opcje gry.
+
+
+22. Dodaj w grze opcję „Odtwarzanie odgłosów znudzenia” (niekompatybilne z modyfikacją Lefreut's
+    Enhanced UI (LeUI))
+
+Włączenie tej opcji pozwala na odtwarzanie przez członków drużyny odgłosów znudzenia w przypadku
+dłuższej bezczynności.
+
+Opcja ta znajduje się w sekcji Dźwięki > Odgłosy postaci lub Opcje gry > Interakcja (tylko PST:EE).
+
+
+23. Dodaj w grze opcję „Wskaźnik ilości klatek” (opcja eksperymentalna) (niedostępne dla PST:EE,
+    niekompatybilne z modyfikacją „Lefreut's Enhanced UI (LeUI)”)
+
+Po zainstalowaniu tego komponentu dostępny jest suwak służący do ustawienia pożądanej ilości klatek
+w grze. Można wybrać wartość 30, 40, 50 lub 60 klatek na sekundę.
+
+Komponent ten został oznaczony jako „eksperymentalny”, gdyż istnieją następujące sytuacje, podczas
+których opcja ta nie wywołuje żadnego efektu:
+1. Gdy jest aktywna opcja Opcje > Opcje gry > Interakcja > „Włącz potwierdzenie”.
+2. Gdy nastąpi wyjście z gry bezpośrednio na pulpit.
+
+Opcja ta znajduje się w sekcji Opcje gry.
+
+
+24. Dodaj w grze opcję „Wskazówki dotyczące wykonywanych czynności” (niekompatybilne z modyfikacją
+    „Lefreut's Enhanced UI (LeUI)”)
+
+Po zainstalowaniu tego komponentu dostępny jest suwak, który pozwala na wyświetlanie niewielkich
+symboli wokół sylwetek postaci, które wskazują na rodzaj wykonywanych przez nie czynności (np. walka,
+rzucanie czarów, czy złodziejstwo). Można wybrać spośród kilku stopni otrzymywania wskazówek.
+Niektóre stopnie wymagają włączenia „trybu debugowania”, znajdującego się w sekcji Opcje gry.
+
+Opcja ta znajduje się w sekcji Opcje gry > Interakcja.
+
+
+25. Dodaj w grze opcję „Wyświetlanie ikony zmiany poziomu” (dostępne tylko dla PST:EE, wymaga
+    uprzedniego zainstalowania modyfikacji „Ikona zmiany poziomu”)
+
+Opcja ta pozwala na wyświetlanie ikony „Zmiany poziomu” w oknie portretu lub na pasku życia członków
+drużyny mogących awansować na kolejny poziom. Komponent ten wymaga uprzedniego zainstalowania
+modyfikacji „Ikona zmiany poziomu”, która umożliwia wyświetlanie ikony awansu na kolejny poziom.
+
+Opcja ta znajduje się w sekcji Opcje gry > Interakcja.
+
+
+26. Dodaj w grze opcję „Pokazywanie zasięgu czarów obszarowych” (niedostępne w PST:EE)
+
+Opcja ta pozwala na pokazywanie zasięgu czarów obszarowych przed ich rzuceniem.
+
+Opcja ta znajduje się w sekcji Opcje gry > Interakcja > Graficzne wskazówki.
+
+Uwaga: Opcja ta nie działa w wersjach gry niższych niż 2.5.16.6.
+
+
+27. Dodaj w grze opcję „Ulepszone wyszukiwanie ścieżek”
+
+Opcja ta poprawia odnajdywanie ścieżek poprzez ciągłe przeliczanie algorytmu wyszukiwania ścieżek
+poruszających się postaci.
+
+Opcja ta znajduje się w sekcji Opcje gry.
+
+
+28. Dodaj w grze opcję „Wygaszanie podświetlania pułapek” (niedostępne w PST:EE)
+
+Opcja ta pozwala na włączanie lub wyłączanie wygaszania po upływie pewnego czasu podświetlania pułapek
+i ukrytych drzwi.
+
+Opcja ta znajduje się w sekcji Opcje gry > Interakcja > Graficzne wskazówki.
+
+
+29. Dodaj w grze opcję „Pokazuj czary, których można się nauczyć”
+
+Opcja ta pozwala na włączenie lub wyłączenie wyświetlania zielonej obwódki wokół czarów, które można
+zapisać do księgi zaklęć.
+
+Opcja ta znajduje się w sekcji Grafika > Opcje wyświetlania.
+
+
+30. Dodaj w grze opcję „Renderowanie wyszukiwania na mapie”
+
+Opcja ta pozwala na włączanie i wyłączanie możliwości użycia klawisza SHIFT do wyświetlania powłoki
+statycznego wyszukiwania lokacji na mapie dla aktualnie odwiedzanego obszaru.
+
+Opcja ta znajduje się w sekcji Grafika > Opcje wyświetlania.
+
+
+31. Dodaj w grze opcję „Renderowanie dynamicznego wyszukiwania na mapie”
+
+Opcja ta pozwala na włączanie i wyłączanie możliwości użycia klawisza CTRL do wyświetlania powłoki
+dynamicznego wyszukiwania regionów, na przykład zablokowanych przejść czy przestrzeni osobistej
+zajmowanej przez istoty.
+
+Opcja ta znajduje się w sekcji Grafika > Opcje wyświetlania.
+
+
+32. Dodaj w grze opcje przeznaczone dla komponentu „Tworzenie zapisow gry w regularnych odstepach czasu”
+    z modyfikacji Tweaks Anthology (wymaga uprzedniego zainstalowania komponentu „Tworzenie zapisow gry
+    w regularnych odstepach czasu” z modyfikacji Tweaks Anthology)
+
+Komponent ten pozwala na zainstalowanie dwóch opcji w sekcji Opcje gry:
+- Włączenie zapisywania stanu gry w regularnych odstępach czasu:
+Opcja ta pozwala na włączenie zapisywania stanu gry w regularnych odstępach czasu.
+- Tworzenie zapisów gry w regularnych odstępach czasu w trakcie walki:
+Opcja ta pozwala na włączenie zapisywania stanu gry w regularnych odstępach czasu również w trakcie walki.
+
+Obie opcje są aktywne tylko po uprzednim zainstalowaniu komponentu „Tworzenie zapisow gry w
+regularnych odstepach czasu” z modyfikacji Tweaks Anthology.
+
+Opcje te znajdują się w sekcji Opcje gry.
+
+
+33. Dodaj w grze opcję „Zatrzymywanie gry podczas dialogów”
+
+Po włączeniu tej opcji gra będzie automatycznie zatrzymywana podczas dialogów.
+Komponent ten działa identycznie jak komponent „Wszystkie dialogi zatrzymuja grę” z modyfikacji
+Tweaks Anthology.
+
+Opcja ta znajduje się w sekcji Opcje gry > Interakcja > Graficzne wskazówki (lub w sekcji Opcje gry
+w przypadku PST:EE)
+
+
+34. Zaktualizuj przypisanie klawiszy dla czarów kapłańskich i/lub maga
+
+Komponent ten pozwala na ponowne przypisanie klawiszy dla czarów kapłańskich i/lub maga.
+Uwzględnia wszystkie czary i wysokopoziomowe zdolności dostępne w momencie instalacji, zarówno z
+oryginalnej gry, jak i z innych modyfikacji.
+
+Do wyboru są trzy opcje:
+- Zaktualizowanie przypisania klawiszy tylko dla czarów kapłańskich,
+- Zaktualizowanie przypisania klawiszy tylko dla czarów maga,
+- Zaktualizowanie przypisania klawiszy dla czarów kapłańskich i maga.
 
 
 Credits

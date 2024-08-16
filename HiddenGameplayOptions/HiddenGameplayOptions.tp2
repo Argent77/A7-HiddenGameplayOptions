@@ -95,6 +95,14 @@ BEGIN @1  // Install all Hidden Gameplay Options at once
   DESIGNATED 0
   LABEL ~A7-HIDDENGAMEPLAYOPTIONS-INSTALL_ALL~
 
+  OUTER_SET tra_ref = 200
+  ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 200) BEGIN
+    LAF PRINT_INSTALL INT_VAR tra_ref END
+    INCLUDE ~%MOD_FOLDER%/lib/cheatmenu.tph~
+  END ELSE BEGIN
+    LAF PRINT_SKIP INT_VAR tra_ref END
+  END
+
   OUTER_SET tra_ref = 10
   ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 10) BEGIN
     LAF PRINT_INSTALL INT_VAR tra_ref END
@@ -404,13 +412,25 @@ BEGIN @1  // Install all Hidden Gameplay Options at once
     LAF PRINT_SKIP INT_VAR tra_ref END
   END
 
-  OUTER_SET tra_ref = 200
-  ACTION_IF (NOT MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 200) BEGIN
-    LAF PRINT_INSTALL INT_VAR tra_ref END
-    INCLUDE ~%MOD_FOLDER%/lib/cheatmenu.tph~
-  END ELSE BEGIN
-    LAF PRINT_SKIP INT_VAR tra_ref END
-  END
+
+BEGIN @200  // Improved Cheat Menu
+  FORBID_COMPONENT ~HiddenGameplayOptions.tp2~ 0 @503 // Option is already installed
+  REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @500  // Enhanced Edition game patched to v2.0 or higher required.
+  DESIGNATED 200
+  LABEL ~A7-HIDDENGAMEPLAYOPTIONS-IMPROVED_CHEAT_MENU~
+
+  INCLUDE ~%MOD_FOLDER%/lib/cheatmenu.tph~
+
+
+BEGIN @201  // Update resource tables for "Improved Cheat Menu"
+  REQUIRE_PREDICATE (MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 0) ||
+                    (MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 200) @510 // Requires component "Improved Cheat Menu" to be installed.
+  REQUIRE_PREDICATE (NOT FILE_EXISTS ~override/a7_rhgo_cheats.mrk~) @511    // This component is intended to be called separately if needed.
+  DESIGNATED 201
+  LABEL ~A7-HIDDENGAMEPLAYOPTIONS-IMPROVED_CHEAT_MENU_UPDATE~
+  NO_LOG_RECORD
+
+  INCLUDE ~%MOD_FOLDER%/lib/cheatmenu_update.tph~
 
 
 BEGIN @10 // Add in-game option "Enable Debug Mode"
@@ -770,7 +790,6 @@ BEGIN @39 // Add in-game option "Force Dialog Pause"
   LAF OPTION_FORCE_DIALOG_PAUSE END
 
 
-
 BEGIN @101 // for priest spells only
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~bgee.lua~ @500 // Enhanced Edition game patched to v2.0 or higher required.
   SUBCOMPONENT @100  // Update key bindings
@@ -800,22 +819,3 @@ BEGIN @103 // for priest and mage spells
   INCLUDE ~%MOD_FOLDER%/lib/keybinding.tph~
   LAF INSTALL_SPELL_KEYBINDINGS INT_VAR type = 1 END
   LAF INSTALL_SPELL_KEYBINDINGS INT_VAR type = 2 END
-
-
-BEGIN @200  // Improved Cheat Menu
-  FORBID_COMPONENT ~HiddenGameplayOptions.tp2~ 0 @503 // Option is already installed
-  REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~ui.menu~ @500  // Enhanced Edition game patched to v2.0 or higher required.
-  DESIGNATED 200
-  LABEL ~A7-HIDDENGAMEPLAYOPTIONS-IMPROVED_CHEAT_MENU~
-
-  INCLUDE ~%MOD_FOLDER%/lib/cheatmenu.tph~
-
-BEGIN @201  // Update resource tables for "Improved Cheat Menu"
-  REQUIRE_PREDICATE (MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 0) ||
-                    (MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ 200) @510 // Requires component "Improved Cheat Menu" to be installed.
-  REQUIRE_PREDICATE (NOT FILE_EXISTS ~override/a7_rhgo_cheats.mrk~) @511    // This component is intended to be called separately if needed.
-  DESIGNATED 201
-  LABEL ~A7-HIDDENGAMEPLAYOPTIONS-IMPROVED_CHEAT_MENU_UPDATE~
-  NO_LOG_RECORD
-
-  INCLUDE ~%MOD_FOLDER%/lib/cheatmenu_update.tph~
