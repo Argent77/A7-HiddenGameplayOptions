@@ -244,7 +244,7 @@ Option can be found in Sounds > Character Sounds or Gameplay > Feedback (PST:EE 
     Lefreut's Enhanced UI (LeUI) and K4f4r's Classic BG UI)
 
 This component installs a slider control that can be used to set the desired frame rate of the game.
-You can choose between 30, 40, 50 and 60 frames per second. The game's default is 30 fps.
+You can choose a rate between 10 and 60 frames per second, in steps of 5. The game's default is 30 fps.
 
 The component is marked as "experimental", as there are situations where setting this option has
 no effect:

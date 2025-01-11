@@ -758,31 +758,39 @@ BEGIN
   INT_VAR
     optLabelTra   = 2800  // Frame Rate
     optDescTra    = 2801  // Frame rate description...
-    optInfo_0     = 2802  // 30 fps
-    optInfo_1     = 2806  // 35 fps
-    optInfo_2     = 2803  // 40 fps
-    optInfo_3     = 2807  // 45 fps
-    optInfo_4     = 2804  // 50 fps
-    optInfo_5     = 2808  // 55 fps
-    optInfo_6     = 2805  // 60 fps
+    optInfo_0     = 2809  // 10 fps
+    optInfo_1     = 2810  // 15 fps
+    optInfo_2     = 2811  // 20 fps
+    optInfo_3     = 2812  // 25 fps
+    optInfo_4     = 2802  // 30 fps
+    optInfo_5     = 2806  // 35 fps
+    optInfo_6     = 2803  // 40 fps
+    optInfo_7     = 2807  // 45 fps
+    optInfo_8     = 2804  // 50 fps
+    optInfo_9     = 2808  // 55 fps
+    optInfo_10    = 2805  // 60 fps
     controlID     = 5
-    numSettings   = 7
-    minSetting    = 30
+    numSettings   = 11
+    minSetting    = 10
     stepSize      = 5
     autoFail      = 1
   STR_VAR
-    optLabelName  = "A7_FRAMERATE_LABEL"
-    optDescName   = "A7_FRAMERATE_DESCRIPTION"
-    optInfoName_0 = "A7_FRAMERATE_FPS_30"
-    optInfoName_1 = "A7_FRAMERATE_FPS_35"
-    optInfoName_2 = "A7_FRAMERATE_FPS_40"
-    optInfoName_3 = "A7_FRAMERATE_FPS_45"
-    optInfoName_4 = "A7_FRAMERATE_FPS_50"
-    optInfoName_5 = "A7_FRAMERATE_FPS_55"
-    optInfoName_6 = "A7_FRAMERATE_FPS_60"
-    condition     = "not e:IsTouchUI()"
-    iniSection    = "Program Options"
-    iniName       = "Maximum Frame Rate"
+    optLabelName   = "A7_FRAMERATE_LABEL"
+    optDescName    = "A7_FRAMERATE_DESCRIPTION"
+    optInfoName_0  = "A7_FRAMERATE_FPS_10"
+    optInfoName_1  = "A7_FRAMERATE_FPS_15"
+    optInfoName_2  = "A7_FRAMERATE_FPS_20"
+    optInfoName_3  = "A7_FRAMERATE_FPS_25"
+    optInfoName_4  = "A7_FRAMERATE_FPS_30"
+    optInfoName_5  = "A7_FRAMERATE_FPS_35"
+    optInfoName_6  = "A7_FRAMERATE_FPS_40"
+    optInfoName_7  = "A7_FRAMERATE_FPS_45"
+    optInfoName_8  = "A7_FRAMERATE_FPS_50"
+    optInfoName_9  = "A7_FRAMERATE_FPS_55"
+    optInfoName_10 = "A7_FRAMERATE_FPS_60"
+    condition      = "not e:IsTouchUI()"
+    iniSection     = "Program Options"
+    iniName        = "Maximum Frame Rate"
   RET
     success
   END

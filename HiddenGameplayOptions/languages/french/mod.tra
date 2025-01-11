@@ -118,6 +118,10 @@ ATTENTION : définir le nombre d'images par seconde au-dessus de 30 peut provoqu
 @2806 = ~35 images / seconde~
 @2807 = ~45 images / seconde~
 @2808 = ~55 images / seconde~
+@2809 = ~10 images / seconde~
+@2810 = ~15 images / seconde~
+@2811 = ~20 images / seconde~
+@2812 = ~25 images / seconde~
 
 @2900 = ~Feedback d'action~
 @2901 = ~Ce curseur permet de décider si, ou quand, les actions qu'effectue un personnage sont affichées sous forme de petites icônes autour de son sprite.

@@ -119,6 +119,10 @@ UWAGA: Ustawienie liczby klatek animacji na ponad 30 może spowodować utratę s
 @2806 = ~35 klatek/sek.~
 @2807 = ~45 klatek/sek.~
 @2808 = ~55 klatek/sek.~
+@2809 = ~10 klatek/sek.~
+@2810 = ~15 klatek/sek.~
+@2811 = ~20 klatek/sek.~
+@2812 = ~25 klatek/sek.~
 
 @2900 = ~Wskazówki dotyczące wykonywanych czynności~
 @2901 = ~Suwak ten kontroluje sposób przedstawiania wykonywanych przez dane istoty czynności w postaci niewielkich ikon wyświetlanych nad ich sylwetkami.

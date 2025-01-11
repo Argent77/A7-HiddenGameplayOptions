@@ -115,6 +115,13 @@ ADVERTENCIA: Ajustar la velocidad de fotogramas por encima de 30 puede provocar 
 @2803 = ~40 fotogramas/seg.~
 @2804 = ~50 fotogramas/seg.~
 @2805 = ~60 fotogramas/seg.~
+@2806 = ~35 fotogramas/seg.~
+@2807 = ~45 fotogramas/seg.~
+@2808 = ~55 fotogramas/seg.~
+@2809 = ~10 fotogramas/seg.~
+@2810 = ~15 fotogramas/seg.~
+@2811 = ~20 fotogramas/seg.~
+@2812 = ~25 fotogramas/seg.~
 
 @2900 = ~Comentarios de acción~
 @2901 = ~Este control deslizante controla si las acciones se muestran como pequeños íconos alrededor del objeto de un personaje.

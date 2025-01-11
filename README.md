@@ -163,7 +163,7 @@ Enabling this option will trigger bored sounds when you haven't assigned actions
 
 #### 23. Add in-game option "Frame Rate" (experimental) *(not available for PST:EE, not compatible with Lefreut's Enhanced UI (LeUI) and K4f4r's Classic BG UI)*
 
-This component installs a slider control that can be used to set the desired frame rate of the game. You can choose between 30, 40, 50 and 60 frames per second. The game's default is 30 fps.
+This component installs a slider control that can be used to set the desired frame rate of the game. You can choose a rate between 10 and 60 frames per second, in steps of 5. The game's default is 30 fps.
 
 *Option can be found in Gameplay section.*
 

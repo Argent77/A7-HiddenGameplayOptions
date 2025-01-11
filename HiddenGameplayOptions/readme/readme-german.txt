@@ -263,8 +263,8 @@ werden.
     Lefreuts Enhanced UI (LeUI) kompatibel)
 
 Diese Komponente installiert einen Schieberegler, mit dem man die Bildrate, mit der das Spiel
-ausgeführt wird, erhöhen oder vermindern kann. Man kann zwischen 30 bis 60 Bildern pro Sekunde
-wählen. Die Voreinstellung des Spiels ist 30 Bilder pro Sekunde.
+ausgeführt wird, erhöhen oder vermindern kann. Man kann eine Rate zwischen 10 und 60 Bildern pro
+Sekunde in 5er-Schritten wählen. Die Voreinstellung des Spiels ist 30 Bilder pro Sekunde.
 
 Diese Komponente wird als "experimentell" gekennzeichnet, da vorgenommene Einstellungen in
 bestimmten Situationen vom Spiel ignoriert werden:

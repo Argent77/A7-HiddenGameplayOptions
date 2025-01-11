@@ -118,6 +118,10 @@ Nota: Você deve reiniciar o jogo pra que as mudanças tenham efeito.^-~
 @2806 = ~35 frames/seg.~
 @2807 = ~45 frames/seg.~
 @2808 = ~55 frames/seg.~
+@2809 = ~10 frames/seg.~
+@2810 = ~15 frames/seg.~
+@2811 = ~20 frames/seg.~
+@2812 = ~25 frames/seg.~
 
 @2900 = ~Feedback da Ação~
 @2901 = ~Esta barra controla se ou quando as ações são exibidas como ícones pequenos ao redor da imagem móvel de um personagem.
