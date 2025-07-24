@@ -32,6 +32,7 @@
 @37 = ~Ajouter l'option de jeu "Afficher la carte dynamique des obstacles"~
 @38 = ~Ajouter les options de jeu pour le composant "Creer des sauvegardes periodiques" de Tweaks Anthology~
 @39 = ~Ajouter l'option de jeu "Forcer la mise en pause des dialogues"~
+@40 = ~Ajouter l'option de jeu pour le composant "Restaurer les astuces des ecrans de chargements" de Tweak Anthology~
 
 @100 = ~Mettre a jour les raccourcis clavier~
 @101 = ~seulement pour les sortileges divins~
@@ -56,6 +57,7 @@
 @512 = ~Ce composant n'est pas compatible avec Infinity UI++ de Pecca.~
 @513 = ~Ce composant n'est pas compatible avec Classic BG UI de K4f4r.~
 @514 = ~Ce composant n'est pas compatible avec l'interface Tipun_Gui.~
+@515 = ~Necessite l'installation du composant "Restaurer les astuces des ecrans de chargements" de Tweaks Anthology.~
 
 
 // WeiDU prompts

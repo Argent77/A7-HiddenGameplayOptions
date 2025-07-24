@@ -205,6 +205,11 @@ Note : Vous devez redémarrer le jeu pour que les modifications prennent effet.~
 
 ^NNote : Vous devez redémarrer le jeu pour que les modifications prennent effet.^-~
 
+@4000 = ~Afficher les astuces des écrans de chargements~
+@4001 = ~Activer cette option permet de restaurer les astuces originellement présentes lors des écrans de chargements de Baldur's Gate II, elles apparaîtront dans la fenêtre de dialogue du jeu. Cette option nécessite l'installation du composant "Restaurer les astuces des écrans de chargements" du mod Tweaks Anthology.
+
+^NNote : Vous devez redémarrer le jeu pour que les modifications prennent effet.^-~
+
 
 // *** Misc. strings ***
 
