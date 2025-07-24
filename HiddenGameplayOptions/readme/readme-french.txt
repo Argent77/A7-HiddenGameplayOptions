@@ -369,7 +369,15 @@ Elle rend le composant "Mode pause dans tous les dialogues" redondant.
 
 Elle se trouve dans la section Jeu > Feedback > Feedback visuel (ou dans la section Jeu dans PST:EE).
 
-34. Mettre à jour les raccourcis clavier des sorts divins et/ou profanes
+
+34. Ajouter l'option de jeu pour le composant "Restaurer les astuces des écrans de chargements" de Tweak Anthology (Nécessite le composant "Restaurer les astuces des écrans de chargements" de Tweaks Anthology.)
+
+Activer cette option permet de restaurer les astuces originellement présentes lors des écrans de chargements de Baldur's Gate II, elles apparaîtront dans la fenêtre de dialogue du jeu. Cette option nécessite l'installation du composant "Restaurer les astuces des écrans de chargements" du mod Tweaks Anthology.
+
+Elle se trouve dans la section Jeu.
+
+
+35. Mettre à jour les raccourcis clavier des sorts divins et/ou profanes
 
 Ce composant recrée la table des touches de raccourci clavier des sorts divins et/ou profanes. Il prend
 en compte tous les sorts et toutes les capacités de haut niveau (HLA) disponibles au moment de l'installation,
