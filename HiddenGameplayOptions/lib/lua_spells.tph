@@ -129,7 +129,7 @@ ACTION_PHP_EACH clab_list AS clab_res => _ BEGIN
               END
             END
           END ELSE BEGIN
-            PATCH_WARN ~WARNING: [%SOURCE_FILE%] Unexpected number of columns in row %row% (expected: %num_cols%, found: %col%)~
+            PATCH_PRINT ~INFO: [%SOURCE_FILE%] Unexpected number of columns in row %row% (expected: %num_cols%, found: %col%)~
             SET col = num_cols
           END
         END
