@@ -12,7 +12,7 @@ menu
 	}
 	label
 	{
-		bam 'RGDJSHND'
+		bam 'RGDJSHN1'
 		sequence lua "RgUISkin"
 		ScaleToClip
 		area 0 0 440 75
@@ -117,7 +117,7 @@ menu
   {
   	enabled "a7cheatListType == 1"
   	bam 'rgdsrch1'
-  	sequence lua "rgUISkin"
+  	sequence lua "RgUISkin"
   	ScaleToClip
   	area 24 356 392 40
   }
@@ -187,7 +187,7 @@ menu
   {
     enabled "a7cheatListType == 1"
     bam 'rgdbuts1'
-	sequence lua "rgUISkin"
+	sequence lua "RgUISkin"
 	ScaleToClip
 	area 192 404 226 46
 	text lua	"rgString('A7_CREATE_BUTTON')"
@@ -200,7 +200,7 @@ menu
   {
 	enabled "a7cheatListType == 1"
 	bam 'rgdbuts1'
-	sequence lua "rgUISkin"
+	sequence lua "RgUISkin"
 	ScaleToClip
 	area 22 404 166 46
 	text style "button"
@@ -242,7 +242,7 @@ menu
   {
   	enabled "a7cheatListType == 2"
   	bam 'rgdsrch1'
-  	sequence lua "rgUISkin"
+  	sequence lua "RgUISkin"
   	ScaleToClip
   	area 24 356 392 40
   }
@@ -353,7 +353,7 @@ menu
   {
   	enabled "a7cheatListType == 3"
   	bam 'rgdsrch1'
-  	sequence lua "rgUISkin"
+  	sequence lua "RgUISkin"
   	ScaleToClip
   	area 24 356 392 40
   }
@@ -422,8 +422,8 @@ menu
   button
   {
     enabled "a7cheatListType == 3"
-    bam 'RGDMBUT1'
-	sequence lua "rgUISkin"
+    bam 'RGDBUTM1'
+	sequence lua "RgUISkin"
 	ScaleToClip
 	area 15 396 410 60
 	text lua	"rgString('A7_OPEN_BUTTON')"
@@ -438,7 +438,7 @@ menu
   {
   	enabled "a7cheatListType == 4"
   	bam 'rgdsrch1'
-  	sequence lua "rgUISkin"
+  	sequence lua "RgUISkin"
   	ScaleToClip
   	area 24 356 392 40
   }
@@ -516,8 +516,8 @@ menu
   button
   {
     enabled "a7cheatListType == 4"
-	bam 'RGDMBUT1'
-	sequence lua "rgUISkin"
+	bam 'RGDBUTM1'
+	sequence lua "RgUISkin"
 	ScaleToClip
 	area 15 396 410 60
 	text lua	"rgString('A7_CREATE_BUTTON')"
@@ -560,8 +560,8 @@ menu
   {
     enabled "a7cheatListType == 5 and (a7commandMode == 0 or a7commandMode == 2)"
 	name "rgCheatCommandButton"
-	--bam 'RGDMBUT1'
-	--sequence lua "rgUISkin"
+	--bam 'RGDBUTM1'
+	--sequence lua "RgUISkin"
 	--ScaleToClip
 	area 15 396 410 60
 	--text lua	"rgString('A7_COMMAND_BUTTON')"
@@ -584,8 +584,8 @@ menu
   button
   {
     enabled "a7cheatListType == 5 and not (a7commandMode == 0 or a7commandMode == 2)"
-	bam 'RGDMBUT1'
-	sequence lua "rgUISkin"
+	bam 'RGDBUTM1'
+	sequence lua "RgUISkin"
 	ScaleToClip
 	area 15 396 410 60
 	text lua	"rgString('A7_PERFORM_BUTTON')"
@@ -601,7 +601,7 @@ menu
   {
   	enabled "a7cheatListType == 0"
   	bam 'rgdsrch1'
-  	sequence lua "rgUISkin"
+  	sequence lua "RgUISkin"
   	ScaleToClip
   	area 24 356 392 40
   }
@@ -670,8 +670,8 @@ menu
   button
   {
     enabled "a7cheatListType == 0"
-    bam 'RGDMBUT1'
-	sequence lua "rgUISkin"
+    bam 'RGDBUTM1'
+	sequence lua "RgUISkin"
 	ScaleToClip
 	area 15 396 410 60
 	text lua	"rgString('TRAVEL_BUTTON')"
@@ -722,7 +722,7 @@ menu
 	button 
 	{
 		bam 'rgdbuts1' 
-		sequence lua "rgUISkin"
+		sequence lua "RgUISkin"
 		ScaleToClip
 		area 22 460 166 46
 		text lua	"rgString('GODBOW_LABEL')"
@@ -733,7 +733,7 @@ menu
 	button 
 	{
 		bam 'rgdbuts1'
-		sequence lua "rgUISkin"
+		sequence lua "RgUISkin"
 		ScaleToClip
 		area 192 510 226 46
 		--pad 10 8 10 8
@@ -745,7 +745,7 @@ menu
 	button 
 	{
 		bam 'rgdbuts1'
-		sequence lua "rgUISkin"
+		sequence lua "RgUISkin"
 		ScaleToClip
 		area 22 510 166 46
 		text style "button"
@@ -766,7 +766,7 @@ menu
 	button 
 	{
 		bam 'rgdbuts1'
-		sequence lua "rgUISkin"
+		sequence lua "RgUISkin"
 		ScaleToClip
 		area 22 560 166 46
 		text style "button"
@@ -777,7 +777,7 @@ menu
 	button 
 	{
 		bam 'rgdbuts1'
-		sequence lua "rgUISkin"
+		sequence lua "RgUISkin"
 		ScaleToClip
 		area 192 560 226 46
 		--pad 10 8 10 8
@@ -798,7 +798,7 @@ menu
 	button 
 	{
 		bam 'rgdbuts1'
-		sequence lua "rgUISkin"
+		sequence lua "RgUISkin"
 		ScaleToClip
 		area 192 460 226 46
 		--pad 10 8 10 8
