@@ -9,7 +9,7 @@
 
 [![Beamdog Forums](https://img.shields.io/static/v1?label=Discussion&message=Beamdog%20Forums&color=444&labelColor=eee&style=for-the-badge)](https://forums.beamdog.com/discussion/64524 "Beamdog Forums")
 &nbsp;&nbsp;
-[![SHS Forums](https://img.shields.io/static/v1?label=Discussion&message=SHS%20Forums&color=951514&labelColor=eee&style=for-the-badge)](http://www.shsforums.net/forum/654-hidden-options-ee/ "Spellhold Studios Forums")
+[![SHS Forums](https://img.shields.io/static/v1?label=Discussion&message=SHS%20Forums&color=951514&labelColor=eee&style=for-the-badge)](https://www.shsforums.net/forum/654-hidden-options-ee/ "Spellhold Studios Forums")
 
 ## Overview
 The Enhanced Editions provide a great number of settings that are not directly accessible in the in-game options menu, but instead have to be manually enabled or disabled in the game's configuration file which might discourage less computer-savvy players from using them at all.
@@ -282,4 +282,4 @@ It comes in three flavors:
 
 ## Copyright Notice
 
-The mod "Reveal Hidden Gameplay Options" is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
+The mod "Reveal Hidden Gameplay Options" is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).

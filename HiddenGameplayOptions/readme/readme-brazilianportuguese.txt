@@ -1,13 +1,13 @@
 Revelar Opções Ocultas da Jogabilidade
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Versão:     4.7
+Versão:     5.0
 Author:     Argent77
 
 Download:   https://github.com/Argent77/A7-HiddenGameplayOptions/releases/latest
-            http://www.shsforums.net/files/file/1223-reveal-hidden-gameplay-options/
+            https://www.shsforums.net/files/file/1223-reveal-hidden-gameplay-options/
 Discussion: https://forums.beamdog.com/discussion/64524
-            http://www.shsforums.net/forum/654-hidden-options-ee/
+            https://www.shsforums.net/forum/654-hidden-options-ee/
 
 
 Visão Geral
@@ -385,7 +385,7 @@ Nota do Copyright
 ~~~~~~~~~~~~~~~~~
 
 The mod "Reveal Hidden Gameplay Options" is licensed under the "Creative Commons Attribution-
-ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa/4.0/).
+ShareAlike 4.0 International License" (https://creativecommons.org/licenses/by-sa/4.0/).
 
 
 Histórico
@@ -396,6 +396,7 @@ Histórico
 - Added Spanish translation (thanks alaisFcZ and IOVIVO)
 - Added new group "GUI Improvements" with various minor visual and usability improvements
 - Added option for Tweaks Anthology's "Restored Loading Hints"
+- Improved compatibility with Infinity UI++
 - Improved Frame Rate slider: increment in steps of 5 between 10 and 60 fps
 - Changed several harmess warning messages back to regular messages at mod installation
 
