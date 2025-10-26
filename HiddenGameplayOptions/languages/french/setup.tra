@@ -58,7 +58,7 @@
 @513 = ~Ce composant n'est pas compatible avec Classic BG UI de K4f4r.~
 @514 = ~Ce composant n'est pas compatible avec l'interface Tipun_Gui.~
 @515 = ~Necessite l'installation du composant "Restaurer les astuces des ecrans de chargements" de Tweaks Anthology.~
-
+@517 = ~DLC Merger est necessaire avant de pouvoir installer des mods sur ce jeu. Consultez le fichier Lisez-moi pour plus d'informations et pour obtenir le lien de telechargement de DLC Merger.~
 
 // WeiDU prompts
 @-1000= "Le mod %TP2_FILE_NAME% contient"

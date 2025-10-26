@@ -60,17 +60,284 @@ It is recommended to install this mod after Tweaks Anthology and any GUI mods. T
 Components
 ~~~~~~~~~~
 
+Because of the great number of available customizations options the mod components have been
+split into several component groups.
+
+A) *** Group: Game Options ***
+
 1. Install all Hidden Gameplay Options at once
 
-This is a convenience option that allows you to install all available options at once, except for
-the keybinding options. See more detailed information about individual options below.
-
+This is a convenience option that allows you to install all available game options at once.
+The improved Cheat Menu and other GUI improvements are not included. See more detailed information
+about individual options below.
 
 The following components are available if you skip the component "Install Hidden Gameplay Options
 at once":
 
 
-2. Improved Cheat Menu
+2. Update resource tables for "Improved Cheat Menu"
+
+This component allows you to update the resource tables used by the "Improved Cheat Menu" without
+having to reinstall the whole mod. It doesn't register to the WeiDU.log, so it can be called at
+any time as often as desired.
+
+
+3. Add in-game option "Enable Debug Mode"
+
+Allows you to enable cheat keys and the debug console in the game.
+
+Option can be found in Gameplay section.
+
+
+4. Add in-game option "Enable UI Edit Mode"
+
+Enabling this setting allows you to use UI edit functionality in the game.
+
+Option can be found in Gameplay section.
+
+
+5. Add in-game option "Show Strrefs"
+
+Setting this option places string reference numbers in front of game strings.
+
+Option can be found in Gameplay section.
+
+
+6. Add in-game option "Hotkeys On Tooltips"
+
+When this option is enabled tooltips will display hotkeys when available.
+
+Option can be found in Gameplay section.
+
+
+7. Add in-game option "Show trigger icons on tab"
+
+Setting this option reveals more information about interactive regions when pressing the TAB key.
+
+Option can be found in Gameplay section.
+
+
+8. Add in-game option "Allow Spacebar in Dialogs" (only available for PST:EE)
+
+Setting this option allows you to use the spacebar to continue in dialogs.
+
+Option can be found in Gameplay section.
+
+
+9. Add in-game option "Limits druidic spells for Cleric/Ranger" (not available for PST:EE)
+
+Setting this option limits druidic spell levels to level 3 for Cleric/Rangers (as per D&D rules).
+
+Option can be found in Gameplay section.
+
+
+10. Add in-game option "3E Sneak Attack"
+
+Setting this option activates Sneak Attack and Crippling Strike, which are special abilities
+similar to those from 3rd Edition Dungeons & Dragons rules.
+
+Option can be found in Gameplay section.
+
+
+11. Add in-game option "Critical Hit Screen Shake"
+
+Setting this option triggers a screen shake whenever a party member rolls a critical hit in combat.
+
+Option can be found in Gameplay > Feedback > Visual Feedback (or Gameplay section in PST:EE).
+
+
+12. Add in-game option "Show extra combat info"
+
+Setting this option displays all factors that influence an attack roll.
+
+Option can be found in Gameplay > Feedback > Feedback Messages.
+
+
+13. Add in-game option "Show Game Date and Time on Pause"
+
+Setting this option shows game date and time when activating pause.
+
+Option can be found in Gameplay > Feedback > Feedback Messages.
+
+
+14. Add in-game option "Disable Area Map Zoom" (only available for PST:EE)
+
+Setting this option disables animation when zooming in or out of the area map screen.
+
+Option can be found in Graphics > Display Options.
+
+
+15. Add in-game option "Reverse Mouse Wheel Zoom"
+
+Setting this option reverses zoom direction when using the mouse wheel.
+
+Option can be found in Graphics > Display Options.
+
+
+16. Add in-game option "Pause Game on Map Screen"
+
+Setting this option causes the game to pause whenever the map screen is active.
+
+Option can be found in Graphics > Display Options.
+
+
+17. Add in-game option "Enable Fog" (not available for PST:EE)
+
+Setting this option enables fog effects on maps.
+
+Option can be found in Graphics > Display Options.
+
+
+18. Add in-game option "Disable Movies"
+
+Enabling this option disables movie playback.
+
+Option can be found in Graphics > Display Options.
+
+
+19. Add in-game option "No Cosmetic Attacks" (only available for PST:EE)
+
+Enabling this option shows attack animations only when characters are making real attacks.
+This option is already available in unmodded BG:EE, BG2:EE and IWD:EE.
+
+Option can be found in Gameplay section.
+
+
+20. Add in-game option "XP Bonus in Nightmare Mode" (not available for PST:EE)
+
+Enabling this option allows your characters to get bonus XP in Legacy of Bhaal Mode (BGEE/BG2EE)
+or Heart of Fury Mode (IWDEE). This setting will not affect the extra XP granted by the regular
+difficulty modes.
+
+Option can be found in Gameplay section.
+
+
+21. Add in-game option "Trigger Bored Sounds" (not compatible with Lefreut's Enhanced UI (LeUI))
+
+Enabling this option will trigger bored sounds when you haven't assigned actions to your characters
+for an extended period of time.
+
+Option can be found in Sounds > Character Sounds or Gameplay > Feedback (PST:EE only).
+
+
+22. Add in-game option "Frame Rate" (experimental) (not available for PST:EE, not compatible with
+    Lefreut's Enhanced UI (LeUI) and K4f4r's Classic BG UI)
+
+This component installs a slider control that can be used to set the desired frame rate of the game.
+You can choose a rate between 10 and 60 frames per second, in steps of 5. The game's default is 30 fps.
+
+The component is marked as "experimental", as there are situations where setting this option has
+no effect:
+1. When Options > Gameplay > Feedback > "More Confirmation Prompts" is active.
+2. When quitting the game directly to the desktop from a running game.
+
+Option can be found in Graphics section if Dragonspear UI++ is installed, otherwise it can be found
+in Gameplay section.
+
+
+23. Add in-game option "Action Feedback" (not compatible with Lefreut's Enhanced UI (LeUI),
+    K4f4r's Classic BG UI and Tipun's User Interface)
+
+This component installs a slider control that can be used to show small symbols around character
+sprites that indicate their current action (e.g. fighting, spellcasting or thieving actions).
+You can choose between several feedback levels. Higher levels are only effective when option
+"Debug Mode" has been enabled as well.
+
+Option can be found in Gameplay > Feedback.
+
+
+24. Add in-game option "Display Level Up Icon" (only available for PST:EE, requires "Level Up"
+    Icon Tweaks)
+
+This option allows you to show or hide the "Level Up" icon, that can be found in the portrait
+window or health bar of party members that are ready to level up. It requires the mod "'Level Up'
+Icon Tweaks" to be installed, which adds the functionality to toggle visibility of the icon.
+
+Option can be found in Gameplay > Feedback.
+
+
+25. Add in-game option "Show Area of Effect Range" (not available for PST:EE)
+
+Setting this option displays the range of an Area of Effect spell before it is fired.
+
+Option can be found in Gameplay > Feedback > Visual Feedback.
+
+Note: This option has no effect in games before patch version 2.5.16.6.
+
+
+26. Add in-game option "Enhanced Path Search"
+
+Improves pathfinding by continuously recalculating the search path of characters.
+
+Option can be found in Gameplay section.
+
+
+27. Add in-game option "Expire Trap Highlights" (not available for PST:EE)
+
+Controls whether highlighting of detected traps or hidden doors should disappear after while.
+
+Option can be found in Gameplay > Feedback > Visual Feedback.
+
+
+28. Add in-game option "Show Learnable Spells"
+
+Controls whether a green tint is shown for spell scrolls that can be written to a mage's spellbook.
+
+Option can be found in Graphics > Display Options.
+
+
+29. Add in-game option "Render Search Map"
+
+Controls whether holding down SHIFT will show an overlay of the static search map for the current
+area.
+
+Option can be found in Graphics > Display Options.
+
+
+30. Add in-game option "Render Dynamic Search Map"
+
+Controls whether holding down CTRL will show an overlay of dynamic search map regions, such as
+blocked doorways or the personal space of creatures.
+
+Option can be found in Graphics > Display Options.
+
+
+31. Add in-game options for Tweak Anthology's "Create Interval Saves" (requires Tweaks Anthology
+    component "Create interval saves")
+
+This component installs two options to the Gameplay section:
+- Enable Interval Saves:
+  Controls whether the game is saved at regular intervals.
+- Create Interval Saves during Combat:
+  Controls whether interval saves are created even during combat.
+
+Both options are only effective if Tweaks Anthology's mod component "Create interval saves" is
+installed.
+
+Options can be found in Gameplay section.
+
+
+32. Add in-game option "Force Dialog Pause"
+
+Enabling this option forces the game to pause while conversations are active.
+This option makes Tweaks Anthology's mod component "Force All Dialogue to Pause" redundant.
+
+Option can be found in Gameplay > Feedback > Visual Feedback (or Gameplay section in PST:EE).
+
+
+33. Add in-game option for Tweak Anthology's "Restored Loading Hints" (requires Tweaks Anthology
+    component "Restored Loading Hints")
+
+Enabling this option shows loading hints from original Baldur's Gate II in the log window of the
+game. This option requires Tweaks Anthology's mod component "Restored Loading Hints" to be
+installed.
+
+Option can be found in Gameplay section.
+
+
+B) *** Group: Cheat Menu ***
+
+1. Improved Cheat Menu
 
 This component expands the cheat menu, which can be opened if the debug console is enabled, by
 a number of options:
@@ -91,271 +358,57 @@ The following UI mods are supported:
 - Tipun's User Interface
 - Classic BG UI (by K4f4r)
 
-This component is also included in the convenience option "Install all Hidden Gameplay Options
-at once".
 
+2. Update resource tables for "Improved Cheat Menu"
 
-3. Update resource tables for "Improved Cheat Menu"
+This option can be used to update the resource tables of the improved cheat menu which can be
+helpful if other content mods are installed afterwards.
+It isn't registered in the WeiDU.log and can therefore be executed as often as desired.
 
-This component allows you to update the resource tables used by the "Improved Cheat Menu" without
-having to reinstall the whole mod. It doesn't register to the WeiDU.log, so it can be called at
-any time as often as desired.
 
+C) *** Group: GUI Improvements ***
 
-4. Add in-game option "Enable Debug Mode"
+This is a loose collection of minor improvements that focuses on various visual and usability
+aspects of the GUI. They are currently only available for the default GUIs of the supported games.
 
-Allows you to enable cheat keys and the debug console in the game.
+1. Improved "Death Screen" options
 
-Option can be found in Gameplay section.
+The death screen is shown after the protagonist or the whole party is killed and provides options
+to quit or load a game.
+This component expands the dialog by the option to automatically load the last save if available.
 
 
-5. Add in-game option "Enable UI Edit Mode"
+2. Improved "Quit Game" options
 
-Enabling this setting allows you to use UI edit functionality in the game.
+Pressing Alt-F4 brings up a dialog with the options to quit the game or cancel the request.
+This component expands the dialog by the option to go to the start screen of the game instead.
 
-Option can be found in Gameplay section.
 
+3. Game Menu: Fire animation over SoD logo (SoD and EET only)
 
-6. Add in-game option "Show Strrefs"
+The start screen of the game shows a nifty fire animation over the game logo if the "Siege of
+Dragonspear" campaign is active.
+This component adds the same fire animation to the options menu that can be brought up by pressing
+the ESC key or Options button in a running game.
 
-Setting this option places string reference numbers in front of game strings.
 
-Option can be found in Gameplay section.
+4. Game Menu: Improved "Quit Game" options (IWD:EE only)
 
+Pressing "Quit Game" from the options menu in a running game provides the options "Cancel",
+"Quit", and "Save" where the "Quit" option just returns to the start screen of the game.
+This component changes the "Quit" option to quit the game completely and adds another option
+"Main Menu" that returns to the start screen of the game instead.
 
-7. Add in-game option "Hotkeys On Tooltips"
 
-When this option is enabled tooltips will display hotkeys when available.
+5. Game Menu: Improved "Load Game" options
 
-Option can be found in Gameplay section.
+Pressing "Load Game" from the options menu in a running game provides the options "Cancel" and
+"Load". This component adds a third option to continue from the last save instead, if available.
 
 
-8. Add in-game option "Show trigger icons on tab"
+D) *** Group: Key Bindings ***
 
-Setting this option reveals more information about interactive regions when pressing the TAB key.
-
-Option can be found in Gameplay section.
-
-
-9. Add in-game option "Allow Spacebar in Dialogs" (only available for PST:EE)
-
-Setting this option allows you to use the spacebar to continue in dialogs.
-
-Option can be found in Gameplay section.
-
-
-10. Add in-game option "Limits druidic spells for Cleric/Ranger" (not available for PST:EE)
-
-Setting this option limits druidic spell levels to level 3 for Cleric/Rangers (as per D&D rules).
-
-Option can be found in Gameplay section.
-
-
-11. Add in-game option "3E Sneak Attack"
-
-Setting this option activates Sneak Attack and Crippling Strike, which are special abilities
-similar to those from 3rd Edition Dungeons & Dragons rules.
-
-Option can be found in Gameplay section.
-
-
-12. Add in-game option "Critical Hit Screen Shake"
-
-Setting this option triggers a screen shake whenever a party member rolls a critical hit in combat.
-
-Option can be found in Gameplay > Feedback > Visual Feedback (or Gameplay section in PST:EE).
-
-
-13. Add in-game option "Show extra combat info"
-
-Setting this option displays all factors that influence an attack roll.
-
-Option can be found in Gameplay > Feedback > Feedback Messages.
-
-
-14. Add in-game option "Show Game Date and Time on Pause"
-
-Setting this option shows game date and time when activating pause.
-
-Option can be found in Gameplay > Feedback > Feedback Messages.
-
-
-15. Add in-game option "Disable Area Map Zoom" (only available for PST:EE)
-
-Setting this option disables animation when zooming in or out of the area map screen.
-
-Option can be found in Graphics > Display Options.
-
-
-16. Add in-game option "Reverse Mouse Wheel Zoom"
-
-Setting this option reverses zoom direction when using the mouse wheel.
-
-Option can be found in Graphics > Display Options.
-
-
-17. Add in-game option "Pause Game on Map Screen"
-
-Setting this option causes the game to pause whenever the map screen is active.
-
-Option can be found in Graphics > Display Options.
-
-
-18. Add in-game option "Enable Fog" (not available for PST:EE)
-
-Setting this option enables fog effects on maps.
-
-Option can be found in Graphics > Display Options.
-
-
-19. Add in-game option "Disable Movies"
-
-Enabling this option disables movie playback.
-
-Option can be found in Graphics > Display Options.
-
-
-20. Add in-game option "No Cosmetic Attacks" (only available for PST:EE)
-
-Enabling this option shows attack animations only when characters are making real attacks.
-This option is already available in unmodded BG:EE, BG2:EE and IWD:EE.
-
-Option can be found in Gameplay section.
-
-
-21. Add in-game option "XP Bonus in Nightmare Mode" (not available for PST:EE)
-
-Enabling this option allows your characters to get bonus XP in Legacy of Bhaal Mode (BGEE/BG2EE)
-or Heart of Fury Mode (IWDEE). This setting will not affect the extra XP granted by the regular
-difficulty modes.
-
-Option can be found in Gameplay section.
-
-
-22. Add in-game option "Trigger Bored Sounds" (not compatible with Lefreut's Enhanced UI (LeUI))
-
-Enabling this option will trigger bored sounds when you haven't assigned actions to your characters
-for an extended period of time.
-
-Option can be found in Sounds > Character Sounds or Gameplay > Feedback (PST:EE only).
-
-
-23. Add in-game option "Frame Rate" (experimental) (not available for PST:EE, not compatible with
-    Lefreut's Enhanced UI (LeUI) and K4f4r's Classic BG UI)
-
-This component installs a slider control that can be used to set the desired frame rate of the game.
-You can choose a rate between 10 and 60 frames per second, in steps of 5. The game's default is 30 fps.
-
-The component is marked as "experimental", as there are situations where setting this option has
-no effect:
-1. When Options > Gameplay > Feedback > "More Confirmation Prompts" is active.
-2. When quitting the game directly to the desktop from a running game.
-
-Option can be found in Graphics section if Dragonspear UI++ is installed, otherwise it can be found
-in Gameplay section.
-
-
-24. Add in-game option "Action Feedback" (not compatible with Lefreut's Enhanced UI (LeUI),
-    K4f4r's Classic BG UI and Tipun's User Interface)
-
-This component installs a slider control that can be used to show small symbols around character
-sprites that indicate their current action (e.g. fighting, spellcasting or thieving actions).
-You can choose between several feedback levels. Higher levels are only effective when option
-"Debug Mode" has been enabled as well.
-
-Option can be found in Gameplay > Feedback.
-
-
-25. Add in-game option "Display Level Up Icon" (only available for PST:EE, requires "Level Up"
-    Icon Tweaks)
-
-This option allows you to show or hide the "Level Up" icon, that can be found in the portrait
-window or health bar of party members that are ready to level up. It requires the mod "'Level Up'
-Icon Tweaks" to be installed, which adds the functionality to toggle visibility of the icon.
-
-Option can be found in Gameplay > Feedback.
-
-
-26. Add in-game option "Show Area of Effect Range" (not available for PST:EE)
-
-Setting this option displays the range of an Area of Effect spell before it is fired.
-
-Option can be found in Gameplay > Feedback > Visual Feedback.
-
-Note: This option has no effect in games before patch version 2.5.16.6.
-
-
-27. Add in-game option "Enhanced Path Search"
-
-Improves pathfinding by continuously recalculating the search path of characters.
-
-Option can be found in Gameplay section.
-
-
-28. Add in-game option "Expire Trap Highlights" (not available for PST:EE)
-
-Controls whether highlighting of detected traps or hidden doors should disappear after while.
-
-Option can be found in Gameplay > Feedback > Visual Feedback.
-
-
-29. Add in-game option "Show Learnable Spells"
-
-Controls whether a green tint is shown for spell scrolls that can be written to a mage's spellbook.
-
-Option can be found in Graphics > Display Options.
-
-
-30. Add in-game option "Render Search Map"
-
-Controls whether holding down SHIFT will show an overlay of the static search map for the current
-area.
-
-Option can be found in Graphics > Display Options.
-
-
-31. Add in-game option "Render Dynamic Search Map"
-
-Controls whether holding down CTRL will show an overlay of dynamic search map regions, such as
-blocked doorways or the personal space of creatures.
-
-Option can be found in Graphics > Display Options.
-
-
-32. Add in-game options for Tweak Anthology's "Create Interval Saves" (requires Tweaks Anthology
-    component "Create interval saves")
-
-This component installs two options to the Gameplay section:
-- Enable Interval Saves:
-  Controls whether the game is saved at regular intervals.
-- Create Interval Saves during Combat:
-  Controls whether interval saves are created even during combat.
-
-Both options are only effective if Tweaks Anthology's mod component "Create interval saves" is
-installed.
-
-Options can be found in Gameplay section.
-
-
-33. Add in-game option "Force Dialog Pause"
-
-Enabling this option forces the game to pause while conversations are active.
-This option makes Tweaks Anthology's mod component "Force All Dialogue to Pause" redundant.
-
-Option can be found in Gameplay > Feedback > Visual Feedback (or Gameplay section in PST:EE).
-
-
-34. Add in-game option for Tweak Anthology's "Restored Loading Hints" (requires Tweaks Anthology
-    component "Restored Loading Hints")
-
-Enabling this option shows loading hints from original Baldur's Gate II in the log window of the
-game. This option requires Tweaks Anthology's mod component "Restored Loading Hints" to be
-installed.
-
-Option can be found in Gameplay section.
-
-
-35. Update key bindings for priest and/or mage spells
+1. Update key bindings for priest and/or mage spells
 
 This component recreates the key bindings for priest spells and/or mage spells. It considers all
 regular spells and High Level Abilities (HLAs) available at the time of installation, which
@@ -365,9 +418,6 @@ It comes in three flavors:
 - Update key bindings for priest spells only
 - Update key bindings for mage spells only
 - Update key bindings for priest and mage spells
-
-This component is not included in the convenience option "Install all Hidden Gameplay Options
-at once".
 
 
 Credits
@@ -403,6 +453,14 @@ ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa
 
 History
 ~~~~~~~
+
+5.0
+- Restructured mod components and added component groups
+- Added Spanish translation (thanks alaisFcZ and IOVIVO)
+- Added new group "GUI Improvements" with various minor visual and usability improvements
+- Added option for Tweaks Anthology's "Restored Loading Hints"
+- Improved Frame Rate slider: increment in steps of 5 between 10 and 60 fps
+- Changed several harmess warning messages back to regular messages at mod installation
 
 4.7
 - Fixed potential placement issues of frame rate slider if Dragonspear UI++ is installed

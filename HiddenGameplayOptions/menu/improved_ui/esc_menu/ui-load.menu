@@ -1,0 +1,9 @@
+			if canContinue then
+				popup3Button(%confirm_strref%,
+				'CONTINUE_BUTTON', function() startEngine:OnContinueGame() end,
+				'LOAD_BUTTON', function() optionsScreen:LoadGame() end,
+				'CANCEL_BUTTON', nil
+				)
+			else
+				popup2Button(%confirm_strref%, 'LOAD_BUTTON', function() optionsScreen:LoadGame() end)
+			end

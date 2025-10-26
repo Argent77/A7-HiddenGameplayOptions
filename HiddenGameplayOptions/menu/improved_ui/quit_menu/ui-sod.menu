@@ -1,0 +1,73 @@
+menu
+{
+	name 'QuitMenu'
+	modal
+	align center center
+
+	label -- Background
+	{
+		area 0 0 657 234
+		mosaic GUIERR6
+	}
+	label --Title
+	{
+		area 29 21 580 126
+		text 20186
+		text style	"label"
+		text align center center
+	}
+	button
+	{
+		area 440 170 200 40
+		bam GUIBUTNT
+		text style	"button"
+		text  "QUIT_GAME_BUTTON"
+		on 			return
+		enabled "not e:IsAndroid()"
+		action 
+		"
+			restoreOverlayFromQuit()
+			Infinity_ShutdownGame()
+		"
+	}
+	button
+	{
+		area 440 170 200 40
+		bam GUIBUTNT
+		text style	"button"
+		text  "QUIT_GAME_BUTTON"
+		on 			escape
+		enabled "e:IsAndroid()"
+		action 
+		"
+			restoreOverlayFromQuit()
+			Infinity_ShutdownGame()
+		"
+	}
+	button
+	{
+		area 228 170 200 40
+		bam GUIBUTNT
+		text style	"button"
+		text "MAIN_MENU_BUTTON"
+		clickable lua "worldScreen == e:GetActiveEngine()"
+		action 
+		"
+			restoreOverlayFromQuit()
+			optionsScreen:QuitGame()
+		"
+	}
+	button
+	{
+		area 18 170 200 40
+		bam GUIBUTNT
+		text style	"button"
+		text  "CANCEL_BUTTON"
+		on 			escape
+		action 
+		"
+			restoreOverlayFromQuit()
+			Infinity_PopMenu('QuitMenu')
+		"
+	}
+}

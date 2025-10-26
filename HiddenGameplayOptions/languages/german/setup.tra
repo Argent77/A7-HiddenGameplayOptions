@@ -29,8 +29,9 @@
 @35 = ~Spieloption "Erlernbare Zauber anzeigen" hinzufuegen~
 @36 = ~Spieloption "Suchkarte anzeigen" hinzufuegen~
 @37 = ~Spieloption "Dynamische Suchkarte anzeigen" hinzufuegen~
-@38 = ~Spieloptionen fuer Tweak Anthologys "Regelmaessige Spielstaende erzeugen" hinzufuegen~
+@38 = ~Spieloptionen fuer Tweaks Anthologys "Regelmaessige Spielstaende erzeugen" hinzufuegen~
 @39 = ~Spieloption "Spielpause in Dialogen erzwingen" hinzufuegen~
+@40 = ~Spieloption fuer Tweaks Anthologys "Wiederhergestellte Ladehinweise" hinzufuegen~
 
 @100 = ~Tastenbelegungen aktualisieren~
 @101 = ~nur fuer Priesterzauber~
@@ -39,6 +40,12 @@
 
 @200 = ~Verbessertes Cheatmenu~
 @201 = ~Ressourcenlisten des "Verbesserten Cheatmenus" aktualisieren~
+
+@300 = ~Verbesserte Optionen fuer den Todesbildschirm~
+@301 = ~Verbesserte Optionen fuer "Spiel verlassen"~
+@302 = ~Spielmenu: Feueranimation ueber dem SoD-Logo~
+@303 = ~Spielmenu: Verbesserte Optionen fuer "Spiel verlassen"~
+@304 = ~Spielmenu: Verbesserte Optionen fuer "Spiel laden"~
 
 @500 = ~Enhanced Edition muss v2.0 oder hoeher sein.~
 @501 = ~LUA-Datei kann nicht bearbeitet werden~
@@ -55,6 +62,15 @@
 @512 = ~Diese Komponente ist nicht mit Peccas Infinity UI kompatibel.~
 @513 = ~Diese Komponente ist nicht mit K4f4rs Classic BG UI kompatibel.~
 @514 = ~Diese Komponente ist nicht mit Tipuns User Interface kompatibel.~
+@515 = ~Benoetigt Tweaks Anthologys Modkomponente "Wiederhergestellte Ladehinweise".~
+@516 = ~Diese Komponente ist nicht mit alternativen GUIs kompatibel.~
+@517 = ~DLC Merger wird benoetigt, bevor in diesem Spiel Mods installiert werden koennen. Links und weitere Informationen werden in der Readme aufgefuehrt.~
+
+// Group names
+@900 = ~Spieloptionen~
+@901 = ~Cheatmenu~
+@902 = ~GUI-Verbesserungen~
+@903 = ~Tastenbelegungen~
 
 // WeiDU prompts
 @-1000= "Die %TP2_FILE_NAME%-Mod besitzt"

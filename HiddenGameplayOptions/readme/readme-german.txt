@@ -63,17 +63,306 @@ zum Spiel hinzufügen.
 Komponenten
 ~~~~~~~~~~~
 
+Wegen der großen Anzahl an Anpassungsoptionen wurden die einzelnen Modkomponenten in verschiedene
+Gruppen aufgeteilt.
+
+A) *** Gruppe: Spieloptionen ***
+
 1. Alle versteckten Spieloptionen auf einmal installieren
 
 Diese Komponente bietet die Möglichkeit, alle verfügbaren Spieloptionen auf einmal zu installieren.
-Weitere Informationen zu den einzelnen Optionen siehe unten.
-
+Das verbesserte Cheatmenü und andere GUI-Verbesserungen sind darin nicht enthalten. Weitere Details
+zu den einzelnen Optionen siehe unten.
 
 Die folgenden Komponenten sind nur verfügbar, wenn "Alle versteckten Spieloptionen auf einmal
 installieren" nicht installiert wurde:
 
 
-2. Verbessertes Cheatmenü
+2. Ressourcenlisten des "Verbesserten Cheatmenus" aktualisieren
+
+Diese Komponente erlaubt es, die Listen der angezeigten Ressourcen (Gegenstände, Zauber, etc.)
+zu aktualisieren, die vom "Verbesserten Cheatmenü" genutzt werden, ohne die Hauptkomponente erneut
+installieren zu müssen. Sie wird nicht in der WeiDU.log registriert und kann daher jederzeit so oft
+wie gewünscht aufgerufen werden.
+
+
+3. Spieloption "Debugmodus" hinzufügen
+
+Diese Option kann genutzt werden, um Cheat-Tastenkürzel und die Debugkonsole zu nutzen.
+
+Die Option kann in den Spieleinstellungen gefunden werden.
+
+
+4. Spieloption "UI Bearbeitungsmodus" hinzufügen
+
+Diese Option kann genutzt werden, um die Bearbeitungsfunktionen der Benutzeroberfläche im Spiel
+nutzen zu können.
+
+Die Option kann in den Spieleinstellungen gefunden werden.
+
+
+5. Spieloption "Strrefs anzeigen" hinzufügen
+
+Diese Option kann genutzt werden, um die Stringreferenz-Nummern vor den Texten im Spiel anzuzeigen.
+
+Die Option kann in den Spieleinstellungen gefunden werden.
+
+
+6. Spieloption "Tastenkürzel in Kurzinfos" hinzufügen
+
+Diese Option kann genutzt werden, um verfügbare Tastenkürzel in Kurzinfos anzuzeigen.
+
+Die Option kann in den Spieleinstellungen gefunden werden.
+
+
+7. Spieloption "Bereichssymbole mit TAB anzeigen" hinzufügen
+
+Diese Option kann genutzt werden, um bei gedrückter TAB-Taste zusätzlich Symbole für interaktive
+Regionen zu sehen.
+
+Die Option kann in den Spieleinstellungen gefunden werden.
+
+
+8. Spieloption "Leertaste in Dialogen nutzen" hinzufügen (nur in PST:EE verfügbar)
+
+Diese Option kann genutzt werden, um Gespräche mit der Leertaste fortsetzen zu können.
+
+Die Option kann in den Spieleinstellungen gefunden werden.
+
+
+9. Spieloption "Druidenzauber für Kleriker/Waldläufer einschränken" hinzufügen
+   (nicht in PST:EE verfügbar)
+
+Diese Option kann genutzt werden, um die Verfügbarkeit von Druidenzaubern für mehrklassige
+Kleriker/Waldläufer auf die ersten drei Stufen zu beschränken.
+
+Die Option kann in den Spieleinstellungen gefunden werden.
+
+
+10. Spieloption "3E Heimlicher Angriff" hinzufügen
+
+Diese Option kann genutzt werden, um die Fähigkeiten Heimlicher Angriff und Verkrüppelnder Schlag
+ein- bzw. auszuschalten. Die Regeln für diese Fähigkeiten sind den Dungeons & Dragons®-Regeln 3
+von Wizards of the Coast ähnlich.
+
+Die Option kann in den Spieleinstellungen gefunden werden.
+
+
+11. Spieloption "Bildschirmwackeln bei kritischen Treffern" hinzufügen
+
+Wenn diese Option aktiviert ist, wackelt der Bildschirm bei einem kritischen Treffer.
+
+Die Option kann in Spieleinstellungen > Rückmeldungen > Visuelle Rückmeldungen gefunden werden.
+In PST:EE kann diese Option in den Spieleinstellungen gefunden werden.
+
+
+12. Spieloption "Zusätzliche Kampfinformationen anzeigen" hinzufügen
+
+Diese Option kann genutzt werden, um alle Faktoren zu sehen, die einen Trefferwurf beeinflussen.
+
+Die Option kann in Spieleinstellungen > Rückmeldungen > Textrückmeldungen gefunden werden.
+
+
+13. Spieloption "Spielzeit und -datum im Pausenmodus anzeigen" hinzufügen
+
+Diese Option kann genutzt werden, um Spielzeit und -datum anzuzeigen, wenn der Pausenmodus
+aktiviert wird.
+
+Die Option kann in Spieleinstellungen > Rückmeldungen > Textrückmeldungen gefunden werden.
+
+
+14. Spieloption "Ein- und Ausblendanimationen der Gebietskarte abschalten" hinzufügen
+    (nur in PST:EE verfügbar)
+
+Diese Option kann genutzt werden, um die Ein- und Ausblendanimationen abzuschalten, die beim
+Aufrufen und Beenden der Übersichtskarte des Gebiets ausgeführt werden.
+
+Die Option kann in Grafik > Darstellungsoptionen gefunden werden.
+
+
+15. Spieloption "Zoomrichtung des Mausrads umkehren" hinzufügen
+
+Diese Option kann genutzt werden, um die Richtung des Mausrads beim hinein- oder hinauszoomen
+umzukehren.
+
+Die Option kann in Grafik > Darstellungsoptionen gefunden werden.
+
+
+16. Spieloption "Spiel pausieren wenn Gebietskarte aktiv ist" hinzufügen
+
+Wenn diese Option aktiviert ist, wird das Spiel automatisch pausiert, wenn die Übersichtskarte des
+Gebiets aufgerufen wird.
+
+Die Option kann in Grafik > Darstellungsoptionen gefunden werden.
+
+
+17. Spieloption "Nebel aktivieren" hinzufügen (nicht in PST:EE verfügbar)
+
+Diese Option kann genutzt werden, um Nebeleffekte in den Gebieten anzuzeigen.
+
+Die Option kann in Grafik > Darstellungsoptionen gefunden werden.
+
+
+18. Spieloption "Videosequenzen deaktivieren" hinzufügen
+
+Diese Option kann genutzt werden, um Videosequenzen komplett zu deaktivieren.
+
+Die Option kann in Grafik > Darstellungsoptionen gefunden werden.
+
+
+19. Spieloption "Keine kosmetischen Angriffe" hinzufügen (nur in PST:EE verfügbar)
+
+Diese Option kann genutzt werden, um Angriffsanimationen nur dann zu zeigen, wenn Charaktere
+tatsächlich Angriffe ausführen. In BG:EE, BG2:EE und IWD:EE ist sie bereits im unmodifizierten
+Spiel enthalten.
+
+Die Option kann in den Spieleinstellungen gefunden werden.
+
+
+20. Spieloption "EP-Bonus im Albtraum-Modus" hinzufügen (nicht in PST:EE verfügbar)
+
+Wird diese Option aktiviert, so erhalten Eure Charaktere einen EP-Bonus im Vermächtnis des Bhaal
+Modus (BGEE/BG2EE) oder Herz des Zorns Modus (IWDEE). Diese Einstellung beeinflusst jedoch nicht
+die zusätzlichen EP, die in den normalen Schwierigkeitsgraden gewährt werden.
+
+Die Option kann in den Spieleinstellungen gefunden werden.
+
+
+21. Spieloption "Gelangweilte Ausrufe aktivieren" hinzufügen (nicht mit Lefreuts Enhanced UI
+    (LeUI) kompatibel)
+
+Wird diese Option aktiviert, dann lösen Gruppenmitglieder gelangweilte Ausrufe aus, wenn sie über
+einen längeren Zeitraum keine Aktionen durchgeführt haben.
+
+Die Option kann in Sound > Charaktersounds oder Spielmechanik > Rückmeldungen (nur PST:EE) gefunden
+werden.
+
+
+22. Spieloption "Bildrate" (experimentell) hinzufügen (nicht in PST:EE verfügbar, nicht mit
+    Lefreuts Enhanced UI (LeUI) kompatibel)
+
+Diese Komponente installiert einen Schieberegler, mit dem man die Bildrate, mit der das Spiel
+ausgeführt wird, erhöhen oder vermindern kann. Man kann eine Rate zwischen 10 und 60 Bildern pro
+Sekunde in 5er-Schritten wählen. Die Voreinstellung des Spiels ist 30 Bilder pro Sekunde.
+
+Diese Komponente wird als "experimentell" gekennzeichnet, da vorgenommene Einstellungen in
+bestimmten Situationen vom Spiel ignoriert werden:
+1. Wenn Optionen > Spieleinstellungen > Rückmeldungen > "Zusätzliche Bestätigungsfenster" aktiv ist.
+2. Wenn ein laufendes Spiel beendet wird, ohne vorher in das Hauptmenü zu springen.
+
+Die Option kann in den Grafikeinstellungen gefunden werden, wenn Dragonspear UI++ installiert ist.
+Ansonsten kann sie in den Spieleinstellungen gefunden werden.
+
+
+23. Spieloption "Aktionssymbole" hinzufügen (nicht mit Lefreuts Enhanced UI (LeUI) kompatibel)
+
+Diese Komponente installiert einen Schieberegler, mit dem man kleine Aktionssymbole neben den
+Charakteranimationen anzeigen kann. Diese Symbole kennzeichnen die gerade ausgeführte Aktion der
+Charaktere, wie z.B. Kampf- oder Zauberaktionen.
+Es kann zwischen verschiedenen Anzeigevarianten gewählt werden. Einige Varianten erfordern, dass
+der Debugmodus aktiviert wurde.
+
+Die Option kann in Spieleinstellungen > Rückmeldungen gefunden werden.
+
+
+24. Spieloption "Symbol für Stufenaufstieg anzeigen" hinzufügen (nur in PST:EE verfügbar, benötigt
+    "Level Up" Icon Tweaks)
+
+Diese Option kann genutzt werden, um ein Symbol im Portraitfenster oder Energiebalken anzuzeigen,
+wenn ein Gruppenmitglied eine Stufe aufsteigen kann. Die Mod "'Level Up' Icon Tweaks" muss
+installiert sein, um die Anzeige des Symbols für Stufenaufstiege ein- oder ausschalten zu können.
+
+Die Option kann in Spielmechanik > Rückmeldungen gefunden werden.
+
+
+25. Spieloption "Wirkungsbereich von Zaubern anzeigen" hinzufügen (nicht in PST:EE verfügbar)
+
+Wenn diese Option aktiviert ist, wird der Wirkungsbereich des gewählten Zaubers angezeigt, bevor er
+gewirkt wird.
+
+Die Option kann in Spieleinstellungen > Rückmeldungen > Visuelle Rückmeldungen gefunden werden.
+
+Hinweis: Diese Option wirkt sich nur auf Spiele ab Patchversion 2.5.16.6 aus.
+
+
+26. Spieloption "Enhanced Path Search" hinzufügen
+
+Verbessert die Wegfindung, in dem der Suchpfad der Gruppenmitglieder fortlaufend neu berechnet
+wird.
+
+Die Option kann in den Spieleinstellungen gefunden werden.
+
+
+27. Spieloption "Expire Trap Highlights" hinzufügen (nicht in PST:EE verfügbar)
+
+Hiermit wird gesteuert, ob die Anzeige entdeckter Fallen und versteckter Türen nach eine Weile 
+wieder verschwinden soll.
+
+Die Option kann in Spieleinstellungen > Rückmeldungen > Visuelle Rückmeldungen gefunden werden.
+
+
+28. Spieloption "Show Learnable Spells" hinzufügen
+
+Hiermit wird gesteuert, ob ein grüner Farbton für Schriftrollen angezeigt werden soll, die für den 
+Charakter erlernbar sind.
+
+Die Option kann in Grafik > Darstellungsoptionen gefunden werden.
+
+
+29. Spieloption "Render Search Map" hinzufügen
+
+Gibt an, ob bei gedrückter UMSCHALT-Taste die statische Suchkarte für das aktuelle Gebiet 
+eingeblendet werden soll.
+
+Die Option kann in Grafik > Darstellungsoptionen gefunden werden.
+
+
+30. Spieloption "Render Dynamic Search Map" hinzufügen
+
+Gibt an, ob bei gedrückter STRG-Taste eine dynamische Suchkarte eingeblendet werden soll, die z.B. 
+für blockierte Türen oder den eingenommenen Raum von Spielfiguren errechnet wird.
+
+Die Option kann in Grafik > Darstellungsoptionen gefunden werden.
+
+
+31. Spieloptionen für Tweak Anthologys "Regelmäßige Spielstände erzeugen" hinzufügen (benötigt
+    Tweak Anthologys Modkomponente "Regelmäßige Spielstände erzeugen")
+
+Diese Komponente installiert zwei Optionen in die Spieleinstellungen:
+- Regelmäßige Spielstände aktivieren:
+  Wenn diese Option aktiviert ist, wird in regelmäßigen Abständen ein Spielstand angelegt.
+- Regelmäßige Spielstände während des Kampfes erzeugen:
+  Wenn diese Option aktiviert ist, werden regelmäßige Spielstände auch während eines Kampfes angelegt.
+
+Beide Optionen sind nur wirksam, wenn die Komponente "Regelmäßige Spielstände erzeugen" von Tweaks
+Anthology installiert wurde.
+
+Die Optionen können in den Spieleinstellungen gefunden werden.
+
+
+32. Spieloption "Spielpause in Dialogen erzwingen" hinzufügen
+
+Wenn diese Option aktiviert ist, wird das Spiel automatisch pausiert, während ein Gespräch
+geführt wird. Diese Option macht die Komponente "Spielpause bei allen Dialogen erzwingen" von
+Tweaks Anthology überflüssig.
+
+Die Option kann in Spieleinstellungen > Rückmeldungen > Visuelle Rückmeldungen gefunden werden.
+In PST:EE kann diese Option in den Spieleinstellungen gefunden werden.
+
+
+33. Spieloption für Tweak Anthologys "Wiederhergestellte Ladehinweise" hinzufügen (benötigt
+    Tweak Anthologys Modkomponente "Wiederhergestellte Ladehinweise")
+
+Wenn diese Option aktiviert ist, dann werden die Ladehinweise vom originalen Baldurs Gate II im 
+Dialogfenster des Spiels angezeigt. Diese Option ist nur wirksam, wenn die Komponente
+"Wiederhergestellte Ladehinweise" von Tweaks Anthology installiert wurde.
+
+Die Option kann in den Spieleinstellungen gefunden werden.
+
+
+B) *** Gruppe: Cheatmenü ***
+
+1. Verbessertes Cheatmenü
 
 Diese Komponente erweitert das Cheatmenü, das zusammen mit der Debugkonsole geöffnet wird, um eine
 Reihe von Zusatzfunktionen:
@@ -95,293 +384,66 @@ Die folgenden GUI-Mods werden unterstützt:
 - Tipuns User Interface
 - Classic BG UI (von K4f4r)
 
-Diese Komponente ist auch in der Hauptkomponente "Alle versteckten Spieloptionen auf einmal
-installieren" enthalten.
 
+2. Ressourcenlisten des "Verbesserten Cheatmenüs" aktualisieren
 
-3. Ressourcenlisten des "Verbesserten Cheatmenus" aktualisieren
+Mit dieser Option kann man die Ressourcentabellen des verbesserten Cheatmenüs auf dem neuesten Stand
+halten. Das ist hilfreich, falls weitere Mods mit Spielinhalten nach dieser Mod installiert wurden.
+Da diese Option nicht in der WeiDU.log registriert wird, kann man sie jederzeit und so oft wie
+gewünscht aufrufen.
 
-Diese Komponente erlaubt es, die Listen der angezeigten Ressourcen (Gegenstände, Zauber, etc.)
-zu aktualisieren, die vom "Verbesserten Cheatmenü" genutzt werden, ohne die Hauptkomponente erneut
-installieren zu müssen. Sie wird nicht in der WeiDU.log registriert und kann daher jederzeit so oft
-wie gewünscht aufgerufen werden.
 
+C) *** Gruppe: GUI-Verbesserungen ***
 
-4. Spieloption "Debugmodus" hinzufügen
+Diese Gruppe bietet eine Reihe von kleinen Verbesserungen an, die sich auf Optik- und
+Bedienungsaspekte der GUI konzentrieren. Sie sind derzeit nur für die Standardoberflächen der
+unterstützten Spiele verfügbar.
 
-Diese Option kann genutzt werden, um Cheat-Tastenkürzel und die Debugkonsole zu nutzen.
+1. Verbesserte Optionen für den Todesbildschirm
 
-Die Option kann in den Spieleinstellungen gefunden werden.
+Der Todesbildschirm wird angezeigt, falls der Held oder die gesamte Gruppe getötet wurde und bietet
+Optionen zum Beenden oder Laden eines Spiels an.
+Diese Komponente erweitert die Liste um die Option, automatisch den zuletzt angelegten Speicherstand
+zu laden, falls er verfügbar ist.
 
 
-5. Spieloption "UI Bearbeitungsmodus" hinzufügen
+2. Verbesserte Optionen für "Spiel verlassen"
 
-Diese Option kann genutzt werden, um die Bearbeitungsfunktionen der Benutzeroberfläche im Spiel
-nutzen zu können.
+Die Tastenkombination Alt-F4 ruft einen Dialog mit den Optionen zum Beenden des Spiels oder Abbruch
+des Dialogs auf.
+Diese Komponente erweitert die Liste um die Option, stattdessen zum Startbildschirm des Spiels
+zurückzukehren.
 
-Die Option kann in den Spieleinstellungen gefunden werden.
 
+3. Spielmenü: Feueranimation ueber dem SoD-Logo (nur für SoD und EET verfügbar)
 
-6. Spieloption "Strrefs anzeigen" hinzufügen
+Der Startbildschirm des Spiels spielt eine schicke Feueranimation über dem Spiellogo ab, falls
+"Die Belagerung von Drachenspeer" aktiv ist.
+Diese Komponente fügt die gleiche Feueranimation zum Spielmenü hinzu, das man in einem laufenden
+Spiel durch die ESC-Taste oder die "Optionen"-Schaltfläche aufrufen kann.
 
-Diese Option kann genutzt werden, um die Stringreferenz-Nummern vor den Texten im Spiel anzuzeigen.
 
-Die Option kann in den Spieleinstellungen gefunden werden.
+4. Spielmenü: Verbesserte Optionen für "Spiel verlassen" (nur für IWD:EE verfügbar)
 
+Wenn man die "Spiel verlassen"-Option im Spielmenü des laufenden Spiels auswählt, dann bietet sie
+die Optionen "Abbrechen", "Verlassen" und "Speichern" an, wobei "Verlassen" lediglich zum
+Startbildschirm des Spiels zurückkehrt.
+Diese Komponente ändert die "Verlassen"-Option so, dass sie das Spiel komplett beendet und fügt
+eine weitere Option "Hauptmenü" hinzu, mit der man stattdessen zum Startmenü des Spiels
+zurückkehren kann.
 
-7. Spieloption "Tastenkürzel in Kurzinfos" hinzufügen
 
-Diese Option kann genutzt werden, um verfügbare Tastenkürzel in Kurzinfos anzuzeigen.
+5. Spielmenü: Verbesserte Optionen für "Spiel laden"
 
-Die Option kann in den Spieleinstellungen gefunden werden.
+Wenn man die "Spiel laden"-Option im Spielmenü des laufenden Spiels auswählt, dann bietet sie die
+Optionen "Abbrechen" und "Laden" an.
+Diese Komponente erweitert die Liste um die Option "Weiterspielen", mit der man automatisch den
+zuletzt angelegten Speicherstand laden kann, falls er verfügbar ist.
 
 
-8. Spieloption "Bereichssymbole mit TAB anzeigen" hinzufügen
+D) *** Gruppe: Tastenbelegungen ***
 
-Diese Option kann genutzt werden, um bei gedrückter TAB-Taste zusätzlich Symbole für interaktive
-Regionen zu sehen.
-
-Die Option kann in den Spieleinstellungen gefunden werden.
-
-
-9. Spieloption "Leertaste in Dialogen nutzen" hinzufügen (nur in PST:EE verfügbar)
-
-Diese Option kann genutzt werden, um Gespräche mit der Leertaste fortsetzen zu können.
-
-Die Option kann in den Spieleinstellungen gefunden werden.
-
-
-10. Spieloption "Druidenzauber für Kleriker/Waldläufer einschränken" hinzufügen
-   (nicht in PST:EE verfügbar)
-
-Diese Option kann genutzt werden, um die Verfügbarkeit von Druidenzaubern für mehrklassige
-Kleriker/Waldläufer auf die ersten drei Stufen zu beschränken.
-
-Die Option kann in den Spieleinstellungen gefunden werden.
-
-
-11. Spieloption "3E Heimlicher Angriff" hinzufügen
-
-Diese Option kann genutzt werden, um die Fähigkeiten Heimlicher Angriff und Verkrüppelnder Schlag
-ein- bzw. auszuschalten. Die Regeln für diese Fähigkeiten sind den Dungeons & Dragons®-Regeln 3
-von Wizards of the Coast ähnlich.
-
-Die Option kann in den Spieleinstellungen gefunden werden.
-
-
-12. Spieloption "Bildschirmwackeln bei kritischen Treffern" hinzufügen
-
-Wenn diese Option aktiviert ist, wackelt der Bildschirm bei einem kritischen Treffer.
-
-Die Option kann in Spieleinstellungen > Rückmeldungen > Visuelle Rückmeldungen gefunden werden.
-In PST:EE kann diese Option in den Spieleinstellungen gefunden werden.
-
-
-13. Spieloption "Zusätzliche Kampfinformationen anzeigen" hinzufügen
-
-Diese Option kann genutzt werden, um alle Faktoren zu sehen, die einen Trefferwurf beeinflussen.
-
-Die Option kann in Spieleinstellungen > Rückmeldungen > Textrückmeldungen gefunden werden.
-
-
-14. Spieloption "Spielzeit und -datum im Pausenmodus anzeigen" hinzufügen
-
-Diese Option kann genutzt werden, um Spielzeit und -datum anzuzeigen, wenn der Pausenmodus
-aktiviert wird.
-
-Die Option kann in Spieleinstellungen > Rückmeldungen > Textrückmeldungen gefunden werden.
-
-
-15. Spieloption "Ein- und Ausblendanimationen der Gebietskarte abschalten" hinzufügen
-    (nur in PST:EE verfügbar)
-
-Diese Option kann genutzt werden, um die Ein- und Ausblendanimationen abzuschalten, die beim
-Aufrufen und Beenden der Übersichtskarte des Gebiets ausgeführt werden.
-
-Die Option kann in Grafik > Darstellungsoptionen gefunden werden.
-
-
-16. Spieloption "Zoomrichtung des Mausrads umkehren" hinzufügen
-
-Diese Option kann genutzt werden, um die Richtung des Mausrads beim hinein- oder hinauszoomen
-umzukehren.
-
-Die Option kann in Grafik > Darstellungsoptionen gefunden werden.
-
-
-17. Spieloption "Spiel pausieren wenn Gebietskarte aktiv ist" hinzufügen
-
-Wenn diese Option aktiviert ist, wird das Spiel automatisch pausiert, wenn die Übersichtskarte des
-Gebiets aufgerufen wird.
-
-Die Option kann in Grafik > Darstellungsoptionen gefunden werden.
-
-
-18. Spieloption "Nebel aktivieren" hinzufügen (nicht in PST:EE verfügbar)
-
-Diese Option kann genutzt werden, um Nebeleffekte in den Gebieten anzuzeigen.
-
-Die Option kann in Grafik > Darstellungsoptionen gefunden werden.
-
-
-19. Spieloption "Videosequenzen deaktivieren" hinzufügen
-
-Diese Option kann genutzt werden, um Videosequenzen komplett zu deaktivieren.
-
-Die Option kann in Grafik > Darstellungsoptionen gefunden werden.
-
-
-20. Spieloption "Keine kosmetischen Angriffe" hinzufügen (nur in PST:EE verfügbar)
-
-Diese Option kann genutzt werden, um Angriffsanimationen nur dann zu zeigen, wenn Charaktere
-tatsächlich Angriffe ausführen. In BG:EE, BG2:EE und IWD:EE ist sie bereits im unmodifizierten
-Spiel enthalten.
-
-Die Option kann in den Spieleinstellungen gefunden werden.
-
-
-21. Spieloption "EP-Bonus im Albtraum-Modus" hinzufügen (nicht in PST:EE verfügbar)
-
-Wird diese Option aktiviert, so erhalten Eure Charaktere einen EP-Bonus im Vermächtnis des Bhaal
-Modus (BGEE/BG2EE) oder Herz des Zorns Modus (IWDEE). Diese Einstellung beeinflusst jedoch nicht
-die zusätzlichen EP, die in den normalen Schwierigkeitsgraden gewährt werden.
-
-Die Option kann in den Spieleinstellungen gefunden werden.
-
-
-22. Spieloption "Gelangweilte Ausrufe aktivieren" hinzufügen (nicht mit Lefreuts Enhanced UI
-    (LeUI) kompatibel)
-
-Wird diese Option aktiviert, dann lösen Gruppenmitglieder gelangweilte Ausrufe aus, wenn sie über
-einen längeren Zeitraum keine Aktionen durchgeführt haben.
-
-Die Option kann in Sound > Charaktersounds oder Spielmechanik > Rückmeldungen (nur PST:EE) gefunden
-werden.
-
-
-23. Spieloption "Bildrate" (experimentell) hinzufügen (nicht in PST:EE verfügbar, nicht mit
-    Lefreuts Enhanced UI (LeUI) kompatibel)
-
-Diese Komponente installiert einen Schieberegler, mit dem man die Bildrate, mit der das Spiel
-ausgeführt wird, erhöhen oder vermindern kann. Man kann eine Rate zwischen 10 und 60 Bildern pro
-Sekunde in 5er-Schritten wählen. Die Voreinstellung des Spiels ist 30 Bilder pro Sekunde.
-
-Diese Komponente wird als "experimentell" gekennzeichnet, da vorgenommene Einstellungen in
-bestimmten Situationen vom Spiel ignoriert werden:
-1. Wenn Optionen > Spieleinstellungen > Rückmeldungen > "Zusätzliche Bestätigungsfenster" aktiv ist.
-2. Wenn ein laufendes Spiel beendet wird, ohne vorher in das Hauptmenü zu springen.
-
-Die Option kann in den Grafikeinstellungen gefunden werden, wenn Dragonspear UI++ installiert ist.
-Ansonsten kann sie in den Spieleinstellungen gefunden werden.
-
-
-24. Spieloption "Aktionssymbole" hinzufügen (nicht mit Lefreuts Enhanced UI (LeUI) kompatibel)
-
-Diese Komponente installiert einen Schieberegler, mit dem man kleine Aktionssymbole neben den
-Charakteranimationen anzeigen kann. Diese Symbole kennzeichnen die gerade ausgeführte Aktion der
-Charaktere, wie z.B. Kampf- oder Zauberaktionen.
-Es kann zwischen verschiedenen Anzeigevarianten gewählt werden. Einige Varianten erfordern, dass
-der Debugmodus aktiviert wurde.
-
-Die Option kann in Spieleinstellungen > Rückmeldungen gefunden werden.
-
-
-25. Spieloption "Symbol für Stufenaufstieg anzeigen" hinzufügen (nur in PST:EE verfügbar, benötigt
-    "Level Up" Icon Tweaks)
-
-Diese Option kann genutzt werden, um ein Symbol im Portraitfenster oder Energiebalken anzuzeigen,
-wenn ein Gruppenmitglied eine Stufe aufsteigen kann. Die Mod "'Level Up' Icon Tweaks" muss
-installiert sein, um die Anzeige des Symbols für Stufenaufstiege ein- oder ausschalten zu können.
-
-Die Option kann in Spielmechanik > Rückmeldungen gefunden werden.
-
-
-26. Spieloption "Wirkungsbereich von Zaubern anzeigen" hinzufügen (nicht in PST:EE verfügbar)
-
-Wenn diese Option aktiviert ist, wird der Wirkungsbereich des gewählten Zaubers angezeigt, bevor er
-gewirkt wird.
-
-Die Option kann in Spieleinstellungen > Rückmeldungen > Visuelle Rückmeldungen gefunden werden.
-
-Hinweis: Diese Option wirkt sich nur auf Spiele ab Patchversion 2.5.16.6 aus.
-
-
-27. Spieloption "Enhanced Path Search" hinzufügen
-
-Verbessert die Wegfindung, in dem der Suchpfad der Gruppenmitglieder fortlaufend neu berechnet
-wird.
-
-Die Option kann in den Spieleinstellungen gefunden werden.
-
-
-28. Spieloption "Expire Trap Highlights" hinzufügen (not available for PST:EE)
-
-Hiermit wird gesteuert, ob die Anzeige entdeckter Fallen und versteckter Türen nach eine Weile 
-wieder verschwinden soll.
-
-Die Option kann in Spieleinstellungen > Rückmeldungen > Visuelle Rückmeldungen gefunden werden.
-
-
-29. Spieloption "Show Learnable Spells" hinzufügen
-
-Hiermit wird gesteuert, ob ein grüner Farbton für Schriftrollen angezeigt werden soll, die für den 
-Charakter erlernbar sind.
-
-Die Option kann in Grafik > Darstellungsoptionen gefunden werden.
-
-
-30. Spieloption "Render Search Map" hinzufügen
-
-Gibt an, ob bei gedrückter UMSCHALT-Taste die statische Suchkarte für das aktuelle Gebiet 
-eingeblendet werden soll.
-
-Die Option kann in Grafik > Darstellungsoptionen gefunden werden.
-
-
-31. Spieloption "Render Dynamic Search Map" hinzufügen
-
-Gibt an, ob bei gedrückter STRG-Taste eine dynamische Suchkarte eingeblendet werden soll, die z.B. 
-für blockierte Türen oder den eingenommenen Raum von Spielfiguren errechnet wird.
-
-Die Option kann in Grafik > Darstellungsoptionen gefunden werden.
-
-
-32. Spieloptionen für Tweak Anthologys "Regelmäßige Spielstände erzeugen" hinzufügen (benötigt
-    Tweak Anthologys Modkomponente "Regelmäßige Spielstände erzeugen")
-
-Diese Komponente installiert zwei Optionen in die Spieleinstellungen:
-- Regelmäßige Spielstände aktivieren:
-  Wenn diese Option aktiviert ist, wird in regelmäßigen Abständen ein Spielstand angelegt.
-- Regelmäßige Spielstände während des Kampfes erzeugen:
-  Wenn diese Option aktiviert ist, werden regelmäßige Spielstände auch während eines Kampfes angelegt.
-
-Beide Optionen sind nur wirksam, wenn die Komponente "Regelmäßige Spielstände erzeugen" von Tweaks
-Anthology installiert wurde.
-
-Die Optionen können in den Spieleinstellungen gefunden werden.
-
-
-33. Spieloption "Spielpause in Dialogen erzwingen" hinzufügen
-
-Wenn diese Option aktiviert ist, wird das Spiel automatisch pausiert, während ein Gespräch
-geführt wird. Diese Option macht die Komponente "Spielpause bei allen Dialogen erzwingen" von
-Tweaks Anthology überflüssig.
-
-Die Option kann in Spieleinstellungen > Rückmeldungen > Visuelle Rückmeldungen gefunden werden.
-In PST:EE kann diese Option in den Spieleinstellungen gefunden werden.
-
-
-34. Spieloption für Tweak Anthologys "Wiederhergestellte Ladehinweise" hinzufügen (benötigt
-    Tweak Anthologys Modkomponente "Wiederhergestellte Ladehinweise")
-
-Wenn diese Option aktiviert ist, dann werden die Ladehinweise vom originalen Baldurs Gate II im 
-Dialogfenster des Spiels angezeigt. Diese Option ist nur wirksam, wenn die Komponente
-"Wiederhergestellte Ladehinweise" von Tweaks Anthology installiert wurde.
-
-Die Option kann in den Spieleinstellungen gefunden werden.
-
-
-35. Tastenbelegungen für Priester- und/oder Magierzauber aktualisieren
+1. Tastenbelegungen für Priester- und/oder Magierzauber aktualisieren
 
 Diese Option aktualisiert die Liste aller verfügbaren Priester- und/oder Magierzauber. Es werden
 alle regulären Zauber und hochstufigen Fähigkeiten des Spiels selbst und aus Mods berücksichtigt,
@@ -391,9 +453,6 @@ Folgende Unteroptionen stehen zur Auswahl:
 - Tastenbelegungen nur für Priesterzauber aktualisieren
 - Tastenbelegungen nur für Magierzauber aktualisieren
 - Tastenbelegungen für Priester- und Magierzauber aktualisieren
-
-Diese Option ist nicht in der Hauptkomponente "Alle versteckten Spieloptionen auf einmal
-installieren" enthalten.
 
 
 Credits
@@ -429,6 +488,14 @@ ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa
 
 History
 ~~~~~~~
+
+5.0
+- Restructured mod components and added component groups
+- Added Spanish translation (thanks alaisFcZ and IOVIVO)
+- Added new group "GUI Improvements" with various minor visual and usability improvements
+- Added option for Tweaks Anthology's "Restored Loading Hints"
+- Improved Frame Rate slider: increment in steps of 5 between 10 and 60 fps
+- Changed several harmess warning messages back to regular messages at mod installation
 
 4.7
 - Fixed potential placement issues of frame rate slider if Dragonspear UI++ is installed

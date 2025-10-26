@@ -1,0 +1,18 @@
+	button
+	{
+		bam 'GUIBUTNT'
+		sequenceonce lua "getRandomButtonSequence('GUIBUTNT')"
+		area 22 376 200 44
+		pad 10 8 10 8
+		text style "button"
+		text "QUIT_GAME_BUTTON"
+		action
+		"
+			popup4Button(16456, 
+			'SAVE_BUTTON', function() optionsScreen:SaveGame(0) end,
+			'MAIN_MENU_BUTTON', function() optionsScreen:QuitGame() end, 
+			'QUIT_BUTTON', function() Infinity_ShutdownGame() end, 
+			'CANCEL_BUTTON', nil
+			) 
+		"
+	}

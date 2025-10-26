@@ -1,31 +1,65 @@
 *.2da text
 *.baf text
 *.bat text eol=crlf
+*.bcs text eof=lf
 *.d text
+*.glsl text eof=lf
+*.gui text
+*.htm text
 *.html text
+*.ids text
 *.ini text
+*.lua text
+*.menu text
+*.mus text
 *.sh text eol=lf
 *.tp2 text
+*.tpa text
 *.tph text
+*.tpp text
 *.tra text
 *.txt text
 
 *.7z binary
+*.acm binary
 *.are binary
 *.bam binary
+*.bif binary
 *.bmp binary
+*.chr binary
+*.chu binary
 *.cre binary
+*.dlg binary
 *.dll binary
 *.eff binary
 *.exe binary
+*.fnt binary
+*.gam binary
 *.itm binary
+*.jpeg binary
 *.jpg binary
+*.key binary
+*.maze binary
+*.mbc binary
+*.mos binary
+*.mve binary
+*.plt binary
 *.png binary
-*.pvrz binary
 *.pro binary
+*.pvrz binary
+*.sav binary
 *.spl binary
 *.sto binary
+*.toh binary
+*.tot binary
+*.tbc binary
+*.tis binary
+*.tlk binary
+*.ttf binary
 *.vef binary
 *.vvc binary
 *.wav binary
+*.wbm binary
 *.wed binary
+*.wfx binary
+*.wmp binary

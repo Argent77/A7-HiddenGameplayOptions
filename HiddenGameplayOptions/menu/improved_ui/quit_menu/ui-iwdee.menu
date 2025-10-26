@@ -1,0 +1,64 @@
+menu
+{
+	name 'QuitMenu'
+	modal
+	align center center
+
+	label -- Background
+	{
+		area 0 0 660 236
+		mosaic 'GUIERR6'
+	}
+	label --Title
+	{
+		area 24 20 604 130
+		text 20186
+		text style	"label"
+		text align center center
+	}
+	button
+	{
+		area 18 170 202 44
+		bam GUIBUTNT
+		sequenceonce lua "getRandomButtonSequence('GUIBUTMT')"
+		align center center
+		text style	"button"
+		text "QUIT_GAME_BUTTON"
+		on 			return
+		action 
+		"
+			restoreOverlayFromQuit()
+			Infinity_ShutdownGame()
+		"
+	}
+	button
+	{
+		area 228 170 202 44
+		bam GUIBUTNT
+		align center center
+		sequenceonce lua "getRandomButtonSequence('GUIBUTMT')"
+		text style	"button"
+		text "MAIN_MENU_BUTTON"
+		clickable lua "worldScreen == e:GetActiveEngine()"
+		action 
+		"
+			restoreOverlayFromQuit()
+			optionsScreen:QuitGame()
+		"
+	}
+	button
+	{
+		area 438 170 203 44
+		bam GUIBUTNT
+		sequenceonce lua "getRandomButtonSequence('GUIBUTMT')"
+		align center center
+		text style	"button"
+		text "CANCEL_BUTTON"
+		on 			escape
+		action 
+		"
+			restoreOverlayFromQuit()
+			Infinity_PopMenu('QuitMenu')
+		"
+	}
+}

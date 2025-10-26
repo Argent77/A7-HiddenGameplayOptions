@@ -1,0 +1,82 @@
+menu
+{
+	name 'POPUP_FOURBUTTON'
+	align center center
+	modal
+	label
+	{
+		area 0 0 864 234
+		mosaic GUIERR7
+	}
+	label
+	{
+		area 40 23 786 125
+		text lua "getStringFromAmbiguousSource(Popup4Button.info)"
+		text style	"label"
+		text align center center
+	}
+	button
+	{
+		area 16 170 202 44
+		bam		GUIBUTNT
+		sequenceonce lua "getRandomButtonSequence('GUIBUTNT')"
+		align center center
+		text lua "t(Popup4Button.farRightText)"
+		text style	"button"
+		action 
+		"
+			Infinity_PopMenu()
+			if (Popup4Button.farRightFunc) then
+				Popup4Button.farRightFunc()
+			end
+		"
+	}
+	button
+	{
+		area 226 170 202 44
+		bam		GUIBUTNT
+		sequenceonce lua "getRandomButtonSequence('GUIBUTNT')"
+		align center center
+		text style	"button"
+		text lua "t(Popup4Button.rightText)"
+		action 
+		"
+			Infinity_PopMenu()
+			if (Popup4Button.rightFunc) then
+				Popup4Button.rightFunc()
+			end
+		"
+	}
+	button
+	{
+		area 436 170 202 44
+		bam		GUIBUTNT
+		sequenceonce lua "getRandomButtonSequence('GUIBUTNT')"
+		align center center
+		text style	"button"
+		text lua "t(Popup4Button.leftText)"
+		action 
+		"
+			Infinity_PopMenu()
+			if (Popup4Button.leftFunc) then
+				Popup4Button.leftFunc()
+			end
+		"
+	}
+	button
+	{
+		area 646 170 202 44
+		bam		GUIBUTNT
+		sequenceonce lua "getRandomButtonSequence('GUIBUTNT')"
+		align center center
+		text style	"button"
+		text lua "t(Popup4Button.farLeftText)"
+		action 
+		"
+			Infinity_PopMenu()
+			if (Popup4Button.farLeftFunc) then
+				Popup4Button.farLeftFunc()
+			end
+		"
+	}
+}

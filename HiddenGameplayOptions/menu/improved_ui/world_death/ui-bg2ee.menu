@@ -1,0 +1,66 @@
+menu
+{
+	name "WORLD_DEATH"
+	align center center
+	ignoreEsc
+	modal
+
+	onOpen	"
+		canContinue = startEngine:HasGameToContinue()
+	"
+
+	label
+	{
+		area 0 0 406 415
+		mosaic 'GUIERR'
+	}
+	label
+	{
+		area 74 68 254 94
+		text lua "worldDeathText()"
+		text style	"label"
+		text align center center
+	}
+	button
+	{
+		area 52 218 308 44
+		bam GUIOSTCL
+		align center center
+		text style	"button"
+		text "LOAD_BUTTON"
+		clickable lua "worldDeathLoadClickable()"
+		action 
+		"
+			Infinity_PopMenu()
+			worldScreen:OnDeathLoad()
+		"
+	}
+	button
+	{
+		area 52 266 308 44
+		bam GUIOSTCL
+		align center center
+		text style	"button"
+		text lua "worldDeathQuitText()"
+		clickable lua "worldDeathQuitClickable()"
+		action 
+		"
+			Infinity_PopMenu()
+			worldScreen:OnDeathQuit()
+		"
+	}
+	button
+	{
+		area 103 320 200 44
+		bam GUIOSTLM
+		align center center
+		text style	"button"
+		text "CONTINUE_BUTTON"
+		clickable lua "canContinue"
+		action 
+		"
+			Infinity_PopMenu()
+			startEngine:OnContinueGame()
+		"
+	}
+}

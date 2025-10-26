@@ -1,0 +1,8 @@
+
+	movie
+	{
+		enabled "Infinity_GetINIValue('Program Options','Active Campaign') == const.START_CAMPAIGN_SOD"
+		name "flames4"
+		area 237 204 384 384
+		loop
+	}

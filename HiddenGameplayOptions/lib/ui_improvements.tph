@@ -1,0 +1,219 @@
+// *** Various UI improvements for vanilla GUI ***
+
+INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
+
+/**
+ * Adds a button to the "party death" dialog that allows to continue from the last save if available.
+ */
+DEFINE_ACTION_FUNCTION IMPROVE_DEATH_PROMPTS
+BEGIN
+  ACTION_IF (game_is_bgee && NOT game_includes_sod) BEGIN
+    // BGEE without SoD
+    OUTER_SPRINT menu_path ~%MOD_FOLDER%/menu/improved_ui/world_death/ui-bgee.menu~
+  END ELSE ACTION_IF (game_is_bgee && game_includes_sod) BEGIN
+    // BGEE with SoD
+    OUTER_SPRINT menu_path ~%MOD_FOLDER%/menu/improved_ui/world_death/ui-sod.menu~
+  END ELSE ACTION_IF (game_is_bg2ee) BEGIN
+    // BG2EE
+    OUTER_SPRINT menu_path ~%MOD_FOLDER%/menu/improved_ui/world_death/ui-bg2ee.menu~
+  END ELSE ACTION_IF (game_is_eet && NOT INSTALLED_EET_GUI_SOD) BEGIN
+    // EET (default UI)
+    OUTER_SPRINT menu_path ~%MOD_FOLDER%/menu/improved_ui/world_death/ui-bg2ee.menu~
+  END ELSE ACTION_IF (game_is_eet && INSTALLED_EET_GUI_SOD) BEGIN
+    // EET (SoD UI)
+    OUTER_SPRINT menu_path ~%MOD_FOLDER%/menu/improved_ui/world_death/ui-sod.menu~
+  END ELSE ACTION_IF (game_is_iwdee) BEGIN
+    // IWDEE
+    OUTER_SPRINT menu_path ~%MOD_FOLDER%/menu/improved_ui/world_death/ui-iwdee.menu~
+  END ELSE BEGIN
+    // unsupported otherwise
+    OUTER_SPRINT menu_path ~~
+  END
+
+  ACTION_IF (NOT ~%menu_path%~ STR_EQ ~~) BEGIN
+    COPY_EXISTING ~ui.menu~ ~override~
+      LPF GET_UI_STRUCTURE STR_VAR name = ~menu~ contains = EVAL ~name[ %TAB%]+['"]?WORLD_DEATH['"]?~ RET start_ofs end_ofs END
+      PATCH_IF (start_ofs >= 0 && end_ofs > start_ofs) BEGIN
+        DELETE_BYTES start_ofs (end_ofs - start_ofs)
+        INSERT_FILE start_ofs ~%menu_path%~
+      END
+    BUT_ONLY
+  END
+END
+
+
+/**
+ * Adds a button to the "quit game" dialog that is invoked via Alt-F4 to return to the main screen.
+ */
+DEFINE_ACTION_FUNCTION IMPROVE_QUIT_PROMPTS
+BEGIN
+  ACTION_IF (game_is_bgee && NOT game_includes_sod) BEGIN
+    // BGEE without SoD
+    OUTER_SPRINT menu_path ~%MOD_FOLDER%/menu/improved_ui/quit_menu/ui-bgee.menu~
+  END ELSE ACTION_IF (game_is_bgee && game_includes_sod) BEGIN
+    // BGEE with SoD
+    OUTER_SPRINT menu_path ~%MOD_FOLDER%/menu/improved_ui/quit_menu/ui-sod.menu~
+  END ELSE ACTION_IF (game_is_bg2ee) BEGIN
+    // BG2EE
+    OUTER_SPRINT menu_path ~%MOD_FOLDER%/menu/improved_ui/quit_menu/ui-bg2ee.menu~
+  END ELSE ACTION_IF (game_is_eet && NOT INSTALLED_EET_GUI_SOD) BEGIN
+    // EET (default UI)
+    OUTER_SPRINT menu_path ~%MOD_FOLDER%/menu/improved_ui/quit_menu/ui-bg2ee.menu~
+  END ELSE ACTION_IF (game_is_eet && INSTALLED_EET_GUI_SOD) BEGIN
+    // EET (SoD UI)
+    OUTER_SPRINT menu_path ~%MOD_FOLDER%/menu/improved_ui/quit_menu/ui-sod.menu~
+  END ELSE ACTION_IF (game_is_iwdee) BEGIN
+    // IWDEE
+    OUTER_SPRINT menu_path ~%MOD_FOLDER%/menu/improved_ui/quit_menu/ui-iwdee.menu~
+  END ELSE BEGIN
+    // unsupported otherwise
+    OUTER_SPRINT menu_path ~~
+  END
+
+  ACTION_IF (NOT ~%menu_path%~ STR_EQ ~~) BEGIN
+    COPY_EXISTING ~ui.menu~ ~override~
+      LPF GET_UI_STRUCTURE STR_VAR name = ~menu~ contains = EVAL ~name[ %TAB%]+['"]?QuitMenu['"]?~ RET start_ofs end_ofs END
+      PATCH_IF (start_ofs >= 0 && end_ofs > start_ofs) BEGIN
+        DELETE_BYTES start_ofs (end_ofs - start_ofs)
+        INSERT_FILE start_ofs ~%menu_path%~
+      END
+    BUT_ONLY
+  END
+END
+
+
+/**
+ * (SoD) Game Menu (running game): Adds the fire animation overlay to logo of the game menu.
+ */
+DEFINE_ACTION_FUNCTION IMPROVE_GAMEMENU_FIRE
+BEGIN
+  ACTION_IF (game_is_bgee && game_includes_sod) BEGIN
+    // BGEE with SoD
+    OUTER_SPRINT menu_path ~%MOD_FOLDER%/menu/improved_ui/esc_menu/ui-logo-sod.menu~
+  END ELSE ACTION_IF (game_is_eet && NOT INSTALLED_EET_GUI_SOD) BEGIN
+    // EET (standard UI)
+    OUTER_SPRINT menu_path ~%MOD_FOLDER%/menu/improved_ui/esc_menu/ui-logo-eet.menu~
+  END ELSE ACTION_IF (game_is_eet && INSTALLED_EET_GUI_SOD) BEGIN
+    // EET (SoD UI)
+    OUTER_SPRINT menu_path ~%MOD_FOLDER%/menu/improved_ui/esc_menu/ui-logo-eet.menu~
+  END ELSE BEGIN
+    OUTER_SPRINT menu_path ~~
+  END
+
+  ACTION_IF (NOT ~%menu_path%~ STR_EQ ~~) BEGIN
+    COPY_EXISTING ~ui.menu~ ~override~
+      LPF GET_UI_STRUCTURE STR_VAR name = ~menu~ contains = EVAL ~name[ %TAB%]+['"]?ESC_MENU['"]?~ RET start_ofs end_ofs END
+      PATCH_IF (start_ofs >= 0 && end_ofs > start_ofs) BEGIN
+        // inserting Infinity_PlayMovie() definition
+        SET pos1 = INDEX_BUFFER(~^[ %TAB%]*versionString[ %TAB%]*=[ %TAB%]*CBaldurChitin:GetVersionString()~ start_ofs)
+        PATCH_IF (pos1 >= start_ofs && pos1 < end_ofs) BEGIN
+          SET pos1 = INDEX_BUFFER(~[%WNL%]~ pos1)
+          PATCH_IF (pos1 >= start_ofs && pos1 < end_ofs) BEGIN
+            SPRINT line ~%WNL%%TAB%%TAB%Infinity_PlayMovie('flames','flames4')~
+            SET len = STRING_LENGTH ~%line%~
+            INSERT_BYTES pos1 len
+            WRITE_ASCIIE pos1 ~%line%~
+            SET end_ofs += len
+          END
+        END
+
+        LPF GET_UI_STRUCTURE INT_VAR start_ofs STR_VAR name = ~label~ contains = EVAL ~bam[ %TAB%]+['"]?BIGLOGO['"]?~ RET label_start = start_ofs label_end = end_ofs END
+        PATCH_IF (label_start >= start_ofs && label_end > label_start) BEGIN
+          INSERT_FILE label_end ~%menu_path%~
+        END
+      END
+    BUT_ONLY
+  END
+END
+
+
+/**
+ * (IWDEE) Game Menu (running game) > Quit: Adds explicit buttons to return to the main screen
+ * or quit the game completely.
+ */
+DEFINE_ACTION_FUNCTION IMPROVE_GAMEMENU_QUIT
+BEGIN
+  ACTION_IF (game_is_iwdee) BEGIN
+    // installing dialog assets
+    COPY ~%MOD_FOLDER%/mos/iwdee/guierr7.mos~ ~override~
+      LPF UPDATE_PVRZ_INDICES RET original_base_index new_base_index END
+
+    ACTION_IF (original_base_index >= 0 && new_base_index >= 0) BEGIN
+      LAF INSTALL_PVRZ
+        INT_VAR original_base_index new_base_index
+        STR_VAR source_file = EVAL ~%MOD_FOLDER%/mos/iwdee/mos1000.pvrz~
+      END
+    END
+
+    // patching ui
+    COPY_EXISTING ~ui.menu~ ~override~
+      // updating "POPUP_FOURBUTTON"
+      LPF GET_UI_STRUCTURE STR_VAR name = ~menu~ contains = EVAL ~name[ %TAB%]+['"]?POPUP_FOURBUTTON['"]?~ RET start_ofs end_ofs END
+      PATCH_IF (start_ofs >= 0 && end_ofs > start_ofs) BEGIN
+        DELETE_BYTES start_ofs (end_ofs - start_ofs)
+        INSERT_FILE start_ofs ~%MOD_FOLDER%/menu/improved_ui/esc_menu/ui-quit-iwdee-fourbutton.menu~
+      END
+
+      // updating menu "ESC_MENU" > button "QUIT_GAME_BUTTON"
+      LPF GET_UI_STRUCTURE STR_VAR name = ~menu~ contains = EVAL ~name[ %TAB%]+['"]?ESC_MENU['"]?~ RET start_ofs end_ofs END
+      PATCH_IF (start_ofs >= 0 && end_ofs > start_ofs) BEGIN
+        LPF GET_UI_STRUCTURE INT_VAR start_ofs STR_VAR name = ~button~ contains = ~popup3Button(16456,~ RET start_ofs end_ofs END
+        PATCH_IF (start_ofs >= 0 && end_ofs > start_ofs) BEGIN
+          DELETE_BYTES start_ofs (end_ofs - start_ofs)
+          INSERT_FILE start_ofs ~%MOD_FOLDER%/menu/improved_ui/esc_menu/ui-quit-iwdee.menu~
+        END
+      END
+    BUT_ONLY
+  END
+END
+
+
+/**
+ * Game Menu (running game) > Load: Adds button to continue from the last save if available.
+ */
+DEFINE_ACTION_FUNCTION IMPROVE_GAMEMENU_LOAD
+BEGIN
+  // preparations
+  ACTION_IF ((game_is_bgee && game_includes_sod) || (game_is_eet && INSTALLED_EET_GUI_SOD)) BEGIN
+    OUTER_SPRINT menu_path ~%MOD_FOLDER%/menu/improved_ui/esc_menu/ui-load-sod.menu~
+  END ELSE BEGIN
+    OUTER_SPRINT menu_path ~%MOD_FOLDER%/menu/improved_ui/esc_menu/ui-load.menu~
+  END
+  OUTER_SET confirm_strref = game_is_eet ? 219531 : 19531
+  COPY - ~%menu_path%~ ~.../inlined/%menu_path%~
+    EVAL
+    SET ui_content_len = BUFFER_LENGTH
+    READ_ASCII 0 ui_content (ui_content_len)
+  BUT_ONLY
+
+  // patching ui
+  COPY_EXISTING ~ui.menu~ ~override~
+    LPF GET_UI_STRUCTURE STR_VAR name = ~menu~ contains = EVAL ~name[ %TAB%]+['"]?ESC_MENU['"]?~ RET start_ofs end_ofs END
+    PATCH_IF (start_ofs >= 0) BEGIN
+      // inserting "canContinue" initialization
+      SET pos1 = INDEX_BUFFER(~^[ %TAB%]*versionString[ %TAB%]*=[ %TAB%]*CBaldurChitin:GetVersionString()~ start_ofs)
+      PATCH_IF (pos1 >= start_ofs && pos1 < end_ofs) BEGIN
+        SET pos1 = INDEX_BUFFER(~[%WNL%]~ pos1)
+        PATCH_IF (pos1 >= start_ofs && pos1 < end_ofs) BEGIN
+          SPRINT line ~%WNL%%TAB%%TAB%canContinue = startEngine:HasGameToContinue()~
+          SET len = STRING_LENGTH ~%line%~
+          INSERT_BYTES pos1 len
+          WRITE_ASCIIE pos1 ~%line%~
+          SET end_ofs += len
+        END
+      END
+
+      // replacing "load game" dialog call
+      SET pos1 = INDEX_BUFFER(~^[ %TAB%]*popup2Button(%confirm_strref%,[ %TAB%]*'LOAD_BUTTON'~ start_ofs)
+      PATCH_IF (pos1 >= start_ofs && pos1 < end_ofs) BEGIN
+        SET pos2 = INDEX_BUFFER(~[%WNL%]~ pos1)
+        PATCH_IF (pos2 > pos1) BEGIN
+          DELETE_BYTES pos1 (pos2 - pos1)
+          SET end_ofs -= (pos2 - pos1)
+          INSERT_BYTES pos1 ui_content_len
+          WRITE_ASCIIE pos1 ~%ui_content%~ (ui_content_len)
+        END
+      END
+    END
+  BUT_ONLY
+END

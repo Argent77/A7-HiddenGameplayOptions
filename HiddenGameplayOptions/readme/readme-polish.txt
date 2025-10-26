@@ -402,6 +402,14 @@ ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa
 History
 ~~~~~~~
 
+5.0
+- Restructured mod components and added component groups
+- Added Spanish translation (thanks alaisFcZ and IOVIVO)
+- Added new group "GUI Improvements" with various minor visual and usability improvements
+- Added option for Tweaks Anthology's "Restored Loading Hints"
+- Improved Frame Rate slider: increment in steps of 5 between 10 and 60 fps
+- Changed several harmess warning messages back to regular messages at mod installation
+
 4.7
 - Fixed potential placement issues of frame rate slider if Dragonspear UI++ is installed
 
