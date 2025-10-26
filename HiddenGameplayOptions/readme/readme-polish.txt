@@ -409,7 +409,7 @@ History
 - Added option for Tweaks Anthology's "Restored Loading Hints"
 - Improved compatibility with Infinity UI++
 - Improved Frame Rate slider: increment in steps of 5 between 10 and 60 fps
-- Changed several harmess warning messages back to regular messages at mod installation
+- Changed several harmless warning messages back to regular messages at mod installation
 
 4.7
 - Fixed potential placement issues of frame rate slider if Dragonspear UI++ is installed
