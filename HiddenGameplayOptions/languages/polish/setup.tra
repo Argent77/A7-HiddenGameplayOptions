@@ -31,6 +31,7 @@
 @37 = ~Dodaj w grze opcje "Renderowanie dynamicznego wyszukiwania na mapie"~
 @38 = ~Dodaj w grze opcje przeznaczone dla komponentu "Tworzenie zapisow gry w regularnych odstepach czasu" z modyfikacji Tweaks Anthology~
 @39 = ~Dodaj w grze opcje "Zatrzymywanie gry podczas dialogow"~
+@40 = ~Dodaj w grze opcje przeznaczone dla komponentu "Przywrocone podpowiedzi na ekranach wczytywania" z modyfikacji Tweaks Anthology~
 
 @100 = ~Zaktualizuj przypisanie klawiszy~
 @101 = ~tylko dla czarow kaplanskich~
@@ -38,7 +39,13 @@
 @103 = ~dla czarow kaplanskich i maga~
 
 @200 = ~Ulepszone menu opcji ulatwiajacych gre~
-@201 = ~Zaktualizuj tabele zasobów dla komponentu "Ulepszone menu opcji ulatwiajacych gre"~
+@201 = ~Zaktualizuj tabele zasobow dla komponentu "Ulepszone menu opcji ulatwiajacych gre"~
+
+@300 = ~Rozszerzenie opcji "Ekranu smierci"~
+@301 = ~Rozszerzenie opcji "Wyjdz z gry"~
+@302 = ~Menu gry: Animacja ognia w logo SoD~
+@303 = ~Menu gry: Ulepszone opcje "Wyjdz z gry"~
+@304 = ~Menu gry: Ulepszone opcje "Wczytaj gre"~
 
 @500 = ~Wymagane posiadanie wersji Enhanced Edition w wersji 2.0 lub wyzszej.~
 @501 = ~Nie mozna zaktualizowac pliku LUA~
@@ -52,3 +59,15 @@
 @509 = ~Wymaga uprzedniego zainstalowania komponentu "Tworzenie zapisow gry w regularnych odstepach czasu" z modyfikacji Tweaks Anthology~
 @510 = ~Wymaga uprzedniego zainstalowania komponentu "Ulepszone menu opcji ulatwiajacych gre"~
 @511 = ~Komponent ten mozna wywolac w dowolnym momencie.~
+@512 = ~Ten komponent nie jest kompatybilny z modyfikacja "Pecca's Infinity UI".~
+@513 = ~Ten komponent nie jest kompatybilny z modyfikacja "K4f4r's Classic BG UI".~
+@514 = ~Ten komponent nie jest kompatybilny z modyfikacja "Tipun's User Interface".~
+@515 = ~Wymaga uprzedniego zainstalowania komponentu "Przywrocone podpowiedzi na ekranach wczytywania" z modyfikacji Tweaks Anthology.~
+@516 = ~Ten komponent nie jest kompatybilny z modyfikacjami zmieniajacymi interfejs uzytkownika.~
+@517 = ~DLC Merger jest wymagany do instalacji modow w tej grze. W pliku readme znajduje sie wiecej informacji oraz link do pobrania DLC Merger.~
+
+// Group names
+@900 = ~Opcje gry~
+@901 = ~Menu opcji ulatwiajacych gre~
+@902 = ~Ulepszenia UI~
+@903 = ~Przypisanie klawiszy~
