@@ -9,108 +9,108 @@ W celu aktywowania konsoli należy użyć kombinacji klawiszy CTRL+SPACE. Do pol
 
 Do kombinacji klawiszy ułatwiających grę zaliczyć można: CTRL+Y, służące do zabijania istot wskazanych kursorem myszy, CTRL+R, służące do leczenie postaci oraz rozpraszania działających na nie aktualnie efektów, CTRL+J, służące do teleportowania wybranych członków drużyny w miejsce wskazane kursorem myszy, CTRL+T, służące do przewijania czasu gry o jedną godzinę, CTRL+4, służące do włączenia widoczności interaktywnych regionów oraz wiele więcej.
 
-^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+^NUwaga: Aby zmiany odniosły skutek, należy ponownie uruchomić grę.^-~
 
 @1100 = ~Włączanie trybu edycji Interfejsu Użytkownika~
 @1101 = ~Włączenie tej opcji pozwala na edycję Interfejsu Użytkownika w trakcie gry.
 
 W celu aktywowania lub dezaktywowania trybu edycji UI należy wcisnąć przycisk F11. Gdy tryb ten jest aktywny istnieje możliwość przeciągania po ekranie elementów UI. Wciśnięcie klawisza F5 spowoduje podgląd zmian dokonanych w wyglądzie UI bez konieczności ponownego uruchamiania gry. Wciśnięcie klawisza TAB w chwili, gdy kursor znajduje się na elemencie UI spowoduje pokazanie się numera linii w pliku UI.MENU definiującego ten element.
 
-^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+^NUwaga: Aby zmiany odniosły skutek, należy ponownie uruchomić grę.^-~
 
 @1200 = ~Pokazywanie strrefów~
 @1201 = ~Włączenie tej opcji pozwala na pokazywanie numerów linii dialogowych przed wyświetlanym tekstem.
 
-^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+^NUwaga: Aby zmiany odniosły skutek, należy ponownie uruchomić grę.^-~
 
 @1300 = ~Klawisze skrótu przy podpowiedziach~
 @1301 = ~Włączenie tej opcji powoduje wyświetlanie informacji o klawiszu skrótu w okienku podpowiedzi.
 
-^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+^NUwaga: Aby zmiany odniosły skutek, należy ponownie uruchomić grę.^-~
 
 @1400 = ~Dodatkowe informacje po wciśnięciu klawisza TAB~
 @1401 = ~Włączenie tej opcji powoduje otrzymywanie dodatkowych informacji o interaktywnych regionach po wciśnięciu klawisza TAB.
 
-^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+^NUwaga: Aby zmiany odniosły skutek, należy ponownie uruchomić grę.^-~
 
 @1500 = ~Możliwość używania klawisza Spacji podczas dialogów~
 @1501 = ~Włączenie tej opcji umożliwia kontynuowanie rozmowy przy użyciu klawisza Spacji.
 
-^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+^NUwaga: Aby zmiany odniosły skutek, należy ponownie uruchomić grę.^-~
 
 @1600 = ~Ograniczenie czarów druidycznych dla kapłanów/łowców~
 @1601 = ~Opcja ta kontroluje dostępność czarów druidycznych dla wieloklasowych i dwuklasowych kapłanów/łowców.
 
 Włączenie tej opcji spowoduje ograniczenie dostępu czarów druidycznych do 3. poziomu, co jest maksymalnym poziomem dostępnym dla łowców. Opcja ta nie ma wpływu na czary kapłańskie.
 
-^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+^NUwaga: Aby zmiany odniosły skutek, należy ponownie uruchomić grę.^-~
 
 @1700 = ~Atak z zaskoczenia 3E~
 @1701 = ~Opcja ta włącza lub wyłącza Atak z zaskoczenia oraz Druzgoczące uderzenie, będące specjalnymi zdolności złodzieja, podobnymi do tych, które występują w zasadach 3. edycji Dungeons & Dragons(R), firmy Wizards of the Coast.
 
-^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+^NUwaga: Aby zmiany odniosły skutek, należy ponownie uruchomić grę.^-~
 
 @1800 = ~Drżenie ekranu po trafieniu krytycznym~
 @1801 = ~Włączenie tej opcji powoduje efekt drżenia ekranu za każdym razem, gdy członek drużyny uzyska trafienie krytyczne.
 
-^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+^NUwaga: Aby zmiany odniosły skutek, należy ponownie uruchomić grę.^-~
 
 @1900 = ~Pokazywanie dodatkowych informacji o walce~
 @1901 = ~Włączenie tej opcji sprawia, że na ekranie wyświetlane będą wszystkie wartości mające wpływ na wynik testu ataku.
 
-^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+^NUwaga: Aby zmiany odniosły skutek, należy ponownie uruchomić grę.^-~
 
 @2000 = ~Wyświetlanie czasu i daty po zatrzymaniu gry~
 @2001 = ~Włączenie tej opcji spowoduje wyświetlenie aktualnej daty i czasu w grze po aktywowaniu pauzy.
 
-^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+^NUwaga: Aby zmiany odniosły skutek, należy ponownie uruchomić grę.^-~
 
 @2100 = ~Wyłączenie przybliżania obszaru mapy~
 @2101 = ~Opcja ta powoduje wyłączenie efektu przybliżania i oddalania widoku mapy podczas otwierania lub zamykania ekranu mapy.
 
-^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+^NUwaga: Aby zmiany odniosły skutek, należy ponownie uruchomić grę.^-~
 
 @2200 = ~Odwrócenie kierunku przybliżania ekranu za pomocą myszy~
 @2201 = ~Opcja ta powoduje odwrócenie kierunku przybliżania i oddalania ekranu za pomocą kółka myszy.
 
-^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+^NUwaga: Aby zmiany odniosły skutek, należy ponownie uruchomić grę.^-~
 
 @2300 = ~Zatrzymywanie gry na ekranie mapy~
 @2301 = ~Włączenie tej opcji powoduje automatyczne zatrzymanie gry po wejściu na ekran mapy.
 
-^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+^NUwaga: Aby zmiany odniosły skutek, należy ponownie uruchomić grę.^-~
 
 @2400 = ~Włączenie mgły~
 @2401 = ~Włączenie tej opcji powoduje pojawienie się na ekranie mapy efektów związanych z mgłą.
 
-^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+^NUwaga: Aby zmiany odniosły skutek, należy ponownie uruchomić grę.^-~
 
 @2500 = ~Wyłączenie filmów~
 @2501 = ~Włączenie tej opcji powoduje zablokowanie odtwarzania filmów.
 
-^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+^NUwaga: Aby zmiany odniosły skutek, należy ponownie uruchomić grę.^-~
 
 @2600 = ~Wyłączenie dodatkowych animacji ataków~
 @2601 = ~Domyślnie postacie wykonują animacje ataku w czasie całej rundy, co symuluje markowanie i unikanie ciosów. Włączenie tej opcji sprawia, że pokazywane będą jedynie animacje samych ataków.
 
-^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+^NUwaga: Aby zmiany odniosły skutek, należy ponownie uruchomić grę.^-~
 
 @2700 = ~Premia do PD w trybie Dziedzictwo Bhaala~
 @2701 = ~Włączenie tej opcji pozwala na uzyskiwanie dodatkowej ilości PD w trybie Dziedzictwo Bhaala. Nie wpływa jednak na ilość PD otrzymywanych w przypadku zwykłych trybów gry.
 
-^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+^NUwaga: Aby zmiany odniosły skutek, należy ponownie uruchomić grę.^-~
 
 @2710 = ~Premia do PD w trybie Serce Furii~
 @2711 = ~Włączenie tej opcji pozwala na uzyskiwanie dodatkowej ilości PD w trybie Serce Furii. Nie wpływa jednak na ilość PD otrzymywanych w przypadku zwykłych trybów gry.
 
-^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+^NUwaga: Aby zmiany odniosły skutek, należy ponownie uruchomić grę.^-~
 
 @2800 = ~Wskaźnik ilości klatek~
 @2801 = ~Ten suwak pozwala zwiększyć liczbę klatek animacji, z jaką działa gra, przyspieszając wszystkie jej elementy.
 
 UWAGA: Ustawienie liczby klatek animacji na ponad 30 może spowodować utratę synchronizacji obrazu z dźwiękiem w przerywnikach filmowych oraz brak synchronizacji grafiki czarów z efektami ich działania.
 
-^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+^NUwaga: Aby zmiany odniosły skutek, należy ponownie uruchomić grę.^-~
 
 @2802 = ~30 klatek/sek.~
 @2803 = ~40 klatek/sek.~
@@ -134,7 +134,7 @@ UWAGA: Ustawienie liczby klatek animacji na ponad 30 może spowodować utratę s
 
 (*) Działa tylko po włączeniu trybu debugowania.
 
-Uwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.~
+Uwaga: Aby zmiany odniosły skutek, należy ponownie uruchomić grę.~
 
 @2902 = ~Suwak ten kontroluje sposób przedstawiania wykonywanych przez dane istoty czynności w postaci niewielkich ikon wyświetlanych nad ich sylwetkami.
   Wyłączony – nigdy
@@ -145,7 +145,7 @@ Uwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.~
 
 (*) Działa tylko po włączeniu trybu debugowania.
 
-^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+^NUwaga: Aby zmiany odniosły skutek, należy ponownie uruchomić grę.^-~
 
 @2903 = ~Wyłączony~
 @2904 = ~Mało~
@@ -156,61 +156,67 @@ Uwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.~
 @3000 = ~Wyświetlanie ikony zmiany poziomu~
 @3001 = ~Opcja ta pozwala wyświetlanie ikony „Zmiany poziomu” w oknie portretu lub na pasku życia członków drużyny mogących awansować na kolejny poziom.
 
-^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+^NUwaga: Aby zmiany odniosły skutek, należy ponownie uruchomić grę.^-~
 
 @3100 = ~Odgłosy znudzenia~
 @3101 = ~Odtwarzanie odgłosów znudzenia~
 @3102 = ~Odtwarzanie głosów znudzenia po dłuższym okresie bezczynności.
 
-Uwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.~
+Uwaga: Aby zmiany odniosły skutek, należy ponownie uruchomić grę.~
 @3103 = ~Opcja ta pozwala na włączenie odtwarzania głosów znudzenia członków drużyny po dłuższej bezczynności.
 
-^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+^NUwaga: Aby zmiany odniosły skutek, należy ponownie uruchomić grę.^-~
 
 @3200 = ~Pokazywanie zasięgu czarów obszarowych~
 @3201 = ~Włączenie tej opcji spowoduje pokazywanie zasięgu czarów obszarowych przed ich rzuceniem.
 
-^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+^NUwaga: Aby zmiany odniosły skutek, należy ponownie uruchomić grę.^-~
 
 @3300 = ~Ulepszone wyszukiwanie ścieżek~
 @3301 = ~Opcja ta poprawia odnajdywanie ścieżek poprzez ciągłe przeliczanie algorytmu wyszukiwania ścieżek poruszających się postaci.
 
-^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+^NUwaga: Aby zmiany odniosły skutek, należy ponownie uruchomić grę.^-~
 
 @3400 = ~Wygaszanie podświetlania pułapek~
 @3401 = ~Opcja ta pozwala na włączanie lub wyłączanie wygaszania po upływie pewnego czasu podświetlania pułapek i ukrytych drzwi.
 
-^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+^NUwaga: Aby zmiany odniosły skutek, należy ponownie uruchomić grę.^-~
 
 @3500 = ~Pokazuj czary, których można się nauczyć~
-@3501 = ~Controls whether a green tint is shown for spell scrolls that can be written to a mage's spellbook.
+@3501 = ~Opcja ta pozwala na włączenie zielonej obwódki na ikonach czarów, które mag może przepisać do księgi czarów.
 
-^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+^NUwaga: Aby zmiany odniosły skutek, należy ponownie uruchomić grę.^-~
 
 @3600 = ~Renderowanie wyszukiwania na mapie~
 @3601 = ~Opcja ta pozwala na włączanie i wyłączanie możliwości użycia klawisza SHIFT do wyświetlania powłoki statycznego wyszukiwania lokacji na mapie dla aktualnie odwiedzanego obszaru.
 
-^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+^NUwaga: Aby zmiany odniosły skutek, należy ponownie uruchomić grę.^-~
 
 @3700 = ~Renderowanie dynamicznego wyszukiwania na mapie~
 @3701 = ~Opcja ta pozwala na włączanie i wyłączanie możliwości użycia klawisza CTRL do wyświetlania powłoki dynamicznego wyszukiwania regionów, na przykład zablokowanych przejść czy przestrzeni zajmowanej przez istoty.
 
-^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+^NUwaga: Aby zmiany odniosły skutek, należy ponownie uruchomić grę.^-~
 
 @3800 = ~Włączenie zapisywania stanu gry w regularnych odstępach czasu~
 @3801 = ~Opcja ta pozwala na włączenie zapisywania stanu gry w regularnych odstępach czasu. Do jej poprawnego działania wymagane jest zainstalowanie komponentu „Tworzenie zapisów gry w regularnych odstępach czasu” z modyfikacji Tweaks Anthology.
 
-^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+^NUwaga: Aby zmiany odniosły skutek, należy ponownie uruchomić grę.^-~
 
 @3810 = ~Tworzenie zapisów gry w regularnych odstępach czasu w trakcie walki~
 @3811 = ~Opcja ta pozwala na włączenie zapisywania stanu gry w regularnych odstępach czasu również w trakcie walki. Do jej poprawnego działania wymagane jest zainstalowanie komponentu „Tworzenie zapisów gry w regularnych odstępach czasu” z modyfikacji Tweaks Anthology.
 
-^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+^NUwaga: Aby zmiany odniosły skutek, należy ponownie uruchomić grę.^-~
 
 @3900 = ~Zatrzymywanie gry podczas dialogów~
 @3901 = ~Po włączeniu tej opcji gra będzie automatycznie zatrzymywana podczas dialogów.
 
-^NUwaga: Aby zmiany odniosły skutek należy ponownie uruchomić grę.^-~
+^NUwaga: Aby zmiany odniosły skutek, należy ponownie uruchomić grę.^-~
+
+@4000 = ~Pokazuj przywrócone podpowiedzi z ekranów wczytywania~
+@4001 = ~Opcja ta włącza pokazywanie podpowiedzi z oryginalnej wersji Baldur's Gate II na ekranie dialogowym gry. Do jej poprawnego działania wymagane jest zainstalowanie komponentu "Przywrócone podpowiedzi na ekranach wczytywania" z modyfikacji Tweaks Anthology.
+
+^NUwaga: Aby zmiany odniosły skutek, należy ponownie uruchomić grę.^-~
+
 
 // *** Misc. strings ***
 
