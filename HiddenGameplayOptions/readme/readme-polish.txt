@@ -428,7 +428,7 @@ French translation: Gwendolyne, JohnBob
 
 Italian translation: Zaramorte
 
-Polish translation: Cahir
+Polish translation: Cahir, Aristo
 
 Brazilian Portuguese translation: Nasher, Felipe
 

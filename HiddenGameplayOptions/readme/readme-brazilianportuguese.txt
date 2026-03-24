@@ -368,7 +368,7 @@ Tradução pro Francês: Gwendolyne, JohnBob
 
 Tradução pro Italiano: Zaramorte
 
-Tradução pro Polonês: Cahir
+Tradução pro Polonês: Cahir, Aristo
 
 Tradução pro Português Brasileiro: Nasher, Felipe
 
