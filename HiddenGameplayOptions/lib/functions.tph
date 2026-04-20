@@ -570,3 +570,18 @@ BEGIN
     PRINT ~%msg%~
   END
 END
+
+// Determines the Lua function name for fetching game strings.
+// This function is needed because more recent patch versions of the game renamed the function.
+// RET:   Name of the Lua function
+DEFINE_DIMORPHIC_FUNCTION GET_LUA_GET_UI_STRING_FUNCTION
+RET
+  get_string_func
+BEGIN
+  OUTER_SPRINT get_string_func ~t~
+  COPY_EXISTING ~util.lua~ ~override~
+    PATCH_IF (INDEX_BUFFER(~function getUiString(stringName)~) >= 0) BEGIN
+      SPRINT get_string_func ~getUiString~
+    END
+  BUT_ONLY IF_EXISTS
+END

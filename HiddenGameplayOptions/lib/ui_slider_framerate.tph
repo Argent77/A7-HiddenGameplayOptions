@@ -355,13 +355,14 @@ BEGIN
 
   // function getFrameRate(f) ...
   PATCH_IF (ofs > 0) BEGIN
+    LPF GET_LUA_GET_UI_STRING_FUNCTION RET t = get_string_func END
     TEXT_SPRINT code ~function getFrameRate(f)%WNL%  local text = ""%WNL%~
     SET num = 0
     WHILE (num != "-1") BEGIN
       PATCH_IF (VARIABLE_IS_SET EVAL ~optInfoName_%num%~) BEGIN
         PATCH_IF (num = 0) BEGIN TEXT_SPRINT if ~if~ END ELSE BEGIN TEXT_SPRINT if ~elseif~ END
         TEXT_SPRINT label EVAL ~%optInfoName_%num%%~
-        TEXT_SPRINT code ~%code%  %if% (f == %num%) then%WNL%    text = string.upper(t("%label%"))%WNL%~
+        TEXT_SPRINT code ~%code%  %if% (f == %num%) then%WNL%    text = string.upper(%t%("%label%"))%WNL%~
         SET num += 1
       END ELSE BEGIN
         PATCH_IF (num > 0) BEGIN
