@@ -15,6 +15,13 @@ INCLUDE ~%MOD_FOLDER%/lib/cheatmenu_controls.tph~
 // Finalizations
 INCLUDE ~%MOD_FOLDER%/lib/cheatmenu_final.tph~
 
+// compatibility check with "Remove Show/Hide toggles from Cheat Menu" option
+OUTER_SET id = ID_OF_LABEL ~HiddenGameplayOptions.tp2~ ~A7-HIDDENGAMEPLAYOPTIONS-IMPROVED_UI-SHOWHIDE-CHEATMENU~
+ACTION_IF (MOD_IS_INSTALLED ~HiddenGameplayOptions.tp2~ id) BEGIN
+  INCLUDE ~%MOD_FOLDER%/lib/ui_improvements.tph~
+  LAF REMOVE_CHEATMENU_SHOWHIDE_TOGGLE END
+END
+
 // Installing marker to prevent the "Update resource tables" component
 // to be called in the same session as this component
 <<<<<<<< .../inlined/a7-HiddenGameplayOptions/a7_rhgo_cheats.mrk

@@ -433,6 +433,12 @@ Diese Komponente erweitert die Liste um die Option "Weiterspielen", mit der man 
 zuletzt angelegten Speicherstand laden kann, falls er verfügbar ist.
 
 
+6. "Show/Hide" Umschalter vom Cheatmenu entfernen (nur für PST:EE verfügbar)
+
+Diese Option entfernt die "Show" und "Hide" Umschalter, mit denen man das Cheatmenü anzeigen und
+verbergen kann. Stattdessen ist das Cheatmenü immer sichtbar, so wie in den anderen Spielen.
+
+
 D) *** Gruppe: Tastenbelegungen ***
 
 1. Tastenbelegungen für Priester- und/oder Magierzauber aktualisieren

@@ -970,6 +970,16 @@ BEGIN @304  // Game Menu: Improved "Load Game" prompts
   LAF IMPROVE_GAMEMENU_LOAD END
 
 
+BEGIN @305  // Remove Show/Hide toggles from Cheat Menu
+  REQUIRE_PREDICATE (GAME_IS ~pstee~) @504 // Option not available for this game.
+  GROUP @902  // GUI improvements
+  DESIGNATED 305
+  LABEL ~A7-HIDDENGAMEPLAYOPTIONS-IMPROVED_UI-SHOWHIDE-CHEATMENU~
+
+  INCLUDE ~%MOD_FOLDER%/lib/ui_improvements.tph~
+  LAF REMOVE_CHEATMENU_SHOWHIDE_TOGGLE END
+
+
 /////////////////////////////////////////////////////////////
 ////                                                     ////
 //// Key Bindings                                        ////

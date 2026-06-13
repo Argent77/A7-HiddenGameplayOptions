@@ -46,6 +46,7 @@
 @302 = ~Game Menu: Fire animation over SoD logo~
 @303 = ~Game Menu: Improved "Quit Game" options~
 @304 = ~Game Menu: Improved "Load Game" options~
+@305 = ~Remove Show/Hide toggles from Cheat Menu~
 
 @500 = ~Enhanced Edition game patched to v2.0 or higher required.~
 @501 = ~Cannot patch LUA file~

@@ -399,6 +399,12 @@ Pressing "Load Game" from the options menu in a running game provides the option
 "Load". This component adds a third option to continue from the last save instead, if available.
 
 
+6. Remove Show/Hide toggles from Cheat Menu (PST:EE only)
+
+This component removes the Show/Hide toggle buttons from the cheat menu in PST:EE. The cheat menu
+will always be expanded, just like in the other games.
+
+
 D) *** Group: Key Bindings ***
 
 1. Update key bindings for priest and/or mage spells

@@ -217,3 +217,80 @@ BEGIN
     END
   BUT_ONLY
 END
+
+
+/**
+ * (PSTEE) Removes the Show/Hide toggle buttons from the cheat menu.
+ */
+DEFINE_ACTION_FUNCTION REMOVE_CHEATMENU_SHOWHIDE_TOGGLE
+BEGIN
+  ACTION_IF (game_is_pstee) BEGIN
+    COPY_EXISTING ~ui.menu~ ~override~
+      REPLACE_TEXTUALLY ~^[ %TAB%]*cheatMenuCollapsed[ %TAB%]*=[ %TAB%]*nil[ %TAB%%MNL%]*$~ ~cheatMenuCollapsed = 1~
+
+      PATCH_FOR_EACH label IN ~HIDE_CHEATS_BUTTON~ ~SHOW_CHEATS_BUTTON~ BEGIN
+        LPF __GET_UI_BLOCK
+          STR_VAR search = EVAL ~text[ %TAB%]+"%label%"~
+          RET offset size block
+        END
+
+        INNER_PATCH_SAVE block ~%block%~ BEGIN
+          REPLACE_TEXTUALLY ~enabled[ %TAB%]+"cheatMenuCollapsed[ %TAB%]*.=[ %TAB%]*nil"~ ~enabled "false"~
+        END
+
+        LPF __REPLACE_UI_BLOCK
+          INT_VAR offset size
+          STR_VAR block
+        END
+      END
+    BUT_ONLY
+  END
+END
+
+// Used internally: Returns the first UI.MENU block matching the specified search pattern.
+DEFINE_PATCH_FUNCTION __GET_UI_BLOCK
+STR_VAR
+  search = ~~ // regular expression
+RET
+  offset      // Start offset of matching ui block. -1 if no match found.
+  size        // Size of matching ui block. 0 if no match found.
+  block       // Content of the ui block.
+BEGIN
+  SET offset = "-1"
+  SET size = 0
+  SPRINT block ~~
+
+  PATCH_IF (NOT ~%search%~ STR_EQ ~~) BEGIN
+    SET pos = INDEX_BUFFER(~%search%~)
+    PATCH_IF (pos >= 0) BEGIN
+      SET pos1 = RINDEX_BUFFER(~\b[^ %TAB%%WNL%{}]+[ %TAB%%WNL%]*{~ pos)
+      PATCH_IF (pos1 >= 0) BEGIN
+        SET pos2 = INDEX_BUFFER(~}~ pos)
+        PATCH_IF (pos2 >= pos) BEGIN
+          SET pos2 += 1
+          SET offset = pos1
+          SET size = pos2 - pos1
+          READ_ASCII offset block (size)
+        END
+      END
+    END
+  END
+END
+
+// Used internally: Replaces a UI.MENU block by another.
+DEFINE_PATCH_FUNCTION __REPLACE_UI_BLOCK
+INT_VAR
+  offset = 0  // Start offset of original ui block.
+  size = 0    // Size (in bytes) of original ui block.
+STR_VAR
+  block = ~~  // The new ui block.
+BEGIN
+  PATCH_IF (offset >= 0 && size > 0) BEGIN
+    DELETE_BYTES offset size
+    SET block_size = STRING_LENGTH ~%block%~
+    PATCH_IF (block_size > 0) BEGIN
+      INSERT_BYTES offset block_size
+      WRITE_ASCIIE offset ~%block%~ (block_size)
+    END
+  END
+END
