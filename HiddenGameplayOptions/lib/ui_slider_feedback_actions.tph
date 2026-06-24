@@ -332,7 +332,10 @@ BEGIN
         success
       END
       PATCH_IF (success) BEGIN
-        PATCH_IF (GAME_IS ~bgee~) BEGIN
+        PATCH_IF (INSTALLED_IWDEE_UI_BGEE) BEGIN
+          // IWDEE-UI-BGEE
+          LPF __A7_ADD_SLIDER_ACTION_FEEDBACK_IWDEE_UI_BGEE RET success END
+        END ELSE PATCH_IF (GAME_IS ~bgee~) BEGIN
           PATCH_IF (GAME_INCLUDES ~sod~ || INSTALLED_DRAGONSPEAR_UI) BEGIN
             // BGEE+SoD
             LPF __A7_ADD_SLIDER_ACTION_FEEDBACK_BGSOD RET success END
@@ -346,7 +349,7 @@ BEGIN
         END ELSE PATCH_IF (GAME_IS ~pstee~) BEGIN
           // PSTEE
           LPF __A7_ADD_SLIDER_ACTION_FEEDBACK_PSTEE INT_VAR optDescTra RET success END
-        END ELSE PATCH_IF (GAME_IS ~eet~ && MOD_IS_INSTALLED ~EET_gui.tp2~ 0) BEGIN
+        END ELSE PATCH_IF (INSTALLED_EET_GUI_SOD) BEGIN
           // EET with SoD GUI
           LPF __A7_ADD_SLIDER_ACTION_FEEDBACK_BGSOD RET success END
         END ELSE BEGIN
@@ -448,6 +451,73 @@ BEGIN
   END
 
   SET success = (ofs > 0) ? 1 : 0
+END
+
+
+DEFINE_PATCH_FUNCTION __A7_ADD_SLIDER_ACTION_FEEDBACK_IWDEE_UI_BGEE
+RET
+  success
+BEGIN
+  SET success = 1
+
+  SET ofsStart = INDEX_BUFFER(~name[ %TAB%]+['"]OPTIONS_FEEDBACK['"]~)
+  PATCH_IF (ofsStart > 0) BEGIN
+    SET ofsEnd = INDEX_BUFFER(~^[ %TAB%]*menu[ %TAB%%WNL%]*{~ ofsStart)
+    PATCH_IF (ofsEnd > ofsStart) BEGIN
+      // adjusting vertical position of existing sliders
+      LPF __A7_UPDATE_SLIDER_POSITIONS
+      INT_VAR
+        ofsStart
+        gap       = 75
+        adjust    = "-15"
+      STR_VAR
+        keyword_0 = ~MARKER_FEEDBACK_LABEL~
+        keyword_1 = ~LOCATOR_FEEDBACK_LABEL~
+        keyword_2 = ~CANCEL_BUTTON~
+      RET
+        success
+      END
+
+      // adding action feedback slider code
+      PATCH_IF (success) BEGIN
+        SET ofs1 = INDEX_BUFFER(~^[ %TAB%]*slider[ %TAB%%WNL%]*{~ ofsStart)
+        PATCH_IF (ofs1 > ofsStart) BEGIN
+          SET ofs1 = INDEX_BUFFER(~^[ %TAB%]*button[ %TAB%%WNL%]*{~ ofs1)
+        END
+        PATCH_IF (ofs1 > ofsStart && ofs1 < ofsEnd) BEGIN
+          SET ctl_label_x  = 106  SET ctl_label_y  = 300  SET ctl_label_w  = 132  SET ctl_label_h  = 36
+          SET ctl_slider_x = 246  SET ctl_slider_y = 300  SET ctl_slider_w = 254  SET ctl_slider_h = 36
+          SET ctl_info_x   = 246  SET ctl_info_y   = 336  SET ctl_info_w   = 254  SET ctl_info_h   = 36
+          SET ctl_pad_x    = 8    SET ctl_pad_y    = 0    SET ctl_pad_w    = 10   SET ctl_pad_h    = 0
+          SET ctl_id = controlID
+          SET ctl_num_settings = numSettings
+          TEXT_SPRINT ctl_label ~%optLabelName%~
+          TEXT_SPRINT ctl_description ~%optDescName%~
+
+          // UI mod specific adjustments
+          PATCH_IF (INSTALLED_DRAGONSPEAR_UI) BEGIN
+            SET ctl_label_y -= 26
+            SET ctl_slider_y -= 26
+            SET ctl_info_y -= 26
+          END
+
+          LPF LOAD_INLINED_DATA STR_VAR name = ~codeActionFeedbackText~ RET codeActionFeedbackText = code END
+          LPF LOAD_INLINED_DATA STR_VAR name = ~codeActionFeedbackSlider~ RET codeActionFeedbackSlider = code END
+          LPF LOAD_INLINED_DATA STR_VAR name = ~codeActionFeedbackLabel~ RET codeActionFeedbackLabel = code END
+          TEXT_SPRINT code EVAL ~%codeActionFeedbackText%%codeActionFeedbackSlider%%codeActionFeedbackLabel%~
+          SET strlen = STRING_LENGTH ~%code%~
+          INSERT_BYTES ofs1 strlen
+          WRITE_ASCIIE ofs1 ~%code%~ (strlen)
+        END ELSE BEGIN
+          SET success = 0
+        END
+      END
+    END ELSE BEGIN
+      SET success = 0
+    END
+  END ELSE BEGIN
+    SET success = 0
+  END
 END
 
 
@@ -658,9 +728,17 @@ BEGIN
           SET ofs1 = INDEX_BUFFER(~^[ %TAB%]*button[ %TAB%%WNL%]*{~ ofs1)
         END
         PATCH_IF (ofs1 > ofsStart && ofs1 < ofsEnd) BEGIN
-          SET ctl_label_x  = 106  SET ctl_label_y  = 300  SET ctl_label_w  = 190  SET ctl_label_h  = 36
-          SET ctl_slider_x = 300  SET ctl_slider_y = 300  SET ctl_slider_w = 200  SET ctl_slider_h = 36
-          SET ctl_info_x   = 300  SET ctl_info_y   = 336  SET ctl_info_w   = 200  SET ctl_info_h   = 36
+          SET ctl_pad_x    = 5    SET ctl_pad_y    = 0    SET ctl_pad_w    = 5    SET ctl_pad_h    = 0
+          PATCH_IF (INSTALLED_IWDEE_UI_BGEE) BEGIN
+            SET ctl_label_x  = 106  SET ctl_label_y  = 300  SET ctl_label_w  = 132  SET ctl_label_h  = 36
+            SET ctl_slider_x = 246  SET ctl_slider_y = 300  SET ctl_slider_w = 254  SET ctl_slider_h = 36
+            SET ctl_info_x   = 246  SET ctl_info_y   = 336  SET ctl_info_w   = 254  SET ctl_info_h   = 36
+            SET ctl_pad_x    = 8    SET ctl_pad_y    = 0    SET ctl_pad_w    = 10   SET ctl_pad_h    = 0
+          END ELSE BEGIN
+            SET ctl_label_x  = 106  SET ctl_label_y  = 300  SET ctl_label_w  = 190  SET ctl_label_h  = 36
+            SET ctl_slider_x = 300  SET ctl_slider_y = 300  SET ctl_slider_w = 200  SET ctl_slider_h = 36
+            SET ctl_info_x   = 300  SET ctl_info_y   = 336  SET ctl_info_w   = 200  SET ctl_info_h   = 36
+          END
           SET ctl_id = controlID
           SET ctl_num_settings = numSettings
           TEXT_SPRINT ctl_label ~%optLabelName%~

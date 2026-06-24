@@ -33,26 +33,26 @@ END ELSE BEGIN
 END
 
 // Final adjustments
-ACTION_IF (MOD_IS_INSTALLED ~eet_gui.tp2~ 0) BEGIN
+ACTION_IF (INSTALLED_EET_GUI_SOD) BEGIN
   // EET alternative GUI
   OUTER_SPRINT ui_mode ~sod~
-END ELSE ACTION_IF (MOD_IS_INSTALLED ~dragonspear_ui++.tp2~ 1) BEGIN
+END ELSE ACTION_IF (INSTALLED_DRAGONSPEAR_UI) BEGIN
   // Dragonspear UI++
   OUTER_SPRINT ui_mode ~sod~
-END ELSE ACTION_IF (MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) BEGIN
+END ELSE ACTION_IF (INSTALLED_INFINITY_UI) BEGIN
   // Infinity UI++
   OUTER_SPRINT ui_mode ~iui~
   OUTER_SPRINT ui_scrollbar ~rgdscrl1~
-END ELSE ACTION_IF (MOD_IS_INSTALLED ~leui.tp2~ 0 ||
-                    MOD_IS_INSTALLED ~leui-bg1ee.tp2~ 0 ||
-                    MOD_IS_INSTALLED ~leui-sod.tp2~ 0) BEGIN
+END ELSE ACTION_IF (INSTALLED_LEUI) BEGIN
   // lefreut's Enhanced UI
   OUTER_SPRINT ui_mode ~leui~
-END ELSE ACTION_IF (MOD_IS_INSTALLED ~tipun_gui.tp2~ 10) BEGIN
+END ELSE ACTION_IF (INSTALLED_TIPUN_UI) BEGIN
   // Tipun's User Interface for Enhanced Edition Games
   OUTER_SPRINT ui_mode ~tgui-%game%~
-END ELSE ACTION_IF (GAME_IS ~bgee~ &&
-                    RESOURCE_CONTAINS ~ui.menu~ ~\bGUIWPKPC\b~) BEGIN
+END ELSE ACTION_IF (INSTALLED_IWDEE_UI_BGEE) BEGIN
+  // IWDEE-UI-BGEE
+  OUTER_SPRINT ui_mode ~iwdee~
+END ELSE ACTION_IF (INSTALLED_CBGUI) BEGIN
   // Classic BG UI (non-WeiDU mod)
   OUTER_SPRINT ui_mode ~cbgui~
 END

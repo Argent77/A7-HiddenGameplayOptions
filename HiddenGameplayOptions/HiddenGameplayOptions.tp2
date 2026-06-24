@@ -31,6 +31,9 @@ ALWAYS
   // Tipun's User Interface
   OUTER_SET INSTALLED_TIPUN_UI = (MOD_IS_INSTALLED ~tipun_gui.tp2~ 10)
 
+  // IWDEE-UI-BGEE
+  OUTER_SET INSTALLED_IWDEE_UI_BGEE = (MOD_IS_INSTALLED ~iwdee-ui-bgee.tp2~ 0)
+
   // Custom EET GUIs
   OUTER_SET INSTALLED_EET_GUI_SOD = (GAME_IS ~eet~ && MOD_IS_INSTALLED ~EET_gui.tp2~ 0)
 
