@@ -389,7 +389,6 @@ BEGIN
 
   // function getRenderActions(l) ...
   PATCH_IF (ofs > 0) BEGIN
-    LPF GET_LUA_GET_UI_STRING_FUNCTION RET t = get_string_func END
     PATCH_IF (upperCase) BEGIN
       TEXT_SPRINT fn_upperOpen ~string.upper(~
       TEXT_SPRINT fn_upperClose ~)~
@@ -403,7 +402,7 @@ BEGIN
       PATCH_IF (VARIABLE_IS_SET EVAL ~optInfoName_%num%~) BEGIN
         PATCH_IF (num = 0) BEGIN TEXT_SPRINT if ~if~ END ELSE BEGIN TEXT_SPRINT if ~elseif~ END
         TEXT_SPRINT label EVAL ~%optInfoName_%num%%~
-        TEXT_SPRINT code ~%code%  %if% (l == %num%) then%WNL%    text = %fn_upperOpen%%t%("%label%")%fn_upperClose%%WNL%~
+        TEXT_SPRINT code ~%code%  %if% (l == %num%) then%WNL%    text = %fn_upperOpen%t("%label%")%fn_upperClose%%WNL%~
         SET num += 1
       END ELSE BEGIN
         PATCH_IF (num > 0) BEGIN
