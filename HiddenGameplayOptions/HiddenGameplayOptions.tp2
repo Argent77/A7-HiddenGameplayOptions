@@ -37,6 +37,11 @@ ALWAYS
   // Custom EET GUIs
   OUTER_SET INSTALLED_EET_GUI_SOD = (GAME_IS ~eet~ && MOD_IS_INSTALLED ~EET_gui.tp2~ 0)
 
+  // Compatibility hack for games at patch version 2.7 or later to work around blank UI labels
+  APPEND ~util.lua~ ~%WNL%-- Compatibility hack for UI mods%WNL%t = getUiString~
+    IF ~\bfunction[ %TAB%]+getUiString(~
+    UNLESS ~\bt[ %TAB%]*=[ %TAB%]*getUiString\b~
+
   INCLUDE ~%MOD_FOLDER%/lib/presets.tph~
 END
 
