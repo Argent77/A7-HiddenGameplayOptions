@@ -215,6 +215,7 @@ BEGIN
       INT_VAR
         startOfs    = endOfs
         controlID   = controlID
+        count       = INSTALLED_LEUI ? 2 : 1
         multiplier  = multiplier
       STR_VAR
         arrayName   = EVAL "%arrayName%"
@@ -400,6 +401,7 @@ DEFINE_PATCH_FUNCTION __A7_EXPAND_WRITE_OPTION
 INT_VAR
   startOfs    = 0
   controlID   = 0
+  count       = 1   // number of action blocks to update in the menu structure
   multiplier  = 1
 STR_VAR
   arrayName   = ""
@@ -413,58 +415,62 @@ BEGIN
   SET endOfs = startOfs
   PATCH_IF (multiplier > 1) BEGIN TEXT_SPRINT factor ~ * %multiplier%~ END ELSE BEGIN TEXT_SPRINT factor ~~ END
 
-  SET ofs = INDEX_BUFFER(~for[ %TAB%]+index,[ %TAB%]+var[ %TAB%]+in[ %TAB%]+pairs(%arrayName%)[ %TAB%]+do~ startOfs)
-  PATCH_IF (ofs >= startOfs) BEGIN
-    SET ofs1 = INDEX_BUFFER(~[ %TAB%]if[ %TAB%]+(var\[3\][ %TAB%]*==[ %TAB%]*-?[0-9]+)[ %TAB%]+then~ ofs)
-    SET ofs2 = INDEX_BUFFER(~.*Infinity_ChangeOption~ ofs)
-    PATCH_IF (ofs1 >= ofs && ofs1 < ofs2) BEGIN
-      SET mode = 2  // custom option already exists
-      SET ofs1 += 1 // skip to start of "if" statement
-      SET ofs = ofs1
-      SET ofs3 = RINDEX_BUFFER(~[^ %TAB%]~ (ofs1 - 1)) + 1
-      PATCH_IF (ofs3 > 0) BEGIN
-        READ_ASCII ofs3 indent (ofs1 - ofs3)
+  FOR (idx = 0; idx < count; ++idx) BEGIN
+    SET ofs = INDEX_BUFFER(~for[ %TAB%]+index,[ %TAB%]+var[ %TAB%]+in[ %TAB%]+pairs(%arrayName%)[ %TAB%]+do~ endOfs)
+    PATCH_IF (ofs >= endOfs) BEGIN
+      SET ofs1 = INDEX_BUFFER(~[ %TAB%]if[ %TAB%]+(var\[3\][ %TAB%]*==[ %TAB%]*-?[0-9]+)[ %TAB%]+then~ ofs)
+      SET ofs2 = INDEX_BUFFER(~.*Infinity_ChangeOption~ ofs)
+      PATCH_IF (ofs1 >= ofs && ofs1 < ofs2) BEGIN
+        SET mode = 2  // custom option already exists
+        SET ofs1 += 1 // skip to start of "if" statement
+        SET ofs = ofs1
+        SET ofs3 = RINDEX_BUFFER(~[^ %TAB%]~ (ofs1 - 1)) + 1
+        PATCH_IF (ofs3 > 0) BEGIN
+          READ_ASCII ofs3 indent (ofs1 - ofs3)
+        END
+      END ELSE PATCH_IF (ofs2 >= ofs) BEGIN
+        SET mode = 1  // first custom option to add
+        SET ofs = ofs2
+        SET ofs3 = INDEX_BUFFER(~[^ %TAB%]~ ofs2)
+        PATCH_IF (ofs3 > ofs2) BEGIN
+          READ_ASCII ofs2 indent (ofs3 - ofs2)
+        END
+      END ELSE BEGIN
+        SET mode = 0  // no matching option found
       END
-    END ELSE PATCH_IF (ofs2 >= ofs) BEGIN
-      SET mode = 1  // first custom option to add
-      SET ofs = ofs2
-      SET ofs3 = INDEX_BUFFER(~[^ %TAB%]~ ofs2)
-      PATCH_IF (ofs3 > ofs2) BEGIN
-        READ_ASCII ofs2 indent (ofs3 - ofs2)
-      END
-    END ELSE BEGIN
-      SET mode = 0  // no matching option found
-    END
 
-    PATCH_IF (NOT VARIABLE_IS_SET "indent") BEGIN
-      TEXT_SPRINT indent ~%TAB%%TAB%%TAB%%TAB%~
-    END
-
-    PATCH_IF (mode > 0) BEGIN
-      TEXT_SPRINT code ~~
-      PATCH_IF (mode = 1) BEGIN
-      TEXT_SPRINT code ~%code%%indent%~
+      PATCH_IF (NOT VARIABLE_IS_SET "indent") BEGIN
+        TEXT_SPRINT indent ~%TAB%%TAB%%TAB%%TAB%~
       END
-      TEXT_SPRINT code ~%code%if (var[3] == %controlID%) then%WNL%%indent%%TAB%setDeferredOption('%iniSection%', '%iniName%', var[5]%factor%)%WNL%%indent%else~
-      PATCH_IF (mode = 1) BEGIN
-        TEXT_SPRINT code ~%code%%WNL%%TAB%~
-      END
-      SET codeLen = STRING_LENGTH ~%code%~
-      INSERT_BYTES ofs codeLen
-      WRITE_ASCIIE ofs ~%code%~
-      SET ofs += codeLen
 
-      PATCH_IF (mode = 1) BEGIN
-        SET ofs = INDEX_BUFFER(~[%WNL%]~ ofs)
-        TEXT_SPRINT code ~%WNL%%indent%end~
+      PATCH_IF (mode > 0) BEGIN
+        TEXT_SPRINT code ~~
+        PATCH_IF (mode = 1) BEGIN
+        TEXT_SPRINT code ~%code%%indent%~
+        END
+        TEXT_SPRINT code ~%code%if (var[3] == %controlID%) then%WNL%%indent%%TAB%setDeferredOption('%iniSection%', '%iniName%', var[5]%factor%)%WNL%%indent%else~
+        PATCH_IF (mode = 1) BEGIN
+          TEXT_SPRINT code ~%code%%WNL%%TAB%~
+        END
         SET codeLen = STRING_LENGTH ~%code%~
         INSERT_BYTES ofs codeLen
         WRITE_ASCIIE ofs ~%code%~
         SET ofs += codeLen
-      END
 
-      SET endOfs = ofs
-      SET success = 1
+        PATCH_IF (mode = 1) BEGIN
+          SET ofs = INDEX_BUFFER(~[%WNL%]~ ofs)
+          TEXT_SPRINT code ~%WNL%%indent%end~
+          SET codeLen = STRING_LENGTH ~%code%~
+          INSERT_BYTES ofs codeLen
+          WRITE_ASCIIE ofs ~%code%~
+          SET ofs += codeLen
+        END
+
+        SET endOfs = ofs
+        SET success += 1
+      END
     END
   END
+
+  SET success = (count == success)
 END
