@@ -53,6 +53,9 @@ install either one, but not both at the same time.
 Patching UI definition files can be tricky. To ensure that a failed patch attempt does not corrupt
 the game it will fail with a forced error and restore the original state of the patched files.
 
+If any of Lefreut's Enhanced UI variants are installed, then changing options in a running game
+will be discarded if the game is closed without first returning to the main menu.
+
 It is recommended to install this mod after Tweaks Anthology and any GUI mods. The component
 "Improved Cheat Menu" should be installed after any content mods to maximize its usefulness.
 
@@ -452,6 +455,13 @@ ShareAlike 4.0 International License" (https://creativecommons.org/licenses/by-s
 
 History
 ~~~~~~~
+
+5.1
+- Added option to remove the Show/Hide toggle from the PST:EE cheat menu
+- Added support for the UI mod "IWDEE-UI-BGEE"
+- Updated Polish and Simplified Chinese translations
+- Improved compatibility with LeUI's "Reverse Buttons Positions" option
+- Improved compatibility with game patch 2.7
 
 5.0
 - Restructured mod components and added component groups

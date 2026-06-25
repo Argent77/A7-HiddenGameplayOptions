@@ -55,6 +55,10 @@ Das Verändern von UI-Definitionen ist eine komplizierte Angelegenheit. Um siche
 ein misslungener Schreibversuch keine Schäden anrichtet, erzwingt die Mod einen kritischen Fehler
 und stellt in dem Fall den Urzustand der Spieldateien wieder her.
 
+Falls eine Variante von Lefreuts Enhanced UI installiert wurde, dann werden Änderungen von Optionen
+in einem laufenden Spiel verworfen, falls das Spiel direkt beendet wird, ohne vorher in das
+Hauptmenü zurückzukehren.
+
 Diese Mod sollte nach Tweaks Anthology und allen GUI-Mods installiert werden. Die Komponente
 "Verbessertes Cheatmenü" sollte idealerweise nach allen Mods installiert werden, die neue Inhalte
 zum Spiel hinzufügen.
@@ -486,6 +490,13 @@ ShareAlike 4.0 International License" (https://creativecommons.org/licenses/by-s
 
 History
 ~~~~~~~
+
+5.1
+- Added option to remove the Show/Hide toggle from the PST:EE cheat menu
+- Added support for the UI mod "IWDEE-UI-BGEE"
+- Updated Polish and Simplified Chinese translations
+- Improved compatibility with LeUI's "Reverse Buttons Positions" option
+- Improved compatibility with game patch 2.7
 
 5.0
 - Restructured mod components and added component groups

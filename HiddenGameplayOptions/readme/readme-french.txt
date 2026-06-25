@@ -425,6 +425,13 @@ ShareAlike 4.0 International License" (https://creativecommons.org/licenses/by-s
 History
 ~~~~~~~
 
+5.1
+- Added option to remove the Show/Hide toggle from the PST:EE cheat menu
+- Added support for the UI mod "IWDEE-UI-BGEE"
+- Updated Polish and Simplified Chinese translations
+- Improved compatibility with LeUI's "Reverse Buttons Positions" option
+- Improved compatibility with game patch 2.7
+
 5.0
 - Restructured mod components and added component groups
 - Added Spanish translation (thanks alaisFcZ and IOVIVO)
