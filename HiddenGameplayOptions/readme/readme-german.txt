@@ -5,7 +5,6 @@ Version:    5.0
 Author:     Argent77
 
 Download:   https://github.com/Argent77/A7-HiddenGameplayOptions/releases/latest
-            https://www.shsforums.net/files/file/1223-reveal-hidden-gameplay-options/
 Diskussion: https://forums.beamdog.com/discussion/64524
             https://www.shsforums.net/forum/654-hidden-options-ee/
 
