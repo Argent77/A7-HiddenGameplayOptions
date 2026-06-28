@@ -363,7 +363,7 @@ Programação e testes: Argent77
 
 Ajuda com programação adicional: AncientCowboy
 
-Tradução pro Francês: Gwendolyne, JohnBob
+Tradução pro Francês: Gwendolyne, JohnBob, Deratiseur
 
 Tradução pro Italiano: Zaramorte
 

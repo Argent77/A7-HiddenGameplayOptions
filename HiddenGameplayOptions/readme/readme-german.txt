@@ -463,7 +463,7 @@ Coding and testing: Argent77
 
 Additional coding help: AncientCowboy
 
-French translation: Gwendolyne, JohnBob
+French translation: Gwendolyne, JohnBob, Deratiseur
 
 Italian translation: Zaramorte
 

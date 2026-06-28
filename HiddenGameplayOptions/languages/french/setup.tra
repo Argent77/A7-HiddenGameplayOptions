@@ -1,7 +1,6 @@
 // -*- coding: us-ascii -*-
 
 @1 = ~Installer simultanement toutes les options de jeu cachees~
-
 @10 = ~Ajouter l'option de jeu "Activer le Mode de debogage"~
 @11 = ~Ajouter l'option de jeu "Activer le mode de modification de l'interface utilisateur"~
 @12 = ~Ajouter l'option de jeu "Afficher les numeros des textes"~
@@ -42,6 +41,13 @@
 @200 = ~Ecran de triche ameliore~
 @201 = ~Mise a jour des fichiers existants pour le composant "Ecran de triche ameliore"~
 
+@300 = ~Amelioration des options de "l'ecran de mort"~
+@301 = ~Amelioration des options "Quitter la partie"~
+@302 = ~Menu du jeu : animation de flammes sur le logo SoD~
+@303 = ~Menu du jeu : amelioration des options "Quitter le jeu"~
+@304 = ~Menu du jeu : amelioration des options "Charger une partie"~
+@305 = ~Supprimer les boutons "Afficher/Masquer" du menu des astuces~
+
 @500 = ~Ce mod requiert un jeu beneficiant du patch v2.0 ou ulterieur.~
 @501 = ~Echec de modification du fichier LUA.~
 @502 = ~Echec de modification du fichier UI.MENU.~
@@ -59,6 +65,12 @@
 @514 = ~Ce composant n'est pas compatible avec l'interface Tipun_Gui.~
 @515 = ~Necessite l'installation du composant "Restaurer les astuces des ecrans de chargements" de Tweaks Anthology.~
 @517 = ~DLC Merger est necessaire avant de pouvoir installer des mods sur ce jeu. Consultez le fichier Lisez-moi pour plus d'informations et pour obtenir le lien de telechargement de DLC Merger.~
+
+// Group names
+@900 = ~Options de jeu~
+@901 = ~Menu de triche~
+@902 = ~Ameliorations de l'interface~
+@903 = ~Raccourcis clavier~
 
 // WeiDU prompts
 @-1000= "Le mod %TP2_FILE_NAME% contient"
