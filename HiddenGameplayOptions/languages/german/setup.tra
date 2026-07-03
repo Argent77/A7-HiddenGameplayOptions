@@ -47,6 +47,7 @@
 @303 = ~Spielmenu: Verbesserte Optionen fuer "Spiel verlassen"~
 @304 = ~Spielmenu: Verbesserte Optionen fuer "Spiel laden"~
 @305 = ~"Show/Hide" Umschalter vom Cheatmenu entfernen~
+@306 = ~Graue Balken vom Meldungsfenster in SoD entfernen~
 
 @500 = ~Enhanced Edition muss v2.0 oder hoeher sein.~
 @501 = ~LUA-Datei kann nicht bearbeitet werden~

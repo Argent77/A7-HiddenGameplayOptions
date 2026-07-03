@@ -407,6 +407,12 @@ This component removes the Show/Hide toggle buttons from the cheat menu in PST:E
 will always be expanded, just like in the other games.
 
 
+7. Remove gray bars from the log window in SoD (SoD or EET with the SoD GUI)
+
+This component remove the annoying horizontal gray bars that are visible on both sides of the log
+window on the game screen.
+
+
 D) *** Group: Key Bindings ***
 
 1. Update key bindings for priest and/or mage spells

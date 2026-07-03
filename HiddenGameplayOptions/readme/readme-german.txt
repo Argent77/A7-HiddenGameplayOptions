@@ -442,6 +442,12 @@ Diese Option entfernt die "Show" und "Hide" Umschalter, mit denen man das Cheatm
 verbergen kann. Stattdessen ist das Cheatmenü immer sichtbar, so wie in den anderen Spielen.
 
 
+7. Graue Balken vom Meldungsfenster in SoD entfernen (nur für SoD oder EET mit der SoD-GUI verfügbar)
+
+Diese Komponente entfernt die störenden hellgrauen horizontalen Balken, die man an beiden Seiten des
+Meldungsfensters im Spiel sehen kann.
+
+
 D) *** Gruppe: Tastenbelegungen ***
 
 1. Tastenbelegungen für Priester- und/oder Magierzauber aktualisieren

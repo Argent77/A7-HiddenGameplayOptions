@@ -988,6 +988,26 @@ BEGIN @305  // Remove Show/Hide toggles from Cheat Menu
   LAF REMOVE_CHEATMENU_SHOWHIDE_TOGGLE END
 
 
+BEGIN @306  // Remove gray bars from the log window in SoD
+  REQUIRE_PREDICATE ((GAME_IS ~bgee~ && GAME_INCLUDES ~sod~) ||
+                     (GAME_IS ~eet~ && MOD_IS_INSTALLED ~EET_gui.tp2~ 0)) @504 // Option not available for this game.
+  REQUIRE_PREDICATE NOT (
+    (MOD_IS_INSTALLED ~leui.tp2~ 0) ||
+    (MOD_IS_INSTALLED ~leui-iwdee.tp2~ 0) ||
+    (MOD_IS_INSTALLED ~leui-sod.tp2~ 0) ||
+    (MOD_IS_INSTALLED ~leui-bg1ee.tp2~ 0) ||
+    (MOD_IS_INSTALLED ~dragonspear_ui++.tp2~ 1) ||
+    (MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) ||
+    (MOD_IS_INSTALLED ~tipun_gui.tp2~ 10) ||
+    (GAME_IS ~bgee~ && RESOURCE_CONTAINS ~ui.menu~ ~\bGUIWPKPC\b~)
+  ) @516  // This component is not compatible with UI replacement mods.
+  GROUP @902  // GUI improvements
+  DESIGNATED 306
+  LABEL ~A7-HIDDENGAMEPLAYOPTIONS-IMPROVED_UI-REMOVE-LOGWINDOW-BARS~
+
+  COPY ~%MOD_FOLDER%/pvrz/sod/box5.pvrz~ ~override~
+
+
 /////////////////////////////////////////////////////////////
 ////                                                     ////
 //// Key Bindings                                        ////
