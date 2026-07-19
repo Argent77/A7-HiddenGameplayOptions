@@ -481,7 +481,7 @@ Russian translation: Saigon1983, yota13, Austin87
 
 Korean translation: begaborn
 
-Simplified Chinese translation: Lewis Liu
+Simplified Chinese translation: Lewis Liu, MephistoSatanDevil
 
 Spanish translation: alaisFcZ, IOVIVO
 

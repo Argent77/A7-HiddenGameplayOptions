@@ -375,7 +375,7 @@ Tradução pro Russo: Saigon1983, yota13, Austin87
 
 Tradução pro Coreano: begaborn
 
-Tradução pro Chinês Simplificado: Lewis Liu
+Tradução pro Chinês Simplificado: Lewis Liu, MephistoSatanDevil
 
 Tradução pro Espanhol: alaisFcZ, IOVIVO
 
