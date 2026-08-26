@@ -1,7 +1,7 @@
 Reveal Hidden Gameplay Options
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Version:    5.1
+Version:    5.2
 Author:     Argent77
 
 Download:   https://github.com/Argent77/A7-HiddenGameplayOptions/releases/latest
@@ -460,6 +460,12 @@ ShareAlike 4.0 International License" (https://creativecommons.org/licenses/by-s
 
 History
 ~~~~~~~
+
+5.2
+- Added GUI Improvements option "Remove gray bars from the log window in SoD"
+- Updated French translation (thanks Deratiseur)
+- Updated Simplified Chinese translation (thanks MephistoSatanDevil)
+- Fixed an installation issue if LeUI-IWDEE is installed
 
 5.1
 - Added option to remove the Show/Hide toggle from the PST:EE cheat menu
