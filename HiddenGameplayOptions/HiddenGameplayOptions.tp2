@@ -21,6 +21,7 @@ ALWAYS
                              (MOD_IS_INSTALLED ~leui-iwdee.tp2~ 0) ||
                              (MOD_IS_INSTALLED ~leui-sod.tp2~ 0) ||
                              (MOD_IS_INSTALLED ~leui-bg1ee.tp2~ 0)
+  OUTER_SET INSTALLED_LEUI_IWDEE = (MOD_IS_INSTALLED ~leui-iwdee.tp2~ 0)
   // Pecca's Dragonspear UI++
   OUTER_SET INSTALLED_DRAGONSPEAR_UI = (MOD_IS_INSTALLED ~dragonspear_ui++.tp2~ 1)
   // Pecca's Infinity UI

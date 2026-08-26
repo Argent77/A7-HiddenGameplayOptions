@@ -215,7 +215,7 @@ BEGIN
       INT_VAR
         startOfs    = endOfs
         controlID   = controlID
-        count       = INSTALLED_LEUI ? 2 : 1
+        count       = INSTALLED_LEUI && NOT INSTALLED_LEUI_IWDEE ? 2 : 1
         multiplier  = multiplier
       STR_VAR
         arrayName   = EVAL "%arrayName%"
