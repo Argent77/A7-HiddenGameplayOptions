@@ -43,8 +43,8 @@ END ELSE ACTION_IF (INSTALLED_INFINITY_UI) BEGIN
   // Infinity UI++
   OUTER_SPRINT ui_mode ~iui~
   OUTER_SPRINT ui_scrollbar ~rgdscrl1~
-END ELSE ACTION_IF (INSTALLED_LEUI) BEGIN
-  // lefreut's Enhanced UI
+END ELSE ACTION_IF (INSTALLED_LEUI && NOT INSTALLED_LEUI_IWDEE) BEGIN
+  // lefreut's Enhanced UI (except for IWDEE variant)
   OUTER_SPRINT ui_mode ~leui~
 END ELSE ACTION_IF (INSTALLED_TIPUN_UI) BEGIN
   // Tipun's User Interface for Enhanced Edition Games
