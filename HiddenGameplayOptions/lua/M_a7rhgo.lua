@@ -3,6 +3,50 @@
 -- Functions required by "Reveal Hidden Gameplay Options" --
 ------------------------------------------------------------
 
+--- Removes all occurrences of the literal substring "sub" in "str".
+-- @return the modified string "str".
+local function a7removeAll(str, sub)
+  if str ~= nil and str ~= "" and sub ~= nil and sub ~= "" then
+    return str:gsub(sub:gsub("([^%w])", "%%%1"), "")
+  else
+    return str
+  end
+end
+
+--- Prints a string to the game's log window.
+-- @param text    Text string to print.
+-- @param colored Whether to colorize the text output with the default color for log messages.
+function a7displayText(text, colored)
+  if text ~= nil and text ~= "" then
+    colored = colored ~= nil and false or true
+    if colored then
+      text = '^C' .. text .. '^-'
+    end
+    C:DisplayText(text)
+  end
+end
+
+--- Creates a new item in the inventory of Player1.
+-- @param resref  the ITM resref
+-- @param charge1 Number of primary charges or count of stackable items. Default: 0
+-- @param charge2 Number of secondary charges. Default: 0
+-- @param charge3 Number of tertiary charges. Default: 0
+-- @param name Optional item name string
+function a7luaItemCommand(resref, charge1, charge2, charge3, name)
+  if resref ~= nil and resref ~= "" then
+    charge1 = charge1 ~= nil and charge1 or 0
+    charge2 = charge1 ~= nil and charge2 or 0
+    charge3 = charge1 ~= nil and charge3 or 0
+    resref = a7luaDecolorizeString(resref)
+    local msg = 'C:CreateItem("' .. resref .. '", ' .. charge1 .. ', ' .. charge2 .. ', ' .. charge3 .. ')'
+    if name ~= nil and name ~= "" then
+      msg = msg .. '  -- ' .. a7luaDecolorizeString(name)
+    end
+    a7displayText(msg, true)
+    C:CreateItem(resref,charge1,charge2,charge3)
+  end
+end
+
 --- Generates a Lua command string that adds a spell or ability to a character and places it in the Lua debug console.
 -- @param spellIdx list item index of the spell resource
 function a7luaSpellCommand(spellIdx)
@@ -25,6 +69,15 @@ function a7luaSpellType(splType)
   return a7cheatSpellTable[1 + splType]
 end
 
+--- Opens the specified store or container.
+-- @param resref the STO resref
+function a7luaStoreCommand(resref)
+  if resref ~= nil and resref ~= "" then
+    resref = a7luaDecolorizeString(resref)
+    C:StartStore(resref)
+  end
+end
+
 --- Returns a descriptive string for the specified creature allegiance.
 -- @param ea the allegiance identifier as used by the game
 -- @return a descriptive string of the given allegiance
@@ -38,12 +91,27 @@ function a7luaAllegiance(ea)
   end
 end
 
+--- Spawns the specified creature.
+-- @param resref the CRE resref
+-- @param name Optional creature name string
+function a7luaCreatureCommand(resref, name)
+  if resref ~= nil and resref ~= "" then
+    resref = a7luaDecolorizeString(resref)
+    local msg = 'C:CreateCreature("' .. resref .. '")'
+    if name ~= nil and name ~= "" then
+      msg = msg .. '  -- ' .. a7luaDecolorizeString(name)
+    end
+    a7displayText(msg, true)
+    C:CreateCreature(resref)
+  end
+end
+
 --- Performs an operation based on the given command index.
 -- @param commandIdx list item index of the command
 function a7luaCommand(commandIdx)
   if (commandIdx ~= nil) then
     local mode = a7commandList[commandIdx][3]
-    local cmd = a7commandList[commandIdx][2]
+    local cmd = a7luaDecolorizeString(a7commandList[commandIdx][2])
     if (mode == 0) then
       -- Insert "C:Eval(cmd)" to lua console
       luaEdit = "C:Eval('"..cmd.."')"
@@ -68,6 +136,21 @@ function a7luaCommand(commandIdx)
       -- Special: Execute C:StrrefOff() instantly
       C:StrrefOff()
     end
+  end
+end
+
+--- Teleport selected characters to the specified area.
+-- @param resref the ARE resref
+-- @param name Optional area name string
+function a7luaAreaCommand(resref, name)
+  if resref ~= nil and resref ~= "" then
+    resref = a7luaDecolorizeString(resref)
+    local msg = 'C:MoveToArea("' .. resref .. '")'
+    if name ~= nil and name ~= "" then
+      msg = msg .. '  -- ' .. a7luaDecolorizeString(name)
+    end
+    a7displayText(msg, true)
+    C:MoveToArea(resref)
   end
 end
 
@@ -110,7 +193,7 @@ function a7luaFilter(src_list, dst_list, columns, filter, is_strref)
   end
 end
 
--- Replaces all matching instances of "filter" inside "text" by a colorized version of the match.
+--- Replaces all matching instances of "filter" inside "text" by a colorized version of the match.
 -- @param text the text to search.
 -- @param filter the search string. Default: ""
 -- @param is_strref a boolean that indicates whether "text" is an strref value (true) or a literal string (false). Default: false
@@ -146,6 +229,27 @@ function a7luaColorizeString(text, filter, is_strref, color)
   until (p1 == nil)
 
   return text, m
+end
+
+--- Removes color tags from the given string.
+-- @param text string with color tags.
+-- @param color Optional color value (without '^' prefix). May be a color definition (e.g. 0xFF808080) or a color symbol (e.g. R). Default: R
+-- @param is_strref a boolean that indicates whether "text" is an strref value (true) or a literal string (false). Default: false
+-- @return text string without color tags.
+function a7luaDecolorizeString(text, color, is_strref)
+  text = text ~= nil and text or ""
+  color = color ~= nil and color or "R"
+  is_strref = is_strref ~= nil and is_strref or false
+
+  if (is_strref) then
+    text = text ~= nil and Infinity_FetchString(text) or ""
+  else
+    text = text ~= nil and text or ""
+  end
+
+  text = a7removeAll(text, "^" .. color)
+  text = a7removeAll(text, "^-")
+  return text
 end
 
 --- Returns a shallow copy of the given table.

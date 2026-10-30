@@ -155,7 +155,7 @@ menu
     sequence  6
     text    "A7_CREATE_BUTTON"
     text style  "button"
-    action  "C:CreateItem(a7cheatItemList[a7cheatCreateItem][1],a7cheatItemCharge1,a7cheatItemCharge2,a7cheatItemCharge3)"
+    action  "a7luaItemCommand(a7cheatItemList[a7cheatCreateItem][1], a7cheatItemCharge1, a7cheatItemCharge2, a7cheatItemCharge3, a7cheatItemList[a7cheatCreateItem][2])"
   }
   label
   {
@@ -357,7 +357,7 @@ menu
     sequence  6
     text    "A7_OPEN_BUTTON"
     text style  "button"
-    action  "C:StartStore(a7cheatStoreList[a7cheatOpenStore][1])"
+    action  "a7luaStoreCommand(a7cheatStoreList[a7cheatOpenStore][1], a7cheatStoreList[a7cheatOpenStore][2])"
   }
   -- STORE LIST END
 
@@ -447,7 +447,7 @@ menu
     sequence  6
     text    "A7_CREATE_BUTTON"
     text style  "button"
-    action  "C:CreateCreature(a7cheatCreatureList[a7cheatSpawnCreature][1])"
+    action  "a7luaCreatureCommand(a7cheatCreatureList[a7cheatSpawnCreature][1], a7cheatCreatureList[a7cheatSpawnCreature][3])"
   }
   -- CREATURE LIST END
 
@@ -573,7 +573,7 @@ menu
     sequence  6
     text    "TRAVEL_BUTTON"
     text style  "button"
-    action  "C:MoveToArea(a7cheatAreaList[cheatTeleportArea][1])"
+    action  "a7luaAreaCommand(a7cheatAreaList[cheatTeleportArea][1], a7cheatAreaList[cheatTeleportArea][2])"
   }
   -- AREA LIST END
 
