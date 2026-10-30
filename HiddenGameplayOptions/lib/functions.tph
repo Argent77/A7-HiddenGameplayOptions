@@ -184,7 +184,11 @@ BEGIN
           INNER_PATCH_SAVE val ~%line%~ BEGIN REPLACE_TEXTUALLY ~.*=[ %TAB%]*\(-?[0-9]*\).*~ ~\1~ END
           PATCH_IF (~%val%~ STR_EQ ~~) BEGIN
             // value may be a literal string
-            INNER_PATCH_SAVE string ~%line%~ BEGIN REPLACE_TEXTUALLY ~.*=[ %TAB%]*"\([^"]*\)".*~ ~\1~ END
+            INNER_PATCH_SAVE string ~%line%~ BEGIN
+              REPLACE_TEXTUALLY ~\\"~ ~__ESCAPED_QUOTE__~ // required to preserve quotation inside the string
+              REPLACE_TEXTUALLY ~.*=[ %TAB%]*"\([^"]*\)".*~ ~\1~
+              REPLACE_TEXTUALLY ~__ESCAPED_QUOTE__~ ~\\"~
+            END
             INNER_PATCH_SAVE string ~%string%~ BEGIN REPLACE_TEXTUALLY ~\\n~ ~%LNL%~ END
             SET value = RESOLVE_STR_REF(~%string%~)
           END ELSE PATCH_IF (IS_AN_INT "val") BEGIN
