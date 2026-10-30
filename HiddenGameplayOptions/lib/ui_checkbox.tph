@@ -311,7 +311,7 @@ BEGIN
             END
 
             INSERT_BYTES ofs entryLen
-            WRITE_ASCIIE ofs ~%entry%~
+            WRITE_ASCIIE ofs ~%entry%~ (entryLen)
             SET endOfs = ofs + entryLen + 1
             SET startOfs = endOfs
             SET success = 1
@@ -377,7 +377,7 @@ BEGIN
       END
       SET codeLen = STRING_LENGTH ~%code%~
       INSERT_BYTES ofs codeLen
-      WRITE_ASCIIE ofs ~%code%~
+      WRITE_ASCIIE ofs ~%code%~ (codeLen)
       SET ofs += codeLen
 
       PATCH_IF (mode = 1) BEGIN
@@ -385,7 +385,7 @@ BEGIN
         TEXT_SPRINT code ~%WNL%%indent%end~
         SET codeLen = STRING_LENGTH ~%code%~
         INSERT_BYTES ofs codeLen
-        WRITE_ASCIIE ofs ~%code%~
+        WRITE_ASCIIE ofs ~%code%~ (codeLen)
         SET ofs += codeLen
       END
 
@@ -454,7 +454,7 @@ BEGIN
         END
         SET codeLen = STRING_LENGTH ~%code%~
         INSERT_BYTES ofs codeLen
-        WRITE_ASCIIE ofs ~%code%~
+        WRITE_ASCIIE ofs ~%code%~ (codeLen)
         SET ofs += codeLen
 
         PATCH_IF (mode = 1) BEGIN
@@ -462,7 +462,7 @@ BEGIN
           TEXT_SPRINT code ~%WNL%%indent%end~
           SET codeLen = STRING_LENGTH ~%code%~
           INSERT_BYTES ofs codeLen
-          WRITE_ASCIIE ofs ~%code%~
+          WRITE_ASCIIE ofs ~%code%~ (codeLen)
           SET ofs += codeLen
         END
 

@@ -543,7 +543,7 @@ BEGIN
             TEXT_SPRINT line ~mosaic "A7_UIGPF"~
             SET strlen = STRING_LENGTH ~%line%~
             INSERT_BYTES ofs1 strlen
-            WRITE_ASCIIE ofs1 ~%line%~
+            WRITE_ASCIIE ofs1 ~%line%~ (strlen)
             SET ofsEnd += strlen
           END
         END

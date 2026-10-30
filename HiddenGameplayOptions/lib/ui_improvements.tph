@@ -112,7 +112,7 @@ BEGIN
             SPRINT line ~%WNL%%TAB%%TAB%Infinity_PlayMovie('flames','flames4')~
             SET len = STRING_LENGTH ~%line%~
             INSERT_BYTES pos1 len
-            WRITE_ASCIIE pos1 ~%line%~
+            WRITE_ASCIIE pos1 ~%line%~ (len)
             SET end_ofs += len
           END
         END
@@ -198,7 +198,7 @@ BEGIN
           SPRINT line ~%WNL%%TAB%%TAB%canContinue = startEngine:HasGameToContinue()~
           SET len = STRING_LENGTH ~%line%~
           INSERT_BYTES pos1 len
-          WRITE_ASCIIE pos1 ~%line%~
+          WRITE_ASCIIE pos1 ~%line%~ (len)
           SET end_ofs += len
         END
       END

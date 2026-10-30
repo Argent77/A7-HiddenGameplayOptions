@@ -141,7 +141,7 @@ BEGIN
       // inserting text definition
       SET strlen = STRING_LENGTH ~%line%~
       INSERT_BYTES ofs1 strlen
-      WRITE_ASCIIE ofs1 ~%line%~
+      WRITE_ASCIIE ofs1 ~%line%~ (strlen)
 
       SET success = 1
     END
@@ -247,7 +247,7 @@ end
 ~
     SET codeLen = STRING_LENGTH ~%code%~
     INSERT_BYTES 0 codeLen
-    WRITE_ASCIIE 0 ~%code%~
+    WRITE_ASCIIE 0 ~%code%~ (codeLen)
 
     // add calls to flushDeferredOptions()
     // 1. start menu
@@ -259,7 +259,7 @@ end
         TEXT_SPRINT code ~%WNL%%TAB%%TAB%flushDeferredOptions()~
         SET codeLen = STRING_LENGTH ~%code%~
         INSERT_BYTES ofs codeLen
-        WRITE_ASCIIE ofs ~%code%~
+        WRITE_ASCIIE ofs ~%code%~ (codeLen)
       END ELSE BEGIN
         SET success = 0
       END
@@ -284,7 +284,7 @@ end
             TEXT_SPRINT code ~%WNL%%TAB%%TAB%%TAB%flushDeferredOptions()~
             SET codeLen = STRING_LENGTH ~%code%~
             INSERT_BYTES ofs codeLen
-            WRITE_ASCIIE ofs ~%code%~
+            WRITE_ASCIIE ofs ~%code%~ (codeLen)
           END ELSE BEGIN
             SET success = 0
           END
@@ -317,7 +317,7 @@ end
               TEXT_SPRINT code ~%WNL%%TAB%%TAB%%TAB%flushDeferredOptions()~
               SET codeLen = STRING_LENGTH ~%code%~
               INSERT_BYTES ofs codeLen
-              WRITE_ASCIIE ofs ~%code%~
+              WRITE_ASCIIE ofs ~%code%~ (codeLen)
             END ELSE BEGIN
               SET success = 0
             END
@@ -330,7 +330,7 @@ end
                 TEXT_SPRINT code ~flushDeferredOptions() ~
                 SET codeLen = STRING_LENGTH ~%code%~
                 INSERT_BYTES ofs codeLen
-                WRITE_ASCIIE ofs ~%code%~
+                WRITE_ASCIIE ofs ~%code%~ (codeLen)
               END ELSE BEGIN
                 SET success = 0
               END
