@@ -1,7 +1,7 @@
 Reveal Hidden Gameplay Options
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Version:    5.2
+Version:    5.3
 Author:     Argent77
 
 Download:   https://github.com/Argent77/A7-HiddenGameplayOptions/releases/latest
@@ -460,6 +460,12 @@ ShareAlike 4.0 International License" (https://creativecommons.org/licenses/by-s
 
 History
 ~~~~~~~
+
+5.3
+- Improved Cheat Menu: Fixed issues if the search filter is used
+- Improved Cheat Menu: Added feedback for cheat commands without visual feedback
+- Improved compatibility with LeUI-IWDEE
+- Internal code optimizations
 
 5.2
 - Added GUI Improvements option "Remove gray bars from the log window in SoD"

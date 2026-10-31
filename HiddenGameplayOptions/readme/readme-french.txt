@@ -1,7 +1,7 @@
 Faire apparaître les Options de jeu cachées
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Version :         5.2
+Version :         5.3
 Auteur :          Argent77
 
 Téléchargement :  https://github.com/Argent77/A7-HiddenGameplayOptions/releases/latest
@@ -423,6 +423,12 @@ ShareAlike 4.0 International License" (https://creativecommons.org/licenses/by-s
 
 History
 ~~~~~~~
+
+5.3
+- Improved Cheat Menu: Fixed issues if the search filter is used
+- Improved Cheat Menu: Added feedback for cheat commands without visual feedback
+- Improved compatibility with LeUI-IWDEE
+- Internal code optimizations
 
 5.2
 - Added GUI Improvements option "Remove gray bars from the log window in SoD"
